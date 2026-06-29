@@ -154,7 +154,22 @@ _Estudos fundacionais (P24, P33):_ incluídos **com ressalva** — se o protocol
 
 ---
 
-## 9. Limitações desta avaliação
+## 9. Confiabilidade entre avaliadores (Claude × ChatGPT)
+
+Os 20 estudos foram avaliados **independentemente** por dois avaliadores (Claude e ChatGPT) sob o mesmo protocolo. A concordância é **substancial**, o que reforça a robustez dos vereditos:
+
+- **Decisão (Incluir/Excluir): 90%** (18/20) · **Cohen's κ = 0,74**.
+- **Banda de qualidade: 100%** (18/18) · erro absoluto médio **SCORE_RQ 0,42 / SCORE_QA 0,31**.
+- **RQ4 e RQ5: 100% de acordo** — ambos os avaliadores confirmam, de forma independente, a **lacuna sistemática de ética/governança (RQ4)**, tornando esse achado avaliador-robusto.
+- Únicas 2 divergências de decisão: **P26 e P29** (surveys/SLR não-agênticos) — o ChatGPT inclui com ressalvas; o Claude exclui. Reforça que o único ponto de protocolo em aberto é o **tratamento de estudos secundários**.
+
+![Concordância entre avaliadores](charts/chart-comparacao.svg)
+
+> Detalhes e tabela lado a lado: **[comparacao-avaliadores.md](comparacao-avaliadores.md)** · dados em [`comparacao-avaliadores.csv`](comparacao-avaliadores.csv).
+
+---
+
+## 10. Limitações desta avaliação
 
 - **Extração de texto via PDFKit** (sem renderização de página): tabelas/figuras com layout complexo podem ter perdido valores tabulares — vereditos ancorados no texto corrido e nas tabelas legíveis.
 - **Qualis/SJR/Citações não confirmados** (insumos): toda decisão de elegibilidade dependente desses itens é **provisória**.
@@ -162,7 +177,7 @@ _Estudos fundacionais (P24, P33):_ incluídos **com ressalva** — se o protocol
 
 ---
 
-## 10. Próximos passos recomendados
+## 11. Próximos passos recomendados
 
 1. **Verificar externamente** Citações/SJR/Qualis dos 18 elegíveis (atenção a P30/P32/P35/P37 — 2026, possível 0 citações; e confirmar A3 de P39/P40).
 2. **Decidir no protocolo** o tratamento de estudos secundários (P24, P33): corpus primário vs fundamentação.
