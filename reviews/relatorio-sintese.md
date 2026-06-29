@@ -187,4 +187,90 @@ Os 20 estudos foram avaliados **independentemente** por dois avaliadores (Claude
 
 ---
 
-_Gerado a partir de `reviews/resultados-consolidados.csv` (20 estudos). Estatísticas: SCORE_RQ médio 3,83; SCORE_QA médio 3,50; 14 Banda Alta; RQ4 plenamente respondida em apenas 4/18._
+## 12. Nota metodológica (métodos e métricas)
+
+Esta seção descreve, de forma reprodutível, **como** os números deste relatório e da [comparação entre avaliadores](comparacao-avaliadores.md) foram obtidos.
+
+### 12.1 Protocolo de avaliação (Kitchenham + DARE)
+
+Cada estudo foi avaliado seguindo as diretrizes de **Kitchenham et al. (2009)** para RSL em Engenharia de Software, com a avaliação de qualidade espelhando a lógica dos critérios **DARE (QA1–QA4)**. O fluxo por estudo: triagem de elegibilidade (PRISMA/ETAPA 1) → classificação das 5 RQs → avaliação de qualidade (4 QAs) → parecer (Incluir / Incluir com ressalvas / Excluir).
+
+### 12.2 Pontuação das RQs (SCORE_RQ)
+
+Cada RQ recebe um veredito ancorado em evidência do PDF, convertido em escore:
+
+| Símbolo | Veredito                                                             | Valor |
+| :-----: | -------------------------------------------------------------------- | :---: |
+|  **T**  | Respondida Plenamente (todas as subdimensões com conteúdo explícito) |  1,0  |
+|  **P**  | Parcialmente Respondida (≥1 subdimensão, ou cobertura genérica)      |  0,5  |
+|  **N**  | Sem conteúdo suficiente (ausente ou apenas tangencial)               |  0,0  |
+
+**SCORE_RQ** = soma dos 5 vereditos (**máximo 5,0**).
+
+### 12.3 Avaliação de qualidade (SCORE_QA e banda)
+
+Quatro critérios DARE — QA1 (objetivos claros), QA2 (metodologia replicável), QA3 (base de evidências sólida; _toy example_ = P, teórico = N), QA4 (conclusões coerentes) — pontuados **Y = 1,0 / P = 0,5 / N = 0,0**.
+
+**SCORE_QA** = soma (**máximo 4,0**). **Banda de qualidade:** Alta ≥ 3,0 · Média 1,5–2,5 · Baixa < 1,5.
+
+### 12.4 Triagem de elegibilidade (ETAPA 1 / PRISMA)
+
+Critérios de inclusão: Ano ≥ 2020; veículo identificável; **Citações ≥ 1**; **SJR Q1–Q2**; **Qualis A1–A2**. Os três últimos não são verificáveis no PDF → marcados `[VERIFICAR]`. Estudos com Qualis A3 informado (P39, P40) foram tratados como **inelegíveis** (encerramento na triagem).
+
+### 12.5 Estatística descritiva
+
+- **Média / mediana** de SCORE_RQ e SCORE_QA sobre os 18 estudos avaliados (P39/P40 excluídos por serem `NA`).
+- Distribuição de bandas e de vereditos T/P/N por RQ (contagens simples).
+
+### 12.6 Concordância entre avaliadores
+
+Compara os vereditos **independentes** de dois avaliadores (Claude e ChatGPT) sobre o mesmo protocolo. Métricas:
+
+**(a) Acordo observado (P₀)** — proporção de estudos em que os dois concordam:
+
+`P₀ = (nº de concordâncias) ÷ N`
+
+Aqui, decisão Incluir/Excluir: P₀ = 18/20 = **0,90** (90%).
+
+**(b) Cohen's κ (kappa)** — corrige o acordo observado pelo **acordo esperado ao acaso (Pₑ)**, dado o quanto cada avaliador usa cada categoria. É a medida-padrão de _inter-rater reliability_ para classificações categóricas:
+
+`κ = (P₀ − Pₑ) / (1 − Pₑ)` , com `Pₑ = Σᵢ (n_Claude,i × n_ChatGPT,i) / N²`
+
+_Por que usar κ e não só o % de acordo?_ Porque dois avaliadores que dão "Incluir" com frequência concordariam bastante **por acaso**; κ desconta esse acaso. κ = 1 é acordo perfeito; κ = 0 é igual ao acaso; κ < 0 é pior que o acaso.
+
+**Cálculo neste lote** (decisão binária, N = 20):
+
+- Marginais: Claude → 14 Incluir / 6 Excluir; ChatGPT → 16 Incluir / 4 Excluir.
+- Acordo esperado: `Pₑ = (14×16 + 6×4) / 20² = 248 / 400 = 0,62`.
+- `κ = (0,90 − 0,62) / (1 − 0,62) = 0,28 / 0,38 = ` **0,737**.
+
+**Interpretação (escala de Landis & Koch, 1977):**
+
+| κ             | Força da concordância                  |
+| ------------- | -------------------------------------- |
+| < 0,00        | Pobre (pior que o acaso)               |
+| 0,00–0,20     | Leve                                   |
+| 0,21–0,40     | Razoável                               |
+| 0,41–0,60     | Moderada                               |
+| **0,61–0,80** | **Substancial** ← κ = 0,74 (este lote) |
+| 0,81–1,00     | Quase perfeita                         |
+
+**(c) Erro absoluto médio (MAE) dos escores** — magnitude típica da diferença numérica entre avaliadores:
+
+`MAE = (1/n) · Σ |SCORE_ChatGPT − SCORE_Claude|`
+
+Resultados: MAE(SCORE_RQ) = **0,42**; MAE(SCORE_QA) = **0,31** (n = 18; P39/P40 excluídos por `NA`).
+
+**(d) Acordo exato por RQ** — proporção de estudos em que o símbolo T/P/N coincide, por RQ (RQ1 67% … RQ4/RQ5 100%).
+
+> **Limitações da comparação:** N = 20 é pequeno (κ tem variância alta nesse tamanho); a decisão é reduzida a binária (Incluir/Excluir) para o κ, ignorando a gradação "com ressalvas"; os escores do ChatGPT foram **extraídos automaticamente** de seus pareceres (`gen_comparison.py`), sujeitos a variação de formato. Ainda assim, a convergência (90% / κ 0,74 / banda 100% / RQ4–RQ5 100%) é consistente e interpretável.
+
+### 12.7 Extração de dados e reprodutibilidade
+
+Texto dos PDFs extraído via **PDFKit** (não houve renderização de página). Escores consolidados em [`resultados-consolidados.csv`](resultados-consolidados.csv); comparação gerada por [`scripts/gen_comparison.py`](scripts/gen_comparison.py); gráficos por [`scripts/gen_charts.py`](scripts/gen_charts.py); este relatório em PDF por [`scripts/build_pdf.py`](scripts/build_pdf.py).
+
+> **Referências.** Kitchenham, B. et al. (2009). _Systematic literature reviews in software engineering – A systematic literature review._ Information and Software Technology. · Cohen, J. (1960). _A coefficient of agreement for nominal scales._ Educational and Psychological Measurement. · Landis, J.R. & Koch, G.G. (1977). _The measurement of observer agreement for categorical data._ Biometrics.
+
+---
+
+_Gerado a partir de `reviews/resultados-consolidados.csv` (20 estudos). Estatísticas: SCORE_RQ médio 3,83; SCORE_QA médio 3,50; 14 Banda Alta; RQ4 plenamente respondida em apenas 4/18. Concordância entre avaliadores: decisão 90%, Cohen's κ = 0,74 (substancial)._
