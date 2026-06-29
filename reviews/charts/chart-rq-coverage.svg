@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="314" viewBox="0 0 800 314" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="800" height="314" fill="#ffffff"/>
+<text x="400.0" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a1a">Cobertura por RQ (18 estudos avaliados)</text>
+<text x="222" y="88.0" text-anchor="end" font-size="12" font-weight="700" fill="#222">RQ1 · Context Definitions</text>
+<rect x="230.0" y="70" width="270.0" height="22" fill="#2e7d32"/>
+<text x="365.0" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">9</text>
+<rect x="500.0" y="70" width="180.0" height="22" fill="#f9a825"/>
+<text x="590.0" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">6</text>
+<rect x="680.0" y="70" width="90.0" height="22" fill="#c62828"/>
+<text x="725.0" y="85" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+<text x="222" y="128.0" text-anchor="end" font-size="12" font-weight="700" fill="#222">RQ2 · Engineering Architecture</text>
+<rect x="230.0" y="110" width="330.0" height="22" fill="#2e7d32"/>
+<text x="395.0" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">11</text>
+<rect x="560.0" y="110" width="180.0" height="22" fill="#f9a825"/>
+<text x="650.0" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">6</text>
+<rect x="740.0" y="110" width="30.0" height="22" fill="#c62828"/>
+<text x="755.0" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+<text x="222" y="168.0" text-anchor="end" font-size="12" font-weight="700" fill="#222">RQ3 · Evidence Benefits</text>
+<rect x="230.0" y="150" width="360.0" height="22" fill="#2e7d32"/>
+<text x="410.0" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">12</text>
+<rect x="590.0" y="150" width="180.0" height="22" fill="#f9a825"/>
+<text x="680.0" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">6</text>
+<text x="222" y="208.0" text-anchor="end" font-size="12" font-weight="700" fill="#222">RQ4 · Challenges &amp; Ethics</text>
+<rect x="230.0" y="190" width="120.0" height="22" fill="#2e7d32"/>
+<text x="290.0" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4</text>
+<rect x="350.0" y="190" width="420.0" height="22" fill="#f9a825"/>
+<text x="560.0" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">14</text>
+<text x="222" y="248.0" text-anchor="end" font-size="12" font-weight="700" fill="#222">RQ5 · Research Gaps</text>
+<rect x="230.0" y="230" width="480.0" height="22" fill="#2e7d32"/>
+<text x="470.0" y="245" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">16</text>
+<rect x="710.0" y="230" width="60.0" height="22" fill="#f9a825"/>
+<text x="740.0" y="245" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+<rect x="230" y="282" width="14" height="12" fill="#2e7d32"/><text x="250" y="293" font-size="11" fill="#333">T — Plenamente (1,0)</text>
+<rect x="402.0" y="282" width="14" height="12" fill="#f9a825"/><text x="422.0" y="293" font-size="11" fill="#333">P — Parcial (0,5)</text>
+<rect x="554.2" y="282" width="14" height="12" fill="#c62828"/><text x="574.2" y="293" font-size="11" fill="#333">N — Insuficiente (0,0)</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="696" height="484" viewBox="0 0 696 484" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="696" height="484" fill="#ffffff"/>
+<text x="348.0" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a1a">Mapa SCORE_RQ × SCORE_QA (contagem e IDs por célula)</text>
+<text x="382" y="466" text-anchor="middle" font-size="12" font-weight="700" fill="#333">SCORE_RQ (máx. 5,0) →</text>
+<text x="26" y="256" text-anchor="middle" font-size="12" font-weight="700" fill="#333" transform="rotate(-90 26 256)">↑ SCORE_QA (máx. 4,0)</text>
+<text x="150" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#555">2.5</text>
+<text x="266" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#555">3.0</text>
+<text x="382" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#555">3.5</text>
+<text x="498" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#555">4.0</text>
+<text x="614" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#555">4.5</text>
+<text x="80" y="134" text-anchor="end" font-size="12" font-weight="700" fill="#555">4.0</text>
+<text x="80" y="218" text-anchor="end" font-size="12" font-weight="700" fill="#555">3.5</text>
+<text x="80" y="302" text-anchor="end" font-size="12" font-weight="700" fill="#555">3.0</text>
+<text x="80" y="386" text-anchor="end" font-size="12" font-weight="700" fill="#555">2.5</text>
+<rect x="94" y="90" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="210" y="90" width="112" height="80" rx="6" fill="#78909c" fill-opacity="0.56" stroke="#e0e0e0"/>
+<text x="266" y="118" text-anchor="middle" font-size="20" font-weight="800" fill="#37474f">2</text>
+<text x="266" y="136" text-anchor="middle" font-size="10.5" fill="#333">P30, P37</text>
+<rect x="326" y="90" width="112" height="80" rx="6" fill="#ef6c00" fill-opacity="0.36" stroke="#e0e0e0"/>
+<text x="382" y="118" text-anchor="middle" font-size="20" font-weight="800" fill="#bf360c">1</text>
+<text x="382" y="136" text-anchor="middle" font-size="10.5" fill="#333">P38</text>
+<rect x="442" y="90" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.56" stroke="#e0e0e0"/>
+<text x="498" y="118" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">2</text>
+<text x="498" y="136" text-anchor="middle" font-size="10.5" fill="#333">P34, P35</text>
+<rect x="558" y="90" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.96" stroke="#e0e0e0"/>
+<text x="614" y="118" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">4</text>
+<text x="614" y="136" text-anchor="middle" font-size="10.5" fill="#333">P21, P22, P25, P27</text>
+<rect x="94" y="174" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="210" y="174" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="326" y="174" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.36" stroke="#e0e0e0"/>
+<text x="382" y="202" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">1</text>
+<text x="382" y="220" text-anchor="middle" font-size="10.5" fill="#333">P23</text>
+<rect x="442" y="174" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.36" stroke="#e0e0e0"/>
+<text x="498" y="202" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">1</text>
+<text x="498" y="220" text-anchor="middle" font-size="10.5" fill="#333">P32</text>
+<rect x="558" y="174" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.56" stroke="#e0e0e0"/>
+<text x="614" y="202" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">2</text>
+<text x="614" y="220" text-anchor="middle" font-size="10.5" fill="#333">P28, P31</text>
+<rect x="94" y="258" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="210" y="258" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="326" y="258" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="442" y="258" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.36" stroke="#e0e0e0"/>
+<text x="498" y="286" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">1</text>
+<text x="498" y="304" text-anchor="middle" font-size="10.5" fill="#333">P20</text>
+<rect x="558" y="258" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="94" y="342" width="112" height="80" rx="6" fill="#ef6c00" fill-opacity="0.56" stroke="#e0e0e0"/>
+<text x="150" y="370" text-anchor="middle" font-size="20" font-weight="800" fill="#bf360c">2</text>
+<text x="150" y="388" text-anchor="middle" font-size="10.5" fill="#333">P26, P29</text>
+<rect x="210" y="342" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="326" y="342" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="442" y="342" width="112" height="80" rx="6" fill="#2e7d32" fill-opacity="0.56" stroke="#e0e0e0"/>
+<text x="498" y="370" text-anchor="middle" font-size="20" font-weight="800" fill="#1b5e20">2</text>
+<text x="498" y="388" text-anchor="middle" font-size="10.5" fill="#333">P24, P33</text>
+<rect x="558" y="342" width="112" height="80" rx="6" fill="#fafafa" fill-opacity="1.00" stroke="#e0e0e0"/>
+<rect x="92" y="46" width="14" height="12" rx="2" fill="#2e7d32" fill-opacity="0.55"/><text x="112" y="56" font-size="11" fill="#333">Todos Incluir</text>
+<rect x="227.8" y="46" width="14" height="12" rx="2" fill="#ef6c00" fill-opacity="0.55"/><text x="247.8" y="56" font-size="11" fill="#333">Todos Excluir</text>
+<rect x="363.6" y="46" width="14" height="12" rx="2" fill="#78909c" fill-opacity="0.55"/><text x="383.6" y="56" font-size="11" fill="#333">Misto</text>
+<text x="672" y="56" text-anchor="end" font-size="10" fill="#999">opacidade ∝ nº de estudos</text>
+</svg>
