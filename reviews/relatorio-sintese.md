@@ -30,6 +30,8 @@
 
 **Critérios verificáveis no PDF** (Ano ≥ 2020; veículo ≠ NULL) **atendidos por todos**. Os critérios **Citações ≥ 1, SJR Q1–Q2 e Qualis A1–A2** ficam **pendentes** — exceto Qualis A3 de P39/P40 (insumo), que motiva a inelegibilidade.
 
+![Distribuição das recomendações](charts/chart-recommendations.svg)
+
 ---
 
 ## 3. Cobertura por questão de pesquisa (RQ)
@@ -43,6 +45,8 @@ Distribuição de vereditos entre os **18 estudos avaliados**:
 | **RQ3** | Evidence Benefits (métricas, tempo de resposta, qualidade de decisão)           |   12    |    6    |    0    | **Mais coberta** — evidência empírica abundante           |
 | **RQ4** | Challenges & Ethics (segurança, robustez, governança, accountability)           |  **4**  | **14**  |    0    | **Lacuna sistemática** — ética/governança rasa            |
 | **RQ5** | Research Gaps (avaliação, threat models, governança, observabilidade)           |   16    |    2    |    0    | **Quase universal** — direções futuras bem articuladas    |
+
+![Cobertura por RQ](charts/chart-rq-coverage.svg)
 
 **Achados-chave:**
 
@@ -61,12 +65,16 @@ Distribuição de vereditos entre os **18 estudos avaliados**:
 | **QA3** Base de evidências sólida | 13  |  1  | **4** | **4 N = estudos secundários** sem validação empírica própria (P24, P26, P29, P33)                         |
 | **QA4** Conclusões coerentes      | 16  |  2  |   0   | 2 parciais (P23, P26): limitações pouco discutidas                                                        |
 
+![Cobertura por QA (DARE)](charts/chart-qa-coverage.svg)
+
 - **Banda de qualidade:** **14 Alta** (≥3,0) · **4 Média** (1,5–2,5) · **0 Baixa**. As 4 Médias são **P24, P26, P29, P33** — todos **secundários** (QA3 = N puxa o escore).
 - **Reprodutibilidade (QA2)** é o calcanhar recorrente dos estudos primários: **dados de produção proprietários** (SGCC em P31/P32/P35; SpamAssassin/custom em P28) e **ausência de repositórios de código/prompts** limitam a replicação plena. Exceções positivas: P35 (templates de prompt no apêndice), P38 (base pública + métricas definidas), P34/P37 (protocolos detalhados).
 
 ---
 
 ## 5. Ranking de aderência (SCORE_RQ + SCORE_QA)
+
+![Aderência por estudo](charts/chart-scores-by-study.svg)
 
 | Pos. | ID      | SCORE_RQ | SCORE_QA |  Σ  | Recomendação                 |
 | :--: | ------- | :------: | :------: | :-: | ---------------------------- |
@@ -92,6 +100,10 @@ Distribuição de vereditos entre os **18 estudos avaliados**:
 > Nota: a pontuação **não substitui** a decisão de relevância. P38 e P30 pontuam alto (Σ 7,5 e 7,0) mas são **excluídos** por domínio/tipo — escore alto ≠ aderência ao escopo da RSL.
 
 **Núcleo recomendado (top tier):** **P21, P22, P25, P27, P28, P31, P35** — sistemas agênticos, IR/AIOps/SOC, evidência empírica robusta. **P34** complementa pelo lado _copilot/IR puro_ (NIST 800-61).
+
+O mapa abaixo cruza os dois escores: o quadrante superior-direito (SCORE_RQ ≥ 4,0 e SCORE_QA ≥ 3,5) concentra o núcleo de inclusão; exclusões por tipo/domínio (P30, P38) aparecem com alta qualidade mas fora do escopo, e os secundários (P24, P33, P26, P29) caem na faixa de QA ≤ 2,5.
+
+![Mapa SCORE_RQ × SCORE_QA](charts/chart-grid-rq-qa.svg)
 
 ---
 
