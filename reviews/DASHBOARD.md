@@ -10,6 +10,7 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 | 🧮 [Resultados consolidados (CSV)](resultados-consolidados.csv)                              | Matriz machine-readable: RQ1-5, QA1-4, escores, banda, recomendação                                                                               |
 | 🖼️ [Galeria de gráficos](graficos.md)                                                        | Os 5 gráficos com leitura                                                                                                                         |
 | 📚 [Índice de pareceres](README.md)                                                          | Tabela-síntese por estudo                                                                                                                         |
+| 📐 [Comparação entre avaliadores](comparacao-avaliadores.md)                                 | Claude × ChatGPT: concordância (decisão 90%, κ = 0,74)                                                                                            |
 | 🛠️ [Scripts geradores](scripts/README.md) · [Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) | Regeneração de gráficos e PDF                                                                                                                     |
 | 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompt-template.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
@@ -69,11 +70,22 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 - **Quer os dados crus?** → [CSV consolidado](resultados-consolidados.csv).
 - **Quer regenerar gráficos/PDF?** → [scripts](scripts/README.md) + [como criar os gráficos](COMO-CRIAR-GRAFICOS.md).
 
-## 🔬 Conjunto comparativo (ChatGPT)
+## 🔬 Confiabilidade entre avaliadores (Claude × ChatGPT)
 
-A pasta `ChatGPT/` contém avaliações paralelas dos **20 estudos (P20–P40, sem P36)** geradas com ChatGPT, para **comparação entre avaliadores**. Não fazem parte do corpus oficial de pareceres deste diretório (estes são `review-Pxx.md`).
+Os 20 estudos foram avaliados **independentemente** por dois avaliadores sob o mesmo protocolo. A pasta [`ChatGPT/`](ChatGPT/) traz os pareceres paralelos (separados dos oficiais `review-Pxx.md`).
 
-📐 **[Comparação entre avaliadores (Claude × ChatGPT)](comparacao-avaliadores.md)** — concordância de **90%** na decisão (Cohen's κ = 0,74), **100%** em banda e em RQ4/RQ5; divergência apenas em P26/P29 (tratamento de surveys/SLR). Dados: [`comparacao-avaliadores.csv`](comparacao-avaliadores.csv).
+| Métrica                                     |                                                     Valor | Leitura                                    |
+| ------------------------------------------- | --------------------------------------------------------: | ------------------------------------------ |
+| Acordo de **decisão** (Incluir/Excluir)     |                                           **90%** (18/20) | Alto                                       |
+| **Cohen's κ** (decisão)                     |                                                  **0,74** | Concordância _substancial_                 |
+| Acordo de **banda** de qualidade            |                                          **100%** (18/18) | Perfeito                                   |
+| Erro abs. médio **SCORE_RQ** / **SCORE_QA** |                                       **0,42** / **0,31** | Pequeno (máx. 1,0 / 0,5)                   |
+| Acordo por RQ (T/P/N)                       | RQ1 67% · RQ2 78% · RQ3 72% · **RQ4 100%** · **RQ5 100%** | —                                          |
+| Divergências de decisão                     |           **2/20** — P26, P29 (surveys/SLR não-agênticos) | ChatGPT inclui c/ ressalvas; Claude exclui |
+
+![Concordância entre avaliadores](charts/chart-comparacao.svg)
+
+📐 Análise completa: **[comparacao-avaliadores.md](comparacao-avaliadores.md)** · dados em [`comparacao-avaliadores.csv`](comparacao-avaliadores.csv). **RQ4 e RQ5 com 100% de acordo** ⇒ a lacuna de ética/governança é um achado **avaliador-independente**.
 
 ---
 
