@@ -1,0 +1,52 @@
+# Avaliação RSL — Estudo P28
+
+**Artigo:** _A Multi-Agent System for Cybersecurity Threat Detection and Correlation Using Large Language Models_ — Y. Hmimou, M. Tabaa, A. Khiat, Z. Hidila (EMSI / Université Hassan II de Casablanca, Marrocos)
+**Arquivo:** P28-A1-A_Multi-Agent_System_for_Cybersecurity_Threat_Detection...pdf (17 páginas)
+
+## Tabela A — Bibliométrica (Tabela 3)
+
+| ID  | Periódico/Conf.       | Ano  | Cit.                          | SJR                               | Qualis                                          | Tipo                                                                                                                                   | DOI                         |
+| --- | --------------------- | ---- | ----------------------------- | --------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| P28 | IEEE Access (Vol. 13) | 2025 | [VERIFICAR] (base indexadora) | [VERIFICAR] (Scimago; insumo: Q1) | [VERIFICAR] (Qualis CAPES/Sucupira; insumo: A1) | Artigo de pesquisa empírico (sistema LLM multi-agente; datasets benchmark + sintéticos, avaliação humana, benchmarking vs 12 sistemas) | 10.1109/ACCESS.2025.3602681 |
+
+_Evidências: cabeçalho p.1 (DOI; recebido 25/07/2025, publicado 25/08/2025); rodapé "VOLUME 13, 2025"; CC-BY. Citações/SJR/Qualis não constam no PDF._
+
+## Tabela B — Classificação das RQs (Tabela 5)
+
+| ID  | Artigo                  | RQ                           | Veredito                | Símbolo       | Evidência (seção/pág.)                        | Parecer do revisor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --- | ----------------------- | ---------------------------- | ----------------------- | ------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P28 | MAS Cybersecurity (LLM) | RQ1 Context Definitions      | Respondida Plenamente   | **T**         | §III (p.4-7), §VI (p.15)                      | Autonomia **delimitada/explicitamente caracterizada** — agentes operam autonomamente por domínio sob um Task Dispatcher; o artigo é explícito que os LLMs atuam "**not as autonomous decision makers**" mas como unidades de processamento em workflows definidos, com supervisão humana "non-negotiable" (a); características — orquestração (dispatcher), memória (módulo leve por agente), uso de ferramentas (regex, DNS, Nmap, FAISS, scorers) (b); modelo decisório — scoring de risco + sistema de recomendação cross-context (c). |
+| P28 | "                       | RQ2 Engineering Architecture | Respondida Plenamente   | **T**         | §III-§IV (p.4-9), Fig.1                       | Arquitetura modular de 4 camadas (interação → dispatcher → 3 agentes → recomendação cross-context) (a); stack — LLM (GPT-4/Groq), FAISS, Nmap, RAG, regex/DNS, ELK/Suricata (b); capacidades/guardrails — validação de entrada e completude no dispatcher, logging/auditoria, processamento assíncrono paralelo, explicabilidade (CoT/XAI), fallback/substituibilidade de LLM (c).                                                                                                                                                        |
+| P28 | "                       | RQ3 Evidence Benefits        | Respondida Plenamente   | **T**         | §V.B, Tabs. 5-7, Figs. 9-12 (p.10-15)         | Quantitativo robusto e **IR/SOC-específico**: detecção 93,6%, correlação 87%, F1 0,94, redução de FP 41,3%, redução de tempo de triagem 38,5%, confiança do analista 4,6/5, métricas por agente 91,8-94,1% (b); benefícios qualitativos — explicabilidade, rastreabilidade, confiança do analista (a); evidência forte — CIC-IDS 2017 + SpamAssassin + sintéticos, avaliação humana cega (3 analistas, 60 tarefas), benchmarking vs 12 sistemas (c).                                                                                      |
+| P28 | "                       | RQ4 Challenges & Ethics      | Parcialmente Respondida | **P**         | §VI "Conclusion / Threats to validity" (p.15) | Desafios técnicos/ameaças à validade fortes — dependência de ferramentas/APIs de terceiros (latência, ponto único de falha), custo/imprevisibilidade do LLM, consistência da explicabilidade entre atualizações, datasets legados (a); governança — supervisão humana, rastreabilidade, conformidade, privacidade (deploy federado), auditoria (c parcial). Porém **ética propriamente dita** (viés, dual-use — apesar de citar [1] sobre agentes LLM a serviço de atacantes) não é tratada a fundo (b parcial).                          |
+| P28 | "                       | RQ5 Research Gaps            | Respondida Plenamente   | **T**         | §VI (p.15)                                    | Limitações + direções explícitas: entradas multimodais (anexos, links, payloads visuais), streaming em tempo real para o agente de logs, deploy federado (privacidade), LLMs leves/edge.                                                                                                                                                                                                                                                                                                                                                  |
+|     |                         | **SCORE_RQ**                 |                         | **4.5 / 5.0** |                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+
+## Tabela C — Avaliação de Qualidade (Tabela 7)
+
+| ID  | Tipo de estudo                                            | QA1         | QA2         | QA3         | QA4         | SCORE_QA      | Banda    |
+| --- | --------------------------------------------------------- | ----------- | ----------- | ----------- | ----------- | ------------- | -------- |
+| P28 | Artigo de pesquisa empírico (LLM multi-agente, segurança) | **Y** (1.0) | **P** (0.5) | **Y** (1.0) | **Y** (1.0) | **3.5 / 4.0** | **Alta** |
+
+_Âncoras:_
+
+- **QA1 = Y** — problema (sistemas siloed/rule-based não detectam ameaças multi-vetor cross-domain; necessidade de semântica + correlação) e solução agêntica (MAS LLM) explícitos (§I).
+- **QA2 = P** — arquitetura e protocolo de avaliação detalhados (workflows dos agentes, ferramentas nomeadas, datasets CIC-IDS 2017/SpamAssassin públicos, protocolo de 2 passos com 60 tarefas e 3 analistas), **porém** os **pipelines de prompt** (contribuição central) não são publicados, a versão exata do LLM é vaga (GPT-4/Groq), os datasets sintéticos/custom não são liberados e não há repositório de código → replicabilidade parcial.
+- **QA3 = Y** — validação empírica sólida: datasets benchmark + sintéticos, avaliação humana cega, benchmarking contra 12 sistemas, métricas por agente e de sistema. Ressalva: sem teste estatístico e datasets parcialmente legados/sintéticos (reconhecido como ameaça à validade).
+- **QA4 = Y** — conclusões coerentes com os resultados; **seção explícita de limitações/ameaças à validade** (dependência de ferramentas, imprevisibilidade do LLM, datasets legados) com estratégias de mitigação.
+
+## Parecer final do revisor
+
+**Síntese.** Estudo empírico **fortemente aderente ao escopo da RSL em ambos os eixos**: é **agêntico** (sistema LLM multi-agente — dispatcher orquestrador + agentes de e-mail/log/IP com ferramentas, memória e correlação cross-context) **e** está **diretamente no domínio de cibersegurança/SOC/Resposta a Incidentes** (detecção e correlação de ameaças, SIEM, tempo de triagem, confiança do analista, supervisão humana). Aderência alta a **RQ1-RQ3 e RQ5**; **RQ4 parcial** (governança/oversight fortes, ética rasa). Notavelmente, o desenho é **human-centric / copilot** — LLMs como apoio à decisão do analista, não decisores autônomos —, alinhando-se de forma quase literal ao tema "**Agentic AI Copilot para Resposta a Incidentes**".
+
+**Recomendação: INCLUIR.** SCORE_RQ 4,5/5,0 e QA 3,5/4,0 (Banda Alta). Um dos estudos de **melhor ajuste ao escopo** até agora — agêntico **e** de segurança/IR, com avaliação humana e operacional (triagem, confiança do analista). Excelente par de comparação com P25 (MAS/RL em cyber range) no eixo "tipo de agente" (P28 = LLM multi-agente; P25 = RL/ML).
+
+> **Nuance de autonomia (registrar no mapeamento):** P28 adota **autonomia delimitada / copilot** (LLM como processador semântico em workflow determinístico, com supervisão humana obrigatória), distinta da **autonomia closed-loop** de P22 (remediação autônoma). Útil para posicionar os estudos no eixo de níveis de autonomia.
+
+**Pendências de verificação externa:**
+
+- **Citações** ≥ 1 → IEEE Xplore / Scopus / Google Scholar (artigo recente, ago/2025).
+- **SJR (quartil)** → Scimago, _IEEE Access_ (insumo: Q1).
+- **Qualis (estrato)** → Plataforma Sucupira / Qualis CAPES (insumo: A1).
+
+Critérios verificáveis no PDF atendidos (Ano 2025 ✓; veículo IEEE Access ✓); os três acima ficam **PENDENTES DE VERIFICAÇÃO EXTERNA**.
