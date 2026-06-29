@@ -68,7 +68,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
     ├── review-P20..P40.md        ← 20 pareceres do revisor
     ├── charts/                   ← 5 gráficos SVG
     ├── scripts/                  ← geradores (gen_charts.py, build_pdf.py)
-    └── ChatGPT/                  ← avaliações comparativas (P20–P31), se presente
+    └── ChatGPT/                  ← avaliações comparativas (P20–P40, sem P36)
 ```
 
 ## 📚 Documentos por categoria
@@ -96,7 +96,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 ### Comparação
 
-- [`reviews/ChatGPT/`](reviews/ChatGPT/) — avaliações paralelas (P20–P31) com ChatGPT, para comparação entre avaliadores. _(Conjunto separado dos pareceres oficiais `review-Pxx.md`.)_
+- [`reviews/ChatGPT/`](reviews/ChatGPT/) — avaliações paralelas dos 20 estudos (P20–P40, sem P36) com ChatGPT, para comparação entre avaliadores. _(Conjunto separado dos pareceres oficiais `review-Pxx.md`.)_
 
 ## 🔁 Reproduzir
 

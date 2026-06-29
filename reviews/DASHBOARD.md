@@ -71,7 +71,7 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 
 ## 🔬 Conjunto comparativo (ChatGPT)
 
-A pasta `ChatGPT/` (quando presente) contém avaliações paralelas de **P20–P31** geradas com ChatGPT, para **comparação entre avaliadores**. Não fazem parte do corpus oficial de pareceres deste diretório (estes são `review-Pxx.md`).
+A pasta `ChatGPT/` contém avaliações paralelas dos **20 estudos (P20–P40, sem P36)** geradas com ChatGPT, para **comparação entre avaliadores**. Não fazem parte do corpus oficial de pareceres deste diretório (estes são `review-Pxx.md`).
 
 ---
 
