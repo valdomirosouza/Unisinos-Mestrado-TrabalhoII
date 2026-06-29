@@ -1,0 +1,21 @@
+ID,Claude_SCORE_RQ,GPT_SCORE_RQ,d_RQ,Claude_SCORE_QA,GPT_SCORE_QA,d_QA,Claude_Banda,GPT_Banda,Banda_igual,Claude_decisao,GPT_decisao,Decisao_igual,Claude_recomendacao,GPT_recomendacao
+P20,4.0,3.0,-1.0,3.0,3.5,0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas,INCLUIR COM RESSALVAS
+P21,4.5,3.5,-1.0,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR COM RESSALVAS
+P22,4.5,4.5,0.0,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR COM RESSALVAS
+P23,3.5,3.5,0.0,3.5,3.0,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas,INCLUIR COM RESSALVAS
+P24,4.0,4.5,0.5,2.5,2.0,-0.5,Media,Media,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas (fundacional),INCLUIR COM RESSALVAS
+P25,4.5,4.0,-0.5,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR COM RESSALVAS
+P26,2.5,2.5,0.0,2.5,2.5,0.0,Media,Media,sim,EXCLUIR,INCLUIR,nao,Excluir (relevancia/tipo),INCLUIR COM RESSALVAS
+P27,4.5,4.5,0.0,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR COM RESSALVAS
+P28,4.5,4.5,0.0,3.5,3.5,0.0,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR
+P29,2.5,3.5,1.0,2.5,2.5,0.0,Media,Media,sim,EXCLUIR,INCLUIR,nao,Excluir (relevancia/tipo),INCLUIR COM RESSALVAS
+P30,3.0,3.0,0.0,4.0,3.5,-0.5,Alta,Alta,sim,EXCLUIR,EXCLUIR,sim,Excluir (relevancia/tipo),EXCLUIR DO CORPUS PRINCIPAL
+P31,4.5,4.0,-0.5,3.5,3.5,0.0,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR COM RESSALVAS
+P32,4.0,4.0,0.0,3.5,3.5,0.0,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas,INCLUIR COM RESSALVAS
+P33,4.0,4.5,0.5,2.5,2.5,0.0,Media,Media,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas (fundacional),INCLUIR COM RESSALVAS
+P34,4.0,3.5,-0.5,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas,INCLUIR COM RESSALVAS
+P35,4.0,3.5,-0.5,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir,INCLUIR COM RESSALVAS
+P37,3.0,4.0,1.0,4.0,3.5,-0.5,Alta,Alta,sim,INCLUIR,INCLUIR,sim,Incluir c/ ressalvas,INCLUIR COM RESSALVAS
+P38,3.5,4.0,0.5,4.0,4.0,0.0,Alta,Alta,sim,EXCLUIR,EXCLUIR,sim,Excluir (dominio),EXCLUIR DO CORPUS PRINCIPAL
+P39,NA,2.5,,NA,2.0,,NA,Media,NA,EXCLUIR,EXCLUIR,sim,Excluir (INELEGIVEL - Qualis A3),EXCLUIR DO CORPUS PRINCIPAL
+P40,NA,4.5,,NA,1.5,,NA,Media,NA,EXCLUIR,EXCLUIR,sim,Excluir (INELEGIVEL - Qualis A3),EXCLUIR DO CORPUS PRINCIPAL

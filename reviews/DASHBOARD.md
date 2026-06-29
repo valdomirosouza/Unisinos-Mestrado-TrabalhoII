@@ -73,6 +73,8 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 
 A pasta `ChatGPT/` contém avaliações paralelas dos **20 estudos (P20–P40, sem P36)** geradas com ChatGPT, para **comparação entre avaliadores**. Não fazem parte do corpus oficial de pareceres deste diretório (estes são `review-Pxx.md`).
 
+📐 **[Comparação entre avaliadores (Claude × ChatGPT)](comparacao-avaliadores.md)** — concordância de **90%** na decisão (Cohen's κ = 0,74), **100%** em banda e em RQ4/RQ5; divergência apenas em P26/P29 (tratamento de surveys/SLR). Dados: [`comparacao-avaliadores.csv`](comparacao-avaliadores.csv).
+
 ---
 
 _Hub gerado a partir de [`resultados-consolidados.csv`](resultados-consolidados.csv). Última atualização do lote: 20 estudos (P20–P40)._

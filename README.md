@@ -97,6 +97,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ### Comparação
 
 - [`reviews/ChatGPT/`](reviews/ChatGPT/) — avaliações paralelas dos 20 estudos (P20–P40, sem P36) com ChatGPT, para comparação entre avaliadores. _(Conjunto separado dos pareceres oficiais `review-Pxx.md`.)_
+- [`reviews/comparacao-avaliadores.md`](reviews/comparacao-avaliadores.md) — **comparação Claude × ChatGPT** (concordância de decisão 90%, κ = 0,74) · dados em [`reviews/comparacao-avaliadores.csv`](reviews/comparacao-avaliadores.csv).
 
 ## 🔁 Reproduzir
 
