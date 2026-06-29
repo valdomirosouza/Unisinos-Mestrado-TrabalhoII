@@ -1,5 +1,7 @@
 # Gráficos — Resultados da RSL (P20–P40)
 
+> 🧭 [📊 Dashboard](DASHBOARD.md) · [🛠️ Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) · [🏠 README raiz](../README.md)
+
 Visualizações geradas a partir de [`resultados-consolidados.csv`](resultados-consolidados.csv) (20 estudos; 18 avaliados + 2 inelegíveis). Formato **SVG** (vetorial, renderiza no GitHub, versionável). Gerados sem dependências externas.
 
 > Verde = Plenamente/Sim (T/Y) · Âmbar = Parcial (P) · Vermelho = Insuficiente/Não (N/N).

@@ -1,5 +1,7 @@
 # Avaliações RSL — Síntese Consolidada (P20–P40)
 
+> 🧭 **Navegação:** [📊 Dashboard](DASHBOARD.md) · [📄 Relatório](relatorio-sintese.md) · [🧮 CSV](resultados-consolidados.csv) · [🖼️ Gráficos](graficos.md) · [🏠 README raiz](../README.md)
+
 Pareceres de revisão dos estudos candidatos da RSL **"Agentic AI Copilot para Resposta a Incidentes"**, produzidos executando o prompt de cada artigo (`../prompts/prompt-Pxx.md`) contra o respectivo PDF (`../docs/`), seguindo as diretrizes de Kitchenham et al. (2009) e a lógica DARE (QA1–QA4).
 
 - **20 estudos avaliados:** P20–P35 e P37–P40.
