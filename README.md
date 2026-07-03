@@ -56,11 +56,20 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── README.md                     ← este arquivo (índice geral)
 ├── prompt-template.md            ← template do prompt de avaliação (papel, RQs, QA, saída)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
-├── TrabalhoI/                    ← RSL fundacional (artigo + 19 estudos P1–P19)
-├── research/                     ← Etapa 1: descoberta de candidatos (Gemini/Claude/ChatGPT)
+├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
+│   ├── README.md                ← índice do Trabalho I
+│   ├── Artigo_Agentic_AI V3.pdf ← artigo da RSL original
+│   ├── Artigo_Agentic_AI V3_Latex.zip ← fontes LaTeX do artigo
+│   └── References/              ← 19 estudos incluídos (P1–P19)
+├── research/                     ← Etapa 1: descoberta de candidatos
+│   ├── README.md                ← índice da descoberta
+│   ├── prompt.md                ← prompt de busca/triagem (EN)
+│   ├── gemini-research-report.md  ← candidatos levantados pelo Gemini
+│   ├── claude-research-report.md  ← candidatos levantados pelo Claude
+│   └── chatgpt-research-report.md ← candidatos levantados pelo ChatGPT
 ├── prompts/                      ← 20 prompts preenchidos (prompt-P20..P40)
 ├── docs/                         ← 20 PDFs dos artigos avaliados
-└── reviews/                      ← avaliação e síntese
+└── reviews/                      ← Etapa 2: avaliação e síntese
     ├── DASHBOARD.md              ← painel central (hub de tudo)
     ├── README.md                 ← índice/tabela-síntese dos pareceres
     ├── relatorio-sintese.md/.pdf ← análise agregada (com gráficos)
