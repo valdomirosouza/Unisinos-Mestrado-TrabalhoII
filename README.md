@@ -56,6 +56,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── README.md                     ← este arquivo (índice geral)
 ├── prompt-template.md            ← template do prompt de avaliação (papel, RQs, QA, saída)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
+├── research/                     ← Etapa 1: descoberta de candidatos (Gemini/Claude/ChatGPT)
 ├── prompts/                      ← 20 prompts preenchidos (prompt-P20..P40)
 ├── docs/                         ← 20 PDFs dos artigos avaliados
 └── reviews/                      ← avaliação e síntese
@@ -72,6 +73,10 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ```
 
 ## 📚 Documentos por categoria
+
+### Descoberta de candidatos (Etapa 1)
+
+- [`research/`](research/) — **descoberta de artigos candidatos** para ampliar o corpus, executando o mesmo prompt de busca em **Gemini**, **Claude** e **ChatGPT**. Insumos exploratórios (Qualis/SJR/citações majoritariamente `UNVERIFIED`) que originaram os estudos P20–P40. Ver [`research/README.md`](research/README.md).
 
 ### Insumos (entrada)
 
@@ -110,4 +115,6 @@ Detalhes em [`reviews/scripts/README.md`](reviews/scripts/README.md) e [`reviews
 
 ## 🧭 Metodologia (resumo)
 
-Para cada estudo: o [template](prompt-template.md) é preenchido com os insumos → o prompt é executado contra o PDF → o revisor produz **3 tabelas** (Bibliométrica, Classificação das RQs, Avaliação de Qualidade) e um **parecer** (Incluir / Incluir com ressalvas / Excluir). Os escores alimentam o [CSV consolidado](reviews/resultados-consolidados.csv), que origina os [gráficos](reviews/graficos.md) e o [relatório de síntese](reviews/relatorio-sintese.md).
+**Etapa 1 — Descoberta:** o [prompt de busca](research/prompt.md) é executado em três assistentes (Gemini, Claude, ChatGPT) para levantar candidatos que estendam o corpus P1–P19; os resultados ficam em [`research/`](research/) e, após triagem e verificação, originam os estudos P20–P40.
+
+**Etapa 2 — Avaliação:** para cada estudo: o [template](prompt-template.md) é preenchido com os insumos → o prompt é executado contra o PDF → o revisor produz **3 tabelas** (Bibliométrica, Classificação das RQs, Avaliação de Qualidade) e um **parecer** (Incluir / Incluir com ressalvas / Excluir). Os escores alimentam o [CSV consolidado](reviews/resultados-consolidados.csv), que origina os [gráficos](reviews/graficos.md) e o [relatório de síntese](reviews/relatorio-sintese.md).
