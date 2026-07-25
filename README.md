@@ -15,6 +15,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 | Os dados crus              | 🧮 [Resultados consolidados (CSV)](reviews/resultados-consolidados.csv)                        |
 | Os gráficos                | 🖼️ [Galeria](reviews/graficos.md) · [como criá-los](reviews/COMO-CRIAR-GRAFICOS.md)            |
 | Um estudo específico       | 📚 [Índice de pareceres](reviews/README.md) ou a tabela abaixo                                 |
+| As fichas de extração      | 📑 [Índice das fichas P01–P40](report/README.md)                                               |
 
 ## 📈 Resultado em um relance
 
@@ -68,7 +69,16 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   ├── claude-research-report.md  ← candidatos levantados pelo Claude
 │   └── chatgpt-research-report.md ← candidatos levantados pelo ChatGPT
 ├── prompts/                      ← 20 prompts preenchidos (prompt-P20..P40)
-├── docs/                         ← 20 PDFs dos artigos avaliados
+├── docs/                         ← 39 PDFs do corpus (P01–P19 fundacionais + P20–P40 avaliados)
+├── report/                       ← Etapa 3: fichas de extração estruturada
+│   ├── README.md                ← índice das fichas (P01–P40)
+│   ├── paper-extraction-prompt-template.md ← template de extração (11 campos, Kitchenham)
+│   ├── Pxx-extraction.csv       ← 39 fichas em inglês
+│   ├── Pxx-extraction-ptBR.csv  ← 39 fichas em português (termos técnicos em EN)
+│   └── consolidated-extraction[-ptBR].csv ← consolidados (uma linha por artigo)
+├── referencias.csv               ← referências citadas pelos artigos (extraídas via DOIS.py)
+├── DOIS.py                       ← script de extração de referências (Crossref/OpenAlex/S2/COCI)
+├── DOIS.txt                      ← lista de DOIs de entrada do DOIS.py
 └── reviews/                      ← Etapa 2: avaliação e síntese
     ├── DASHBOARD.md              ← painel central (hub de tudo)
     ├── README.md                 ← índice/tabela-síntese dos pareceres
@@ -97,7 +107,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`prompt-template.md`](prompt-template.md) — template do prompt (papel, contexto, RQ1–RQ5, QA1–QA4, formato de saída).
 - [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR).
 - [`prompts/`](prompts/) — 20 prompts preenchidos, um por estudo.
-- [`docs/`](docs/) — 20 PDFs dos artigos.
+- [`docs/`](docs/) — **39 PDFs do corpus**: P01–P19 (estudos fundacionais do Trabalho I) + P20–P40 (candidatos avaliados). Índice completo com links em [`report/README.md`](report/README.md).
+- [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
 
 ### Avaliação & síntese (saída)
 
@@ -108,6 +119,10 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`reviews/graficos.md`](reviews/graficos.md) — galeria · [`reviews/charts/`](reviews/charts/) — SVGs.
 - [`reviews/review-P20.md` … `review-P40.md`](reviews/) — 20 pareceres.
 
+### Extração de dados (Etapa 3)
+
+- [`report/`](report/) — **fichas de extração estruturada** dos 39 artigos (metodologia Kitchenham, 11 campos com foco em MTTD/MTTR e Agentic AI). Uma ficha por artigo em inglês (`Pxx-extraction.csv`) e português (`Pxx-extraction-ptBR.csv`), mais os consolidados [`consolidated-extraction.csv`](report/consolidated-extraction.csv) / [`-ptBR`](report/consolidated-extraction-ptBR.csv). Template em [`report/paper-extraction-prompt-template.md`](report/paper-extraction-prompt-template.md). Ver [`report/README.md`](report/README.md).
+
 ### Ferramentas
 
 - [`reviews/scripts/`](reviews/scripts/) — geradores ([`gen_charts.py`](reviews/scripts/gen_charts.py), [`build_pdf.py`](reviews/scripts/build_pdf.py)) + [README](reviews/scripts/README.md).
@@ -115,7 +130,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 ### Comparação
 
-- [`reviews/ChatGPT/`](reviews/ChatGPT/) — avaliações paralelas dos 20 estudos (P20–P40, sem P36) com ChatGPT, para comparação entre avaliadores. _(Conjunto separado dos pareceres oficiais `review-Pxx.md`.)_
+- [`reviews/ChatGPT/`](reviews/ChatGPT/) — avaliações paralelas dos 20 estudos (P20–P40, sem P36) com ChatGPT, para comparação entre avaliadores; índice por estudo em [`reviews/README.md`](reviews/README.md#avaliações-comparativas-chatgpt). _(Conjunto separado dos pareceres oficiais `review-Pxx.md`.)_
 - [`reviews/comparacao-avaliadores.md`](reviews/comparacao-avaliadores.md) — **comparação Claude × ChatGPT** (concordância de decisão 90%, κ = 0,74) · dados em [`reviews/comparacao-avaliadores.csv`](reviews/comparacao-avaliadores.csv).
 
 ## 🔁 Reproduzir

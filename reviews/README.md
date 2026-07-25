@@ -46,6 +46,12 @@ Pareceres de revisão dos estudos candidatos da RSL **"Agentic AI Copilot para R
 
 _Total: 14 + 4 + 2 = 20 estudos. Se o protocolo restringir o corpus a estudos primários, os 2 fundacionais (P24, P33) migram para fundamentação, resultando em **12 incluídos no corpus primário**._
 
+## Avaliações comparativas (ChatGPT)
+
+Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunto separado dos pareceres oficiais), usadas na [comparação entre avaliadores](comparacao-avaliadores.md) (concordância 90%, κ = 0,74). Um arquivo por estudo em [`ChatGPT/`](ChatGPT/):
+
+[P20](ChatGPT/P20_avaliacao_RSL.md) · [P21](ChatGPT/P21_avaliacao_RSL.md) · [P22](ChatGPT/P22_avaliacao_RSL.md) · [P23](ChatGPT/P23_avaliacao_RSL.md) · [P24](ChatGPT/P24_avaliacao_RSL.md) · [P25](ChatGPT/P25_avaliacao_RSL.md) · [P26](ChatGPT/P26_avaliacao_RSL.md) · [P27](ChatGPT/P27_avaliacao_RSL.md) · [P28](ChatGPT/P28_avaliacao_RSL.md) · [P29](ChatGPT/P29_avaliacao_RSL.md) · [P30](ChatGPT/P30_avaliacao_RSL.md) · [P31](ChatGPT/P31_avaliacao_RSL.md) · [P32](ChatGPT/P32_avaliacao_RSL.md) · [P33](ChatGPT/P33_avaliacao_RSL.md) · [P34](ChatGPT/P34_avaliacao_RSL.md) · [P35](ChatGPT/P35_avaliacao_RSL.md) · [P37](ChatGPT/P37_avaliacao_RSL.md) · [P38](ChatGPT/P38_avaliacao_RSL.md) · [P39](ChatGPT/P39_avaliacao_RSL.md) · [P40](ChatGPT/P40_avaliacao_RSL.md)
+
 ## Padrões e observações para a síntese
 
 - **Eixo organizador = agêntico × domínio-IR.** Incluídos são agênticos **e** aderentes a IR/AIOps/SOC; exclusões recaem em não-agênticos (P26/P29/P30), off-domain (P38) ou inelegíveis (P39/P40).
