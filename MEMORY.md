@@ -162,3 +162,77 @@ Cada parecer foi salvo em `reviews/review-Pxx.md`.
 | `b4ca724` | 2026-06-29 | Surface inter-evaluator comparison metrics on the dashboard  |
 
 _(Este commit de MEMORY.md é acrescentado ao final do histórico.)_
+
+---
+
+# Sessão 2026-07-22 → 2026-07-25 — Etapa 3: Extração de dados (fichas P01–P40)
+
+Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`, P01–P35 + P37–P40) em fichas CSV, versões pt-BR, relatórios consolidados, versionamento e fechamento de lacunas de documentação.
+
+## Linha do tempo (prompts → respostas/ações)
+
+### 41. Extração dos 39 PDFs em fichas CSV
+
+**Prompt:** "load the paper-extraction-prompt-template.md, reasoning about and read one by one of the PDF Articles on folder ../docs/ … and write the .csv report file for each one in this folder."
+**Ações:** Li `report/paper-extraction-prompt-template.md` (schema Kitchenham de 11 campos: bibliometria, problema, solução/papel da Agentic AI, metodologia, impacto MTTD/MTTR, impacto Agentic AI/MAS, limitações, relevância, pontuação). **Fan-out de 39 subagentes** (um por PDF, em 4 lotes), cada um lendo o PDF integral em blocos de 20 páginas e gravando `report/Pxx-extraction.csv` (RFC 4180, 11 campos + Paper ID, âncoras de evidência nos campos 4–9). Validação estrutural via script: 39/39 OK.
+**Resultado:** Distribuição de relevância: **2 High** (P22 ARM, P37 AI Trust) · **26 Medium** · **11 Low**. Flags de ambiguidade registradas em P02 (metodologia) e P18 (contagens divergentes). _Nota: docs/ tem 39 PDFs (P36 não existe — duplicata removida)._
+
+### 42. Versões pt-BR das fichas
+
+**Prompt:** "Create a version in pt_BR of each extration file, but keep the Technical words/terms and acronym in english."
+**Ações:** 8 subagentes de tradução (~5 arquivos cada) → `Pxx-extraction-ptBR.csv`: prosa em pt-BR acadêmico; termos técnicos/acrônimos (MTTD, MTTR, Agentic AI, LLM, AIOps, RCA…), títulos, autores, veículos, citações verbatim e âncoras mantidos em inglês; rótulos de campo traduzidos (Campo/Extração, Título…); High/Medium/Low → Alta/Média/Baixa.
+**Incidente:** os 8 agentes foram interrompidos pelo **limite de sessão** (21/39 arquivos gravados). Após o reset, relancei 4 agentes cobrindo apenas os 18 faltantes. Validação final: 39/39 OK, sem truncamentos.
+
+### 43. Relatório consolidado
+
+**Prompt:** "Create a consolidated .csv report with all papers in one file"
+**Ações:** Pivot das fichas (Field/Extraction → colunas) em `report/consolidated-extraction.csv` (EN) e `consolidated-extraction-ptBR.csv` — 39 linhas × 12 colunas (Paper ID + 11 campos), validados e entregues ao usuário.
+
+### 44–47. Versionamento completo
+
+- **"Commit all the report files"** → commit dos 81 arquivos de `report/` (template + 39 EN + 39 pt-BR + 2 consolidados).
+- **"Commit the docs/ PDFs and referencias.csv too"** → descoberto que P20–P40 já estavam versionados; commit dos 19 PDFs P01–P19 + `referencias.csv`.
+- **"Commit DOIS.py and DOIS.txt too"** → inspecionei e commitei o script de extração de referências (Crossref/OpenAlex/Semantic Scholar/OpenCitations) e a lista de 39 DOIs.
+- **"Add .serena/ to .gitignore"** → adicionado ao `.gitignore` existente; árvore limpa.
+- **"Push everything to the remote"** → push de 4 commits para `origin/master`.
+
+### 48. Auditoria de documentação
+
+**Prompt:** "Chech all .md files and documentation inserted in each one to check if all files added in the foldes /docs /reports /reviews /prompts are indexed and cited in this .md files."
+**Ações:** Script de cobertura cruzando os 199 arquivos das 4 pastas contra todos os `.md` do repo. **Resultado: 79 citados / 120 não indexados** — (1) `report/` inteiro (81 arquivos) ausente de qualquer .md; (2) PDFs P01–P19 de `docs/` sem índice (README dizia "20 PDFs"); (3) os 20 `reviews/ChatGPT/Pxx_avaliacao_RSL.md` citados só como pasta.
+
+### 49. Fechamento das lacunas + commit/push
+
+**Prompt:** "Yes, update the documentation to close these gaps" → "Yes, commit and push"
+**Ações:** (1) **Novo `report/README.md`** — tabela P01–P40 ligando PDF, extração EN, extração pt-BR e relevância (indexa também os 39 PDFs); (2) **README raiz** — linha na tabela "Comece por aqui", `report/` (Etapa 3) + `referencias.csv` + `DOIS.py/txt` no diagrama de estrutura, docs/ corrigido para 39 PDFs, nova seção "Extração de dados (Etapa 3)"; (3) **`reviews/README.md`** — seção "Avaliações comparativas (ChatGPT)" com link por estudo. Re-verificação: **200/200 arquivos citados, 0 links quebrados**. Commit + push.
+
+### 50. Esta memória
+
+**Prompt:** "Update MEMORY.md with this session's work" → esta seção; commit e push na sequência.
+
+## Decisões e convenções da sessão
+
+- **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
+- **Tradução pt-BR:** termos técnicos, acrônimos, títulos, autores, veículos, citações verbatim e âncoras de evidência permanecem em inglês; escores traduzidos (Alta/Média/Baixa).
+- **Execução em escala:** leitura/extração dos PDFs delegada a subagentes paralelos (um por artigo), com validação estrutural centralizada por script (RFC 4180, 11 campos, âncoras).
+- **Recuperação de falha:** interrupção por limite de sessão tratada com relançamento apenas dos itens faltantes (18/39), sem retrabalho.
+- **Higiene do repo:** `.serena/` (cache do Serena MCP) ignorado; `report/` definido como **Etapa 3** na estrutura do repositório.
+
+## Artefatos produzidos (em `report/`, salvo indicado)
+
+- `P01…P40-extraction.csv` (39 fichas EN) · `P01…P40-extraction-ptBR.csv` (39 fichas pt-BR)
+- `consolidated-extraction.csv` / `consolidated-extraction-ptBR.csv` (39×12)
+- `README.md` (índice das fichas + PDFs + relevância)
+- Raiz: `docs/` P01–P19 versionados · `referencias.csv` · `DOIS.py` · `DOIS.txt` · `.gitignore` (+.serena/) · README raiz e `reviews/README.md` atualizados
+
+## Histórico de commits da sessão
+
+| Hash      | Data       | Mensagem                                                                              |
+| --------- | ---------- | ------------------------------------------------------------------------------------- |
+| `0c876d6` | 2026-07-25 | Add report/ SLR extraction sheets (P01-P40) with pt-BR versions and consolidated CSVs |
+| `043438c` | 2026-07-25 | Add docs/ P01-P19 survey PDFs and referencias.csv                                     |
+| `21d8637` | 2026-07-25 | Add DOIS.py reference-extraction script and DOIS.txt DOI list                         |
+| `15ba93b` | 2026-07-25 | Ignore .serena/ (Serena MCP local cache)                                              |
+| `e427439` | 2026-07-25 | Index report/ extraction sheets and close documentation gaps                          |
+
+_(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
