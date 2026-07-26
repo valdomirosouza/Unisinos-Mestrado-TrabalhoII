@@ -8,7 +8,7 @@ Pareceres de revisão dos estudos candidatos da RSL **"Agentic AI Copilot para R
 - **P36 omitido:** duplicata de **P31/LEMAD** (já removida do corpus e do CSV).
 - Um arquivo por estudo: [`review-Pxx.md`](.). Cada um traz Tabela A (Bibliométrica/Tab. 3), Tabela B (RQs/Tab. 5), Tabela C (QA/Tab. 7) e parecer final.
 
-> ⚠️ **Pendência transversal:** Citações, SJR e Qualis **não são verificáveis nos PDFs** — todos os estudos carregam pendência de verificação externa (Scimago; Plataforma Sucupira/Qualis CAPES; base indexadora). Os valores de Qualis/SJR citados vêm dos **insumos** do CSV.
+> ✅ **Pendência transversal (resolvida para Qualis/SJR):** durante a avaliação, Citações, SJR e Qualis **não eram verificáveis nos PDFs** e os valores vieram dos **insumos** do CSV (marcados `[VERIFICAR]` nos pareceres). A verificação externa foi concluída em [`../papers.csv`](../papers.csv) — DOI, Qualis 2025-2028, percentil Scopus, SJR quartile, ISSN e ano dos 39 estudos —, confirmando os estratos usados na triagem (incl. P39/P40 = A3, inelegíveis). _Só a **contagem de citações** permanece pendente (relevante para o critério "Citações ≥ 1" nos estudos de 2026: P30, P32, P35, P37)._
 
 ## Tabela-síntese
 

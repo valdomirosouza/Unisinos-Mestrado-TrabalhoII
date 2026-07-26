@@ -4,7 +4,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 > ⚠️ **Repositório privado.** Contém PDFs de artigos com direitos autorais (IEEE, Elsevier, Springer, MDPI, Wiley, etc.) em `docs/`, mantidos apenas para a avaliação acadêmica.
 >
-> ⚠️ **Pendência transversal:** Citações, SJR e Qualis **não são verificáveis nos PDFs** — os valores vêm dos insumos e permanecem pendentes de verificação externa (Scimago; Plataforma Sucupira/Qualis CAPES; base indexadora).
+> ✅ **Pendência transversal (resolvida para Qualis/SJR):** Citações, SJR e Qualis **não são verificáveis nos PDFs** — durante a avaliação os valores vieram dos insumos e foram marcados `[VERIFICAR]`. A verificação externa foi concluída e consolidada em [`papers.csv`](papers.csv): **Qualis (2025-2028), percentil Scopus, SJR quartile, DOI, ISSN e ano** dos 39 estudos (P01–P40), confirmando inclusive a inelegibilidade de P39/P40 (Qualis A3). _Permanece pendente apenas a **contagem de citações** por estudo (base indexadora)._
 
 ## 🚀 Comece por aqui
 
@@ -57,6 +57,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── README.md                     ← este arquivo (índice geral)
 ├── prompt-template.md            ← template do prompt de avaliação (papel, RQs, QA, saída)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
+├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano
 ├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
 │   ├── README.md                ← índice do Trabalho I
 │   ├── Artigo_Agentic_AI V3.pdf ← artigo da RSL original
@@ -105,7 +106,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ### Insumos (entrada)
 
 - [`prompt-template.md`](prompt-template.md) — template do prompt (papel, contexto, RQ1–RQ5, QA1–QA4, formato de saída).
-- [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR).
+- [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR) usados como insumo na avaliação (valores então `[VERIFICAR]`).
+- [`papers.csv`](papers.csv) — **bibliometria verificada** dos 39 estudos (P01–P40): DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN e ano. Resolve a pendência de verificação externa de Qualis/SJR (Scimago; Plataforma Sucupira/Qualis CAPES); a contagem de citações segue pendente.
 - [`prompts/`](prompts/) — 20 prompts preenchidos, um por estudo.
 - [`docs/`](docs/) — **39 PDFs do corpus**: P01–P19 (estudos fundacionais do Trabalho I) + P20–P40 (candidatos avaliados). Índice completo com links em [`report/README.md`](report/README.md).
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
