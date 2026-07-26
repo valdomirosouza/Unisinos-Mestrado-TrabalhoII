@@ -208,7 +208,12 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 
 ### 50. Esta memória
 
-**Prompt:** "Update MEMORY.md with this session's work" → esta seção; commit e push na sequência.
+**Prompt:** "Update MEMORY.md with this session's work" → esta seção; commit e push na sequência (`94a0037`).
+
+### 51. papers.csv — bibliometria verificada (resolve a pendência Qualis/SJR)
+
+**Prompt:** "read the file papers.csv in the root folder and add it the documentation to solve the gap cited in the README.md '⚠️ Pendência transversal…'" → "Yes, commit and push"
+**Ações:** Li `papers.csv` (criado pelo usuário na raiz): **bibliometria verificada dos 39 estudos P01–P40** — DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN e ano. Cross-check: os 39 estratos Qualis batem com os códigos `A1/A2/A3` dos nomes de arquivo em `docs/`, confirmando a inelegibilidade de P39/P40 (A3). Atualizei a documentação: (1) README raiz — nota ⚠️→✅ ("Pendência transversal **resolvida para Qualis/SJR** via `papers.csv`; só a **contagem de citações** segue pendente"), `papers.csv` no diagrama de estrutura e bullet próprio em "Insumos"; (2) `reviews/README.md` — nota equivalente, com alerta de citações para os estudos de 2026 (P30/P32/P35/P37). **Intocados de propósito:** `relatorio-sintese.md`/`.pdf` e avaliações ChatGPT (artefatos históricos da avaliação, quando os valores eram de fato `[VERIFICAR]`). Verificação: `papers.csv` citado, 0 links quebrados. Commit + push.
 
 ## Decisões e convenções da sessão
 
@@ -217,13 +222,14 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 - **Execução em escala:** leitura/extração dos PDFs delegada a subagentes paralelos (um por artigo), com validação estrutural centralizada por script (RFC 4180, 11 campos, âncoras).
 - **Recuperação de falha:** interrupção por limite de sessão tratada com relançamento apenas dos itens faltantes (18/39), sem retrabalho.
 - **Higiene do repo:** `.serena/` (cache do Serena MCP) ignorado; `report/` definido como **Etapa 3** na estrutura do repositório.
+- **Pendência transversal:** Qualis/SJR/percentil **resolvidos** via `papers.csv` (verificação externa consolidada); **contagem de citações** permanece pendente. Artefatos históricos (relatório de síntese, avaliações ChatGPT) não são reescritos — o registro da avaliação com `[VERIFICAR]` é preservado.
 
 ## Artefatos produzidos (em `report/`, salvo indicado)
 
 - `P01…P40-extraction.csv` (39 fichas EN) · `P01…P40-extraction-ptBR.csv` (39 fichas pt-BR)
 - `consolidated-extraction.csv` / `consolidated-extraction-ptBR.csv` (39×12)
 - `README.md` (índice das fichas + PDFs + relevância)
-- Raiz: `docs/` P01–P19 versionados · `referencias.csv` · `DOIS.py` · `DOIS.txt` · `.gitignore` (+.serena/) · README raiz e `reviews/README.md` atualizados
+- Raiz: `docs/` P01–P19 versionados · `referencias.csv` · `DOIS.py` · `DOIS.txt` · `papers.csv` (bibliometria verificada) · `.gitignore` (+.serena/) · README raiz e `reviews/README.md` atualizados
 
 ## Histórico de commits da sessão
 
@@ -234,5 +240,7 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `21d8637` | 2026-07-25 | Add DOIS.py reference-extraction script and DOIS.txt DOI list                         |
 | `15ba93b` | 2026-07-25 | Ignore .serena/ (Serena MCP local cache)                                              |
 | `e427439` | 2026-07-25 | Index report/ extraction sheets and close documentation gaps                          |
+| `94a0037` | 2026-07-25 | Log session 2026-07-22..25 (Etapa 3: extraction sheets) in MEMORY.md                  |
+| `ef5f99a` | 2026-07-25 | Add papers.csv verified bibliometrics; resolve Qualis/SJR pendency                    |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
