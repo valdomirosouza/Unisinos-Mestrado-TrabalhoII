@@ -275,6 +275,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompts:** "crie o arquivo de bookmark.md e adicione o QUALIS" → SCImago → APIs → Portal CAPES.
 **Ações:** Criei `bookmark.md` na raiz (indexado no diagrama de estrutura do README) e o populei em quatro incrementos, com cada entrada anotando **onde o recurso foi usado na RSL** (proveniência): (1) **Classificação de veículos** — QUALIS (qualis.pages.dev; estratos de `papers.csv`) e SCImago JCR (scimagojr.com; quartis SJR); (2) **Acesso a bases e textos completos** — Portal de Periódicos da CAPES (periodicos.capes.gov.br; login **CAFe** integrado à base de usuários da Unisinos); (3) **APIs de validação** — OpenAlex (validação da string por DOI; `cited_by_count`), Crossref (`is-referenced-by-count`; usada pelo `DOIS.py`) e Elsevier Developer Portal/Scopus Search API (execução da string: recall 13/14, volume 12.783; `citedby-count`), incluindo o alerta da sintaxe `TITLE-ABS-KEY` por bloco (falso-zero da forma aninhada com `DOI()`).
 
+### 64. Citações cruzadas no corpus (tripla checagem)
+
+**Prompt:** "monte um novo documento com o números de vezes que cada um dos 39 artigos é citados pelos seus pares … tripla checagem OpenAlex, Crossref e Scopus … e uma coluna com a lista de artigos em que o artigo par foi citado."
+**Ações:** Criei `citacoes-cruzadas.md` (raiz, indexado no README) com a matriz quem-cita-quem do corpus: **OpenAlex 20 · Crossref 21 · Scopus 25 · União 26 pares** citador→citado. Apenas 10 artigos são citados por pares; **hubs = surveys fundacionais**: P10 (7), P14 (5), P09 (4), P02/P13/P16 (2), P12/P24/P31/P39 (1). Método por fonte: OpenAlex `referenced_works`; Crossref lista `reference` (DOIs); Scopus `REF("<título>")` × OR de DOIs do corpus. **Descobertas metodológicas documentadas:** (i) `REF()` do Scopus casa por **título**, não por DOI (falso-zero silencioso com DOIs — validado com pares positivo/negativo); (ii) **caso P09**: as 4 citações usam DOI de preprint `10.70777/…` — invisíveis ao casamento por DOI canônico em OpenAlex/Crossref; Scopus e S2 (corroborado em `referencias.csv`) resolvem para a versão do periódico; (iii) P01 não indexado no Scopus oculta a aresta P01→P10; P38→P31 falta só na OpenAlex.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -327,5 +332,7 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `9f932fd` | 2026-07-27 | Add SCImago Journal & Country Rank to bookmark.md                                     |
 | `fa7a193` | 2026-07-27 | Add validation APIs (OpenAlex, Crossref, Elsevier/Scopus) to bookmark.md              |
 | `f776c72` | 2026-07-27 | Add Portal de Periodicos CAPES (CAFe/Unisinos login) to bookmark.md                   |
+| `1801757` | 2026-07-27 | Log bookmark.md creation and entries (item 63) in MEMORY.md                           |
+| `75e1fb0` | 2026-07-27 | Add corpus cross-citation matrix with triple-source verification                      |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
