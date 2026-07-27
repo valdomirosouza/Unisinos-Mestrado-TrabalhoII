@@ -245,6 +245,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "Atualize o report/README.md com a nova pontuação de Comparison"
 **Ações:** Adicionei à tabela P01–P40 do `report/README.md` a coluna **"Comparison (PICOC v1.1.0)"** com o status adjudicado por artigo (✅ DECLARED ×26 · ⚪ N/A conceitual ×11 · ⚪ N/A mapeamento ×2), gerada programaticamente a partir da coluna `Comparison_Final_Protocolo` de `picoc/picoc-comparacao-avaliadores.csv` (consistência por construção), mais legenda com links para a regra de protocolo e o relatório de comparação. O índice das fichas passa a cruzar as duas dimensões de triagem: relevância (High/Medium/Low) × natureza da comparação (empírica vs. conceitual). Validação: 39 linhas, colunas corretas, 0 links quebrados.
 
+### 58. String de busca da RSL derivada do PICOC e calibrada no corpus
+
+**Prompt:** "Gere a string de busca da RSL a partir da síntese PICOC"
+**Ações:** Derivei a string booleana dos blocos da síntese transversal PICOC — **Bloco A** (Intervention dominante: agentic AI, AI/LLM agents, multi-agent, copilots, L/SLMs) **AND Bloco B** (Contexts recorrentes: incident response, AIOps, SRE, RCA, anomaly detection, observability, microservices, cybersecurity…) — com filtros do protocolo (≥2020, inglês, peer-reviewed) e sintaxes para Scopus/WoS/IEEE/ACM. **Calibração empírica** via matching sobre título+abstract+keywords do `export.csv`: **recall 13/14 nos estudos incluídos**; os candidatos não recuperados (P26, P38, P39) são exatamente os excluídos/inelegíveis. Evidências registradas: (i) bloco Outcomes obrigatório recuperaria **1/38** — quantifica a lacuna de MTTD/MTTR e justifica o bloco como refinamento opcional; (ii) trade-off P24 documentado (recuperá-lo exigiria "autonomous system*", que captura AS/BGP em redes e degradaria a precisão). Saída: `picoc/picoc-search-string.md`, indexada no README raiz.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -283,5 +288,7 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `2aad34f` | 2026-07-27 | Recompute PICOC comparison with full-coverage Gemini file (39 papers)                 |
 | `4f55b3c` | 2026-07-27 | Apply Comparison protocol rule (v1.1.0) and reclassify the 12 divergent cases         |
 | `3cee765` | 2026-07-27 | Add final Comparison (PICOC v1.1.0) column to report/README index                     |
+| `eed9f33` | 2026-07-27 | Log Comparison column work (item 57) in MEMORY.md                                     |
+| `7c3ccf1` | 2026-07-27 | Derive RSL search string from PICOC synthesis, calibrated on the corpus               |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
