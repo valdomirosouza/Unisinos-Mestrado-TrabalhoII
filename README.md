@@ -134,6 +134,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`picoc/picoc-extraction-prompt.md`](picoc/picoc-extraction-prompt.md) — prompt de extração **PICOC** (Population, Intervention, Comparison, Outcomes, Context) sobre os 39 PDFs, com regras antifabricação (`NÃO DECLARADO` / `N/A`) e âncoras de evidência.
 - [`picoc/picoc-results-consolidated-P01-P40-Claude.md`](picoc/picoc-results-consolidated-P01-P40-Claude.md) — **tabela PICOC consolidada** (39 artigos) com síntese transversal e raciocínio por artigo; achado central: nenhum estudo mede MTTD/MTTR nominalmente.
 - [`picoc/picoc-results-consolidated-P01-P40-ChatGPT.md`](picoc/picoc-results-consolidated-P01-P40-ChatGPT.md) · [`-Gemini.md`](picoc/picoc-results-consolidated-P01-P40-Gemini.md) — execuções paralelas do mesmo prompt em ChatGPT e Gemini, para comparação entre avaliadores.
+- [`picoc/picoc-comparacao-avaliadores.md`](picoc/picoc-comparacao-avaliadores.md) — **comparação Claude × ChatGPT × Gemini** da extração PICOC (acordo 100% em 4 elementos; Comparison 82%, κ = 0,42 — divergência definicional sobre contraste conceitual; ⚠️ Gemini não cobre P01–P09) · dados em [`picoc/picoc-comparacao-avaliadores.csv`](picoc/picoc-comparacao-avaliadores.csv).
 
 ### Ferramentas
 
