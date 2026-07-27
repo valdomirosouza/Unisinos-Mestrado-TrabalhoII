@@ -260,6 +260,16 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** usuário forneceu a chave da API Elsevier (mantida fora do repositório).
 **Ações:** Executei a query no **Scopus Search API** com verificação por DOI. **Bug de sintaxe descoberto e documentado:** `TITLE-ABS-KEY((A) AND (B))` aninhado retorna falso-zero quando combinado com `DOI()`; a forma por bloco `TITLE-ABS-KEY(A) AND TITLE-ABS-KEY(B)` funciona e passou a ser a canônica na Seção 3. **Resultados:** recall **13/14 nos incluídos** (única perda: P24 — mesmo trade-off), excluídos/inelegíveis P26/P38/P39 não recuperados, P13 recuperado, **volume 12.783** (2020+, EN; ~4× menor que a OpenAlex). **As três validações convergem** (calibração local, OpenAlex, Scopus) — string validada na base primária do protocolo. Achado adicional: **P01 (F1000Research) não é indexado pelo Scopus** — limitação de cobertura da base, cobrir via OpenAlex/snowballing. Seções 5.1 e 6 do `picoc-search-string.md` e README raiz atualizados.
 
+### 61. Diagrama PRISMA 2020 do fluxo de seleção
+
+**Prompt:** "Monte o diagrama PRISMA com todos os critérios de inclusão, exclusão e quantidade de artigos."
+**Ações:** Criei `reviews/PRISMA.md` (Mermaid, formato PRISMA 2020 adaptado para atualização de revisão): **≈51 registros** identificados via busca assistida por IA (Gemini ≈20, Claude 16, ChatGPT 15) → **21 candidatos** pós-deduplicação/verificação → −1 duplicata interna (P36=P31) → **20 triados** → −2 inelegíveis (Qualis A3: P39/P40) → **18 avaliados na íntegra** → −4 excluídos com razões (P26/P29/P30 não-agênticos; P38 fora de domínio) → **14 incluídos** (7 plenos + 5 ressalvas + 2 fundacionais condicionais) + 19 do corpus prévio (Trabalho I) = **corpus final 33**. Critérios tabelados: I1–I6 (ano, veículo peer-reviewed, Qualis A1–A2, SJR Q1–Q2, citações ≥1 c/ `RECENCY_EXCEPTION`, aderência agêntica×IR) e E1–E5, cada um com ponteiro para o artefato de verificação. Indexado no README raiz.
+
+### 62. Contagem de citações por estudo — pendência transversal FECHADA
+
+**Prompt:** "faça a busca a computação da contagem total de citações por estudo."
+**Ações:** Busquei as citações dos 39 artigos em **três fontes** (OpenAlex `cited_by_count`, Crossref `is-referenced-by-count`, Scopus `citedby-count` via API) e gravei em 4 novas colunas do `papers.csv` (+ data de verificação 2026-07-27). **Critério "Citações ≥ 1" verificado para todos os 14 incluídos** — única exceção: **P35 (0 nas três fontes)**, elegível pela `RECENCY_EXCEPTION` (CMC 2026, <12 meses); dos "em risco" de 2026: P32=1, P37=5. Extremos: P10 ≈500 · P17 ≈300 · P02 ≈180. P01 confirmado não indexado no Scopus (coberto por OpenAlex/Crossref). Com isso a **pendência transversal está integralmente resolvida** (Qualis ✓ SJR ✓ citações ✓) — notas do README raiz e `reviews/README.md` atualizadas para "RESOLVIDA".
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -267,7 +277,7 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 - **Execução em escala:** leitura/extração dos PDFs delegada a subagentes paralelos (um por artigo), com validação estrutural centralizada por script (RFC 4180, 11 campos, âncoras).
 - **Recuperação de falha:** interrupção por limite de sessão tratada com relançamento apenas dos itens faltantes (18/39), sem retrabalho.
 - **Higiene do repo:** `.serena/` (cache do Serena MCP) ignorado; `report/` definido como **Etapa 3** na estrutura do repositório.
-- **Pendência transversal:** Qualis/SJR/percentil **resolvidos** via `papers.csv` (verificação externa consolidada); **contagem de citações** permanece pendente. Artefatos históricos (relatório de síntese, avaliações ChatGPT) não são reescritos — o registro da avaliação com `[VERIFICAR]` é preservado.
+- **Pendência transversal (FECHADA em 2026-07-27):** Qualis/SJR/percentil **e citações** (3 fontes: OpenAlex/Crossref/Scopus) resolvidos via `papers.csv`; P35 elegível por `RECENCY_EXCEPTION`. Artefatos históricos (relatório de síntese, avaliações ChatGPT) não são reescritos — o registro da avaliação com `[VERIFICAR]` é preservado.
 
 ## Artefatos produzidos (em `report/`, salvo indicado)
 
@@ -304,5 +314,8 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `377eed6` | 2026-07-27 | Validate search string externally on OpenAlex (13/14 included recall)                 |
 | `f50ae72` | 2026-07-27 | Log OpenAlex validation of the search string (item 59) in MEMORY.md                   |
 | `9a693c2` | 2026-07-27 | Execute search string on Scopus API: 13/14 included recall, 12,783 volume             |
+| `6da2f21` | 2026-07-27 | Append Scopus execution commit (9a693c2) to MEMORY.md session table                   |
+| `aef452e` | 2026-07-27 | Add PRISMA 2020 flow diagram with criteria and counts                                 |
+| `8d94d73` | 2026-07-27 | Add per-study citation counts (OpenAlex/Crossref/Scopus); close pendency              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
