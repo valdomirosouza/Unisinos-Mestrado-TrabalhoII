@@ -19,14 +19,15 @@ Primeira etapa da **Revisão Sistemática da Literatura (RSL)** _"Agentic AI com
 
 ## 🧭 Prompt de busca (resumo)
 
-O [`prompt.md`](prompt.md) instrui o assistente a operar como especialista em RSL sob Kitchenham et al. (2009) e retornar **15–25 candidatos** que estendam o corpus, obedecendo aos critérios de inclusão:
+O [`prompt.md`](prompt.md) (**v2.0.0** — revisado após o ciclo 1; os relatórios desta pasta são saídas da **v1.0.0**) instrui o assistente a operar como especialista em RSL sob Kitchenham et al. (2009) e retornar **15–25 candidatos** que estendam o corpus. A v2 embute uma **`PROJECT_MEMORY`** com o estado verificado da revisão:
 
-- **String de busca:** `("Agentic AI" OR "Multi-Agent System*") AND ("Incident Response" OR "Incident Management" OR "Incident Resolution" OR "AIOps" OR "LLM4AIOps" OR "Root Cause Analysis" OR "MTTR" OR "MTTD" OR "HITL" OR "HOTL")`
-- **Fontes:** IEEE Xplore, Elsevier ScienceDirect, ACM DL (+ MDPI/Springer/Nature indexados que passem nos critérios).
-- **Critérios de inclusão (todos):** ano ∈ [2020, 2026] · Qualis ∈ {A1, A2} · SJR ∈ {Q1, Q2} · citações ≥ 1 (com `RECENCY_EXCEPTION` para publicações < 12 meses) · revisado por pares.
-- **Deduplicação:** nenhum dos 19 estudos do corpus (P1–P19); `author_overlap` marcado quando há autores em comum.
-- **Tópicos-alvo (T1–T8):** execução autônoma segura/reversível (T1), telemetria complexa com LLMs (T2), integridade de memória (T3), governança/risco adversarial (T4), raciocínio causal (T5), eficiência/SLMs/edge (T6), frameworks e arquiteturas multiagente/HITL-HOTL (T7), evidência quantitativa de MTTR/MTTD (T8).
-- **Anti-fabricação:** nunca inventar DOI/autor/venue/métrica; o que não puder ser confirmado é marcado `UNVERIFIED`; bloco `CAVEATS` obrigatório ao final.
+- **PRISMA (PM-1):** fluxo do ciclo 1 (≈51 → 21 → 20 → 18 → 14; corpus final 33) e critérios I1–I6 / E1–E5 com os casos concretos de exclusão.
+- **PICOC (PM-2):** elementos da revisão com a regra v1.1.0 de Comparison (só baseline empírico) e o achado central — nenhum dos 39 estudos mede MTTD/MTTR nominalmente → estudos com métricas operacionais nomeadas são prioridade máxima.
+- **String validada (PM-3):** blocos Intervention × Context derivados do PICOC, calibrados no corpus (recall 13/14 em Scopus e OpenAlex), com o caveat de sintaxe do Scopus (`TITLE-ABS-KEY` por bloco).
+- **APIs e fontes (PM-4):** OpenAlex, Crossref, Scopus (com quirks documentados: `REF()` por título; F1000Research não indexada), QUALIS (qualis.pages.dev), SCImago e Portal CAPES/CAFe; armadilha do DOI de preprint (caso P09) — exigir DOI da versão de registro.
+- **Deduplicação:** nenhum dos **39** estudos P01–P40 (incl. variantes de DOI de preprint); `author_overlap` e novo `group_provenance` (independência de grupos).
+- **Tópicos-alvo (T1–T9):** T8 (evidência quantitativa de MTTD/MTTR) promovido a **prioridade máxima** e novo T9 (implantações em produção); T4 anotado com a lacuna sistemática de RQ4. Cota mínima: ≥1/3 dos candidatos em T8/T9.
+- **Anti-fabricação:** nunca inventar DOI/autor/venue/métrica; `UNVERIFIED` + bloco `CAVEATS` obrigatórios; novo campo `picoc_fit` ancora cada candidato nos elementos PICOC.
 
 ## 🔁 Da descoberta à avaliação
 
