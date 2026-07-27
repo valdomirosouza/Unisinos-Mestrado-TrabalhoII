@@ -12,6 +12,7 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 | 📚 [Índice de pareceres](README.md)                                                          | Tabela-síntese por estudo                                                                                                                         |
 | 📐 [Comparação entre avaliadores](comparacao-avaliadores.md)                                 | Claude × ChatGPT: concordância (decisão 90%, κ = 0,74)                                                                                            |
 | 🛠️ [Scripts geradores](scripts/README.md) · [Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) | Regeneração de gráficos e PDF                                                                                                                     |
+| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas.md)                                    | Quem cita quem entre P01–P40 (OpenAlex × Crossref × Scopus)                                                                                       |
 | 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompt-template.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
 ## 📈 Números-chave
@@ -86,6 +87,20 @@ Os 20 estudos foram avaliados **independentemente** por dois avaliadores sob o m
 ![Concordância entre avaliadores](charts/chart-comparacao.svg)
 
 📐 Análise completa: **[comparacao-avaliadores.md](comparacao-avaliadores.md)** · dados em [`comparacao-avaliadores.csv`](comparacao-avaliadores.csv). **RQ4 e RQ5 com 100% de acordo** ⇒ a lacuna de ética/governança é um achado **avaliador-independente**.
+
+## 🔁 Citações cruzadas no corpus (P01–P40)
+
+Quem cita quem **dentro do corpus de 39 artigos**, com tripla checagem (**OpenAlex × Crossref × Scopus**, verificado em 2026-07-27): **26 pares** citador→citado na União (OpenAlex 20 · Crossref 21 · Scopus 25). Apenas 10 artigos são citados por pares — os **hubs são os surveys fundacionais**; os 14 incluídos (2025–2026) ainda não se citam entre si.
+
+| Mais citados no corpus                             | Citações (União) | Citado nos artigos                                                |
+| -------------------------------------------------- | :--------------: | ----------------------------------------------------------------- |
+| **P10** — Agentic AI: Autonomous Intelligence      |      **7**       | P01, P03, P06, P09, P15, P24, P33                                 |
+| **P14** — Transforming Cybersecurity w/ Agentic AI |      **5**       | P03, P06, P15, P28, P37                                           |
+| **P09** — AI Agents vs. Agentic AI                 |      **4**       | P03, P06, P15, P33 _(via DOI de preprint; só Scopus/S2 resolvem)_ |
+| P02 · P13 · P16                                    |      2 cada      | —                                                                 |
+| P12 · P24 · P31 · P39                              |      1 cada      | —                                                                 |
+
+🔁 Matriz completa, arestas e notas metodológicas (quirk do `REF()` do Scopus; assimetrias de indexação): **[citacoes-cruzadas.md](../citacoes-cruzadas.md)** · citações externas totais em [`papers.csv`](../papers.csv) · rede completa de referências em [`referencias.csv`](../referencias.csv).
 
 ---
 
