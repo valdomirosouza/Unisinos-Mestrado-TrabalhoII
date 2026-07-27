@@ -235,6 +235,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "O arquivo picoc-results-consolidated-P01-P40-Gemini.md está incompleto e por conta disso publiquei uma nova versão … incluindo os artigos de P01 até P10 … aplique as atualizações nos demais arquivos." + "Atualize também o MEMORY.md com esta correção e commit"
 **Ações:** O usuário publicou `picoc-results-consolidated-P01-P40-Gemini-Atualizado.md` (39 artigos, corrigindo a ausência de P01–P09). Re-normalizei o arquivo atualizado (status por elemento) e **recomputei a comparação sobre os 39 artigos**: Population/Intervention/Outcomes/Context seguem 100% (κ=1,00); **Comparison caiu para 79%, Fleiss κ=0,37** (era 82%/0,42 com 30 artigos) — os P01–P09 recém-incluídos adicionaram 4 divergências novas (P01, P03, P04, P08), total 12, todas definicionais. Pares: Claude×ChatGPT 0,42 · Claude×Gemini 0,47 · **ChatGPT×Gemini 0,22** (menor acordo). Atualizados `picoc-comparacao-avaliadores.{md,csv}` e o README raiz (aviso de cobertura removido; Atualizado como versão canônica; original mantido como registro histórico, seguindo a convenção de não reescrever artefatos).
 
+### 56. Regra de protocolo aplicada — reclassificação dos 12 casos de Comparison
+
+**Prompt:** "Aplique a regra de protocolo recomendada e reclassifique os 12 casos divergentes"
+**Ações:** Formalizei a recomendação como **Regra 5 do prompt PICOC (v1.1.0)**: Comparison = DECLARED **somente com baseline empírico**; contraste conceitual/paradigmático → `N/A (contraste conceitual)`. Adjudiquei os 12 casos: **11 → N/A (contraste conceitual)** (P01, P03, P04, P08, P12, P15, P16, P17, P29, P33, P40 — todos secundários/conceituais) e **1 → DECLARED** (P18, única exceção: comparação experimental de componente ML vs. rule-based no caso AVL, Seç. 6.2.1, com ressalva de escopo). Distribuição final de Comparison (39 artigos): **26 DECLARED · 11 N/A conceitual · 2 N/A mapeamento** — classificação determinística registrada na coluna `Comparison_Final_Protocolo` do CSV. Atualizados: prompt (v1.1.0 + changelog), relatório de comparação (seção "Regra aplicada e reclassificação"), CSV e README raiz.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -270,5 +275,6 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `0a05761` | 2026-07-26 | Add picoc/ PICOC extraction (Etapa 4) with per-evaluator consolidated tables          |
 | `b2711fb` | 2026-07-26 | Add PICOC inter-evaluator comparison (Claude x ChatGPT x Gemini)                      |
 | `60d38e9` | 2026-07-26 | Log RIS conversion, PDF replacements, and PICOC work (items 52-54) in MEMORY.md       |
+| `2aad34f` | 2026-07-27 | Recompute PICOC comparison with full-coverage Gemini file (39 papers)                 |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_

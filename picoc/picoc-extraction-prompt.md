@@ -1,6 +1,6 @@
 # PICOC Extraction Prompt — Agentic AI Copilot SLR
 
-**Versão:** v1.0.0
+**Versão:** v1.1.0
 **Escopo:** Extração PICOC de todos os estudos da pasta `docs/` para a RSL
 "Agentic AI Copilot para Resposta a Incidentes: Uma Revisão da Literatura".
 **Metodologia de referência:** Kitchenham & Charters (guia de RSL em Engenharia
@@ -42,6 +42,13 @@ MTTD/MTTR, observabilidade e carga cognitiva de equipes (SRE, NOC, Suporte).
 4. O elemento "Comparison" frequentemente não se aplica a estudos que mapeiam
    o estado da arte. Nesse caso registre "N/A (estudo de mapeamento)" em vez
    de forçar uma comparação inexistente.
+5. Comparison = DECLARED **somente com baseline empírico** — o estudo executa
+   ou reporta comparação experimental própria contra alternativa concreta
+   (baseline, grupo de controle, método anterior). Contraste apenas
+   conceitual/paradigmático (ex.: "Agentic AI vs. IA tradicional" em texto ou
+   tabela, sem experimento) registra-se como "N/A (contraste conceitual)".
+   Comparações empíricas parciais (de um componente da intervenção) contam
+   como DECLARED, com ressalva de escopo na célula.
 
 # DEFINIÇÃO DOS ELEMENTOS PICOC (âncoras para este domínio)
 - Population: o que/quem é objeto do estudo — ex.: sistemas complexos de
@@ -93,6 +100,11 @@ Após a tabela, inclua:
 
 ## Changelog
 
+- **v1.1.0** — Regra 5 adicionada: Comparison = DECLARED somente com baseline
+  empírico; contraste conceitual/paradigmático → `N/A (contraste conceitual)`.
+  Motivação: a [comparação entre avaliadores](picoc-comparacao-avaliadores.md)
+  mostrou que 100% das divergências de Comparison (12 casos, Fleiss κ = 0,37)
+  eram definicionais nessa fronteira.
 - **v1.0.0** — Versão inicial. Leitura em lote da pasta `docs/`, raciocínio
   explícito por artigo, tabela PICOC consolidada com âncoras de evidência,
   guarda antifabricação (`NÃO DECLARADO` / `N/A`) e síntese transversal.

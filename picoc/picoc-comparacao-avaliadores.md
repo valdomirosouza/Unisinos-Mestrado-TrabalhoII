@@ -68,9 +68,36 @@ Pares (Comparison, Cohen's κ): **Claude × ChatGPT** 82% / 0,42 · **Claude × 
 - **Cautela de conteúdo (exemplo):** para P14, o conjunto do Gemini reporta "redução do MTTR em 30%" como outcome — número que o artigo atribui a **claims de fornecedores**, não a medição própria; verificar a procedência ao citar.
 - **κ com prevalência alta:** em Comparison, a predominância de `DECLARED` deprime o κ (paradoxo de prevalência); os valores 0,37/0,42/0,47/0,22 devem ser lidos junto com os acordos brutos (74–82%).
 
-## Recomendação para o protocolo da RSL
+## Regra de protocolo aplicada e reclassificação (v1.1.0)
 
-Adotar regra explícita para Comparison em estudos secundários — p.ex. **"Comparison = DECLARED somente com baseline empírico; contraste conceitual/paradigmático registra-se como `N/A (contraste conceitual)`"** — e reclassificar os 12 casos divergentes com essa regra. Isso deve elevar o κ de Comparison ao patamar dos demais elementos e tornar a extração auditável em banca.
+A recomendação foi **adotada e aplicada**: a regra **"Comparison = DECLARED somente com baseline empírico; contraste conceitual/paradigmático registra-se como `N/A (contraste conceitual)`"** foi formalizada como **Regra 5 do prompt** ([`picoc-extraction-prompt.md`](picoc-extraction-prompt.md) **v1.1.0**), e os 12 casos divergentes foram adjudicados por ela. O status final está na coluna `Comparison_Final_Protocolo` do [CSV](picoc-comparacao-avaliadores.csv).
+
+### Reclassificação dos 12 casos
+
+| ID      | Status final (v1.1.0)                    | Justificativa                                                                                                                                                                                |
+| ------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P01     | N/A (contraste conceitual)               | Revisão narrativa; contraste entre arquiteturas/políticas é textual, sem experimento próprio                                                                                                 |
+| P03     | N/A (contraste conceitual)               | Scoping review; o contraste GPT-4o vs. DeepSeek-R1 é demonstrativo/exploratório, sem baseline central                                                                                        |
+| P04     | N/A (contraste conceitual)               | Literature review; LMA vs. MoE e automação tradicional são contrastes discursivos                                                                                                            |
+| P08     | N/A (contraste conceitual)               | Survey; "HITL vs. ML totalmente automatizado" é eixo conceitual, sem experimento comparativo                                                                                                 |
+| P12     | N/A (contraste conceitual)               | Survey; GenAI vs. AI/ML tradicional é categorização, não comparação empírica                                                                                                                 |
+| P15     | N/A (contraste conceitual)               | Review; contraste de paradigmas (Agentic AI vs. GenAI/MAS/autonomic) em tabelas, sem experimento                                                                                             |
+| P16     | N/A (contraste conceitual)               | Survey; framework conceitual MLOps vs. AIOps, sem baseline empírico                                                                                                                          |
+| P17     | N/A (contraste conceitual)               | Review; XAI vs. black-box é contraste argumentativo                                                                                                                                          |
+| **P18** | **DECLARED** (baseline empírico parcial) | Única exceção: há comparação **experimental** de componente — modelo ML vs. rule-based no caso AVL (Seç. 6.2.1) — embora sem baseline da arquitetura completa; ressalva de escopo registrada |
+| P29     | N/A (contraste conceitual)               | SLR; ML/DL vs. LLM-driven é eixo de organização dos estudos revisados, não experimento dos autores                                                                                           |
+| P33     | N/A (contraste conceitual)               | Revisão narrativa; defesas convencionais vs. quantum-resilient é contraste textual (resolve também a inconsistência interna do Gemini)                                                       |
+| P40     | N/A (contraste conceitual)               | Survey; contraste com manual/rule-based/ML-DL é taxonômico, sem benchmark próprio                                                                                                            |
+
+### Distribuição final de Comparison (39 artigos, pós-regra)
+
+| Status                       |   n    | Artigos                                                                |
+| ---------------------------- | :----: | ---------------------------------------------------------------------- |
+| DECLARED (baseline empírico) | **26** | 25 por consenso dos 3 avaliadores + P18 (adjudicado: empírico parcial) |
+| N/A (contraste conceitual)   | **11** | P01, P03, P04, P08, P12, P15, P16, P17, P29, P33, P40 (adjudicados)    |
+| N/A (estudo de mapeamento)   | **2**  | P24, P26 (consenso dos 3 avaliadores)                                  |
+
+Efeito: com a regra aplicada, as 12 divergências se resolvem por definição — a classificação final de Comparison torna-se determinística e auditável (critério: existência de baseline empírico), eliminando a fronteira subjetiva que produzia κ = 0,37. O padrão confirma o eixo da RSL: **todos os 11 reclassificados são estudos secundários/conceituais**; os 26 DECLARED são majoritariamente estudos primários com experimento.
 
 ---
 

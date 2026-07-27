@@ -131,10 +131,10 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 ### Extração PICOC (Etapa 4)
 
-- [`picoc/picoc-extraction-prompt.md`](picoc/picoc-extraction-prompt.md) — prompt de extração **PICOC** (Population, Intervention, Comparison, Outcomes, Context) sobre os 39 PDFs, com regras antifabricação (`NÃO DECLARADO` / `N/A`) e âncoras de evidência.
+- [`picoc/picoc-extraction-prompt.md`](picoc/picoc-extraction-prompt.md) — prompt de extração **PICOC** (Population, Intervention, Comparison, Outcomes, Context) sobre os 39 PDFs, com regras antifabricação (`NÃO DECLARADO` / `N/A`) e âncoras de evidência. **v1.1.0**: Comparison = DECLARED somente com baseline empírico (contraste conceitual → `N/A`).
 - [`picoc/picoc-results-consolidated-P01-P40-Claude.md`](picoc/picoc-results-consolidated-P01-P40-Claude.md) — **tabela PICOC consolidada** (39 artigos) com síntese transversal e raciocínio por artigo; achado central: nenhum estudo mede MTTD/MTTR nominalmente.
 - [`picoc/picoc-results-consolidated-P01-P40-ChatGPT.md`](picoc/picoc-results-consolidated-P01-P40-ChatGPT.md) · [`-Gemini-Atualizado.md`](picoc/picoc-results-consolidated-P01-P40-Gemini-Atualizado.md) — execuções paralelas do mesmo prompt em ChatGPT e Gemini, para comparação entre avaliadores. _(A [versão original do Gemini](picoc/picoc-results-consolidated-P01-P40-Gemini.md) não cobria P01–P09 e é mantida como registro histórico.)_
-- [`picoc/picoc-comparacao-avaliadores.md`](picoc/picoc-comparacao-avaliadores.md) — **comparação Claude × ChatGPT × Gemini** da extração PICOC sobre os 39 artigos (acordo 100% em 4 elementos; Comparison 79%, Fleiss κ = 0,37 — divergência definicional sobre contraste conceitual em estudos secundários) · dados em [`picoc/picoc-comparacao-avaliadores.csv`](picoc/picoc-comparacao-avaliadores.csv).
+- [`picoc/picoc-comparacao-avaliadores.md`](picoc/picoc-comparacao-avaliadores.md) — **comparação Claude × ChatGPT × Gemini** da extração PICOC sobre os 39 artigos (acordo 100% em 4 elementos; Comparison 79%, Fleiss κ = 0,37 — divergência definicional sobre contraste conceitual em estudos secundários). Os 12 casos divergentes foram **reclassificados pela regra v1.1.0** (resultado final: 26 DECLARED · 13 N/A, coluna `Comparison_Final_Protocolo`) · dados em [`picoc/picoc-comparacao-avaliadores.csv`](picoc/picoc-comparacao-avaliadores.csv).
 
 ### Ferramentas
 
