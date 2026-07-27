@@ -37,10 +37,12 @@ AND
 
 ## 3. Sintaxe por base
 
-**Scopus:**
+**Scopus** (forma validada na API em 2026-07-27 — usar `TITLE-ABS-KEY` **separado por bloco**; a forma aninhada `TITLE-ABS-KEY((A) AND (B))` apresentou falha silenciosa do parser quando combinada com outros campos, p.ex. `DOI()`):
 
 ```text
-TITLE-ABS-KEY ( ( "agentic AI" OR "AI agent*" OR "LLM agent*" OR "language model agent*" OR "multi-agent" OR multiagent OR "autonomous agent*" OR copilot* OR "large language model*" OR "small language model*" OR "intelligent agent*" ) AND ( "incident response" OR "incident management" OR aiops OR "IT operations" OR "site reliability" OR sre OR "security operations" OR soc OR cybersecurity OR "cyber security" OR "cyber threat*" OR "root cause" OR "anomaly detection" OR observability OR microservice* OR "cloud-native" OR "network management" OR "network operations" OR devops OR remediation OR "threat detection" OR resilience OR vulnerabilit* ) ) AND PUBYEAR > 2019 AND LANGUAGE ( english )
+TITLE-ABS-KEY ( "agentic AI" OR "AI agent*" OR "LLM agent*" OR "language model agent*" OR "multi-agent" OR multiagent OR "autonomous agent*" OR copilot* OR "large language model*" OR "small language model*" OR "intelligent agent*" )
+AND TITLE-ABS-KEY ( "incident response" OR "incident management" OR aiops OR "IT operations" OR "site reliability" OR sre OR "security operations" OR soc OR cybersecurity OR "cyber security" OR "cyber threat*" OR "root cause" OR "anomaly detection" OR observability OR microservice* OR "cloud-native" OR "network management" OR "network operations" OR devops OR remediation OR "threat detection" OR resilience OR vulnerabilit* )
+AND PUBYEAR > 2019 AND LANGUAGE ( english )
 ```
 
 **Web of Science:** mesma expressão com `TS=( bloco A ) AND TS=( bloco B )` e refinamento `PY=(2020-2026)`.
@@ -77,13 +79,31 @@ A query foi **executada em base real** via API da OpenAlex (`title_and_abstract.
 
 - A validação externa **replica a calibração local** (13/14; mesmas perdas), confirmando que o matching por substring foi boa aproximação do motor real.
 - **Precisão:** o volume de ~49,7 mil impõe custo de triagem. Refinamentos possíveis sem perda de recall dos incluídos: restringir o Bloco B ao título (`TITLE(...)` no Scopus) ou remover os termos mais genéricos (`resilience`, `vulnerabilit*`, `SOC`, `SRE`) — retestar recall a cada corte. Filtros de tipo de documento e área (Scopus `SUBJAREA(COMP)`) também reduzem o universo.
-- **Scopus propriamente dito:** a API da Elsevier exige chave institucional (não disponível neste ambiente; `401` sem credencial). Caminhos: (i) criar chave em dev.elsevier.com com acesso institucional e reexecutar via API; ou (ii) rodar a sintaxe da Seção 3 na interface do Scopus e exportar o CSV de resultados — o recall por DOI pode então ser reconferido contra [`../papers.csv`](../papers.csv).
+- ~~**Scopus propriamente dito:** pendente de credencial da API Elsevier.~~ **Executado — ver Seção 5.1.**
+
+### 5.1. Execução no Scopus (API Elsevier, 2026-07-27)
+
+A query foi **executada no Scopus via Scopus Search API** (sintaxe da Seção 3, forma por bloco), com verificação de recuperação **por DOI** de cada artigo do corpus:
+
+| Métrica                                |           Scopus            | OpenAlex (referência) |
+| -------------------------------------- | :-------------------------: | :-------------------: |
+| **Recall nos 14 estudos incluídos**    |          **13/14**          |         13/14         |
+| Única perda entre incluídos            | P24 (trade-off documentado) |          P24          |
+| Excluídos/inelegíveis P26, P38, P39    |     Não recuperados ✅      |  Não recuperados ✅   |
+| P13 (não testável na calibração local) |      **Recuperado** ✅      |     Recuperado ✅     |
+| **Volume total (2020+, EN)**           |         **12.783**          |       ≈ 49.700        |
+
+- **As três validações convergem** (calibração local, OpenAlex e Scopus): recall 13/14 nos incluídos, com a mesma e única perda (P24) e os mesmos misses desejáveis — a string está validada na base primária do protocolo.
+- **Volume no Scopus (12.783)** é ~4× menor que na OpenAlex (campos controlados TITLE-ABS-KEY + cobertura curada) — universo de triagem viável para a RSL; os refinamentos de precisão da Seção 5 seguem disponíveis se necessário.
+- **Nota de indexação:** P01 (F1000Research) **não está indexado no Scopus** (DOI não encontrado na base) — irrecuperável por qualquer string; registrar como limitação de cobertura da base, não da string.
+- **Nota de sintaxe:** a forma aninhada `TITLE-ABS-KEY((A) AND (B))` retornou falso-zero quando combinada com `DOI()` na API; a forma por bloco (`TITLE-ABS-KEY(A) AND TITLE-ABS-KEY(B)`) é a recomendada e foi a validada.
 
 ## 6. Limitações
 
-- A calibração local usa matching por substring sobre metadados; a validação externa (OpenAlex) usa o motor real da base, mas OpenAlex ≠ Scopus (cobertura e stemming diferem) — o recall no Scopus deve ser reconferido quando houver credencial.
-- A calibração usa o corpus existente (validação de _recall_); a _precisão_ real só é mensurável na triagem dos resultados.
+- A calibração local usa matching por substring sobre metadados; as validações externas (OpenAlex e Scopus) usam os motores reais — todas convergiram (13/14), mas as validações medem apenas _recall_ sobre o corpus conhecido.
+- A _precisão_ real (proporção de ruído nos 12.783 resultados do Scopus) só é mensurável na triagem; se o volume for impraticável, aplicar os refinamentos da Seção 5 retestando o recall a cada corte.
+- P01 (F1000Research) não é indexado pelo Scopus — cobrir via base complementar (a OpenAlex o recupera) ou snowballing.
 
 ---
 
-_Derivada da síntese transversal PICOC (v1.1.0) e calibrada em 2026-07-27. Metodologia de derivação prevista nas Notas de uso do [prompt PICOC](picoc-extraction-prompt.md): "a síntese transversal de Intervention + Context é o argumento auditável para a string de busca da RSL"._
+_Derivada da síntese transversal PICOC (v1.1.0); calibrada no corpus e validada na OpenAlex e no Scopus (Scopus Search API) em 2026-07-27. Metodologia de derivação prevista nas Notas de uso do [prompt PICOC](picoc-extraction-prompt.md): "a síntese transversal de Intervention + Context é o argumento auditável para a string de busca da RSL"._

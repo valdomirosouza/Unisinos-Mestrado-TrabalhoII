@@ -255,6 +255,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "Execute a string de busca no Scopus e valide o recall"
 **Ações:** A API do Scopus exige chave institucional Elsevier (`401` sem credencial; nenhuma chave no ambiente) — execução no Scopus **pendente**. Como validação em base real, executei a query (blocos A×B, ≥2020) na **OpenAlex** com verificação por DOI artigo a artigo: **recall 13/14 nos incluídos** (única perda: P24, trade-off já documentado), **P26/P38/P39 (excluídos/inelegíveis) não recuperados** (comportamento desejável confirmado), **P13 recuperado** (não era testável na calibração local) e **volume ≈ 49.700 trabalhos** — a execução externa **replicou exatamente a calibração local**, validando o método. Documentei na Seção 5 do `picoc-search-string.md`: resultados, refinamentos de precisão (Bloco B em título; corte de `resilience`/`SOC`/`SRE`; `SUBJAREA(COMP)`) e os dois caminhos para o Scopus real (chave da API em dev.elsevier.com ou export CSV da interface para cruzamento com `papers.csv`). README raiz atualizado.
 
+### 60. Execução da string no Scopus (API Elsevier) — recall validado
+
+**Prompt:** usuário forneceu a chave da API Elsevier (mantida fora do repositório).
+**Ações:** Executei a query no **Scopus Search API** com verificação por DOI. **Bug de sintaxe descoberto e documentado:** `TITLE-ABS-KEY((A) AND (B))` aninhado retorna falso-zero quando combinado com `DOI()`; a forma por bloco `TITLE-ABS-KEY(A) AND TITLE-ABS-KEY(B)` funciona e passou a ser a canônica na Seção 3. **Resultados:** recall **13/14 nos incluídos** (única perda: P24 — mesmo trade-off), excluídos/inelegíveis P26/P38/P39 não recuperados, P13 recuperado, **volume 12.783** (2020+, EN; ~4× menor que a OpenAlex). **As três validações convergem** (calibração local, OpenAlex, Scopus) — string validada na base primária do protocolo. Achado adicional: **P01 (F1000Research) não é indexado pelo Scopus** — limitação de cobertura da base, cobrir via OpenAlex/snowballing. Seções 5.1 e 6 do `picoc-search-string.md` e README raiz atualizados.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -297,5 +302,6 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `7c3ccf1` | 2026-07-27 | Derive RSL search string from PICOC synthesis, calibrated on the corpus               |
 | `b10556e` | 2026-07-27 | Log search string derivation (item 58) in MEMORY.md                                   |
 | `377eed6` | 2026-07-27 | Validate search string externally on OpenAlex (13/14 included recall)                 |
+| `f50ae72` | 2026-07-27 | Log OpenAlex validation of the search string (item 59) in MEMORY.md                   |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
