@@ -1,40 +1,40 @@
-ID,Título,Venue,DOI,Qualis (2025-2028),Scopus (Percentil),SJR Quartile,ISSN / e-ISSN,Year
-P01,"Trustworthy agentic AI systems: a cross-layer review of architectures, threat models and governance strategies",F1000Research,10.12688/f1000research.169927.1,A2,77%,Q1,2046-1402,2025
-P02,The role of agentic AI in shaping a smart future: A systematic review,Array,10.1016/j.array.2025.100399,A1,88%,Q1,2590-0056,2025
-P03,A Research Landscape of Agentic AI and Large Language Models,Algorithms,10.3390/a18080499,A2,78%,Q2,1999-4893,2025
-P04,LLM-Based Multi-Agent Systems for Software Engineering,ACM TRANSACTIONS ON SOFTWARE ENGINEERING AND METHODOLOGY,10.1145/3712003,A2,82%,Q1,1049-331X,2024
-P05,A Survey of AIOps in the Era of Large Language Models,ACM Computing Surveys,10.1145/3746635,A1,99%,Q1,0360-0300,2025
-P06,"Agentic AI: A Comprehensive Survey of Technologies, Applications, and Societal Implications",IEEE Access,10.1109/ACCESS.2025.3585609,A1,90%,Q1,2169-3536,2025
-P07,Artificial Empathy: A New Perspective for Analyzing and Designing Multi-Agent Systems,IEEE Access,10.1109/ACCESS.2020.3029502,A1,90%,Q1,2169-3536,2020
-P08,"Applications, Challenges, and Future Directions of Human-in-the-Loop Learning",IEEE Access,10.1109/ACCESS.2024.3401547,A1,90%,Q1,2169-3536,2024
-P09,"AI Agents vs. Agentic AI: A Conceptual taxonomy, applications and challenges",Information Fusion,10.1016/j.inffus.2025.103599,A1,99%,Q1,1566-2535,2025
-P10,Agentic AI: Autonomous Intelligence for Complex Goals — A Comprehensive Survey,IEEE Access,10.1109/ACCESS.2025.3532853,A1,90%,Q1,2169-3536,2025
-P11,Co-Evolving Multi-Agent Transfer Reinforcement Learning via Scenario Independent Representation,IEEE Access,10.1109/ACCESS.2024.3430037,A1,90%,Q1,2169-3536,2024
-P12,Enhancing autonomous system security and resilience with generative AI,IEEE Access,10.1109/ACCESS.2024.3439363,A1,90%,Q1,2169-3536,2024
-P13,Retail Resilience Engine: An Agentic AI Framework for Building Reliable Retail Systems,IEEE Access,10.1109/ACCESS.2025.3552592,A1,90%,Q1,2169-3536,2025
-P14,Transforming cybersecurity with agentic AI to combat emerging cyber threats (Kshetri),Telecommunications Policy,10.1016/j.telpol.2025.102976,A1,97%,Q1,0308-5961,2025
-P15,"The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures…",Future Internet,10.3390/fi17090404,A2,84%,Q1,1999-5903,2025
-P16,"A Joint Study of the Challenges, Opportunities, and Roadmap of MLOps and AIOps",ACM Computing Surveys,10.1145/3625289,A1,99%,Q1,0360-0300,2023
-P17,A Review of Trustworthy and Explainable Artificial Intelligence (XAI),IEEE Access,10.1109/ACCESS.2023.3294569,A1,90%,Q1,2169-3536,2023
-P18,An architecture for model-based and intelligent automation in DevOps,J. Systems & Software,10.1016/j.jss.2024.112180,A2,87%,Q1,0164-1212,2024
-P19,"Agent System Mining: Vision, Benefits, and Challenges",IEEE Access,10.1109/ACCESS.2021.3095464,A1,90%,Q1,2169-3536,2021
-P20,LLM Agentic Workflow for Automated Vulnerability Detection and Remediation in IaC,IEEE Access,10.1109/ACCESS.2025.3560911,A1,90%,Q1,2169-3536,2025
-P21,Small Language Model Agent for the Operations of Continuously Updating ICT Systems,IEEE Access,10.1109/ACCESS.2025.3544637,A1,90%,Q1,2169-3536,2025
-P22,ARM: Autonomous Remediation and Management With LLM Agents for Intent-Driven Control,IEEE IoT Journal,10.1109/JIOT.2025.3648858,A1,97%,Q1,2327-4662,2026
-P23,TAMO: Fine-Grained Root Cause Analysis via Tool-Assisted LLM Agent,IEEE Transactions on Services Computing,10.1109/TSC.2025.3629066,A1,90%,Q1,1939-1374,2025
-P24,AgentAI: A comprehensive survey on autonomous agents in distributed AI for industry 4.0,Expert Systems with Applications,10.1016/j.eswa.2025.128404,A1,97%,Q1,0957-4174,2025
-P25,Artificial intelligence driven multi agent framework for adaptive cyber attack simulation and automated incident response in cyber range environments,Scientific Reports,10.1038/s41598-026-45937-9,A1,89%,Q1,2045-2322,2026
-P26,Surveying Root Cause Analysis Techniques: A Comprehensive Review for Multi-Service Applications,IEEE Transactions on Services Computing,10.1109/TSC.2025.3631913,A1,90%,Q1,1939-1374,2026
-P27,Leveraging multi-agent framework for root cause analysis,Complex and Intelligent Systems,10.1007/s40747-025-02096-0,A1,97%,Q1,2199-4536,2026
-P28,A Multi-Agent System for Cybersecurity Threat Detection and Correlation Using LLMs,IEEE Access,10.1109/ACCESS.2025.3602681,A1,90%,Q1,2169-3536,2025
-P29,AIOps for log anomaly detection in the era of LLMs: A systematic literature review,Intelligent Systems with Applicationsopen access,10.1016/j.iswa.2025.200608,A2,87%,Q1,2667-3053,2025
-P30,Reliability of LLM Inference Engines from a Static Perspective: RCA and Repair Suggestion,Big Data and Cognitive Computing,10.3390/bdcc10020060,A2,86%,Q1,2504-2289,2026
-P31,LEMAD: LLM-Empowered Multi-Agent System for Anomaly Detection in Power Grid Services,Electronics,10.3390/electronics14153008,A2,76%,Q2,2079-9292,2025
-P32,GALR: Graph-Based Root Cause Localization and LLM-Assisted Recovery for Microservices,Electronics,10.3390/electronics15010243,A2,76%,Q2,2079-9292,2026
-P33,"A Review of Agentic AI in Cybersecurity: Cognitive Autonomy, Ethical Governance, and Quantum-Resilient Defense",F1000Research,10.12688/f1000research.169337.1,A2,77%,Q1,2046-1402,2025
-P34,Analysing the role of LLMs in cybersecurity incident management,International Journal of Information Security,10.1007/s10207-025-01144-7,A2,81%,Q2,1615-5270,2025
-P35,Graph-Augmented Multi-Agent Robust Root Cause Analysis in AIOps,"Computers, Materials and Continua",10.32604/cmc.2026.077908,A2,86%,Q2,1546-2218,2026
-P37,"Empirical Study on Automation, AI Trust, and Framework Readiness in Cybersecurity Incident Response",Algorithms,10.3390/a19010062,A2,78%,Q2,1999-4893,2026
-P38,Multi-Agent Coordination Strategies vs. RAG in LLMs: A Comparative Evaluation,Electronics,10.3390/electronics14244883,A2,76%,Q2,2079-9292,2025
-P39,Agentic AI and the Cyber Arms Race,IEEE Computer,10.1109/MC.2025.3544116,A3,65%,Q2,0018-9162,2025
-P40,A Comprehensive Survey on LLM-Based Network Management and Operations,International Journal of Network Management,10.1002/nem.70029,A3,68%,Q2,1055-7148,2025
+ID,Título,Venue,DOI,Qualis (2025-2028),Scopus (Percentil),SJR Quartile,ISSN / e-ISSN,Year,Citações OpenAlex,Citações Crossref,Citações Scopus,Citações (verificado em)
+P01,"Trustworthy agentic AI systems: a cross-layer review of architectures, threat models and governance strategies",F1000Research,10.12688/f1000research.169927.1,A2,77%,Q1,2046-1402,2025,19,21,NÃO INDEXADO,2026-07-27
+P02,The role of agentic AI in shaping a smart future: A systematic review,Array,10.1016/j.array.2025.100399,A1,88%,Q1,2590-0056,2025,180,190,175,2026-07-27
+P03,A Research Landscape of Agentic AI and Large Language Models,Algorithms,10.3390/a18080499,A2,78%,Q2,1999-4893,2025,38,45,39,2026-07-27
+P04,LLM-Based Multi-Agent Systems for Software Engineering,ACM TRANSACTIONS ON SOFTWARE ENGINEERING AND METHODOLOGY,10.1145/3712003,A2,82%,Q1,1049-331X,2024,144,173,134,2026-07-27
+P05,A Survey of AIOps in the Era of Large Language Models,ACM Computing Surveys,10.1145/3746635,A1,99%,Q1,0360-0300,2025,19,28,24,2026-07-27
+P06,"Agentic AI: A Comprehensive Survey of Technologies, Applications, and Societal Implications",IEEE Access,10.1109/ACCESS.2025.3585609,A1,90%,Q1,2169-3536,2025,48,57,44,2026-07-27
+P07,Artificial Empathy: A New Perspective for Analyzing and Designing Multi-Agent Systems,IEEE Access,10.1109/ACCESS.2020.3029502,A1,90%,Q1,2169-3536,2020,10,9,8,2026-07-27
+P08,"Applications, Challenges, and Future Directions of Human-in-the-Loop Learning",IEEE Access,10.1109/ACCESS.2024.3401547,A1,90%,Q1,2169-3536,2024,135,134,141,2026-07-27
+P09,"AI Agents vs. Agentic AI: A Conceptual taxonomy, applications and challenges",Information Fusion,10.1016/j.inffus.2025.103599,A1,99%,Q1,1566-2535,2025,132,149,136,2026-07-27
+P10,Agentic AI: Autonomous Intelligence for Complex Goals — A Comprehensive Survey,IEEE Access,10.1109/ACCESS.2025.3532853,A1,90%,Q1,2169-3536,2025,487,534,509,2026-07-27
+P11,Co-Evolving Multi-Agent Transfer Reinforcement Learning via Scenario Independent Representation,IEEE Access,10.1109/ACCESS.2024.3430037,A1,90%,Q1,2169-3536,2024,9,9,10,2026-07-27
+P12,Enhancing autonomous system security and resilience with generative AI,IEEE Access,10.1109/ACCESS.2024.3439363,A1,90%,Q1,2169-3536,2024,86,93,101,2026-07-27
+P13,Retail Resilience Engine: An Agentic AI Framework for Building Reliable Retail Systems,IEEE Access,10.1109/ACCESS.2025.3552592,A1,90%,Q1,2169-3536,2025,29,33,31,2026-07-27
+P14,Transforming cybersecurity with agentic AI to combat emerging cyber threats (Kshetri),Telecommunications Policy,10.1016/j.telpol.2025.102976,A1,97%,Q1,0308-5961,2025,45,48,42,2026-07-27
+P15,"The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures…",Future Internet,10.3390/fi17090404,A2,84%,Q1,1999-5903,2025,101,114,87,2026-07-27
+P16,"A Joint Study of the Challenges, Opportunities, and Roadmap of MLOps and AIOps",ACM Computing Surveys,10.1145/3625289,A1,99%,Q1,0360-0300,2023,63,68,72,2026-07-27
+P17,A Review of Trustworthy and Explainable Artificial Intelligence (XAI),IEEE Access,10.1109/ACCESS.2023.3294569,A1,90%,Q1,2169-3536,2023,300,297,290,2026-07-27
+P18,An architecture for model-based and intelligent automation in DevOps,J. Systems & Software,10.1016/j.jss.2024.112180,A2,87%,Q1,0164-1212,2024,21,21,20,2026-07-27
+P19,"Agent System Mining: Vision, Benefits, and Challenges",IEEE Access,10.1109/ACCESS.2021.3095464,A1,90%,Q1,2169-3536,2021,32,32,36,2026-07-27
+P20,LLM Agentic Workflow for Automated Vulnerability Detection and Remediation in IaC,IEEE Access,10.1109/ACCESS.2025.3560911,A1,90%,Q1,2169-3536,2025,9,11,7,2026-07-27
+P21,Small Language Model Agent for the Operations of Continuously Updating ICT Systems,IEEE Access,10.1109/ACCESS.2025.3544637,A1,90%,Q1,2169-3536,2025,0,1,1,2026-07-27
+P22,ARM: Autonomous Remediation and Management With LLM Agents for Intent-Driven Control,IEEE IoT Journal,10.1109/JIOT.2025.3648858,A1,97%,Q1,2327-4662,2026,1,1,1,2026-07-27
+P23,TAMO: Fine-Grained Root Cause Analysis via Tool-Assisted LLM Agent,IEEE Transactions on Services Computing,10.1109/TSC.2025.3629066,A1,90%,Q1,1939-1374,2025,3,6,5,2026-07-27
+P24,AgentAI: A comprehensive survey on autonomous agents in distributed AI for industry 4.0,Expert Systems with Applications,10.1016/j.eswa.2025.128404,A1,97%,Q1,0957-4174,2025,48,54,51,2026-07-27
+P25,Artificial intelligence driven multi agent framework for adaptive cyber attack simulation and automated incident response in cyber range environments,Scientific Reports,10.1038/s41598-026-45937-9,A1,89%,Q1,2045-2322,2026,1,2,0,2026-07-27
+P26,Surveying Root Cause Analysis Techniques: A Comprehensive Review for Multi-Service Applications,IEEE Transactions on Services Computing,10.1109/TSC.2025.3631913,A1,90%,Q1,1939-1374,2026,0,1,1,2026-07-27
+P27,Leveraging multi-agent framework for root cause analysis,Complex and Intelligent Systems,10.1007/s40747-025-02096-0,A1,97%,Q1,2199-4536,2026,3,3,2,2026-07-27
+P28,A Multi-Agent System for Cybersecurity Threat Detection and Correlation Using LLMs,IEEE Access,10.1109/ACCESS.2025.3602681,A1,90%,Q1,2169-3536,2025,10,16,18,2026-07-27
+P29,AIOps for log anomaly detection in the era of LLMs: A systematic literature review,Intelligent Systems with Applicationsopen access,10.1016/j.iswa.2025.200608,A2,87%,Q1,2667-3053,2025,5,5,7,2026-07-27
+P30,Reliability of LLM Inference Engines from a Static Perspective: RCA and Repair Suggestion,Big Data and Cognitive Computing,10.3390/bdcc10020060,A2,86%,Q1,2504-2289,2026,0,1,0,2026-07-27
+P31,LEMAD: LLM-Empowered Multi-Agent System for Anomaly Detection in Power Grid Services,Electronics,10.3390/electronics14153008,A2,76%,Q2,2079-9292,2025,8,10,13,2026-07-27
+P32,GALR: Graph-Based Root Cause Localization and LLM-Assisted Recovery for Microservices,Electronics,10.3390/electronics15010243,A2,76%,Q2,2079-9292,2026,1,1,1,2026-07-27
+P33,"A Review of Agentic AI in Cybersecurity: Cognitive Autonomy, Ethical Governance, and Quantum-Resilient Defense",F1000Research,10.12688/f1000research.169337.1,A2,77%,Q1,2046-1402,2025,11,11,11,2026-07-27
+P34,Analysing the role of LLMs in cybersecurity incident management,International Journal of Information Security,10.1007/s10207-025-01144-7,A2,81%,Q2,1615-5270,2025,1,2,2,2026-07-27
+P35,Graph-Augmented Multi-Agent Robust Root Cause Analysis in AIOps,"Computers, Materials and Continua",10.32604/cmc.2026.077908,A2,86%,Q2,1546-2218,2026,0,0,0,2026-07-27
+P37,"Empirical Study on Automation, AI Trust, and Framework Readiness in Cybersecurity Incident Response",Algorithms,10.3390/a19010062,A2,78%,Q2,1999-4893,2026,5,5,2,2026-07-27
+P38,Multi-Agent Coordination Strategies vs. RAG in LLMs: A Comparative Evaluation,Electronics,10.3390/electronics14244883,A2,76%,Q2,2079-9292,2025,0,0,1,2026-07-27
+P39,Agentic AI and the Cyber Arms Race,IEEE Computer,10.1109/MC.2025.3544116,A3,65%,Q2,0018-9162,2025,6,8,8,2026-07-27
+P40,A Comprehensive Survey on LLM-Based Network Management and Operations,International Journal of Network Management,10.1002/nem.70029,A3,68%,Q2,1055-7148,2025,11,13,7,2026-07-27

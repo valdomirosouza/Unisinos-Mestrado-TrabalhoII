@@ -8,7 +8,7 @@ Pareceres de revisão dos estudos candidatos da RSL **"Agentic AI Copilot para R
 - **P36 omitido:** duplicata de **P31/LEMAD** (já removida do corpus e do CSV).
 - Um arquivo por estudo: [`review-Pxx.md`](.). Cada um traz Tabela A (Bibliométrica/Tab. 3), Tabela B (RQs/Tab. 5), Tabela C (QA/Tab. 7) e parecer final.
 
-> ✅ **Pendência transversal (resolvida para Qualis/SJR):** durante a avaliação, Citações, SJR e Qualis **não eram verificáveis nos PDFs** e os valores vieram dos **insumos** do CSV (marcados `[VERIFICAR]` nos pareceres). A verificação externa foi concluída em [`../papers.csv`](../papers.csv) — DOI, Qualis 2025-2028, percentil Scopus, SJR quartile, ISSN e ano dos 39 estudos —, confirmando os estratos usados na triagem (incl. P39/P40 = A3, inelegíveis). _Só a **contagem de citações** permanece pendente (relevante para o critério "Citações ≥ 1" nos estudos de 2026: P30, P32, P35, P37)._
+> ✅ **Pendência transversal (RESOLVIDA):** durante a avaliação, Citações, SJR e Qualis **não eram verificáveis nos PDFs** e os valores vieram dos **insumos** do CSV (marcados `[VERIFICAR]` nos pareceres). A verificação externa foi concluída em [`../papers.csv`](../papers.csv) — DOI, Qualis 2025-2028, percentil Scopus, SJR quartile, ISSN, ano e **citações em três fontes** (OpenAlex/Crossref/Scopus, 2026-07-27) dos 39 estudos —, confirmando os estratos usados na triagem (incl. P39/P40 = A3, inelegíveis) e o critério **Citações ≥ 1** para todos os incluídos (exceção: P35 com 0 citações, coberto pela `RECENCY_EXCEPTION` de publicação < 12 meses). Fluxo de seleção completo em [`PRISMA.md`](PRISMA.md).
 
 ## Tabela-síntese
 
@@ -58,7 +58,7 @@ Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunt
 - **Forte aderência a IR/segurança:** P25 (cyber range), P28 (SOC), P34 (copilot IR), P37 (governança/adoção).
 - **Paradigmas de agente distintos** (registrar no mapeamento): LLM multi-agente (P27/P28/P31/P35), LLM-agente closed-loop (P22), SLM-agente (P21), GNN+LLM (P23/P32), **MAS/RL não-LLM** (P25), **copilot/baixa autonomia** (P34), **survey de percepção** (P37).
 - **Procedência recorrente State Grid (China):** P31, P32, P35 — atentar para independência dos estudos.
-- **Risco no critério "Citações ≥ 1":** estudos de 2026 muito recentes (P30, P32, P35, P37) podem ter contagem 0 — verificar antes de confirmar elegibilidade.
+- **Critério "Citações ≥ 1" — verificado (2026-07-27):** dos estudos de 2026 em risco, P30 (máx. 1), P32 (1) e P37 (5) satisfazem o critério; **P35 tem 0 citações** nas três fontes (OpenAlex/Crossref/Scopus) e permanece elegível pela `RECENCY_EXCEPTION` (< 12 meses). Contagens em [`../papers.csv`](../papers.csv).
 
 ---
 
