@@ -83,6 +83,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   ├── picoc-extraction-prompt.md ← prompt de extração PICOC (Kitchenham; Petticrew & Roberts)
 │   └── picoc-results-consolidated-P01-P40-{Claude,ChatGPT,Gemini}.md ← tabelas consolidadas por avaliador
 ├── bookmark.md                   ← bookmarks de recursos externos (QUALIS etc.)
+├── citacoes-cruzadas.md          ← citações entre os 39 artigos do corpus (OpenAlex × Crossref × Scopus)
 ├── referencias.csv               ← referências citadas pelos artigos (extraídas via DOIS.py)
 ├── DOIS.py                       ← script de extração de referências (Crossref/OpenAlex/S2/COCI)
 ├── DOIS.txt                      ← lista de DOIs de entrada do DOIS.py
@@ -115,6 +116,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR) usados como insumo na avaliação (valores então `[VERIFICAR]`).
 - [`papers.csv`](papers.csv) — **bibliometria verificada** dos 39 estudos (P01–P40): DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN, ano e **contagem de citações em três fontes** (OpenAlex, Crossref, Scopus — verificadas em 2026-07-27). Resolve integralmente a pendência transversal (Qualis/SJR/citações).
 - [`reviews/PRISMA.md`](reviews/PRISMA.md) — **diagrama PRISMA 2020** (Mermaid) do fluxo de seleção: ≈51 identificados → 21 candidatos → 20 triados → 18 avaliados → **14 incluídos** → corpus final **33** (19 fundacionais + 14 novos), com critérios de inclusão (I1–I6) e exclusão (E1–E5) e verificação por artefato.
+- [`citacoes-cruzadas.md`](citacoes-cruzadas.md) — **citações entre os 39 artigos do corpus** com tripla checagem (OpenAlex × Crossref × Scopus): 26 pares citador→citado; hubs P10 (7), P14 (5), P09 (4); inclui a descoberta de que o `REF()` do Scopus casa por título (não por DOI) e o caso do P09 citado via DOI de preprint.
 - [`prompts/`](prompts/) — 20 prompts preenchidos, um por estudo.
 - [`docs/`](docs/) — **39 PDFs do corpus**: P01–P19 (estudos fundacionais do Trabalho I) + P20–P40 (candidatos avaliados). Índice completo com links em [`report/README.md`](report/README.md).
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
