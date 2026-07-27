@@ -165,7 +165,7 @@ _(Este commit de MEMORY.md é acrescentado ao final do histórico.)_
 
 ---
 
-# Sessão 2026-07-22 → 2026-07-25 — Etapa 3: Extração de dados (fichas P01–P40)
+# Sessão 2026-07-22 → 2026-07-26 — Etapas 3 e 4: Extração de dados (fichas P01–P40) e PICOC
 
 Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`, P01–P35 + P37–P40) em fichas CSV, versões pt-BR, relatórios consolidados, versionamento e fechamento de lacunas de documentação.
 
@@ -215,6 +215,21 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "read the file papers.csv in the root folder and add it the documentation to solve the gap cited in the README.md '⚠️ Pendência transversal…'" → "Yes, commit and push"
 **Ações:** Li `papers.csv` (criado pelo usuário na raiz): **bibliometria verificada dos 39 estudos P01–P40** — DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN e ano. Cross-check: os 39 estratos Qualis batem com os códigos `A1/A2/A3` dos nomes de arquivo em `docs/`, confirmando a inelegibilidade de P39/P40 (A3). Atualizei a documentação: (1) README raiz — nota ⚠️→✅ ("Pendência transversal **resolvida para Qualis/SJR** via `papers.csv`; só a **contagem de citações** segue pendente"), `papers.csv` no diagrama de estrutura e bullet próprio em "Insumos"; (2) `reviews/README.md` — nota equivalente, com alerta de citações para os estudos de 2026 (P30/P32/P35/P37). **Intocados de propósito:** `relatorio-sintese.md`/`.pdf` e avaliações ChatGPT (artefatos históricos da avaliação, quando os valores eram de fato `[VERIFICAR]`). Verificação: `papers.csv` citado, 0 links quebrados. Commit + push.
 
+### 52. Mendeley RIS → CSV e reposição de PDFs
+
+**Prompts:** "convert the export.ris … to a CSV" → commits e remoção da duplicata → reposição intencional de PDFs.
+**Ações:** Converti `export.ris` (38 registros Mendeley) em `export.csv` (14 colunas; AU/KW agregados; SP/EP → Pages), com **Paper ID casado por DOI** contra `papers.csv` — 38/38 casados; **P13 não tem registro no export do Mendeley** (gap sinalizado). Removida a duplicata `docs/export.ris`. Em seguida o usuário substituiu 4 PDFs do corpus (P04, P05, P12, P14) — commitados após confirmação (P04 individual; P05/P12/P14 em lote).
+
+### 53. Extração PICOC (Etapa 4)
+
+**Prompt:** "read the file picoc/picoc-extraction.md reasoning about and create a table with the results." → "Salve a tabela consolidada em picoc/picoc-results.md" → renomeações + commit.
+**Ações:** Executei o prompt PICOC (Kitchenham; Petticrew & Roberts) sobre os **39 PDFs** com 39 subagentes (leitura integral, raciocínio com âncoras seção/página, regras antifabricação `NÃO DECLARADO`/`N/A`). Limite de sessão interrompeu 7 agentes; relancei só os faltantes (32 fragmentos preservados). Consolidei em tabela (39×8) + síntese transversal + apêndice de raciocínio por artigo. **Achado central: nenhum estudo mede MTTD/MTTR nominalmente** (primários usam proxies; carga cognitiva nunca medida). Renomeado para `picoc-results-consolidated-P01-P40-Claude.md` (prompt → `picoc-extraction-prompt.md`); usuário adicionou versões **ChatGPT** e **Gemini**; pasta `picoc/` definida como **Etapa 4** no README raiz.
+
+### 54. Comparação PICOC entre avaliadores
+
+**Prompt:** "create the PICOC inter-evaluator comparison" → commit.
+**Ações:** Normalizei os 3 consolidados em matriz de status por elemento (3 agentes) e computei acordo: **100% (κ=1,00)** em Population/Intervention/Outcomes/Context; **Comparison 82%, Cohen/Fleiss κ=0,42** — as 10 divergências são **definicionais** (fronteira do contraste conceitual em estudos secundários; ChatGPT permissivo, Gemini restritivo, Claude intermediário). Alertas: **Gemini não cobre P01–P09**; outcome de P14 no Gemini ("MTTR −30%") vem de claims de fornecedores. Os três avaliadores **triangulam a lacuna de MTTD/MTTR**. Recomendação de protocolo registrada (Comparison=DECLARED só com baseline empírico). Saídas: `picoc-comparacao-avaliadores.{md,csv}`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -229,7 +244,8 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 - `P01…P40-extraction.csv` (39 fichas EN) · `P01…P40-extraction-ptBR.csv` (39 fichas pt-BR)
 - `consolidated-extraction.csv` / `consolidated-extraction-ptBR.csv` (39×12)
 - `README.md` (índice das fichas + PDFs + relevância)
-- Raiz: `docs/` P01–P19 versionados · `referencias.csv` · `DOIS.py` · `DOIS.txt` · `papers.csv` (bibliometria verificada) · `.gitignore` (+.serena/) · README raiz e `reviews/README.md` atualizados
+- Raiz: `docs/` P01–P19 versionados · `referencias.csv` · `DOIS.py` · `DOIS.txt` · `papers.csv` (bibliometria verificada) · `export.ris`/`export.csv` (Mendeley) · `.gitignore` (+.serena/) · README raiz e `reviews/README.md` atualizados
+- `picoc/`: `picoc-extraction-prompt.md` · `picoc-results-consolidated-P01-P40-{Claude,ChatGPT,Gemini}.md` · `picoc-comparacao-avaliadores.{md,csv}`
 
 ## Histórico de commits da sessão
 
@@ -242,5 +258,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `e427439` | 2026-07-25 | Index report/ extraction sheets and close documentation gaps                          |
 | `94a0037` | 2026-07-25 | Log session 2026-07-22..25 (Etapa 3: extraction sheets) in MEMORY.md                  |
 | `ef5f99a` | 2026-07-25 | Add papers.csv verified bibliometrics; resolve Qualis/SJR pendency                    |
+| `91ea72e` | 2026-07-25 | Log papers.csv verification work (item 51) in MEMORY.md                               |
+| `b363f9d` | 2026-07-26 | Add Mendeley export.ris and its CSV conversion (export.csv)                           |
+| `009d91b` | 2026-07-26 | Update P04 PDF with replacement copy                                                  |
+| `be53c16` | 2026-07-26 | Update P05, P12, P14 PDFs with replacement copies                                     |
+| `0a05761` | 2026-07-26 | Add picoc/ PICOC extraction (Etapa 4) with per-evaluator consolidated tables          |
+| `b2711fb` | 2026-07-26 | Add PICOC inter-evaluator comparison (Claude x ChatGPT x Gemini)                      |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
