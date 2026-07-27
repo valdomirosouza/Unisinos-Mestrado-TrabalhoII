@@ -82,6 +82,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── picoc/                        ← Etapa 4: extração PICOC (delimitação de escopo)
 │   ├── picoc-extraction-prompt.md ← prompt de extração PICOC (Kitchenham; Petticrew & Roberts)
 │   └── picoc-results-consolidated-P01-P40-{Claude,ChatGPT,Gemini}.md ← tabelas consolidadas por avaliador
+├── bookmark.md                   ← bookmarks de recursos externos (QUALIS etc.)
 ├── referencias.csv               ← referências citadas pelos artigos (extraídas via DOIS.py)
 ├── DOIS.py                       ← script de extração de referências (Crossref/OpenAlex/S2/COCI)
 ├── DOIS.txt                      ← lista de DOIs de entrada do DOIS.py
