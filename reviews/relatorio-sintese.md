@@ -169,7 +169,29 @@ Os 20 estudos foram avaliados **independentemente** por dois avaliadores (Claude
 
 ---
 
-## 10. Limitações desta avaliação
+## 10. Citações cruzadas no corpus (P01–P40)
+
+Levantamento de **quem cita quem dentro do corpus de 39 artigos** (fundacionais P01–P19 + candidatos P20–P40), com tripla checagem em **OpenAlex, Crossref e Scopus** (verificado em 2026-07-27): **26 pares** citador→citado na União (OpenAlex 20 · Crossref 21 · Scopus 25).
+
+| Mais citados no corpus                             | Citações (União) | Citado nos artigos                                              |
+| -------------------------------------------------- | :--------------: | --------------------------------------------------------------- |
+| **P10** — Agentic AI: Autonomous Intelligence      |      **7**       | P01, P03, P06, P09, P15, P24, P33                               |
+| **P14** — Transforming Cybersecurity w/ Agentic AI |      **5**       | P03, P06, P15, P28, P37                                         |
+| **P09** — AI Agents vs. Agentic AI                 |      **4**       | P03, P06, P15, P33 (via DOI de preprint; só Scopus/S2 resolvem) |
+| P02 · P13 · P16                                    |      2 cada      | —                                                               |
+| P12 · P24 · P31 · P39                              |      1 cada      | —                                                               |
+
+**Leituras para a síntese:**
+
+- **A espinha dorsal conceitual do corpus são os surveys fundacionais** (P10, P14, P09) — os candidatos avaliados os citam como referência de definição de Agentic AI, confirmando a coerência entre a base do Trabalho I e os novos estudos.
+- **Os 14 estudos incluídos (2025–2026) ainda não citam uns aos outros** — a frente de pesquisa é jovem e fragmentada; a consolidação cruzada entre os primários deverá aparecer nos próximos ciclos de citação.
+- **Independência dos estudos State Grid** (P31, P32, P35 — observação da Seção 7): nas três fontes, apenas **P38→P31** aparece como citação interna envolvendo esse grupo; não há citação mútua entre P31/P32/P35, o que reduz (mas não elimina) a preocupação de dependência.
+
+> Matriz completa, arestas e notas metodológicas (o `REF()` do Scopus casa por título, não por DOI; caso do P09 citado via DOI de preprint): **[citacoes-cruzadas.md](../citacoes-cruzadas.md)** · citações externas totais em [`papers.csv`](../papers.csv).
+
+---
+
+## 11. Limitações desta avaliação
 
 - **Extração de texto via PDFKit** (sem renderização de página): tabelas/figuras com layout complexo podem ter perdido valores tabulares — vereditos ancorados no texto corrido e nas tabelas legíveis.
 - **Qualis/SJR/Citações não confirmados** (insumos): toda decisão de elegibilidade dependente desses itens é **provisória**.
@@ -177,7 +199,7 @@ Os 20 estudos foram avaliados **independentemente** por dois avaliadores (Claude
 
 ---
 
-## 11. Próximos passos recomendados
+## 12. Próximos passos recomendados
 
 1. **Verificar externamente** Citações/SJR/Qualis dos 18 elegíveis (atenção a P30/P32/P35/P37 — 2026, possível 0 citações; e confirmar A3 de P39/P40).
 2. **Decidir no protocolo** o tratamento de estudos secundários (P24, P33): corpus primário vs fundamentação.
@@ -187,15 +209,15 @@ Os 20 estudos foram avaliados **independentemente** por dois avaliadores (Claude
 
 ---
 
-## 12. Nota metodológica (métodos e métricas)
+## 13. Nota metodológica (métodos e métricas)
 
 Esta seção descreve, de forma reprodutível, **como** os números deste relatório e da [comparação entre avaliadores](comparacao-avaliadores.md) foram obtidos.
 
-### 12.1 Protocolo de avaliação (Kitchenham + DARE)
+### 13.1 Protocolo de avaliação (Kitchenham + DARE)
 
 Cada estudo foi avaliado seguindo as diretrizes de **Kitchenham et al. (2009)** para RSL em Engenharia de Software, com a avaliação de qualidade espelhando a lógica dos critérios **DARE (QA1–QA4)**. O fluxo por estudo: triagem de elegibilidade (PRISMA/ETAPA 1) → classificação das 5 RQs → avaliação de qualidade (4 QAs) → parecer (Incluir / Incluir com ressalvas / Excluir).
 
-### 12.2 Pontuação das RQs (SCORE_RQ)
+### 13.2 Pontuação das RQs (SCORE_RQ)
 
 Cada RQ recebe um veredito ancorado em evidência do PDF, convertido em escore:
 
@@ -207,22 +229,22 @@ Cada RQ recebe um veredito ancorado em evidência do PDF, convertido em escore:
 
 **SCORE_RQ** = soma dos 5 vereditos (**máximo 5,0**).
 
-### 12.3 Avaliação de qualidade (SCORE_QA e banda)
+### 13.3 Avaliação de qualidade (SCORE_QA e banda)
 
 Quatro critérios DARE — QA1 (objetivos claros), QA2 (metodologia replicável), QA3 (base de evidências sólida; _toy example_ = P, teórico = N), QA4 (conclusões coerentes) — pontuados **Y = 1,0 / P = 0,5 / N = 0,0**.
 
 **SCORE_QA** = soma (**máximo 4,0**). **Banda de qualidade:** Alta ≥ 3,0 · Média 1,5–2,5 · Baixa < 1,5.
 
-### 12.4 Triagem de elegibilidade (ETAPA 1 / PRISMA)
+### 13.4 Triagem de elegibilidade (ETAPA 1 / PRISMA)
 
 Critérios de inclusão: Ano ≥ 2020; veículo identificável; **Citações ≥ 1**; **SJR Q1–Q2**; **Qualis A1–A2**. Os três últimos não são verificáveis no PDF → marcados `[VERIFICAR]`. Estudos com Qualis A3 informado (P39, P40) foram tratados como **inelegíveis** (encerramento na triagem).
 
-### 12.5 Estatística descritiva
+### 13.5 Estatística descritiva
 
 - **Média / mediana** de SCORE_RQ e SCORE_QA sobre os 18 estudos avaliados (P39/P40 excluídos por serem `NA`).
 - Distribuição de bandas e de vereditos T/P/N por RQ (contagens simples).
 
-### 12.6 Concordância entre avaliadores
+### 13.6 Concordância entre avaliadores
 
 Compara os vereditos **independentes** de dois avaliadores (Claude e ChatGPT) sobre o mesmo protocolo. Métricas:
 
@@ -265,7 +287,7 @@ Resultados: MAE(SCORE_RQ) = **0,42**; MAE(SCORE_QA) = **0,31** (n = 18; P39/P40 
 
 > **Limitações da comparação:** N = 20 é pequeno (κ tem variância alta nesse tamanho); a decisão é reduzida a binária (Incluir/Excluir) para o κ, ignorando a gradação "com ressalvas"; os escores do ChatGPT foram **extraídos automaticamente** de seus pareceres (`gen_comparison.py`), sujeitos a variação de formato. Ainda assim, a convergência (90% / κ 0,74 / banda 100% / RQ4–RQ5 100%) é consistente e interpretável.
 
-### 12.7 Extração de dados e reprodutibilidade
+### 13.7 Extração de dados e reprodutibilidade
 
 Texto dos PDFs extraído via **PDFKit** (não houve renderização de página). Escores consolidados em [`resultados-consolidados.csv`](resultados-consolidados.csv); comparação gerada por [`scripts/gen_comparison.py`](scripts/gen_comparison.py); gráficos por [`scripts/gen_charts.py`](scripts/gen_charts.py); este relatório em PDF por [`scripts/build_pdf.py`](scripts/build_pdf.py).
 
