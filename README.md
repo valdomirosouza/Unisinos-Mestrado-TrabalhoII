@@ -4,7 +4,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 > ⚠️ **Repositório privado.** Contém PDFs de artigos com direitos autorais (IEEE, Elsevier, Springer, MDPI, Wiley, etc.) em `docs/`, mantidos apenas para a avaliação acadêmica.
 >
-> ✅ **Pendência transversal (resolvida para Qualis/SJR):** Citações, SJR e Qualis **não são verificáveis nos PDFs** — durante a avaliação os valores vieram dos insumos e foram marcados `[VERIFICAR]`. A verificação externa foi concluída e consolidada em [`papers.csv`](papers.csv): **Qualis (2025-2028), percentil Scopus, SJR quartile, DOI, ISSN e ano** dos 39 estudos (P01–P40), confirmando inclusive a inelegibilidade de P39/P40 (Qualis A3). _Permanece pendente apenas a **contagem de citações** por estudo (base indexadora)._
+> ✅ **Pendência transversal (RESOLVIDA):** Citações, SJR e Qualis **não são verificáveis nos PDFs** — durante a avaliação os valores vieram dos insumos e foram marcados `[VERIFICAR]`. A verificação externa foi concluída e consolidada em [`papers.csv`](papers.csv): **Qualis (2025-2028), percentil Scopus, SJR quartile, DOI, ISSN, ano e contagem de citações em três fontes (OpenAlex, Crossref, Scopus; 2026-07-27)** dos 39 estudos (P01–P40) — confirmando a inelegibilidade de P39/P40 (Qualis A3) e o critério **Citações ≥ 1** para todos os incluídos (única exceção: P35, com 0 citações, coberto pela `RECENCY_EXCEPTION` de publicação < 12 meses).
 
 ## 🚀 Comece por aqui
 
@@ -17,6 +17,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 | Um estudo específico       | 📚 [Índice de pareceres](reviews/README.md) ou a tabela abaixo                                 |
 | As fichas de extração      | 📑 [Índice das fichas P01–P40](report/README.md)                                               |
 | A extração PICOC           | 🧩 [Tabela consolidada P01–P40](picoc/picoc-results-consolidated-P01-P40-Claude.md)            |
+| O fluxo de seleção         | 🔀 [Diagrama PRISMA](reviews/PRISMA.md)                                                        |
 
 ## 📈 Resultado em um relance
 
@@ -111,7 +112,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 - [`prompt-template.md`](prompt-template.md) — template do prompt (papel, contexto, RQ1–RQ5, QA1–QA4, formato de saída).
 - [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR) usados como insumo na avaliação (valores então `[VERIFICAR]`).
-- [`papers.csv`](papers.csv) — **bibliometria verificada** dos 39 estudos (P01–P40): DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN e ano. Resolve a pendência de verificação externa de Qualis/SJR (Scimago; Plataforma Sucupira/Qualis CAPES); a contagem de citações segue pendente.
+- [`papers.csv`](papers.csv) — **bibliometria verificada** dos 39 estudos (P01–P40): DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN, ano e **contagem de citações em três fontes** (OpenAlex, Crossref, Scopus — verificadas em 2026-07-27). Resolve integralmente a pendência transversal (Qualis/SJR/citações).
+- [`reviews/PRISMA.md`](reviews/PRISMA.md) — **diagrama PRISMA 2020** (Mermaid) do fluxo de seleção: ≈51 identificados → 21 candidatos → 20 triados → 18 avaliados → **14 incluídos** → corpus final **33** (19 fundacionais + 14 novos), com critérios de inclusão (I1–I6) e exclusão (E1–E5) e verificação por artefato.
 - [`prompts/`](prompts/) — 20 prompts preenchidos, um por estudo.
 - [`docs/`](docs/) — **39 PDFs do corpus**: P01–P19 (estudos fundacionais do Trabalho I) + P20–P40 (candidatos avaliados). Índice completo com links em [`report/README.md`](report/README.md).
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
