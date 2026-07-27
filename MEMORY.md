@@ -280,6 +280,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "monte um novo documento com o números de vezes que cada um dos 39 artigos é citados pelos seus pares … tripla checagem OpenAlex, Crossref e Scopus … e uma coluna com a lista de artigos em que o artigo par foi citado."
 **Ações:** Criei `citacoes-cruzadas.md` (raiz, indexado no README) com a matriz quem-cita-quem do corpus: **OpenAlex 20 · Crossref 21 · Scopus 25 · União 26 pares** citador→citado. Apenas 10 artigos são citados por pares; **hubs = surveys fundacionais**: P10 (7), P14 (5), P09 (4), P02/P13/P16 (2), P12/P24/P31/P39 (1). Método por fonte: OpenAlex `referenced_works`; Crossref lista `reference` (DOIs); Scopus `REF("<título>")` × OR de DOIs do corpus. **Descobertas metodológicas documentadas:** (i) `REF()` do Scopus casa por **título**, não por DOI (falso-zero silencioso com DOIs — validado com pares positivo/negativo); (ii) **caso P09**: as 4 citações usam DOI de preprint `10.70777/…` — invisíveis ao casamento por DOI canônico em OpenAlex/Crossref; Scopus e S2 (corroborado em `referencias.csv`) resolvem para a versão do periódico; (iii) P01 não indexado no Scopus oculta a aresta P01→P10; P38→P31 falta só na OpenAlex.
 
+### 65. Citações cruzadas no dashboard
+
+**Prompt:** "Adicione as citações cruzadas ao DASHBOARD.md"
+**Ações:** Acrescentei ao `reviews/DASHBOARD.md` uma linha na "Navegação rápida" e a seção "🔁 Citações cruzadas no corpus (P01–P40)": totais por fonte (OpenAlex 20 · Crossref 21 · Scopus 25 · **União 26 pares**), tabela dos mais citados com lista de citadores (P10=7, P14=5, P09=4 com nota do DOI de preprint) e a leitura-chave (hubs = surveys fundacionais; os 14 incluídos de 2025–2026 ainda não se citam entre si), com links para `citacoes-cruzadas.md`, `papers.csv` e `referencias.csv`. O painel passa a cobrir também a bibliometria interna do corpus.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -334,5 +339,7 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `f776c72` | 2026-07-27 | Add Portal de Periodicos CAPES (CAFe/Unisinos login) to bookmark.md                   |
 | `1801757` | 2026-07-27 | Log bookmark.md creation and entries (item 63) in MEMORY.md                           |
 | `75e1fb0` | 2026-07-27 | Add corpus cross-citation matrix with triple-source verification                      |
+| `e4b95d9` | 2026-07-27 | Log corpus cross-citation matrix (item 64) in MEMORY.md                               |
+| `eab830e` | 2026-07-27 | Surface corpus cross-citations on the dashboard                                       |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
