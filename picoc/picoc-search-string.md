@@ -63,11 +63,26 @@ TITLE-ABS-KEY ( ( "agentic AI" OR "AI agent*" OR "LLM agent*" OR "language model
 - **Trade-off documentado (P24):** o survey AgentAI (Industry 4.0, fundacional condicional) só seria recuperado adicionando `"autonomous system*"` ao bloco B — termo que em bases de redes captura AS/BGP (_autonomous systems_) e degradaria fortemente a precisão. Mantido fora; P24 permanece no corpus pela rota de descoberta/triagem da Etapa 1.
 - **Bloco C (Outcomes) como obrigatório recuperaria 1/38** — evidência quantitativa da lacuna de MTTD/MTTR que fundamenta a RSL e justifica o bloco ser apenas refinamento opcional.
 
-## 5. Limitações
+## 5. Validação externa — execução na OpenAlex (2026-07-27)
 
-- O matching por substring sobre metadados **aproxima** o comportamento dos motores das bases (stemming, campos e operadores variam); a string deve ser re-executada nas bases reais e o recall reconferido contra os 14 incluídos.
-- P13 (Retail Resilience Engine) não pôde ser testado por ausência de metadados no export do Mendeley.
-- A calibração usa o corpus existente (validação de _recall_); a _precisão_ (volume de ruído) só é mensurável na execução real das buscas.
+A query foi **executada em base real** via API da OpenAlex (`title_and_abstract.search`, filtro ≥ 2020; blocos sem wildcards — stemming automático da base), com verificação de recuperação **por DOI** de cada artigo do corpus:
+
+| Métrica                                | Resultado                                                                    |
+| -------------------------------------- | ---------------------------------------------------------------------------- |
+| **Recall nos 14 estudos incluídos**    | **13/14** — única perda: P24 (trade-off "autonomous system*" já documentado) |
+| Excluídos/inelegíveis P26, P38, P39    | **Não recuperados** — comportamento desejável confirmado em base real        |
+| P13 (não testável na calibração local) | **Recuperado** na OpenAlex ✅                                                |
+| Fundacionais P01–P19                   | 6/19 recuperados — esperado (rota de snowballing)                            |
+| **Volume total da query (2020+)**      | **≈ 49.700 trabalhos**                                                       |
+
+- A validação externa **replica a calibração local** (13/14; mesmas perdas), confirmando que o matching por substring foi boa aproximação do motor real.
+- **Precisão:** o volume de ~49,7 mil impõe custo de triagem. Refinamentos possíveis sem perda de recall dos incluídos: restringir o Bloco B ao título (`TITLE(...)` no Scopus) ou remover os termos mais genéricos (`resilience`, `vulnerabilit*`, `SOC`, `SRE`) — retestar recall a cada corte. Filtros de tipo de documento e área (Scopus `SUBJAREA(COMP)`) também reduzem o universo.
+- **Scopus propriamente dito:** a API da Elsevier exige chave institucional (não disponível neste ambiente; `401` sem credencial). Caminhos: (i) criar chave em dev.elsevier.com com acesso institucional e reexecutar via API; ou (ii) rodar a sintaxe da Seção 3 na interface do Scopus e exportar o CSV de resultados — o recall por DOI pode então ser reconferido contra [`../papers.csv`](../papers.csv).
+
+## 6. Limitações
+
+- A calibração local usa matching por substring sobre metadados; a validação externa (OpenAlex) usa o motor real da base, mas OpenAlex ≠ Scopus (cobertura e stemming diferem) — o recall no Scopus deve ser reconferido quando houver credencial.
+- A calibração usa o corpus existente (validação de _recall_); a _precisão_ real só é mensurável na triagem dos resultados.
 
 ---
 
