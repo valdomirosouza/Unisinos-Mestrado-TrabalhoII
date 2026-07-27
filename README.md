@@ -16,6 +16,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 | Os gráficos                | 🖼️ [Galeria](reviews/graficos.md) · [como criá-los](reviews/COMO-CRIAR-GRAFICOS.md)            |
 | Um estudo específico       | 📚 [Índice de pareceres](reviews/README.md) ou a tabela abaixo                                 |
 | As fichas de extração      | 📑 [Índice das fichas P01–P40](report/README.md)                                               |
+| A extração PICOC           | 🧩 [Tabela consolidada P01–P40](picoc/picoc-results-consolidated-P01-P40-Claude.md)            |
 
 ## 📈 Resultado em um relance
 
@@ -77,6 +78,9 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   ├── Pxx-extraction.csv       ← 39 fichas em inglês
 │   ├── Pxx-extraction-ptBR.csv  ← 39 fichas em português (termos técnicos em EN)
 │   └── consolidated-extraction[-ptBR].csv ← consolidados (uma linha por artigo)
+├── picoc/                        ← Etapa 4: extração PICOC (delimitação de escopo)
+│   ├── picoc-extraction-prompt.md ← prompt de extração PICOC (Kitchenham; Petticrew & Roberts)
+│   └── picoc-results-consolidated-P01-P40-{Claude,ChatGPT,Gemini}.md ← tabelas consolidadas por avaliador
 ├── referencias.csv               ← referências citadas pelos artigos (extraídas via DOIS.py)
 ├── DOIS.py                       ← script de extração de referências (Crossref/OpenAlex/S2/COCI)
 ├── DOIS.txt                      ← lista de DOIs de entrada do DOIS.py
@@ -124,6 +128,12 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ### Extração de dados (Etapa 3)
 
 - [`report/`](report/) — **fichas de extração estruturada** dos 39 artigos (metodologia Kitchenham, 11 campos com foco em MTTD/MTTR e Agentic AI). Uma ficha por artigo em inglês (`Pxx-extraction.csv`) e português (`Pxx-extraction-ptBR.csv`), mais os consolidados [`consolidated-extraction.csv`](report/consolidated-extraction.csv) / [`-ptBR`](report/consolidated-extraction-ptBR.csv). Template em [`report/paper-extraction-prompt-template.md`](report/paper-extraction-prompt-template.md). Ver [`report/README.md`](report/README.md).
+
+### Extração PICOC (Etapa 4)
+
+- [`picoc/picoc-extraction-prompt.md`](picoc/picoc-extraction-prompt.md) — prompt de extração **PICOC** (Population, Intervention, Comparison, Outcomes, Context) sobre os 39 PDFs, com regras antifabricação (`NÃO DECLARADO` / `N/A`) e âncoras de evidência.
+- [`picoc/picoc-results-consolidated-P01-P40-Claude.md`](picoc/picoc-results-consolidated-P01-P40-Claude.md) — **tabela PICOC consolidada** (39 artigos) com síntese transversal e raciocínio por artigo; achado central: nenhum estudo mede MTTD/MTTR nominalmente.
+- [`picoc/picoc-results-consolidated-P01-P40-ChatGPT.md`](picoc/picoc-results-consolidated-P01-P40-ChatGPT.md) · [`-Gemini.md`](picoc/picoc-results-consolidated-P01-P40-Gemini.md) — execuções paralelas do mesmo prompt em ChatGPT e Gemini, para comparação entre avaliadores.
 
 ### Ferramentas
 
