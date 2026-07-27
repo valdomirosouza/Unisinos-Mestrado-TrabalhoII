@@ -2,54 +2,75 @@
 
 > 🧭 **Navegação:** [🏠 README raiz](../README.md) · [📊 Dashboard](../reviews/DASHBOARD.md) · [📄 Relatório de síntese](../reviews/relatorio-sintese.md) · [📚 Pareceres](../reviews/README.md)
 
-Primeira etapa da **Revisão Sistemática da Literatura (RSL)** _"Agentic AI como copilot para reduzir MTTD e MTTR na resposta a incidentes"_ (PPGCA · Unisinos): a **descoberta de novos artigos candidatos** para ampliar o corpus existente (P1–P19). O mesmo prompt de busca foi executado em três assistentes de IA — **Gemini**, **Claude** e **ChatGPT** — para comparar cobertura e reduzir viés de uma única ferramenta. Os candidatos resultantes desta etapa alimentam a triagem e a avaliação detalhada dos estudos **P20–P40** (ver [`reviews/`](../reviews/)).
+Primeira etapa da **Revisão Sistemática da Literatura (RSL)** _"Agentic AI como copilot para reduzir MTTD e MTTR e a carga cognitiva na resposta a incidentes"_ (PPGCA · Unisinos): descoberta, normalização, deduplicação e triagem de novos estudos que possam ampliar o corpus fundacional P01–P19.
 
-> ⚠️ **Insumos exploratórios, não verificados.** Estes relatórios são a **saída bruta** dos assistentes. Seguindo a lógica anti-fabricação de Kitchenham et al. (2009), a maioria dos campos **Qualis**, **SJR (quartil)** e **citações** permanece `UNVERIFIED` — os assistentes não conseguiram confirmá-los de forma rastreável em Scimago / Qualis (qualis.pages.dev) durante a sessão. Preprints e artigos de conferência estão sinalizados (`PREPRINT` / `CONFERENCE`) e **não** foram aceitos sem verificação posterior.
+O prompt original foi executado em **Gemini**, **Claude** e **ChatGPT** para ampliar cobertura e reduzir dependência de uma única ferramenta. Os resultados brutos originaram os candidatos P20–P40, posteriormente submetidos a verificação bibliométrica, avaliação integral e síntese.
+
+> ⚠️ **Os relatórios de descoberta são insumos exploratórios.** As saídas dos assistentes não constituem inclusão final. Metadados não confirmados permanecem `UNVERIFIED`, e a decisão final depende de verificação rastreável e leitura integral.
 
 ## 🔎 O que há aqui
 
-| Arquivo                                                    | Assistente | Idioma | Candidatos\* | Formato                                                                    |
-| ---------------------------------------------------------- | ---------- | ------ | :----------: | -------------------------------------------------------------------------- |
-| [`prompt.md`](prompt.md)                                   | —          | EN     |      —       | Prompt de busca/triagem executado (papel, critérios, tópicos-alvo, schema) |
-| [`gemini-research-report.md`](gemini-research-report.md)   | Gemini     | EN     |     ~20      | Relatório narrativo extenso, candidatos agrupados por tópico T1–T8         |
-| [`claude-research-report.md`](claude-research-report.md)   | Claude     | EN     |      16      | TL;DR + tabela de candidatos agrupada por tópico-alvo                      |
-| [`chatgpt-research-report.md`](chatgpt-research-report.md) | ChatGPT    | PT     |      15      | Tabelas por tema + bloco `CAVEATS`                                         |
+| Arquivo                                                    | Assistente | Idioma | Candidatos* | Formato                                                                    |
+| ---------------------------------------------------------- | ---------- | ------ | :---------: | -------------------------------------------------------------------------- |
+| [`prompt.md`](prompt.md)                                   | —          | EN     |      —      | Prompt reprodutível de descoberta, triagem e atualização da RSL            |
+| [`gemini-research-report.md`](gemini-research-report.md)   | Gemini     | EN     |     ~20     | Relatório narrativo extenso, candidatos agrupados por tópico               |
+| [`claude-research-report.md`](claude-research-report.md)   | Claude     | EN     |     16      | TL;DR + tabela de candidatos agrupada por tópico-alvo                      |
+| [`chatgpt-research-report.md`](chatgpt-research-report.md) | ChatGPT    | PT     |     15      | Tabelas por tema + bloco `CAVEATS`                                         |
 
-\* Número de linhas-candidato (`Cxx`) reportadas por cada assistente, antes de deduplicação e verificação externa.
+\* Registros reportados por cada assistente antes de deduplicação e verificação externa.
 
-## 🧭 Prompt de busca (resumo)
+## 🧭 Prompt de busca v3.0.0
 
-O [`prompt.md`](prompt.md) (**v2.0.0** — revisado após o ciclo 1; os relatórios desta pasta são saídas da **v1.0.0**) instrui o assistente a operar como especialista em RSL sob Kitchenham et al. (2009) e retornar **15–25 candidatos** que estendam o corpus. A v2 embute uma **`PROJECT_MEMORY`** com o estado verificado da revisão:
+O [`prompt.md`](prompt.md) foi revisado após a auditoria dos artefatos P01–P40. A v3 transforma a descoberta em uma execução reprodutível e separa claramente **registro recuperado**, **estudo deduplicado**, **candidato triado**, **texto completo avaliado** e **estudo incluído**.
 
-- **PRISMA (PM-1):** fluxo do ciclo 1 (≈51 → 21 → 20 → 18 → 14; corpus final 33) e critérios I1–I6 / E1–E5 com os casos concretos de exclusão.
-- **PICOC (PM-2):** elementos da revisão com a regra v1.1.0 de Comparison (só baseline empírico) e o achado central — nenhum dos 39 estudos mede MTTD/MTTR nominalmente → estudos com métricas operacionais nomeadas são prioridade máxima.
-- **String validada (PM-3):** blocos Intervention × Context derivados do PICOC, calibrados no corpus (recall 13/14 em Scopus e OpenAlex), com o caveat de sintaxe do Scopus (`TITLE-ABS-KEY` por bloco).
-- **APIs e fontes (PM-4):** OpenAlex, Crossref, Scopus (com quirks documentados: `REF()` por título; F1000Research não indexada), QUALIS (qualis.pages.dev), SCImago e Portal CAPES/CAFe; armadilha do DOI de preprint (caso P09) — exigir DOI da versão de registro.
-- **Deduplicação:** nenhum dos **39** estudos P01–P40 (incl. variantes de DOI de preprint); `author_overlap` e novo `group_provenance` (independência de grupos).
-- **Tópicos-alvo (T1–T9):** T8 (evidência quantitativa de MTTD/MTTR) promovido a **prioridade máxima** e novo T9 (implantações em produção); T4 anotado com a lacuna sistemática de RQ4. Cota mínima: ≥1/3 dos candidatos em T8/T9.
-- **Anti-fabricação:** nunca inventar DOI/autor/venue/métrica; `UNVERIFIED` + bloco `CAVEATS` obrigatórios; novo campo `picoc_fit` ancora cada candidato nos elementos PICOC.
+Principais melhorias:
+
+- **Memória PRISMA corrigida:** distingue os **39 textos completos do repositório** do conjunto de **33 estudos incluídos na síntese**. Registra o fluxo ≈51 → 21 → 20 → 18 → 14 e exige contagens reconciliáveis por etapa.
+- **PICOC e lacunas P01–P40:** incorpora a regra de Comparison com baseline empírico, a distribuição final 26/11/2, a ausência de medição nominal de MTTD/MTTR, a ausência de medição direta de carga cognitiva e a escassez de estudos em produção.
+- **Recall documentado corretamente:** a string validada recupera 13/14 incluídos; **P24 é a única perda entre os incluídos**. P26, P38 e P39 são perdas desejáveis por terem sido excluídos ou considerados inelegíveis.
+- **Busca complementar obrigatória:** backward/forward snowballing é exigido porque P01 não está indexado no Scopus e P24 não é recuperado pela consulta principal.
+- **APIs e proveniência:** OpenAlex, Crossref, Scopus, Semantic Scholar e OpenCitations/COCI, além de QUALIS, SCImago, Portal CAPES e páginas dos editores.
+- **DOI e versões:** normalização, DOI canônico da versão de registro, preservação de preprint/versões alternativas e deduplicação por linhagem.
+- **Conferências separadas:** papers de conferência ficam em `SUPPLEMENTARY_EVIDENCE`, evitando aplicar silenciosamente Qualis Periódicos a proceedings.
+- **Saída auditável:** `RUN_METADATA`, `SEARCH_LOG`, contagens PRISMA da execução, candidatos em JSON, logs de exclusão e deduplicação e bloco de desvios/caveats.
+- **Sem preenchimento de quota:** a execução retorna menos candidatos quando poucos atendem aos critérios. Não são admitidos itens fracos ou não verificáveis apenas para atingir um número.
 
 ## 🔁 Da descoberta à avaliação
 
+```text
+prompt.md
+   │
+   ├── busca em bases + snowballing
+   │
+   ├── registros brutos + proveniência
+   │
+   ├── normalização e deduplicação
+   │
+   ├── triagem título/resumo
+   │
+   └── verificação bibliométrica
+             │
+             ├── PRIMARY_ELIGIBLE_CANDIDATE
+             ├── SUPPLEMENTARY_EVIDENCE
+             ├── PENDING_VERIFICATION
+             └── EXCLUDED
+                       │
+                       ▼
+          leitura integral + prompts/ + docs/ + reviews/
+                       │
+                       ▼
+                 decisão de inclusão
 ```
-prompt.md ──► Gemini / Claude / ChatGPT ──► *-research-report.md   (esta pasta: candidatos brutos)
-                                                     │
-                                                     ▼
-                             triagem + verificação externa (Qualis/SJR/citações)
-                                                     │
-                                                     ▼
-                         corpus P20–P40 ──► prompts/ + docs/ + reviews/   (avaliação detalhada)
-```
-
-Os candidatos convergentes e verificáveis desta etapa deram origem aos estudos **P20–P40** avaliados em [`reviews/`](../reviews/). Consulte o [Dashboard](../reviews/DASHBOARD.md) e o [relatório de síntese](../reviews/relatorio-sintese.md) para o resultado da avaliação.
 
 ## 📁 Estrutura da subpasta
 
-```
+```text
 research/
 ├── README.md                     ← este arquivo
-├── prompt.md                     ← prompt de busca/triagem (EN)
-├── gemini-research-report.md     ← resultado do Gemini  (relatório narrativo, ~20 candidatos)
-├── claude-research-report.md     ← resultado do Claude   (tabela, 16 candidatos)
-└── chatgpt-research-report.md    ← resultado do ChatGPT  (tabelas + CAVEATS, 15 candidatos)
+├── prompt.md                     ← prompt de busca/triagem v3.0.0
+├── gemini-research-report.md     ← saída histórica do Gemini
+├── claude-research-report.md     ← saída histórica do Claude
+└── chatgpt-research-report.md    ← saída histórica do ChatGPT
 ```
+
+As saídas históricas foram produzidas com a v1.0.0 e são preservadas como evidência do ciclo original. A v3.0.0 governa os próximos ciclos de atualização.
