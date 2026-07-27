@@ -303,5 +303,6 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `b10556e` | 2026-07-27 | Log search string derivation (item 58) in MEMORY.md                                   |
 | `377eed6` | 2026-07-27 | Validate search string externally on OpenAlex (13/14 included recall)                 |
 | `f50ae72` | 2026-07-27 | Log OpenAlex validation of the search string (item 59) in MEMORY.md                   |
+| `9a693c2` | 2026-07-27 | Execute search string on Scopus API: 13/14 included recall, 12,783 volume             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
