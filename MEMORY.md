@@ -250,6 +250,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "Gere a string de busca da RSL a partir da síntese PICOC"
 **Ações:** Derivei a string booleana dos blocos da síntese transversal PICOC — **Bloco A** (Intervention dominante: agentic AI, AI/LLM agents, multi-agent, copilots, L/SLMs) **AND Bloco B** (Contexts recorrentes: incident response, AIOps, SRE, RCA, anomaly detection, observability, microservices, cybersecurity…) — com filtros do protocolo (≥2020, inglês, peer-reviewed) e sintaxes para Scopus/WoS/IEEE/ACM. **Calibração empírica** via matching sobre título+abstract+keywords do `export.csv`: **recall 13/14 nos estudos incluídos**; os candidatos não recuperados (P26, P38, P39) são exatamente os excluídos/inelegíveis. Evidências registradas: (i) bloco Outcomes obrigatório recuperaria **1/38** — quantifica a lacuna de MTTD/MTTR e justifica o bloco como refinamento opcional; (ii) trade-off P24 documentado (recuperá-lo exigiria "autonomous system*", que captura AS/BGP em redes e degradaria a precisão). Saída: `picoc/picoc-search-string.md`, indexada no README raiz.
 
+### 59. Validação externa da string de busca (OpenAlex; Scopus pendente de credencial)
+
+**Prompt:** "Execute a string de busca no Scopus e valide o recall"
+**Ações:** A API do Scopus exige chave institucional Elsevier (`401` sem credencial; nenhuma chave no ambiente) — execução no Scopus **pendente**. Como validação em base real, executei a query (blocos A×B, ≥2020) na **OpenAlex** com verificação por DOI artigo a artigo: **recall 13/14 nos incluídos** (única perda: P24, trade-off já documentado), **P26/P38/P39 (excluídos/inelegíveis) não recuperados** (comportamento desejável confirmado), **P13 recuperado** (não era testável na calibração local) e **volume ≈ 49.700 trabalhos** — a execução externa **replicou exatamente a calibração local**, validando o método. Documentei na Seção 5 do `picoc-search-string.md`: resultados, refinamentos de precisão (Bloco B em título; corte de `resilience`/`SOC`/`SRE`; `SUBJAREA(COMP)`) e os dois caminhos para o Scopus real (chave da API em dev.elsevier.com ou export CSV da interface para cruzamento com `papers.csv`). README raiz atualizado.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -290,5 +295,7 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `3cee765` | 2026-07-27 | Add final Comparison (PICOC v1.1.0) column to report/README index                     |
 | `eed9f33` | 2026-07-27 | Log Comparison column work (item 57) in MEMORY.md                                     |
 | `7c3ccf1` | 2026-07-27 | Derive RSL search string from PICOC synthesis, calibrated on the corpus               |
+| `b10556e` | 2026-07-27 | Log search string derivation (item 58) in MEMORY.md                                   |
+| `377eed6` | 2026-07-27 | Validate search string externally on OpenAlex (13/14 included recall)                 |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
