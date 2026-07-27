@@ -270,6 +270,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "faça a busca a computação da contagem total de citações por estudo."
 **Ações:** Busquei as citações dos 39 artigos em **três fontes** (OpenAlex `cited_by_count`, Crossref `is-referenced-by-count`, Scopus `citedby-count` via API) e gravei em 4 novas colunas do `papers.csv` (+ data de verificação 2026-07-27). **Critério "Citações ≥ 1" verificado para todos os 14 incluídos** — única exceção: **P35 (0 nas três fontes)**, elegível pela `RECENCY_EXCEPTION` (CMC 2026, <12 meses); dos "em risco" de 2026: P32=1, P37=5. Extremos: P10 ≈500 · P17 ≈300 · P02 ≈180. P01 confirmado não indexado no Scopus (coberto por OpenAlex/Crossref). Com isso a **pendência transversal está integralmente resolvida** (Qualis ✓ SJR ✓ citações ✓) — notas do README raiz e `reviews/README.md` atualizadas para "RESOLVIDA".
 
+### 63. bookmark.md — recursos externos da RSL
+
+**Prompts:** "crie o arquivo de bookmark.md e adicione o QUALIS" → SCImago → APIs → Portal CAPES.
+**Ações:** Criei `bookmark.md` na raiz (indexado no diagrama de estrutura do README) e o populei em quatro incrementos, com cada entrada anotando **onde o recurso foi usado na RSL** (proveniência): (1) **Classificação de veículos** — QUALIS (qualis.pages.dev; estratos de `papers.csv`) e SCImago JCR (scimagojr.com; quartis SJR); (2) **Acesso a bases e textos completos** — Portal de Periódicos da CAPES (periodicos.capes.gov.br; login **CAFe** integrado à base de usuários da Unisinos); (3) **APIs de validação** — OpenAlex (validação da string por DOI; `cited_by_count`), Crossref (`is-referenced-by-count`; usada pelo `DOIS.py`) e Elsevier Developer Portal/Scopus Search API (execução da string: recall 13/14, volume 12.783; `citedby-count`), incluindo o alerta da sintaxe `TITLE-ABS-KEY` por bloco (falso-zero da forma aninhada com `DOI()`).
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -317,5 +322,10 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `6da2f21` | 2026-07-27 | Append Scopus execution commit (9a693c2) to MEMORY.md session table                   |
 | `aef452e` | 2026-07-27 | Add PRISMA 2020 flow diagram with criteria and counts                                 |
 | `8d94d73` | 2026-07-27 | Add per-study citation counts (OpenAlex/Crossref/Scopus); close pendency              |
+| `d59e90a` | 2026-07-27 | Log PRISMA diagram and citation counts (items 61-62) in MEMORY.md                     |
+| `92ee2aa` | 2026-07-27 | Add bookmark.md with QUALIS reference link                                            |
+| `9f932fd` | 2026-07-27 | Add SCImago Journal & Country Rank to bookmark.md                                     |
+| `fa7a193` | 2026-07-27 | Add validation APIs (OpenAlex, Crossref, Elsevier/Scopus) to bookmark.md              |
+| `f776c72` | 2026-07-27 | Add Portal de Periodicos CAPES (CAFe/Unisinos login) to bookmark.md                   |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
