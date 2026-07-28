@@ -1,6 +1,6 @@
 # Discovery Prompt — SLR Update "Agentic AI Copilot for Incident Response"
 
-> **Version:** v3.1.0 · **Prompt language:** EN · **Method:** Kitchenham et al. (2009) + PRISMA 2020 + PICOC · **Changelog at the end.**
+> **Version:** v3.0.0 · **Prompt language:** EN · **Method:** Kitchenham et al. (2009) + PRISMA 2020 + PICOC · **Changelog at the end.**
 
 ---
 
@@ -296,68 +296,6 @@ When available, use these files as the project source of truth:
 * Never pad the result set to meet a requested number.
 * Any protocol amendment must be explicit, dated, and reported in CAVEATS.
 
-## PM-8. Semantic layer, ontology, and context governance
-
-This prompt is organized as three explicit layers (do not conflate them):
-a SEMANTIC LAYER of governed definitions, an ONTOLOGY of canonical entities
-with aliases and resolution rules, and a CONTEXT LAYER of governance,
-lineage, decision memory, and permissions.
-
-Semantic layer — governed definitions (one meaning, identical everywhere):
-* Every metric/term below must mean the same thing regardless of which
-  assistant, database, or API produced the value.
-* Canonical outcome registry with proxy map — report DIRECT only when the
-  study itself defines AND measures the canonical metric; otherwise map the
-  study's own term to a canonical outcome and mark PROXY:
-  - MTTD          ← proxies: detection latency, time-to-detect, alert triage
-                    time, anomaly-detection delay.
-  - MTTR          ← proxies: diagnosis/RCA time, remediation time, resolution
-                    latency, recovery time, repair time.
-  - COGNITIVE_LOAD← proxies: alert fatigue, operator workload, NASA-TLX or
-                    equivalent instruments, escalation/toil reduction.
-  - RCA_ACCURACY  ← proxies: accuracy/F1, AC@k, localization accuracy.
-  - REMEDIATION_SUCCESS ← proxies: fix rate, rollback success, action validity.
-  - OBSERVABILITY ← qualitative unless an explicit instrument is defined.
-* `named_operational_metrics` must contain canonical IDs from this registry,
-  each with the study's own term in parentheses.
-* PM-0 terminology (record vs study vs candidate vs included) is part of this
-  semantic layer; PRISMA arithmetic depends on it.
-
-Ontology — canonical entities, aliases, entity resolution:
-* WORK: one entity across preprint / accepted manuscript / version-of-record /
-  extended version (PM-5 lineage; the P09 preprint-DOI case is an
-  entity-resolution failure to avoid, not an edge case).
-* VENUE: resolve by ISSN/e-ISSN, never by name variants; Qualis and SJR are
-  properties of the resolved venue entity (PM-4).
-* ACTOR/GROUP: resolve authors and institutions before setting author_overlap
-  and group_provenance; same-group clusters (e.g., cycle-1 State Grid papers)
-  are one GROUP entity for independence assessment.
-* CONCEPT aliases (Blocks A/B operationalize this ontology for search):
-  - AGENTIC_AI_SYSTEM ≈ agentic AI, AI agent(s), LLM/SLM agent, autonomous
-    agent, multi-agent system/MAS, intelligent agent, copilot. Note: the
-    corpus itself distinguishes "AI agents" from "agentic AI" conceptually
-    (P09) — record the study's own term in picoc.intervention while mapping
-    it to the canonical concept.
-  - INCIDENT_RESPONSE ≈ incident management, incident handling, incident
-    resolution; RCA ≈ root cause analysis/localization/diagnosis.
-* Use the ontology in BOTH directions: query expansion (search) and
-  normalization of returned metadata (screening/PICOC mapping).
-
-Context layer — governance, lineage, decision memory, permissions:
-* PROJECT_MEMORY is the review's DECISION MEMORY: prior adjudications
-  (Comparison rule v1.1.0; P24/P33 conditional status; cycle-1 PRISMA counts)
-  must not be silently re-decided. Changes happen only through an explicit,
-  dated protocol amendment reported in CAVEATS_AND_PROTOCOL_DEVIATIONS.
-* Lineage/provenance: every verified field carries its source and verification
-  date (source-to-answer traceability); disputed fields keep per-source values
-  (PM-5). The audit logs (SEARCH_LOG, DEDUPLICATION_LOG, EXCLUSION_LOG) are
-  this layer's audit trail.
-* Agent permission boundary (HITL): this assistant may SEARCH, NORMALIZE,
-  VERIFY, SCREEN, and RECOMMEND. It may NOT declare final inclusion, amend
-  the protocol, or rewrite PROJECT_MEMORY — those are researcher decisions.
-* Access policy: API keys, tokens, and institutional credentials are never
-  printed, logged, or committed.
-
 # =====================================================================
 # TASK — execute one reproducible discovery/update cycle
 # =====================================================================
@@ -425,9 +363,8 @@ For every retained candidate:
 * map Population, Intervention, Comparison, Outcomes, and Context;
 * classify Comparison as EMPIRICAL_BASELINE, CONCEPTUAL_ONLY, MAPPING_NA, or
   NOT_DECLARED;
-* identify named operational metrics, normalize them to the canonical outcome
-  registry (PM-8 semantic layer), and state whether MTTD/MTTR/cognitive load
-  are measured directly, proxied, or absent;
+* identify named operational metrics and whether MTTD/MTTR/cognitive load are
+  measured directly, proxied, or absent;
 * map contribution to RQ1–RQ5 and target topics T1–T9.
 
 TARGET TOPICS
@@ -516,7 +453,7 @@ Return a JSON array. Keep these fields and order exactly:
       "context": ""
     },
     "empirical_baseline": false,
-    "named_operational_metrics": ["<CANONICAL_ID (study's own term)> per PM-8"],
+    "named_operational_metrics": [],
     "mttd_mttr_evidence": "DIRECT|PROXY|ABSENT|UNVERIFIED",
     "cognitive_load_evidence": "DIRECT|PROXY|ABSENT|UNVERIFIED",
     "production_evidence": "PRODUCTION|FIELD_STUDY|SIMULATION|BENCHMARK|OTHER|UNVERIFIED",
@@ -589,27 +526,6 @@ ACCEPTANCE CRITERIA
 
 ## Changelog
 
-- **v3.1.0** (2026-07-28) — Camadas semânticas explícitas, aplicando o padrão
-  Semantic Layer × Ontology × Context Layer
-  ([`Semantic_Layer_Ontology_Context_Layer_Prompt.md`](Semantic_Layer_Ontology_Context_Layer_Prompt.md))
-  ao prompt de descoberta (novo **PM-8**):
-  - **Semantic layer:** registro canônico de outcomes com **mapa de proxies**
-    (MTTD, MTTR, COGNITIVE_LOAD, RCA_ACCURACY, REMEDIATION_SUCCESS,
-    OBSERVABILITY) — DIRECT só quando o próprio estudo define e mede a métrica;
-    `named_operational_metrics` passa a usar IDs canônicos + termo original;
-    PM-0 reconhecido como camada semântica da aritmética PRISMA.
-  - **Ontology:** entidades canônicas com resolução — WORK (linhagem
-    preprint/VoR; caso P09 como falha de entity resolution), VENUE (por
-    ISSN, nunca por variação de nome), ACTOR/GROUP (independência de grupos)
-    e CONCEPT (aliases de AGENTIC_AI_SYSTEM e INCIDENT_RESPONSE/RCA, usados
-    nas duas direções: expansão de busca e normalização de metadados).
-  - **Context layer:** PROJECT_MEMORY formalizada como **memória de decisão**
-    (adjudicações prévias não se rediscutem silenciosamente; só emenda de
-    protocolo datada), linhagem fonte→resposta por campo, e **fronteira de
-    permissão do agente** (buscar/normalizar/verificar/triar/recomendar —
-    nunca decidir inclusão final, emendar protocolo ou reescrever a memória).
-  - Ganchos: STEP 6 normaliza métricas pelo registro canônico; schema JSON
-    anotado.
 - **v3.0.0** — Methodological and reproducibility upgrade after auditing the full
   repository and the P01–P40 extraction artifacts:
   - distinguishes the 39-paper repository evidence set from the 33-study
