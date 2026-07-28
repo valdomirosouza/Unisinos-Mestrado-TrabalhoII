@@ -1,6 +1,6 @@
 # Discovery Prompt — SLR "Agentic AI Copilot for Incident Response"
 
-> **Versão:** v2.0.0 · **Idioma do prompt:** EN (executável em qualquer assistente) · **Changelog ao final.**
+> **Versão:** v2.1.0 · **Idioma do prompt:** EN (executável em qualquer assistente) · **Changelog ao final.**
 
 ---
 
@@ -16,6 +16,21 @@ CONTEXT
 * Research title: "Agentic AI as a Copilot to reduce the time to detect (MTTD)
   and recovery (MTTR) during incident response."
 * Author/program: Valdomiro de O. Souza Jr. — PPGCA/Unisinos (Brazil).
+* Review framing: the review synthesizes evidence on how autonomous systems —
+  Multi-Agent Systems and/or Agentic AI capable of perceiving, reasoning,
+  acting, and learning — can serve as COGNITIVE COPILOTS for technology teams
+  operating in HIGH-CRITICALITY environments. It analyzes studies (2020–2026)
+  on AIOps, LLMs/SLMs, LLMOps, Multi-Agent Systems, and ADAPTIVE-AUTONOMY
+  frameworks applied to the incident lifecycle.
+* Synthesis narrative (evolution axis): incident response evolving across
+  three stages — (S1) manual, repetitive work → (S2) traditional automation →
+  (S3) agentic copilot architectures. Candidates that EMPIRICALLY compare
+  S2 vs. S3 are the ideal Comparison under the v1.1.0 rule (PM-2).
+* Epistemic rule of the synthesis: direct empirical evidence of MTTD/MTTR,
+  observability, and cognitive-load effects IN PRODUCTION remains limited —
+  every candidate's outcomes must be distinguished as DEMONSTRATED vs.
+  PROPOSED/EXPECTED (see `evidence_type` in OUTPUT_SCHEMA), and research gaps
+  / future directions reported by the studies are first-class synthesis data.
 * The review already completed one full discovery-evaluation cycle. This task
   starts a NEW cycle: find NEW candidate articles that extend the corpus and
   satisfy the criteria below. Read PROJECT_MEMORY first — it encodes what the
@@ -47,20 +62,25 @@ CONTEXT
   E5 not peer-reviewed (unflagged preprint)
 
 ## PM-2. PICOC of the review (scope instrument; prompt v1.1.0 rule)
-* Population:   complex software systems and IT-operations environments
+* Population:   complex software systems, IT-operations environments, and the
+                TECHNOLOGY TEAMS operating them in high-criticality settings
                 (cloud-native/microservices, ICT/networks, SOC/cybersecurity,
-                SRE/NOC teams).
-* Intervention: Agentic AI as copilot or autonomous agent — LLM-based
+                SRE/NOC/support teams).
+* Intervention: Agentic AI as COGNITIVE copilot or autonomous agent — LLM-based
                 multi-agent systems with orchestration/tools (dominant
-                pattern), single LLM agents, SLM agents, copilots.
+                pattern), single LLM agents, SLM agents, copilots,
+                adaptive-autonomy frameworks, LLMOps practices.
 * Comparison:   RULE (v1.1.0): counts as DECLARED only with an EMPIRICAL
                 baseline; conceptual/paradigmatic contrast = "N/A (conceptual
                 contrast)". Prefer candidates with empirical baselines.
-* Outcomes:     MTTD/MTTR, alert fatigue, cognitive load, RCA accuracy,
+* Outcomes:     the review's outcome triad — (i) MTTD/MTTR reduction,
+                (ii) observability improvement, (iii) cognitive-load reduction
+                for technical teams — plus alert fatigue, RCA accuracy,
                 remediation time. KEY VERIFIED GAP: none of the 39 corpus
                 papers measures MTTD/MTTR nominally (primaries report proxies:
-                response latency, diagnosis time). Studies with NAMED
-                operational metrics are therefore TOP-PRIORITY finds.
+                response latency, diagnosis time), and production evidence is
+                scarce. Studies with NAMED operational metrics, and especially
+                DEMONSTRATED (not proposed) effects, are TOP-PRIORITY finds.
 * Context:      incident-response lifecycle, AIOps, observability, HITL/HOTL;
                 corpus evidence is mostly offline/benchmark/simulation —
                 production deployments are rare and highly valuable.
@@ -79,10 +99,13 @@ excluded/ineligible studies. Outcomes terms must NOT be a mandatory block
      OR cybersecurity OR "cyber security" OR "cyber threat*" OR "root cause"
      OR "anomaly detection" OR observability OR microservice* OR "cloud-native"
      OR "network management" OR "network operations" OR DevOps OR remediation
-     OR "threat detection" OR resilience OR vulnerabilit*
+     OR "threat detection" OR resilience OR vulnerabilit* OR LLMOps
+     OR LLM4AIOps OR "adaptive autonomy"
 Scopus syntax caveat (verified): use TITLE-ABS-KEY(A) AND TITLE-ABS-KEY(B)
 per block — the nested form TITLE-ABS-KEY((A) AND (B)) silently false-zeroes
 when combined with other fields (e.g., DOI()).
+Note: LLMOps / LLM4AIOps / "adaptive autonomy" are v2.1.0 additions to Block B
+(OR-monotonic: they can only widen recall; the 13/14 calibration still holds).
 
 ## PM-4. Verification APIs and sources (used by the project; cite-able)
 * OpenAlex API  (api.openalex.org, keyless): DOI resolution, citation counts
@@ -148,8 +171,8 @@ Return 15–25 candidate articles satisfying the PRISMA inclusion criteria
 OUTPUT_SCHEMA (one row per candidate; Markdown table OR JSON array; keep
 fields and order exact)
 id | citation_full | doi | publisher | venue | year | sjr_quartile | qualis |
-citations | peer_reviewed | flag | topics | picoc_fit | author_overlap |
-group_provenance | relevance_note
+citations | peer_reviewed | flag | topics | picoc_fit | evidence_type |
+evolution_stage | author_overlap | group_provenance | relevance_note
 Field rules:
 * `doi` = canonical version-of-record DOI (never a preprint DOI; if only a
   preprint exists, flag=PREPRINT).
@@ -158,8 +181,18 @@ Field rules:
 * `picoc_fit` = one line mapping the candidate to P/I/C/O/C; state whether
   Comparison has an EMPIRICAL baseline (v1.1.0 rule) and whether Outcomes
   include NAMED operational metrics (MTTD/MTTR or proxies).
+* `evidence_type` ∈ {DEMONSTRATED_PRODUCTION, DEMONSTRATED_SIMULATION,
+  PROPOSED} — demonstrated = the effect is measured by the study itself
+  (production/field vs. testbed/benchmark/simulation); proposed = expected,
+  argued, or vendor-claimed only. Never upgrade vendor claims or projections
+  to demonstrated.
+* `evolution_stage` ∈ {S2, S2→S3, S3} per the synthesis narrative (CONTEXT):
+  S3 = agentic copilot architecture; S2→S3 = empirically compares traditional
+  automation against an agentic approach (ideal Comparison); S2 = traditional
+  automation only (admissible solely as baseline-rich comparison work).
 * `relevance_note` <= 2 sentences: specific contribution + which RQ/gap it
-  serves.
+  serves; explicitly mention research gaps / future directions the study
+  reports (they are first-class synthesis data).
 
 RULES (verification & anti-fabrication)
 * NEVER invent a DOI, author, venue, or metric. If a value cannot be
@@ -180,12 +213,22 @@ ACCEPTANCE
   explicit `flag` explaining the exception.
 * At least 1/3 of returned candidates address T8 or T9 (the review's central
   gap), unless genuinely unavailable — state so in CAVEATS if that is the case.
+* CAVEATS must report the evidence balance of the returned set: how many
+  candidates are DEMONSTRATED_PRODUCTION vs. DEMONSTRATED_SIMULATION vs.
+  PROPOSED — the review must distinguish demonstrated outcomes from proposed
+  or expected ones.
 ```
 
 ---
 
 ## Changelog
 
+- **v2.1.0** (2026-07-27) — Framing da síntese incorporado ao prompt (a partir do resumo da revisão):
+  - **CONTEXT** ganha o enquadramento de **copiloto cognitivo** para equipes de tecnologia em ambientes de **alta criticidade**, o escopo tecnológico explícito (AIOps, LLMs/SLMs, **LLMOps**, MAS, **autonomia adaptativa**) e o **eixo narrativo de evolução em três estágios** (S1 manual → S2 automação tradicional → S3 copiloto agêntico).
+  - **PICOC (PM-2):** Population inclui as equipes de tecnologia; Intervention inclui autonomia adaptativa/LLMOps; Outcomes reorganizados como a **tríade** MTTD/MTTR × observabilidade × carga cognitiva.
+  - **String (PM-3):** Bloco B ganha `LLMOps`, `LLM4AIOps` e `"adaptive autonomy"` (adições OR-monotônicas — a calibração 13/14 se mantém).
+  - **Schema:** novos campos **`evidence_type`** (DEMONSTRATED_PRODUCTION / DEMONSTRATED_SIMULATION / PROPOSED — distinção epistêmica central da síntese; claims de fornecedor nunca viram "demonstrado") e **`evolution_stage`** (S2 / S2→S3 / S3; S2→S3 = Comparison ideal sob a regra v1.1.0); `relevance_note` passa a reportar gaps/direções futuras (dados de primeira classe da síntese).
+  - **ACCEPTANCE:** `CAVEATS` deve reportar o balanço de evidência (produção × simulação × proposto).
 - **v2.0.0** (2026-07-27) — Revisão pós-ciclo 1, incorporando as lições de P01–P40:
   - **`PROJECT_MEMORY`** embutida no prompt: fluxo e critérios **PRISMA** (I1–I6/E1–E5 com os casos do ciclo 1), **PICOC** com a regra v1.1.0 de Comparison (baseline empírico) e o achado central verificado (nenhum estudo mede MTTD/MTTR nominalmente), **string de busca validada** (recall 13/14 em Scopus e OpenAlex; Outcomes nunca como bloco obrigatório) e **APIs/fontes de verificação** (OpenAlex, Crossref, Scopus + quirks documentados; QUALIS, SCImago, Portal CAPES/CAFe).
   - String de busca substituída pela versão derivada do PICOC e calibrada no corpus (a v1 perdia "AI agent*", "LLM agent*", copilot* etc.).
