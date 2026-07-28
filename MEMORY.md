@@ -165,7 +165,7 @@ _(Este commit de MEMORY.md é acrescentado ao final do histórico.)_
 
 ---
 
-# Sessão 2026-07-22 → 2026-07-26 — Etapas 3 e 4: Extração de dados (fichas P01–P40) e PICOC
+# Sessão 2026-07-22 → 2026-07-28 — Etapas 3 e 4: Extração de dados (fichas P01–P40), PICOC e evolução do protocolo
 
 Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`, P01–P35 + P37–P40) em fichas CSV, versões pt-BR, relatórios consolidados, versionamento e fechamento de lacunas de documentação.
 
@@ -285,6 +285,21 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "Adicione as citações cruzadas ao DASHBOARD.md"
 **Ações:** Acrescentei ao `reviews/DASHBOARD.md` uma linha na "Navegação rápida" e a seção "🔁 Citações cruzadas no corpus (P01–P40)": totais por fonte (OpenAlex 20 · Crossref 21 · Scopus 25 · **União 26 pares**), tabela dos mais citados com lista de citadores (P10=7, P14=5, P09=4 com nota do DOI de preprint) e a leitura-chave (hubs = surveys fundacionais; os 14 incluídos de 2025–2026 ainda não se citam entre si), com links para `citacoes-cruzadas.md`, `papers.csv` e `referencias.csv`. O painel passa a cobrir também a bibliometria interna do corpus.
 
+### 66. Citações cruzadas no relatório de síntese (§10)
+
+**Prompt:** "Adicione as citações cruzadas ao relatório de síntese"
+**Ações:** Inseri a **§10 "Citações cruzadas no corpus"** no `relatorio-sintese.md` (após a confiabilidade entre avaliadores; antigas §10–§12 renumeradas para §11–§13, incluindo subseções da nota metodológica), com a tabela dos hubs e três leituras para a síntese: (i) surveys fundacionais como espinha dorsal conceitual; (ii) os 14 incluídos (2025–2026) ainda não se citam entre si; (iii) **sem citação mútua entre os estudos State Grid** (só P38→P31) — atenua a preocupação de independência da §7. **PDF regenerado** via `build_pdf.py` (MD e PDF em sincronia).
+
+### 67. Prompt de descoberta v2.0.0 → v2.1.0 (lições do ciclo 1 + framing do resumo)
+
+**Prompts:** "Act as an expert in SLR … improve the research/prompt.md …" → "Read this text and reasoning how to improve the prompt.md …"
+**Ações:** **v2.0.0**: reescrevi o `research/prompt.md` embutindo a **PROJECT_MEMORY** do ciclo 1 (PRISMA I1–I6/E1–E5 com casos concretos; PICOC com regra v1.1.0 e lacuna de MTTD/MTTR; string validada 13/14 com caveat de sintaxe do Scopus; APIs/fontes com quirks e armadilha do DOI de preprint), dedup ampliada para P01–P40, campos `picoc_fit`/`group_provenance`, DOI de versão de registro, T8 prioridade máxima + novo T9 (produção), cota ≥1/3 T8/T9. **v2.1.0**: incorporado o resumo da revisão — copiloto **cognitivo** em ambientes de alta criticidade; escopo com **LLMOps** e **autonomia adaptativa**; **eixo de evolução S1→S2→S3** (S2→S3 = Comparison ideal); tríade de outcomes (MTTD/MTTR × observabilidade × carga cognitiva); campos **`evidence_type`** (demonstrado-produção/simulação vs. proposto; claims de fornecedor nunca viram demonstrado) e **`evolution_stage`**; `CAVEATS` com balanço de evidência. `research/README.md` atualizado; commits `6e948cc` e `36b724a`.
+
+### 68. Prompt v3.0.0 (PR externo) e v3.1.0 (Semantic Layer × Ontology × Context Layer)
+
+**Prompts:** evolução externa via PR do usuário + "Read the file Semantic_Layer_Ontology_Context_Layer_Prompt.md … and apply improvements on the file research/prompt.md"
+**Ações:** O usuário evoluiu o prompt para **v3.0.0** via PR (#1, branch de agente em nuvem): PM-0 (terminologia: 39 do repositório ≠ 33 incluídos), I/E refinados (I5 por fonte, `NOT_INDEXED ≠ 0`; E6/E7), fluxos `SUPPLEMENTARY_EVIDENCE`/`FOUNDATIONAL_SUPPLEMENTARY`, snowballing obrigatório, saída auditável (RUN_METADATA, SEARCH_LOG, logs de dedup/exclusão, schema JSON) e proibição de quota-padding — além de `bookmark.md` e `research/README.md` expandidos (S2/OpenCitations). Sobre ela apliquei a **v3.1.0** (novo **PM-8**), traduzindo o padrão do guia `Semantic_Layer_Ontology_Context_Layer_Prompt.md`: **camada semântica** (registro canônico de outcomes com mapa de proxies; DIRECT só se o estudo mede a métrica; `named_operational_metrics` com IDs canônicos), **ontologia** (resolução de entidades WORK/VENUE-por-ISSN/ACTOR-GROUP/CONCEPT; caso P09 como falha de entity resolution; aliases usados em busca E normalização) e **camada de contexto** (PROJECT_MEMORY como memória de decisão com emenda datada; linhagem fonte→resposta; **fronteira de permissão do agente** — recomendar, nunca decidir inclusão). Push inicial rejeitado (remoto adiante); **rebase com conflito resolvido** preservando a v3.0.0 remota + adições (diff final = só as 88 linhas do PM-8). Versionados também o guia-fonte e os snapshots `prompt-v1/v2/v3.md`. Commit `2a99f20`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -341,5 +356,12 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `75e1fb0` | 2026-07-27 | Add corpus cross-citation matrix with triple-source verification                      |
 | `e4b95d9` | 2026-07-27 | Log corpus cross-citation matrix (item 64) in MEMORY.md                               |
 | `eab830e` | 2026-07-27 | Surface corpus cross-citations on the dashboard                                       |
+| `97630d4` | 2026-07-27 | Log dashboard cross-citations section (item 65) in MEMORY.md                          |
+| `5520442` | 2026-07-27 | Add corpus cross-citations section (S10) to the synthesis report                      |
+| `6e948cc` | 2026-07-27 | Upgrade discovery prompt to v2.0.0 with PROJECT_MEMORY of cycle 1                     |
+| `36b724a` | 2026-07-27 | Incorporate review-abstract framing into discovery prompt (v2.1.0)                    |
+| `ee9e9fc` | 2026-07-28 | Upgrade SLR discovery prompt to v3.0.0 _(PR #1 do usuário, agente em nuvem)_          |
+| `59d09af` | 2026-07-28 | Complete API provenance bookmarks _(PR #1 do usuário)_                                |
+| `2a99f20` | 2026-07-28 | Apply Semantic Layer x Ontology x Context Layer pattern to prompt (v3.1.0)            |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
