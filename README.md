@@ -57,6 +57,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ```
 .
 ├── README.md                     ← este arquivo (índice geral)
+├── CLAUDE.md                     ← instruções de sessão (regra de dump de memória em MEMORY.md + convenções)
+├── MEMORY.md                     ← memória das sessões (prompts, iterações, respostas, commits)
 ├── prompt-template.md            ← template do prompt de avaliação (papel, RQs, QA, saída)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
 ├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano

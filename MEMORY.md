@@ -165,7 +165,7 @@ _(Este commit de MEMORY.md é acrescentado ao final do histórico.)_
 
 ---
 
-# Sessão 2026-07-22 → 2026-07-28 — Etapas 3 e 4: Extração de dados (fichas P01–P40), PICOC e evolução do protocolo
+# Sessão 2026-07-22 → 2026-08-02 — Etapas 3 e 4: Extração de dados (fichas P01–P40), PICOC e evolução do protocolo
 
 Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`, P01–P35 + P37–P40) em fichas CSV, versões pt-BR, relatórios consolidados, versionamento e fechamento de lacunas de documentação.
 
@@ -300,6 +300,11 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompts:** evolução externa via PR do usuário + "Read the file Semantic_Layer_Ontology_Context_Layer_Prompt.md … and apply improvements on the file research/prompt.md"
 **Ações:** O usuário evoluiu o prompt para **v3.0.0** via PR (#1, branch de agente em nuvem): PM-0 (terminologia: 39 do repositório ≠ 33 incluídos), I/E refinados (I5 por fonte, `NOT_INDEXED ≠ 0`; E6/E7), fluxos `SUPPLEMENTARY_EVIDENCE`/`FOUNDATIONAL_SUPPLEMENTARY`, snowballing obrigatório, saída auditável (RUN_METADATA, SEARCH_LOG, logs de dedup/exclusão, schema JSON) e proibição de quota-padding — além de `bookmark.md` e `research/README.md` expandidos (S2/OpenCitations). Sobre ela apliquei a **v3.1.0** (novo **PM-8**), traduzindo o padrão do guia `Semantic_Layer_Ontology_Context_Layer_Prompt.md`: **camada semântica** (registro canônico de outcomes com mapa de proxies; DIRECT só se o estudo mede a métrica; `named_operational_metrics` com IDs canônicos), **ontologia** (resolução de entidades WORK/VENUE-por-ISSN/ACTOR-GROUP/CONCEPT; caso P09 como falha de entity resolution; aliases usados em busca E normalização) e **camada de contexto** (PROJECT_MEMORY como memória de decisão com emenda datada; linhagem fonte→resposta; **fronteira de permissão do agente** — recomendar, nunca decidir inclusão). Push inicial rejeitado (remoto adiante); **rebase com conflito resolvido** preservando a v3.0.0 remota + adições (diff final = só as 88 linhas do PM-8). Versionados também o guia-fonte e os snapshots `prompt-v1/v2/v3.md`. Commit `2a99f20`.
 
+### 69. Regra permanente de dump de memória por sessão (CLAUDE.md)
+
+**Prompt:** "before finish this session, include a rule to dump the memory of each session, include the contexts, iterations, prompts, answers and commands executed and store all of these conversations on file MEMORY.md in the root folder of the project"
+**Ações:** Criei o **`CLAUDE.md`** na raiz do projeto — carregado automaticamente em toda sessão futura — com a **regra obrigatória de dump de memória**: cada unidade de trabalho vira item numerado (sequência contínua entre sessões) registrando prompt, contexto, ações/respostas, comandos/ferramentas executados e incidentes/recuperações; registro **incremental** e sempre antes de encerrar; formato codificado a partir do padrão já existente no MEMORY.md (bloco de sessão com Linha do tempo, Decisões, Artefatos e Histórico de commits, incluindo commits externos); regras de fidelidade (nunca reescrever itens passados; registrar falhas; nunca registrar segredos; commit + push após cada atualização). O arquivo também consolida as convenções gerais do repositório (pt-BR com termos técnicos em EN, indexação obrigatória de arquivos novos, artefatos históricos imutáveis, citações por fonte, chaves fora do repo).
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -363,5 +368,6 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `ee9e9fc` | 2026-07-28 | Upgrade SLR discovery prompt to v3.0.0 _(PR #1 do usuário, agente em nuvem)_          |
 | `59d09af` | 2026-07-28 | Complete API provenance bookmarks _(PR #1 do usuário)_                                |
 | `2a99f20` | 2026-07-28 | Apply Semantic Layer x Ontology x Context Layer pattern to prompt (v3.1.0)            |
+| `4cbd3b2` | 2026-07-28 | Log synthesis-report S10 and prompt evolution v2->v3.1 (items 66-68)                  |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
