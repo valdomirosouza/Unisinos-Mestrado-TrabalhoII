@@ -397,6 +397,21 @@ documentos (report/README.md, picoc-comparacao-avaliadores.md, MEMORY.md)
 citam a **regra de Comparison introduzida na v1.1.0** — não a versão corrente
 do prompt — e portanto permanecem corretas. Commit `a7b2468`.
 
+### 71. Referência metodológica do prompt PICOC: Kitchenham (2009)
+
+**Prompt:** "Agora altere no mesmo arquivo picoc/picoc-extraction-prompt.md
+onde diz 'seguindo as diretrizes de Kitchenham & Charters' por 'seguindo as
+diretrizes de Kitchenham (2009) no paper/artigo Systematic literature reviews
+in software engineering – A systematic literature review'".
+
+**Ações:** Substituída a referência no bloco PAPEL do prompt e, por
+consistência, também na linha "Metodologia de referência" do cabeçalho do
+arquivo (que citava "Kitchenham & Charters (guia de RSL em Engenharia de
+Software)"). Versão elevada de v1.2.0 para **v1.3.0** com entrada de
+changelog, alinhando o prompt à referência metodológica adotada na
+dissertação — Kitchenham et al. (2009), o mesmo paper que rege a RSL desde a
+Etapa 1. Commit `00b3e69`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação no prompt PICOC são mudanças versionadas:
@@ -407,15 +422,18 @@ do prompt — e portanto permanecem corretas. Commit `a7b2468`.
 
 ## Artefatos produzidos
 
-- `picoc/picoc-extraction-prompt.md` — persona atualizada; versão v1.2.0;
-  changelog estendido.
-- `MEMORY.md` — item 70; commit `bdeaeb3` acrescentado à tabela da sessão
+- `picoc/picoc-extraction-prompt.md` — persona atualizada (v1.2.0) e
+  referência metodológica ancorada em Kitchenham (2009) (v1.3.0); changelog
+  estendido.
+- `MEMORY.md` — itens 70–71; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
 
-| Hash      | Data       | Mensagem                                                   |
-| --------- | ---------- | ---------------------------------------------------------- |
-| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0) |
+| Hash      | Data       | Mensagem                                                                |
+| --------- | ---------- | ----------------------------------------------------------------------- |
+| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0)              |
+| `eba2a7d` | 2026-09-07 | Log PICOC prompt persona change (item 70) in MEMORY.md                  |
+| `00b3e69` | 2026-09-07 | Anchor PICOC prompt methodology to Kitchenham (2009) SLR paper (v1.3.0) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
