@@ -476,6 +476,20 @@ pelo rename (2 apontamentos pré-existentes em
 `reviews/COMO-CRIAR-GRAFICOS.md` são exemplos ilustrativos, não links
 reais). Commit `5001ac4`.
 
+### 76. Commit dos PDFs candidatos P41–P89 (ciclo 2)
+
+**Prompt:** "Agora commit os novos PDFs P41 em diante na pasta docs/".
+
+**Ações:** Commitados os **49 PDFs novos P41–P89** em `docs/`, adicionados
+pelo usuário como candidatos do novo ciclo de descoberta (temas: anomaly
+detection, AIOps agêntico, SOC/SIEM/LLM, predictive maintenance, carga
+cognitiva/mental workload, observabilidade). Ficaram de fora,
+deliberadamente: o PDF do paper de Kitchenham (2009) em `docs/` (não é um
+P-file — aguarda instrução), `agentic_ir_corpus-claude-research.xlsx`,
+`claude-resume.txt` e o lock temporário `~$agentic...xlsx` do Excel. Os
+P41–P89 ainda NÃO estão indexados nos READMEs — a indexação ocorrerá quando
+o ciclo 2 definir triagem/avaliação desses candidatos. Commit `6297ef2`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -511,7 +525,9 @@ reais). Commit `5001ac4`.
   (item 75).
 - `README.md` e `reviews/DASHBOARD.md` — referências e árvore de estrutura
   atualizadas para o novo caminho do template de avaliação.
-- `MEMORY.md` — itens 70–75; commit `bdeaeb3` acrescentado à tabela da sessão
+- `docs/P41…P89` — 49 PDFs candidatos do ciclo 2 (adicionados pelo usuário,
+  commitados sob demanda; indexação pendente do início da triagem).
+- `MEMORY.md` — itens 70–76; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
@@ -529,5 +545,7 @@ reais). Commit `5001ac4`.
 | `0a07d88` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to evaluation prompt template   |
 | `b031031` | 2026-09-07 | Log evaluation-template persona update (item 74) in MEMORY.md                                 |
 | `5001ac4` | 2026-09-07 | Rename evaluation template to prompts/prompt-chatgpt-consultation.md                          |
+| `5ae1e48` | 2026-09-07 | Log evaluation-template rename (item 75) in MEMORY.md                                         |
+| `6297ef2` | 2026-09-07 | Add docs/ P41-P89 candidate PDFs from cycle-2 discovery                                       |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
