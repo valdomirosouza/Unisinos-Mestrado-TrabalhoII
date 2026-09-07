@@ -4,16 +4,16 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 
 ## 🔗 Navegação rápida
 
-| Artefato                                                                                     | Descrição                                                                                                                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 📄 [Relatório de síntese (MD)](relatorio-sintese.md) · [PDF](relatorio-sintese.pdf)          | Análise agregada: funil, cobertura por RQ, qualidade, ranking, achados                                                                            |
-| 🧮 [Resultados consolidados (CSV)](resultados-consolidados.csv)                              | Matriz machine-readable: RQ1-5, QA1-4, escores, banda, recomendação                                                                               |
-| 🖼️ [Galeria de gráficos](graficos.md)                                                        | Os 5 gráficos com leitura                                                                                                                         |
-| 📚 [Índice de pareceres](README.md)                                                          | Tabela-síntese por estudo                                                                                                                         |
-| 📐 [Comparação entre avaliadores](comparacao-avaliadores.md)                                 | Claude × ChatGPT: concordância (decisão 90%, κ = 0,74)                                                                                            |
-| 🛠️ [Scripts geradores](scripts/README.md) · [Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) | Regeneração de gráficos e PDF                                                                                                                     |
-| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas.md)                                    | Quem cita quem entre P01–P40 (OpenAlex × Crossref × Scopus)                                                                                       |
-| 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompt-template.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
+| Artefato                                                                                     | Descrição                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📄 [Relatório de síntese (MD)](relatorio-sintese.md) · [PDF](relatorio-sintese.pdf)          | Análise agregada: funil, cobertura por RQ, qualidade, ranking, achados                                                                                                |
+| 🧮 [Resultados consolidados (CSV)](resultados-consolidados.csv)                              | Matriz machine-readable: RQ1-5, QA1-4, escores, banda, recomendação                                                                                                   |
+| 🖼️ [Galeria de gráficos](graficos.md)                                                        | Os 5 gráficos com leitura                                                                                                                                             |
+| 📚 [Índice de pareceres](README.md)                                                          | Tabela-síntese por estudo                                                                                                                                             |
+| 📐 [Comparação entre avaliadores](comparacao-avaliadores.md)                                 | Claude × ChatGPT: concordância (decisão 90%, κ = 0,74)                                                                                                                |
+| 🛠️ [Scripts geradores](scripts/README.md) · [Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) | Regeneração de gráficos e PDF                                                                                                                                         |
+| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas.md)                                    | Quem cita quem entre P01–P40 (OpenAlex × Crossref × Scopus)                                                                                                           |
+| 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompts/prompt-chatgpt-consultation.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
 ## 📈 Números-chave
 

@@ -59,7 +59,6 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── README.md                     ← este arquivo (índice geral)
 ├── CLAUDE.md                     ← instruções de sessão (regra de dump de memória em MEMORY.md + convenções)
 ├── MEMORY.md                     ← memória das sessões (prompts, iterações, respostas, commits)
-├── prompt-template.md            ← template do prompt de avaliação (papel, RQs, QA, saída)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
 ├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano
 ├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
@@ -73,7 +72,9 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   ├── gemini-research-report.md  ← candidatos levantados pelo Gemini
 │   ├── claude-research-report.md  ← candidatos levantados pelo Claude
 │   └── chatgpt-research-report.md ← candidatos levantados pelo ChatGPT
-├── prompts/                      ← 20 prompts preenchidos (prompt-P20..P40)
+├── prompts/                      ← Etapa 2: prompts de avaliação
+│   ├── prompt-chatgpt-consultation.md ← template do prompt de avaliação (papel, RQs, QA, saída)
+│   └── prompt-P20..P40.md       ← 20 prompts preenchidos (registro histórico)
 ├── docs/                         ← 39 PDFs do corpus (P01–P19 fundacionais + P20–P40 avaliados)
 ├── report/                       ← Etapa 3: fichas de extração estruturada
 │   ├── README.md                ← índice das fichas (P01–P40)
@@ -114,12 +115,12 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 ### Insumos (entrada)
 
-- [`prompt-template.md`](prompt-template.md) — template do prompt (papel, contexto, RQ1–RQ5, QA1–QA4, formato de saída).
+- [`prompts/prompt-chatgpt-consultation.md`](prompts/prompt-chatgpt-consultation.md) — template do prompt de avaliação/consulta ao ChatGPT (papel, contexto, RQ1–RQ5, QA1–QA4, formato de saída).
 - [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR) usados como insumo na avaliação (valores então `[VERIFICAR]`).
 - [`papers.csv`](papers.csv) — **bibliometria verificada** dos 39 estudos (P01–P40): DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN, ano e **contagem de citações em três fontes** (OpenAlex, Crossref, Scopus — verificadas em 2026-07-27). Resolve integralmente a pendência transversal (Qualis/SJR/citações).
 - [`reviews/PRISMA.md`](reviews/PRISMA.md) — **diagrama PRISMA 2020** (Mermaid) do fluxo de seleção: ≈51 identificados → 21 candidatos → 20 triados → 18 avaliados → **14 incluídos** → corpus final **33** (19 fundacionais + 14 novos), com critérios de inclusão (I1–I6) e exclusão (E1–E5) e verificação por artefato.
 - [`citacoes-cruzadas.md`](citacoes-cruzadas.md) — **citações entre os 39 artigos do corpus** com tripla checagem (OpenAlex × Crossref × Scopus): 26 pares citador→citado; hubs P10 (7), P14 (5), P09 (4); inclui a descoberta de que o `REF()` do Scopus casa por título (não por DOI) e o caso do P09 citado via DOI de preprint.
-- [`prompts/`](prompts/) — 20 prompts preenchidos, um por estudo.
+- [`prompts/`](prompts/) — template de avaliação + 20 prompts preenchidos, um por estudo (registro histórico do ciclo 1).
 - [`docs/`](docs/) — **39 PDFs do corpus**: P01–P19 (estudos fundacionais do Trabalho I) + P20–P40 (candidatos avaliados). Índice completo com links em [`report/README.md`](report/README.md).
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
 
@@ -167,4 +168,4 @@ Detalhes em [`reviews/scripts/README.md`](reviews/scripts/README.md) e [`reviews
 
 **Etapa 1 — Descoberta:** a partir da [RSL fundacional (Trabalho I)](TrabalhoI/README.md) — artigo + 19 estudos P1–P19 —, o [prompt de busca](research/prompt.md) é executado em três assistentes (Gemini, Claude, ChatGPT) para levantar candidatos que estendam esse corpus; os resultados ficam em [`research/`](research/) e, após triagem e verificação, originam os estudos P20–P40.
 
-**Etapa 2 — Avaliação:** para cada estudo: o [template](prompt-template.md) é preenchido com os insumos → o prompt é executado contra o PDF → o revisor produz **3 tabelas** (Bibliométrica, Classificação das RQs, Avaliação de Qualidade) e um **parecer** (Incluir / Incluir com ressalvas / Excluir). Os escores alimentam o [CSV consolidado](reviews/resultados-consolidados.csv), que origina os [gráficos](reviews/graficos.md) e o [relatório de síntese](reviews/relatorio-sintese.md).
+**Etapa 2 — Avaliação:** para cada estudo: o [template](prompts/prompt-chatgpt-consultation.md) é preenchido com os insumos → o prompt é executado contra o PDF → o revisor produz **3 tabelas** (Bibliométrica, Classificação das RQs, Avaliação de Qualidade) e um **parecer** (Incluir / Incluir com ressalvas / Excluir). Os escores alimentam o [CSV consolidado](reviews/resultados-consolidados.csv), que origina os [gráficos](reviews/graficos.md) e o [relatório de síntese](reviews/relatorio-sintese.md).
