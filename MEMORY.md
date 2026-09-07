@@ -442,16 +442,38 @@ corrente (defasado desde a v3.1.0), foi atualizado para "v3 (atual: v3.2.0)"
 no título da seção, na árvore de arquivos e na nota de governança de versões.
 Commit `88c5412`.
 
+### 74. Mesmo padrão no template de avaliação (consulta ao ChatGPT)
+
+**Prompt:** "Aplique o mesmo padrão no prompts/prompt-chatgpt-consultation.md
+também".
+
+**Ações:** O arquivo citado não existe; a pasta `prompts/` contém apenas os
+20 prompts históricos `prompt-P20.md`…`prompt-P40.md` efetivamente enviados
+ao ChatGPT no ciclo 1 (imutáveis por convenção). Consultado, o usuário
+escolheu criar um template novo preservando os históricos. Durante a
+indexação, porém, foi identificado que o template canônico de avaliação já
+existe: **`prompt-template.md` (raiz)** — é ele que a Etapa 2 preenche para
+gerar os prompts por artigo. Para não criar duplicata divergente, o padrão
+foi aplicado diretamente nesse arquivo (bloco PAPEL: persona de pesquisador
+orientado + Kitchenham 2009 com título completo do paper), e o rascunho
+duplicado em `prompts/` foi descartado antes de commit. Os P20–P40
+permanecem intactos. O hook formatador reformatou o restante do arquivo
+(espaçamento/indentação, sem mudança de conteúdo). Commit `0a07d88`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
   mudanças versionadas: incrementam a versão MINOR e ganham entrada no
   changelog do próprio arquivo (criando a seção Changelog quando ausente).
-- Persona padrão dos prompts do projeto (aplicada aos três prompts: PICOC,
-  template de extração e descoberta): pesquisador em Computação Aplicada do
-  PPGCA/Unisinos orientado por um professor Doutor em Ciência da Computação;
-  metodologia ancorada em Kitchenham (2009), "Systematic literature reviews
-  in software engineering – A systematic literature review".
+- Persona padrão dos prompts do projeto (aplicada aos quatro prompts vivos:
+  PICOC, template de extração, descoberta e template de avaliação):
+  pesquisador em Computação Aplicada do PPGCA/Unisinos orientado por um
+  professor Doutor em Ciência da Computação; metodologia ancorada em
+  Kitchenham (2009), "Systematic literature reviews in software engineering –
+  A systematic literature review".
+- Os prompts históricos `prompts/prompt-P20..P40.md` NÃO recebem o novo
+  padrão: são registro imutável do que foi enviado ao revisor externo no
+  ciclo 1. O template vivo correspondente é `prompt-template.md` (raiz).
 - Referências históricas a "PICOC v1.1.0" na documentação designam a regra de
   Comparison (baseline empírico), não a versão corrente do prompt, e não são
   atualizadas quando o prompt evolui.
@@ -467,7 +489,9 @@ Commit `88c5412`.
   nomeado; versão v3.2.0; changelog estendido.
 - `research/README.md` — menções de versão corrente atualizadas para
   "v3 (atual: v3.2.0)".
-- `MEMORY.md` — itens 70–73; commit `bdeaeb3` acrescentado à tabela da sessão
+- `prompt-template.md` (raiz) — bloco PAPEL com persona padrão e Kitchenham
+  (2009) pelo título completo; restante reformatado pelo hook (cosmético).
+- `MEMORY.md` — itens 70–74; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
@@ -481,5 +505,7 @@ Commit `88c5412`.
 | `4094ce1` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to extraction template (v1.1.0) |
 | `c4aa322` | 2026-09-07 | Log extraction-template persona/reference update (item 72) in MEMORY.md                       |
 | `88c5412` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to discovery prompt (v3.2.0)    |
+| `f338f34` | 2026-09-07 | Log discovery-prompt persona/reference update (item 73) in MEMORY.md                          |
+| `0a07d88` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to evaluation prompt template   |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
