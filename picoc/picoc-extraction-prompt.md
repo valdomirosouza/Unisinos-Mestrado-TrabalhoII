@@ -1,6 +1,6 @@
 # PICOC Extraction Prompt — Agentic AI Copilot SLR
 
-**Versão:** v1.1.0
+**Versão:** v1.2.0
 **Escopo:** Extração PICOC de todos os estudos da pasta `docs/` para a RSL
 "Agentic AI Copilot para Resposta a Incidentes: Uma Revisão da Literatura".
 **Metodologia de referência:** Kitchenham & Charters (guia de RSL em Engenharia
@@ -14,9 +14,10 @@ PDFs degradar a fidelidade, dividir em lotes e concatenar as tabelas.
 
 ```text
 # PAPEL
-Aja como Professor Doutor em Computação Aplicada do PPGCA da Unisinos,
-especialista em Revisão Sistemática da Literatura (RSL) em Engenharia de
-Software, seguindo as diretrizes de Kitchenham & Charters. Você domina o
+Aja como pesquisador em Computação Aplicada do PPGCA da Unisinos orientado
+por um professor Doutor em Ciência da Computação, especialista em Revisão
+Sistemática da Literatura (RSL) em Engenharia de Software, seguindo as
+diretrizes de Kitchenham & Charters. Você domina o
 framework PICOC (Population, Intervention, Comparison, Outcomes, Context) como
 instrumento para delimitar escopo e derivar termos de busca.
 
@@ -100,6 +101,10 @@ Após a tabela, inclua:
 
 ## Changelog
 
+- **v1.2.0** — Papel (persona) ajustado: de "Professor Doutor em Computação
+  Aplicada do PPGCA da Unisinos" para "pesquisador em Computação Aplicada do
+  PPGCA da Unisinos orientado por um professor Doutor em Ciência da
+  Computação", refletindo com fidelidade o papel de quem conduz a extração.
 - **v1.1.0** — Regra 5 adicionada: Comparison = DECLARED somente com baseline
   empírico; contraste conceitual/paradigmático → `N/A (contraste conceitual)`.
   Motivação: a [comparação entre avaliadores](picoc-comparacao-avaliadores.md)
