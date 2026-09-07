@@ -490,6 +490,16 @@ P-file — aguarda instrução), `agentic_ir_corpus-claude-research.xlsx`,
 P41–P89 ainda NÃO estão indexados nos READMEs — a indexação ocorrerá quando
 o ciclo 2 definir triagem/avaliação desses candidatos. Commit `6297ef2`.
 
+### 77. Commit do PDF de Kitchenham (2009)
+
+**Prompt:** "Sim, commit o PDF do Kitchenham (2009) também".
+
+**Ações:** Commitado `docs/Systematic literature reviews in software
+engineering – A systematic literature review.pdf` — o paper de Kitchenham
+et al. (2009) que ancora a metodologia da RSL e que os quatro prompts vivos
+passaram a citar pelo título (itens 70–74). Com isso, `docs/` fica sem
+arquivos não rastreados. Commit `3c76e22`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -527,6 +537,8 @@ o ciclo 2 definir triagem/avaliação desses candidatos. Commit `6297ef2`.
   atualizadas para o novo caminho do template de avaliação.
 - `docs/P41…P89` — 49 PDFs candidatos do ciclo 2 (adicionados pelo usuário,
   commitados sob demanda; indexação pendente do início da triagem).
+- `docs/Systematic literature reviews in software engineering – A systematic
+literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `MEMORY.md` — itens 70–76; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -547,5 +559,7 @@ o ciclo 2 definir triagem/avaliação desses candidatos. Commit `6297ef2`.
 | `5001ac4` | 2026-09-07 | Rename evaluation template to prompts/prompt-chatgpt-consultation.md                          |
 | `5ae1e48` | 2026-09-07 | Log evaluation-template rename (item 75) in MEMORY.md                                         |
 | `6297ef2` | 2026-09-07 | Add docs/ P41-P89 candidate PDFs from cycle-2 discovery                                       |
+| `6d9e4a9` | 2026-09-07 | Log P41-P89 candidate PDFs commit (item 76) in MEMORY.md                                      |
+| `3c76e22` | 2026-09-07 | Add Kitchenham (2009) SLR methodology reference paper to docs/                                |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
