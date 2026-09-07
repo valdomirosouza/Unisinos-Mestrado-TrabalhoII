@@ -1,10 +1,11 @@
 # PICOC Extraction Prompt — Agentic AI Copilot SLR
 
-**Versão:** v1.2.0
+**Versão:** v1.3.0
 **Escopo:** Extração PICOC de todos os estudos da pasta `docs/` para a RSL
 "Agentic AI Copilot para Resposta a Incidentes: Uma Revisão da Literatura".
-**Metodologia de referência:** Kitchenham & Charters (guia de RSL em Engenharia
-de Software); PICOC conforme Petticrew & Roberts.
+**Metodologia de referência:** Kitchenham (2009), "Systematic literature
+reviews in software engineering – A systematic literature review"; PICOC
+conforme Petticrew & Roberts.
 **Uso recomendado:** processar a pasta inteira em uma execução; se o volume de
 PDFs degradar a fidelidade, dividir em lotes e concatenar as tabelas.
 
@@ -17,7 +18,8 @@ PDFs degradar a fidelidade, dividir em lotes e concatenar as tabelas.
 Aja como pesquisador em Computação Aplicada do PPGCA da Unisinos orientado
 por um professor Doutor em Ciência da Computação, especialista em Revisão
 Sistemática da Literatura (RSL) em Engenharia de Software, seguindo as
-diretrizes de Kitchenham & Charters. Você domina o
+diretrizes de Kitchenham (2009) no paper/artigo "Systematic literature
+reviews in software engineering – A systematic literature review". Você domina o
 framework PICOC (Population, Intervention, Comparison, Outcomes, Context) como
 instrumento para delimitar escopo e derivar termos de busca.
 
@@ -101,6 +103,10 @@ Após a tabela, inclua:
 
 ## Changelog
 
+- **v1.3.0** — Referência metodológica ajustada: de "Kitchenham & Charters"
+  para "Kitchenham (2009), 'Systematic literature reviews in software
+  engineering – A systematic literature review'", alinhando o prompt à
+  referência metodológica adotada na dissertação (PAPEL e cabeçalho).
 - **v1.2.0** — Papel (persona) ajustado: de "Professor Doutor em Computação
   Aplicada do PPGCA da Unisinos" para "pesquisador em Computação Aplicada do
   PPGCA da Unisinos orientado por um professor Doutor em Ciência da
