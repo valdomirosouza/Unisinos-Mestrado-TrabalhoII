@@ -412,10 +412,31 @@ changelog, alinhando o prompt à referência metodológica adotada na
 dissertação — Kitchenham et al. (2009), o mesmo paper que rege a RSL desde a
 Etapa 1. Commit `00b3e69`.
 
+### 72. Mesmas alterações no template de extração (report/)
+
+**Prompt:** "Aplique as mesmas alterações no
+report/paper-extraction-prompt-template.md".
+
+**Ações:** Aplicadas ao template de extração (arquivo em inglês) as duas
+mudanças dos itens 70–71, adaptadas ao idioma: SYSTEM / ROLE reescrito de
+"expert academic research assistant (Kitchenham methodology)" para
+"researcher in Applied Computing at PPGCA (Unisinos) advised by a professor
+holding a Doctorate in Computer Science", com a metodologia ancorada em
+Kitchenham (2009), "Systematic literature reviews in software engineering – A
+systematic literature review". Versão elevada de 1.0.0 para **1.1.0** e seção
+Changelog criada no arquivo (que não tinha), registrando também a 1.0.0
+inicial. Commit `4094ce1`.
+
 ## Decisões e convenções da sessão
 
-- Mudanças de persona/redação no prompt PICOC são mudanças versionadas:
-  incrementam a versão MINOR e ganham entrada no changelog do próprio arquivo.
+- Mudanças de persona/redação nos prompts (PICOC e template de extração) são
+  mudanças versionadas: incrementam a versão MINOR e ganham entrada no
+  changelog do próprio arquivo (criando a seção Changelog quando ausente).
+- Persona padrão dos prompts do projeto: pesquisador em Computação Aplicada
+  do PPGCA/Unisinos orientado por um professor Doutor em Ciência da
+  Computação; metodologia ancorada em Kitchenham (2009), "Systematic
+  literature reviews in software engineering – A systematic literature
+  review".
 - Referências históricas a "PICOC v1.1.0" na documentação designam a regra de
   Comparison (baseline empírico), não a versão corrente do prompt, e não são
   atualizadas quando o prompt evolui.
@@ -425,15 +446,19 @@ Etapa 1. Commit `00b3e69`.
 - `picoc/picoc-extraction-prompt.md` — persona atualizada (v1.2.0) e
   referência metodológica ancorada em Kitchenham (2009) (v1.3.0); changelog
   estendido.
-- `MEMORY.md` — itens 70–71; commit `bdeaeb3` acrescentado à tabela da sessão
+- `report/paper-extraction-prompt-template.md` — persona e referência
+  metodológica atualizadas; versão 1.1.0; seção Changelog criada.
+- `MEMORY.md` — itens 70–72; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
 
-| Hash      | Data       | Mensagem                                                                |
-| --------- | ---------- | ----------------------------------------------------------------------- |
-| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0)              |
-| `eba2a7d` | 2026-09-07 | Log PICOC prompt persona change (item 70) in MEMORY.md                  |
-| `00b3e69` | 2026-09-07 | Anchor PICOC prompt methodology to Kitchenham (2009) SLR paper (v1.3.0) |
+| Hash      | Data       | Mensagem                                                                                      |
+| --------- | ---------- | --------------------------------------------------------------------------------------------- |
+| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0)                                    |
+| `eba2a7d` | 2026-09-07 | Log PICOC prompt persona change (item 70) in MEMORY.md                                        |
+| `00b3e69` | 2026-09-07 | Anchor PICOC prompt methodology to Kitchenham (2009) SLR paper (v1.3.0)                       |
+| `06de0fa` | 2026-09-07 | Log Kitchenham (2009) reference update (item 71) in MEMORY.md                                 |
+| `4094ce1` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to extraction template (v1.1.0) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
