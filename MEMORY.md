@@ -460,6 +460,22 @@ duplicado em `prompts/` foi descartado antes de commit. Os P20–P40
 permanecem intactos. O hook formatador reformatou o restante do arquivo
 (espaçamento/indentação, sem mudança de conteúdo). Commit `0a07d88`.
 
+### 75. Rename do template de avaliação para prompts/
+
+**Prompt:** "Sim, faça o rename para prompts/prompt-chatgpt-consultation.md".
+
+**Ações:** `git mv prompt-template.md prompts/prompt-chatgpt-consultation.md`
+(o nome que o usuário citara no item 74 passa a existir de fato). Referências
+atualizadas: `README.md` (árvore de estrutura — entrada movida da raiz para a
+subárvore de `prompts/`, agora rotulada "Etapa 2: prompts de avaliação" —,
+seção Insumos e fluxo da Etapa 2) e `reviews/DASHBOARD.md` (linha Fontes).
+Menções a `prompt-template.md` em itens passados deste MEMORY.md (itens 1 e
+74, entre outros) foram preservadas por fidelidade histórica — referem-se ao caminho
+vigente à época. Verificação de links em todo o repositório: 0 quebrados
+pelo rename (2 apontamentos pré-existentes em
+`reviews/COMO-CRIAR-GRAFICOS.md` são exemplos ilustrativos, não links
+reais). Commit `5001ac4`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -490,8 +506,12 @@ permanecem intactos. O hook formatador reformatou o restante do arquivo
 - `research/README.md` — menções de versão corrente atualizadas para
   "v3 (atual: v3.2.0)".
 - `prompt-template.md` (raiz) — bloco PAPEL com persona padrão e Kitchenham
-  (2009) pelo título completo; restante reformatado pelo hook (cosmético).
-- `MEMORY.md` — itens 70–74; commit `bdeaeb3` acrescentado à tabela da sessão
+  (2009) pelo título completo; restante reformatado pelo hook (cosmético);
+  em seguida renomeado para `prompts/prompt-chatgpt-consultation.md`
+  (item 75).
+- `README.md` e `reviews/DASHBOARD.md` — referências e árvore de estrutura
+  atualizadas para o novo caminho do template de avaliação.
+- `MEMORY.md` — itens 70–75; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
@@ -507,5 +527,7 @@ permanecem intactos. O hook formatador reformatou o restante do arquivo
 | `88c5412` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to discovery prompt (v3.2.0)    |
 | `f338f34` | 2026-09-07 | Log discovery-prompt persona/reference update (item 73) in MEMORY.md                          |
 | `0a07d88` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to evaluation prompt template   |
+| `b031031` | 2026-09-07 | Log evaluation-template persona update (item 74) in MEMORY.md                                 |
+| `5001ac4` | 2026-09-07 | Rename evaluation template to prompts/prompt-chatgpt-consultation.md                          |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
