@@ -10,16 +10,16 @@ O prompt original foi executado em **Gemini**, **Claude** e **ChatGPT** para amp
 
 ## 🔎 O que há aqui
 
-| Arquivo                                                    | Assistente | Idioma | Candidatos* | Formato                                                                    |
-| ---------------------------------------------------------- | ---------- | ------ | :---------: | -------------------------------------------------------------------------- |
-| [`prompt.md`](prompt.md)                                   | —          | EN     |      —      | Prompt reprodutível de descoberta, triagem e atualização da RSL            |
-| [`gemini-research-report.md`](gemini-research-report.md)   | Gemini     | EN     |     ~20     | Relatório narrativo extenso, candidatos agrupados por tópico               |
-| [`claude-research-report.md`](claude-research-report.md)   | Claude     | EN     |     16      | TL;DR + tabela de candidatos agrupada por tópico-alvo                      |
-| [`chatgpt-research-report.md`](chatgpt-research-report.md) | ChatGPT    | PT     |     15      | Tabelas por tema + bloco `CAVEATS`                                         |
+| Arquivo                                                    | Assistente | Idioma | Candidatos* | Formato                                                         |
+| ---------------------------------------------------------- | ---------- | ------ | :---------: | --------------------------------------------------------------- |
+| [`prompt.md`](prompt.md)                                   | —          | EN     |      —      | Prompt reprodutível de descoberta, triagem e atualização da RSL |
+| [`gemini-research-report.md`](gemini-research-report.md)   | Gemini     | EN     |     ~20     | Relatório narrativo extenso, candidatos agrupados por tópico    |
+| [`claude-research-report.md`](claude-research-report.md)   | Claude     | EN     |     16      | TL;DR + tabela de candidatos agrupada por tópico-alvo           |
+| [`chatgpt-research-report.md`](chatgpt-research-report.md) | ChatGPT    | PT     |     15      | Tabelas por tema + bloco `CAVEATS`                              |
 
 \* Registros reportados por cada assistente antes de deduplicação e verificação externa.
 
-## 🧭 Prompt de busca v3.0.0
+## 🧭 Prompt de busca v3 (atual: v3.2.0)
 
 O [`prompt.md`](prompt.md) foi revisado após a auditoria dos artefatos P01–P40. A v3 transforma a descoberta em uma execução reprodutível e separa claramente **registro recuperado**, **estudo deduplicado**, **candidato triado**, **texto completo avaliado** e **estudo incluído**.
 
@@ -67,10 +67,10 @@ prompt.md
 ```text
 research/
 ├── README.md                     ← este arquivo
-├── prompt.md                     ← prompt de busca/triagem v3.0.0
+├── prompt.md                     ← prompt de busca/triagem v3 (atual: v3.2.0)
 ├── gemini-research-report.md     ← saída histórica do Gemini
 ├── claude-research-report.md     ← saída histórica do Claude
 └── chatgpt-research-report.md    ← saída histórica do ChatGPT
 ```
 
-As saídas históricas foram produzidas com a v1.0.0 e são preservadas como evidência do ciclo original. A v3.0.0 governa os próximos ciclos de atualização.
+As saídas históricas foram produzidas com a v1.0.0 e são preservadas como evidência do ciclo original. A v3 (atual: v3.2.0 — persona de pesquisador orientado do PPGCA e metodologia ancorada em Kitchenham (2009), "Systematic literature reviews in software engineering – A systematic literature review") governa os próximos ciclos de atualização.

@@ -1,6 +1,6 @@
 # Discovery Prompt — SLR Update "Agentic AI Copilot for Incident Response"
 
-> **Version:** v3.1.0 · **Prompt language:** EN · **Method:** Kitchenham et al. (2009) + PRISMA 2020 + PICOC · **Changelog at the end.**
+> **Version:** v3.2.0 · **Prompt language:** EN · **Method:** Kitchenham et al. (2009) + PRISMA 2020 + PICOC · **Changelog at the end.**
 
 ---
 
@@ -8,9 +8,13 @@
 
 ```text
 ROLE
-You are an expert in Systematic Literature Reviews (SLR) in applied computing
-and software engineering. Operate under Kitchenham et al. (2009), use PRISMA
-2020 to account for the study-selection flow, and use PICOC to preserve scope.
+Act as a researcher in Applied Computing at PPGCA (Unisinos) advised by a
+professor holding a Doctorate in Computer Science, expert in Systematic
+Literature Reviews (SLR) in applied computing and software engineering.
+Operate under the guidelines of Kitchenham et al. (2009) in the paper
+"Systematic literature reviews in software engineering – A systematic
+literature review", use PRISMA 2020 to account for the study-selection flow,
+and use PICOC to preserve scope.
 
 Your task is to DISCOVER, NORMALIZE, DEDUPLICATE, VERIFY, and SCREEN candidate
 studies. Do not fabricate. Do not treat an AI-generated summary, an abstract,
@@ -589,6 +593,14 @@ ACCEPTANCE CRITERIA
 
 ## Changelog
 
+- **v3.2.0** (2026-09-07) — Padronização de persona e referência metodológica,
+  espelhando `picoc/picoc-extraction-prompt.md` (v1.2.0/v1.3.0) e
+  `report/paper-extraction-prompt-template.md` (v1.1.0): ROLE passa de
+  "expert in SLR" para "researcher in Applied Computing at PPGCA (Unisinos)
+  advised by a professor holding a Doctorate in Computer Science", e a
+  metodologia é ancorada explicitamente no paper de Kitchenham et al. (2009),
+  "Systematic literature reviews in software engineering – A systematic
+  literature review".
 - **v3.1.0** (2026-07-28) — Camadas semânticas explícitas, aplicando o padrão
   Semantic Layer × Ontology × Context Layer
   ([`Semantic_Layer_Ontology_Context_Layer_Prompt.md`](Semantic_Layer_Ontology_Context_Layer_Prompt.md))
