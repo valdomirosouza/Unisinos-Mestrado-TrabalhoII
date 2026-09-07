@@ -427,16 +427,31 @@ systematic literature review". Versão elevada de 1.0.0 para **1.1.0** e seção
 Changelog criada no arquivo (que não tinha), registrando também a 1.0.0
 inicial. Commit `4094ce1`.
 
+### 73. Mesmo padrão no prompt de descoberta (research/prompt.md)
+
+**Prompt:** "Sim, aplique o mesmo padrão no research/prompt.md".
+
+**Ações:** Bloco ROLE do prompt de descoberta reescrito com a persona padrão
+("researcher in Applied Computing at PPGCA (Unisinos) advised by a professor
+holding a Doctorate in Computer Science") e a metodologia — que já citava
+Kitchenham et al. (2009) — ancorada explicitamente no título do paper
+"Systematic literature reviews in software engineering – A systematic
+literature review". Versão elevada de v3.1.0 para **v3.2.0** com entrada de
+changelog. O `research/README.md`, que ainda citava "v3.0.0" como versão
+corrente (defasado desde a v3.1.0), foi atualizado para "v3 (atual: v3.2.0)"
+no título da seção, na árvore de arquivos e na nota de governança de versões.
+Commit `88c5412`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
   mudanças versionadas: incrementam a versão MINOR e ganham entrada no
   changelog do próprio arquivo (criando a seção Changelog quando ausente).
-- Persona padrão dos prompts do projeto: pesquisador em Computação Aplicada
-  do PPGCA/Unisinos orientado por um professor Doutor em Ciência da
-  Computação; metodologia ancorada em Kitchenham (2009), "Systematic
-  literature reviews in software engineering – A systematic literature
-  review".
+- Persona padrão dos prompts do projeto (aplicada aos três prompts: PICOC,
+  template de extração e descoberta): pesquisador em Computação Aplicada do
+  PPGCA/Unisinos orientado por um professor Doutor em Ciência da Computação;
+  metodologia ancorada em Kitchenham (2009), "Systematic literature reviews
+  in software engineering – A systematic literature review".
 - Referências históricas a "PICOC v1.1.0" na documentação designam a regra de
   Comparison (baseline empírico), não a versão corrente do prompt, e não são
   atualizadas quando o prompt evolui.
@@ -448,7 +463,11 @@ inicial. Commit `4094ce1`.
   estendido.
 - `report/paper-extraction-prompt-template.md` — persona e referência
   metodológica atualizadas; versão 1.1.0; seção Changelog criada.
-- `MEMORY.md` — itens 70–72; commit `bdeaeb3` acrescentado à tabela da sessão
+- `research/prompt.md` — ROLE com persona padrão e paper de Kitchenham (2009)
+  nomeado; versão v3.2.0; changelog estendido.
+- `research/README.md` — menções de versão corrente atualizadas para
+  "v3 (atual: v3.2.0)".
+- `MEMORY.md` — itens 70–73; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
@@ -460,5 +479,7 @@ inicial. Commit `4094ce1`.
 | `00b3e69` | 2026-09-07 | Anchor PICOC prompt methodology to Kitchenham (2009) SLR paper (v1.3.0)                       |
 | `06de0fa` | 2026-09-07 | Log Kitchenham (2009) reference update (item 71) in MEMORY.md                                 |
 | `4094ce1` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to extraction template (v1.1.0) |
+| `c4aa322` | 2026-09-07 | Log extraction-template persona/reference update (item 72) in MEMORY.md                       |
+| `88c5412` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to discovery prompt (v3.2.0)    |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
