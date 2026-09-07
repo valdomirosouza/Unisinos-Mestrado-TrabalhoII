@@ -369,5 +369,53 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 | `59d09af` | 2026-07-28 | Complete API provenance bookmarks _(PR #1 do usuário)_                                |
 | `2a99f20` | 2026-07-28 | Apply Semantic Layer x Ontology x Context Layer pattern to prompt (v3.1.0)            |
 | `4cbd3b2` | 2026-07-28 | Log synthesis-report S10 and prompt evolution v2->v3.1 (items 66-68)                  |
+| `bdeaeb3` | 2026-08-02 | Add permanent session-memory dump rule (CLAUDE.md) and log item 69                    |
+
+_(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
+
+---
+
+# Sessão 2026-09-07 — Ajuste de persona no prompt PICOC (v1.2.0)
+
+## Linha do tempo (prompts → respostas/ações)
+
+### 70. Persona do prompt PICOC: de professor para pesquisador orientado
+
+**Prompt:** "update the file picoc/picoc-extraction-prompt.md changing the
+prompt de 'Aja como Professor Doutor em Computação Aplicada do PPGCA da
+Unisinos' por 'Aja como pesquisador em Computação Aplicada do PPGCA da
+Unisinos orientado por um professor Doutor em Ciência da Computação'".
+
+**Ações:** Substituída a linha de PAPEL do prompt em
+`picoc/picoc-extraction-prompt.md` pela nova persona (pesquisador orientado),
+mantendo intacto o restante do prompt (especialista em RSL, Kitchenham &
+Charters, PICOC). Como o arquivo é versionado com changelog, a versão foi
+elevada de v1.1.0 para **v1.2.0**, com entrada de changelog descrevendo a
+mudança e sua motivação (refletir com fidelidade o papel de quem conduz a
+extração). Verificado por grep que as referências a "v1.1.0" nos demais
+documentos (report/README.md, picoc-comparacao-avaliadores.md, MEMORY.md)
+citam a **regra de Comparison introduzida na v1.1.0** — não a versão corrente
+do prompt — e portanto permanecem corretas. Commit `a7b2468`.
+
+## Decisões e convenções da sessão
+
+- Mudanças de persona/redação no prompt PICOC são mudanças versionadas:
+  incrementam a versão MINOR e ganham entrada no changelog do próprio arquivo.
+- Referências históricas a "PICOC v1.1.0" na documentação designam a regra de
+  Comparison (baseline empírico), não a versão corrente do prompt, e não são
+  atualizadas quando o prompt evolui.
+
+## Artefatos produzidos
+
+- `picoc/picoc-extraction-prompt.md` — persona atualizada; versão v1.2.0;
+  changelog estendido.
+- `MEMORY.md` — item 70; commit `bdeaeb3` acrescentado à tabela da sessão
+  anterior (conforme nota daquela tabela).
+
+## Histórico de commits da sessão
+
+| Hash      | Data       | Mensagem                                                   |
+| --------- | ---------- | ---------------------------------------------------------- |
+| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
