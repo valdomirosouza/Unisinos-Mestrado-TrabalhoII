@@ -75,7 +75,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── prompts/                      ← Etapa 2: prompts de avaliação
 │   ├── prompt-chatgpt-consultation.md ← template do prompt de avaliação (papel, RQs, QA, saída)
 │   └── prompt-P20..P40.md       ← 20 prompts preenchidos (registro histórico)
-├── docs/                         ← 39 PDFs do corpus (P01–P19 fundacionais + P20–P40 avaliados)
+├── docs/                         ← PDFs: corpus P01–P40 (39) + candidatos ciclo 2 P41–P89 (49) + paper de Kitchenham (2009)
 ├── report/                       ← Etapa 3: fichas de extração estruturada
 │   ├── README.md                ← índice das fichas (P01–P40)
 │   ├── paper-extraction-prompt-template.md ← template de extração (11 campos, Kitchenham)
@@ -84,7 +84,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   └── consolidated-extraction[-ptBR].csv ← consolidados (uma linha por artigo)
 ├── picoc/                        ← Etapa 4: extração PICOC (delimitação de escopo)
 │   ├── picoc-extraction-prompt.md ← prompt de extração PICOC (Kitchenham; Petticrew & Roberts)
-│   └── picoc-results-consolidated-P01-P40-{Claude,ChatGPT,Gemini}.md ← tabelas consolidadas por avaliador
+│   ├── picoc-results-consolidated-P01-P40-{Claude,ChatGPT,Gemini}.md ← tabelas consolidadas por avaliador
+│   └── picoc-results-consolidated-P41-P89-Claude.md ← extração PICOC do ciclo 2 (pré-triagem)
 ├── bookmark.md                   ← bookmarks de recursos externos (QUALIS etc.)
 ├── citacoes-cruzadas.md          ← citações entre os 39 artigos do corpus (OpenAlex × Crossref × Scopus)
 ├── referencias.csv               ← referências citadas pelos artigos (extraídas via DOIS.py)
@@ -121,7 +122,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`reviews/PRISMA.md`](reviews/PRISMA.md) — **diagrama PRISMA 2020** (Mermaid) do fluxo de seleção: ≈51 identificados → 21 candidatos → 20 triados → 18 avaliados → **14 incluídos** → corpus final **33** (19 fundacionais + 14 novos), com critérios de inclusão (I1–I6) e exclusão (E1–E5) e verificação por artefato.
 - [`citacoes-cruzadas.md`](citacoes-cruzadas.md) — **citações entre os 39 artigos do corpus** com tripla checagem (OpenAlex × Crossref × Scopus): 26 pares citador→citado; hubs P10 (7), P14 (5), P09 (4); inclui a descoberta de que o `REF()` do Scopus casa por título (não por DOI) e o caso do P09 citado via DOI de preprint.
 - [`prompts/`](prompts/) — template de avaliação + 20 prompts preenchidos, um por estudo (registro histórico do ciclo 1).
-- [`docs/`](docs/) — **39 PDFs do corpus**: P01–P19 (estudos fundacionais do Trabalho I) + P20–P40 (candidatos avaliados). Índice completo com links em [`report/README.md`](report/README.md).
+- [`docs/`](docs/) — PDFs: os **39 do corpus** P01–P19 (fundacionais do Trabalho I) + P20–P40 (candidatos avaliados), com índice completo em [`report/README.md`](report/README.md); os **49 candidatos do ciclo 2** (P41–P89, aguardando triagem — extração PICOC em [`picoc/picoc-results-consolidated-P41-P89-Claude.md`](picoc/picoc-results-consolidated-P41-P89-Claude.md)); e o paper metodológico de **Kitchenham (2009)**.
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
 
 ### Avaliação & síntese (saída)
@@ -141,6 +142,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 - [`picoc/picoc-extraction-prompt.md`](picoc/picoc-extraction-prompt.md) — prompt de extração **PICOC** (Population, Intervention, Comparison, Outcomes, Context) sobre os 39 PDFs, com regras antifabricação (`NÃO DECLARADO` / `N/A`) e âncoras de evidência. **v1.1.0**: Comparison = DECLARED somente com baseline empírico (contraste conceitual → `N/A`).
 - [`picoc/picoc-results-consolidated-P01-P40-Claude.md`](picoc/picoc-results-consolidated-P01-P40-Claude.md) — **tabela PICOC consolidada** (39 artigos) com síntese transversal e raciocínio por artigo; achado central: nenhum estudo mede MTTD/MTTR nominalmente.
+- [`picoc/picoc-results-consolidated-P41-P89-Claude.md`](picoc/picoc-results-consolidated-P41-P89-Claude.md) — **tabela PICOC consolidada do ciclo 2** (49 candidatos P41–P89, prompt v1.3.0, pré-triagem): 26 DECLARED · 13 N/A mapeamento · 9 N/A conceitual · 1 NÃO DECLARADO; MTTD/MTTR nominal segue quase ausente (só P76, vs. literatura) e surge um **cluster humano** com medição direta de carga cognitiva/fadiga (P62, P69, P81, P85), inexistente em P01–P40.
 - [`picoc/picoc-results-consolidated-P01-P40-ChatGPT.md`](picoc/picoc-results-consolidated-P01-P40-ChatGPT.md) · [`-Gemini-Atualizado.md`](picoc/picoc-results-consolidated-P01-P40-Gemini-Atualizado.md) — execuções paralelas do mesmo prompt em ChatGPT e Gemini, para comparação entre avaliadores. _(A [versão original do Gemini](picoc/picoc-results-consolidated-P01-P40-Gemini.md) não cobria P01–P09 e é mantida como registro histórico.)_
 - [`picoc/picoc-comparacao-avaliadores.md`](picoc/picoc-comparacao-avaliadores.md) — **comparação Claude × ChatGPT × Gemini** da extração PICOC sobre os 39 artigos (acordo 100% em 4 elementos; Comparison 79%, Fleiss κ = 0,37 — divergência definicional sobre contraste conceitual em estudos secundários). Os 12 casos divergentes foram **reclassificados pela regra v1.1.0** (resultado final: 26 DECLARED · 13 N/A, coluna `Comparison_Final_Protocolo`) · dados em [`picoc/picoc-comparacao-avaliadores.csv`](picoc/picoc-comparacao-avaliadores.csv).
 - [`picoc/picoc-search-string.md`](picoc/picoc-search-string.md) — **string de busca da RSL** derivada da síntese PICOC (blocos Intervention × Context; Outcomes só como refinamento opcional), **calibrada contra o corpus** e **validada em execução real na OpenAlex e no Scopus** (Scopus Search API, por DOI): recall **13/14 dos estudos incluídos nas três validações** (única perda: P24, trade-off documentado); excluídos/inelegíveis não recuperados (comportamento desejável); volume no Scopus **12.783** (2020+, EN) vs. ≈ 49,7 mil na OpenAlex. Sintaxes para Scopus, WoS, IEEE Xplore e ACM DL. Nota: P01 não é indexado pelo Scopus.
