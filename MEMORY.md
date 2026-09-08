@@ -500,6 +500,33 @@ et al. (2009) que ancora a metodologia da RSL e que os quatro prompts vivos
 passaram a citar pelo título (itens 70–74). Com isso, `docs/` fica sem
 arquivos não rastreados. Commit `3c76e22`.
 
+### 78. Extração PICOC do ciclo 2 (P41–P89)
+
+**Prompt:** "Agora que o prompt picoc/picoc-extraction-prompt.md está
+atualizado, execute ele para os novos papers/artigos de P41 até P89." (com
+"resume" após queda por limite de sessão).
+
+**Ações:** Prompt PICOC v1.3.0 executado sobre os **49 candidatos do ciclo
+2** com o padrão de fan-out do ciclo 1: um agente de leitura integral por
+PDF, em ondas de ~10, cada um gravando fragmento (raciocínio + linha da
+tabela) no scratchpad. **Incidente:** limite de sessão derrubou 10 agentes
+(P72–P80 da onda 4 + P73 etc.) após 31/49 fragmentos; recuperação pelo
+padrão estabelecido — verificação em disco e relançamento SOMENTE dos 18
+faltantes (P71 caiu mas o fragmento já estava íntegro; zero retrabalho).
+Fragmentos validados por script (49/49 com ROW única de 8 colunas; 4 com
+cabeçalho `#` normalizado para `###` na montagem). Nota operacional nova: o
+renderizador de PDF do Read falhou na máquina (poppler ausente) e os agentes
+extraíram o texto integral via pypdf. Consolidado em
+`picoc/picoc-results-consolidated-P41-P89-Claude.md` (tabela de 49 linhas +
+síntese transversal + apêndice de raciocínio por artigo). **Resultados:**
+Comparison = 26 DECLARED · 13 N/A (mapeamento) · 9 N/A (contraste
+conceitual) · 1 NÃO DECLARADO (P75); MTTD/MTTR nominal segue quase ausente
+(apenas P76, contra literatura); surge um **cluster humano** com medição
+direta de carga cognitiva/fadiga (P62, P69, P81, P85) — inexistente em
+P01–P40; muitos candidatos periféricos ao escopo (P58, P59, P67) sinalizados
+para a triagem. README raiz atualizado (seção Etapa 4, árvore e descrição de
+`docs/`, que ainda dizia "39 PDFs"). Commit `adeeb78`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -539,7 +566,10 @@ arquivos não rastreados. Commit `3c76e22`.
   commitados sob demanda; indexação pendente do início da triagem).
 - `docs/Systematic literature reviews in software engineering – A systematic
 literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
-- `MEMORY.md` — itens 70–76; commit `bdeaeb3` acrescentado à tabela da sessão
+- `picoc/picoc-results-consolidated-P41-P89-Claude.md` — extração PICOC do
+  ciclo 2 (49 candidatos, prompt v1.3.0, pré-triagem) com síntese
+  transversal e apêndice de raciocínio.
+- `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
 ## Histórico de commits da sessão
@@ -561,5 +591,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `6297ef2` | 2026-09-07 | Add docs/ P41-P89 candidate PDFs from cycle-2 discovery                                       |
 | `6d9e4a9` | 2026-09-07 | Log P41-P89 candidate PDFs commit (item 76) in MEMORY.md                                      |
 | `3c76e22` | 2026-09-07 | Add Kitchenham (2009) SLR methodology reference paper to docs/                                |
+| `d9e023d` | 2026-09-07 | Log Kitchenham (2009) PDF commit (item 77) in MEMORY.md                                       |
+| `adeeb78` | 2026-09-07 | Add cycle-2 PICOC extraction (P41-P89) with cross-cutting synthesis                           |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
