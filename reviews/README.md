@@ -55,6 +55,7 @@ Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunt
 ## Ciclo 2 (em andamento)
 
 - [`triagem-ciclo2.md`](triagem-ciclo2.md) — **triagem PRISMA dos candidatos P41–P89** (2026-09-09), com evidência da extração PICOC de leitura integral: 49 triados → **22 aprovados para avaliação integral** (4 com ressalva de estrato, por emenda de protocolo) · 27 excluídos (E2 = 19 · E3 = 8). Elegibilidade bibliométrica em [`../papers-ciclo2.csv`](../papers-ciclo2.csv).
+- **Prompts de avaliação do ciclo 2** — 22 prompts preenchidos (`../prompts/prompt-P43.md` … `prompt-P88.md`) gerados do [template](../prompts/prompt-chatgpt-consultation.md) com INSUMOS do [`../papers-ciclo2.csv`](../papers-ciclo2.csv) (Qualis derivado do percentil) e a linha `ressalvas_triagem` transcrevendo as flags da triagem (incl. as 4 ressalvas de estrato). Pareceres `review-P43.md`… serão produzidos executando cada prompt contra o PDF.
 
 ## Padrões e observações para a síntese
 

@@ -76,7 +76,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   └── chatgpt-research-report.md ← candidatos levantados pelo ChatGPT
 ├── prompts/                      ← Etapa 2: prompts de avaliação
 │   ├── prompt-chatgpt-consultation.md ← template do prompt de avaliação (papel, RQs, QA, saída)
-│   └── prompt-P20..P40.md       ← 20 prompts preenchidos (registro histórico)
+│   ├── prompt-P20..P40.md       ← 20 prompts preenchidos (ciclo 1, registro histórico)
+│   └── prompt-P43..P88.md       ← 22 prompts preenchidos (ciclo 2, aprovados na triagem)
 ├── docs/                         ← PDFs: corpus P01–P40 (39) + candidatos ciclo 2 P41–P89 (49) + paper de Kitchenham (2009)
 ├── report/                       ← Etapa 3: fichas de extração estruturada
 │   ├── README.md                ← índice das fichas (P01–P40)
