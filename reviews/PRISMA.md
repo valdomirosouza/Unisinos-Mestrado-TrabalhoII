@@ -73,6 +73,10 @@ flowchart TB
 - **Identificação assistida por IA:** os ≈51 registros brutos são a saída dos três assistentes ([`research/`](../research/README.md)), com campos não confirmáveis marcados `UNVERIFIED` (antifabricação); a verificação externa de Qualis/SJR foi concluída posteriormente em [`papers.csv`](../papers.csv).
 - **Validação cruzada da seleção:** a triagem/avaliação teve comparação entre avaliadores (Claude × ChatGPT: concordância 90%, κ = 0,74 — [`comparacao-avaliadores.md`](comparacao-avaliadores.md)); a extração PICOC teve três avaliadores ([`picoc/`](../picoc/picoc-comparacao-avaliadores.md)).
 
+## Ciclo 2 (nota de versão, 2026-09-09)
+
+Este diagrama registra o **ciclo 1** e não é reescrito. A triagem do **ciclo 2** (candidatos P41–P89) está em [`triagem-ciclo2.md`](triagem-ciclo2.md): 49 candidatos → 22 aprovados para avaliação integral (emenda de protocolo mantém 4 estudos fora dos estratos I3/I4 com ressalva) → 27 excluídos (E2/E3, com evidência PICOC). O diagrama consolidado dos dois ciclos será gerado ao fim da avaliação integral do ciclo 2.
+
 ---
 
 _Formato PRISMA 2020 adaptado para atualização de revisão. Contagens: ≈51 identificados → 21 candidatos → 20 triados (−1 duplicata) → 18 avaliados (−2 inelegíveis A3) → 14 incluídos (−4 excluídos) → corpus final 33 (19 + 14)._
