@@ -61,6 +61,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── MEMORY.md                     ← memória das sessões (prompts, iterações, respostas, commits)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
 ├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano
+├── Papers_Index.csv              ← índice P01–P89 (insumo do ciclo 2: metadados, cluster, citações, percentil)
+├── papers-ciclo2.csv             ← elegibilidade Etapa 1 do ciclo 2 (P41–P89): 45 elegíveis · 4 inelegíveis
 ├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
 │   ├── README.md                ← índice do Trabalho I
 │   ├── Artigo_Agentic_AI V3.pdf ← artigo da RSL original
@@ -119,6 +121,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`prompts/prompt-chatgpt-consultation.md`](prompts/prompt-chatgpt-consultation.md) — template do prompt de avaliação/consulta ao ChatGPT (papel, contexto, RQ1–RQ5, QA1–QA4, formato de saída).
 - [`Artigos-TrabalhoII.csv`](Artigos-TrabalhoII.csv) — metadados dos estudos (ID, arquivo, Qualis, SJR) usados como insumo na avaliação (valores então `[VERIFICAR]`).
 - [`papers.csv`](papers.csv) — **bibliometria verificada** dos 39 estudos (P01–P40): DOI, veículo, **Qualis 2025-2028**, **percentil Scopus**, **SJR quartile**, ISSN, ano e **contagem de citações em três fontes** (OpenAlex, Crossref, Scopus — verificadas em 2026-07-27). Resolve integralmente a pendência transversal (Qualis/SJR/citações).
+- [`Papers_Index.csv`](Papers_Index.csv) — índice completo P01–P89 (título, autores, ano, veículo, cluster temático, tipo, citações de 2026-09-06, DOI, percentil Scopus, SJR, ISSN, arquivo em `docs/`), insumo do ciclo 2.
+- [`papers-ciclo2.csv`](papers-ciclo2.csv) — **elegibilidade Etapa 1 do ciclo 2** (P41–P89): citações **OpenAlex e Crossref verificadas em 2026-09-09** (Scopus pendente de chave), **Qualis derivado do percentil Scopus** pela regra CAPES 2025-2028 (A1 ≥ 87,5% · A2 ≥ 75% · A3 ≥ 62,5%, calibrada nos 39 pares verificados de `papers.csv`) e veredito por candidato: **45 ELEGÍVEIS · 4 INELEGÍVEIS** (P62/P69 Qualis A3, P81 A4, P86 B1 + SJR Q3).
 - [`reviews/PRISMA.md`](reviews/PRISMA.md) — **diagrama PRISMA 2020** (Mermaid) do fluxo de seleção: ≈51 identificados → 21 candidatos → 20 triados → 18 avaliados → **14 incluídos** → corpus final **33** (19 fundacionais + 14 novos), com critérios de inclusão (I1–I6) e exclusão (E1–E5) e verificação por artefato.
 - [`citacoes-cruzadas.md`](citacoes-cruzadas.md) — **citações entre os 39 artigos do corpus** com tripla checagem (OpenAlex × Crossref × Scopus): 26 pares citador→citado; hubs P10 (7), P14 (5), P09 (4); inclui a descoberta de que o `REF()` do Scopus casa por título (não por DOI) e o caso do P09 citado via DOI de preprint.
 - [`prompts/`](prompts/) — template de avaliação + 20 prompts preenchidos, um por estudo (registro histórico do ciclo 1).

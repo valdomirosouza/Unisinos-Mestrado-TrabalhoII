@@ -1,0 +1,263 @@
+Paper ID,title,authors,year,venue,cluster,paper_type,classification_evidence,citations (2026-09-06),doi,Scopus (Percentil),SJR Quartile,ISSN / e-ISSN,File name (folder: docs)
+P01,"Trustworthy agentic AI systems: a cross-layer review of architectures, threat models, and governance strategies for real-world deployment",IBRAHIM ADABARA; Bashir Olaniyi Sadiq; Aliyu Nuhu Shuaibu; Yale Ibrahim Danjuma; Maninti Venkateswarlu,2025,F1000Research,LLM / agentic ops,unscreened(rule-classified),,25,10.12688/f1000research.169927.1,"79.0%
+  139/692
+  Arts and Humanities (miscellaneous)",Q1,2046-1402,P01-A2-Trustworthy agentic AI systems a cross-layer review of architectures threat models and governance strategies for real-world deployment.pdf
+P02,The role of agentic AI in shaping a smart future: A systematic review,Soodeh Hosseini; Hossein Seilani,2025,Array,LLM / agentic ops,unscreened(rule-classified),,238,10.1016/j.array.2025.100399,"86.0%
+  32/241
+  General Computer Science",Q1,2590-0056,P02-A1-The role of agentic AI in shaping a smart future A systematic review.pdf
+P03,"A Research Landscape of Agentic AI and Large Language Models: Applications, Challenges and Future Directions",Sarfraz Nawaz Brohi; Qurat-ul-ain Mastoi; N. Z. Jhanjhi; Thulasyammal Ramiah Pillai,2025,Algorithms,Security IR / SOC,unscreened(rule-classified),,54,10.3390/a18080499,"84.0%
+  34/212
+  Computational Mathematics",Q2,1999-4893,"P03-A2-A Research Landscape of Agentic AI and Large Language Models Applications, Challenges and Future Directions.pdf"
+P04,"LLM-Based Multi-Agent Systems for Software Engineering: Literature Review, Vision, and the Road Ahead",Junda He; Christoph Treude; David Lo,2025,ACM Transactions on Software Engineering and Methodology,Agent foundations,unscreened(rule-classified),,184,10.1145/3712003,"89.0%
+  53/503
+  Software",Q1,1049-331X,P04-A2-LLM-Based Multi-Agent Systems for Software Engineering Literature Review Vision and the Road Ahead.pdf
+P05,A Survey of AIOps in the Era of Large Language Models,,2025,ACM Computing Surveys,LLM / agentic ops,survey/position,SLR protocol over 5 databases; AIOps in the LLM era,42,10.1145/3746635,"99.0%
+  1/241
+  General Computer Science",Q1,0360-0300,P05-A1-A Survey of AIOps in the Era of Large Language Models.pdf
+P06,"Agentic AI: A Comprehensive Survey of Technologies, Applications, and Societal Implications",Ashis Kumar Pati,2025,IEEE Access,LLM / agentic ops,unscreened(rule-classified),,78,10.1109/ACCESS.2025.3585609,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P06-A1-Agentic AI A Comprehensive Survey of Technologies Applications and Societal Implications.pdf
+P07,Artificial Empathy: A New Perspective for Analyzing and Designing Multi-Agent Systems,Jize Chen; Dali Zhang; Zhenshen Qu; Changhong Wang,2020,IEEE Access,Agent foundations,unscreened(rule-classified),,10,10.1109/ACCESS.2020.3029502,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P07-A1-Artificial_Empathy_A_New_Perspective_for_Analyzing_and_Designing_Multi-Agent_Systems.pdf
+P08,"Applications, Challenges, and Future Directions of Human-in-the-Loop Learning",Sushant Kumar; Sumit Datta; Vishakha Singh; Deepanwita Datta; Sanjay Kumar Singh; Ritesh Sharma,2024,IEEE Access,Human factors,unscreened(rule-classified),,158,10.1109/ACCESS.2024.3401547,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P08-A1-Applications_Challenges_and_Future_Directions_of_Human-in-the-Loop_Learning.pdf
+P09,"AI Agents vs. Agentic AI: A Conceptual taxonomy, applications and challenges",Ranjan Sapkota; Konstantinos I. Roumeliotis; Manoj Karkee,2025,Information Fusion,Agent foundations,survey/position,,188,10.1016/j.inffus.2025.103599,"99.0%
+  1/203
+  Signal Processing",Q1,1566-2535,P09-A1-AI Agents vs. Agentic AI A Conceptual taxonomy applications and challenges.pdf
+P10,Agentic AI: Autonomous Intelligence for Complex Goals — A Comprehensive Survey,,2025,IEEE Access,Agent foundations,survey/position,"narrative/comprehensive survey of agentic AI, no Kitchenham protocol",620,10.1109/ACCESS.2025.3532853,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P10-A1-Agentic AI Autonomous Intelligence for Complex Goals - A Comprehensive Survey.pdf
+P11,Co-Evolving Multi-Agent Transfer Reinforcement Learning via Scenario Independent Representation,Ayesha Siddiqua; Siming Liu; Ayesha Siddika Nipu; Anthony M. Harris; Yan Liu,2024,IEEE Access,Agent foundations,unscreened(rule-classified),,9,10.1109/ACCESS.2024.3430037,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P11-A1-Co-Evolving_Multi-Agent_Transfer_Reinforcement_Learning_via_Scenario_Independent_Representation.pdf
+P12,Enhancing Autonomous System Security and Resilience With Generative AI: A Comprehensive Survey,Martin Andreoni Lopez; Willian T. Lunardi; George Lawton; Shreekant Thakkar,2024,IEEE Access,Security IR / SOC,unscreened(rule-classified),,97,10.1109/ACCESS.2024.3439363,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P12-A1-Enhancing autonomous system security and resilience with generative AI A comprehensive survey.pdf
+P13,Retail Resilience Engine: An Agentic AI Framework for Building Reliable Retail Systems With Test-Driven Development Approach,Lalit Narayan Mishra; Biswaranjan Senapati,2025,IEEE Access,Benchmarks & evaluation,unscreened(rule-classified),,34,10.1109/ACCESS.2025.3552592,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P13-A1-Retail Resilience Engine An Agentic AI Framework for Building Reliable Retail Systems With Test-Driven Development Approach.pdf
+P14,Transforming cybersecurity with agentic AI to combat emerging cyber threats (Kshetri),,2025,Telecommunications Policy,Security IR / SOC,survey/position,"conceptual/narrative review, non-empirical, cybersecurity framing",56,10.1016/j.telpol.2025.102976,"97.0%
+  14/541
+  Communication",Q1,0308-5961,P14-A1-Transforming Cybersecurity with Agentic AI to Combat Emerging Cyber Threats.pdf
+P15,"The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures, Applications, Evaluation Metrics, and Challenges",Ajay Bandi; Bhavani Kongari; Roshini Naguru; Sahitya Pasnoor; Sri Vidya Vilipala,2025,Future Internet,Security IR / SOC,unscreened(rule-classified),,155,10.3390/fi17090404,"88.0%
+  65/568
+  Computer Networks and Communications",Q1,1999-5903,P15-A2-The Rise of Agentic AI A Review of Definitions Frameworks Architectures Applications Evaluation Metrics and Challenges.pdf
+P16,"A Joint Study of the Challenges, Opportunities, and Roadmap of MLOps and AIOps",,2023,ACM Computing Surveys,Unclassified,survey/position,"SLR (Kitchenham+PRISMA) on MLOps/AIOps practice; predates LLM framing, fits none of the nine clusters",74,10.1145/3625289,"99.0%
+  1/241
+  General Computer Science",Q1,0360-0300,P16-A1-A Joint Study of the Challenges Opportunities and Roadmap of MLOps and AIOps - A Systematic Survey.pdf
+P17,A Review of Trustworthy and Explainable Artificial Intelligence (XAI),Vinay Chamola; Vikas Hassija; A. Razia Sulthana; Debshishu Ghosh; Divyansh Dhingra; Biplab Sikdar,2023,IEEE Access,Human factors,unscreened(rule-classified),,330,10.1109/ACCESS.2023.3294569,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P17-A1-A_Review_of_Trustworthy_and_Explainable_Artificial_Intelligence_XAI.pdf
+P18,An architecture for model-based and intelligent automation in DevOps,Romina Eramo; Bilal Said; Marc Oriol; Hugo Brunelière; Sergio Morales,2024,Journal of Systems and Software,LLM / agentic ops,systems/empirical,,23,10.1016/j.jss.2024.112180,"88.0%
+  29/245
+  Hardware and Architecture",Q1,0164-1212,P18-A2-An architecture for model-based and intelligent automation in DevOps.pdf
+P19,"Agent System Mining: Vision, Benefits, and Challenges",Andrei Tour; Artem Polyvyanyy; Anna Kalenkova,2021,IEEE Access,Agent foundations,unscreened(rule-classified),,33,10.1109/ACCESS.2021.3095464,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P19-A1-Agent_System_Mining_Vision_Benefits_and_Challenges.pdf
+P20,LLM Agentic Workflow for Automated Vulnerability Detection and Remediation in IaC,,2025,IEEE Access,Automated remediation,systems/empirical,prototype + experiment on 10 AWS CloudFormation templates; detection AND remediation of IaC misconfig,18,10.1109/ACCESS.2025.3560911,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P20-A1-LLM_Agentic_Workflow_for_Automated_Vulnerability_Detection_and_Remediation_in_Infrastructure-as-Code.pdf
+P21,Small Language Model Agent for the Operations of Continuously Updating ICT Systems,Nobukazu Fukuda; Haruhisa Nozue; Haruo Oishi,2025,IEEE Access,Agent foundations,unscreened(rule-classified),,0,10.1109/ACCESS.2025.3544637,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P21-A1-Small_Language_Model_Agent_for_the_Operations_of_Continuously_Updating_ICT_Systems.pdf
+P22,ARM: Autonomous Remediation and Management With LLM Agents for Intent-Driven Control,,2026,IEEE IoT Journal,Automated remediation,systems/empirical,prototype + chaos fault-injection on K3s; closed-loop intent-driven remediation,1,10.1109/JIOT.2025.3648858,"96.0%
+  9/245
+  Hardware and Architecture",Q1,2327-4662,P22-A1-ARM_Autonomous_Remediation_and_Management_With_LLM_Agents_for_Intent-Driven_Control.pdf
+P23,TAMO:Fine-Grained Root Cause Analysis via Tool-Assisted LLM Agent With Multi-Modality Observation Data in Cloud-Native Systems,Xiao Zhang; Qi Wang; Mingyi Li; Yuan Yuan; Mengbai Xiao; Fuzhen Zhuang; Dongxiao Yu,2025,IEEE Transactions on Services Computing,LLM / agentic ops,unscreened(rule-classified),,9,10.1109/TSC.2025.3629066,"93.0%
+  17/245
+  Hardware and Architecture",Q1,1939-1374,P23-A1-TAMOFine-Grained_Root_Cause_Analysis_via_Tool-Assisted_LLM_Agent_With_Multi-Modality_Observation_Data_in_Cloud-Native_Systems.pdf
+P24,AgentAI: A comprehensive survey on autonomous agents in distributed AI for industry 4.0,Francesco Piccialli; Diletta Chiaro; Sundas Sarwar; Donato Cerciello; Pian Qi; Valeria Mele,2025,Expert Systems with Applications,Agent foundations,unscreened(rule-classified),,64,10.1016/j.eswa.2025.128404,"97.0%
+  10/351
+  General Engineering",Q1,0957-4174,P24-A1-1-s2.0-S0957417425020238-main.pdf
+P25,Artificial intelligence driven multi agent framework for adaptive cyber attack simulation and automated incident response in cyber range environments,,2026,Scientific Reports,Security IR / SOC,systems/empirical,MAS/RL (non-LLM) framework; cyber range attack simulation + automated IR,2,10.1038/s41598-026-45937-9,"87.0%
+  29/223",Q1,2045-2322,P25-A1-s41598-026-45937-9.pdf
+P26,Surveying Root Cause Analysis Techniques: A Comprehensive Review of Aspects for Multi-Service Applications,Zhijing Li; Jianbo Yu; Zhijun Huang; Yusheng Huang,2025,IEEE Transactions on Services Computing,Root-cause analysis,unscreened(rule-classified),,0,10.1109/TSC.2025.3631913,"93.0%
+  17/245
+  Hardware and Architecture",Q1,1939-1374,P26-A1-Surveying_Root_Cause_Analysis_Techniques_A_Comprehensive_Review_of_Aspects_for_Multi-Service_Applications.pdf
+P27,Leveraging multi-agent framework for root cause analysis,,2026,Complex and Intelligent Systems,Root-cause analysis,systems/empirical,LLM multi-agent RCA (MA-RCA),5,10.1007/s40747-025-02096-0,"96.0%
+  7/212
+  Computational Mathematics",Q1,2199-4536,P27-A1-s40747-025-02096-0.pdf
+P28,A Multi-Agent System for Cybersecurity Threat Detection and Correlation Using Large Language Models,Yasser Hmimou; Mohamed Tabaa; Azeddine Khiat; Zineb Hidila,2025,IEEE Access,Security IR / SOC,systems/empirical,,16,10.1109/ACCESS.2025.3602681,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P28-A1-A_Multi-Agent_System_for_Cybersecurity_Threat_Detection_and_Correlation_Using_Large_Language_Models.pdf
+P29,AIOps for log anomaly detection in the era of LLMs: A systematic literature review,Miguel De la Cruz Cabello; Tiago Prince Sales; Marcos Machado,2025,Intelligent Systems with Applications,LLM / agentic ops,survey/position,,12,10.1016/j.iswa.2025.200608,"93.0%
+  12/179
+  Computer Science (miscellaneous)",Q1,2667-3053,P29-A2-1-s2.0-S2667305325001346-main.pdf
+P30,Reliability of LLM Inference Engines from a Static Perspective: RCA and Repair Suggestion,,2026,Big Data and Cognitive Computing,Root-cause analysis,systems/empirical,empirical study + prototype on 276 annotated GitHub issues; RCA and repair suggestion,0,10.3390/bdcc10020060,"88.0%
+  116/1022
+  Computer Science Applications",Q1,2504-2289,P30-A2-BDCC-10-00060-v2.pdf
+P31,LEMAD: LLM-Empowered Multi-Agent System for Anomaly Detection in Power Grid Services,,2025,Electronics,LLM / agentic ops,systems/empirical,"industrial LLM multi-agent prototype on production K8s, 1289 services (State Grid)",14,10.3390/electronics14153008,"83.0%
+  35/203
+  Signal Processing",Q2,2079-9292,P31-A2-electronics-14-03008.pdf
+P32,GALR: Graph-Based Root Cause Localization and LLM-Assisted Recovery for Microservices,,2026,Electronics,Root-cause analysis,systems/empirical,GNN + LLM agent; RCA localization plus assisted recovery,1,10.3390/electronics15010243,"83.0%
+  35/203
+  Signal Processing",Q2,2079-9292,P32-A2-electronics-15-00243-v2.pdf
+P33,"A Review of Agentic AI in Cybersecurity: Cognitive Autonomy, Ethical Governance, and Quantum-Resilient Defense",IBRAHIM ADABARA; Bashir Olaniyi Sadiq; Aliyu Nuhu Shuaibu; Yale Ibrahim Danjuma; Maninti Venkateswarlu,2025,F1000Research,Security IR / SOC,survey/position,,20,10.12688/f1000research.169337.1,"79.0%
+  139/692
+  Arts and Humanities (miscellaneous)",Q1,2046-1402,P33-A2-64b5f019-bc3d-42da-870b-8f7434e7057c_f1000res169337.pdf
+P34,Analysing the role of LLMs in cybersecurity incident management,,2025,International Journal of Information Security,Security IR / SOC,systems/empirical,controlled experiment over 10 incident scenarios mapped to NIST 800-61,3,10.1007/s10207-025-01144-7,"92.0%
+  23/282
+  Safety, Risk, Reliability and Quality",Q1,1615-5270,P34-A2-s10207-025-01144-7.pdf
+P35,Graph-Augmented Multi-Agent Robust Root Cause Analysis in AIOps,,2026,"Computers, Materials and Continua",Root-cause analysis,systems/empirical,LLM multi-agent graph-augmented RCA in AIOps,2,10.32604/cmc.2026.077908,"88.0%
+  45/397
+  Modeling and Simulation",Q2,1546-2218,P35-A2-TSP_CMC_77908.pdf
+P37,"Empirical Study on Automation, AI Trust, and Framework Readiness in Cybersecurity Incident Response",,2026,Algorithms,Human factors,systems/empirical,two-part quantitative practitioner survey with psychometric validation (primary study),6,10.3390/a19010062,"84.0%
+  34/212
+  Computational Mathematics",Q2,1999-4893,P37-A2-algorithms-19-00062-v2.pdf
+P38,Multi-Agent Coordination Strategies vs. Retrieval-Augmented Generation in LLMs: A Comparative Evaluation,Irina Radeva; Иван Попчев; Lyubka Doukovska; Miroslava Dimitrova,2025,Electronics,Benchmarks & evaluation,unscreened(rule-classified),,0,10.3390/electronics14244883,"83.0%
+  35/203
+  Signal Processing",Q2,2079-9292,P38-A2-electronics-14-04883-v2.pdf
+P39,Agentic AI and the Cyber Arms Race,Sean Oesch; Jack Hutchins; Phillipe Austria; Amul Chaulagain,2025,Computer,Security IR / SOC,unscreened(rule-classified),,7,10.1109/MC.2025.3544116,"64.0%
+  87/241
+  General Computer Science",Q2,0018-9162,P39-A3-Agentic_AI_and_the_Cyber_Arms_Race.pdf
+P40,A Comprehensive Survey on LLM-Based Network Management and Operations,,2025,International Journal of Network Management,LLM / agentic ops,survey/position,secondary literature survey on LLM-based network management,14,10.1002/nem.70029,"70.0%
+  170/568
+  Computer Networks and Communications",Q2,1055-7148,P40-A3-Int J Network Mgmt - 2025 - Hong - A Comprehensive Survey on LLM‐Based Network Management and Operations.pdf
+P41,Deep Learning for Time Series Anomaly Detection: A Survey,Zahra Zamanzadeh Darban; Geoffrey I. Webb; Shirui Pan; Charų C. Aggarwal; Mahsa Salehi,2024,ACM Computing Surveys,Detection (classical ML),survey/position,,521,10.1145/3691338,"99.0%
+  1/241
+  General Computer Science",Q1,0360-0300,P41_Deep_Learning_for_Time_Series_Anomaly_Detection_A_Survey.pdf
+P42,Task Failure Prediction in Cloud Data Centers Using Deep Learning,Jiechao Gao; Haoyu Wang; Haiying Shen,2020,IEEE Transactions on Services Computing,Detection (classical ML),unscreened(rule-classified),,219,10.1109/tsc.2020.2993728,"93.0%
+  17/245
+  Hardware and Architecture",Q1,1939-1374,P42_Task_Failure_Prediction_in_Cloud_Data_Centers_Using_Deep_Learning.pdf
+P43,A Practical Approach to Defining a Framework for Developing an Agentic AIOps System,Răzvan Daniel Zota; Corneliu Bărbulescu; Radu Constantinescu,2025,Electronics,LLM / agentic ops,systems/empirical,,26,10.3390/electronics14091775,"83.0%
+  35/203
+  Signal Processing",Q2,2079-9292,P43_A_Practical_Approach_to_Defining_a_Framework_for_Developing_an_Agentic_AIOps_System.pdf
+P44,Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT Applications for Centralized and Federated Learning,Mohamed Amine Ferrag; Othmane Friha; Djallel Hamouda; Λέανδρος Μαγλαράς; Helge Janicke,2022,IEEE Access,Detection (classical ML),systems/empirical,,1087,10.1109/access.2022.3165809,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P44_Edge-IIoTset_A_New_Comprehensive_Realistic_Cyber_Security_Dataset_of_IoT_and_IIoT_Applications_for_Centralized_and_Federated_Learning.pdf
+P45,"Deep Learning for Anomaly Detection in Time-Series Data: Review, Analysis, and Guidelines",Kukjin Choi; Jihun Yi; Changhwa Park; Sungroh Yoon,2021,IEEE Access,Detection (classical ML),survey/position,,580,10.1109/access.2021.3107975,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P45_Deep_Learning_for_Anomaly_Detection_in_Time-Series_Data_Review_Analysis_and_Guidelines.pdf
+P46,Benchmarking of Machine Learning for Anomaly Based Intrusion Detection Systems in the CICIDS2017 Dataset,Ziadoon Kamil Maseer; Robiah Yusof; Nazrulazhar Bahaman; Salama A. Mostafa; Cik Feresa Mohd Foozy,2021,IEEE Access,Security IR / SOC,systems/empirical,,464,10.1109/access.2021.3056614,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P46_Benchmarking_of_Machine_Learning_for_Anomaly_Based_Intrusion_Detection_Systems_in_the_CICIDS2017_Dataset.pdf
+P47,Anomaly-Based Intrusion Detection From Network Flow Features Using Variational Autoencoder,Sultan Zavrak; Murat İskefiyeli,2020,IEEE Access,Detection (classical ML),systems/empirical,,324,10.1109/access.2020.3001350,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P47_Anomaly-Based_Intrusion_Detection_From_Network_Flow_Features_Using_Variational_Autoencoder.pdf
+P48,An Unsupervised Deep Learning Model for Early Network Traffic Anomaly Detection,Ren‐Hung Hwang; Min-Chun Peng; Chien‐Wei Huang; Po‐Ching Lin; Van-Linh Nguyen,2020,IEEE Access,Detection (classical ML),systems/empirical,,281,10.1109/access.2020.2973023,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P48_An_Unsupervised_Deep_Learning_Model_for_Early_Network_Traffic_Anomaly_Detection.pdf
+P49,Design and Development of RNN Anomaly Detection Model for IoT Networks,Imtiaz Ullah; Qusay H. Mahmoud,2022,IEEE Access,Detection (classical ML),systems/empirical,,266,10.1109/access.2022.3176317,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P49_Design_and_Development_of_RNN_Anomaly_Detection_Model_for_IoT_Networks.pdf
+P50,A Survey on Observability of Distributed Edge & Container-Based Microservices,Muhammad Usman; Simone Ferlin; Anna Brunström; Javid Taheri,2022,IEEE Access,Detection (classical ML),survey/position,,117,10.1109/access.2022.3193102,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P50_A_Survey_on_Observability_of_Distributed_Edge_amp_Container-Based_Microservices.pdf
+P51,Cloud Network Anomaly Detection Using Machine and Deep Learning Techniques— Recent Research Advancements,Amira Mahamat Abdallah; Aysha Saif Rashed Obaid Alkaabi; Ghaya Bark Nasser Douman Alameri; Saida Hafsa Rafique; Nura Shifa Musa; M. Thangavel,2024,IEEE Access,Detection (classical ML),survey/position,,80,10.1109/access.2024.3390844,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P51_Cloud_Network_Anomaly_Detection_Using_Machine_and_Deep_Learning_Techniques_Recent_Research_Advancements.pdf
+P52,Application of Large Language Models in Cybersecurity: A Systematic Literature Review,Ismayil Hasanov; Seppo Virtanen; Antti Hakkala; Jouni Isoaho,2024,IEEE Access,Security IR / SOC,survey/position,,82,10.1109/access.2024.3505983,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P52_Application_of_Large_Language_Models_in_Cybersecurity_A_Systematic_Literature_Review.pdf
+P53,Anomaly Detection and Root Cause Analysis in Cloud-Native Environments Using Large Language Models and Bayesian Networks,Diego Frazatto Pedroso; Luís Almeida; Lucas Eduardo Gulka Pulcinelli; William Akihiro Alves Aisawa; Inês Dutra; Sarita Mazzini Bruschi,2025,IEEE Access,LLM / agentic ops,systems/empirical,,12,10.1109/access.2025.3565220,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P53_Anomaly_Detection_and_Root_Cause_Analysis_in_Cloud-Native_Environments_Using_Large_Language_Models_and_Bayesian_Networks.pdf
+P54,From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review,Mohamed Amine Ferrag; Norbert Tihanyi; Mérouane Debbah,2026,IEEE Access,Agent foundations,survey/position,,7,10.1109/access.2026.3698694,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P54_From_LLM_Reasoning_to_Autonomous_AI_Agents_A_Comprehensive_Review.pdf
+P55,Telemetry and Agentic AI: Foundations for Optical Network Automation,Sergio Cruzes,2025,IEEE Access,Agent foundations,unscreened(rule-classified),,3,10.1109/access.2025.3649768,"91.0%
+  31/351
+  General Engineering",Q1,2169-3536,P55_Telemetry_and_Agentic_AI_Foundations_for_Optical_Network_Automation.pdf
+P56,Variational LSTM Enhanced Anomaly Detection for Industrial Big Data,Xiaokang Zhou; Yiyong Hu; Wei Liang; Jianhua Ma; Qun Jin,2020,IEEE Transactions on Industrial Informatics,Automated remediation,unscreened(rule-classified),,405,10.1109/tii.2020.3022432,"98.0%
+  10/519
+  Information Systems",Q1,1551-3203,P56_Variational_LSTM_Enhanced_Anomaly_Detection_for_Industrial_Big_Data.pdf
+P57,"Artificial Intelligence for Predictive Maintenance Applications: Key Components, Trustworthiness, and Future Trends",Ayşegül Uçar; Mehmet Karaköse; Necim Kırımça,2024,Applied Sciences,Detection (classical ML),survey/position,,410,10.3390/app14020898,"82.0%
+  18/99
+  Fluid Flow and Transfer Processes",Q2,2076-3417,P57_Artificial_Intelligence_for_Predictive_Maintenance_Applications_Key_Components_Trustworthiness_and _Future_Trends.pdf
+P58,Deep Industrial Image Anomaly Detection: A Survey,Jiaqi Liu; Guoyang Xie; Jinbao Wang; Shangnian Li; Chengjie Wang; Feng Zheng; Yaochu Jin,2024,Machine Intelligence Research,Detection (classical ML),survey/position,,396,10.1007/s11633-023-1459-z,"99.0%
+  2/397
+  Modeling and Simulation",Q1,2731-538X,P58_Deep_Industrial_Image_Anomaly_Detection_A_Survey.pdf
+P59,Anomaly detection with density estimation,Benjamin Nachman; David Shih,2020,Physical review D,Detection (classical ML),systems/empirical,,315,10.1103/physrevd.101.075042,"93.0%
+  7/97
+  Nuclear and High Energy Physics",Q1,2470-0010,P59_Anomaly_detection_with_density_estimation.pdf
+P60,From Corrective to Predictive Maintenance—A Review of Maintenance Approaches for the Power Industry,Marek Molęda; Bożena Małysiak-Mrozek; Weiping Ding; Vaidy Sunderam; Dariusz Mrozek,2023,Sensors,Detection (classical ML),survey/position,,271,10.3390/s23135970,"91.0%
+  19/206
+  Instrumentation",Q1,1424-8220,P60_From_Corrective_to_Predictive_Maintenance_A_Review_of_Maintenance_Approaches_for_the_Power_Industry.pdf
+P61,From knowledge-based to big data analytic model: a novel IoT and machine learning based decision support system for predictive maintenance in Industry 4.0,Riccardo Rosati; Luca Romeo; Gianalberto Cecchini; F. Tonetto; Paolo Viti; Adriano Mancini; Emanuele Frontoni,2022,Journal of Intelligent Manufacturing,Detection (classical ML),systems/empirical,,253,10.1007/s10845-022-01960-x,"96.0%
+  17/503
+  Software",Q1,0956-5515,P61_From_knowledge_based_to_big_data_analytic_model_a_novel_IoT_and_machine_learning_based_decision_support_system_for_predictive_maintenance_in_Industry_4.0.pdf
+P62,"A Neuroergonomics Approach to Mental Workload, Engagement and Human Performance",Frédéric Dehais; Alex Lafont; Raphaëlle N. Roy; Stephen Fairclough,2020,Frontiers in Neuroscience,Human factors,survey/position,,248,10.3389/fnins.2020.00268,"74.0%
+  29/112
+  General Neuroscience",Q2,1662-453X,P62_A_Neuroergonomics_Approach_to_Mental_Workload_Engagement_and_Human_Performance.pdf
+P63,The Chatbot Usability Scale: the Design and Pilot of a Usability Scale for Interaction with AI-Based Conversational Agents,Simone Borsci; Alessio Malizia; Martin Schmettow; Frank van der Velde; Gunay Tariverdiyeva; Divyaa Balaji; Alan Chamberlain,2021,Personal and Ubiquitous Computing,Benchmarks & evaluation,unscreened(rule-classified),,239,10.1007/s00779-021-01582-9,"92.0%
+  24/296
+  Library and Information Sciences",Q2,1617-4909,P63_The_Chatbot_Usability_Scale_the_Design_and_Pilot_of_a_Usability_Scale_for_Interaction_with_AI-Based_ Conversational_Agents.pdf
+P64,A Review of Machine Learning and Deep Learning Techniques for Anomaly Detection in IoT Data,Redhwan Al-amri; Raja Kumar Murugesan; Mustafa Man; Alaa Fareed; Mohammed A. Al‐Sharafi; Ammar Ahmed Alkahtani,2021,Applied Sciences,Detection (classical ML),survey/position,,204,10.3390/app11125320,"82.0%
+  18/99
+  Fluid Flow and Transfer Processes",Q2,2076-3417,P64_A_Review_of_Machine_Learning_and_Deep_Learning_Techniques_for_Anomaly_Detection_in_IoT_Data.pdf
+P65,Deep learning for anomaly detection in log data: A survey,Max Landauer; Sebastian Onder; Florian Skopik; Markus Wurzenberger,2023,Machine Learning with Applications,Detection (classical ML),survey/position,,199,10.1016/j.mlwa.2023.100470,"93.0%
+  13/203
+  Computational Theory and Mathematics",Q1,2666-8270,P65_Deep_learning_for_anomaly_detection_in_log_data_A_survey.pdf
+P66,Zero Touch Management: A Survey of Network Automation Solutions for 5G and 6G Networks,Estefanía Coronado; Rasoul Behravesh; Tejas Subramanya; Adriana Fernández–Fernández; Muhammad Shuaib Siddiqui; Xavier Costa‐Pérez; Roberto Riggio,2022,IEEE Communications Surveys and Tutorials,Security IR / SOC,unscreened(rule-classified),,178,10.1109/comst.2022.3212586,"99.0%
+  1/1030
+  Electrical and Electronic Engineering",Q1,1553-877X,P66_Zero_Touch_Management_A_Survey_of_Network_Automation_Solutions_for_5G_and_6G_Networks.pdf
+P67,EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos,Sareer Ul Amin; Mohib Ullah; Muhammad Sajjad; Faouzi Alaya Cheikh; Mohammad Hijji; Abdulrahman Hijji; Khan Muhammad,2022,Mathematics,Detection (classical ML),systems/empirical,,145,10.3390/math10091555,"92.0%
+  33/414
+  General Mathematics",Q2,2227-7390,P67_EADN_An_Efficient_Deep_Learning_Model_for_Anomaly_Detection_in_Videos.pdf
+P68,A big data-driven root cause analysis system: Application of Machine Learning in quality problem solving,Qiuping Ma; Hongyan Li; Anders Thorstenson,2021,Computers and Industrial Engineering,Root-cause analysis,systems/empirical,,88,10.1016/j.cie.2021.107580,"96.0%
+  12/351
+  General Engineering",Q1,0360-8352,P68_A_big_data-driven_root_cause_analysis_system_Application_of_Machine_Learning_in_quality_problem solving.pdf
+P69,WAUC: A Multi-Modal Database for Mental Workload Assessment Under Physical Activity,Isabela Albuquerque; Abhishek Tiwari; Mark Parent; Raymundo Cassani; Jean‐François Gagnon; Daniel Lafond; Sébastien Tremblay; Tiago H. Falk,2020,Frontiers in Neuroscience,Detection (classical ML),unscreened(rule-classified),,71,10.3389/fnins.2020.549524,"74.0%
+  29/112
+  General Neuroscience",Q2,1662-453X,P69_WAUC_A_Multi-Modal_Database_for_Mental_Workload_Assessment_Under_Physical_Activity.pdf
+P70,Anomaly Detection in Operating System Logs with Deep Learning-Based Sentiment Analysis,Hudan Studiawan; Ferdous Sohel; Christian Payne,2020,IEEE Transactions on Dependable and Secure Computing,Detection (classical ML),systems/empirical,,68,10.1109/tdsc.2020.3037903,"93.0%
+  64/1030
+  Electrical and Electronic Engineering",Q1,1545-5971,P70_Anomaly_Detection_in_Operating_System_Logs_with_Deep_Learning-Based_Sentiment_Analysis.pdf
+P71,The Challenges of Leveraging Threat Intelligence to Stop Data Breaches,Amani S. Ibrahim; Dhananjay Thiruvady; Jean-Guy Schneider; Mohamed Abdelrazek,2020,Frontiers in Computer Science,Automated remediation,unscreened(rule-classified),,63,10.3389/fcomp.2020.00036,"75.0%
+  45/183
+  Computer Vision and Pattern Recognition",Q2,2624-9898,P71_The_Challenges_of_Leveraging_Threat Intelligence_to_Stop_Data_Breaches.pdf
+P72,From Vulnerability to Defense: The Role of Large Language Models in Enhancing Cybersecurity,Wafaa Kasri; Yassine Himeur; Hamzah Ali Alkhazaleh; Saed Tarapiah; Shadi Atalla; Wathiq Mansoor; Hussain Al-Ahmad,2025,Computation,Security IR / SOC,survey/position,,63,10.3390/computation13020030,"85.0%
+  101/680
+  Applied Mathematics",Q2,2079-3197,P72_From_Vulnerability_to_Defense_The_Role_of_Large_Language_Models_in_Enhancing_Cybersecurity.pdf
+P73,Breaking Alert Fatigue: AI-Assisted SIEM Framework for Effective Incident Response,Tao Ban; Takeshi Takahashi; Samuel Ndichu; Daisuke Inoue,2023,Applied Sciences,Alert triage & correlation,systems/empirical,,54,10.3390/app13116610,"82.0%
+  18/99
+  Fluid Flow and Transfer Processes",Q2,2076-3417,P73_Breaking_Alert_Fatigue_AI-Assisted_SIEM_Framework_for_Effective_Incident_Response.pdf
+P74,Transitioning from MLOps to LLMOps: Navigating the Unique Challenges of Large Language Models,Saurabh Pahune; Zahid Akhtar,2025,Information,LLM / agentic ops,unscreened(rule-classified),,58,10.3390/info16020087,"79.0%
+  108/519
+  Information Systems",Q2,2078-2489,P74_Transitioning_from_MLOps_to_LLMOps_Navigating_the_Unique_Challenges_of_Large_Language_Models.pdf
+P75,Enhancing Cloud Security—Proactive Threat Monitoring and Detection Using a SIEM-Based Approach,Emmanuel Tuyishime; Titus Bălan; Petru Adrian Cotfas; Daniel Tudor Cotfas; Alexandre Rekeraho,2023,Applied Sciences,Security IR / SOC,systems/empirical,,32,10.3390/app132212359,"82.0%
+  18/99
+  Fluid Flow and Transfer Processes",Q2,2076-3417,P75_Enhancing_Cloud_Security-Proactive_Threat_Monitoring_and_Detection_Using_a_SIEM-Based_Approach.pdf
+P76,Toward Robust Security Orchestration and Automated Response in Security Operations Centers with a Hyper-Automation Approach Using Agentic Artificial Intelligence,Ismail Ismail; Rahmat Kurnia; Zilmas Arjuna Brata; Ghitha Afina Nelistiani; Shinwook Heo; Hyeongon Kim; Hyeongon Kim; Howon Kim; Howon Kim,2025,Information,Automated remediation,unscreened(rule-classified),,36,10.3390/info16050365,"79.0%
+  108/519
+  Information Systems",Q2,2078-2489,P76_Toward_Robust_Security_Orchestration_and_Automated_Response_in_Security_Operations_Centers_with_a_Hyper-Automation_Approach_Using_Agentic_AI.pdf
+P77,Generative AI revolution in cybersecurity: a comprehensive review of threat intelligence and operations,Mueen Uddin; Muhammad Irshad; Irfan Ali Kandhro; Fuhid Alanazi; Fahad Ahmed; Muhammad Maaz; Saddam Hussain; Syed Sajid Ullah,2025,Artificial Intelligence Review,Security IR / SOC,survey/position,,34,10.1007/s10462-025-11219-5,"99.0%
+  1/1221
+  Linguistics and Language",Q1,0269-2821,P77_Generative_AI_revolution_in_cybersecurity_a_comprehensive_review_of_threat_intelligence_and_operations.pdf
+P78,Advancing Cyber Incident Timeline Analysis Through Retrieval-Augmented Generation and Large Language Models,Fatma Yasmine Loumachi; Mohamed Chahine Ghanem; Mohamed Amine Ferrag,2025,Computers,Security IR / SOC,systems/empirical,,27,10.3390/computers14020067,"86.0%
+  25/179
+  Computer Science (miscellaneous)",Q1,2073-431X,P78_Advancing_Cyber_Incident_Timeline_Analysis_Through_Retrieval-Augmented_Generation_and_Large_Language_Models.pdf
+P79,AI-Augmented SOC: A Survey of LLMs and Agents for Security Automation,S. Srinivas; Brandon Kirk; Julissa Zendejas; Michael Espino; Matthew Boskovich; Abdul Bari; Khalil Dajani; Nabeel Alzahrani,2025,Journal of Cybersecurity and Privacy,Security IR / SOC,survey/position,,28,10.3390/jcp5040095,"85.0%
+  27/179
+  Computer Science (miscellaneous)",Q1,2624-800X,P79_AI_Augmented_SOC_A_Survey_of_LLMs_and_Agents_for_Security_Automation.pdf
+P80,AI-Assisted Security Alert Data Analysis with Imbalanced Learning Methods,Samuel Ndichu; Tao Ban; Takeshi Takahashi; Daisuke Inoue,2023,Applied Sciences,Alert triage & correlation,systems/empirical,,19,10.3390/app13031977,"82.0%
+  18/99
+  Fluid Flow and Transfer Processes",Q2,2076-3417,P80_AI-Assisted_Security_Alert_Data_Analysis_with_Imbalanced_Learning_Methods.pdf
+P81,Enhancing Control Room Operator Decision Making,Joseph Mietkiewicz; Ammar N. Abbas; Chidera Winifred Amazu; Gabriele Baldissone; Anders Madsen; Micaela Demichela; Maria Chiara Leva,2024,Processes,Human factors,systems/empirical,,18,10.3390/pr12020328,"60.0%
+  42/106
+  Chemical Engineering (miscellaneous)",Q2,2227-9717,P81_Enhancing_Control_Room_Operator_Decision_Making.pdf
+P82,Artificial Intelligence Agent-Enabled Predictive Maintenance: Conceptual Proposal and Basic Framework,Wenyu Jiang; Fuwen Hu,2025,Computers,LLM / agentic ops,systems/empirical,,18,10.3390/computers14080329,"86.0%
+  25/179
+  Computer Science (miscellaneous)",Q1,2073-431X,P82_AI_Agent-Enabled_Predictive_Maintenance_Conceptual_Proposal_and_Basic_Framework.pdf
+P83,Enhancing Security Operations Center: Wazuh Security Event Response with Retrieval-Augmented-Generation-Driven Copilot,Ismail Ismail; Rahmat Kurnia; Farid Widyatama; Ilham Mirwansyah Wibawa; Zilmas Arjuna Brata; Ukasyah; Ghitha Afina Nelistiani; Howon Kim,2025,Sensors,Security IR / SOC,systems/empirical,,12,10.3390/s25030870,"91.0%
+  19/206
+  Instrumentation",Q1,1424-8220,P83_Enhancing_SOC_Wazuh_Security_Event_Response_with_Retrieval-Augmented-Generation-Driven_Copilot.pdf
+P84,Availability analysis of redundant and replicated cloud services with Bayesian networks,Otto Bibartiu; Frank Dürr; Kurt Rothermel; Beate Ottenwälder; Andreas Grau,2023,Quality and Reliability Engineering International,Benchmarks & evaluation,systems/empirical,,8,10.1002/qre.3414,"76.0%
+  66/282
+  Safety, Risk, Reliability and Quality",Q2,0748-8017,P84_Availability_analysis_of_redundant_and_replicated_cloud_services_with_Bayesian_networks.pdf
+P85,Thermographic and cognitive assessment of fatigue in vessel traffic service operators: a socio-technical approach,Fernando Crestelo Moreno; John González; Juan Suardíaz Muro; R. López-Alonso,2025,"Cognition, Technology and Work",Automated remediation,unscreened(rule-classified),,6,10.1007/s10111-025-00804-x,"99.0%
+  9/891
+  Philosophy",Q1,1435-5558,P85_Thermographic_and_cognitive_assessment_of_fatigue_in_vessel_traffic_service_operators_a_socio-technical_approach.pdf
+P86,Distributed Tracing for Troubleshooting of Native Cloud Applications via Rule-Induction Systems,Arnak Poghosyan; Ashot Harutyunyan; Naira Grigoryan; Clement Chun Cheong Pang,2023,Journal of Universal Computer Science,Root-cause analysis,systems/empirical,,6,10.3897/jucs.112513,"47.0%
+  71/135
+  Theoretical Computer Science",Q3,0948-695X,P86_Distributed_Tracing_for_Troubleshooting_of_Native_Cloud_Applications_Rule-Induction_Systems.pdf
+P87,An LLM-Based Agentic Network Traffic Incident-Report Approach Towards Explainable-AI Network Defense,Chia-Hong Chou; Arjun Sudheer; Younghee Park,2026,Journal of Sensor and Actuator Networks,LLM / agentic ops,systems/empirical,,1,10.3390/jsan15020032,"97.0%
+  6/198
+  Control and Optimization",Q2,2224-2708,P87_An_LLM-Based_Agentic_Network_Traffic_Incident-Report_Approach_Towards_Explainable-AI_Network_Defense.pdf
+P88,A Decentralised Self-Healing Approach for Network Topology Maintenance,Arles Rodríguez; Jonatan Gómez; Ada Diaconescu,2020,Autonomous Agents and Multi-Agent Systems,Automated remediation,systems/empirical,,8,10.1007/s10458-020-09486-3,"76.0%
+  137/570
+  Artificial Intelligence",Q2,1387-2532,P88_A decentralised_self-healing_approach_for_network_topology_maintenance.pdf
+P89,A unified framework for detecting point and collective anomalies in operating system logs via collaborative transformers,Mohammad Nasirzadeh; Jafar Tahmoresnezhad; Parviz Rashidi-Khazaee,2025,Scientific Reports,Detection (classical ML),systems/empirical,,2,10.1038/s41598-025-27693-4,"87.0%
+  29/223",Q1,2045-2322,P89_A_unified_framework_for_detecting_point_and_collective_anomalies_in_operating_system_logs_via_collaborative_transformers.pdf
