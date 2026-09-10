@@ -685,6 +685,30 @@ aritmeticamente — extraídas com marcação `⚠ Ambiguous`, sem correção.
 PDF/EN/pt-BR/Relevância/Comparison PICOC) e o README raiz atualizou as
 contagens (59 fichas). Links verificados (0 quebrados). Commit `d527e60`.
 
+### 86. Síntese consolidada dos dois ciclos
+
+**Prompt:** "Sim, gere a síntese consolidada dos dois ciclos".
+
+**Ações:** Criado `reviews/relatorio-sintese-consolidado.md` (12 seções,
+espelhando a estrutura do relatório do ciclo 1, que permanece imutável) +
+PDF gerado com cópia parametrizada do `scripts/build_pdf.py` (268 KB).
+Conteúdo: funil PRISMA consolidado (tabela dos 2 ciclos), composição do
+corpus 53 (19 + 14 + 20; 7 fundacionais condicionais; 3 ressalvas de
+estrato), migração da lacuna sistemática RQ4 (ciclo 1) → RQ3/QA3 (ciclo 2),
+qualidade comparada (RQ 3,83→3,16; QA 3,50→2,75; zero "Incluir" pleno no
+ciclo 2), **seção-núcleo sobre MTTD/MTTR e carga cognitiva** (P76 único
+nominal, desfavorável e vs. literatura; P79 evidência secundária CyberAlly/
+GreyMatter; proxies P73/P81/P87/P83; cluster COGNITIVE_LOAD P62/P69/P81 +
+instrumentos BUS-15/NASA-TLX; conclusão: lacuna triangulada em 89
+candidatos — nenhum estudo mede MTTD E MTTR nominalmente com baseline
+próprio em produção), taxonomia consolidada de paradigmas, rastreabilidade
+das exclusões, confiabilidade (κ = 0,74 no ciclo 1; **avaliador único no
+ciclo 2 — comparação pendente**, listada como limitação nº 1), limitações,
+próximos passos e nota metodológica com as 4 diferenças do ciclo 2.
+Indexado no README raiz ("Comece por aqui"), reviews/README (bloco Ciclo 2)
+e DASHBOARD (seção Ciclo 2). Links verificados (0 quebrados). Commit
+`129afc8`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -755,6 +779,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `report/P43…P88-extraction[.csv|-ptBR.csv]` (40 fichas) +
   `report/consolidated-extraction-ciclo2[.csv|-ptBR.csv]` — extração
   estruturada dos 20 incluídos do ciclo 2; índice no `report/README.md`.
+- `reviews/relatorio-sintese-consolidado.md` + `.pdf` — síntese narrativa
+  consolidada dos ciclos 1 e 2 (corpus 53; lacuna MTTD/MTTR triangulada em
+  89 candidatos).
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -792,5 +819,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `891edb1` | 2026-09-10 | Consolidate cycle 2: CSV, charts, PRISMA flow, dashboard; corpus 53                           |
 | `b8bbc1d` | 2026-09-10 | Log cycle-2 consolidation (item 84) in MEMORY.md                                              |
 | `d527e60` | 2026-09-10 | Add extraction sheets (EN+ptBR) and consolidated CSVs for 20 cycle-2 included studies         |
+| `00ca1b7` | 2026-09-10 | Log cycle-2 extraction sheets (item 85) in MEMORY.md                                          |
+| `129afc8` | 2026-09-10 | Add consolidated two-cycle synthesis report (MD + PDF)                                        |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
