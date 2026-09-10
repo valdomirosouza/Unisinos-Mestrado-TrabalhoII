@@ -637,6 +637,31 @@ análogo a P25); os 5 fundacionais confirmados como "Incluir c/ ressalvas
 de estrato, P85 excluído por não aderência. Tabela-síntese do ciclo 2
 adicionada à seção Ciclo 2 de `reviews/README.md`. Commit `99f1e6c`.
 
+### 84. Consolidação do ciclo 2
+
+**Prompt:** "Sim, siga com a consolidação".
+
+**Ações:** Consolidação como novos artefatos (os do ciclo 1 permanecem
+imutáveis): **(1)** `reviews/resultados-consolidados-ciclo2.csv` — 22
+linhas, mesmas 23 colunas do CSV do ciclo 1, com símbolos RQ/QA extraídos
+por script dos próprios pareceres (validação: 22/22 consistentes com os
+relatórios dos agentes); **(2)** `reviews/charts-ciclo2/` — 5 SVGs gerados
+com o MESMO `scripts/gen_charts.py` do ciclo 1, rodado em cópia
+parametrizada apontando para o CSV do ciclo 2; **(3)**
+`reviews/graficos-ciclo2.md` — galeria com leitura (lacuna sistemática:
+RQ3/QA3, evidência empírica); **(4)** `reviews/PRISMA.md` — seção Ciclo 2
+substituída pelo diagrama Mermaid completo do fluxo: 49 → 49 triados
+(emenda) → −27 triagem → 22 avaliados → −2 → 20 incluídos → **corpus
+consolidado 53** (33 + 20; 7 fundacionais condicionais no total: P24, P33
+
+- P52/P54/P72/P77/P79); **(5)** `reviews/DASHBOARD.md` — nova seção
+  "Ciclo 2" com números-chave (SCORE_RQ médio 3,16/mediana 3,5; SCORE_QA
+  2,75/2,75; bandas 11 Alta · 10 Média · 1 Baixa) e links; **(6)** README
+  raiz e reviews/README atualizados. O relatório de síntese
+  (`relatorio-sintese.md`) do ciclo 1 NÃO foi alterado — a síntese
+  consolidada dos dois ciclos é etapa futura. Links verificados (0
+  quebrados). Commit `891edb1`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -700,6 +725,10 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `reviews/review-P43.md` … `review-P88.md` — 22 pareceres do ciclo 2
   (20 Incluir c/ ressalvas · 2 Excluir); tabela-síntese na seção Ciclo 2
   de `reviews/README.md`.
+- `reviews/resultados-consolidados-ciclo2.csv`, `reviews/charts-ciclo2/`
+  (5 SVGs) e `reviews/graficos-ciclo2.md` — consolidação do ciclo 2;
+  `reviews/PRISMA.md` com o diagrama do ciclo 2 (corpus consolidado 53) e
+  `reviews/DASHBOARD.md` com a seção Ciclo 2.
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -733,5 +762,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `9fc207d` | 2026-09-09 | Generate 22 cycle-2 evaluation prompts for screening-approved candidates                      |
 | `c618846` | 2026-09-09 | Log cycle-2 evaluation prompts (item 82) in MEMORY.md                                         |
 | `99f1e6c` | 2026-09-10 | Add 22 cycle-2 review reports: 20 include-with-caveats, 2 exclude                             |
+| `85179ca` | 2026-09-10 | Log cycle-2 review reports (item 83) in MEMORY.md                                             |
+| `891edb1` | 2026-09-10 | Consolidate cycle 2: CSV, charts, PRISMA flow, dashboard; corpus 53                           |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
