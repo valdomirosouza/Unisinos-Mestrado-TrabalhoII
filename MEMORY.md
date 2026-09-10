@@ -572,6 +572,30 @@ sobrevive, percentil 91% → A1). `Papers_Index.csv` e `papers-ciclo2.csv`
 commitados e indexados no README raiz (árvore + seção Insumos). Commit
 `c96334e`.
 
+### 81. Passo 2 do ciclo 2 — triagem PRISMA (P41–P89)
+
+**Prompt:** "Sim, siga com a triagem PRISMA dos elegíveis, por enquanto
+vamos manter os papers com A3, A4 e B1 do Qualis e Q3 do SLR, incluindo
+ressalvas por conta do estrato Qualis e SJR."
+
+**Ações:** Criado `reviews/triagem-ciclo2.md` aplicando os critérios
+I1–I6/E1–E5 do PRISMA.md aos 49 candidatos, com **emenda de protocolo
+(decisão do autor, 2026-09-09)**: I3/I4 não excluem neste ciclo — P62, P69
+(A3), P81 (A4) e P86 (B1 + SJR Q3) mantidos **com ressalva de estrato** (os
+vereditos estritos permanecem em papers-ciclo2.csv como registro).
+Diferencial metodológico: a triagem usa a **extração PICOC de leitura
+integral (item 78)** como evidência, permitindo exclusão temática
+antecipada auditável (no ciclo 1, E2/E3 só caíam após avaliação integral).
+**Resultado: 22 aprovados para avaliação integral** (18 sem ressalva + os 4
+de estrato; inclui o cluster de carga cognitiva P62/P69/P81/P85 e 5
+candidatos a fundacionais P52/P54/P72/P77/P79) e **27 excluídos** — E2
+não-agêntico = 19 (precedentes P26/P29/P30) · E3 fora de domínio = 8
+(manutenção industrial, física de partículas, vídeo, manufatura; precedente
+P38). Cada linha das tabelas traz evidência PICOC e flags para os
+pareceres. Indexado em reviews/README.md (seção "Ciclo 2"), PRISMA.md
+(nota de versão, sem reescrever o diagrama do ciclo 1) e README raiz;
+links verificados (0 quebrados). Commit `df57b9c`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -586,6 +610,14 @@ commitados e indexados no README raiz (árvore + seção Insumos). Commit
 - Os prompts históricos `prompts/prompt-P20..P40.md` NÃO recebem o novo
   padrão: são registro imutável do que foi enviado ao revisor externo no
   ciclo 1. O template vivo correspondente é `prompt-template.md` (raiz).
+- **Emenda de protocolo do ciclo 2 (2026-09-09):** os critérios I3 (Qualis
+  A1–A2) e I4 (SJR Q1–Q2) não excluem na triagem do ciclo 2 — estudos fora
+  do estrato (P62, P69, P81, P86) seguem para avaliação **com ressalva de
+  estrato obrigatória** nos pareceres/inclusões. Vale até nova decisão do
+  autor.
+- Triagem do ciclo 2 pode excluir por E2/E3 já na triagem (antes da
+  avaliação integral) **desde que ancorada na extração PICOC de leitura
+  integral** e nos precedentes do ciclo 1 (P26/P29/P30/P38).
 - Referências históricas a "PICOC v1.1.0" na documentação designam a regra de
   Comparison (baseline empírico), não a versão corrente do prompt, e não são
   atualizadas quando o prompt evolui.
@@ -619,6 +651,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `papers-ciclo2.csv` — elegibilidade Etapa 1 do ciclo 2 (P41–P89):
   citações OpenAlex/Crossref (2026-09-09), Qualis derivado do percentil
   (regra CAPES calibrada em papers.csv), 45 elegíveis · 4 inelegíveis.
+- `reviews/triagem-ciclo2.md` — triagem PRISMA do ciclo 2: 22 aprovados
+  (4 com ressalva de estrato) · 27 excluídos (E2 = 19 · E3 = 8), com
+  evidência PICOC; `reviews/PRISMA.md` ganhou nota de versão do ciclo 2.
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -646,5 +681,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `906b582` | 2026-09-07 | Log cycle-2 PICOC extraction (item 78) in MEMORY.md                                           |
 | `57aaa88` | 2026-09-09 | Log cycle-2 workflow-order consultation (item 79) in MEMORY.md                                |
 | `c96334e` | 2026-09-09 | Add cycle-2 stage-1 eligibility (papers-ciclo2.csv) from Papers_Index.csv                     |
+| `560b874` | 2026-09-09 | Log cycle-2 stage-1 eligibility (item 80) in MEMORY.md                                        |
+| `df57b9c` | 2026-09-09 | Add cycle-2 PRISMA screening: 22 approved, 27 excluded, strata amendment                      |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
