@@ -55,7 +55,33 @@ Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunt
 ## Ciclo 2 (em andamento)
 
 - [`triagem-ciclo2.md`](triagem-ciclo2.md) — **triagem PRISMA dos candidatos P41–P89** (2026-09-09), com evidência da extração PICOC de leitura integral: 49 triados → **22 aprovados para avaliação integral** (4 com ressalva de estrato, por emenda de protocolo) · 27 excluídos (E2 = 19 · E3 = 8). Elegibilidade bibliométrica em [`../papers-ciclo2.csv`](../papers-ciclo2.csv).
-- **Prompts de avaliação do ciclo 2** — 22 prompts preenchidos (`../prompts/prompt-P43.md` … `prompt-P88.md`) gerados do [template](../prompts/prompt-chatgpt-consultation.md) com INSUMOS do [`../papers-ciclo2.csv`](../papers-ciclo2.csv) (Qualis derivado do percentil) e a linha `ressalvas_triagem` transcrevendo as flags da triagem (incl. as 4 ressalvas de estrato). Pareceres `review-P43.md`… serão produzidos executando cada prompt contra o PDF.
+- **Prompts de avaliação do ciclo 2** — 22 prompts preenchidos (`../prompts/prompt-P43.md` … `prompt-P88.md`) gerados do [template](../prompts/prompt-chatgpt-consultation.md) com INSUMOS do [`../papers-ciclo2.csv`](../papers-ciclo2.csv) (Qualis derivado do percentil) e a linha `ressalvas_triagem` transcrevendo as flags da triagem (incl. as 4 ressalvas de estrato).
+- **Pareceres do ciclo 2** (2026-09-10) — um `review-Pxx.md` por estudo, mesmo formato do ciclo 1 (Tabelas A/B/C + parecer). Resultado: **20 Incluir c/ ressalvas · 2 Excluir**:
+
+| ID                   | Estudo (resumo)                      | SCORE_RQ | SCORE_QA | Banda | Recomendação                                        |
+| -------------------- | ------------------------------------ | :------: | :------: | ----- | --------------------------------------------------- |
+| [P43](review-P43.md) | Agentic AIOps framework              |   3.0    |   2.0    | Média | Incluir c/ ressalvas (sem evidência empírica)       |
+| [P52](review-P52.md) | LLMs in Cybersecurity (SLR)          |   3.5    |   2.5    | Média | Incluir c/ ressalvas (fundacional)                  |
+| [P53](review-P53.md) | LLM + Bayesian nets RCA cloud-native |   3.5    |   3.0    | Alta  | Incluir c/ ressalvas                                |
+| [P54](review-P54.md) | LLM Reasoning → AI Agents (review)   |   4.5    |   2.0    | Média | Incluir c/ ressalvas (fundacional)                  |
+| [P55](review-P55.md) | Telemetry & Agentic AI (óptica)      |   4.5    |   2.5    | Média | Incluir c/ ressalvas (mapeamento)                   |
+| [P62](review-P62.md) | Neuroergonomics mental workload      |   2.0    |   1.5    | Média | Incluir c/ ressalvas ⚠️ estrato A3 · cognitive load |
+| [P63](review-P63.md) | Chatbot Usability Scale (BUS-15)     |   2.0    |   3.5    | Alta  | Incluir c/ ressalvas (instrumento)                  |
+| [P69](review-P69.md) | WAUC mental workload database        |   1.0    |   3.5    | Alta  | Incluir c/ ressalvas ⚠️ estrato A3 · cognitive load |
+| [P72](review-P72.md) | LLMs Vulnerability → Defense         |   3.5    |   1.5    | Média | Incluir c/ ressalvas (fundacional)                  |
+| [P73](review-P73.md) | Alert fatigue AI-assisted SIEM       |   3.5    |   4.0    | Alta  | Incluir c/ ressalvas (agência limitada)             |
+| [P74](review-P74.md) | MLOps → LLMOps (review)              |   3.0    |   1.0    | Baixa | Incluir c/ ressalvas (fonte conceitual LLMOps)      |
+| [P76](review-P76.md) | SOC hyper-automation Agentic AI      |   4.0    |   2.5    | Média | Incluir c/ ressalvas (PoC; MTTR vs. literatura)     |
+| [P77](review-P77.md) | GenAI in cybersecurity (review)      |   3.5    |   1.5    | Média | Incluir c/ ressalvas (fundacional)                  |
+| [P78](review-P78.md) | RAG + LLM incident timeline          |   4.0    |   3.5    | Alta  | Incluir c/ ressalvas                                |
+| [P79](review-P79.md) | AI-Augmented SOC survey              |   5.0    |   3.0    | Alta  | Incluir c/ ressalvas (fundacional)                  |
+| [P81](review-P81.md) | Control room operator DSS            |   3.0    |   3.5    | Alta  | Incluir c/ ressalvas ⚠️ estrato A4 · HITL/decisão   |
+| [P82](review-P82.md) | AI Agent predictive maintenance      |   3.5    |   2.5    | Média | Incluir c/ ressalvas (conceitual; domínio)          |
+| [P83](review-P83.md) | Wazuh RAG copilot SOC                |   3.5    |   2.5    | Média | Incluir c/ ressalvas                                |
+| [P85](review-P85.md) | Fadiga operadores VTS                |   0.5    |   3.5    | Alta  | **Excluir** (sem aderência às RQs)                  |
+| [P86](review-P86.md) | Distributed tracing rule-induction   |   2.0    |   3.0    | Alta  | **Excluir** ⚠️ estrato B1+Q3 · não-agêntico         |
+| [P87](review-P87.md) | LLM agentic incident-report (rede)   |   3.5    |   3.5    | Alta  | Incluir c/ ressalvas                                |
+| [P88](review-P88.md) | MAS self-healing descentralizado     |   3.0    |   4.0    | Alta  | Incluir c/ ressalvas (não-LLM, análogo P25)         |
 
 ## Padrões e observações para a síntese
 
