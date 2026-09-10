@@ -596,6 +596,22 @@ pareceres. Indexado em reviews/README.md (seção "Ciclo 2"), PRISMA.md
 (nota de versão, sem reescrever o diagrama do ciclo 1) e README raiz;
 links verificados (0 quebrados). Commit `df57b9c`.
 
+### 82. Prompts de avaliação do ciclo 2 (22 aprovados)
+
+**Prompt:** "go ahead" (gerar os prompts da Etapa 2 para os 22 aprovados).
+
+**Ações:** Gerados `prompts/prompt-P43.md` … `prompt-P88.md` (22 arquivos) a
+partir do template vivo `prompts/prompt-chatgpt-consultation.md`, por
+script: CONTEXTO ajustado ao ciclo 2 (corpus prévio P01–P40/33 incluídos;
+IDs a partir de P41), INSUMOS preenchidos com `papers-ciclo2.csv` (título,
+arquivo PDF conferido em disco, **Qualis derivado do percentil com a regra
+CAPES explicitada na própria linha**, SJR) e linha nova `ressalvas_triagem`
+transcrevendo as flags de `reviews/triagem-ciclo2.md` — incluindo a
+ressalva de estrato obrigatória em P62/P69 (A3), P81 (A4) e P86 (B1+Q3).
+Indexados no README raiz (árvore de `prompts/`) e na seção Ciclo 2 de
+`reviews/README.md`. Próximo: executar cada prompt contra o PDF para
+produzir `reviews/review-P43.md`…. Commit `9fc207d`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -654,6 +670,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `reviews/triagem-ciclo2.md` — triagem PRISMA do ciclo 2: 22 aprovados
   (4 com ressalva de estrato) · 27 excluídos (E2 = 19 · E3 = 8), com
   evidência PICOC; `reviews/PRISMA.md` ganhou nota de versão do ciclo 2.
+- `prompts/prompt-P43.md` … `prompt-P88.md` — 22 prompts de avaliação do
+  ciclo 2 preenchidos (INSUMOS + ressalvas_triagem).
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -683,5 +701,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `c96334e` | 2026-09-09 | Add cycle-2 stage-1 eligibility (papers-ciclo2.csv) from Papers_Index.csv                     |
 | `560b874` | 2026-09-09 | Log cycle-2 stage-1 eligibility (item 80) in MEMORY.md                                        |
 | `df57b9c` | 2026-09-09 | Add cycle-2 PRISMA screening: 22 approved, 27 excluded, strata amendment                      |
+| `9defea8` | 2026-09-09 | Log cycle-2 PRISMA screening (item 81) in MEMORY.md                                           |
+| `9fc207d` | 2026-09-09 | Generate 22 cycle-2 evaluation prompts for screening-approved candidates                      |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
