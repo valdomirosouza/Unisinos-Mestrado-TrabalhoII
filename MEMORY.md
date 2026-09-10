@@ -548,6 +548,30 @@ triagem neste ciclo (inverso do ciclo 1) e atua como insumo do passo 2;
 `agentic_ir_corpus-claude-research.xlsx` (não rastreado) pode conter os
 insumos do passo 1.
 
+### 80. Passo 1 do ciclo 2 — bibliometria e elegibilidade (P41–P89)
+
+**Prompt:** "Sim, comece pelo passo 1 usando o Papers_Index.csv".
+
+**Ações:** Lido `Papers_Index.csv` (88 linhas P01–P89; título, autores, ano,
+veículo, cluster, tipo, citações de 2026-09-06, DOI, percentil Scopus, SJR,
+ISSN, arquivo) — cobertura 49/49 do ciclo 2, sem campos vazios. Verificação
+externa: **citações OpenAlex e Crossref buscadas por DOI para os 49**
+(2026-09-09; 49/49 resolvidos nas duas fontes, nenhum zero/zero; anos
+conferem com OpenAlex). Scopus ficou **PENDENTE** (sem chave de API na
+sessão — a anterior deveria ser regenerada). **Qualis:** o qualis.pages.dev
+não expõe dataset direto (backend Supabase); em vez disso o estrato foi
+**derivado do percentil Scopus pela regra CAPES 2025-2028** (A1 ≥ 87,5% ·
+A2 ≥ 75% · A3 ≥ 62,5% · A4 ≥ 50% · B1 ≥ 37,5%…), **calibrada e validada
+sem exceção nos 39 pares percentil×Qualis verificados de `papers.csv`**.
+Gerado **`papers-ciclo2.csv`** (16 colunas, incl. veredito de elegibilidade
+pelos critérios do ciclo 1: ano ≥ 2020, veículo, Citações ≥ 1, SJR Q1–Q2,
+Qualis A1–A2). **Resultado: 45 ELEGÍVEIS · 4 INELEGÍVEIS** — P62 e P69
+(Qualis A3, percentil 74%), P81 (A4, 60%), P86 (B1, 47% + SJR Q3); nota:
+3 dos 4 inelegíveis são do cluster humano/carga cognitiva do item 78 (P85
+sobrevive, percentil 91% → A1). `Papers_Index.csv` e `papers-ciclo2.csv`
+commitados e indexados no README raiz (árvore + seção Insumos). Commit
+`c96334e`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -590,6 +614,11 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `picoc/picoc-results-consolidated-P41-P89-Claude.md` — extração PICOC do
   ciclo 2 (49 candidatos, prompt v1.3.0, pré-triagem) com síntese
   transversal e apêndice de raciocínio.
+- `Papers_Index.csv` — índice P01–P89 do usuário (insumo do ciclo 2),
+  commitado.
+- `papers-ciclo2.csv` — elegibilidade Etapa 1 do ciclo 2 (P41–P89):
+  citações OpenAlex/Crossref (2026-09-09), Qualis derivado do percentil
+  (regra CAPES calibrada em papers.csv), 45 elegíveis · 4 inelegíveis.
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -614,5 +643,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `3c76e22` | 2026-09-07 | Add Kitchenham (2009) SLR methodology reference paper to docs/                                |
 | `d9e023d` | 2026-09-07 | Log Kitchenham (2009) PDF commit (item 77) in MEMORY.md                                       |
 | `adeeb78` | 2026-09-07 | Add cycle-2 PICOC extraction (P41-P89) with cross-cutting synthesis                           |
+| `906b582` | 2026-09-07 | Log cycle-2 PICOC extraction (item 78) in MEMORY.md                                           |
+| `57aaa88` | 2026-09-09 | Log cycle-2 workflow-order consultation (item 79) in MEMORY.md                                |
+| `c96334e` | 2026-09-09 | Add cycle-2 stage-1 eligibility (papers-ciclo2.csv) from Papers_Index.csv                     |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
