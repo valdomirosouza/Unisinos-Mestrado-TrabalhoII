@@ -15,7 +15,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 | Os dados crus              | 🧮 [Resultados consolidados (CSV)](reviews/resultados-consolidados.csv)                        |
 | Os gráficos                | 🖼️ [Galeria](reviews/graficos.md) · [como criá-los](reviews/COMO-CRIAR-GRAFICOS.md)            |
 | Um estudo específico       | 📚 [Índice de pareceres](reviews/README.md) ou a tabela abaixo                                 |
-| As fichas de extração      | 📑 [Índice das fichas P01–P40](report/README.md)                                               |
+| As fichas de extração      | 📑 [Índice das fichas P01–P40 + ciclo 2](report/README.md)                                               |
 | A extração PICOC           | 🧩 [Tabela consolidada P01–P40](picoc/picoc-results-consolidated-P01-P40-Claude.md)            |
 | O fluxo de seleção         | 🔀 [Diagrama PRISMA](reviews/PRISMA.md)                                                        |
 
@@ -82,8 +82,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── report/                       ← Etapa 3: fichas de extração estruturada
 │   ├── README.md                ← índice das fichas (P01–P40)
 │   ├── paper-extraction-prompt-template.md ← template de extração (11 campos, Kitchenham)
-│   ├── Pxx-extraction.csv       ← 39 fichas em inglês
-│   ├── Pxx-extraction-ptBR.csv  ← 39 fichas em português (termos técnicos em EN)
+│   ├── Pxx-extraction.csv       ← 59 fichas em inglês (39 corpus + 20 ciclo 2)
+│   ├── Pxx-extraction-ptBR.csv  ← 59 fichas em português (termos técnicos em EN)
 │   └── consolidated-extraction[-ptBR].csv ← consolidados (uma linha por artigo)
 ├── picoc/                        ← Etapa 4: extração PICOC (delimitação de escopo)
 │   ├── picoc-extraction-prompt.md ← prompt de extração PICOC (Kitchenham; Petticrew & Roberts)
@@ -143,7 +143,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 ### Extração de dados (Etapa 3)
 
-- [`report/`](report/) — **fichas de extração estruturada** dos 39 artigos (metodologia Kitchenham, 11 campos com foco em MTTD/MTTR e Agentic AI). Uma ficha por artigo em inglês (`Pxx-extraction.csv`) e português (`Pxx-extraction-ptBR.csv`), mais os consolidados [`consolidated-extraction.csv`](report/consolidated-extraction.csv) / [`-ptBR`](report/consolidated-extraction-ptBR.csv). Template em [`report/paper-extraction-prompt-template.md`](report/paper-extraction-prompt-template.md). Ver [`report/README.md`](report/README.md).
+- [`report/`](report/) — **fichas de extração estruturada** dos 39 artigos do corpus e dos **20 incluídos do ciclo 2** (metodologia Kitchenham, 11 campos com foco em MTTD/MTTR e Agentic AI). Uma ficha por artigo em inglês (`Pxx-extraction.csv`) e português (`Pxx-extraction-ptBR.csv`), mais os consolidados [`consolidated-extraction.csv`](report/consolidated-extraction.csv) / [`-ptBR`](report/consolidated-extraction-ptBR.csv). Template em [`report/paper-extraction-prompt-template.md`](report/paper-extraction-prompt-template.md). Ver [`report/README.md`](report/README.md).
 
 ### Extração PICOC (Etapa 4)
 

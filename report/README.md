@@ -1,4 +1,4 @@
-# Fichas de Extração — RSL Agentic AI Copilot (P01–P40)
+# Fichas de Extração — RSL Agentic AI Copilot (P01–P40 + Ciclo 2)
 
 > 🧭 **Navegação:** [🏠 README raiz](../README.md) · [📚 Pareceres](../reviews/README.md) · [📊 Dashboard](../reviews/DASHBOARD.md)
 
@@ -63,9 +63,37 @@ Distribuição: **2 High · 26 Medium · 11 Low**.
 **Comparison (PICOC v1.1.0)** — status final do elemento Comparison após a [regra de protocolo](../picoc/picoc-extraction-prompt.md) aplicada na [comparação entre avaliadores](../picoc/picoc-comparacao-avaliadores.md): ✅ DECLARED = baseline empírico presente · ⚪ N/A (conceitual) = apenas contraste conceitual/paradigmático · ⚪ N/A (mapeamento) = estudo de mapeamento sem comparação.
 Distribuição: **26 DECLARED · 11 N/A conceitual · 2 N/A mapeamento** (dados em [`picoc-comparacao-avaliadores.csv`](../picoc/picoc-comparacao-avaliadores.csv), coluna `Comparison_Final_Protocolo`).
 
+## Índice das fichas — Ciclo 2 (20 estudos incluídos, P43–P88)
+
+Fichas dos **20 estudos incluídos no ciclo 2** ([triagem](../reviews/triagem-ciclo2.md) → [pareceres](../reviews/README.md)), geradas em 2026-09-10 com o mesmo template (v1.1.0). Consolidados do ciclo 2 (uma linha por artigo): [`consolidated-extraction-ciclo2.csv`](consolidated-extraction-ciclo2.csv) (EN) · [`consolidated-extraction-ciclo2-ptBR.csv`](consolidated-extraction-ciclo2-ptBR.csv) (pt-BR). Relevância: **2 High (P76, P79) · 15 Medium · 3 Low** — P76 é o único estudo de todo o corpus que mede MTTR nominalmente (vs. literatura); a coluna Comparison vem da [extração PICOC do ciclo 2](../picoc/picoc-results-consolidated-P41-P89-Claude.md).
+
+| ID  | Estudo | PDF | Extração (EN) | Extração (pt-BR) | Relevância | Comparison (PICOC v1.1.0) |
+| --- | ------ | --- | ------------- | ---------------- | ---------- | ------------------------- |
+| P43 | Agentic AIOps Framework | [PDF](../docs/P43_A_Practical_Approach_to_Defining_a_Framework_for_Developing_an_Agentic_AIOps_System.pdf) | [EN](P43-extraction.csv) | [pt-BR](P43-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (conceitual) |
+| P52 | LLMs in Cybersecurity (SLR) | [PDF](../docs/P52_Application_of_Large_Language_Models_in_Cybersecurity_A_Systematic_Literature_Review.pdf) | [EN](P52-extraction.csv) | [pt-BR](P52-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (mapeamento) |
+| P53 | LLM + Bayesian Nets RCA | [PDF](../docs/P53_Anomaly_Detection_and_Root_Cause_Analysis_in_Cloud-Native_Environments_Using_Large_Language_Models_and_Bayesian_Networks.pdf) | [EN](P53-extraction.csv) | [pt-BR](P53-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (conceitual) |
+| P54 | LLM Reasoning → AI Agents | [PDF](../docs/P54_From_LLM_Reasoning_to_Autonomous_AI_Agents_A_Comprehensive_Review.pdf) | [EN](P54-extraction.csv) | [pt-BR](P54-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (mapeamento) |
+| P55 | Telemetry & Agentic AI (Óptica) | [PDF](../docs/P55_Telemetry_and_Agentic_AI_Foundations_for_Optical_Network_Automation.pdf) | [EN](P55-extraction.csv) | [pt-BR](P55-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (mapeamento) |
+| P62 | Neuroergonomics Mental Workload | [PDF](../docs/P62_A_Neuroergonomics_Approach_to_Mental_Workload_Engagement_and_Human_Performance.pdf) | [EN](P62-extraction.csv) | [pt-BR](P62-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (conceitual) |
+| P63 | Chatbot Usability Scale (BUS-15) | [PDF](../docs/P63_The_Chatbot_Usability_Scale_the_Design_and_Pilot_of_a_Usability_Scale_for_Interaction_with_AI-Based_%20Conversational_Agents.pdf) | [EN](P63-extraction.csv) | [pt-BR](P63-extraction-ptBR.csv) | ⚪ Low | ✅ DECLARED (parcial) |
+| P69 | WAUC Mental Workload Database | [PDF](../docs/P69_WAUC_A_Multi-Modal_Database_for_Mental_Workload_Assessment_Under_Physical_Activity.pdf) | [EN](P69-extraction.csv) | [pt-BR](P69-extraction-ptBR.csv) | ⚪ Low | ✅ DECLARED (parcial) |
+| P72 | LLMs Vulnerability → Defense | [PDF](../docs/P72_From_Vulnerability_to_Defense_The_Role_of_Large_Language_Models_in_Enhancing_Cybersecurity.pdf) | [EN](P72-extraction.csv) | [pt-BR](P72-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (mapeamento) |
+| P73 | Alert Fatigue AI-Assisted SIEM | [PDF](../docs/P73_Breaking_Alert_Fatigue_AI-Assisted_SIEM_Framework_for_Effective_Incident_Response.pdf) | [EN](P73-extraction.csv) | [pt-BR](P73-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED (parcial) |
+| P74 | MLOps → LLMOps | [PDF](../docs/P74_Transitioning_from_MLOps_to_LLMOps_Navigating_the_Unique_Challenges_of_Large_Language_Models.pdf) | [EN](P74-extraction.csv) | [pt-BR](P74-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (conceitual) |
+| P76 | SOC Hyper-Automation Agentic AI | [PDF](../docs/P76_Toward_Robust_Security_Orchestration_and_Automated_Response_in_Security_Operations_Centers_with_a_Hyper-Automation_Approach_Using_Agentic_AI.pdf) | [EN](P76-extraction.csv) | [pt-BR](P76-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (parcial) |
+| P77 | GenAI in Cybersecurity | [PDF](../docs/P77_Generative_AI_revolution_in_cybersecurity_a_comprehensive_review_of_threat_intelligence_and_operations.pdf) | [EN](P77-extraction.csv) | [pt-BR](P77-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (mapeamento) |
+| P78 | RAG + LLM Incident Timeline | [PDF](../docs/P78_Advancing_Cyber_Incident_Timeline_Analysis_Through_Retrieval-Augmented_Generation_and_Large_Language_Models.pdf) | [EN](P78-extraction.csv) | [pt-BR](P78-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (conceitual) |
+| P79 | AI-Augmented SOC Survey | [PDF](../docs/P79_AI_Augmented_SOC_A_Survey_of_LLMs_and_Agents_for_Security_Automation.pdf) | [EN](P79-extraction.csv) | [pt-BR](P79-extraction-ptBR.csv) | 🟢 High | ⚪ N/A (mapeamento) |
+| P81 | Control Room Operator DSS | [PDF](../docs/P81_Enhancing_Control_Room_Operator_Decision_Making.pdf) | [EN](P81-extraction.csv) | [pt-BR](P81-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED |
+| P82 | AI Agent Predictive Maintenance | [PDF](../docs/P82_AI_Agent-Enabled_Predictive_Maintenance_Conceptual_Proposal_and_Basic_Framework.pdf) | [EN](P82-extraction.csv) | [pt-BR](P82-extraction-ptBR.csv) | ⚪ Low | ⚪ N/A (conceitual) |
+| P83 | Wazuh RAG Copilot SOC | [PDF](../docs/P83_Enhancing_SOC_Wazuh_Security_Event_Response_with_Retrieval-Augmented-Generation-Driven_Copilot.pdf) | [EN](P83-extraction.csv) | [pt-BR](P83-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED (parcial) |
+| P87 | LLM Agentic Incident-Report | [PDF](../docs/P87_An_LLM-Based_Agentic_Network_Traffic_Incident-Report_Approach_Towards_Explainable-AI_Network_Defense.pdf) | [EN](P87-extraction.csv) | [pt-BR](P87-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED (parcial) |
+| P88 | MAS Self-Healing Descentralizado | [PDF](../docs/P88_A%20decentralised_self-healing_approach_for_network_topology_maintenance.pdf) | [EN](P88-extraction.csv) | [pt-BR](P88-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED |
+
 ## Arquivos desta pasta
 
 - [`paper-extraction-prompt-template.md`](paper-extraction-prompt-template.md) — template do prompt de extração (regras, schema de 11 campos, formato de saída).
-- `Pxx-extraction.csv` — 39 fichas em inglês.
-- `Pxx-extraction-ptBR.csv` — 39 fichas em português (termos técnicos/acrônimos em inglês).
-- [`consolidated-extraction.csv`](consolidated-extraction.csv) / [`consolidated-extraction-ptBR.csv`](consolidated-extraction-ptBR.csv) — relatórios consolidados (uma linha por artigo).
+- `Pxx-extraction.csv` — 59 fichas em inglês (39 do corpus P01–P40 + 20 incluídos do ciclo 2).
+- `Pxx-extraction-ptBR.csv` — 59 fichas em português (termos técnicos/acrônimos em inglês).
+- [`consolidated-extraction.csv`](consolidated-extraction.csv) / [`consolidated-extraction-ptBR.csv`](consolidated-extraction-ptBR.csv) — consolidados do ciclo 1 (39 artigos).
+- [`consolidated-extraction-ciclo2.csv`](consolidated-extraction-ciclo2.csv) / [`consolidated-extraction-ciclo2-ptBR.csv`](consolidated-extraction-ciclo2-ptBR.csv) — consolidados do ciclo 2 (20 incluídos).
