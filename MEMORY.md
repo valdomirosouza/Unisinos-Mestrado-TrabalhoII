@@ -662,6 +662,29 @@ consolidado 53** (33 + 20; 7 fundacionais condicionais no total: P24, P33
   consolidada dos dois ciclos é etapa futura. Links verificados (0
   quebrados). Commit `891edb1`.
 
+### 85. Fichas de extração do ciclo 2 (20 incluídos)
+
+**Prompt:** "Agora atualize as fichas de extração em report/ para os 20
+incluídos".
+
+**Ações:** Fan-out de 20 agentes (ondas de 8/8/4), cada um lendo o template
+`report/paper-extraction-prompt-template.md` (v1.1.0) + o PDF integral e
+gravando as DUAS fichas (`PNN-extraction.csv` EN e `-ptBR.csv`) no formato
+do ciclo 1 (13 linhas RFC 4180, âncoras de evidência nos campos 4–9).
+Validação por script: **40/40 CSVs válidos** (linhas, colunas, nomes de
+campo, Paper ID). Consolidados novos gerados a partir das fichas:
+`consolidated-extraction-ciclo2.csv` + `-ptBR.csv` (20 × 12 colunas; os do
+ciclo 1 permanecem imutáveis). **Relevância: 2 High (P76, P79) · 15 Medium
+· 3 Low (P63, P69, P82)** — P76 segue como o único estudo de todo o corpus
+que mede MTTR nominalmente (~1–1,5 min por fase, comparação vs. Microsoft
+Copilot for Security da literatura); P79 traz evidência secundária rica
+(CyberAlly: MTTR 8 h → 90 min; GreyMatter: 98% dos alertas automatizados).
+Nota de fidelidade do P79: contagens PRISMA do próprio artigo não fecham
+aritmeticamente — extraídas com marcação `⚠ Ambiguous`, sem correção.
+`report/README.md` ganhou a seção "Índice das fichas — Ciclo 2" (tabela com
+PDF/EN/pt-BR/Relevância/Comparison PICOC) e o README raiz atualizou as
+contagens (59 fichas). Links verificados (0 quebrados). Commit `d527e60`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -729,6 +752,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
   (5 SVGs) e `reviews/graficos-ciclo2.md` — consolidação do ciclo 2;
   `reviews/PRISMA.md` com o diagrama do ciclo 2 (corpus consolidado 53) e
   `reviews/DASHBOARD.md` com a seção Ciclo 2.
+- `report/P43…P88-extraction[.csv|-ptBR.csv]` (40 fichas) +
+  `report/consolidated-extraction-ciclo2[.csv|-ptBR.csv]` — extração
+  estruturada dos 20 incluídos do ciclo 2; índice no `report/README.md`.
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -764,5 +790,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `99f1e6c` | 2026-09-10 | Add 22 cycle-2 review reports: 20 include-with-caveats, 2 exclude                             |
 | `85179ca` | 2026-09-10 | Log cycle-2 review reports (item 83) in MEMORY.md                                             |
 | `891edb1` | 2026-09-10 | Consolidate cycle 2: CSV, charts, PRISMA flow, dashboard; corpus 53                           |
+| `b8bbc1d` | 2026-09-10 | Log cycle-2 consolidation (item 84) in MEMORY.md                                              |
+| `d527e60` | 2026-09-10 | Add extraction sheets (EN+ptBR) and consolidated CSVs for 20 cycle-2 included studies         |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
