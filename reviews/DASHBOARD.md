@@ -17,7 +17,7 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 
 ## 🔄 Ciclo 2 (P41–P89) — concluído em 2026-09-10
 
-Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo autor. Artefatos: [Triagem PRISMA](triagem-ciclo2.md) · [Fluxo PRISMA do ciclo 2](PRISMA.md) · [CSV consolidado](resultados-consolidados-ciclo2.csv) · [Gráficos](graficos-ciclo2.md) · [Tabela-síntese e pareceres](README.md) · [Elegibilidade](../papers-ciclo2.csv) · [PICOC](../picoc/picoc-results-consolidated-P41-P89-Claude.md).
+Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo autor. Artefatos: 📄 **[Síntese consolidada dos 2 ciclos](relatorio-sintese-consolidado.md)** ([PDF](relatorio-sintese-consolidado.pdf)) · [Triagem PRISMA](triagem-ciclo2.md) · [Fluxo PRISMA do ciclo 2](PRISMA.md) · [CSV consolidado](resultados-consolidados-ciclo2.csv) · [Gráficos](graficos-ciclo2.md) · [Tabela-síntese e pareceres](README.md) · [Elegibilidade](../papers-ciclo2.csv) · [PICOC](../picoc/picoc-results-consolidated-P41-P89-Claude.md) · [Fichas de extração](../report/README.md).
 
 | Métrica (ciclo 2)                      |                                                   Valor |
 | -------------------------------------- | ------------------------------------------------------: |

@@ -8,16 +8,16 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 
 ## 🚀 Comece por aqui
 
-| Quero…                     | Abra                                                                                           |
-| -------------------------- | ---------------------------------------------------------------------------------------------- |
-| Uma visão geral interativa | 📊 **[Dashboard de resultados](reviews/DASHBOARD.md)**                                         |
-| A análise completa         | 📄 [Relatório de síntese](reviews/relatorio-sintese.md) · [PDF](reviews/relatorio-sintese.pdf) |
-| Os dados crus              | 🧮 [Resultados consolidados (CSV)](reviews/resultados-consolidados.csv)                        |
-| Os gráficos                | 🖼️ [Galeria](reviews/graficos.md) · [como criá-los](reviews/COMO-CRIAR-GRAFICOS.md)            |
-| Um estudo específico       | 📚 [Índice de pareceres](reviews/README.md) ou a tabela abaixo                                 |
-| As fichas de extração      | 📑 [Índice das fichas P01–P40 + ciclo 2](report/README.md)                                               |
-| A extração PICOC           | 🧩 [Tabela consolidada P01–P40](picoc/picoc-results-consolidated-P01-P40-Claude.md)            |
-| O fluxo de seleção         | 🔀 [Diagrama PRISMA](reviews/PRISMA.md)                                                        |
+| Quero…                     | Abra                                                                                                                                                                                      |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uma visão geral interativa | 📊 **[Dashboard de resultados](reviews/DASHBOARD.md)**                                                                                                                                    |
+| A análise completa         | 📄 **[Síntese consolidada — 2 ciclos](reviews/relatorio-sintese-consolidado.md)** · [PDF](reviews/relatorio-sintese-consolidado.pdf) · [síntese do ciclo 1](reviews/relatorio-sintese.md) |
+| Os dados crus              | 🧮 [Resultados consolidados (CSV)](reviews/resultados-consolidados.csv)                                                                                                                   |
+| Os gráficos                | 🖼️ [Galeria](reviews/graficos.md) · [como criá-los](reviews/COMO-CRIAR-GRAFICOS.md)                                                                                                       |
+| Um estudo específico       | 📚 [Índice de pareceres](reviews/README.md) ou a tabela abaixo                                                                                                                            |
+| As fichas de extração      | 📑 [Índice das fichas P01–P40 + ciclo 2](report/README.md)                                                                                                                                |
+| A extração PICOC           | 🧩 [Tabela consolidada P01–P40](picoc/picoc-results-consolidated-P01-P40-Claude.md)                                                                                                       |
+| O fluxo de seleção         | 🔀 [Diagrama PRISMA](reviews/PRISMA.md)                                                                                                                                                   |
 
 ## 📈 Resultado em um relance
 
