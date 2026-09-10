@@ -15,6 +15,23 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 | 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas.md)                                    | Quem cita quem entre P01–P40 (OpenAlex × Crossref × Scopus)                                                                                                           |
 | 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompts/prompt-chatgpt-consultation.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
+## 🔄 Ciclo 2 (P41–P89) — concluído em 2026-09-10
+
+Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo autor. Artefatos: [Triagem PRISMA](triagem-ciclo2.md) · [Fluxo PRISMA do ciclo 2](PRISMA.md) · [CSV consolidado](resultados-consolidados-ciclo2.csv) · [Gráficos](graficos-ciclo2.md) · [Tabela-síntese e pareceres](README.md) · [Elegibilidade](../papers-ciclo2.csv) · [PICOC](../picoc/picoc-results-consolidated-P41-P89-Claude.md).
+
+| Métrica (ciclo 2)                      |                                                   Valor |
+| -------------------------------------- | ------------------------------------------------------: |
+| Candidatos identificados               |                                                  **49** |
+| Excluídos na triagem (evidência PICOC) |                               **27** (E2 = 19 · E3 = 8) |
+| Avaliados integralmente                |                                                  **22** |
+| **Incluir c/ ressalvas**               |      **20** (5 fundacionais · 3 c/ ressalva de estrato) |
+| **Excluir** (pós-avaliação)            |                                        **2** (P85, P86) |
+| SCORE_RQ médio (mediana)               |                                          **3,16** (3,5) |
+| SCORE_QA médio (mediana)               |                                         **2,75** (2,75) |
+| Banda Alta / Média / Baixa             |                                         **11 / 10 / 1** |
+| Lacuna sistemática                     | **RQ3/QA3 (evidência empírica)** — nenhum Incluir pleno |
+| **Corpus consolidado (2 ciclos)**      |                                        **53** (33 + 20) |
+
 ## 📈 Números-chave
 
 | Métrica                               |                                               Valor |

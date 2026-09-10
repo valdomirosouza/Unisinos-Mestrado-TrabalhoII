@@ -52,7 +52,9 @@ Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunt
 
 [P20](ChatGPT/P20_avaliacao_RSL.md) · [P21](ChatGPT/P21_avaliacao_RSL.md) · [P22](ChatGPT/P22_avaliacao_RSL.md) · [P23](ChatGPT/P23_avaliacao_RSL.md) · [P24](ChatGPT/P24_avaliacao_RSL.md) · [P25](ChatGPT/P25_avaliacao_RSL.md) · [P26](ChatGPT/P26_avaliacao_RSL.md) · [P27](ChatGPT/P27_avaliacao_RSL.md) · [P28](ChatGPT/P28_avaliacao_RSL.md) · [P29](ChatGPT/P29_avaliacao_RSL.md) · [P30](ChatGPT/P30_avaliacao_RSL.md) · [P31](ChatGPT/P31_avaliacao_RSL.md) · [P32](ChatGPT/P32_avaliacao_RSL.md) · [P33](ChatGPT/P33_avaliacao_RSL.md) · [P34](ChatGPT/P34_avaliacao_RSL.md) · [P35](ChatGPT/P35_avaliacao_RSL.md) · [P37](ChatGPT/P37_avaliacao_RSL.md) · [P38](ChatGPT/P38_avaliacao_RSL.md) · [P39](ChatGPT/P39_avaliacao_RSL.md) · [P40](ChatGPT/P40_avaliacao_RSL.md)
 
-## Ciclo 2 (em andamento)
+## Ciclo 2 (concluído em 2026-09-10)
+
+> Consolidação: [`resultados-consolidados-ciclo2.csv`](resultados-consolidados-ciclo2.csv) · [`graficos-ciclo2.md`](graficos-ciclo2.md) · fluxo PRISMA do ciclo 2 em [`PRISMA.md`](PRISMA.md) · painel em [`DASHBOARD.md`](DASHBOARD.md).
 
 - [`triagem-ciclo2.md`](triagem-ciclo2.md) — **triagem PRISMA dos candidatos P41–P89** (2026-09-09), com evidência da extração PICOC de leitura integral: 49 triados → **22 aprovados para avaliação integral** (4 com ressalva de estrato, por emenda de protocolo) · 27 excluídos (E2 = 19 · E3 = 8). Elegibilidade bibliométrica em [`../papers-ciclo2.csv`](../papers-ciclo2.csv).
 - **Prompts de avaliação do ciclo 2** — 22 prompts preenchidos (`../prompts/prompt-P43.md` … `prompt-P88.md`) gerados do [template](../prompts/prompt-chatgpt-consultation.md) com INSUMOS do [`../papers-ciclo2.csv`](../papers-ciclo2.csv) (Qualis derivado do percentil) e a linha `ressalvas_triagem` transcrevendo as flags da triagem (incl. as 4 ressalvas de estrato).

@@ -73,9 +73,42 @@ flowchart TB
 - **Identificação assistida por IA:** os ≈51 registros brutos são a saída dos três assistentes ([`research/`](../research/README.md)), com campos não confirmáveis marcados `UNVERIFIED` (antifabricação); a verificação externa de Qualis/SJR foi concluída posteriormente em [`papers.csv`](../papers.csv).
 - **Validação cruzada da seleção:** a triagem/avaliação teve comparação entre avaliadores (Claude × ChatGPT: concordância 90%, κ = 0,74 — [`comparacao-avaliadores.md`](comparacao-avaliadores.md)); a extração PICOC teve três avaliadores ([`picoc/`](../picoc/picoc-comparacao-avaliadores.md)).
 
-## Ciclo 2 (nota de versão, 2026-09-09)
+## Ciclo 2 (concluído em 2026-09-10)
 
-Este diagrama registra o **ciclo 1** e não é reescrito. A triagem do **ciclo 2** (candidatos P41–P89) está em [`triagem-ciclo2.md`](triagem-ciclo2.md): 49 candidatos → 22 aprovados para avaliação integral (emenda de protocolo mantém 4 estudos fora dos estratos I3/I4 com ressalva) → 27 excluídos (E2/E3, com evidência PICOC). O diagrama consolidado dos dois ciclos será gerado ao fim da avaliação integral do ciclo 2.
+Este diagrama acima registra o **ciclo 1** e não é reescrito. O fluxo do **ciclo 2** (candidatos P41–P89), concluído com a avaliação integral, é o seguinte:
+
+```mermaid
+flowchart TB
+    subgraph IDENT2["IDENTIFICAÇÃO (ciclo 2)"]
+        E1["Candidatos identificados pelo autor<br/>(Papers_Index.csv + PDFs em docs/)<br/><b>n = 49</b> (P41–P89)"]
+    end
+
+    subgraph SCREEN2["TRIAGEM (elegibilidade + temática)"]
+        F1["Elegibilidade bibliométrica (papers-ciclo2.csv)<br/>I1/I2/I5 verificados (OA/CR 2026-09-09)<br/>4 fora de estrato I3/I4 <b>mantidos com ressalva</b><br/>(emenda de protocolo 2026-09-09)<br/><b>n = 49</b> triados"]
+        F2["Excluídos na triagem temática<br/>(evidência PICOC de leitura integral)<br/>E2 não-agêntico = 19 · E3 fora de domínio = 8<br/><b>n = 27</b>"]
+        F1 --> F2
+    end
+
+    subgraph ELIG2["ELEGIBILIDADE (avaliação integral)"]
+        G1["Artigos avaliados na íntegra<br/>(prompt + PDF; Tabelas A/B/C; RQ1–RQ5; QA1–QA4)<br/><b>n = 22</b>"]
+        G2["Excluídos após avaliação — <b>n = 2</b><br/>• P85 — sem aderência às RQs (SCORE_RQ 0,5)<br/>• P86 — não-agêntico + estrato B1/Q3"]
+        G1 --> G2
+    end
+
+    subgraph INCL2["INCLUSÃO (ciclo 2)"]
+        H1["Novos estudos incluídos<br/><b>n = 20</b> (todos c/ ressalvas)<br/>5 fundacionais condicionais (P52, P54, P72, P77, P79)<br/>3 c/ ressalva de estrato (P62, P69, P81)"]
+        H2["<b>Corpus consolidado da RSL: n = 53</b><br/>33 (ciclos anteriores) + 20 (ciclo 2)<br/>7 fundacionais condicionais no total (P24, P33 + 5 novos)"]
+        H1 --> H2
+    end
+
+    E1 --> F1
+    F2 --> G1
+    G2 --> H1
+```
+
+Detalhes e evidências: [`triagem-ciclo2.md`](triagem-ciclo2.md) (triagem, emenda de protocolo, precedentes E2/E3), [`resultados-consolidados-ciclo2.csv`](resultados-consolidados-ciclo2.csv) (escores por estudo), [`graficos-ciclo2.md`](graficos-ciclo2.md) e a tabela-síntese em [`README.md`](README.md).
+
+_Contagens do ciclo 2: 49 identificados → 49 triados (emenda: 4 mantidos c/ ressalva de estrato) → 27 excluídos na triagem (E2 = 19 · E3 = 8) → 22 avaliados → 20 incluídos (−2 excluídos) → **corpus consolidado 53**. Se o protocolo restringir o corpus a estudos primários, os 7 fundacionais condicionais migram para a fundamentação._
 
 ---
 
