@@ -612,6 +612,31 @@ Indexados no README raiz (árvore de `prompts/`) e na seção Ciclo 2 de
 `reviews/README.md`. Próximo: executar cada prompt contra o PDF para
 produzir `reviews/review-P43.md`…. Commit `9fc207d`.
 
+### 83. Pareceres do ciclo 2 (22 avaliações integrais)
+
+**Prompt:** "sim, vá em frente" (executar os 22 prompts contra os PDFs;
+"resume" após queda por limite de sessão).
+
+**Ações:** Executados os 22 prompts em fan-out (3 ondas de 8/8/6 agentes;
+cada agente leu o prompt preenchido, o modelo de formato `review-P21.md` e o
+PDF integral, e gravou `reviews/review-PNN.md` no formato do ciclo 1 —
+Tabelas A/B/C + parecer). Particularidades do ciclo 2 aplicadas: Tabela A
+com bibliometria verificada citando fonte (OA/CR de papers-ciclo2.csv,
+2026-09-09; Scopus pendente), Qualis derivado do percentil, Etapa 1
+registrada como ELEGÍVEL (ou "ELEGÍVEL POR EMENDA DE PROTOCOLO" nos 4 de
+estrato) e `ressalvas_triagem` incorporada às recomendações. **Incidente:**
+limite de sessão derrubou 11 agentes — mas TODOS já tinham gravado seus
+pareceres antes de cair (morreram no turno do relatório final); validação
+por script confirmou 22/22 íntegros (título, 3 tabelas, escores,
+recomendação) — zero relançamento. **Resultado: 20 INCLUIR COM RESSALVAS ·
+2 EXCLUIR** (P85 fadiga VTS: SCORE_RQ 0,5, sem aderência às RQs; P86
+tracing rule-induction: não-agêntico, estrato B1+Q3). Destaques: P79 (RQ
+5,0, fundacional SOC), P73 (QA 4,0, alert fatigue), P88 (QA 4,0, MAS
+análogo a P25); os 5 fundacionais confirmados como "Incluir c/ ressalvas
+(fundacional)"; cluster carga cognitiva: P62/P69/P81 incluídos com ressalva
+de estrato, P85 excluído por não aderência. Tabela-síntese do ciclo 2
+adicionada à seção Ciclo 2 de `reviews/README.md`. Commit `99f1e6c`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -672,6 +697,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
   evidência PICOC; `reviews/PRISMA.md` ganhou nota de versão do ciclo 2.
 - `prompts/prompt-P43.md` … `prompt-P88.md` — 22 prompts de avaliação do
   ciclo 2 preenchidos (INSUMOS + ressalvas_triagem).
+- `reviews/review-P43.md` … `review-P88.md` — 22 pareceres do ciclo 2
+  (20 Incluir c/ ressalvas · 2 Excluir); tabela-síntese na seção Ciclo 2
+  de `reviews/README.md`.
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 
@@ -703,5 +731,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `df57b9c` | 2026-09-09 | Add cycle-2 PRISMA screening: 22 approved, 27 excluded, strata amendment                      |
 | `9defea8` | 2026-09-09 | Log cycle-2 PRISMA screening (item 81) in MEMORY.md                                           |
 | `9fc207d` | 2026-09-09 | Generate 22 cycle-2 evaluation prompts for screening-approved candidates                      |
+| `c618846` | 2026-09-09 | Log cycle-2 evaluation prompts (item 82) in MEMORY.md                                         |
+| `99f1e6c` | 2026-09-10 | Add 22 cycle-2 review reports: 20 include-with-caveats, 2 exclude                             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
