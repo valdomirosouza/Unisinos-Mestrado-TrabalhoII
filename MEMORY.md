@@ -527,6 +527,27 @@ P01–P40; muitos candidatos periféricos ao escopo (P58, P59, P67) sinalizados
 para a triagem. README raiz atualizado (seção Etapa 4, árvore e descrição de
 `docs/`, que ainda dizia "39 PDFs"). Commit `adeeb78`.
 
+### 79. Ordem do fluxo do ciclo 2 (consulta)
+
+**Prompt:** "read the folder prompts and reviews and told me whats is the
+correct order to follow? I executed above the PICOC cycle, and now I need to
+go ahead with my research, reading the new papers."
+
+**Ações:** Consulta respondida (sem alteração de artefatos) com base em
+`prompts/`, `reviews/README.md` e no fluxo do ciclo 1. Ordem recomendada
+para P41–P89: **(1)** bibliometria/elegibilidade (CSV de insumos + Qualis
+A1–A2, SJR Q1–Q2, Citações ≥ 1 por fonte) — corte antecipado como o que
+eliminou P39/P40; **(2)** triagem PRISMA I1–I6/E1–E5 com registro de
+exclusões; **(3)** avaliação individual via
+`prompts/prompt-chatgpt-consultation.md` → `prompts/prompt-PNN.md` →
+`reviews/review-PNN.md` (Tabelas 3/5/7 + parecer); **(4)** consolidação
+(resultados-consolidados.csv, gráficos, síntese, DASHBOARD, PRISMA);
+**(5)** comparação entre avaliadores (opcional); **(6)** fichas de extração
+em `report/` só para incluídos. Observação: o PICOC (item 78) veio antes da
+triagem neste ciclo (inverso do ciclo 1) e atua como insumo do passo 2;
+`agentic_ir_corpus-claude-research.xlsx` (não rastreado) pode conter os
+insumos do passo 1.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
