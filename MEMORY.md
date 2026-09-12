@@ -709,6 +709,23 @@ Indexado no README raiz ("Comece por aqui"), reviews/README (bloco Ciclo 2)
 e DASHBOARD (seção Ciclo 2). Links verificados (0 quebrados). Commit
 `129afc8`.
 
+### 87. Comparação entre avaliadores do ciclo 2 — bloqueio metodológico
+
+**Prompt:** "Agora faça a comparação entre avaliadores do ciclo 2 com o
+ChatGPT".
+
+**Ações:** Verificado que `reviews/ChatGPT/` contém apenas as 20 avaliações
+do ciclo 1 (P20–P40) — as do ciclo 2 não existem no repositório.
+**Bloqueio explicado ao usuário:** o assistente não tem acesso ao ChatGPT e
+não deve produzir ele próprio o segundo conjunto de pareceres, pois isso
+destruiria a independência entre avaliadores que o κ mede (fabricação de
+concordância). Entregue o procedimento (mesmo do ciclo 1): usuário executa
+os 22 prompts `prompts/prompt-P43…P88.md` no ChatGPT com os PDFs, salva as
+saídas como `reviews/ChatGPT/PNN_avaliacao_RSL.md` e avisa; a partir daí o
+assistente computa concordância e Cohen's κ (decisão, RQs, QAs), gera
+`comparacao-avaliadores-ciclo2.md` + `.csv` e atualiza dashboard/síntese.
+Nenhum artefato alterado neste item.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
