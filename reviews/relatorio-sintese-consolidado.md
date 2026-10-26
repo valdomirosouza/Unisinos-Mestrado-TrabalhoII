@@ -112,4 +112,10 @@ Protocolo idêntico ao do ciclo 1 ([§13 do relatório histórico](relatorio-sin
 
 ---
 
-_Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos. Este documento consolida; os relatórios e avaliações de cada ciclo permanecem como registros históricos imutáveis._
+## Adendo (2026-10-25) — comparação entre avaliadores do ciclo 2 concluída
+
+A limitação nº 1 (§9/§10: avaliador único no ciclo 2) foi **sanada**: o autor executou os 22 prompts no **ChatGPT** e no **Gemini**, e a [comparação entre três avaliadores](comparacao-avaliadores-ciclo2.md) foi computada em 2026-10-25. Resultado: acordo de decisão **81,8–95,5% por par** (Claude×Gemini κ = 0,65 "substancial"; Fleiss κ = 0,36 sob o mesmo paradoxo de prevalência da comparação PICOC); **as 4 divergências são todas protocolares** — 3 pela aplicação estrita do critério de estrato pelo ChatGPT (P62/P69/P81, que ignorou a emenda de 2026-09-09) e 1 pelo destino do cluster de carga cognitiva (P85) — **nenhuma de mérito**. O achado central (nenhum estudo do ciclo 2 mede MTTD/MTTR com baseline próprio) foi confirmado de forma independente pelos três avaliadores. Duas regras de protocolo a registrar pelo condutor: emendas de elegibilidade no corpo normativo dos prompts; destino dos estudos do cluster humano sem aderência às RQs.
+
+---
+
+_Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos (adendo de 2026-10-25 acima). Este documento consolida; os relatórios e avaliações de cada ciclo permanecem como registros históricos imutáveis._

@@ -48,7 +48,9 @@ _Total: 14 + 4 + 2 = 20 estudos. Se o protocolo restringir o corpus a estudos pr
 
 ## Avaliações comparativas (ChatGPT e Gemini)
 
-**Ciclo 2 (adicionadas em 2026-10-25):** os 22 estudos aprovados na triagem (P43–P88) foram avaliados em paralelo pelo **ChatGPT** ([`ChatGPT/`](ChatGPT/)) e pelo **Gemini** ([`Gemini/`](Gemini/)) — nova pasta com P20–P88 completos —, executando os mesmos prompts (`../prompts/prompt-PNN.md`) contra os PDFs. Conjuntos independentes dos pareceres oficiais, insumo da comparação entre avaliadores do ciclo 2 (pendente de cômputo de κ). _Nota: o arquivo do ChatGPT para P85 chegou nomeado `P84_avaliacao_RSL.md` e foi renomeado conforme o conteúdo (avaliação do P85; P84 foi excluído na triagem e não possui avaliação)._
+**Ciclo 2 (adicionadas em 2026-10-25):** os 22 estudos aprovados na triagem (P43–P88) foram avaliados em paralelo pelo **ChatGPT** ([`ChatGPT/`](ChatGPT/)) e pelo **Gemini** ([`Gemini/`](Gemini/)) — nova pasta com P20–P88 completos —, executando os mesmos prompts (`../prompts/prompt-PNN.md`) contra os PDFs. _Nota: o arquivo do ChatGPT para P85 chegou nomeado `P84_avaliacao_RSL.md` e foi renomeado conforme o conteúdo (avaliação do P85; P84 foi excluído na triagem e não possui avaliação)._
+
+**Comparação do ciclo 2 (três avaliadores):** [`comparacao-avaliadores-ciclo2.md`](comparacao-avaliadores-ciclo2.md) — acordo de decisão 81,8–95,5% por par (Claude×Gemini κ = 0,65; Fleiss κ = 0,36 sob paradoxo da prevalência); **as 4 divergências são todas protocolares** (3 = aplicação da emenda de estratos pelo ChatGPT; 1 = destino do cluster de carga cognitiva em P85), nenhuma de mérito · dados em [`comparacao-avaliadores-ciclo2.csv`](comparacao-avaliadores-ciclo2.csv).
 
 Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunto separado dos pareceres oficiais), usadas na [comparação entre avaliadores](comparacao-avaliadores.md) (concordância 90%, κ = 0,74). Um arquivo por estudo em [`ChatGPT/`](ChatGPT/):
 

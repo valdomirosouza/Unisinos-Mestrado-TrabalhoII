@@ -1,0 +1,23 @@
+ID,Claude_RQ,Claude_QA,Claude_Banda,Claude_Rec,ChatGPT_RQ,ChatGPT_QA,ChatGPT_Banda,ChatGPT_Rec,Gemini_RQ,Gemini_QA,Gemini_Banda,Gemini_Rec,Decisao_CLxGPT,Decisao_CLxGEM,Decisao_GPTxGEM
+P43,3.0,2.0,Média,Incluir c/ ressalvas,3.0,2.0,Média,Incluir c/ ressalvas,4.5,2.5,Média,Incluir c/ ressalvas,=,=,=
+P52,3.5,2.5,Média,Incluir c/ ressalvas,3.0,2.0,Média,Incluir c/ ressalvas,3.5,3.5,Alta,Incluir,=,=,=
+P53,3.5,3.0,Alta,Incluir c/ ressalvas,2.0,2.5,Média,Incluir c/ ressalvas,4.0,4.0,Alta,Incluir c/ ressalvas,=,=,=
+P54,4.5,2.0,Média,Incluir c/ ressalvas,4.0,2.0,Média,Incluir c/ ressalvas,4.5,3.0,Alta,Incluir,=,=,=
+P55,4.5,2.5,Média,Incluir c/ ressalvas,4.5,2.5,Média,Incluir c/ ressalvas,4.5,2.5,Média,Incluir c/ ressalvas,=,=,=
+P62,2.0,1.5,Média,Incluir c/ ressalvas,NA,NA,NA,Excluir,3.5,2.5,Média,Incluir c/ ressalvas,DIV,=,DIV
+P63,2.0,3.5,Alta,Incluir c/ ressalvas,1.5,3.0,Alta,Incluir c/ ressalvas,1.5,4.0,Alta,Incluir c/ ressalvas,=,=,=
+P69,1.0,3.5,Alta,Incluir c/ ressalvas,NA,NA,NA,Excluir,1.5,4.0,Alta,Incluir c/ ressalvas,DIV,=,DIV
+P72,3.5,1.5,Média,Incluir c/ ressalvas,3.0,1.5,Média,Incluir c/ ressalvas,4.0,3.5,Alta,Incluir c/ ressalvas,=,=,=
+P73,3.5,4.0,Alta,Incluir c/ ressalvas,3.5,3.0,Alta,Incluir c/ ressalvas,3.5,4.0,Alta,Incluir c/ ressalvas,=,=,=
+P74,3.0,1.0,Baixa,Incluir c/ ressalvas,2.0,1.0,Baixa,Incluir c/ ressalvas,1.5,2.0,Média,Incluir c/ ressalvas,=,=,=
+P76,4.0,2.5,Média,Incluir c/ ressalvas,4.5,3.0,Alta,Incluir c/ ressalvas,5.0,3.5,Alta,Incluir,=,=,=
+P77,3.5,1.5,Média,Incluir c/ ressalvas,2.5,1.0,Baixa,Incluir c/ ressalvas,3.5,3.0,Alta,Incluir c/ ressalvas,=,=,=
+P78,4.0,3.5,Alta,Incluir c/ ressalvas,3.5,3.0,Alta,Incluir c/ ressalvas,5.0,3.5,Alta,Incluir c/ ressalvas,=,=,=
+P79,5.0,3.0,Alta,Incluir c/ ressalvas,4.5,3.0,Alta,Incluir c/ ressalvas,5.0,3.5,Alta,Incluir,=,=,=
+P81,3.0,3.5,Alta,Incluir c/ ressalvas,NA,NA,NA,Excluir,5.0,4.0,Alta,Incluir c/ ressalvas,DIV,=,DIV
+P82,3.5,2.5,Média,Incluir c/ ressalvas,4.0,2.5,Média,Incluir c/ ressalvas,4.5,3.0,Alta,Incluir c/ ressalvas,=,=,=
+P83,3.5,2.5,Média,Incluir c/ ressalvas,3.5,3.0,Alta,Incluir c/ ressalvas,4.0,3.5,Alta,Incluir,=,=,=
+P85,0.5,3.5,Alta,Excluir,1.5,2.5,Média,Incluir c/ ressalvas,0.5,3.0,Alta,Incluir c/ ressalvas,DIV,DIV,=
+P86,2.0,3.0,Alta,Excluir,NA,NA,NA,Excluir,2.0,3.5,Alta,Excluir,=,=,=
+P87,3.5,3.5,Alta,Incluir c/ ressalvas,3.0,3.5,Alta,Incluir c/ ressalvas,5.0,4.0,Alta,Incluir c/ ressalvas,=,=,=
+P88,3.0,4.0,Alta,Incluir c/ ressalvas,2.5,4.0,Alta,Incluir c/ ressalvas,4.0,4.0,Alta,Incluir c/ ressalvas,=,=,=
