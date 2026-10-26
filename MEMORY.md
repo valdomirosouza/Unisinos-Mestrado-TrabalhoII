@@ -850,6 +850,27 @@ parecer padronizado** nas Tabelas 3/5/7. Tabela-síntese adicionada como
 nova seção "Corpus fundacional — avaliação retroativa" em
 reviews/README.md. Commit `2091253`.
 
+### 94. Consolidação dos fundacionais (CSV + gráficos) e Gemini P01–P19
+
+**Prompt:** "Sim, estenda o resultados-consolidados e os gráficos com as
+linhas P01–P19".
+
+**Ações:** Seguindo a convenção de imutabilidade, criado
+`reviews/resultados-consolidados-fundacionais.csv` (19 × 23 colunas, mesmo
+esquema dos ciclos; símbolos RQ/QA extraídos dos pareceres e **conferidos
+por script contra os escores — 0 divergências**; Recomendacao = "Incluir
+(mantido - fundacional)") e `reviews/charts-fundacionais/` (5 SVGs) +
+`reviews/graficos-fundacionais.md`, gerados com cópia parametrizada do
+`gen_charts.py` (categoria "Mantido — fundacional" adicionada à cópia).
+Leitura: RQ alto × QA baixo; a lacuna de RQ3/QA3 (evidência de benefício) é
+transversal aos três conjuntos. Indexado em reviews/README (bloco
+fundacional) e DASHBOARD (nova seção "Corpus fundacional").
+**Incidente/achado no commit:** o `git add reviews/` capturou **19
+avaliações novas do Gemini (P01–P19)** que o usuário havia depositado em
+`reviews/Gemini/` — validadas pós-commit e antes do push (19/19 com ID e
+título corretos no corpo) e mantidas no mesmo commit: o conjunto Gemini
+agora cobre P01–P88 (61 avaliações). Commit `2e52101`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -975,5 +996,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `4eaf0ce` | 2026-10-26 | Generate 19 retroactive evaluation prompts for foundational corpus P01-P19                    |
 | `3f4b834` | 2026-10-26 | Log foundational-corpus prompts (item 92) in MEMORY.md                                        |
 | `2091253` | 2026-10-26 | Add 19 retroactive review reports for foundational corpus P01-P19                             |
+| `0f9b4b5` | 2026-10-26 | Log foundational retroactive reviews (item 93) in MEMORY.md                                   |
+| `2e52101` | 2026-10-26 | Add foundational-corpus consolidated CSV and charts (P01-P19)                                 |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
