@@ -76,6 +76,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   └── chatgpt-research-report.md ← candidatos levantados pelo ChatGPT
 ├── prompts/                      ← Etapa 2: prompts de avaliação
 │   ├── prompt-chatgpt-consultation.md ← template do prompt de avaliação (papel, RQs, QA, saída)
+│   ├── prompt-P01..P19.md       ← 19 prompts preenchidos (corpus fundacional, avaliação retroativa)
 │   ├── prompt-P20..P40.md       ← 20 prompts preenchidos (ciclo 1, registro histórico)
 │   └── prompt-P43..P88.md       ← 22 prompts preenchidos (ciclo 2, aprovados na triagem)
 ├── docs/                         ← PDFs: corpus P01–P40 (39) + candidatos ciclo 2 P41–P89 (49) + paper de Kitchenham (2009)
@@ -130,7 +131,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 - [`reviews/PRISMA.md`](reviews/PRISMA.md) — **diagrama PRISMA 2020** (Mermaid) do fluxo de seleção: ≈51 identificados → 21 candidatos → 20 triados → 18 avaliados → **14 incluídos** → corpus final **33** (19 fundacionais + 14 novos), com critérios de inclusão (I1–I6) e exclusão (E1–E5) e verificação por artefato.
 - [`citacoes-cruzadas.md`](citacoes-cruzadas.md) — **citações entre os 39 artigos do corpus** com tripla checagem (OpenAlex × Crossref × Scopus): 26 pares citador→citado; hubs P10 (7), P14 (5), P09 (4); inclui a descoberta de que o `REF()` do Scopus casa por título (não por DOI) e o caso do P09 citado via DOI de preprint.
 - [`citacoes-cruzadas-P01-P89.md`](citacoes-cruzadas-P01-P89.md) — **versão ampliada (2026-10-25)** para o corpus P01–P89: **49 pares citador→citado** (OpenAlex 48 × Crossref 45; Scopus pendente de chave); hubs P10 (7), P09 (6, com alias de preprint resolvido), P14 (5) e o novo P65 (3); **P28 é o maior citador interno** (7 arestas, incl. 5 candidatos do ciclo 2) — o ciclo 2 está tecido ao corpus nas duas direções.
-- [`prompts/`](prompts/) — template de avaliação + 20 prompts preenchidos, um por estudo (registro histórico do ciclo 1).
+- [`prompts/`](prompts/) — template de avaliação + 61 prompts preenchidos, um por estudo: **P01–P19** (corpus fundacional, avaliação retroativa de padronização — não rediscutem a inclusão herdada do Trabalho I; Qualis/SJR verificados de `papers.csv`), **P20–P40** (ciclo 1, registro histórico) e **P43–P88** (ciclo 2).
 - [`docs/`](docs/) — PDFs: os **39 do corpus** P01–P19 (fundacionais do Trabalho I) + P20–P40 (candidatos avaliados), com índice completo em [`report/README.md`](report/README.md); os **49 candidatos do ciclo 2** (P41–P89, aguardando triagem — extração PICOC em [`picoc/picoc-results-consolidated-P41-P89-Claude.md`](picoc/picoc-results-consolidated-P41-P89-Claude.md)); e o paper metodológico de **Kitchenham (2009)**.
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
 
