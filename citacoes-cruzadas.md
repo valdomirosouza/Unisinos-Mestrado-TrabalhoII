@@ -4,6 +4,8 @@
 
 Levantamento de **citações entre os 39 artigos do corpus** (quantas vezes cada artigo é citado pelos seus pares P01–P40), com **tripla checagem** em três APIs: **OpenAlex** (`referenced_works`), **Crossref** (lista `reference` com DOIs) e **Scopus** (campo `REF()` cruzado com os DOIs do corpus). Verificado em **2026-07-27**.
 
+> 🔄 **Nota de versão (2026-10-25):** este documento é o registro histórico da rodada P01–P40. A versão atualizada para o **corpus ampliado P01–P89** (49 arestas; OpenAlex + Crossref, Scopus pendente) está em [`citacoes-cruzadas-P01-P89.md`](citacoes-cruzadas-P01-P89.md).
+
 ## Método
 
 1. **OpenAlex:** para cada artigo, obteve-se `referenced_works` e verificou-se a interseção com os IDs OpenAlex do corpus (resolvidos por DOI, 39/39).
