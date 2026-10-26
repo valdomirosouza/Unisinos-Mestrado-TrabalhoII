@@ -375,7 +375,7 @@ _(O commit desta atualização de MEMORY.md é acrescentado ao final do históri
 
 ---
 
-# Sessão 2026-09-07 — Ajuste de persona no prompt PICOC (v1.2.0)
+# Sessão 2026-09-07 → 2026-10-25 — Padronização de prompts e ciclo 2 completo da RSL
 
 ## Linha do tempo (prompts → respostas/ações)
 
@@ -726,6 +726,27 @@ assistente computa concordância e Cohen's κ (decisão, RQs, QAs), gera
 `comparacao-avaliadores-ciclo2.md` + `.csv` e atualiza dashboard/síntese.
 Nenhum artefato alterado neste item.
 
+### 88. Conjuntos ChatGPT e Gemini para a comparação (P20–P88)
+
+**Prompt:** "inclui na pasta reviews as novas pastas ChatGPT e Gemini com as
+avaliações dos artigos P20 até P88. Faça o push e commit disso no
+repositório." (2026-10-25; desbloqueia o item 87)
+
+**Ações:** O usuário depositou os arquivos no working tree: **ChatGPT** — 22
+avaliações novas do ciclo 2 (somando-se às 20 do ciclo 1 já versionadas);
+**Gemini** — pasta NOVA com 42 avaliações (P20–P40 + os 22 do ciclo 2).
+Validação antes do commit: 22/22 por avaliador no ciclo 2, IDs e títulos
+conferidos no conteúdo. **Correção:** o arquivo do ChatGPT nomeado
+`P84_avaliacao_RSL.md` continha a avaliação do **P85** (P84 foi excluído na
+triagem) — renomeado para `P85_avaliacao_RSL.md` conforme o conteúdo, com
+nota no README. 7 arquivos do Gemini embutem o prompt no topo (ID aparece no
+corpo) — formato aceito como está (artefato de terceiro, imutável). Nota:
+avaliações históricas do Gemini (P35, P37–P40) contêm links `file:///...`
+locais da máquina do usuário — mantidos intactos por fidelidade.
+`reviews/README.md`: seção renomeada para "Avaliações comparativas (ChatGPT
+e Gemini)" com o registro do rename. Commit `8f98497` (65 arquivos), push
+ok. Próximo: computar concordância/κ do ciclo 2.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -838,5 +859,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d527e60` | 2026-09-10 | Add extraction sheets (EN+ptBR) and consolidated CSVs for 20 cycle-2 included studies         |
 | `00ca1b7` | 2026-09-10 | Log cycle-2 extraction sheets (item 85) in MEMORY.md                                          |
 | `129afc8` | 2026-09-10 | Add consolidated two-cycle synthesis report (MD + PDF)                                        |
+| `362faf2` | 2026-09-10 | Log consolidated synthesis report (item 86) in MEMORY.md                                      |
+| `91eb5cb` | 2026-09-12 | Log evaluator-comparison blocker and procedure (item 87) in MEMORY.md                         |
+| `8f98497` | 2026-10-25 | Add ChatGPT and Gemini evaluator sets for cycle 2 (P43-P88; Gemini also P20-P40)              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
