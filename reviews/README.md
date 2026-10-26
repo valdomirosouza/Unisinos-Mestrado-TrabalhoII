@@ -60,6 +60,8 @@ Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunt
 
 Os **19 estudos fundacionais** do Trabalho I (P01–P19) receberam avaliação **retroativa de padronização** (prompts [`prompt-P01…P19.md`](../prompts/); inclusão herdada, **não rediscutida** — mede-se apenas RQs/QA para tornar as Tabelas 3/5/7 comparáveis com P20–P88). Bibliometria da Tabela A verificada nas três fontes ([`../papers.csv`](../papers.csv), 2026-07-27). Estatística: SCORE_RQ médio **3,66** (mediana 4,0) · SCORE_QA médio **2,53** (mediana 2,5) · bandas **9 Alta / 10 Média** — RQ alto e QA mais baixo que P20–P40, coerente com o perfil de surveys conceituais dos fundacionais.
 
+> Consolidação: [`resultados-consolidados-fundacionais.csv`](resultados-consolidados-fundacionais.csv) (19 × 23 colunas, símbolos RQ/QA extraídos dos pareceres e conferidos contra os escores) · [`graficos-fundacionais.md`](graficos-fundacionais.md) (5 SVGs em `charts-fundacionais/`).
+
 | ID                   | Estudo (resumo)                          | SCORE_RQ | SCORE_QA | Banda | Status                |
 | -------------------- | ---------------------------------------- | :------: | :------: | ----- | --------------------- |
 | [P01](review-P01.md) | Trustworthy Agentic AI Systems           |   4.5    |   2.5    | Média | Mantido (fundacional) |

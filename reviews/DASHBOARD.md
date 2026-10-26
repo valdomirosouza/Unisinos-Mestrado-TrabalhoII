@@ -15,6 +15,10 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 | 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas-P01-P89.md)                            | Quem cita quem entre **P01–P89** (49 arestas; OpenAlex × Crossref, Scopus pendente) · [versão P01–P40](../citacoes-cruzadas.md)                                       |
 | 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompts/prompt-chatgpt-consultation.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
+## 🏛️ Corpus fundacional (P01–P19) — avaliação retroativa (2026-10-26)
+
+Os 19 fundacionais do Trabalho I agora têm pareceres padronizados (inclusão herdada, não rediscutida): [pareceres e tabela-síntese](README.md) · [CSV consolidado](resultados-consolidados-fundacionais.csv) · [Gráficos](graficos-fundacionais.md). SCORE_RQ médio **3,66** · SCORE_QA médio **2,53** · **9 Alta / 10 Média** · 19/19 "Mantido (fundacional)". Com isso, **os 60 estudos avaliados (P01–P88) têm Tabelas 3/5/7 comparáveis**.
+
 ## 🔄 Ciclo 2 (P41–P89) — concluído em 2026-09-10
 
 Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo autor. Artefatos: 📄 **[Síntese consolidada dos 2 ciclos](relatorio-sintese-consolidado.md)** ([PDF](relatorio-sintese-consolidado.pdf)) · [Triagem PRISMA](triagem-ciclo2.md) · [Fluxo PRISMA do ciclo 2](PRISMA.md) · [CSV consolidado](resultados-consolidados-ciclo2.csv) · [Gráficos](graficos-ciclo2.md) · [Tabela-síntese e pareceres](README.md) · 📐 **[Comparação entre 3 avaliadores](comparacao-avaliadores-ciclo2.md)** (Claude × ChatGPT × Gemini: acordo 81,8–95,5%; 4 divergências, todas protocolares) · [Elegibilidade](../papers-ciclo2.csv) · [PICOC](../picoc/picoc-results-consolidated-P41-P89-Claude.md) · [Fichas de extração](../report/README.md).
