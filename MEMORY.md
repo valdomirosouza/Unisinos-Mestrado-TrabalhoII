@@ -747,6 +747,35 @@ locais da máquina do usuário — mantidos intactos por fidelidade.
 e Gemini)" com o registro do rename. Commit `8f98497` (65 arquivos), push
 ok. Próximo: computar concordância/κ do ciclo 2.
 
+### 89. Comparação entre três avaliadores — ciclo 2
+
+**Prompt:** "Sim, siga com a comparação entre avaliadores".
+
+**Ações:** Extraídos por script (regex sobre SCORE_RQ/SCORE_QA/x-de-5/x-de-4
+e linhas de recomendação) os escores e vereditos dos 44 arquivos de
+terceiros, com inspeção manual dirigida dos casos ambíguos (prompts
+embutidos nos arquivos do Gemini poluíam a captura; 7 recomendações e 2
+escores confirmados lendo o trecho exato). Gerados
+`reviews/comparacao-avaliadores-ciclo2.md` + `.csv` (16 colunas).
+**Resultados (decisão Incluir/Excluir):** Claude×Gemini 95,5% (21/22),
+κ=0,65; ChatGPT×Gemini 86,4%, κ=0,35; Claude×ChatGPT 81,8%, κ=0,24; Fleiss
+κ=0,36 — κs deflacionados pelo paradoxo da prevalência (17/22 inclusões
+unânimes), documentado. **As 4 divergências são todas protocolares:**
+P62/P69/P81 — ChatGPT aplicou o critério estrito de estrato e parou na
+triagem (INELEGÍVEL), ignorando a emenda de 2026-09-09 presente só nos
+INSUMOS (reedição invertida do caso P39/P40 do ciclo 1); P85 — mérito
+convergente (RQ 0,5/1,5/0,5) mas destino divergente do cluster de carga
+cognitiva (Claude exclui; GPT/Gemini mantêm como evidência complementar).
+P86 = exclusão unânime. MAE: CL×GPT RQ 0,53/QA 0,31 (n=18); CL×GEM RQ
+0,66/QA 0,68 (n=22). Tendências: Gemini o mais generoso (5 INCLUIR plenos;
+QA≥3,5 em 11/22); ChatGPT o mais conservador (QA nunca acima do Claude);
+achado central (sem MTTD/MTTR com baseline próprio) confirmado pelos três.
+Duas regras de protocolo recomendadas: emendas no corpo normativo da ETAPA
+1 dos prompts; destino do cluster humano sem aderência às RQs. Indexado em
+reviews/README e DASHBOARD; **adendo datado (2026-10-25)** na síntese
+consolidada sanando a limitação nº 1, PDF regenerado (274 KB). Commit
+`52abc4b`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -862,5 +891,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `362faf2` | 2026-09-10 | Log consolidated synthesis report (item 86) in MEMORY.md                                      |
 | `91eb5cb` | 2026-09-12 | Log evaluator-comparison blocker and procedure (item 87) in MEMORY.md                         |
 | `8f98497` | 2026-10-25 | Add ChatGPT and Gemini evaluator sets for cycle 2 (P43-P88; Gemini also P20-P40)              |
+| `6e07b65` | 2026-10-25 | Log evaluator sets commit (item 88) in MEMORY.md                                              |
+| `52abc4b` | 2026-10-25 | Add cycle-2 three-evaluator comparison (Claude x ChatGPT x Gemini)                            |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
