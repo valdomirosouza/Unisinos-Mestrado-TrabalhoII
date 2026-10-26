@@ -46,7 +46,9 @@ Pareceres de revisão dos estudos candidatos da RSL **"Agentic AI Copilot para R
 
 _Total: 14 + 4 + 2 = 20 estudos. Se o protocolo restringir o corpus a estudos primários, os 2 fundacionais (P24, P33) migram para fundamentação, resultando em **12 incluídos no corpus primário**._
 
-## Avaliações comparativas (ChatGPT)
+## Avaliações comparativas (ChatGPT e Gemini)
+
+**Ciclo 2 (adicionadas em 2026-10-25):** os 22 estudos aprovados na triagem (P43–P88) foram avaliados em paralelo pelo **ChatGPT** ([`ChatGPT/`](ChatGPT/)) e pelo **Gemini** ([`Gemini/`](Gemini/)) — nova pasta com P20–P88 completos —, executando os mesmos prompts (`../prompts/prompt-PNN.md`) contra os PDFs. Conjuntos independentes dos pareceres oficiais, insumo da comparação entre avaliadores do ciclo 2 (pendente de cômputo de κ). _Nota: o arquivo do ChatGPT para P85 chegou nomeado `P84_avaliacao_RSL.md` e foi renomeado conforme o conteúdo (avaliação do P85; P84 foi excluído na triagem e não possui avaliação)._
 
 Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunto separado dos pareceres oficiais), usadas na [comparação entre avaliadores](comparacao-avaliadores.md) (concordância 90%, κ = 0,74). Um arquivo por estudo em [`ChatGPT/`](ChatGPT/):
 
