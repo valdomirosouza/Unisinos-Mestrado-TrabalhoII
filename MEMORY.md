@@ -797,6 +797,19 @@ DASHBOARD (link principal atualizado para a versão P01–P89). Links
 verificados (0 quebrados; links `file:///` históricos do Gemini excluídos
 do checador). Commit `d4f0061`.
 
+### 91. Planilha do corpus de descoberta commitada; resume notes ignoradas
+
+**Prompt:** "Commit o agentic_ir_corpus-claude-research.xlsx e adicione
+claude-resume-history.txt ao .gitignore". (Pedido anterior "Faça o push e
+commit" verificado: nada pendente — tudo já estava commitado
+incrementalmente e master == origin/master.)
+
+**Ações:** `agentic_ir_corpus-claude-research.xlsx` (176 KB, planilha do
+ciclo de descoberta do usuário, na raiz desde 2026-09-06) commitado.
+`.gitignore` ganhou `claude-resume-history.txt` e também `~$*` (locks
+temporários do Excel, flagados no item 76 — pertinente agora que um xlsx é
+versionado). Working tree limpo pela primeira vez desde o início do ciclo 2. Commit `c73fbb7`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -916,5 +929,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `52abc4b` | 2026-10-25 | Add cycle-2 three-evaluator comparison (Claude x ChatGPT x Gemini)                            |
 | `5983930` | 2026-10-25 | Log cycle-2 evaluator comparison (item 89) in MEMORY.md                                       |
 | `d4f0061` | 2026-10-25 | Update corpus cross-citations to P01-P89 (49 edges; OpenAlex+Crossref)                        |
+| `3a555e7` | 2026-10-25 | Log P01-P89 cross-citations update (item 90) in MEMORY.md                                     |
+| `c73fbb7` | 2026-10-25 | Add cycle-2 discovery corpus spreadsheet; ignore local resume notes                           |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
