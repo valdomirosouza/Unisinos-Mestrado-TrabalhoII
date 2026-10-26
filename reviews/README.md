@@ -56,6 +56,32 @@ Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunt
 
 [P20](ChatGPT/P20_avaliacao_RSL.md) · [P21](ChatGPT/P21_avaliacao_RSL.md) · [P22](ChatGPT/P22_avaliacao_RSL.md) · [P23](ChatGPT/P23_avaliacao_RSL.md) · [P24](ChatGPT/P24_avaliacao_RSL.md) · [P25](ChatGPT/P25_avaliacao_RSL.md) · [P26](ChatGPT/P26_avaliacao_RSL.md) · [P27](ChatGPT/P27_avaliacao_RSL.md) · [P28](ChatGPT/P28_avaliacao_RSL.md) · [P29](ChatGPT/P29_avaliacao_RSL.md) · [P30](ChatGPT/P30_avaliacao_RSL.md) · [P31](ChatGPT/P31_avaliacao_RSL.md) · [P32](ChatGPT/P32_avaliacao_RSL.md) · [P33](ChatGPT/P33_avaliacao_RSL.md) · [P34](ChatGPT/P34_avaliacao_RSL.md) · [P35](ChatGPT/P35_avaliacao_RSL.md) · [P37](ChatGPT/P37_avaliacao_RSL.md) · [P38](ChatGPT/P38_avaliacao_RSL.md) · [P39](ChatGPT/P39_avaliacao_RSL.md) · [P40](ChatGPT/P40_avaliacao_RSL.md)
 
+## Corpus fundacional — avaliação retroativa (2026-10-26)
+
+Os **19 estudos fundacionais** do Trabalho I (P01–P19) receberam avaliação **retroativa de padronização** (prompts [`prompt-P01…P19.md`](../prompts/); inclusão herdada, **não rediscutida** — mede-se apenas RQs/QA para tornar as Tabelas 3/5/7 comparáveis com P20–P88). Bibliometria da Tabela A verificada nas três fontes ([`../papers.csv`](../papers.csv), 2026-07-27). Estatística: SCORE_RQ médio **3,66** (mediana 4,0) · SCORE_QA médio **2,53** (mediana 2,5) · bandas **9 Alta / 10 Média** — RQ alto e QA mais baixo que P20–P40, coerente com o perfil de surveys conceituais dos fundacionais.
+
+| ID                   | Estudo (resumo)                          | SCORE_RQ | SCORE_QA | Banda | Status                |
+| -------------------- | ---------------------------------------- | :------: | :------: | ----- | --------------------- |
+| [P01](review-P01.md) | Trustworthy Agentic AI Systems           |   4.5    |   2.5    | Média | Mantido (fundacional) |
+| [P02](review-P02.md) | Agentic AI Smart Future (SLR)            |   4.5    |   1.5    | Média | Mantido (fundacional) |
+| [P03](review-P03.md) | Research Landscape Agentic AI & LLMs     |   4.0    |   3.0    | Alta  | Mantido (fundacional) |
+| [P04](review-P04.md) | LLM-Based MAS for SE                     |   4.5    |   3.5    | Alta  | Mantido (fundacional) |
+| [P05](review-P05.md) | AIOps in the Era of LLMs                 |   3.5    |   3.5    | Alta  | Mantido (fundacional) |
+| [P06](review-P06.md) | Agentic AI Comprehensive Survey          |   4.0    |   1.5    | Média | Mantido (fundacional) |
+| [P07](review-P07.md) | Artificial Empathy in MAS                |   2.0    |   3.0    | Alta  | Mantido (fundacional) |
+| [P08](review-P08.md) | Human-in-the-Loop Learning               |   3.5    |   1.5    | Média | Mantido (fundacional) |
+| [P09](review-P09.md) | AI Agents vs. Agentic AI                 |   4.5    |   2.5    | Média | Mantido (fundacional) |
+| [P10](review-P10.md) | Agentic AI: Autonomous Intelligence      |   4.5    |   1.5    | Média | Mantido (fundacional) |
+| [P11](review-P11.md) | Co-Evolving Multi-Agent RL               |   2.5    |   3.5    | Alta  | Mantido (fundacional) |
+| [P12](review-P12.md) | Autonomous System Security w/ GenAI      |   3.5    |   2.0    | Média | Mantido (fundacional) |
+| [P13](review-P13.md) | Retail Resilience Engine                 |   4.0    |   3.5    | Alta  | Mantido (fundacional) |
+| [P14](review-P14.md) | Transforming Cybersecurity w/ Agentic AI |   4.0    |   1.5    | Média | Mantido (fundacional) |
+| [P15](review-P15.md) | The Rise of Agentic AI                   |   4.5    |   2.0    | Média | Mantido (fundacional) |
+| [P16](review-P16.md) | MLOps and AIOps Survey                   |   3.0    |   3.5    | Alta  | Mantido (fundacional) |
+| [P17](review-P17.md) | Trustworthy & Explainable AI (XAI)       |   3.5    |   1.5    | Média | Mantido (fundacional) |
+| [P18](review-P18.md) | Model-Based Automation in DevOps         |   2.0    |   3.5    | Alta  | Mantido (fundacional) |
+| [P19](review-P19.md) | Agent System Mining                      |   3.0    |   3.0    | Alta  | Mantido (fundacional) |
+
 ## Ciclo 2 (concluído em 2026-09-10)
 
 > Consolidação: [`resultados-consolidados-ciclo2.csv`](resultados-consolidados-ciclo2.csv) · [`graficos-ciclo2.md`](graficos-ciclo2.md) · fluxo PRISMA do ciclo 2 em [`PRISMA.md`](PRISMA.md) · painel em [`DASHBOARD.md`](DASHBOARD.md) · **[síntese consolidada dos 2 ciclos](relatorio-sintese-consolidado.md)** ([PDF](relatorio-sintese-consolidado.pdf)).
