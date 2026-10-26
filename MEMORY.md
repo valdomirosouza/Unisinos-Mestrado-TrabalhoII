@@ -810,6 +810,24 @@ ciclo de descoberta do usuário, na raiz desde 2026-09-06) commitado.
 temporários do Excel, flagados no item 76 — pertinente agora que um xlsx é
 versionado). Working tree limpo pela primeira vez desde o início do ciclo 2. Commit `c73fbb7`.
 
+### 92. Prompts retroativos do corpus fundacional (P01–P19)
+
+**Prompt:** "Agora preciso montar o prompt .MD para cada um dos artigo P01
+até P19 usando como template os prompts que estão na pasta prompts."
+(2026-10-26)
+
+**Ações:** Gerados `prompts/prompt-P01.md` … `prompt-P19.md` (19 arquivos)
+por script, a partir do template vivo `prompt-chatgpt-consultation.md`.
+Adaptações: **CONTEXTO** reescrito para avaliação **retroativa de
+padronização** — os fundacionais já estão incluídos (herança do Trabalho I)
+e o prompt instrui explicitamente a NÃO rediscutir a inclusão, apenas medir
+RQs/QA para tornar as Tabelas 3/5/7 comparáveis com P20–P88; **INSUMOS**
+preenchidos com título, arquivo PDF (existência conferida nos 19),
+**Qualis/SJR verificados de papers.csv (2026-07-27)** — citados como
+verificados, não "[VERIFICAR]" — e linha nova `observacao_corpus`.
+Indexados no README raiz (árvore de `prompts/` e seção Insumos: agora 61
+prompts preenchidos). Links verificados (0 quebrados). Commit `4eaf0ce`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -931,5 +949,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d4f0061` | 2026-10-25 | Update corpus cross-citations to P01-P89 (49 edges; OpenAlex+Crossref)                        |
 | `3a555e7` | 2026-10-25 | Log P01-P89 cross-citations update (item 90) in MEMORY.md                                     |
 | `c73fbb7` | 2026-10-25 | Add cycle-2 discovery corpus spreadsheet; ignore local resume notes                           |
+| `f454026` | 2026-10-25 | Log corpus spreadsheet commit (item 91) in MEMORY.md                                          |
+| `4eaf0ce` | 2026-10-26 | Generate 19 retroactive evaluation prompts for foundational corpus P01-P19                    |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
