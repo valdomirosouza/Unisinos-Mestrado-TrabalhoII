@@ -776,6 +776,27 @@ reviews/README e DASHBOARD; **adendo datado (2026-10-25)** na síntese
 consolidada sanando a limitação nº 1, PDF regenerado (274 KB). Commit
 `52abc4b`.
 
+### 90. Citações cruzadas do corpus ampliado (P01–P89)
+
+**Prompt:** "Atualize as citações cruzadas do corpus para P01–P89".
+
+**Ações:** Replicado o método do item 64 para os 88 artigos: IDs OpenAlex
+resolvidos por DOI (88/88 + alias do preprint do P09),
+`referenced_works` (OpenAlex) e listas `reference` (Crossref) cruzados com
+o corpus. Scopus **PENDENTE** (sem chave) — contagens por fonte, PENDENTE ≠ 0. Criado **`citacoes-cruzadas-P01-P89.md`** (artefato novo; o histórico
+P01–P40 ganhou nota de versão apontando para ele). **Resultados: 49 arestas
+na união** (OA 48 · CR 45; vs. 26 no ciclo 1): hubs P10 (7), P09 (6 — com o
+alias incluído na correspondência, OA/CR agora enxergam as citações que em
+07/2026 só o Scopus via; 2 arestas novas P01→P09 e P55→P09), P14 (5) e o
+novo hub **P65** (3). **P28 é o maior citador interno** (7 arestas, incl. 5
+candidatos do ciclo 2: P52/P65/P72/P76/P77); o ciclo 2 cita o corpus de
+volta (P79→P20/P78; P76→P39/P83; P43→P16/P18; P55→P09/P15) — lote tecido ao
+corpus nas duas direções. Arestas entre excluídos também mapeadas
+(P41→P45, P26→P68, P73→P80, P89→P65/P70). Indexado no README raiz e
+DASHBOARD (link principal atualizado para a versão P01–P89). Links
+verificados (0 quebrados; links `file:///` históricos do Gemini excluídos
+do checador). Commit `d4f0061`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -893,5 +914,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `8f98497` | 2026-10-25 | Add ChatGPT and Gemini evaluator sets for cycle 2 (P43-P88; Gemini also P20-P40)              |
 | `6e07b65` | 2026-10-25 | Log evaluator sets commit (item 88) in MEMORY.md                                              |
 | `52abc4b` | 2026-10-25 | Add cycle-2 three-evaluator comparison (Claude x ChatGPT x Gemini)                            |
+| `5983930` | 2026-10-25 | Log cycle-2 evaluator comparison (item 89) in MEMORY.md                                       |
+| `d4f0061` | 2026-10-25 | Update corpus cross-citations to P01-P89 (49 edges; OpenAlex+Crossref)                        |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
