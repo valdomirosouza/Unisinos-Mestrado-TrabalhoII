@@ -828,6 +828,28 @@ verificados, não "[VERIFICAR]" — e linha nova `observacao_corpus`.
 Indexados no README raiz (árvore de `prompts/` e seção Insumos: agora 61
 prompts preenchidos). Links verificados (0 quebrados). Commit `4eaf0ce`.
 
+### 93. Pareceres retroativos do corpus fundacional (P01–P19)
+
+**Prompt:** "Sim, execute os 19 prompts e um por vez e gere os pareceres
+review-P01 até P19 dentro da pasta reviews/".
+
+**Ações:** Executados os 19 prompts em fan-out (3 ondas de 7/6/6 agentes,
+um artigo por agente; sem quedas por limite desta vez), cada agente lendo o
+prompt + modelo `review-P21.md` + PDF integral e gravando
+`reviews/review-PNN.md`. Particularidades: Tabela A com bibliometria
+verificada **nas três fontes** (papers.csv 2026-07-27, incl. Scopus — P01
+anotado como NÃO INDEXADO), Etapa 1 = "FUNDACIONAL — inclusão herdada do
+Trabalho I (não rediscutida)", e parecer final com **"STATUS: MANTIDO NO
+CORPUS (fundacional)"** em vez de Incluir/Excluir. Validação por script:
+19/19 íntegros. **Resultados:** SCORE_RQ médio 3,66 (mediana 4,0) · QA
+médio 2,53 (mediana 2,5) · bandas 9 Alta / 10 Média — RQ alto e QA baixo,
+coerente com o perfil de surveys conceituais; destaques P04 (4,5/3,5) e
+P13 (4,0/3,5); QA mais baixos nos surveys amplos (P02/P06/P10/P14/P17 com
+QA 1,5). Com isso, **todos os 60 estudos avaliados da RSL (P01–P88) têm
+parecer padronizado** nas Tabelas 3/5/7. Tabela-síntese adicionada como
+nova seção "Corpus fundacional — avaliação retroativa" em
+reviews/README.md. Commit `2091253`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -951,5 +973,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `c73fbb7` | 2026-10-25 | Add cycle-2 discovery corpus spreadsheet; ignore local resume notes                           |
 | `f454026` | 2026-10-25 | Log corpus spreadsheet commit (item 91) in MEMORY.md                                          |
 | `4eaf0ce` | 2026-10-26 | Generate 19 retroactive evaluation prompts for foundational corpus P01-P19                    |
+| `3f4b834` | 2026-10-26 | Log foundational-corpus prompts (item 92) in MEMORY.md                                        |
+| `2091253` | 2026-10-26 | Add 19 retroactive review reports for foundational corpus P01-P19                             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
