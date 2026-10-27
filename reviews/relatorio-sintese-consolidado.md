@@ -130,4 +130,15 @@ Após o adendo anterior, três marcos fecharam a validação de todo o corpus av
 
 ---
 
+## Adendo (2026-10-26, nº 3) — tripla checagem bibliométrica completa (Scopus)
+
+Com a chave Scopus regenerada (mantida fora do repositório), as duas pendências bibliométricas remanescentes foram encerradas:
+
+1. **Citações por estudo (P41–P89):** coluna Scopus completada em [`papers-ciclo2.csv`](../papers-ciclo2.csv) — **49/49 resolvidos, todos com Citações ≥ 1, nenhum NÃO INDEXADO** (verificação de 2026-10-26). O critério I5 agora está confirmado em **três fontes para todo o corpus P01–P89**.
+2. **Citações cruzadas ([`citacoes-cruzadas-P01-P89.md`](../citacoes-cruzadas-P01-P89.md)):** coluna Scopus preenchida via `REF()` por título — **48 arestas no Scopus, união final de 52** (era 49 com OA/CR). O Scopus agregou 3 arestas exclusivas (destaque: **P54←P06 e P54←P15**, elevando o survey "LLM Reasoning → AI Agents" a estudo citado por dois fundacionais) e confirmou os hubs P10 (7), P09 (6), P14 (5), P16 e P65 (3).
+
+**Registro metodológico:** a rodada documentou dois quirks novos da Scopus Search API — **(a)** o nível de serviço da chave limita **`count ≤ 25`** por requisição (HTTP 400 "Exceeds the maximum number allowed for the service level" acima disso; duas varreduras completas falharam até o diagnóstico); **(b)** títulos de índice com sufixos editoriais (caso P14, "(Kshetri)") zeram silenciosamente o `REF()` — soma-se aos quirks do ciclo 1 (`REF()` por título, não DOI; forma aninhada com falso-zero). Com isso, a **limitação nº 4 do corpo deste relatório (citações Scopus pendentes) está superada** — das limitações originais, permanecem apenas as decisões de protocolo das 3 famílias de divergência (adendo nº 2) e a confirmação individual de Qualis na Sucupira, opcional.
+
+---
+
 _Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos (adendos de 2026-10-25 e 2026-10-26 acima). Este documento consolida; os relatórios e avaliações de cada ciclo permanecem como registros históricos imutáveis._
