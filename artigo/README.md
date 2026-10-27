@@ -15,7 +15,7 @@
 pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
-(Requer uma distribuição LaTeX com `IEEEtran` — TeX Live/MacTeX. Não há LaTeX instalado nesta máquina; o draft foi validado estruturalmente: 48 chaves de citação, todas presentes no `.bib`.)
+(Compilado e validado em 2026-10-26 com **TinyTeX** — `~/Library/TinyTeX/bin/universal-darwin/` nesta máquina — + pacote `ieeetran` via tlmgr: **[`main.pdf`](main.pdf), 6 páginas**, 0 citações não resolvidas, 0 overfull boxes, 0 avisos de BibTeX; 48 chaves de citação resolvidas.)
 
 ## Estrutura e proveniência do conteúdo
 

@@ -3,3 +3,8 @@
 claude-resume-history.txt
 ~$*
 .scopus_key
+artigo/*.aux
+artigo/*.log
+artigo/*.bbl
+artigo/*.blg
+artigo/*.out
