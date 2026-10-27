@@ -1125,6 +1125,21 @@ errado deixando fragmento órfão (44 erros) — removido. Build final:
 **8 páginas, 0 erros, 0 overfull, 0 indefinidos**. README do artigo
 atualizado. Commit `c7c2352`.
 
+### 108. Fig. 3 — cobertura de RQs por conjunto
+
+**Prompt:** "Gere os gráficos opcionais de RQ coverage para o artigo".
+
+**Ações:** Computada do zero (dos 3 CSVs oficiais do Claude) a distribuição
+T/P/N por RQ por conjunto — Fundacionais n=19, Ciclo 1 n=18, Ciclo 2 n=22
+— e gerada programaticamente a **Fig. 3** em TikZ: barras empilhadas
+normalizadas (5 grupos de RQ × 3 barras F/C1/C2; T cinza-escuro, P
+cinza-claro, N branco; legenda), inserida na §IV-B com referência no
+texto. Os dados sustentam a narrativa com precisão: RQ3 pleno em 1/19
+(fundacionais), 12/18 (ciclo 1 — núcleo empírico) e 4/22 (ciclo 2); RQ4
+é o gap do ciclo 1 (4/18); RQ5 forte nos três. Build: 8 páginas, 0 erros,
+0 overfull. README do artigo atualizado (Figs. 1–3 concluídas — TODO de
+figuras encerrado). Commit `c579d38`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1278,5 +1293,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `0cc6fa4` | 2026-10-26 | Log author designation fix (item 105) in MEMORY.md                                            |
 | `53bd765` | 2026-10-26 | Log Trabalho I reuse consultation (item 106) in MEMORY.md                                     |
 | `c7c2352` | 2026-10-26 | Enrich article: cognitive-load toolbox table, six gap axes, citation-network figure           |
+| `81f5ed8` | 2026-10-26 | Log article enrichment (item 107) in MEMORY.md; fix page count in article README              |
+| `c579d38` | 2026-10-26 | Add RQ-coverage stacked-bar figure (Fig. 3) to the article                                    |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
