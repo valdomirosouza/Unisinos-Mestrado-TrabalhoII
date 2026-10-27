@@ -18,6 +18,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 | As fichas de extração      | 📑 [Índice das fichas P01–P40 + ciclo 2](report/README.md)                                                                                                                                |
 | A extração PICOC           | 🧩 [Tabela consolidada P01–P40](picoc/picoc-results-consolidated-P01-P40-Claude.md)                                                                                                       |
 | O fluxo de seleção         | 🔀 [Diagrama PRISMA](reviews/PRISMA.md)                                                                                                                                                   |
+| O artigo (draft IEEE)      | 📝 [artigo/main.tex](artigo/main.tex) · [guia](artigo/README.md)                                                                                                                          |
 
 ## 📈 Resultado em um relance
 
@@ -63,6 +64,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano
 ├── Papers_Index.csv              ← índice P01–P89 (metadados, bibliometria, status RSL, escores dos 3 avaliadores)
 ├── Papers_Index.md               ← versão Markdown legível do índice (derivada do CSV)
+├── artigo/                       ← draft v1 do artigo IEEE Access (main.tex + referencias.bib)
 ├── papers-ciclo2.csv             ← elegibilidade Etapa 1 do ciclo 2 (P41–P89): 45 elegíveis · 4 inelegíveis
 ├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
 │   ├── README.md                ← índice do Trabalho I
