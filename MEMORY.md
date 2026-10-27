@@ -991,6 +991,21 @@ arestas**; P16 e P65 consolidados como hubs (3 cada).
 por fonte (†/‡/§); README raiz e DASHBOARD atualizados; varredura de chave
 limpa. Commit `81bd595`.
 
+### 101. Adendo nº 3 na síntese consolidada — tripla checagem Scopus
+
+**Prompt:** "Atualize a síntese consolidada com a tripla checagem e commit".
+
+**Ações:** Acrescentado o **Adendo (2026-10-26, nº 3)** a
+`reviews/relatorio-sintese-consolidado.md` (corpo e adendos anteriores
+intocados): registra o fechamento das duas pendências bibliométricas
+(citações por estudo 49/49 ≥ 1 em três fontes; citações cruzadas com união
+de 52 arestas e 3 exclusivas do Scopus, destaque P54←P06/P15), o registro
+metodológico dos dois quirks novos da API (`count ≤ 25` por nível de
+serviço; sufixos editoriais em títulos zeram o REF() — caso P14) e declara
+**superada a limitação nº 4** do corpo — restando só as 3 decisões de
+protocolo (adendo nº 2) e a confirmação opcional de Qualis na Sucupira.
+PDF regenerado (312 KB). Commit `803bef6`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1130,5 +1145,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d12941f` | 2026-10-26 | Ignore local Scopus API key file                                                              |
 | `c9bc0fa` | 2026-10-26 | Complete Scopus citation counts for P41-P89 (49/49, all >= 1)                                 |
 | `81bd595` | 2026-10-26 | Complete Scopus column in P01-P89 cross-citations (triple-check, 52 edges)                    |
+| `09a22da` | 2026-10-26 | Log Scopus key setup and triple-check completion (items 99-100) in MEMORY.md                  |
+| `803bef6` | 2026-10-26 | Add Scopus triple-check addendum to consolidated synthesis; rebuild PDF                       |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
