@@ -375,7 +375,7 @@ _(O commit desta atualização de MEMORY.md é acrescentado ao final do históri
 
 ---
 
-# Sessão 2026-09-07 → 2026-10-25 — Padronização de prompts e ciclo 2 completo da RSL
+# Sessão 2026-09-07 → 2026-10-26 — Padronização de prompts, ciclo 2 completo da RSL e artigo IEEE Access (draft v1)
 
 ## Linha do tempo (prompts → respostas/ações)
 
