@@ -1,38 +1,52 @@
 % =====================================================================
 % Agentic AI as a Copilot to Reduce MTTD and MTTR During Incident
 % Response: A Systematic Literature Review
-% First draft — IEEE journal format (IEEEtran).
-% NOTE: for final submission to IEEE Access, swap the class below for the
-% official ieeeaccess.cls template (content is compatible).
+% Official IEEE Access template (ieeeaccess.cls, 2026-05-13 release).
 % Build: pdflatex main && bibtex main && pdflatex main && pdflatex main
 % =====================================================================
-\documentclass[journal]{IEEEtran}
+\documentclass{ieeeaccess}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{booktabs}
+% --- workaround: ieeeaccess.cls redefines the \year TeX primitive as a
+% macro (\def\year#1{...}), which breaks pgf's RNG seeding ("Missing
+% number" cascade at load time). Restore primitive behavior around the
+% tikz load, then put the class macro back. ---
+\makeatletter
+\let\ieee@access@year\year
+\def\year{\pdfprimitive\year}
+\makeatother
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
+\makeatletter
+\let\year\ieee@access@year
+\makeatother
 \usepackage{array}
 \usepackage{url}
-\usepackage[hidelinks]{hyperref}
 
 \begin{document}
+\history{Draft of October 27, 2026 --- not yet submitted.}
+\doi{10.1109/ACCESS.2026.DOI}
 
 \title{Agentic AI as a Copilot to Reduce MTTD and MTTR During Incident
 Response: A Systematic Literature Review}
 
-\author{Valdomiro~de~O.~Souza~Jr.,~\IEEEmembership{Master Degree Student,}
-        PPGCA --- Applied Computing Graduate Program, Universidade do Vale
-        do Rio dos Sinos (Unisinos), Brazil
+\author{\uppercase{Valdomiro de O. Souza Jr.}\authorrefmark{1},
+\IEEEmembership{Master Degree Student}}
 % TODO: add advisor as co-author before submission
-\thanks{Manuscript drafted October 26, 2026. This work was conducted within
-the Applied Computing Graduate Program (PPGCA) at Unisinos, Brazil.}}
 
-\markboth{First draft --- prepared for submission to IEEE Access}%
+\address[1]{Applied Computing Graduate Program (PPGCA), Universidade do
+Vale do Rio dos Sinos (Unisinos), S\~ao Leopoldo 93022-750, Brazil
+(e-mail: valdomirojr@gmail.com)}
+\tfootnote{This work was conducted within the Applied Computing Graduate
+Program (PPGCA) at Unisinos, Brazil.}
+
+\markboth
+{Souza Jr.: Agentic AI as a Copilot to Reduce MTTD and MTTR During Incident Response}
 {Souza Jr.: Agentic AI as a Copilot to Reduce MTTD and MTTR During Incident Response}
 
-\maketitle
+\corresp{Corresponding author: Valdomiro de O. Souza Jr. (e-mail:
+valdomirojr@gmail.com).}
 
 \begin{abstract}
 Incident response (IR) in modern IT operations is constrained by two
@@ -66,18 +80,20 @@ copilots instrumented for nominal MTTD/MTTR with their own baselines and
 validated cognitive-load instruments.
 \end{abstract}
 
-\begin{IEEEkeywords}
-Agentic AI, AIOps, incident response, LLM agents, MTTD, MTTR, cognitive
-load, multi-agent systems, systematic literature review, SOC.
-\end{IEEEkeywords}
+\begin{keywords}
+Agentic AI, AIOps, cognitive load, incident response, LLM agents,
+multi-agent systems, MTTD, MTTR, SOC, systematic literature review.
+\end{keywords}
 
-\IEEEpeerreviewmaketitle
+\titlepgskip=-21pt
+
+\maketitle
 
 % =====================================================================
 \section{Introduction}
 \label{sec:intro}
 
-\IEEEPARstart{M}{odern} IT operations teams face a structural asymmetry:
+\PARstart{M}{odern} IT operations teams face a structural asymmetry:
 distributed, cloud-native systems generate telemetry at machine speed,
 while detection, diagnosis, and remediation remain bounded by human
 cognition. The operational cost of this asymmetry is captured by two
@@ -1025,5 +1041,7 @@ reasonable request.
 
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
+
+\EOD
 
 \end{document}

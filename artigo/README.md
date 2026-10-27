@@ -6,7 +6,9 @@
 
 ## Arquivos
 
-- [`main.tex`](main.tex) — o artigo (classe `IEEEtran` em modo journal; **para a submissão final, trocar pela classe oficial `ieeeaccess.cls` do template da IEEE Access** — o conteúdo é compatível).
+- [`main.tex`](main.tex) — o artigo, agora na **classe oficial `ieeeaccess.cls`** (template IEEE Access de 2026-05-13, baixado de ieeeaccess.ieee.org); a pasta inclui a classe, `spotcolor.sty`, as fontes proprietárias (Formata/Giovanni/Times, .pfb/.tfm/.map/.fd) e os logos exigidos pelo template.
+  - **Workaround documentado no fonte:** a `ieeeaccess.cls` redefine o primitivo TeX `\year` como macro, o que quebra o seed do RNG do pgf no load ("Missing number" em cascata); o `main.tex` restaura o primitivo via `\pdfprimitive` ao redor do `\usepackage{tikz}` e devolve a macro da classe em seguida.
+  - **Aviso benigno conhecido:** com tikz carregado, a classe emite ~22 `Overfull \hbox ... while \output is active` (2 por página) — artefato do hook de shipout do pgf medindo as caixas de cabeçalho de largura total do template; ocorre igualmente no sample oficial + tikz e não afeta o layout.
 - [`referencias.bib`](referencias.bib) — 62 estudos do corpus/hubs (gerado de [`../Papers_Index.csv`](../Papers_Index.csv), com autores faltantes completados via Crossref) + 6 referências metodológicas (Kitchenham 2009, PRISMA 2020, Petticrew & Roberts, DARE, Cohen, Fleiss).
 
 ## Como compilar
@@ -15,7 +17,7 @@
 pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
-(Compilado e validado em 2026-10-26 com **TinyTeX** — `~/Library/TinyTeX/bin/universal-darwin/` nesta máquina — + pacote `ieeetran` via tlmgr: **[`main.pdf`](main.pdf), 8 páginas (Fig. 1 PRISMA + Fig. 2 rede de citações + Fig. 3 cobertura de RQs, todas em TikZ; Tabela IV toolbox de carga cognitiva; §V-B eixos de lacunas)**, 0 citações não resolvidas, 0 overfull boxes, 0 avisos de BibTeX; 48 chaves de citação resolvidas.)
+(Compilado e validado em 2026-10-27 com **TinyTeX** — `~/Library/TinyTeX/bin/universal-darwin/` nesta máquina — + pacote `ieeetran` via tlmgr: **[`main.pdf`](main.pdf), 9 páginas (layout oficial da Access) (Fig. 1 PRISMA + Fig. 2 rede de citações + Fig. 3 cobertura de RQs, todas em TikZ; Tabela IV toolbox de carga cognitiva; §V-B eixos de lacunas)**, 0 citações não resolvidas, 0 overfull boxes, 0 avisos de BibTeX; 48 chaves de citação resolvidas.)
 
 ## Estrutura e proveniência do conteúdo
 
@@ -28,7 +30,7 @@ pdflatex main && bibtex main && pdflatex main && pdflatex main
 
 ## Pendências para a submissão (TODO)
 
-1. Trocar `IEEEtran` pelo template oficial da IEEE Access (`ieeeaccess.cls`) e adicionar biografia/foto do autor.
+1. ~~Trocar `IEEEtran` pela `ieeeaccess.cls` oficial~~ (feito, 2026-10-27). Resta adicionar biografia/foto do autor (seção `\EOD`/biography).
 2. Adicionar o orientador como coautor (placeholder marcado no `.tex`).
 3. ~~Diagrama PRISMA~~, ~~rede de citações~~ e ~~gráfico de RQ coverage~~ (feitos: Figs. 1–3 em TikZ, 2026-10-26).
 4. ~~Decidir as 3 regras de protocolo~~ (feito: §III-E "Ratified protocol rules R1–R3", 2026-10-26 — secundários não-agênticos excluídos do corpus primário; emendas no texto normativo da Etapa 1; corte de domínio estrito com cluster humano restrito ao outcome de carga cognitiva).
