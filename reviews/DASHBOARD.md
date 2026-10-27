@@ -21,6 +21,8 @@ Os 19 fundacionais do Trabalho I agora têm pareceres padronizados (inclusão he
 
 **Consolidados por avaliador (P01–P88, 61 linhas cada):** [Claude](resultados-consolidados-claude-P01-P88.csv) · [ChatGPT](resultados-consolidados-chatgpt-P01-P88.csv) · [Gemini](resultados-consolidados-gemini-P01-P88.csv) — os três avaliadores cobrem o corpus completo (avaliações crus em [`ChatGPT/`](ChatGPT/) e [`Gemini/`](Gemini/)).
 
+📐 **[Comparação GLOBAL entre avaliadores P01–P88](comparacao-avaliadores-global.md)** (2026-10-26): acordo 90–92% por par · κ 0,51–0,57 · Fleiss **0,53** · **53/61 decisões unânimes** (fundacionais 19/19) · 8 divergências em 3 famílias protocolares, nenhuma de mérito — validação tripla do corpus completa ([CSV](comparacao-avaliadores-global.csv)).
+
 ## 🔄 Ciclo 2 (P41–P89) — concluído em 2026-09-10
 
 Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo autor. Artefatos: 📄 **[Síntese consolidada dos 2 ciclos](relatorio-sintese-consolidado.md)** ([PDF](relatorio-sintese-consolidado.pdf)) · [Triagem PRISMA](triagem-ciclo2.md) · [Fluxo PRISMA do ciclo 2](PRISMA.md) · [CSV consolidado](resultados-consolidados-ciclo2.csv) · [Gráficos](graficos-ciclo2.md) · [Tabela-síntese e pareceres](README.md) · 📐 **[Comparação entre 3 avaliadores](comparacao-avaliadores-ciclo2.md)** (Claude × ChatGPT × Gemini: acordo 81,8–95,5%; 4 divergências, todas protocolares) · [Elegibilidade](../papers-ciclo2.csv) · [PICOC](../picoc/picoc-results-consolidated-P41-P89-Claude.md) · [Fichas de extração](../report/README.md).

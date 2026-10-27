@@ -1,0 +1,62 @@
+ID,Conjunto,Claude_RQ,Claude_QA,Claude_Rec,ChatGPT_RQ,ChatGPT_QA,ChatGPT_Rec,Gemini_RQ,Gemini_QA,Gemini_Rec,Decisao_unanime
+P01,Fundacional,4.5,2.5,Incluir (mantido - fundacional),4.5,2.5,Incluir c/ ressalvas,4.5,3.0,Incluir c/ ressalvas,SIM
+P02,Fundacional,4.5,1.5,Incluir (mantido - fundacional),3.5,1.5,Incluir c/ ressalvas,3.5,2.0,Mantido (fundacional),SIM
+P03,Fundacional,4.0,3.0,Incluir (mantido - fundacional),4.0,3.0,Incluir c/ ressalvas,4.0,3.5,Mantido (fundacional),SIM
+P04,Fundacional,4.5,3.5,Incluir (mantido - fundacional),4.5,3.0,Incluir c/ ressalvas,4.0,3.5,Mantido (fundacional),SIM
+P05,Fundacional,3.5,3.5,Incluir (mantido - fundacional),3.0,2.0,Incluir c/ ressalvas,4.5,4.0,Mantido (fundacional),SIM
+P06,Fundacional,4.0,1.5,Incluir (mantido - fundacional),4.0,1.5,Incluir c/ ressalvas,4.0,2.0,Mantido (fundacional),SIM
+P07,Fundacional,2.0,3.0,Incluir (mantido - fundacional),2.0,3.5,Incluir c/ ressalvas,2.5,4.0,Mantido (fundacional),SIM
+P08,Fundacional,3.5,1.5,Incluir (mantido - fundacional),2.5,1.5,Incluir c/ ressalvas,3.5,1.5,Mantido (fundacional),SIM
+P09,Fundacional,4.5,2.5,Incluir (mantido - fundacional),4.5,2.5,Incluir c/ ressalvas,4.5,3.5,Mantido (fundacional),SIM
+P10,Fundacional,4.5,1.5,Incluir (mantido - fundacional),4.0,2.0,Incluir c/ ressalvas,4.0,1.5,Mantido (fundacional),SIM
+P11,Fundacional,2.5,3.5,Incluir (mantido - fundacional),2.5,3.5,Incluir c/ ressalvas,3.5,4.0,Mantido (fundacional),SIM
+P12,Fundacional,3.5,2.0,Incluir (mantido - fundacional),3.5,2.0,Incluir c/ ressalvas,4.0,2.0,Mantido (fundacional),SIM
+P13,Fundacional,4.0,3.5,Incluir (mantido - fundacional),2.5,3.0,Incluir c/ ressalvas,3.5,3.5,Mantido (fundacional),SIM
+P14,Fundacional,4.0,1.5,Incluir (mantido - fundacional),3.5,1.5,Incluir c/ ressalvas,4.0,2.5,Mantido (fundacional),SIM
+P15,Fundacional,4.5,2.0,Incluir (mantido - fundacional),4.5,2.5,Incluir c/ ressalvas,5.0,3.5,Mantido (fundacional),SIM
+P16,Fundacional,3.0,3.5,Incluir (mantido - fundacional),2.5,2.0,Incluir c/ ressalvas,4.0,4.0,Mantido (fundacional),SIM
+P17,Fundacional,3.5,1.5,Incluir (mantido - fundacional),3.0,1.5,Incluir c/ ressalvas,3.0,1.5,Mantido (fundacional),SIM
+P18,Fundacional,2.0,3.5,Incluir (mantido - fundacional),2.5,3.0,Incluir c/ ressalvas,3.5,3.5,Mantido (fundacional),SIM
+P19,Fundacional,3.0,3.0,Incluir (mantido - fundacional),2.5,3.0,Incluir c/ ressalvas,4.0,3.5,Mantido (fundacional),SIM
+P20,Ciclo 1,4.0,3.0,Incluir c/ ressalvas,3.0,3.5,INCLUIR COM RESSALVAS,4.0,3.0,Incluir c/ ressalvas,SIM
+P21,Ciclo 1,4.5,4.0,Incluir,3.5,3.5,INCLUIR COM RESSALVAS,4.5,4.0,Incluir,SIM
+P22,Ciclo 1,4.5,4.0,Incluir,4.5,3.5,INCLUIR COM RESSALVAS,4.5,4.0,Incluir,SIM
+P23,Ciclo 1,3.5,3.5,Incluir c/ ressalvas,3.5,3.0,INCLUIR COM RESSALVAS,3.0,3.5,Incluir,SIM
+P24,Ciclo 1,4.0,2.5,Incluir c/ ressalvas (fundacional),4.5,2.0,INCLUIR COM RESSALVAS,4.0,3.0,Incluir c/ ressalvas,SIM
+P25,Ciclo 1,4.5,4.0,Incluir,4.0,3.5,INCLUIR COM RESSALVAS,4.0,3.5,Incluir c/ ressalvas,SIM
+P26,Ciclo 1,2.5,2.5,Excluir (relevancia/tipo),2.5,2.5,INCLUIR COM RESSALVAS,2.5,3.0,Incluir c/ ressalvas,DIVERGE
+P27,Ciclo 1,4.5,4.0,Incluir,4.5,3.5,INCLUIR COM RESSALVAS,4.0,3.5,Incluir,SIM
+P28,Ciclo 1,4.5,3.5,Incluir,4.5,3.5,INCLUIR,5.0,3.5,Incluir,SIM
+P29,Ciclo 1,2.5,2.5,Excluir (relevancia/tipo),3.5,2.5,INCLUIR COM RESSALVAS,4.0,3.0,Incluir c/ ressalvas,DIVERGE
+P30,Ciclo 1,3.0,4.0,Excluir (relevancia/tipo),3.0,3.5,EXCLUIR DO CORPUS PRINCIPAL,2.0,3.5,Excluir,SIM
+P31,Ciclo 1,4.5,3.5,Incluir,4.0,3.5,INCLUIR COM RESSALVAS,4.5,3.5,Incluir,SIM
+P32,Ciclo 1,4.0,3.5,Incluir c/ ressalvas,4.0,3.5,INCLUIR COM RESSALVAS,5.0,3.5,Incluir,SIM
+P33,Ciclo 1,4.0,2.5,Incluir c/ ressalvas (fundacional),4.5,2.5,INCLUIR COM RESSALVAS,4.5,3.0,Incluir c/ ressalvas,SIM
+P34,Ciclo 1,4.0,4.0,Incluir c/ ressalvas,3.5,3.5,INCLUIR COM RESSALVAS,4.0,3.0,Incluir c/ ressalvas,SIM
+P35,Ciclo 1,4.0,4.0,Incluir,3.5,3.5,INCLUIR COM RESSALVAS,3.5,3.5,Incluir,SIM
+P37,Ciclo 1,3.0,4.0,Incluir c/ ressalvas,4.0,3.5,INCLUIR COM RESSALVAS,3.5,3.0,Incluir c/ ressalvas,SIM
+P38,Ciclo 1,3.5,4.0,Excluir (dominio),4.0,4.0,EXCLUIR DO CORPUS PRINCIPAL,2.5,4.0,Incluir c/ ressalvas (ou Excluir se dominio estrito),DIVERGE
+P39,Ciclo 1,NA,NA,Excluir (INELEGIVEL - Qualis A3),2.5,2.0,EXCLUIR DO CORPUS PRINCIPAL,2.5,1.0,Excluir,SIM
+P40,Ciclo 1,NA,NA,Excluir (INELEGIVEL - Qualis A3),4.5,1.5,EXCLUIR DO CORPUS PRINCIPAL,5.0,3.5,Incluir c/ ressalvas (condicional ao estrato),DIVERGE
+P43,Ciclo 2,3.0,2.0,Incluir c/ ressalvas (sem evidencia empirica),3.0,2.0,Incluir c/ ressalvas,4.5,2.5,Incluir c/ ressalvas,SIM
+P52,Ciclo 2,3.5,2.5,Incluir c/ ressalvas (fundacional),3.0,2.0,Incluir c/ ressalvas,3.5,3.5,Incluir,SIM
+P53,Ciclo 2,3.5,3.0,Incluir c/ ressalvas,2.0,2.5,Incluir c/ ressalvas,4.0,4.0,Incluir c/ ressalvas,SIM
+P54,Ciclo 2,4.5,2.0,Incluir c/ ressalvas (fundacional),4.0,2.0,Incluir c/ ressalvas,4.5,3.0,Incluir,SIM
+P55,Ciclo 2,4.5,2.5,Incluir c/ ressalvas (mapeamento),4.5,2.5,Incluir c/ ressalvas,4.5,2.5,Incluir c/ ressalvas,SIM
+P62,Ciclo 2,2.0,1.5,Incluir c/ ressalvas (estrato A3; cognitive load),NA,NA,Excluir,3.5,2.5,Incluir c/ ressalvas,DIVERGE
+P63,Ciclo 2,2.0,3.5,Incluir c/ ressalvas (instrumento),1.5,3.0,Incluir c/ ressalvas,1.5,4.0,Incluir c/ ressalvas,SIM
+P69,Ciclo 2,1.0,3.5,Incluir c/ ressalvas (estrato A3; cognitive load),NA,NA,Excluir,1.5,4.0,Incluir c/ ressalvas,DIVERGE
+P72,Ciclo 2,3.5,1.5,Incluir c/ ressalvas (fundacional),3.0,1.5,Incluir c/ ressalvas,4.0,3.5,Incluir c/ ressalvas,SIM
+P73,Ciclo 2,3.5,4.0,Incluir c/ ressalvas (agencia limitada),3.5,3.0,Incluir c/ ressalvas,3.5,4.0,Incluir c/ ressalvas,SIM
+P74,Ciclo 2,3.0,1.0,Incluir c/ ressalvas (fonte conceitual LLMOps),2.0,1.0,Incluir c/ ressalvas,1.5,2.0,Incluir c/ ressalvas,SIM
+P76,Ciclo 2,4.0,2.5,Incluir c/ ressalvas (PoC; MTTR vs literatura),4.5,3.0,Incluir c/ ressalvas,5.0,3.5,Incluir,SIM
+P77,Ciclo 2,3.5,1.5,Incluir c/ ressalvas (fundacional),2.5,1.0,Incluir c/ ressalvas,3.5,3.0,Incluir c/ ressalvas,SIM
+P78,Ciclo 2,4.0,3.5,Incluir c/ ressalvas,3.5,3.0,Incluir c/ ressalvas,5.0,3.5,Incluir c/ ressalvas,SIM
+P79,Ciclo 2,5.0,3.0,Incluir c/ ressalvas (fundacional),4.5,3.0,Incluir c/ ressalvas,5.0,3.5,Incluir,SIM
+P81,Ciclo 2,3.0,3.5,Incluir c/ ressalvas (estrato A4; HITL/decisao),NA,NA,Excluir,5.0,4.0,Incluir c/ ressalvas,DIVERGE
+P82,Ciclo 2,3.5,2.5,Incluir c/ ressalvas (conceitual; dominio),4.0,2.5,Incluir c/ ressalvas,4.5,3.0,Incluir c/ ressalvas,SIM
+P83,Ciclo 2,3.5,2.5,Incluir c/ ressalvas,3.5,3.0,Incluir c/ ressalvas,4.0,3.5,Incluir,SIM
+P85,Ciclo 2,0.5,3.5,Excluir (sem aderencia as RQs),1.5,2.5,Incluir c/ ressalvas,0.5,3.0,Incluir c/ ressalvas,DIVERGE
+P86,Ciclo 2,2.0,3.0,Excluir (nao-agentico; estrato B1+Q3),NA,NA,Excluir,2.0,3.5,Excluir,SIM
+P87,Ciclo 2,3.5,3.5,Incluir c/ ressalvas,3.0,3.5,Incluir c/ ressalvas,5.0,4.0,Incluir c/ ressalvas,SIM
+P88,Ciclo 2,3.0,4.0,Incluir c/ ressalvas (nao-LLM; analogo P25),2.5,4.0,Incluir c/ ressalvas,4.0,4.0,Incluir c/ ressalvas,SIM
