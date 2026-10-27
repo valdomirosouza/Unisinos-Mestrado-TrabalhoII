@@ -1101,6 +1101,30 @@ rubrica QA no método. NÃO aproveitar: template SBC, texto pt-BR (reescrever
 citando o Trabalho I como prior review — evita autoplágio) e números
 antigos. Priorização sugerida: 1–3 primeiro.
 
+### 107. Artigo enriquecido — toolbox, eixos de lacunas e Fig. 2
+
+**Prompt:** "Sim, implemente nessa ordem".
+
+**Ações:** Implementadas as 3 prioridades do item 106 no `artigo/main.tex`:
+**(1)** §IV-D reescrita elevando carga cognitiva a outcome co-primário,
+com a **Tabela IV "cognitive-load measurement toolbox"** (NASA-TLX,
+fisiológico multimodal, reaction time, exposição a alertas, BUS-15 —
+cada instrumento com evidência do corpus e uso recomendado com copilot);
+**(2)** nova §V-B "Research gaps consolidated across both reviews" — os 6
+eixos do Trabalho I cruzados com a evidência dos ciclos (eixos i/iii/vi
+identificados como os menos servidos; sétimo eixo adicionado: outcomes de
+carga cognitiva medidos); **(3)** **Fig. 2** — rede de citações internas
+em TikZ gerada programaticamente do grafo final (44 nós em layout
+circular agrupado por ciclo, 52 arestas, hubs ≥3 destacados, legenda).
+**Incidentes de build:** (a) âncora de inserção com quebra de linha
+("alias\nresolution") fez o primeiro replace falhar silenciosamente —
+detectado porque a compilação "limpa" rodou sem a figura; (b) legenda em
+`\matrix` quebrou com "Single ampersand used with wrong catcode" —
+substituída por nós simples; (c) o replace da legenda cortou no `};`
+errado deixando fragmento órfão (44 erros) — removido. Build final:
+**8 páginas, 0 erros, 0 overfull, 0 indefinidos**. README do artigo
+atualizado. Commit `c7c2352`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1252,5 +1276,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2253601` | 2026-10-26 | Log PRISMA figure (item 104) in MEMORY.md                                                     |
 | `99c31d6` | 2026-10-26 | Adjust author designation to Master Degree Student                                            |
 | `0cc6fa4` | 2026-10-26 | Log author designation fix (item 105) in MEMORY.md                                            |
+| `53bd765` | 2026-10-26 | Log Trabalho I reuse consultation (item 106) in MEMORY.md                                     |
+| `c7c2352` | 2026-10-26 | Enrich article: cognitive-load toolbox table, six gap axes, citation-network figure           |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
