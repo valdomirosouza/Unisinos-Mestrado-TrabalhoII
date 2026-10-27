@@ -1006,6 +1006,35 @@ serviço; sufixos editoriais em títulos zeram o REF() — caso P14) e declara
 protocolo (adendo nº 2) e a confirmação opcional de Qualis na Sucupira.
 PDF regenerado (312 KB). Commit `803bef6`.
 
+### 102. Draft v1 do artigo IEEE Access (LaTeX, inglês)
+
+**Prompt:** "Preciso submeter um artigo de RSL seguindo Kitchenham et al.
+(2009) para a IEEE Access, com o tema 'Agentic AI as a copilot to reduce
+MTTD and MTTR during incident response'... carga cognitiva como bônus...
+Gere primeira versão do artigo em Latex no idioma inglês, com a formatação
+IEEE, trazendo o conteúdo dos artigos, as avaliações, revisões e PICOC."
+
+**Ações:** Criada a pasta `artigo/` com: **`main.tex`** — artigo completo
+em inglês, classe IEEEtran em modo journal (nota no fonte e no README:
+trocar por `ieeeaccess.cls` oficial na submissão), ~7 seções: Introduction
+(5 contribuições), Background (AIOps→Agentic, hubs), Method (PICOC com
+regra v1.1.0, RQ1–RQ5, string validada 13/14 em 2 bases, critérios
+I1–I6/E1–E5 com a emenda de estratos, PRISMA dos 2 ciclos em tabela,
+QA/DARE, protocolo de 3 avaliadores), Results (taxonomia do corpus 53 em
+tabela, migração do gap RQ4→RQ3/QA3, **seção central de MTTD/MTTR** com
+P76/P79/P73/P81/P87/P83, cluster de carga cognitiva, citações cruzadas 52
+arestas, κ global em tabela), Discussion (o que a evidência sustenta;
+por que o gap persiste; implicações; lições metodológicas de SLR com
+LLMs), Threats to Validity e Conclusion; **`referencias.bib`** — 62
+entradas de estudos geradas do Papers_Index.csv (15 listas de autores
+faltantes completadas via Crossref; P65 adicionado após validação de
+chaves: 48 \cite, todas resolvidas) + 6 metodológicas; **`README.md`** da
+pasta com proveniência seção→artefato e TODOs de submissão (classe
+oficial, coautor orientador, figuras PRISMA/gráficos, 3 regras de
+protocolo, revisão de inglês). pdflatex não está instalado na máquina —
+draft validado estruturalmente, instruções de build no README. Indexado
+no README raiz (árvore + "Comece por aqui"). Commit `fa8abfb`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1147,5 +1176,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `81bd595` | 2026-10-26 | Complete Scopus column in P01-P89 cross-citations (triple-check, 52 edges)                    |
 | `09a22da` | 2026-10-26 | Log Scopus key setup and triple-check completion (items 99-100) in MEMORY.md                  |
 | `803bef6` | 2026-10-26 | Add Scopus triple-check addendum to consolidated synthesis; rebuild PDF                       |
+| `51869d3` | 2026-10-26 | Log Scopus addendum (item 101) in MEMORY.md                                                   |
+| `fa8abfb` | 2026-10-26 | Add IEEE Access SLR article draft v1 (main.tex + referencias.bib)                             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
