@@ -504,24 +504,71 @@ MTTR is, as of 2026, \emph{plausible but unverified by primary evidence}.
 \subsection{Cognitive load: the complementary outcome}
 \label{sec:cogload}
 
-The second gap concerns the review's bonus outcome. Within IT incident
-response, no corpus study measures operator cognitive load directly;
-alert fatigue appears as an alert-volume proxy~\cite{P73}. Direct
-measurement exists in adjacent domains, and cycle~2 deliberately
-retained this cluster (with stratum caveats under the protocol
-amendment): neuroergonomic foundations of mental workload and
+The second gap concerns an outcome this review treats as co-primary
+rather than incidental: operator cognitive load. The motivating
+observation was already present in the foundational review --- the
+explosion of observability data (metrics, logs, traces) has raised the
+cognitive load of operations teams faster than tooling has relieved
+it~\cite{P05,P16} --- yet, within IT incident response, \emph{no corpus
+study measures cognitive load directly}; alert fatigue appears only as
+an alert-volume proxy~\cite{P73}. Direct measurement does exist in
+adjacent domains, and cycle~2 deliberately retained this human-factors
+cluster (with stratum caveats under the protocol amendment):
+neuroergonomic foundations of mental workload and
 engagement~\cite{P62}; a multimodal workload database with
 classification AUC up to 0.998 and NASA-TLX ground truth~\cite{P69};
 and a human experiment in which an AI decision-support system improved
 control-room operator performance~\cite{P81}. The corpus also offers a
 validated usability instrument for conversational agents
-(BUS-15)~\cite{P63}. The intersection --- \emph{agentic copilot
-$\times$ IT incident response $\times$ measured cognitive load} ---
-is empty. Together with Section~\ref{sec:mttr}, this defines the
-experimental agenda that motivates the authors' ongoing work: a copilot
-evaluated in the field with nominal MTTD/MTTR against its own baseline
-\emph{and} validated workload instruments (NASA-TLX; BUS-15 for the
-conversational interface).
+(BUS-15)~\cite{P63}.
+
+Table~\ref{tab:cogload} consolidates these assets into a
+\emph{measurement toolbox} for future copilot studies --- in our view,
+the most reusable contribution this corpus makes to the cognitive-load
+question. The decisive observation is that the intersection
+\emph{agentic copilot $\times$ IT incident response $\times$ measured
+cognitive load} is empty: every instrument in
+Table~\ref{tab:cogload} has been validated, but never in the presence
+of an agentic copilot in IT operations. Together with
+Section~\ref{sec:mttr}, this defines the experimental agenda that
+motivates the authors' ongoing work: a copilot evaluated in the field
+with nominal MTTD/MTTR against its own baseline \emph{and} the
+instruments of Table~\ref{tab:cogload}.
+
+\begin{table}[!t]
+\caption{A cognitive-load measurement toolbox for agentic-copilot
+studies, assembled from the corpus.}
+\label{tab:cogload}
+\centering
+\begin{tabular}{@{}p{0.26\columnwidth}p{0.30\columnwidth}p{0.30\columnwidth}@{}}
+\toprule
+\textbf{Instrument} & \textbf{Corpus evidence} & \textbf{Recommended use
+with a copilot} \\
+\midrule
+NASA-TLX (subjective workload) & Ground truth for multimodal workload
+classification~\cite{P69} & Pre/post per incident shift, copilot on vs.\
+off \\
+\addlinespace
+Physiological multimodal (EEG, ECG, breathing) & Classification AUC up
+to 0.998 under activity~\cite{P69}; neuroergonomic
+framework~\cite{P62} & Continuous workload index during on-call duty;
+validate against NASA-TLX \\
+\addlinespace
+Reaction / response time & Operator reaction time
+$\approx$276$\rightarrow$107~s with AI decision support (Wilcoxon
+$p<0.01$)~\cite{P81} & Time-to-first-action per alert as the
+operator-level analogue of MTTD \\
+\addlinespace
+Alert-volume exposure & 74--84\% global alert reduction in a national
+SOC~\cite{P73} & Alerts per analyst-hour as the fatigue \emph{exposure}
+covariate \\
+\addlinespace
+Conversational usability (BUS-15) & Validated 15-item scale for AI-based
+conversational agents~\cite{P63} & Perceived quality of the copilot
+interface; moderator of workload effects \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Cross-citation structure of the corpus}
 \label{sec:cross}
@@ -541,7 +588,136 @@ sample one evolving conversation. Source-specific quirks are material
 for reproducibility: Scopus resolves references by \emph{title}, not
 DOI; one open-access venue is not indexed there at all; and preprint
 DOIs can split citation identity across sources (handled here by alias
-resolution).
+resolution). Fig.~\ref{fig:crosscite} renders the full network.
+
+\begin{figure*}[!t]
+\centering
+\resizebox{0.86\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\footnotesize,
+  fnode/.style={draw, circle, fill=gray!45, minimum size=7.5mm, inner sep=0pt},
+  c1node/.style={draw, circle, fill=gray!15, minimum size=7.5mm, inner sep=0pt},
+  c2node/.style={draw, circle, fill=white, minimum size=7.5mm, inner sep=0pt},
+  hub/.style={line width=1.1pt},
+  e/.style={-{Stealth[length=1.8mm]}, gray!65, semithick}
+]
+\node[fnode] (P01) at (0.00,6.20) {P01};
+\node[fnode] (P02) at (0.88,6.14) {P02};
+\node[fnode] (P03) at (1.75,5.95) {P03};
+\node[fnode] (P05) at (2.58,5.64) {P05};
+\node[fnode] (P06) at (3.35,5.22) {P06};
+\node[fnode,hub] (P09) at (4.06,4.69) {P09};
+\node[fnode,hub] (P10) at (4.69,4.06) {P10};
+\node[fnode] (P12) at (5.22,3.35) {P12};
+\node[fnode] (P13) at (5.64,2.58) {P13};
+\node[fnode,hub] (P14) at (5.95,1.75) {P14};
+\node[fnode] (P15) at (6.14,0.88) {P15};
+\node[fnode,hub] (P16) at (6.20,0.00) {P16};
+\node[fnode] (P18) at (6.14,-0.88) {P18};
+\node[c1node] (P20) at (5.95,-1.75) {P20};
+\node[c1node] (P24) at (5.64,-2.58) {P24};
+\node[c1node] (P26) at (5.22,-3.35) {P26};
+\node[c1node] (P28) at (4.69,-4.06) {P28};
+\node[c1node] (P29) at (4.06,-4.69) {P29};
+\node[c1node] (P31) at (3.35,-5.22) {P31};
+\node[c1node] (P33) at (2.58,-5.64) {P33};
+\node[c1node] (P37) at (1.75,-5.95) {P37};
+\node[c1node] (P38) at (0.88,-6.14) {P38};
+\node[c1node] (P39) at (0.00,-6.20) {P39};
+\node[c1node] (P40) at (-0.88,-6.14) {P40};
+\node[c2node] (P41) at (-1.75,-5.95) {P41};
+\node[c2node] (P43) at (-2.58,-5.64) {P43};
+\node[c2node] (P45) at (-3.35,-5.22) {P45};
+\node[c2node] (P50) at (-4.06,-4.69) {P50};
+\node[c2node] (P52) at (-4.69,-4.06) {P52};
+\node[c2node] (P53) at (-5.22,-3.35) {P53};
+\node[c2node] (P54) at (-5.64,-2.58) {P54};
+\node[c2node] (P55) at (-5.95,-1.75) {P55};
+\node[c2node,hub] (P65) at (-6.14,-0.88) {P65};
+\node[c2node] (P68) at (-6.20,-0.00) {P68};
+\node[c2node] (P70) at (-6.14,0.88) {P70};
+\node[c2node] (P72) at (-5.95,1.75) {P72};
+\node[c2node] (P73) at (-5.64,2.58) {P73};
+\node[c2node] (P76) at (-5.22,3.35) {P76};
+\node[c2node] (P77) at (-4.69,4.06) {P77};
+\node[c2node] (P78) at (-4.06,4.69) {P78};
+\node[c2node] (P79) at (-3.35,5.22) {P79};
+\node[c2node] (P80) at (-2.58,5.64) {P80};
+\node[c2node] (P83) at (-1.75,5.95) {P83};
+\node[c2node] (P89) at (-0.88,6.14) {P89};
+\draw[e] (P01) to[bend right=12] (P09);
+\draw[e] (P01) to[bend right=12] (P10);
+\draw[e] (P03) to[bend right=12] (P02);
+\draw[e] (P03) to[bend right=12] (P09);
+\draw[e] (P03) to[bend right=12] (P10);
+\draw[e] (P03) to[bend right=12] (P13);
+\draw[e] (P03) to[bend right=12] (P14);
+\draw[e] (P05) to[bend right=12] (P16);
+\draw[e] (P06) to[bend right=12] (P09);
+\draw[e] (P06) to[bend right=12] (P10);
+\draw[e] (P06) to[bend right=12] (P14);
+\draw[e] (P06) to[bend right=12] (P54);
+\draw[e] (P09) to[bend right=12] (P10);
+\draw[e] (P15) to[bend right=12] (P02);
+\draw[e] (P15) to[bend right=12] (P09);
+\draw[e] (P15) to[bend right=12] (P10);
+\draw[e] (P15) to[bend right=12] (P13);
+\draw[e] (P15) to[bend right=12] (P14);
+\draw[e] (P15) to[bend right=12] (P24);
+\draw[e] (P15) to[bend right=12] (P54);
+\draw[e] (P16) to[bend right=12] (P50);
+\draw[e] (P24) to[bend right=12] (P10);
+\draw[e] (P26) to[bend right=12] (P68);
+\draw[e] (P28) to[bend right=12] (P12);
+\draw[e] (P28) to[bend right=12] (P14);
+\draw[e] (P28) to[bend right=12] (P52);
+\draw[e] (P28) to[bend right=12] (P65);
+\draw[e] (P28) to[bend right=12] (P72);
+\draw[e] (P28) to[bend right=12] (P76);
+\draw[e] (P28) to[bend right=12] (P77);
+\draw[e] (P29) to[bend right=12] (P16);
+\draw[e] (P31) to[bend right=12] (P53);
+\draw[e] (P31) to[bend right=12] (P65);
+\draw[e] (P33) to[bend right=12] (P09);
+\draw[e] (P33) to[bend right=12] (P10);
+\draw[e] (P33) to[bend right=12] (P39);
+\draw[e] (P37) to[bend right=12] (P14);
+\draw[e] (P38) to[bend right=12] (P31);
+\draw[e] (P40) to[bend right=12] (P53);
+\draw[e] (P41) to[bend right=12] (P45);
+\draw[e] (P43) to[bend right=12] (P16);
+\draw[e] (P43) to[bend right=12] (P18);
+\draw[e] (P55) to[bend right=12] (P09);
+\draw[e] (P55) to[bend right=12] (P15);
+\draw[e] (P65) to[bend right=12] (P70);
+\draw[e] (P73) to[bend right=12] (P80);
+\draw[e] (P76) to[bend right=12] (P39);
+\draw[e] (P76) to[bend right=12] (P83);
+\draw[e] (P79) to[bend right=12] (P20);
+\draw[e] (P79) to[bend right=12] (P78);
+\draw[e] (P89) to[bend right=12] (P65);
+\draw[e] (P89) to[bend right=12] (P70);
+\begin{scope}[shift={(0,-7.6)}]
+  \node[fnode, minimum size=4.5mm] (lg1) at (-7.2,0) {};
+  \node[right=1mm of lg1, anchor=west] {Foundational (P01--P19)};
+  \node[c1node, minimum size=4.5mm] (lg2) at (-2.6,0) {};
+  \node[right=1mm of lg2, anchor=west] {Cycle 1 (P20--P40)};
+  \node[c2node, minimum size=4.5mm] (lg3) at (1.4,0) {};
+  \node[right=1mm of lg3, anchor=west] {Cycle 2 (P41--P89)};
+  \node[c2node, hub, minimum size=4.5mm] (lg4) at (5.0,0) {};
+  \node[right=1mm of lg4, anchor=west] {Hub ($\geq$3 internal citations)};
+\end{scope}
+\end{tikzpicture}%
+}
+\caption{Internal citation network of the corpus (52 edges, A$\rightarrow$B =
+``A cites B''), triple-checked across OpenAlex, Crossref, and Scopus.
+Definitional surveys \cite{P10,P09,P14} are the main hubs; the multi-agent
+SOC system \cite{P28} is the most connected citer (7 outgoing edges, five
+of them to cycle-2 studies), and cycle-2 studies cite back into the
+corpus --- evidence of one evolving research conversation rather than
+disjoint samples.}
+\label{fig:crosscite}
+\end{figure*}
 
 \subsection{Inter-rater reliability}
 \label{sec:reliability}
@@ -610,6 +786,42 @@ deploy agents constrain them to low-risk actions, making time gains
 modest and hard to attribute). The one nominal measurement available
 \cite{P76} being \emph{unfavorable} to the agent is a useful
 counterweight to publication bias.
+
+\subsection{Research gaps consolidated across both reviews}
+\label{sec:gapaxes}
+The foundational review synthesized six gap axes for agentic IR; the
+two update cycles allow each to be re-examined against newer evidence.
+\textbf{(i)~From recommendation to safe autonomous execution.}
+Remediation in LLM4AIOps was found to stop at recommendation and
+triage~\cite{P05,P15}; the update cycles confirm the axis --- closed-loop
+execution exists at prototype level~\cite{P22,P32} and at PoC level in
+SOC hyper-automation~\cite{P76}, but verifiable, auditable, reversible
+execution in production remains unreported.
+\textbf{(ii)~Complex telemetry (traces).} The difficulty of feeding
+distributed traces to LLMs~\cite{P05} persists: cycle-2 primary studies
+operate on logs, alerts, and flows~\cite{P53,P73,P87}; trace-native
+agentic RCA remains open.
+\textbf{(iii)~Memory integrity and contradictory knowledge.}
+Memory poisoning and conflicting sources were flagged as structural
+risks~\cite{P01}; no update-cycle study evaluates agent-memory integrity
+empirically --- the axis is untouched.
+\textbf{(iv)~Governance, accountability, and adversarial risk.}
+The richest axis in volume: governance frameworks and threat
+taxonomies~\cite{P01,P12,P14,P17,P72,P77} and HITL adoption
+factors~\cite{P08,P37}, yet still without quantitative evaluation of
+governance mechanisms under incident conditions.
+\textbf{(v)~Causal reasoning vs.\ statistical correlation.}
+Agentic RCA advanced with graph- and Bayesian-structured
+approaches~\cite{P32,P35,P53}, partially addressing the axis, though
+evaluation remains on curated failure sets.
+\textbf{(vi)~Resource efficiency and sustainability.}
+The SLM agent of~\cite{P21} is still the corpus' only direct response
+(compact models, confidentiality, cost); the axis otherwise remains a
+statement of intent. Axes (i), (iii), and (vi) are therefore the least
+served by three years of literature --- a concrete map for future
+primary studies, to which this review adds a seventh axis:
+\emph{measured cognitive-load outcomes}
+(Section~\ref{sec:cogload}).
 
 \subsection{Implications for research and practice}
 For researchers, the agenda is concrete: field studies that instrument
