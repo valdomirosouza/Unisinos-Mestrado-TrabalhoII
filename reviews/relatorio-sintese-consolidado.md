@@ -118,4 +118,16 @@ A limitação nº 1 (§9/§10: avaliador único no ciclo 2) foi **sanada**: o au
 
 ---
 
-_Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos (adendo de 2026-10-25 acima). Este documento consolida; os relatórios e avaliações de cada ciclo permanecem como registros históricos imutáveis._
+## Adendo (2026-10-26) — corpus P01–P88 com validação tripla completa
+
+Após o adendo anterior, três marcos fecharam a validação de todo o corpus avaliado:
+
+1. **Avaliação retroativa dos fundacionais (P01–P19):** os 19 estudos herdados do Trabalho I receberam pareceres padronizados (inclusão não rediscutida; SCORE_RQ médio 3,66 · SCORE_QA médio 2,53 · 9 Alta/10 Média) — [tabela](README.md) · [CSV](resultados-consolidados-fundacionais.csv) · [gráficos](graficos-fundacionais.md). Com isso, **os 61 pareceres (P01–P88) usam as mesmas Tabelas 3/5/7**.
+2. **Três avaliadores sobre o corpus inteiro:** ChatGPT e Gemini completaram os conjuntos P01–P88 (61 avaliações cada), consolidados por avaliador em [CSVs próprios](resultados-consolidados-claude-P01-P88.csv).
+3. **[Comparação global](comparacao-avaliadores-global.md):** acordo de decisão **90,2–91,8% por par** · κ 0,51–0,57 · **Fleiss 0,53** · **53/61 decisões unânimes** (fundacionais 19/19; exclusões unânimes: P30, P39, P86). As **8 divergências formam 3 famílias protocolares** — (A) estudos secundários não-agênticos (P26, P29); (B) emenda de estratos de 2026-09-09 (P62, P69, P81); (C) fronteiras de domínio/estrato (P38, P40, P85) — **nenhuma de mérito**: nos 8 casos os escores dos três avaliadores convergem e o que varia é a regra aplicada à consequência.
+
+**Implicações para a síntese:** (i) a seção 9 e as limitações 1 e 6 do corpo deste relatório estão **superadas** — a validação cruzada agora cobre fundacionais, ciclo 1 e ciclo 2; (ii) o corpus central da RSL (50 inclusões + 3 exclusões unânimes = 87%) é **avaliador-independente**; (iii) as 3 famílias de divergência são a lista fechada de decisões de protocolo a registrar pelo condutor (tratamento de secundários não-agênticos; posição normativa da emenda de estratos nos prompts; rigor do corte de domínio e destino do cluster de carga cognitiva); (iv) o achado central — nenhum estudo mede MTTD/MTTR nominalmente com baseline próprio em produção — permanece confirmado de forma independente pelos três avaliadores em todo o corpus. O [`Papers_Index.csv`](../Papers_Index.csv) consolida por estudo o status RSL e os escores dos três avaliadores.
+
+---
+
+_Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos (adendos de 2026-10-25 e 2026-10-26 acima). Este documento consolida; os relatórios e avaliações de cada ciclo permanecem como registros históricos imutáveis._
