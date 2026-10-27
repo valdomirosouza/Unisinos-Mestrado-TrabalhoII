@@ -1200,6 +1200,26 @@ atualizado (TODO nº 1 encerrado; workaround e aviso benigno
 documentados). Commit `d1dd7ea` (48 arquivos). Restam no TODO:
 biografia/foto do autor, coautor orientador e revisão de inglês.
 
+### 111. Orientador como coautor e e-mails do autor correspondente
+
+**Prompt:** "Adicione o orientador como coautor no artigo Rafael Kunst
+(Prof. Doutor do PPGCA da Unisinos - RAFAELKUNST@unisinos.br) e na minha
+identificação pode incluir valdomiro.souza@gmail.com".
+
+**Ações:** `artigo/main.tex` — Prof. Dr. Rafael Kunst adicionado como
+segundo autor com a mesma afiliação (`\authorrefmark{1}`,
+PPGCA/Unisinos), e-mail rafaelkunst@unisinos.br na `\address[1]`;
+placeholder TODO de coautor removido. Identificação do autor
+correspondente passou a listar os dois e-mails (valdomirojr@gmail.com e
+valdomiro.souza@gmail.com) na `\address` e no `\corresp`. Running head
+(`\markboth`) atualizado para "Souza Jr. and Kunst: …" e Acknowledgments
+ajustados para plural ("The authors thank…"). Recompilado: 9 páginas,
+0 erros, 0 citações não resolvidas; verificação via pypdf — RAFAEL
+KUNST, os dois e-mails e rafaelkunst@unisinos.br presentes na página 1;
+running head com os dois nomes confirmado na página 2. TODO nº 2 do
+`artigo/README.md` encerrado. Commit `dc84850`. Restam no TODO:
+biografia/foto dos autores e revisão de inglês.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1363,5 +1383,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `62bfc4f` | 2026-10-26 | Ratify protocol rules R1-R3 in the article (method, reliability, threats)                        |
 | `3e96b18` | 2026-10-26 | Log protocol rules ratification (item 109) in MEMORY.md                                          |
 | `d1dd7ea` | 2026-10-27 | Switch article to official IEEE Access class (ieeeaccess.cls) with pgf year-primitive workaround |
+| `bc07d4f` | 2026-10-27 | Log IEEE Access class swap (item 110) in MEMORY.md                                               |
+| `dc84850` | 2026-10-27 | Add advisor Rafael Kunst as co-author and corresponding-author e-mails                           |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
