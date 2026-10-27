@@ -894,6 +894,35 @@ reutilizados dos CSVs de comparação existentes. CSVs por conjunto
 permanecem como registros históricos. Indexado em reviews/README e
 DASHBOARD. Commit `837fb70`.
 
+### 96. Comparação global P01–P88 e Papers_Index enriquecido
+
+**Prompt:** "Sim, compute a comparação global entre avaliadores P01–P88 e
+atualize o Papers_Index.csv na raiz do repositório."
+
+**Ações:** **(1) Comparação global** — computada sobre as 61 decisões × 3
+avaliadores (fontes: os três consolidados do item 95). **Incidente
+corrigido antes da publicação:** a 1ª rodada classificou errado as
+recomendações do ChatGPT no ciclo 1 (grafadas em MAIÚSCULAS — "EXCLUIR DO
+CORPUS PRINCIPAL" não casava com startswith("Excluir")), inflando as
+divergências de 6 para 10; refeito com comparação case-insensitive e a
+correção registrada no próprio documento. **Resultados:** acordo 90,2–91,8%
+por par; κ CL×GPT 0,57 · CL×GEM 0,51 · GPT×GEM 0,51; **Fleiss 0,53**;
+**53/61 decisões unânimes** (fundacionais 19/19; exclusões unânimes P30,
+P39, P86); MAE: CL×GPT QA 0,31 (menor). As **8 divergências formam 3
+famílias protocolares** — A: secundários não-agênticos (P26, P29); B:
+emenda de estratos (P62, P69, P81 — só o ChatGPT exclui); C: fronteiras de
+domínio/estrato (P38, P40 — só o Gemini inclui; P85 — só o Claude exclui) —
+nenhuma de mérito (escores contam a mesma história; muda a regra aplicada).
+Perfis: ChatGPT protocolar estrito · Gemini inclusivo/generoso · Claude
+intermediário com corte temático mais duro. Artefatos:
+`reviews/comparacao-avaliadores-global.md` + `.csv` (61 × 12). **(2)
+Papers_Index.csv** atualizado in loco (pedido explícito): 88 linhas × 24
+colunas — 10 novas: `Status RSL (2026-10-26)` (fundacional mantido /
+incluído / excluído com motivo / excluído na triagem E2/E3) e
+RQ/QA/Recomendação dos três avaliadores (— para os 27 excluídos na
+triagem). Indexado em reviews/README, DASHBOARD e README raiz. Commit
+`f28f8dc`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1023,5 +1052,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2e52101` | 2026-10-26 | Add foundational-corpus consolidated CSV and charts (P01-P19)                                 |
 | `edce337` | 2026-10-26 | Log foundational consolidation and Gemini P01-P19 (item 94) in MEMORY.md                      |
 | `837fb70` | 2026-10-26 | Add per-evaluator consolidated CSVs P01-P88 and ChatGPT foundational evaluations              |
+| `d3c3ae5` | 2026-10-26 | Log per-evaluator consolidated CSVs (item 95) in MEMORY.md                                    |
+| `f28f8dc` | 2026-10-26 | Add global three-evaluator comparison P01-P88; enrich Papers_Index with outcomes              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
