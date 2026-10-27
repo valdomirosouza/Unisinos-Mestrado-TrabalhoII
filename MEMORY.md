@@ -955,6 +955,42 @@ derivado (regenerar quando o CSV mudar); campo esparso
 176 linhas de tabela (88 × 2), 0 links de PDF quebrados. Indexado no README
 raiz (árvore + seção Insumos). Commit `eb15fa4`.
 
+### 99. Chave Scopus local e citações P41–P89 completas
+
+**Prompt:** "API KEY Scopus está comigo, onde posso passar ela?" → "A chave
+já está no arquivo .scopus_key, pode seguir".
+
+**Ações:** Estabelecido o canal seguro: `.scopus_key` adicionado ao
+`.gitignore` ANTES de a chave existir (commit `d12941f`); usuário criou o
+arquivo via `!` (a chave nunca passou pela conversa; lida só do disco,
+nunca ecoada — regra do CLAUDE.md). Buscadas as citações Scopus dos 49
+candidatos P41–P89 por DOI: 46/49 na primeira rodada + 3 retries por
+timeout (P51, P54, P58) = **49/49, todos ≥ 1, nenhum NÃO INDEXADO**.
+`papers-ciclo2.csv` atualizado (coluna Citações Scopus + data "OA/CR
+2026-09-09; Scopus 2026-10-26"); nota de pendência removida do README raiz.
+Varredura de vazamento da chave: limpa. Commit `c9bc0fa`.
+
+### 100. Coluna Scopus nas citações cruzadas P01–P89 (tripla checagem)
+
+**Prompt:** "Atualize também as citações cruzadas com a coluna Scopus".
+
+**Ações:** Varredura `REF("<título>") AND (DOI(...) OR ...)` para os 88
+alvos. **Incidentes e diagnóstico:** duas varreduras completas falharam com
+HTTP 400 "Exceeds the maximum number allowed for the service level" — após
+sondagens contraditórias (blocos de 30 OK na calibração; até n=8 falhando
+no lote) isolou-se o parâmetro: **`count ≤ 25` é o limite do nível de
+serviço da nova chave** (a calibração usava count=25 e o lote count=50) —
+quirk documentado no método do documento. **Correção de dado:** o título do
+P14 no Papers_Index traz o sufixo "(Kshetri)", que zerava o REF() —
+consulta refeita com o título real (recuperou os 5 citadores).
+**Resultados:** Scopus **48 arestas** (0 erros), **3 exclusivas** (P54←P06,
+P54←P15, P16←P29) e 4 invisíveis (P01→P09/P10 — citador não indexado;
+P79→P20 e P28→P76 — não resolvidas por título). **União final: 52
+arestas**; P16 e P65 consolidados como hubs (3 cada).
+`citacoes-cruzadas-P01-P89.md` regravado com a coluna Scopus e marcadores
+por fonte (†/‡/§); README raiz e DASHBOARD atualizados; varredura de chave
+limpa. Commit `81bd595`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1090,5 +1126,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2b89358` | 2026-10-26 | Add global-comparison addendum to consolidated synthesis; rebuild PDF                         |
 | `af1e452` | 2026-10-26 | Log synthesis addendum (item 97) in MEMORY.md                                                 |
 | `eb15fa4` | 2026-10-26 | Add Markdown version of Papers_Index (derived from canonical CSV)                             |
+| `cee616d` | 2026-10-26 | Log Papers_Index markdown version (item 98) in MEMORY.md                                      |
+| `d12941f` | 2026-10-26 | Ignore local Scopus API key file                                                              |
+| `c9bc0fa` | 2026-10-26 | Complete Scopus citation counts for P41-P89 (49/49, all >= 1)                                 |
+| `81bd595` | 2026-10-26 | Complete Scopus column in P01-P89 cross-citations (triple-check, 52 edges)                    |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
