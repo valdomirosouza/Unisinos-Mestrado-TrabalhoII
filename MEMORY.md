@@ -1070,6 +1070,15 @@ envolvida em `\resizebox{\textwidth}`. Build final: **7 páginas, 0 erros,
 0 overfull, 0 indefinidos**. README do artigo atualizado (TODO da figura
 marcado como feito). Commit `2afd172`.
 
+### 105. Designação do autor ajustada no artigo
+
+**Prompt:** "Ajuste o Graduate Student to Master Degree Student".
+
+**Ações:** Linha `\author` do `artigo/main.tex` alterada de
+`\IEEEmembership{Graduate Student}` para `\IEEEmembership{Master Degree
+Student}`; PDF recompilado (7 páginas, 0 erros, 0 overfull). Commit
+`99c31d6`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1218,5 +1227,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `6ba0487` | 2026-10-26 | Log LaTeX install and article compilation (item 103) in MEMORY.md                             |
 | `23cbdbe` | 2026-10-26 | Extend session header through 2026-10-26 (article draft) in MEMORY.md                         |
 | `2afd172` | 2026-10-26 | Add TikZ PRISMA flow figure to the article (Fig. 1); clean 7-page build                       |
+| `2253601` | 2026-10-26 | Log PRISMA figure (item 104) in MEMORY.md                                                     |
+| `99c31d6` | 2026-10-26 | Adjust author designation to Master Degree Student                                            |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
