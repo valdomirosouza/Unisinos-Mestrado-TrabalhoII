@@ -1052,6 +1052,24 @@ avisos de BibTeX**. Artefatos de build (aux/log/bbl/blg/out) adicionados
 ao .gitignore; PDF versionado; README do artigo atualizado com o registro
 da validação. Commit `b9e7b95`.
 
+### 104. Figura PRISMA (TikZ) no artigo
+
+**Prompt:** "Gere a figura do diagrama PRISMA para o artigo".
+
+**Ações:** Criada a **Fig. 1** do artigo em TikZ nativo (vetorial), como
+`figure*` de página inteira: duas colunas paralelas (Ciclo 1: ≈51→21→20→18
+→14; Ciclo 2: 49→49→22→20, com caixas laterais de exclusão E1/E2/E3 e a
+nota da emenda de estratos) convergindo com o corpus fundacional (n=19)
+para o **corpus consolidado n=53**; legenda registra a evidência PICOC das
+exclusões da triagem. Texto do método atualizado para referenciar
+Fig.~1 + Tabela. **Incidentes de build corrigidos:** (i) faltava a
+biblioteca `calc` do TikZ (coordenadas `$(a)!0.5!(b)$`); (ii) fonte
+Courier ausente no TinyTeX (`tlmgr install courier` — exigida pelos
+`\texttt` do texto); (iii) figura 427pt mais larga que o texto —
+envolvida em `\resizebox{\textwidth}`. Build final: **7 páginas, 0 erros,
+0 overfull, 0 indefinidos**. README do artigo atualizado (TODO da figura
+marcado como feito). Commit `2afd172`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1197,5 +1215,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `fa8abfb` | 2026-10-26 | Add IEEE Access SLR article draft v1 (main.tex + referencias.bib)                             |
 | `325e0a9` | 2026-10-26 | Log IEEE Access article draft (item 102) in MEMORY.md                                         |
 | `b9e7b95` | 2026-10-26 | Compile article draft with TinyTeX: 6-page PDF, zero warnings                                 |
+| `6ba0487` | 2026-10-26 | Log LaTeX install and article compilation (item 103) in MEMORY.md                             |
+| `23cbdbe` | 2026-10-26 | Extend session header through 2026-10-26 (article draft) in MEMORY.md                         |
+| `2afd172` | 2026-10-26 | Add TikZ PRISMA flow figure to the article (Fig. 1); clean 7-page build                       |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
