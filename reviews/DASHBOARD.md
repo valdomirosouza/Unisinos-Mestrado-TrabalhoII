@@ -12,7 +12,7 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 | 📚 [Índice de pareceres](README.md)                                                          | Tabela-síntese por estudo                                                                                                                                             |
 | 📐 [Comparação entre avaliadores](comparacao-avaliadores.md)                                 | Claude × ChatGPT: concordância (decisão 90%, κ = 0,74)                                                                                                                |
 | 🛠️ [Scripts geradores](scripts/README.md) · [Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) | Regeneração de gráficos e PDF                                                                                                                                         |
-| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas-P01-P89.md)                            | Quem cita quem entre **P01–P89** (49 arestas; OpenAlex × Crossref, Scopus pendente) · [versão P01–P40](../citacoes-cruzadas.md)                                       |
+| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas-P01-P89.md)                            | Quem cita quem entre **P01–P89** (52 arestas; OpenAlex × Crossref × Scopus — tripla checagem completa) · [versão P01–P40](../citacoes-cruzadas.md)                                       |
 | 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompts/prompt-chatgpt-consultation.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
 ## 🏛️ Corpus fundacional (P01–P19) — avaliação retroativa (2026-10-26)
