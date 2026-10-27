@@ -940,6 +940,21 @@ fechada das 3 decisões de protocolo pendentes; achado central de MTTD/MTTR
 confirmado pelos três avaliadores em todo o corpus. PDF regenerado
 (282 KB). Commit `2b89358`.
 
+### 98. Papers_Index.md — versão Markdown do índice
+
+**Prompt:** "Crie uma versão markdown do arquivo Papers_Index.csv".
+
+**Ações:** Gerado `Papers_Index.md` na raiz por script a partir do CSV
+canônico (88 artigos, 24 colunas): duas tabelas unidas pelo Paper ID —
+**Tabela 1** identificação/bibliometria (com DOI linkado ao doi.org e PDF
+linkado a `docs/`, nomes URL-encoded; percentis multilinha achatados com
+"·") e **Tabela 2** resultados da RSL (status + RQ/QA/recomendação dos 3
+avaliadores). Nota explícita de que **o CSV é a fonte canônica** e o .md é
+derivado (regenerar quando o CSV mudar); campo esparso
+`classification_evidence` omitido por concisão (nota no rodapé). Validação:
+176 linhas de tabela (88 × 2), 0 links de PDF quebrados. Indexado no README
+raiz (árvore + seção Insumos). Commit `eb15fa4`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1073,5 +1088,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `f28f8dc` | 2026-10-26 | Add global three-evaluator comparison P01-P88; enrich Papers_Index with outcomes              |
 | `2b4c235` | 2026-10-26 | Log global evaluator comparison and index update (item 96) in MEMORY.md                       |
 | `2b89358` | 2026-10-26 | Add global-comparison addendum to consolidated synthesis; rebuild PDF                         |
+| `af1e452` | 2026-10-26 | Log synthesis addendum (item 97) in MEMORY.md                                                 |
+| `eb15fa4` | 2026-10-26 | Add Markdown version of Papers_Index (derived from canonical CSV)                             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
