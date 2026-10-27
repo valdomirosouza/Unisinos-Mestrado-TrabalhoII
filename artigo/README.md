@@ -31,5 +31,5 @@ pdflatex main && bibtex main && pdflatex main && pdflatex main
 1. Trocar `IEEEtran` pelo template oficial da IEEE Access (`ieeeaccess.cls`) e adicionar biografia/foto do autor.
 2. Adicionar o orientador como coautor (placeholder marcado no `.tex`).
 3. ~~Diagrama PRISMA~~, ~~rede de citações~~ e ~~gráfico de RQ coverage~~ (feitos: Figs. 1–3 em TikZ, 2026-10-26).
-4. Decidir as 3 regras de protocolo em aberto (famílias A–C da comparação global) e registrar no texto.
+4. ~~Decidir as 3 regras de protocolo~~ (feito: §III-E "Ratified protocol rules R1–R3", 2026-10-26 — secundários não-agênticos excluídos do corpus primário; emendas no texto normativo da Etapa 1; corte de domínio estrito com cluster humano restrito ao outcome de carga cognitiva).
 5. Revisão de inglês e verificação final das contagens contra os CSVs.
