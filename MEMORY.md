@@ -923,6 +923,23 @@ RQ/QA/Recomendação dos três avaliadores (— para os 27 excluídos na
 triagem). Indexado em reviews/README, DASHBOARD e README raiz. Commit
 `f28f8dc`.
 
+### 97. Adendo da comparação global na síntese consolidada
+
+**Prompt:** "Atualize a síntese consolidada com a comparação global e
+commit".
+
+**Ações:** Acrescentado o **Adendo (2026-10-26)** a
+`reviews/relatorio-sintese-consolidado.md` (corpo histórico intocado;
+rodapé atualizado para citar os dois adendos): registra os três marcos
+pós-adendo anterior — avaliação retroativa dos fundacionais, conjuntos
+completos dos três avaliadores (61 cada) e a comparação global (acordo
+90,2–91,8%; Fleiss 0,53; 53/61 unânimes; 8 divergências em 3 famílias
+protocolares) — e as implicações: seção 9 e limitações 1 e 6 do corpo
+superadas; corpus central avaliador-independente (87% unânime); lista
+fechada das 3 decisões de protocolo pendentes; achado central de MTTD/MTTR
+confirmado pelos três avaliadores em todo o corpus. PDF regenerado
+(282 KB). Commit `2b89358`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1054,5 +1071,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `837fb70` | 2026-10-26 | Add per-evaluator consolidated CSVs P01-P88 and ChatGPT foundational evaluations              |
 | `d3c3ae5` | 2026-10-26 | Log per-evaluator consolidated CSVs (item 95) in MEMORY.md                                    |
 | `f28f8dc` | 2026-10-26 | Add global three-evaluator comparison P01-P88; enrich Papers_Index with outcomes              |
+| `2b4c235` | 2026-10-26 | Log global evaluator comparison and index update (item 96) in MEMORY.md                       |
+| `2b89358` | 2026-10-26 | Add global-comparison addendum to consolidated synthesis; rebuild PDF                         |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
