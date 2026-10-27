@@ -15,7 +15,7 @@
 pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
-(Compilado e validado em 2026-10-26 com **TinyTeX** — `~/Library/TinyTeX/bin/universal-darwin/` nesta máquina — + pacote `ieeetran` via tlmgr: **[`main.pdf`](main.pdf), 6 páginas**, 0 citações não resolvidas, 0 overfull boxes, 0 avisos de BibTeX; 48 chaves de citação resolvidas.)
+(Compilado e validado em 2026-10-26 com **TinyTeX** — `~/Library/TinyTeX/bin/universal-darwin/` nesta máquina — + pacote `ieeetran` via tlmgr: **[`main.pdf`](main.pdf), 7 páginas (com a Fig. 1 — diagrama PRISMA em TikZ)**, 0 citações não resolvidas, 0 overfull boxes, 0 avisos de BibTeX; 48 chaves de citação resolvidas.)
 
 ## Estrutura e proveniência do conteúdo
 
@@ -30,6 +30,6 @@ pdflatex main && bibtex main && pdflatex main && pdflatex main
 
 1. Trocar `IEEEtran` pelo template oficial da IEEE Access (`ieeeaccess.cls`) e adicionar biografia/foto do autor.
 2. Adicionar o orientador como coautor (placeholder marcado no `.tex`).
-3. Figuras: diagrama PRISMA (adaptar o Mermaid de `reviews/PRISMA.md` para TikZ/PNG) e 1–2 gráficos (RQ coverage; recomendações) a partir dos SVGs de `reviews/charts*/`.
+3. ~~Diagrama PRISMA~~ (feito: Fig. 1 em TikZ, 2026-10-26). Restam 1–2 gráficos opcionais (RQ coverage; recomendações) a partir dos SVGs de `reviews/charts*/`.
 4. Decidir as 3 regras de protocolo em aberto (famílias A–C da comparação global) e registrar no texto.
 5. Revisão de inglês e verificação final das contagens contra os CSVs.

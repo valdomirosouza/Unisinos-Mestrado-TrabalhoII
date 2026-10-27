@@ -11,6 +11,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
 \usepackage{array}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
@@ -269,12 +271,91 @@ root cause of three of the eight residual inter-rater divergences
 \subsection{Selection flow (PRISMA)}
 \label{sec:prisma}
 
-Table~\ref{tab:prisma} summarizes both update cycles. In cycle~2,
+Fig.~\ref{fig:prisma} shows the PRISMA~2020 flow of both update cycles
+over the foundational corpus, and Table~\ref{tab:prisma} summarizes the
+stage counts side by side. In cycle~2,
 thematic exclusion (E2/E3) was applied already at screening, because a
 full-text PICOC extraction of all 49 candidates (one reading agent per
 PDF, consolidated and audited) provided per-study evidence before
 assessment --- each screening exclusion cites that evidence and a
 cycle-1 precedent.
+
+\begin{figure*}[!t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\footnotesize,
+  box/.style={draw, rounded corners=1pt, align=center, fill=gray!8,
+              minimum height=8.5mm, text width=52mm, inner sep=2pt},
+  excl/.style={draw, align=left, fill=gray!20, minimum height=8.5mm,
+               text width=40mm, inner sep=2.5pt},
+  incl/.style={draw, thick, rounded corners=1pt, align=center, fill=gray!8,
+               minimum height=9mm, text width=52mm, inner sep=2pt},
+  final/.style={draw, very thick, rounded corners=2pt, align=center,
+                fill=gray!15, minimum height=11mm, text width=86mm},
+  lbl/.style={font=\footnotesize\bfseries\scshape},
+  arr/.style={-{Stealth[length=2.2mm]}, thick}
+]
+% ---------------- Cycle 1 column ----------------
+\node[lbl] (c1t) {Cycle 1 (Jul 2026)};
+\node[box, below=3.5mm of c1t] (c1a)
+  {Records identified via assisted search\\(3 independent assistants)\\
+   $n\approx51$ $\rightarrow$ \textbf{21} unique candidates};
+\node[box, below=5mm of c1a] (c1b)
+  {Screened (bibliometric eligibility)\\\textbf{n = 20} ($-1$ internal duplicate)};
+\node[excl, right=4mm of c1b.east, anchor=west] (c1bx)
+  {Excluded at screening: \textbf{2}\\(E1: venue stratum)};
+\node[box, below=5mm of c1b] (c1c)
+  {Assessed in full text\\(RQ1--RQ5; QA1--QA4)\\\textbf{n = 18}};
+\node[excl, right=4mm of c1c.east, anchor=west] (c1cx)
+  {Excluded after assessment: \textbf{4}\\(E2 non-agentic: 3;\\E3 out of domain: 1)};
+\node[incl, below=5mm of c1c] (c1d)
+  {\textbf{Included: n = 14}\\(2 foundational-conditional)};
+\draw[arr] (c1a) -- (c1b);
+\draw[arr] (c1b) -- (c1c);
+\draw[arr] (c1c) -- (c1d);
+\draw[arr] (c1b.east) -- (c1bx.west);
+\draw[arr] (c1c.east) -- (c1cx.west);
+% ---------------- Cycle 2 column ----------------
+\node[lbl, right=108mm of c1t] (c2t) {Cycle 2 (Sep--Oct 2026)};
+\node[box, below=3.5mm of c2t] (c2a)
+  {Candidates identified by the authors\\(targeted discovery)\\\textbf{n = 49}};
+\node[box, below=5mm of c2a] (c2b)
+  {Screened: eligibility verified in 3 indexers;\\
+   4 sub-stratum kept \emph{with caveat} (amendment)\\\textbf{n = 49}};
+\node[excl, right=4mm of c2b.east, anchor=west] (c2bx)
+  {Excluded at screening: \textbf{27}\\(E2 non-agentic: 19;\\E3 out of domain: 8;\\
+   full-text PICOC evidence)};
+\node[box, below=5mm of c2b] (c2c)
+  {Assessed in full text\\(3 independent evaluators)\\\textbf{n = 22}};
+\node[excl, right=4mm of c2c.east, anchor=west] (c2cx)
+  {Excluded after assessment: \textbf{2}\\(no RQ adherence: 1;\\non-agentic + stratum: 1)};
+\node[incl, below=5mm of c2c] (c2d)
+  {\textbf{Included: n = 20}\\(5 foundational-conditional;\\3 with stratum caveat)};
+\draw[arr] (c2a) -- (c2b);
+\draw[arr] (c2b) -- (c2c);
+\draw[arr] (c2c) -- (c2d);
+\draw[arr] (c2b.east) -- (c2bx.west);
+\draw[arr] (c2c.east) -- (c2cx.west);
+% ---------------- Foundational + final corpus ----------------
+\node[final, below=10mm of $(c1d.south)!0.5!(c2d.south)$] (corpus)
+  {\textbf{Consolidated review corpus: n = 53}\\
+   19 foundational (prior review, re-assessed retroactively)
+   $+$ 14 (cycle 1) $+$ 20 (cycle 2)\\
+   7 foundational-conditional secondary studies};
+\node[box, text width=66mm, left=7mm of corpus.west, anchor=east, yshift=0mm] (found)
+  {Studies from the prior (foundational) review\\\textbf{n = 19} (P01--P19)};
+\draw[arr] (c1d.south) -- ++(0,-4.5mm) -| ([xshift=-12mm]corpus.north);
+\draw[arr] (c2d.south) -- ++(0,-4.5mm) -| ([xshift=12mm]corpus.north);
+\draw[arr] (found.east) -- (corpus.west);
+\end{tikzpicture}%
+}
+\caption{PRISMA~2020 flow of the two update cycles over the foundational
+corpus (adapted for a review update). Cycle-2 screening exclusions are
+anchored in a full-text PICOC extraction of all 49 candidates; the
+stratum amendment is dated and auditable in the protocol.}
+\label{fig:prisma}
+\end{figure*}
 
 \begin{table}[!t]
 \caption{Selection flow across the two update cycles.}
