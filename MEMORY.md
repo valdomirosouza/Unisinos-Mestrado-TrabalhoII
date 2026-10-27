@@ -871,6 +871,29 @@ avaliações novas do Gemini (P01–P19)** que o usuário havia depositado em
 título corretos no corpo) e mantidas no mesmo commit: o conjunto Gemini
 agora cobre P01–P88 (61 avaliações). Commit `2e52101`.
 
+### 95. Consolidados por avaliador — P01–P88 (três fontes)
+
+**Prompt:** "Agora já tenho os reviews... do Claude (review-P01 até
+review-P88), Gemini... e os do ChatGPT... revise e atualize os arquivos de
+resultados consolidados das três fontes avaliadoras."
+
+**Ações:** Confirmado que os três conjuntos estão completos (61 avaliações
+por avaliador; os **P01–P19 do ChatGPT** chegaram não rastreados e foram
+validados — 19/19 com ID/título corretos — e commitados junto). Extraídos
+por script escores/recomendações dos arquivos de terceiros que ainda não
+estavam curados (GPT P01–P19; Gemini P01–P40), com inspeção dirigida dos
+ambíguos (recomendações no corpo/cauda; Gemini fundacionais usam "Status:
+FUNDACIONAL/INCLUÍDO"; Gemini-P38 decide ICR com alternativa Excluir;
+GEM-P28 RQ 5,0 — o 4,6 extraído era ruído). Gerados **3 CSVs novos de 61
+linhas** (IDs idênticos verificados): `resultados-consolidados-claude-
+P01-P88.csv` (merge dos 3 CSVs oficiais + coluna Conjunto),
+`-chatgpt-P01-P88.csv` e `-gemini-P01-P88.csv` (8 colunas: escores, banda
+derivada do QA pela rubrica, recomendação, observação; `NA` onde o ChatGPT
+parou na triagem por estrato). Dados do ciclo 1 (GPT) e ciclo 2 (GPT/GEM)
+reutilizados dos CSVs de comparação existentes. CSVs por conjunto
+permanecem como registros históricos. Indexado em reviews/README e
+DASHBOARD. Commit `837fb70`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -998,5 +1021,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2091253` | 2026-10-26 | Add 19 retroactive review reports for foundational corpus P01-P19                             |
 | `0f9b4b5` | 2026-10-26 | Log foundational retroactive reviews (item 93) in MEMORY.md                                   |
 | `2e52101` | 2026-10-26 | Add foundational-corpus consolidated CSV and charts (P01-P19)                                 |
+| `edce337` | 2026-10-26 | Log foundational consolidation and Gemini P01-P19 (item 94) in MEMORY.md                      |
+| `837fb70` | 2026-10-26 | Add per-evaluator consolidated CSVs P01-P88 and ChatGPT foundational evaluations              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
