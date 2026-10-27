@@ -1079,6 +1079,28 @@ marcado como feito). Commit `2afd172`.
 Student}`; PDF recompilado (7 páginas, 0 erros, 0 overfull). Commit
 `99c31d6`.
 
+### 106. Consulta — reaproveitamento do Trabalho I no artigo IEEE
+
+**Prompt:** "o que eu posso aproveitar em termos de formatação, diagramas,
+conteúdo do primeiro artigo TrabalhoI/Artigo_Agentic_AI V3.pdf? A ideia é
+enriquecer e tornar este artigo mais robusto... nos aspectos de redução de
+carga cognitiva com o uso de agentic ai."
+
+**Ações:** Consulta (sem alteração de artefatos). Analisadas as fontes
+LaTeX do Trabalho I (template SBC 12pt pt-BR; 2 PNGs: google-trends e
+mapa-de-ligação; 8 tabelas; lacunas em 6 eixos). **Recomendações
+entregues:** aproveitar (1) os 6 eixos de lacunas (execução autônoma
+segura; traces; integridade de memória; governança/shadow agents; causal
+vs. correlação; eficiência) cruzados com a evidência dos ciclos 1–2 na
+Discussion; (2) a narrativa de carga cognitiva da introdução, promovendo o
+outcome a co-primário com subseção/tabela "cognitive-load measurement
+toolbox" (NASA-TLX/P69, BUS-15/P63, reaction-time/P81); (3) redesenhar o
+mapa de ligação como Fig. 2 em TikZ usando o grafo de 52 arestas; (4)
+padrões das Tabelas 3/5/7 como apêndice dos 53 incluídos; (5) tabela da
+rubrica QA no método. NÃO aproveitar: template SBC, texto pt-BR (reescrever
+citando o Trabalho I como prior review — evita autoplágio) e números
+antigos. Priorização sugerida: 1–3 primeiro.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1229,5 +1251,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2afd172` | 2026-10-26 | Add TikZ PRISMA flow figure to the article (Fig. 1); clean 7-page build                       |
 | `2253601` | 2026-10-26 | Log PRISMA figure (item 104) in MEMORY.md                                                     |
 | `99c31d6` | 2026-10-26 | Adjust author designation to Master Degree Student                                            |
+| `0cc6fa4` | 2026-10-26 | Log author designation fix (item 105) in MEMORY.md                                            |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
