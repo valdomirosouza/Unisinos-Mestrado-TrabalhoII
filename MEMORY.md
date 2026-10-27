@@ -1035,6 +1035,23 @@ protocolo, revisão de inglês). pdflatex não está instalado na máquina —
 draft validado estruturalmente, instruções de build no README. Indexado
 no README raiz (árvore + "Comece por aqui"). Commit `fa8abfb`.
 
+### 103. LaTeX instalado e artigo compilado (main.pdf, 6 páginas)
+
+**Prompt:** "Instale o pdflatex e compile o artigo para validar".
+
+**Ações:** **Incidente de instalação:** o BasicTeX via Homebrew cask falhou
+silenciosamente (o instaldor `.pkg` exige senha sudo interativa,
+indisponível na sessão — /Library/TeX nunca foi criado). **Solução:**
+**TinyTeX** instalado no diretório do usuário sem sudo
+(`~/Library/TinyTeX/`; apenas o ajuste de PATH, opcional, pedia sudo —
+contornado usando o caminho completo dos binários). `tlmgr update --self`
+(exigido pelo repositório) + `tlmgr install ieeetran` (classe e .bst).
+Compilação completa (pdflatex → bibtex → 2× pdflatex): **`artigo/main.pdf`
+com 6 páginas (173 KB), 0 citações não resolvidas, 0 overfull boxes, 0
+avisos de BibTeX**. Artefatos de build (aux/log/bbl/blg/out) adicionados
+ao .gitignore; PDF versionado; README do artigo atualizado com o registro
+da validação. Commit `b9e7b95`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1178,5 +1195,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `803bef6` | 2026-10-26 | Add Scopus triple-check addendum to consolidated synthesis; rebuild PDF                       |
 | `51869d3` | 2026-10-26 | Log Scopus addendum (item 101) in MEMORY.md                                                   |
 | `fa8abfb` | 2026-10-26 | Add IEEE Access SLR article draft v1 (main.tex + referencias.bib)                             |
+| `325e0a9` | 2026-10-26 | Log IEEE Access article draft (item 102) in MEMORY.md                                         |
+| `b9e7b95` | 2026-10-26 | Compile article draft with TinyTeX: 6-page PDF, zero warnings                                 |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
