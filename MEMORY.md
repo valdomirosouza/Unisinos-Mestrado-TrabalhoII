@@ -1140,6 +1140,27 @@ texto. Os dados sustentam a narrativa com precisão: RQ3 pleno em 1/19
 0 overfull. README do artigo atualizado (Figs. 1–3 concluídas — TODO de
 figuras encerrado). Commit `c579d38`.
 
+### 109. Regras de protocolo R1–R3 ratificadas no artigo
+
+**Prompt:** "Aplique as 3 decisões de protocolo pendentes no artigo".
+
+**Ações:** As 3 famílias de divergência da comparação global foram
+ratificadas como **regras formais R1–R3**, consistentes com os vereditos
+oficiais já publicados do corpus, em nova subseção do método (§III-E
+"Ratified protocol rules"): **R1** — secundários não-agênticos excluídos
+do corpus primário independentemente de qualidade; secundários centrados
+em Agentic AI mantidos como fundacionais-condicionais; **R2** — emendas
+de elegibilidade só vinculam quando escritas no texto normativo da Etapa
+1 (não nos insumos); emenda de estratos do ciclo 2 ratificada com
+ressalva obrigatória; **R3** — corte de domínio estrito; cluster humano
+mantido exclusivamente como evidência complementar do outcome de carga
+cognitiva (nunca alimenta RQ1/RQ2/RQ4); exclusão por não-aderência às
+RQs mantida. Seção de confiabilidade e Threats atualizadas ("would
+eliminate"/"planned next step" → regras ratificadas e referenciadas).
+Build: 8 páginas, 0 erros. TODO nº 4 do artigo encerrado — restam só
+classe oficial da Access, coautor orientador e revisão de inglês. Commit
+`62bfc4f`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1159,6 +1180,10 @@ figuras encerrado). Commit `c579d38`.
   do estrato (P62, P69, P81, P86) seguem para avaliação **com ressalva de
   estrato obrigatória** nos pareceres/inclusões. Vale até nova decisão do
   autor.
+- **Regras de protocolo R1–R3 ratificadas (2026-10-26, item 109):** R1
+  secundários não-agênticos fora do corpus primário; R2 emendas só valem
+  no texto normativo da Etapa 1 dos prompts; R3 corte de domínio estrito
+  com o cluster humano restrito ao outcome COGNITIVE_LOAD.
 - Triagem do ciclo 2 pode excluir por E2/E3 já na triagem (antes da
   avaliação integral) **desde que ancorada na extração PICOC de leitura
   integral** e nos precedentes do ciclo 1 (P26/P29/P30/P38).
@@ -1295,5 +1320,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `c7c2352` | 2026-10-26 | Enrich article: cognitive-load toolbox table, six gap axes, citation-network figure           |
 | `81f5ed8` | 2026-10-26 | Log article enrichment (item 107) in MEMORY.md; fix page count in article README              |
 | `c579d38` | 2026-10-26 | Add RQ-coverage stacked-bar figure (Fig. 3) to the article                                    |
+| `5bb7b7e` | 2026-10-26 | Log RQ-coverage figure (item 108) in MEMORY.md                                                |
+| `62bfc4f` | 2026-10-26 | Ratify protocol rules R1-R3 in the article (method, reliability, threats)                     |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
