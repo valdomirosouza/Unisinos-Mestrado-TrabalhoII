@@ -1583,6 +1583,40 @@ removidos de ~/Downloads (P102 do paper 01; duplicata 1-s2.0 do P110).
 Commits: instância `81c00e4`; template `4b6d923`. `check-rsl.sh` OK nos
 dois.
 
+### 126. Ciclo 3, Etapa 1 — elegibilidade bibliométrica e PDR-0006/0007
+
+**Prompt:** "Execute o /rsl-triagem para o ciclo 3".
+
+**Ações (skill `/rsl-triagem`, Etapa 2 do WORKFLOW):** O ciclo 3 trouxe
+o primeiro caso sem regra no protocolo — **26 dos 37 candidatos são
+conference papers** e I3/I4 são estratos de periódico (ciclos 1–2 foram
+100% journals). Conforme a constituição, a execução **parou e levou a
+decisão ao condutor** (AskUserQuestion), que ratificou: **PDR-0006**
+(estrato de conferência = percentil CiteScore da série de proceedings;
+série sem CiteScore → INELEGÍVEL) e **PDR-0007** (renovação da emenda
+de estratos do PDR-0002 para o ciclo 3). Levantamento: Scopus Serial
+Title API por ISSN + busca por título para as séries (LNCS 44/B1, CCIS
+28/B2, LNNS 22/B3, Procedia 53/A4, SOUTHEASTCON 37/B2, EIT 42/B1,
+GLOBECOM 54/A4, ISDFS 11/B4) e para os 11 journals (IEEE Access 91/A1,
+CS Review 98/A1, Applied Sciences 85/A2, Network 79/A2; A3: JIKM 65,
+JECE 71, Discover AI 67; não indexados: Land Forces, IJIES, IJCTT,
+Discover Data). **Resultado (papers-ciclo3.csv):** 4 ELEGÍVEIS (P94,
+P97, P108, P112) · 15 c/ ressalva de estrato (P91, P92, P93, P95,
+P100, P101, P102, P106, P109, P110, P119, P121, P122, P123, P126) ·
+16 INELEGÍVEIS por série sem CiteScore · 2 INELEGÍVEIS por I5 com
+datas reais conferidas no Crossref (P113 2025-03/0 cit; P114
+2025-08/0 cit). **19 seguem para a extração PICOC.** Nota do condutor
+registrada no PDR-0006: P90 (candidato mais citado, 7/7/6) sai pela
+regra da série; snowballing segue como rota de recaptura.
+Papers_Index com os 37 status + MD re-derivado; PDRs indexados;
+`check-rsl.sh` OK. Commit `2787ef0`.
+
+**Incidentes:** `citedby-count` do Scopus vem como string — a 1ª rodada
+marcou P102 (SC=2) como I5 indevidamente; corrigido com coerção
+numérica. Datas de publicação ausentes no dump da descoberta exigiram
+consulta Crossref para selar os vereditos de I5 (e o 1º teste do P114
+usou DOI errado, detectado pelo título divergente).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1771,8 +1805,10 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `1aa96ea` | 2026-10-27 | Cycle-3 discovery via canonical query: 37 candidates P90-P126, audit trail and raw sweep data                 |
 | `07f57a1` | 2026-10-27 | Log cycle-3 discovery (item 123) in MEMORY.md                                                                 |
 | `127390b` | 2026-10-27 | Add cycle-3 download checklist (CAPES proxy links) and PDF ingest helper                                      |
-| `dcb28d1` | 2026-10-27 | Log Chrome plugin attempt and ingest helpers (item 124) in MEMORY.md                               |
-| `81c00e4` | 2026-10-28 | Download 30 cycle-3 PDFs via Claude in Chrome over CAPES proxy; document the flow                  |
+| `dcb28d1` | 2026-10-27 | Log Chrome plugin attempt and ingest helpers (item 124) in MEMORY.md                                          |
+| `81c00e4` | 2026-10-28 | Download 30 cycle-3 PDFs via Claude in Chrome over CAPES proxy; document the flow                             |
+| `14fbbfd` | 2026-10-28 | Log Claude in Chrome downloads and flow documentation (item 125) in MEMORY.md                      |
+| `2787ef0` | 2026-10-28 | Cycle-3 stage-1 eligibility: 4 eligible, 15 with stratum caveat, 18 ineligible; ratify PDR-0006/0007 |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
