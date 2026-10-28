@@ -30,7 +30,7 @@ pdflatex main && bibtex main && pdflatex main && pdflatex main
 
 ## Pendências para a submissão (TODO)
 
-1. ~~Trocar `IEEEtran` pela `ieeeaccess.cls` oficial~~ (feito, 2026-10-27). Resta adicionar biografia/foto do autor (seção `\EOD`/biography).
+1. ~~Trocar `IEEEtran` pela `ieeeaccess.cls` oficial~~ (feito, 2026-10-27). ~~Biografias dos autores~~ (feitas, 2026-10-27, em `IEEEbiographynophoto` — a do autor redigida a partir de [`../bio/ValdomiroSouza.pdf`](../bio/ValdomiroSouza.pdf), a do orientador a partir do perfil público acadêmico). Restam as **fotos** dos autores (trocar para `IEEEbiography` com `\includegraphics` quando houver fotos).
 2. ~~Adicionar o orientador como coautor~~ (feito, 2026-10-27: Prof. Dr. Rafael Kunst, PPGCA/Unisinos, mesma afiliação `\address[1]`; e-mails do autor correspondente valdomirojr@gmail.com e valdomiro.souza@gmail.com; running head "Souza Jr. and Kunst").
 3. ~~Diagrama PRISMA~~, ~~rede de citações~~ e ~~gráfico de RQ coverage~~ (feitos: Figs. 1–3 em TikZ, 2026-10-26).
 4. ~~Decidir as 3 regras de protocolo~~ (feito: §III-E "Ratified protocol rules R1–R3", 2026-10-26 — secundários não-agênticos excluídos do corpus primário; emendas no texto normativo da Etapa 1; corte de domínio estrito com cluster humano restrito ao outcome de carga cognitiva).

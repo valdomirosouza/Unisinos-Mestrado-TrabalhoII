@@ -65,6 +65,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── Papers_Index.csv              ← índice P01–P89 (metadados, bibliometria, status RSL, escores dos 3 avaliadores)
 ├── Papers_Index.md               ← versão Markdown legível do índice (derivada do CSV)
 ├── artigo/                       ← draft v1 do artigo IEEE Access (main.tex + referencias.bib)
+├── bio/                          ← biografias dos autores (insumo das seções biography do artigo)
+│   └── ValdomiroSouza.pdf       ← perfil profissional do autor (export LinkedIn)
 ├── papers-ciclo2.csv             ← elegibilidade Etapa 1 do ciclo 2 (P41–P89): 45 elegíveis · 4 inelegíveis
 ├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
 │   ├── README.md                ← índice do Trabalho I
