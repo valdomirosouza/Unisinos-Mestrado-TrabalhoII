@@ -1442,6 +1442,19 @@ desta pesquisa + 5 lições que viraram regra). **Validação:**
 (render preencheu marcadores/emendas/ressalvas; derive gerou MD; kappa
 reproduziu colapso, NA-safe e divergências; adopt --dry-run).
 
+### 121. Repositório Template-RSL criado no GitHub
+
+**Prompt:** "Crie o repositório no GitHub e faça o push".
+
+**Ações:** A criação como repositório **público** foi negada pelo
+classificador de permissões do Claude Code ("Create Public Surface");
+caminho mais seguro adotado: criado como **privado** —
+`https://github.com/valdomirosouza/Template-RSL` (PRIVATE, branch
+master), push do commit inicial `24bf3c3` (33 arquivos) via
+`gh repo create --private --source . --push`. Tornar público fica a
+cargo do autor (`gh repo edit valdomirosouza/Template-RSL
+--visibility public` ou pela UI), decisão deliberadamente humana.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1622,7 +1635,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                       |
 | `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                     |
 | `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                  |
-| `e7183ff` | 2026-10-27 | Log Spec-Agentic-SDLC reuse consultation (item 119) in MEMORY.md                                   |
-| —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este   |
+| `e7183ff` | 2026-10-27 | Log Spec-Agentic-SDLC reuse consultation (item 119) in MEMORY.md                                 |
+| `099e74c` | 2026-10-27 | Log Template-RSL skeleton creation (item 120) in MEMORY.md                                         |
+| —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
