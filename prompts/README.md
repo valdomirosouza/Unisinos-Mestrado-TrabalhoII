@@ -84,6 +84,19 @@ os de P20–P40 são o registro literal enviado ao revisor externo no ciclo 1.
 
 Também nesta pasta: [`prompt-chatgpt-consultation.md`](prompt-chatgpt-consultation.md) — o template vivo de avaliação (persona + Kitchenham 2009).
 
+## Ciclo 3 — prompts de avaliação integral (2026-10-28) — 13 arquivos
+
+`prompt-P91.md` · `prompt-P93.md` · `prompt-P94.md` · `prompt-P97.md` ·
+`prompt-P100.md` · `prompt-P101.md` · `prompt-P102.md` · `prompt-P106.md` ·
+`prompt-P110.md` · `prompt-P112.md` · `prompt-P119.md` · `prompt-P121.md` ·
+`prompt-P123.md` — um por aprovado na [triagem do ciclo 3](../reviews/triagem-ciclo3.md),
+renderizados do template canônico
+[`templates/prompt-avaliacao.md`](../templates/prompt-avaliacao.md) **v1.1.0**
+via `scripts/render-prompts.py`, com: bibliometria por fonte verificada em
+2026-10-27 ([`papers-ciclo3.csv`](../papers-ciclo3.csv)), emendas PDR-0006/0007
+no texto normativo (`--emendas`) e as **flags da triagem** transcritas em
+"Ressalvas da triagem". **Imutáveis após o envio aos avaliadores** (Art. VI).
+
 ## Ciclo 3 — prompts de extração PICOC (2026-10-28) — 19 arquivos
 
 Em [`picoc-ciclo3/`](picoc-ciclo3/): `prompt-P91.md` … `prompt-P126.md`, um por

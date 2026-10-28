@@ -20,6 +20,8 @@ from pathlib import Path
 FIELD_MAP = {  # marcador -> coluna do índice (ajustado à instância: Papers_Index.csv)
     'PAPER_ID': 'Paper ID', 'TITULO': 'title', 'ANO': 'year',
     'VEICULO': 'venue', 'DOI': 'doi', 'CIT': 'citations (2026-09-06)',
+    'CIT_OA': 'citations_openalex', 'CIT_CR': 'citations_crossref',
+    'CIT_SC': 'citations_scopus',
     'QUALIS': 'Scopus (Percentil)', 'SJR': 'SJR Quartile',
     'ARQUIVO_PDF': 'File name (folder: docs)',
 }

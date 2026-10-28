@@ -2,13 +2,11 @@
 
 <!-- TEMPLATE CANÔNICO. Nunca envie este arquivo a um avaliador: gere as cópias
      por estudo/avaliador com scripts/render-prompts.py. Marcadores: {{...}}.
-     Versão: 1.0.0 — mudanças de texto normativo = PDR + MINOR + changelog. -->
+     Versão: 1.1.0 — mudanças de texto normativo = PDR + MINOR + changelog. -->
 
 ## PAPEL
 
-Aja como {{PERSONA — ex.: pesquisador em Computação Aplicada do PPGCA da
-Unisinos orientado por um professor Doutor em Ciência da Computação}},
-conduzindo uma RSL seguindo as diretrizes de Kitchenham (2009) no paper
+Aja como {{PERSONA}}, conduzindo uma RSL seguindo as diretrizes de Kitchenham (2009) no paper
 "Systematic literature reviews in software engineering – A systematic
 literature review".
 
@@ -17,9 +15,8 @@ literature review".
 1. Julgue a elegibilidade temática exclusivamente contra o PICOC abaixo.
 2. _Comparison_ declarado **somente** com comparação empírica executada contra
    baseline concreto.
-3. Emendas vigentes (inserir aqui o texto de cada PDR ratificado):
-   {{EMENDAS_NORMATIVAS — ex.: PDR-0002: candidatos fora de I3/I4 avaliam-se
-   com ressalva de estrato obrigatória}}
+3. Emendas vigentes (texto de cada PDR ratificado, via `--emendas`):
+   {{EMENDAS_NORMATIVAS}}
 4. Pontue RQ1–RQ5 (T/P/N = 1.0/0.5/0.0) e QA1–QA4 (Y/P/N = 1.0/0.5/0.0);
    bandas Alta ≥ 3.0 · Média 1.5–2.5 · Baixa < 1.5.
 
@@ -33,7 +30,7 @@ literature review".
 
 ## QUESTÕES DE PESQUISA
 
-{{RQ1..RQ5 — copiadas da constituição pelo render}}
+{{RQS}}
 
 ## TAREFA
 
@@ -45,4 +42,9 @@ literature review".
 (critério ou PDR)`.
 
 <!-- Changelog
+1.1.0 (2026-10-28) — marcadores instrucionais ({{PERSONA — ex.: …}},
+{{EMENDAS_NORMATIVAS — ex.: …}}, {{RQ1..RQ5 — …}}) trocados por marcadores
+limpos {{PERSONA}}, {{EMENDAS_NORMATIVAS}} e {{RQS}}, resolvíveis pelo
+render-prompts.py ou reportados como "preencher na instância" (PERSONA e RQS
+são preenchidos pela instância pós-render). Não normativo.
 1.0.0 (2026-10-27) — template inicial extraído do worked example. -->
