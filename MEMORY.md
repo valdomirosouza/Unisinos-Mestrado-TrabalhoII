@@ -1374,6 +1374,20 @@ isso funciona normalmente no corpo). Adicionados `\vol{NN}` e
 classe oficial. Recompilado: 9 páginas, 0 erros; "VOLUME NN, YYYY"
 presente no PDF e nenhum "VOLUME 11, 2023" restante. Commit `69e1563`.
 
+### 118. PDF final para revisão visual do autor
+
+**Prompt:** "Gere o PDF final do artigo para eu revisar visualmente".
+
+**Ações:** Rebuild limpo (aux/bbl/blg/log/out removidos antes) com o
+ciclo completo pdflatex → bibtex → pdflatex ×2. Validação: **0 erros
+LaTeX, 0 citações indefinidas, 0 warnings de BibTeX, 9 páginas**;
+conferidos via pypdf a página 1 (ambos os autores por extenso, ABSTRACT,
+INDEX TERMS), o rodapé "VOLUME NN, YYYY" e as biografias na última
+página. PDF aberto no visualizador do autor (`open artigo/main.pdf`)
+para a revisão visual — a conferência de layout/figuras renderizadas é
+do autor, pois a validação via pypdf cobre apenas o texto extraído.
+Commit `1af8058` (PDF regenerado).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1549,7 +1563,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                       |
 | `5bb889c` | 2026-10-27 | Log author-provided biography update (item 115) in MEMORY.md                                     |
 | `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                     |
-| `0552ac1` | 2026-10-27 | Log full-name byline alignment (item 116) in MEMORY.md                                            |
-| `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                  |
+| `0552ac1` | 2026-10-27 | Log full-name byline alignment (item 116) in MEMORY.md                                           |
+| `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                |
+| `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                        |
+| `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                       |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
