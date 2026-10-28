@@ -1348,6 +1348,19 @@ Recompilado: 9 páginas, 0 erros; nome, Pure Bros, ISO/IEC 27001 (2022),
 "ten acquired companies" e "mean time to recover (MTTR)" verificados no
 PDF via pypdf. Commit `3d54c6c`.
 
+### 116. Nome por extenso no byline e no corresponding author
+
+**Prompt:** "Alinhe o nome por extenso no byline também".
+
+**Ações:** "Valdomiro de O. Souza Jr." → "Valdomiro de Oliveira Souza
+Jr." nas duas ocorrências restantes do `main.tex`: o `\author` (byline
+da primeira página) e o `\corresp` (nota de autor correspondente),
+alinhando com a biografia (item 115). Running head (`\markboth`)
+permanece "Souza Jr. and Kunst" (sobrenome apenas, convenção IEEE).
+Recompilado: 9 páginas, 0 erros; byline e corresp por extenso
+verificados na página 1 via pypdf, nenhuma ocorrência abreviada
+restante. Commit `1a0af97`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1520,6 +1533,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `0a352fc` | 2026-10-27 | Mark English review done in article README TODO                                                  |
 | `12f0758` | 2026-10-27 | Verify article counts against canonical CSVs; fix cycle-2 mean QA (2.73) with errata             |
 | `05efa56` | 2026-10-27 | Log article count verification (item 114) in MEMORY.md                                           |
-| `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                        |
+| `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                       |
+| `5bb889c` | 2026-10-27 | Log author-provided biography update (item 115) in MEMORY.md                                      |
+| `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                      |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
