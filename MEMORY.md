@@ -1712,6 +1712,39 @@ por pasta no commit da Etapa 4.
 Etapas 7–9 (`/rsl-consolidacao`, `/rsl-comparacao`, fichas). Replicar o fix
 do template v1.1.0 no repo Template-RSL.
 
+### 130. Ciclo 3, Etapa 7 — consolidação parcial (avaliador Claude)
+
+**Prompt:** "Execute o /rsl-consolidacao para o ciclo 3".
+
+**Ações (skill `/rsl-consolidacao`, consolidação PARCIAL — ChatGPT/Gemini
+pendentes):** (1) `reviews/resultados-consolidados-ciclo3.csv` (header do
+template canônico, 13 linhas parseadas por script dos próprios pareceres —
+símbolos RQ/QA, scores, banda, recomendação; insumos do índice aumentado);
+coluna `Conjunto` marca a parcialidade. (2) Gráficos: cópia adaptada do
+`gen_charts.py` (CSV/OUT/títulos/buckets de recomendação/valores do grid) →
+5 SVGs em `reviews/charts-ciclo3/` + `graficos-ciclo3.md` + README da pasta.
+(3) Seção datada do ciclo 3 no `DASHBOARD.md` (funil completo + escores).
+(4) `Papers_Index.csv`: Claude RQ/QA/Rec preenchidos e status
+"Ciclo 3: avaliacao parcial — Claude: …; ChatGPT/Gemini pendentes" nos 13;
+MD re-derivado. (5) **Adendo nº 4** na síntese consolidada (Art. VI) + PDF
+regenerado (build_pdf_cons.py do scratchpad, headless Chrome): registra que
+o achado central dos ciclos 1–2 ("nenhum estudo mede MTTD/MTTR nominal com
+baseline próprio") **deixa de valer no ciclo 3** (P100/P101/P102/P123), todos
+sob ressalva de estrato. Estatísticas rotuladas média≠mediana (RQ 3,85/4,0;
+QA 2,77/3,0).
+
+**Correção ao item 129:** a contagem de bandas publicada no resumo e no
+`reviews/README.md` ("8 Alta · 4 Média · 1 Baixa") estava errada — o CSV
+(fonte de verdade, Art. VII) dá **9 Alta · 3 Média · 1 Baixa** (P119 QA 3,0 =
+Alta). README corrigido; o item 129 permanece como registro histórico.
+
+**Comandos:** parser/consolidador em python; gen_charts adaptado;
+`derive-index.py`; `check-rsl.sh` OK (C5 confere parecer-a-parecer).
+Commit `ba2e282` + push.
+
+**Pendências:** reconsolidação tripla + `/rsl-comparacao` quando ChatGPT e
+Gemini entregarem; replicar fix do template v1.1.0 no Template-RSL.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1794,6 +1827,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `picoc/`: `picoc-results-ciclo3.md` · `fragments-ciclo3/` (14 fragmentos) · `prompts/picoc-ciclo3/` (19 prompts renderizados); `scripts/render-prompts.py` (FIELD_MAP da instância)
 - `reviews/`: `triagem-ciclo3.md` · seção ciclo 3 em `PRISMA.md`; READMEs de `picoc/fragments-ciclo3/` e `prompts/picoc-ciclo3/`; 19 statuses ciclo 3 em `Papers_Index.csv`/`.md`
 - Ciclo 3, Etapas 5–6: `prompts/prompt-P91…P123.md` (13), `reviews/review-P91…P123.md` (13), `templates/prompt-avaliacao.md` v1.1.0, seção ciclo 3 em `reviews/README.md`
+- Ciclo 3, Etapa 7 (parcial): `reviews/resultados-consolidados-ciclo3.csv` · `graficos-ciclo3.md` · `charts-ciclo3/` (5 SVGs + README) · seção ciclo 3 no `DASHBOARD.md` · adendo nº 4 na síntese consolidada (+PDF) · escores Claude no `Papers_Index`
 
 ## Histórico de commits da sessão
 
@@ -1914,6 +1948,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `01784eb` | 2026-10-28 | Log cycle-3 PRISMA screening (item 128) in MEMORY.md |
 | `2172585` | 2026-10-28 | Cycle-3 stage-5 evaluation prompts: 13 rendered from canonical template v1.1.0 |
 | `6c0d8fc` | 2026-10-28 | Cycle-3 stage-6 Claude evaluations: 13 reviews (1 include, 11 include-with-caveats, 1 exclude E2) |
+| `3f2caf0` | 2026-10-28 | Log cycle-3 evaluation prompts and Claude reviews (item 129) in MEMORY.md |
+| `ba2e282` | 2026-10-28 | Cycle-3 stage-7 partial consolidation (Claude evaluator) |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
