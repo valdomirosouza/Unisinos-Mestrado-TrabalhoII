@@ -74,3 +74,12 @@ research/
 ```
 
 As saídas históricas foram produzidas com a v1.0.0 e são preservadas como evidência do ciclo original. A v3 (atual: v3.2.0 — persona de pesquisador orientado do PPGCA e metodologia ancorada em Kitchenham (2009), "Systematic literature reviews in software engineering – A systematic literature review") governa os próximos ciclos de atualização.
+
+## Ciclo 3 (2026-10-27)
+
+- [`descoberta-ciclo3.md`](descoberta-ciclo3.md) — descoberta via API com a string canônica
+  (OpenAlex + Scopus; varreduras de outcome e recência): funil 684 → 584 → 37 candidatos
+  (P90–P126), recall de calibração e achado do P21.
+- [`ciclo3-data/`](ciclo3-data/) — dumps brutos auditáveis: `c3-openalex.json`,
+  `c3-scopus.json`, `c3-scored.json` (lista pontuada pós-dedup), `c3-final.json`
+  (37 candidatos enriquecidos).
