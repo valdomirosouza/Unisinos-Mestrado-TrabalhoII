@@ -8,8 +8,8 @@ os de P20–P40 são o registro literal enviado ao revisor externo no ciclo 1.
 
 ## Corpus fundacional P01–P19 (retroativos, 2026-10-26) — 19 arquivos
 
-| Arquivo |
-| --- |
+| Arquivo         |
+| --------------- |
 | `prompt-P01.md` |
 | `prompt-P02.md` |
 | `prompt-P03.md` |
@@ -32,8 +32,8 @@ os de P20–P40 são o registro literal enviado ao revisor externo no ciclo 1.
 
 ## Ciclo 1 — P20–P40 — 20 arquivos
 
-| Arquivo |
-| --- |
+| Arquivo         |
+| --------------- |
 | `prompt-P20.md` |
 | `prompt-P21.md` |
 | `prompt-P22.md` |
@@ -57,8 +57,8 @@ os de P20–P40 são o registro literal enviado ao revisor externo no ciclo 1.
 
 ## Ciclo 2 — P43–P88 (aprovados na triagem, 2026-09-09) — 22 arquivos
 
-| Arquivo |
-| --- |
+| Arquivo         |
+| --------------- |
 | `prompt-P43.md` |
 | `prompt-P52.md` |
 | `prompt-P53.md` |
@@ -83,3 +83,11 @@ os de P20–P40 são o registro literal enviado ao revisor externo no ciclo 1.
 | `prompt-P88.md` |
 
 Também nesta pasta: [`prompt-chatgpt-consultation.md`](prompt-chatgpt-consultation.md) — o template vivo de avaliação (persona + Kitchenham 2009).
+
+## Ciclo 3 — prompts de extração PICOC (2026-10-28) — 19 arquivos
+
+Em [`picoc-ciclo3/`](picoc-ciclo3/): `prompt-P91.md` … `prompt-P126.md`, um por
+candidato aprovado na Etapa 2, renderizados do template canônico
+[`templates/prompt-extracao-picoc.md`](../templates/prompt-extracao-picoc.md)
+via `scripts/render-prompts.py` (marcador `PERSONA` preenchido na instância).
+Resultados: [`picoc/picoc-results-ciclo3.md`](../picoc/picoc-results-ciclo3.md).
