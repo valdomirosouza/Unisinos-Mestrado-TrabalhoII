@@ -1411,6 +1411,37 @@ runbooks, harness de produto, multi-IDE). Recomendação: extrair um repo
 **Template-RSL** novo com este repositório como "worked example",
 priorizando CI de validação, templates canônicos e skills do ciclo.
 
+### 120. Esqueleto do Template-RSL criado
+
+**Prompt:** "Sim, crie o esqueleto do Template-RSL para eu revisar".
+
+**Ações:** Criado o repositório irmão **`~/Projects/Template-RSL`** (33
+arquivos, commit inicial local `24bf3c3`; sem remote — criação no GitHub
+fica a cargo do autor). Estrutura: `protocolo/` (constituição com 9
+artigos extraídos das convenções desta pesquisa — PICOC/Comparison
+empírico, emendas só no texto normativo, 3 avaliadores, SCORE_RQ/QA,
+bibliometria por fonte, imutabilidade de históricos, números derivam de
+CSV, segredos fora do repo, rastreabilidade; PICOC e critérios I1–I6/
+E1–E5 com placeholders; `pdr/` com template e PDR-0001 de exemplo
+narrando a emenda de estratos e a lição da regra R2); `templates/`
+(prompt de avaliação canônico com marcadores {{...}} e seção de texto
+normativo, prompt de extração PICOC, parecer, triagem, headers dos 3
+CSVs canônicos); `scripts/` (`check-rsl.sh` com checks C1 links, C2
+índice de PDRs contíguo, C3 indexação de artefatos, C4 varredura de
+segredos, C5 parecer-a-parecer vs CSV; `render-prompts.py`;
+`derive-index.py`; `compute-kappa.py` com a regra de colapso e o
+tratamento de NA validados no item 114); 6 skills `.claude/skills/rsl-*`
+(descoberta, triagem, extração, avaliação, consolidação, comparação —
+cada uma amarrada ao WORKFLOW e à constituição); CI
+(`.github/workflows/rsl-check.yml`); `WORKFLOW.md` (tabela das 9 etapas
+com skills/entradas/saídas); `adopt.sh` (instancia tema/autor/data e
+cria a estrutura de dados); CITATION.cff, CHANGELOG, LICENSE MIT,
+`docs/estrutura.md` e `docs/worked-example.md` (mapa etapa→artefato
+desta pesquisa + 5 lições que viraram regra). **Validação:**
+`check-rsl.sh` passou no próprio template; smoke tests dos 4 scripts OK
+(render preencheu marcadores/emendas/ressalvas; derive gerou MD; kappa
+reproduziu colapso, NA-safe e divergências; adopt --dry-run).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1590,6 +1621,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                |
 | `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                       |
 | `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                     |
-| `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                    |
+| `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                  |
+| `e7183ff` | 2026-10-27 | Log Spec-Agentic-SDLC reuse consultation (item 119) in MEMORY.md                                   |
+| —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este   |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
