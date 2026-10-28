@@ -1681,6 +1681,37 @@ por pasta no commit da Etapa 4.
 
 **Comandos:** `check-rsl.sh` OK; commit `5ca23f4` + push.
 
+### 129. Ciclo 3, Etapas 5–6 — prompts de avaliação e pareceres Claude
+
+**Prompt:** "Execute o /rsl-avaliacao para o ciclo 3".
+
+**Ações (skill `/rsl-avaliacao`):**
+
+- **Etapa 5:** mais um bug de template achado no beta test — os marcadores do
+  `templates/prompt-avaliacao.md` v1.0.0 eram instrucionais
+  (`{{PERSONA — ex.: …}}`) e irresolvíveis pelo render; corrigidos para
+  `{{PERSONA}}`/`{{EMENDAS_NORMATIVAS}}`/`{{RQS}}` (v1.1.0, não normativo,
+  changelog). `FIELD_MAP` ganhou `CIT_OA/CIT_CR/CIT_SC`. Como o
+  `Papers_Index.csv` não tem percentil/citações dos P90+, o render usou um
+  **índice aumentado** (scratchpad): Papers_Index + citações por fonte e
+  Qualis derivado do `papers-ciclo3.csv` (verif. 2026-10-27) + ressalvas/flags
+  da triagem por estudo. 13 prompts em `prompts/prompt-PXX.md` com emendas
+  PDR-0006/0007 via `--emendas`, PERSONA/RQS preenchidos pós-render e
+  comentários HTML do template removidos das cópias enviadas. Commit `2172585`.
+- **Etapa 6 (avaliador Claude):** fan-out de 13 agentes independentes (um por
+  estudo; cada um lê só o próprio prompt + PDF + `templates/review.md`), saída
+  em `reviews/review-PXX.md`; validação por script (estrutura, soma exata dos
+  scores, banda, ressalva obrigatória na recomendação) — 13/13 OK. Resultado:
+  **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106,
+  E2 — parecer confirmou a agência nominal flagada na triagem; RQ 2.0, QA 1.0
+  Baixa). Faixas: RQ 2.0–5.0 (P101/P102 = 5.0); QA 1.0–3.5 (8 Alta · 4 Média ·
+  1 Baixa). Seção do ciclo 3 em `reviews/README.md`. Commit `6c0d8fc`.
+
+**Pendências:** avaliações paralelas ChatGPT e Gemini com os mesmos prompts
+(executadas pelo condutor nas plataformas, como nos ciclos 1–2), depois
+Etapas 7–9 (`/rsl-consolidacao`, `/rsl-comparacao`, fichas). Replicar o fix
+do template v1.1.0 no repo Template-RSL.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1762,6 +1793,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
   anterior (conforme nota daquela tabela).
 - `picoc/`: `picoc-results-ciclo3.md` · `fragments-ciclo3/` (14 fragmentos) · `prompts/picoc-ciclo3/` (19 prompts renderizados); `scripts/render-prompts.py` (FIELD_MAP da instância)
 - `reviews/`: `triagem-ciclo3.md` · seção ciclo 3 em `PRISMA.md`; READMEs de `picoc/fragments-ciclo3/` e `prompts/picoc-ciclo3/`; 19 statuses ciclo 3 em `Papers_Index.csv`/`.md`
+- Ciclo 3, Etapas 5–6: `prompts/prompt-P91…P123.md` (13), `reviews/review-P91…P123.md` (13), `templates/prompt-avaliacao.md` v1.1.0, seção ciclo 3 em `reviews/README.md`
 
 ## Histórico de commits da sessão
 
@@ -1879,6 +1911,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `cfce70c` | 2026-10-28 | Cycle-3 stage-3 PICOC extraction: 14 of 19 candidates (5 Springer pending) |
 | `a15bdc8` | 2026-10-28 | Log cycle-3 PICOC extraction (item 127) in MEMORY.md |
 | `5ca23f4` | 2026-10-28 | Cycle-3 stage-4 PRISMA screening: 13 approved for full evaluation, 1 excluded (E3), 5 deferred |
+| `2172585` | 2026-10-28 | Cycle-3 stage-5 evaluation prompts: 13 rendered from canonical template v1.1.0 |
+| `6c0d8fc` | 2026-10-28 | Cycle-3 stage-6 Claude evaluations: 13 reviews (1 include, 11 include-with-caveats, 1 exclude E2) |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
