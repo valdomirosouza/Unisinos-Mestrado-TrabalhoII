@@ -142,3 +142,14 @@ Com a chave Scopus regenerada (mantida fora do repositório), as duas pendência
 ---
 
 _Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos (adendos de 2026-10-25 e 2026-10-26 acima). Este documento consolida; os relatórios e avaliações de cada ciclo permanecem como registros históricos imutáveis._
+
+---
+
+## Errata (2026-10-27)
+
+- Na tabela comparativa dos ciclos, o **SCORE_QA médio do ciclo 2** correto é
+  **2,73** (soma 60,0 ÷ 22 avaliados, conferida em
+  [`resultados-consolidados-ciclo2.csv`](resultados-consolidados-ciclo2.csv));
+  o valor 2,75 ali exibido como média é a **mediana**. Detectado na
+  verificação final de contagens do artigo IEEE Access (2026-10-27). O texto
+  histórico acima não foi reescrito, conforme a convenção do repositório.

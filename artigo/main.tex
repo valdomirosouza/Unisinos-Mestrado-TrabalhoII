@@ -452,7 +452,11 @@ comparable.
 \subsection{Three-evaluator protocol}
 Every full-text assessment was executed independently by three LLM-based
 evaluators (Claude, ChatGPT, Gemini) from the same written prompt and
-PDF. Agreement was computed on collapsed include/exclude decisions with
+PDF. The agreement set comprises 61 decisions: the 19 foundational
+re-assessments, all 20 screened cycle-1 candidates (the two
+stratum-ineligible candidates also received full assessments, recorded
+as exclusions), and the 22 cycle-2 assessments. Agreement was computed
+on collapsed include/exclude decisions with
 Cohen's $\kappa$ per pair~\cite{cohen1960} and Fleiss' $\kappa$ overall
 \cite{fleiss1971}. Results are reported in
 Section~\ref{sec:reliability}.
@@ -473,7 +477,7 @@ evidence. Second, the \emph{empirical core} is concentrated in cycle~1:
 multi-agent LLM systems for RCA and SOC \cite{P27,P28,P31,P35},
 closed-loop remediation \cite{P22}, and a small-language-model agent for
 ICT operations \cite{P21} --- the methodological high-water marks of the
-corpus (QA $4.0/4.0$). Third, cycle~2 adds the copilot pattern proper
+corpus (QA $3.5$--$4.0$ of $4.0$). Third, cycle~2 adds the copilot pattern proper
 --- RAG-based security copilots \cite{P78,P83,P87} and SOC
 hyper-automation \cite{P76} --- plus a \emph{human-factors cluster}
 absent from earlier cycles \cite{P62,P63,P69,P81}.
@@ -505,7 +509,7 @@ Fig.~\ref{fig:rqcov} shows per-RQ coverage across the three study sets.
 RQ coverage shifted between cycles in a telling way. In cycle~1
 (18 assessed; mean RQ score 3.83, mean QA 3.50) the systematic gap was
 \textbf{RQ4} (ethics and governance: only 4/18 fully answered). In
-cycle~2 (22 assessed; mean RQ 3.16, mean QA 2.75; zero unconditional
+cycle~2 (22 assessed; mean RQ 3.16, mean QA 2.73; zero unconditional
 inclusions) the gap moved to \textbf{RQ3/QA3}: abundant conceptual
 contribution with scarce empirical benefit evidence. The retroactive
 assessment of the foundational studies (mean RQ 3.66, mean QA 2.53)

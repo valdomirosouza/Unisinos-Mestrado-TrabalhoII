@@ -35,10 +35,12 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 | **Incluir c/ ressalvas**               |      **20** (5 fundacionais · 3 c/ ressalva de estrato) |
 | **Excluir** (pós-avaliação)            |                                        **2** (P85, P86) |
 | SCORE_RQ médio (mediana)               |                                          **3,16** (3,5) |
-| SCORE_QA médio (mediana)               |                                         **2,75** (2,75) |
+| SCORE_QA médio (mediana)               |                                         **2,73** (2,75) |
 | Banda Alta / Média / Baixa             |                                         **11 / 10 / 1** |
 | Lacuna sistemática                     | **RQ3/QA3 (evidência empírica)** — nenhum Incluir pleno |
 | **Corpus consolidado (2 ciclos)**      |                                        **53** (33 + 20) |
+
+> **Correção (2026-10-27):** o SCORE_QA médio do ciclo 2 é **2,73** (soma 60,0 ÷ 22 avaliados, conferida em `resultados-consolidados-ciclo2.csv`); o valor 2,75 anteriormente exibido como média era a **mediana**.
 
 ## 📈 Números-chave
 
