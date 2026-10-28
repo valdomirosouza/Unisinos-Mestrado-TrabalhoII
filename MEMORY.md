@@ -1911,6 +1911,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `cfce70c` | 2026-10-28 | Cycle-3 stage-3 PICOC extraction: 14 of 19 candidates (5 Springer pending) |
 | `a15bdc8` | 2026-10-28 | Log cycle-3 PICOC extraction (item 127) in MEMORY.md |
 | `5ca23f4` | 2026-10-28 | Cycle-3 stage-4 PRISMA screening: 13 approved for full evaluation, 1 excluded (E3), 5 deferred |
+| `01784eb` | 2026-10-28 | Log cycle-3 PRISMA screening (item 128) in MEMORY.md |
 | `2172585` | 2026-10-28 | Cycle-3 stage-5 evaluation prompts: 13 rendered from canonical template v1.1.0 |
 | `6c0d8fc` | 2026-10-28 | Cycle-3 stage-6 Claude evaluations: 13 reviews (1 include, 11 include-with-caveats, 1 exclude E2) |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
