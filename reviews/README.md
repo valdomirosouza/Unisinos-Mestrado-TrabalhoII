@@ -133,12 +133,20 @@ imutáveis de [`../prompts/`](../prompts/README.md) (template v1.1.0, emendas
 PDR-0006/0007 no texto normativo). Resultado Claude: **1 Incluir** (P94) ·
 **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2 — agência nominal,
 confirmando a flag da [triagem](triagem-ciclo3.md)). Scores: RQ 2.0–5.0;
-QA 1.0–3.5 (8 banda Alta · 4 Média · 1 Baixa).
+QA 1.0–3.5 (9 banda Alta · 3 Média · 1 Baixa — contagem conferida no
+[CSV consolidado](resultados-consolidados-ciclo3.csv), fonte de verdade).
+
+**Consolidação parcial (2026-10-28):** [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv)
+(fonte de verdade, 13 linhas) · [`graficos-ciclo3.md`](graficos-ciclo3.md)
+(SVGs em [`charts-ciclo3/`](charts-ciclo3/README.md)) · seção do ciclo 3 no
+[`DASHBOARD.md`](DASHBOARD.md) · adendo nº 4 na
+[síntese consolidada](relatorio-sintese-consolidado.md) (PDF regenerado).
+Estatísticas Claude: RQ média 3,85/mediana 4,0 · QA média 2,77/mediana 3,0.
 
 > ⏳ **Pendências do ciclo 3:** avaliações paralelas **ChatGPT** e **Gemini**
 > (mesmos prompts; saídas em `ChatGPT/PXX_avaliacao_RSL.md` e
-> `Gemini/PXX_avaliacao_RSL.md`), consolidação (Etapa 7) e comparação entre
-> avaliadores (Etapa 8).
+> `Gemini/PXX_avaliacao_RSL.md`), reconsolidação tripla (Etapa 7) e comparação
+> entre avaliadores (Etapa 8).
 
 ## Padrões e observações para a síntese
 

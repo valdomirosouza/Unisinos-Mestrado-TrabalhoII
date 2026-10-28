@@ -153,3 +153,40 @@ _Gerado em 2026-09-10 a partir dos artefatos versionados dos dois ciclos (adendo
   o valor 2,75 ali exibido como média é a **mediana**. Detectado na
   verificação final de contagens do artigo IEEE Access (2026-10-27). O texto
   histórico acima não foi reescrito, conforme a convenção do repositório.
+
+---
+
+## Adendo (2026-10-28, nº 4) — ciclo 3 até a avaliação parcial (Claude)
+
+O **ciclo 3** (atualização de revisão, descoberta de 2026-10-27) avançou até a
+avaliação integral pelo primeiro avaliador:
+
+1. **Funil:** 37 candidatos novos (P90–P126) → 19 elegíveis na Etapa 1
+   ([PDR-0006](../protocolo/pdr/PDR-0006-estrato-de-conference-papers-pelo-percentil-da-serie.md)
+   introduz o estrato de conference papers pelo percentil Scopus da série;
+   [PDR-0007](../protocolo/pdr/PDR-0007-renovacao-da-emenda-de-estratos-para-o-ciclo-3.md)
+   renova a emenda de estratos) → 14 com extração PICOC de leitura integral
+   (5 capítulos Springer sem acesso, *reports not retrieved*) → triagem:
+   **13 aprovados** · 1 excluído (E3: P108) — [`triagem-ciclo3.md`](triagem-ciclo3.md).
+2. **Avaliação (Claude, 13/13):** 1 Incluir (P94) · 11 Incluir c/ ressalvas ·
+   1 Excluir (P106, E2 — "Agentic AI" nominal: ML/DRL sem LLM/arquitetura de
+   agentes). SCORE_RQ **média 3,85 · mediana 4,0**; SCORE_QA **média 2,77 ·
+   mediana 3,0**; bandas 9 Alta · 3 Média · 1 Baixa
+   ([`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv),
+   [gráficos](graficos-ciclo3.md)).
+3. **Achado que altera o quadro dos ciclos 1–2:** o ciclo 3 traz o primeiro
+   cluster de **primários com MTTD/MTTR nominal medido contra baseline
+   executado** — P100 (AIDR-Cloud: MTTR −63% vs. SREs; MTTD p90 −83% em
+   incidentes reais), P101 (ED-ASOC: MTTR −72,3%), P102 (Intelligent SRE:
+   MTTD −82% vs. SREs sêniores) e P123 (CIPHER-A: MTTC −37,8%, DARPA OPTC).
+   O achado central dos ciclos anteriores ("nenhum estudo mede MTTD/MTTR
+   nominalmente com baseline próprio") **deixa de valer para o corpus do
+   ciclo 3** — porém **todos os quatro estudos carregam ressalva de estrato
+   obrigatória** (séries B2–B4/A4 ou journals A3/não indexados), o que deve
+   qualificar qualquer síntese de benefícios.
+4. **Pendências:** avaliações ChatGPT e Gemini (mesmos prompts imutáveis),
+   consolidação tripla e comparação entre avaliadores (κ); 5 Springer via
+   biblioteca/COMUT; snowballing (rota de recaptura do P90, nota no PDR-0006).
+   **O corpus consolidado da RSL permanece 53** até o fecho das Etapas 7–8
+   com os três avaliadores.
+

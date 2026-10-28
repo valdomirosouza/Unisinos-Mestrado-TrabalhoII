@@ -42,6 +42,21 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 
 > **Correção (2026-10-27):** o SCORE_QA médio do ciclo 2 é **2,73** (soma 60,0 ÷ 22 avaliados, conferida em `resultados-consolidados-ciclo2.csv`); o valor 2,75 anteriormente exibido como média era a **mediana**.
 
+## 🔄 Ciclo 3 — em andamento (atualizado em 2026-10-28)
+
+**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação parcial (Claude concluído; ChatGPT e Gemini pendentes)**.
+
+| Estágio | Resultado |
+| --- | --- |
+| Descoberta (5 varreduras, 2026-10-27) | 37 candidatos novos (P90–P126) — [`descoberta-ciclo3.md`](../research/descoberta-ciclo3.md) |
+| Elegibilidade Etapa 1 ([PDR-0006](../protocolo/pdr/PDR-0006-estrato-de-conference-papers-pelo-percentil-da-serie.md)/[0007](../protocolo/pdr/PDR-0007-renovacao-da-emenda-de-estratos-para-o-ciclo-3.md)) | 19 elegíveis (4 plenos + 15 c/ ressalva) — [`papers-ciclo3.csv`](../papers-ciclo3.csv) |
+| Extração PICOC (leitura integral) | 14 extraídos; 5 Springer sem acesso — [`picoc-results-ciclo3.md`](../picoc/picoc-results-ciclo3.md) |
+| Triagem PRISMA ([`triagem-ciclo3.md`](triagem-ciclo3.md)) | 13 aprovados · 1 excluído (E3: P108) · 5 adiados |
+| Avaliação integral — **Claude** (13/13) | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv) · [gráficos](graficos-ciclo3.md) |
+| Avaliação integral — ChatGPT / Gemini | ⏳ pendente (mesmos prompts de [`../prompts/`](../prompts/README.md)) |
+
+**Escores Claude (n = 13):** SCORE_RQ média 3,85 · mediana 4,0 · faixa 2,0–5,0; SCORE_QA **média 2,77** · **mediana 3,0** · faixa 1,0–3,5; bandas **9 Alta · 3 Média · 1 Baixa**. Destaque do ciclo: primeiro cluster de primários com **MTTD/MTTR nominal vs. baseline executado** (P100, P101, P102, P123), todos sob ressalva de estrato. O corpus consolidado da RSL **permanece 53** até a consolidação dos três avaliadores (Etapas 7–8 completas).
+
 ## 📈 Números-chave
 
 | Métrica                               |                                               Valor |
