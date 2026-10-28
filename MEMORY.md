@@ -1490,6 +1490,43 @@ como quebrados (agora ignora qualquer esquema de URI); C1/C3 passam a
 varrer só arquivos rastreados pelo git (`.DS_Store` fora) e o C3 aceita
 índices em READMEs de subpasta; `compute-kappa.py` ganhou `--evaluators`.
 
+### 123. Ciclo 3 iniciado — descoberta via query canônica (P90–P126)
+
+**Prompt:** "Execute o /rsl-descoberta para iniciar o ciclo 3, mas antes
+me explique o que é o ciclo 3?" (explicação dada: nova rodada da update
+review para capturar o publicado/indexado após o fechamento da
+descoberta do ciclo 2, ~2026-09-07).
+
+**Ações (skill `/rsl-descoberta`, primeira execução sob o Template-RSL):**
+5 varreduras via API com a string canônica do PICOC — OpenAlex
+`title_and_abstract.search` (O: A∩B∩C 2020+ = 207, todos; R: A∩B
+2026-06+ top-100 relevância; R2: A∩B 2026+ top-100 citações) e Scopus
+`TITLE-ABS-KEY` por bloco (O: 177, todos; R: PUBYEAR>2025, 100). Funil:
+684 brutos → 584 únicos (dedup DOI/título vs. P01–P89 e entre bases) →
+435 pré-filtro de título → 218 após corte de tipo (E5/I2) → **37
+candidatos admitidos (P90–P126)** em triagem manual de título; classes
+de não-admissão documentadas (Zenodo/repositório, veículos frágeis,
+duplicatas, off-domain). **Recall de calibração (por DOI):** 24/34
+incluídos dos ciclos 1+2; perdas esperadas por design (P24, cluster
+humano P62/63/69/81, descoberta dirigida do ciclo 2) + **achado novo:
+P21 não casa mais o bloco B no abstract da OpenAlex** (casava em
+2026-07; bisseção A✓/B✗ — mudança de indexação da base; 12/14 no
+conjunto do ciclo 1). Volume A∩B 2020+ hoje: 14.952 na forma usada vs.
+≈49.700 em 2026-07 (forma da query + evolução da base; registrado).
+**Entregas:** 37 linhas novas no `Papers_Index.csv` (autores via
+OpenAlex/Crossref; citações POR FONTE no relatório — coluna datada de
+2026-09-06 deixada vazia por ser snapshot histórico); `Papers_Index.md`
+re-derivado pelo `derive-index.py` (125 linhas, 24 colunas); **5 PDFs OA
+baixados** em `docs/` e 32 marcados PENDENTE (Portal CAPES, como no
+ciclo 2); `research/descoberta-ciclo3.md` (queries, volumes, recall,
+funil, tabela completa) + `research/ciclo3-data/` (4 dumps JSON brutos
+auditáveis); READMEs atualizados. `check-rsl.sh` OK. Commit `1aa96ea`.
+
+**Incidentes:** OpenAlex 401 com cursor+sort de relevância (trocado por
+paginação por página); 429 rate-limits com retry; forma da query afeta
+volume (aspas desligam stemming — plurais explícitos adotados);
+downloads OA bloqueados por vários publishers (5/15 diretos).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1572,108 +1609,110 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 
 ## Histórico de commits da sessão
 
-| Hash      | Data       | Mensagem                                                                                         |
-| --------- | ---------- | ------------------------------------------------------------------------------------------------ |
-| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0)                                       |
-| `eba2a7d` | 2026-09-07 | Log PICOC prompt persona change (item 70) in MEMORY.md                                           |
-| `00b3e69` | 2026-09-07 | Anchor PICOC prompt methodology to Kitchenham (2009) SLR paper (v1.3.0)                          |
-| `06de0fa` | 2026-09-07 | Log Kitchenham (2009) reference update (item 71) in MEMORY.md                                    |
-| `4094ce1` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to extraction template (v1.1.0)    |
-| `c4aa322` | 2026-09-07 | Log extraction-template persona/reference update (item 72) in MEMORY.md                          |
-| `88c5412` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to discovery prompt (v3.2.0)       |
-| `f338f34` | 2026-09-07 | Log discovery-prompt persona/reference update (item 73) in MEMORY.md                             |
-| `0a07d88` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to evaluation prompt template      |
-| `b031031` | 2026-09-07 | Log evaluation-template persona update (item 74) in MEMORY.md                                    |
-| `5001ac4` | 2026-09-07 | Rename evaluation template to prompts/prompt-chatgpt-consultation.md                             |
-| `5ae1e48` | 2026-09-07 | Log evaluation-template rename (item 75) in MEMORY.md                                            |
-| `6297ef2` | 2026-09-07 | Add docs/ P41-P89 candidate PDFs from cycle-2 discovery                                          |
-| `6d9e4a9` | 2026-09-07 | Log P41-P89 candidate PDFs commit (item 76) in MEMORY.md                                         |
-| `3c76e22` | 2026-09-07 | Add Kitchenham (2009) SLR methodology reference paper to docs/                                   |
-| `d9e023d` | 2026-09-07 | Log Kitchenham (2009) PDF commit (item 77) in MEMORY.md                                          |
-| `adeeb78` | 2026-09-07 | Add cycle-2 PICOC extraction (P41-P89) with cross-cutting synthesis                              |
-| `906b582` | 2026-09-07 | Log cycle-2 PICOC extraction (item 78) in MEMORY.md                                              |
-| `57aaa88` | 2026-09-09 | Log cycle-2 workflow-order consultation (item 79) in MEMORY.md                                   |
-| `c96334e` | 2026-09-09 | Add cycle-2 stage-1 eligibility (papers-ciclo2.csv) from Papers_Index.csv                        |
-| `560b874` | 2026-09-09 | Log cycle-2 stage-1 eligibility (item 80) in MEMORY.md                                           |
-| `df57b9c` | 2026-09-09 | Add cycle-2 PRISMA screening: 22 approved, 27 excluded, strata amendment                         |
-| `9defea8` | 2026-09-09 | Log cycle-2 PRISMA screening (item 81) in MEMORY.md                                              |
-| `9fc207d` | 2026-09-09 | Generate 22 cycle-2 evaluation prompts for screening-approved candidates                         |
-| `c618846` | 2026-09-09 | Log cycle-2 evaluation prompts (item 82) in MEMORY.md                                            |
-| `99f1e6c` | 2026-09-10 | Add 22 cycle-2 review reports: 20 include-with-caveats, 2 exclude                                |
-| `85179ca` | 2026-09-10 | Log cycle-2 review reports (item 83) in MEMORY.md                                                |
-| `891edb1` | 2026-09-10 | Consolidate cycle 2: CSV, charts, PRISMA flow, dashboard; corpus 53                              |
-| `b8bbc1d` | 2026-09-10 | Log cycle-2 consolidation (item 84) in MEMORY.md                                                 |
-| `d527e60` | 2026-09-10 | Add extraction sheets (EN+ptBR) and consolidated CSVs for 20 cycle-2 included studies            |
-| `00ca1b7` | 2026-09-10 | Log cycle-2 extraction sheets (item 85) in MEMORY.md                                             |
-| `129afc8` | 2026-09-10 | Add consolidated two-cycle synthesis report (MD + PDF)                                           |
-| `362faf2` | 2026-09-10 | Log consolidated synthesis report (item 86) in MEMORY.md                                         |
-| `91eb5cb` | 2026-09-12 | Log evaluator-comparison blocker and procedure (item 87) in MEMORY.md                            |
-| `8f98497` | 2026-10-25 | Add ChatGPT and Gemini evaluator sets for cycle 2 (P43-P88; Gemini also P20-P40)                 |
-| `6e07b65` | 2026-10-25 | Log evaluator sets commit (item 88) in MEMORY.md                                                 |
-| `52abc4b` | 2026-10-25 | Add cycle-2 three-evaluator comparison (Claude x ChatGPT x Gemini)                               |
-| `5983930` | 2026-10-25 | Log cycle-2 evaluator comparison (item 89) in MEMORY.md                                          |
-| `d4f0061` | 2026-10-25 | Update corpus cross-citations to P01-P89 (49 edges; OpenAlex+Crossref)                           |
-| `3a555e7` | 2026-10-25 | Log P01-P89 cross-citations update (item 90) in MEMORY.md                                        |
-| `c73fbb7` | 2026-10-25 | Add cycle-2 discovery corpus spreadsheet; ignore local resume notes                              |
-| `f454026` | 2026-10-25 | Log corpus spreadsheet commit (item 91) in MEMORY.md                                             |
-| `4eaf0ce` | 2026-10-26 | Generate 19 retroactive evaluation prompts for foundational corpus P01-P19                       |
-| `3f4b834` | 2026-10-26 | Log foundational-corpus prompts (item 92) in MEMORY.md                                           |
-| `2091253` | 2026-10-26 | Add 19 retroactive review reports for foundational corpus P01-P19                                |
-| `0f9b4b5` | 2026-10-26 | Log foundational retroactive reviews (item 93) in MEMORY.md                                      |
-| `2e52101` | 2026-10-26 | Add foundational-corpus consolidated CSV and charts (P01-P19)                                    |
-| `edce337` | 2026-10-26 | Log foundational consolidation and Gemini P01-P19 (item 94) in MEMORY.md                         |
-| `837fb70` | 2026-10-26 | Add per-evaluator consolidated CSVs P01-P88 and ChatGPT foundational evaluations                 |
-| `d3c3ae5` | 2026-10-26 | Log per-evaluator consolidated CSVs (item 95) in MEMORY.md                                       |
-| `f28f8dc` | 2026-10-26 | Add global three-evaluator comparison P01-P88; enrich Papers_Index with outcomes                 |
-| `2b4c235` | 2026-10-26 | Log global evaluator comparison and index update (item 96) in MEMORY.md                          |
-| `2b89358` | 2026-10-26 | Add global-comparison addendum to consolidated synthesis; rebuild PDF                            |
-| `af1e452` | 2026-10-26 | Log synthesis addendum (item 97) in MEMORY.md                                                    |
-| `eb15fa4` | 2026-10-26 | Add Markdown version of Papers_Index (derived from canonical CSV)                                |
-| `cee616d` | 2026-10-26 | Log Papers_Index markdown version (item 98) in MEMORY.md                                         |
-| `d12941f` | 2026-10-26 | Ignore local Scopus API key file                                                                 |
-| `c9bc0fa` | 2026-10-26 | Complete Scopus citation counts for P41-P89 (49/49, all >= 1)                                    |
-| `81bd595` | 2026-10-26 | Complete Scopus column in P01-P89 cross-citations (triple-check, 52 edges)                       |
-| `09a22da` | 2026-10-26 | Log Scopus key setup and triple-check completion (items 99-100) in MEMORY.md                     |
-| `803bef6` | 2026-10-26 | Add Scopus triple-check addendum to consolidated synthesis; rebuild PDF                          |
-| `51869d3` | 2026-10-26 | Log Scopus addendum (item 101) in MEMORY.md                                                      |
-| `fa8abfb` | 2026-10-26 | Add IEEE Access SLR article draft v1 (main.tex + referencias.bib)                                |
-| `325e0a9` | 2026-10-26 | Log IEEE Access article draft (item 102) in MEMORY.md                                            |
-| `b9e7b95` | 2026-10-26 | Compile article draft with TinyTeX: 6-page PDF, zero warnings                                    |
-| `6ba0487` | 2026-10-26 | Log LaTeX install and article compilation (item 103) in MEMORY.md                                |
-| `23cbdbe` | 2026-10-26 | Extend session header through 2026-10-26 (article draft) in MEMORY.md                            |
-| `2afd172` | 2026-10-26 | Add TikZ PRISMA flow figure to the article (Fig. 1); clean 7-page build                          |
-| `2253601` | 2026-10-26 | Log PRISMA figure (item 104) in MEMORY.md                                                        |
-| `99c31d6` | 2026-10-26 | Adjust author designation to Master Degree Student                                               |
-| `0cc6fa4` | 2026-10-26 | Log author designation fix (item 105) in MEMORY.md                                               |
-| `53bd765` | 2026-10-26 | Log Trabalho I reuse consultation (item 106) in MEMORY.md                                        |
-| `c7c2352` | 2026-10-26 | Enrich article: cognitive-load toolbox table, six gap axes, citation-network figure              |
-| `81f5ed8` | 2026-10-26 | Log article enrichment (item 107) in MEMORY.md; fix page count in article README                 |
-| `c579d38` | 2026-10-26 | Add RQ-coverage stacked-bar figure (Fig. 3) to the article                                       |
-| `5bb7b7e` | 2026-10-26 | Log RQ-coverage figure (item 108) in MEMORY.md                                                   |
-| `62bfc4f` | 2026-10-26 | Ratify protocol rules R1-R3 in the article (method, reliability, threats)                        |
-| `3e96b18` | 2026-10-26 | Log protocol rules ratification (item 109) in MEMORY.md                                          |
-| `d1dd7ea` | 2026-10-27 | Switch article to official IEEE Access class (ieeeaccess.cls) with pgf year-primitive workaround |
-| `bc07d4f` | 2026-10-27 | Log IEEE Access class swap (item 110) in MEMORY.md                                               |
-| `dc84850` | 2026-10-27 | Add advisor Rafael Kunst as co-author and corresponding-author e-mails                           |
-| `73a1cbb` | 2026-10-27 | Log advisor co-author addition (item 111) in MEMORY.md                                           |
-| `843a041` | 2026-10-27 | Add author biographies (IEEEbiographynophoto) and bio/ source folder                             |
-| `7df3c37` | 2026-10-27 | Log author biographies (item 112) in MEMORY.md                                                   |
-| `4cc4c97` | 2026-10-27 | English review of the article: grammar, idiom, IEEE style, kappa band accuracy                   |
-| `0a352fc` | 2026-10-27 | Mark English review done in article README TODO                                                  |
-| `12f0758` | 2026-10-27 | Verify article counts against canonical CSVs; fix cycle-2 mean QA (2.73) with errata             |
-| `05efa56` | 2026-10-27 | Log article count verification (item 114) in MEMORY.md                                           |
-| `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                       |
-| `5bb889c` | 2026-10-27 | Log author-provided biography update (item 115) in MEMORY.md                                     |
-| `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                     |
-| `0552ac1` | 2026-10-27 | Log full-name byline alignment (item 116) in MEMORY.md                                           |
-| `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                |
-| `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                       |
-| `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                     |
-| `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                  |
-| `e7183ff` | 2026-10-27 | Log Spec-Agentic-SDLC reuse consultation (item 119) in MEMORY.md                                 |
-| `099e74c` | 2026-10-27 | Log Template-RSL skeleton creation (item 120) in MEMORY.md                                       |
-| `52c0da6` | 2026-10-27 | Log Template-RSL GitHub repo creation (item 121) in MEMORY.md                                      |
+| Hash      | Data       | Mensagem                                                                                                      |
+| --------- | ---------- | ------------------------------------------------------------------------------------------------------------- |
+| `a7b2468` | 2026-09-07 | Adjust PICOC prompt persona to advised researcher (v1.2.0)                                                    |
+| `eba2a7d` | 2026-09-07 | Log PICOC prompt persona change (item 70) in MEMORY.md                                                        |
+| `00b3e69` | 2026-09-07 | Anchor PICOC prompt methodology to Kitchenham (2009) SLR paper (v1.3.0)                                       |
+| `06de0fa` | 2026-09-07 | Log Kitchenham (2009) reference update (item 71) in MEMORY.md                                                 |
+| `4094ce1` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to extraction template (v1.1.0)                 |
+| `c4aa322` | 2026-09-07 | Log extraction-template persona/reference update (item 72) in MEMORY.md                                       |
+| `88c5412` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to discovery prompt (v3.2.0)                    |
+| `f338f34` | 2026-09-07 | Log discovery-prompt persona/reference update (item 73) in MEMORY.md                                          |
+| `0a07d88` | 2026-09-07 | Apply advised-researcher persona and Kitchenham (2009) anchor to evaluation prompt template                   |
+| `b031031` | 2026-09-07 | Log evaluation-template persona update (item 74) in MEMORY.md                                                 |
+| `5001ac4` | 2026-09-07 | Rename evaluation template to prompts/prompt-chatgpt-consultation.md                                          |
+| `5ae1e48` | 2026-09-07 | Log evaluation-template rename (item 75) in MEMORY.md                                                         |
+| `6297ef2` | 2026-09-07 | Add docs/ P41-P89 candidate PDFs from cycle-2 discovery                                                       |
+| `6d9e4a9` | 2026-09-07 | Log P41-P89 candidate PDFs commit (item 76) in MEMORY.md                                                      |
+| `3c76e22` | 2026-09-07 | Add Kitchenham (2009) SLR methodology reference paper to docs/                                                |
+| `d9e023d` | 2026-09-07 | Log Kitchenham (2009) PDF commit (item 77) in MEMORY.md                                                       |
+| `adeeb78` | 2026-09-07 | Add cycle-2 PICOC extraction (P41-P89) with cross-cutting synthesis                                           |
+| `906b582` | 2026-09-07 | Log cycle-2 PICOC extraction (item 78) in MEMORY.md                                                           |
+| `57aaa88` | 2026-09-09 | Log cycle-2 workflow-order consultation (item 79) in MEMORY.md                                                |
+| `c96334e` | 2026-09-09 | Add cycle-2 stage-1 eligibility (papers-ciclo2.csv) from Papers_Index.csv                                     |
+| `560b874` | 2026-09-09 | Log cycle-2 stage-1 eligibility (item 80) in MEMORY.md                                                        |
+| `df57b9c` | 2026-09-09 | Add cycle-2 PRISMA screening: 22 approved, 27 excluded, strata amendment                                      |
+| `9defea8` | 2026-09-09 | Log cycle-2 PRISMA screening (item 81) in MEMORY.md                                                           |
+| `9fc207d` | 2026-09-09 | Generate 22 cycle-2 evaluation prompts for screening-approved candidates                                      |
+| `c618846` | 2026-09-09 | Log cycle-2 evaluation prompts (item 82) in MEMORY.md                                                         |
+| `99f1e6c` | 2026-09-10 | Add 22 cycle-2 review reports: 20 include-with-caveats, 2 exclude                                             |
+| `85179ca` | 2026-09-10 | Log cycle-2 review reports (item 83) in MEMORY.md                                                             |
+| `891edb1` | 2026-09-10 | Consolidate cycle 2: CSV, charts, PRISMA flow, dashboard; corpus 53                                           |
+| `b8bbc1d` | 2026-09-10 | Log cycle-2 consolidation (item 84) in MEMORY.md                                                              |
+| `d527e60` | 2026-09-10 | Add extraction sheets (EN+ptBR) and consolidated CSVs for 20 cycle-2 included studies                         |
+| `00ca1b7` | 2026-09-10 | Log cycle-2 extraction sheets (item 85) in MEMORY.md                                                          |
+| `129afc8` | 2026-09-10 | Add consolidated two-cycle synthesis report (MD + PDF)                                                        |
+| `362faf2` | 2026-09-10 | Log consolidated synthesis report (item 86) in MEMORY.md                                                      |
+| `91eb5cb` | 2026-09-12 | Log evaluator-comparison blocker and procedure (item 87) in MEMORY.md                                         |
+| `8f98497` | 2026-10-25 | Add ChatGPT and Gemini evaluator sets for cycle 2 (P43-P88; Gemini also P20-P40)                              |
+| `6e07b65` | 2026-10-25 | Log evaluator sets commit (item 88) in MEMORY.md                                                              |
+| `52abc4b` | 2026-10-25 | Add cycle-2 three-evaluator comparison (Claude x ChatGPT x Gemini)                                            |
+| `5983930` | 2026-10-25 | Log cycle-2 evaluator comparison (item 89) in MEMORY.md                                                       |
+| `d4f0061` | 2026-10-25 | Update corpus cross-citations to P01-P89 (49 edges; OpenAlex+Crossref)                                        |
+| `3a555e7` | 2026-10-25 | Log P01-P89 cross-citations update (item 90) in MEMORY.md                                                     |
+| `c73fbb7` | 2026-10-25 | Add cycle-2 discovery corpus spreadsheet; ignore local resume notes                                           |
+| `f454026` | 2026-10-25 | Log corpus spreadsheet commit (item 91) in MEMORY.md                                                          |
+| `4eaf0ce` | 2026-10-26 | Generate 19 retroactive evaluation prompts for foundational corpus P01-P19                                    |
+| `3f4b834` | 2026-10-26 | Log foundational-corpus prompts (item 92) in MEMORY.md                                                        |
+| `2091253` | 2026-10-26 | Add 19 retroactive review reports for foundational corpus P01-P19                                             |
+| `0f9b4b5` | 2026-10-26 | Log foundational retroactive reviews (item 93) in MEMORY.md                                                   |
+| `2e52101` | 2026-10-26 | Add foundational-corpus consolidated CSV and charts (P01-P19)                                                 |
+| `edce337` | 2026-10-26 | Log foundational consolidation and Gemini P01-P19 (item 94) in MEMORY.md                                      |
+| `837fb70` | 2026-10-26 | Add per-evaluator consolidated CSVs P01-P88 and ChatGPT foundational evaluations                              |
+| `d3c3ae5` | 2026-10-26 | Log per-evaluator consolidated CSVs (item 95) in MEMORY.md                                                    |
+| `f28f8dc` | 2026-10-26 | Add global three-evaluator comparison P01-P88; enrich Papers_Index with outcomes                              |
+| `2b4c235` | 2026-10-26 | Log global evaluator comparison and index update (item 96) in MEMORY.md                                       |
+| `2b89358` | 2026-10-26 | Add global-comparison addendum to consolidated synthesis; rebuild PDF                                         |
+| `af1e452` | 2026-10-26 | Log synthesis addendum (item 97) in MEMORY.md                                                                 |
+| `eb15fa4` | 2026-10-26 | Add Markdown version of Papers_Index (derived from canonical CSV)                                             |
+| `cee616d` | 2026-10-26 | Log Papers_Index markdown version (item 98) in MEMORY.md                                                      |
+| `d12941f` | 2026-10-26 | Ignore local Scopus API key file                                                                              |
+| `c9bc0fa` | 2026-10-26 | Complete Scopus citation counts for P41-P89 (49/49, all >= 1)                                                 |
+| `81bd595` | 2026-10-26 | Complete Scopus column in P01-P89 cross-citations (triple-check, 52 edges)                                    |
+| `09a22da` | 2026-10-26 | Log Scopus key setup and triple-check completion (items 99-100) in MEMORY.md                                  |
+| `803bef6` | 2026-10-26 | Add Scopus triple-check addendum to consolidated synthesis; rebuild PDF                                       |
+| `51869d3` | 2026-10-26 | Log Scopus addendum (item 101) in MEMORY.md                                                                   |
+| `fa8abfb` | 2026-10-26 | Add IEEE Access SLR article draft v1 (main.tex + referencias.bib)                                             |
+| `325e0a9` | 2026-10-26 | Log IEEE Access article draft (item 102) in MEMORY.md                                                         |
+| `b9e7b95` | 2026-10-26 | Compile article draft with TinyTeX: 6-page PDF, zero warnings                                                 |
+| `6ba0487` | 2026-10-26 | Log LaTeX install and article compilation (item 103) in MEMORY.md                                             |
+| `23cbdbe` | 2026-10-26 | Extend session header through 2026-10-26 (article draft) in MEMORY.md                                         |
+| `2afd172` | 2026-10-26 | Add TikZ PRISMA flow figure to the article (Fig. 1); clean 7-page build                                       |
+| `2253601` | 2026-10-26 | Log PRISMA figure (item 104) in MEMORY.md                                                                     |
+| `99c31d6` | 2026-10-26 | Adjust author designation to Master Degree Student                                                            |
+| `0cc6fa4` | 2026-10-26 | Log author designation fix (item 105) in MEMORY.md                                                            |
+| `53bd765` | 2026-10-26 | Log Trabalho I reuse consultation (item 106) in MEMORY.md                                                     |
+| `c7c2352` | 2026-10-26 | Enrich article: cognitive-load toolbox table, six gap axes, citation-network figure                           |
+| `81f5ed8` | 2026-10-26 | Log article enrichment (item 107) in MEMORY.md; fix page count in article README                              |
+| `c579d38` | 2026-10-26 | Add RQ-coverage stacked-bar figure (Fig. 3) to the article                                                    |
+| `5bb7b7e` | 2026-10-26 | Log RQ-coverage figure (item 108) in MEMORY.md                                                                |
+| `62bfc4f` | 2026-10-26 | Ratify protocol rules R1-R3 in the article (method, reliability, threats)                                     |
+| `3e96b18` | 2026-10-26 | Log protocol rules ratification (item 109) in MEMORY.md                                                       |
+| `d1dd7ea` | 2026-10-27 | Switch article to official IEEE Access class (ieeeaccess.cls) with pgf year-primitive workaround              |
+| `bc07d4f` | 2026-10-27 | Log IEEE Access class swap (item 110) in MEMORY.md                                                            |
+| `dc84850` | 2026-10-27 | Add advisor Rafael Kunst as co-author and corresponding-author e-mails                                        |
+| `73a1cbb` | 2026-10-27 | Log advisor co-author addition (item 111) in MEMORY.md                                                        |
+| `843a041` | 2026-10-27 | Add author biographies (IEEEbiographynophoto) and bio/ source folder                                          |
+| `7df3c37` | 2026-10-27 | Log author biographies (item 112) in MEMORY.md                                                                |
+| `4cc4c97` | 2026-10-27 | English review of the article: grammar, idiom, IEEE style, kappa band accuracy                                |
+| `0a352fc` | 2026-10-27 | Mark English review done in article README TODO                                                               |
+| `12f0758` | 2026-10-27 | Verify article counts against canonical CSVs; fix cycle-2 mean QA (2.73) with errata                          |
+| `05efa56` | 2026-10-27 | Log article count verification (item 114) in MEMORY.md                                                        |
+| `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                                    |
+| `5bb889c` | 2026-10-27 | Log author-provided biography update (item 115) in MEMORY.md                                                  |
+| `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                                  |
+| `0552ac1` | 2026-10-27 | Log full-name byline alignment (item 116) in MEMORY.md                                                        |
+| `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                             |
+| `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                                    |
+| `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                                  |
+| `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                               |
+| `e7183ff` | 2026-10-27 | Log Spec-Agentic-SDLC reuse consultation (item 119) in MEMORY.md                                              |
+| `099e74c` | 2026-10-27 | Log Template-RSL skeleton creation (item 120) in MEMORY.md                                                    |
+| `52c0da6` | 2026-10-27 | Log Template-RSL GitHub repo creation (item 121) in MEMORY.md                                                 |
 | `7f925a3` | 2026-10-27 | Adopt Template-RSL governance layer (beta test): constitution, PDRs 0001-0005, validation scripts, skills, CI |
-| —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este |
+| `1aa400a` | 2026-10-27 | Log Template-RSL adoption and beta findings (item 122) in MEMORY.md                                |
+| `1aa96ea` | 2026-10-27 | Cycle-3 discovery via canonical query: 37 candidates P90-P126, audit trail and raw sweep data      |
+| —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
