@@ -1388,6 +1388,29 @@ para a revisão visual — a conferência de layout/figuras renderizadas é
 do autor, pois a validação via pypdf cobre apenas o texto extraído.
 Commit `1af8058` (PDF regenerado).
 
+### 119. Consulta: melhorias do Spec-Agentic-SDLC replicáveis para um Template de RSL
+
+**Prompt:** "Leia o repositório https://github.com/valdomirosouza/Spec-Agentic-SDLC
+e avalie quais melhorias poderiam ser replicadas neste repositório…
+para transformá-lo em um Template para RSL".
+
+**Ações:** Clone raso do repo no scratchpad e leitura dos artefatos
+estruturais (README, CITATION.cff, CUSTOMISING, `memory/constitution.md`,
+`check-corpus.sh`, `corpus-check.yml`, `adopt.sh`, CLAUDE.md, estrutura
+de skills/ADRs/templates). Avaliação entregue no chat (consulta — nada
+implementado): mapa conceitual SDLC→RSL (constitution→protocolo
+normativo; ADRs→registros de decisão de protocolo numerados;
+check-corpus→validação determinística de links/índices/contagens contra
+os CSVs; sdd-skills→skills por etapa do ciclo RSL;
+render-commands→renderização dos prompts por avaliador a partir de um
+template canônico; adopt.sh→bootstrap do template com camadas;
+CITATION.cff; templates/ central; CHANGELOG do protocolo;
+hooks de guarda→imutabilidade de artefatos históricos e varredura de
+segredos) e lista do que NÃO replicar (compliance corporativo, SRE/
+runbooks, harness de produto, multi-IDE). Recomendação: extrair um repo
+**Template-RSL** novo com este repositório como "worked example",
+priorizando CI de validação, templates canônicos e skills do ciclo.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1565,7 +1588,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                     |
 | `0552ac1` | 2026-10-27 | Log full-name byline alignment (item 116) in MEMORY.md                                           |
 | `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                |
-| `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                        |
-| `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                       |
+| `5ba3f61` | 2026-10-27 | Log footer volume/year placeholder (item 117) in MEMORY.md                                       |
+| `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                     |
+| `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                    |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
