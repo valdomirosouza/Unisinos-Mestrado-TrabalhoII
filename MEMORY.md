@@ -1361,6 +1361,19 @@ Recompilado: 9 páginas, 0 erros; byline e corresp por extenso
 verificados na página 1 via pypdf, nenhuma ocorrência abreviada
 restante. Commit `1a0af97`.
 
+### 117. Placeholder de volume/ano no rodapé
+
+**Prompt:** "no rodapé Volume 11, 2023 troque para Volume NN, YYYY".
+
+**Ações:** O rodapé "VOLUME 11, 2023" vem dos defaults da
+`ieeeaccess.cls` (`\def\thevol{11}` / `\def\theyear{2023}`, linhas
+509–510), com setters `\vol{}` e `\year{}` — esta última é exatamente a
+macro do workaround do item 110 (restaurada após o load do tikz, por
+isso funciona normalmente no corpo). Adicionados `\vol{NN}` e
+`\year{YYYY}` logo após `\begin{document}` no `main.tex`, sem tocar na
+classe oficial. Recompilado: 9 páginas, 0 erros; "VOLUME NN, YYYY"
+presente no PDF e nenhum "VOLUME 11, 2023" restante. Commit `69e1563`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1534,7 +1547,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `12f0758` | 2026-10-27 | Verify article counts against canonical CSVs; fix cycle-2 mean QA (2.73) with errata             |
 | `05efa56` | 2026-10-27 | Log article count verification (item 114) in MEMORY.md                                           |
 | `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                       |
-| `5bb889c` | 2026-10-27 | Log author-provided biography update (item 115) in MEMORY.md                                      |
-| `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                      |
+| `5bb889c` | 2026-10-27 | Log author-provided biography update (item 115) in MEMORY.md                                     |
+| `1a0af97` | 2026-10-27 | Use full author name in byline and corresponding-author line                                     |
+| `0552ac1` | 2026-10-27 | Log full-name byline alignment (item 116) in MEMORY.md                                            |
+| `69e1563` | 2026-10-27 | Use volume/year placeholders (VOLUME NN, YYYY) in the page footer                                  |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
