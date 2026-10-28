@@ -122,6 +122,24 @@ Os **19 estudos fundacionais** do Trabalho I (P01–P19) receberam avaliação *
 | [P87](review-P87.md) | LLM agentic incident-report (rede)   |   3.5    |   3.5    | Alta  | Incluir c/ ressalvas                                |
 | [P88](review-P88.md) | MAS self-healing descentralizado     |   3.0    |   4.0    | Alta  | Incluir c/ ressalvas (não-LLM, análogo P25)         |
 
+## Ciclo 3 — avaliação integral em andamento (2026-10-28)
+
+**Pareceres do avaliador Claude — 13 arquivos** (`review-P91.md`, `review-P93.md`,
+`review-P94.md`, `review-P97.md`, `review-P100.md`, `review-P101.md`,
+`review-P102.md`, `review-P106.md`, `review-P110.md`, `review-P112.md`,
+`review-P119.md`, `review-P121.md`, `review-P123.md`), no formato canônico
+[`templates/review.md`](../templates/review.md), a partir dos prompts
+imutáveis de [`../prompts/`](../prompts/README.md) (template v1.1.0, emendas
+PDR-0006/0007 no texto normativo). Resultado Claude: **1 Incluir** (P94) ·
+**11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2 — agência nominal,
+confirmando a flag da [triagem](triagem-ciclo3.md)). Scores: RQ 2.0–5.0;
+QA 1.0–3.5 (8 banda Alta · 4 Média · 1 Baixa).
+
+> ⏳ **Pendências do ciclo 3:** avaliações paralelas **ChatGPT** e **Gemini**
+> (mesmos prompts; saídas em `ChatGPT/PXX_avaliacao_RSL.md` e
+> `Gemini/PXX_avaliacao_RSL.md`), consolidação (Etapa 7) e comparação entre
+> avaliadores (Etapa 8).
+
 ## Padrões e observações para a síntese
 
 - **Eixo organizador = agêntico × domínio-IR.** Incluídos são agênticos **e** aderentes a IR/AIOps/SOC; exclusões recaem em não-agênticos (P26/P29/P30), off-domain (P38) ou inelegíveis (P39/P40).
