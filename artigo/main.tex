@@ -32,7 +32,7 @@
 Response: A Systematic Literature Review}
 
 \author{\uppercase{Valdomiro de O. Souza Jr.}\authorrefmark{1},
-\IEEEmembership{Master Degree Student},
+\IEEEmembership{Master's Degree Student},
 and \uppercase{Rafael Kunst}\authorrefmark{1}}
 
 \address[1]{Applied Computing Graduate Program (PPGCA), Universidade do
@@ -65,7 +65,7 @@ corpus, 89~candidate studies (2020--2026) were identified and screened,
 61 were assessed in full text by \emph{three independent evaluators}
 (inter-rater agreement 90.2--91.8\% per pair; Fleiss' $\kappa=0.53$;
 53/61 unanimous decisions), and \textbf{53 studies} were included. The
-review makes three findings. First, no included study measures MTTD
+review yields three main findings. First, no included study measures MTTD
 \emph{and} MTTR nominally against its own baseline in production: the
 single study that reports nominal MTTR does so in a proof of concept,
 compared against the literature, with results unfavorable to the proposed
@@ -131,14 +131,14 @@ Fleiss'~\cite{fleiss1971} kappa.
 The contributions are:
 \begin{enumerate}
   \item a consolidated corpus of 53 studies (2020--2026) on Agentic AI
-        for incident response and adjacent IT operations, organized in a
-        taxonomy of agentic paradigms (Section~\ref{sec:results});
+        for incident response and adjacent IT operations, organized into
+        a taxonomy of agentic paradigms (Section~\ref{sec:results});
   \item triple-verified bibliometrics (OpenAlex, Crossref, Scopus) and an
         internal cross-citation map of the corpus (52 citing edges)
         identifying its conceptual hubs;
   \item evidence synthesis showing that \textbf{no study measures MTTD
         and MTTR nominally with its own baseline in production}
-        (Section~\ref{sec:mttr}), and a catalogue of the proxies actually
+        (Section~\ref{sec:mttr}), and a catalog of the proxies actually
         used;
   \item a bridge to the human-factors literature: a cluster of studies
         that measure operator cognitive load directly --- yet never in
@@ -203,7 +203,7 @@ the PICOC extraction itself, requires that \emph{Comparison} be recorded
 as declared \textbf{only when the study executes an empirical comparison
 against a concrete baseline}; purely conceptual contrasts (e.g.,
 ``Agentic AI vs.\ traditional AI'' in prose) are recorded as not
-applicable. This rule removed 100\% of the inter-rater divergences
+applicable. This rule eliminated 100\% of the inter-rater divergences
 observed in the Comparison field.
 
 \begin{table}[!t]
@@ -326,7 +326,7 @@ corpus decisions:
 Fig.~\ref{fig:prisma} shows the PRISMA~2020 flow of both update cycles
 over the foundational corpus, and Table~\ref{tab:prisma} summarizes the
 stage counts side by side. In cycle~2,
-thematic exclusion (E2/E3) was applied already at screening, because a
+thematic exclusion (E2/E3) was applied as early as the screening stage, because a
 full-text PICOC extraction of all 49 candidates (one reading agent per
 PDF, consolidated and audited) provided per-study evidence before
 assessment --- each screening exclusion cites that evidence and a
@@ -617,9 +617,9 @@ assessing 61 in full text across two cycles:
         remediation times of $\approx$1--1.5~min in a proof of concept
         (one use case, SSH brute force), compared against
         \emph{literature values} for a commercial security copilot
-        ($\approx$30--45~s) --- i.e., no own baseline, and a result
+        ($\approx$30--45~s) --- i.e., no baseline of its own, and a result
         \emph{unfavorable} to the proposed agent. The authors' candor is
-        valuable; the evidence level is PoC.
+        valuable; the evidence remains at proof-of-concept level.
   \item \textbf{Secondary evidence reports dramatic gains.} The SOC
         survey~\cite{P79} relays primary reports of MTTR reduced from
         8~hours to 90~minutes, 98\% of alerts auto-triaged with
@@ -637,8 +637,8 @@ assessing 61 in full text across two cycles:
         Detection studies report accuracy/F1/AUC only.
 \end{itemize}
 
-The gap is therefore not merely ``few studies'': it is a structural
-mismatch between the motivating claim of the field (time-metric
+The gap is therefore not merely a matter of ``few studies'': it is a
+structural mismatch between the motivating claim of the field (time-metric
 reduction) and its measurement practice (detection proxies and
 qualitative assertions). The claim that agentic copilots reduce MTTD and
 MTTR is, as of 2026, \emph{plausible but unverified by primary evidence}.
@@ -646,7 +646,7 @@ MTTR is, as of 2026, \emph{plausible but unverified by primary evidence}.
 \subsection{Cognitive load: the complementary outcome}
 \label{sec:cogload}
 
-The second gap concerns an outcome this review treats as co-primary
+The second gap concerns an outcome this review treats as complementary
 rather than incidental: operator cognitive load. The motivating
 observation was already present in the foundational review --- the
 explosion of observability data (metrics, logs, traces) has raised the
@@ -718,16 +718,16 @@ interface; moderator of workload effects \\
 Internal citation analysis (triple-checked: OpenAlex
 \texttt{referenced\_works}, Crossref reference lists, Scopus
 \texttt{REF()} by title; union of 52 citing edges) shows a coherent
-field rather than a bag of papers. The hubs are the definitional
+field rather than a disconnected collection of papers. The hubs are the definitional
 surveys --- \cite{P10} (7 internal citations), \cite{P09} (6),
 \cite{P14} (5) --- followed by the AIOps/MLOps and log-anomaly surveys
 \cite{P16,P65} (3 each). The most connected citer is the multi-agent
 SOC system of~\cite{P28} (7 outgoing edges, five of them to cycle-2
 candidates), and cycle-2 studies cite back into the corpus
 (\cite{P79}$\rightarrow$\cite{P20,P78};
-\cite{P76}$\rightarrow$\cite{P39,P83}), evidencing that the two cycles
+\cite{P76}$\rightarrow$\cite{P39,P83}), indicating that the two cycles
 sample one evolving conversation. Source-specific quirks are material
-for reproducibility: Scopus resolves references by \emph{title}, not
+to reproducibility: Scopus resolves references by \emph{title}, not
 DOI; one open-access venue is not indexed there at all; and preprint
 DOIs can split citation identity across sources (handled here by alias
 resolution). Fig.~\ref{fig:crosscite} renders the full network.
@@ -916,18 +916,18 @@ It does \emph{not} yet support the headline operational claim: the
 MTTD/MTTR reduction attributed to agentic copilots rests on secondary
 reports and qualitative assertions (Section~\ref{sec:mttr}). Reviewers
 and practitioners should treat vendor-scale numbers (e.g., 8h
-$\rightarrow$ 90min MTTR) as hypotheses to be tested, not established
+$\rightarrow$ 90min MTTR) as hypotheses to be tested, not as established
 effects.
 
 \subsection{Why the measurement gap persists}
-Three corpus-visible causes: production access (most studies evaluate
+Three causes are visible in the corpus: production access (most studies evaluate
 on public datasets or testbeds; industrial deployments are rare and
 rarely instrumented for time metrics); benchmark culture (detection
 communities optimize F1/AUC, which do not compose into end-to-end time
 outcomes); and the autonomy--accountability tension (studies that do
 deploy agents constrain them to low-risk actions, making time gains
-modest and hard to attribute). The one nominal measurement available
-\cite{P76} being \emph{unfavorable} to the agent is a useful
+modest and hard to attribute). That the only available nominal
+measurement~\cite{P76} is \emph{unfavorable} to the agent is a useful
 counterweight to publication bias.
 
 \subsection{Research gaps consolidated across both reviews}
@@ -937,7 +937,8 @@ two update cycles allow each to be re-examined against newer evidence.
 \textbf{(i)~From recommendation to safe autonomous execution.}
 Remediation in LLM4AIOps was found to stop at recommendation and
 triage~\cite{P05,P15}; the update cycles confirm the axis --- closed-loop
-execution exists at prototype level~\cite{P22,P32} and at PoC level in
+execution exists at prototype level~\cite{P22,P32} and at
+proof-of-concept level in
 SOC hyper-automation~\cite{P76}, but verifiable, auditable, reversible
 execution in production remains unreported.
 \textbf{(ii)~Complex telemetry (traces).} The difficulty of feeding
@@ -958,7 +959,7 @@ Agentic RCA advanced with graph- and Bayesian-structured
 approaches~\cite{P32,P35,P53}, partially addressing the axis, though
 evaluation remains on curated failure sets.
 \textbf{(vi)~Resource efficiency and sustainability.}
-The SLM agent of~\cite{P21} is still the corpus' only direct response
+The SLM agent of~\cite{P21} is still the corpus's only direct response
 (compact models, confidentiality, cost); the axis otherwise remains a
 statement of intent. Axes (i), (iii), and (vi) are therefore the least
 served by three years of literature --- a concrete map for future
@@ -979,8 +980,9 @@ full-loop autonomous remediation as experimental \cite{P22,P76}.
 
 \subsection{Methodological lessons for LLM-assisted SLRs}
 Two findings generalize beyond this topic. First, three independent
-LLM evaluators under one written protocol achieve substantial-level
-agreement, and their residual disagreements expose \emph{protocol
+LLM evaluators under one written protocol achieve high percentage
+agreement (90.2--91.8\% pairwise) with moderate chance-corrected
+$\kappa$, and their residual disagreements expose \emph{protocol
 ambiguities, not model randomness} --- a cheap and effective audit
 mechanism. Second, protocol amendments must be placed in the normative
 body of the evaluation prompt, not in its input metadata: the one
@@ -1019,7 +1021,8 @@ the audit trail.
 
 This SLR consolidated 53 studies (2020--2026) on Agentic AI as a copilot
 for incident response, assessed by three independent evaluators with
-substantial agreement. The field has matured conceptually --- shared
+high agreement (53 of 61 decisions unanimous). The field has matured
+conceptually --- shared
 definitions, reference architectures, governance agendas, and a coherent
 citation structure --- and demonstrates prototype-level feasibility of
 agentic detection, RCA, and remediation. Yet its motivating claim
@@ -1033,7 +1036,7 @@ baseline, and paired with validated workload instruments. That study is
 the direct continuation of this review.
 
 % =====================================================================
-\section*{Acknowledgments}
+\section*{Acknowledgment}
 The authors thank the Applied Computing Graduate Program (PPGCA) at
 Unisinos. Review artifacts (protocol, prompts, assessments, extraction
 sheets, and machine-readable tables) are maintained in a
