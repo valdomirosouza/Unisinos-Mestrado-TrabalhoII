@@ -1455,6 +1455,41 @@ master), push do commit inicial `24bf3c3` (33 arquivos) via
 cargo do autor (`gh repo edit valdomirosouza/Template-RSL
 --visibility public` ou pela UI), decisão deliberadamente humana.
 
+### 122. Template-RSL aplicado neste repositório (beta test)
+
+**Prompt:** "Aplique o Template-RSL no repo ~/Projects/Unisinos-Mestrado-
+TrabalhoII e vamos usar este repo com Beta Tester."
+
+**Ações:** `adopt.sh --here` executado contra este repositório
+(tema/autor reais) e a camada instanciada com os dados da pesquisa:
+`protocolo/constituicao.md` (RQs reais preenchidas), `protocolo/picoc.md`
+(PICOC ratificado, apontando para a string canônica em `picoc/`),
+`protocolo/criterios.md` (I1–I6/E1–E5 reais + R1–R3 com links),
+**PDR-0001..0005** (registro retroativo: regra Comparison v1.1.0; emenda
+de estratos 2026-09-09; R1; R2; R3 — cada um com contexto, decisão e
+consequências rastreáveis às famílias de divergência), CHANGELOG do
+protocolo, CITATION.cff da instância (dataset; Souza Jr. & Kunst),
+LICENSE MIT, WORKFLOW, skills `/rsl-*`, scripts e CI `rsl-check.yml`.
+Removidos da instância: `adopt.sh`, `docs/worked-example.md`
+(auto-referente) e o PDR de exemplo. **Dívida de indexação paga:**
+READMEs-índice gerados para `prompts/` (61), `reviews/ChatGPT/` e
+`reviews/Gemini/` (61 cada, preservando a nota histórica do rename
+P84→P85 por referência), 3 pastas de charts, `reviews/scripts/`,
+`picoc/` e `docs/` (aponta para `Papers_Index.csv` como índice canônico).
+README raiz com a árvore atualizada. **Validações:** `check-rsl.sh` **OK**
+nos 5 checks sobre o repositório inteiro; `compute-kappa.py --evaluators
+Claude,ChatGPT,Gemini` **reproduziu exatamente** a comparação global
+publicada (90,2/91,8/91,8%; κ 0,57/0,51/0,51; Fleiss 0,53; prevalência
+89,6%; diffs 0,44–0,63/0,31–0,63; as 8 divergências). Commit `7f925a3`
+(43 arquivos).
+
+**Beta findings → 4 correções no Template-RSL** (commit `b6b410b`,
+CHANGELOG 0.1.1): `adopt.sh --here` não copiava os arquivos do template;
+C1 não decodificava links percent-encoded e marcava `file:///` históricos
+como quebrados (agora ignora qualquer esquema de URI); C1/C3 passam a
+varrer só arquivos rastreados pelo git (`.DS_Store` fora) e o C3 aceita
+índices em READMEs de subpasta; `compute-kappa.py` ganhou `--evaluators`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1636,7 +1671,9 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `1af8058` | 2026-10-27 | Rebuild final article PDF from clean state for visual review                                     |
 | `19e8a4b` | 2026-10-27 | Log final PDF rebuild for visual review (item 118) in MEMORY.md                                  |
 | `e7183ff` | 2026-10-27 | Log Spec-Agentic-SDLC reuse consultation (item 119) in MEMORY.md                                 |
-| `099e74c` | 2026-10-27 | Log Template-RSL skeleton creation (item 120) in MEMORY.md                                         |
+| `099e74c` | 2026-10-27 | Log Template-RSL skeleton creation (item 120) in MEMORY.md                                       |
+| `52c0da6` | 2026-10-27 | Log Template-RSL GitHub repo creation (item 121) in MEMORY.md                                      |
+| `7f925a3` | 2026-10-27 | Adopt Template-RSL governance layer (beta test): constitution, PDRs 0001-0005, validation scripts, skills, CI |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
