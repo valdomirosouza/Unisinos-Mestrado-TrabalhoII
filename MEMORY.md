@@ -1527,6 +1527,27 @@ paginação por página); 429 rate-limits com retry; forma da query afeta
 volume (aspas desligam stemming — plurais explícitos adotados);
 downloads OA bloqueados por vários publishers (5/15 diretos).
 
+### 124. Tentativa de download via Claude no Chrome; helpers de ingestão
+
+**Prompt:** "já estou logado no Chrome no site [proxy CAPES ez101]…
+Faça isso via o plugin Claude para o Chrome".
+
+**Ações:** As ferramentas `mcp__claude-in-chrome__*` não estão
+disponíveis nesta sessão (ToolSearch vazio). Consulta ao agente
+claude-code-guide (docs oficiais): a integração exige sessão iniciada
+com `claude --chrome` OU o comando `/chrome` na sessão corrente
+(Reconnect extension / Enabled by default), com a extensão ≥ 1.0.36
+instalada, Chrome aberto e login no mesmo plano/organização — orientação
+repassada ao usuário. **Preparado o caminho independente do plugin:**
+`research/downloads-ciclo3.md` (checklist dos 32 PDFs pendentes com
+links DOI pelo proxy `ez101.periodicos.capes.gov.br`) e
+`scripts/ingest-downloads.py` (pega o PDF mais recente de ~/Downloads,
+valida magic %PDF, move para `docs/P<ID>_<slug>.pdf` sem sobrescrever e
+atualiza a coluna File name do `Papers_Index.csv`; `--list` mostra os
+pendentes; recusa arquivo com >10 min sem confirmação explícita).
+READMEs indexados; `check-rsl.sh` OK. Commit `127390b`. Download via
+plugin fica aguardando o usuário ativar `/chrome`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1711,8 +1732,10 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `099e74c` | 2026-10-27 | Log Template-RSL skeleton creation (item 120) in MEMORY.md                                                    |
 | `52c0da6` | 2026-10-27 | Log Template-RSL GitHub repo creation (item 121) in MEMORY.md                                                 |
 | `7f925a3` | 2026-10-27 | Adopt Template-RSL governance layer (beta test): constitution, PDRs 0001-0005, validation scripts, skills, CI |
-| `1aa400a` | 2026-10-27 | Log Template-RSL adoption and beta findings (item 122) in MEMORY.md                                |
-| `1aa96ea` | 2026-10-27 | Cycle-3 discovery via canonical query: 37 candidates P90-P126, audit trail and raw sweep data      |
+| `1aa400a` | 2026-10-27 | Log Template-RSL adoption and beta findings (item 122) in MEMORY.md                                           |
+| `1aa96ea` | 2026-10-27 | Cycle-3 discovery via canonical query: 37 candidates P90-P126, audit trail and raw sweep data                 |
+| `07f57a1` | 2026-10-27 | Log cycle-3 discovery (item 123) in MEMORY.md                                                      |
+| `127390b` | 2026-10-27 | Add cycle-3 download checklist (CAPES proxy links) and PDF ingest helper                           |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
