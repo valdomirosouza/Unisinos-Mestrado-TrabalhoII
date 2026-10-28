@@ -1617,6 +1617,38 @@ numérica. Datas de publicação ausentes no dump da descoberta exigiram
 consulta Crossref para selar os vereditos de I5 (e o 1º teste do P114
 usou DOI errado, detectado pelo título divergente).
 
+### 127. Ciclo 3, Etapa 3 — extração PICOC de leitura integral (14/19)
+
+**Prompt:** "sim" (autorização para executar o `/rsl-extracao` proposto ao
+final do item 126).
+
+**Ações (skill `/rsl-extracao`, Etapa 3 do WORKFLOW):** primeira execução da
+extração PICOC pelo fluxo do Template-RSL: (1) `FIELD_MAP` do
+`scripts/render-prompts.py` ajustado às colunas reais do `Papers_Index.csv`
+(ajuste de instância previsto no template); (2) 19 prompts renderizados do
+template canônico `templates/prompt-extracao-picoc.md` em
+`prompts/picoc-ciclo3/` (marcador `PERSONA` preenchido por pós-processamento —
+o render só resolve marcadores mapeados a colunas do índice); (3) fan-out de
+**um agente de leitura integral por PDF** (2 lotes de 7; todos via pypdf),
+fragmentos em `picoc/fragments-ciclo3/PXX.md`; (4) validação por script
+(14/14: cabeçalho + raciocínio + linha única de tabela com 10 células);
+(5) consolidação em `picoc/picoc-results-ciclo3.md` com apêndice de raciocínio
+e seção de pendentes. Os 5 capítulos Springer sem acesso (P92, P95, P109,
+P122, P126) ficam registrados como pendentes — extração futura entra como
+adendo datado (Art. VI).
+
+**Achados-chave para a triagem (Etapa 4):** Comparison empírico executado em
+P93, P94, P97, P100 (MTTR −63% vs. SREs humanos; MTTD p90 −83%), P101 (MTTR
+−72,3%), P102 (MTTD −82%), P106, P108 e P123 (MTTC −37,8%); "não se aplica"
+em P91, P110, P112, P119, P121 (secundários/sem baseline). Sinais de exclusão:
+P108 não trata de incident response (AgentBench/SLMs) e P106 é "Agentic AI"
+só nominal (ML/DRL sem LLM) — candidatos a E2/E3. Registro de qualidade: P93
+tem inconsistência interna de escala entre Tabelas 3 e 9 (anotada no
+raciocínio do fragmento).
+
+**Comandos:** `render-prompts.py` (19 renders), fan-out de 14 agentes,
+validador em scratchpad (14/14 OK), `check-rsl.sh` OK.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1696,6 +1728,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
   89 candidatos).
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
+- `picoc/`: `picoc-results-ciclo3.md` · `fragments-ciclo3/` (14 fragmentos) · `prompts/picoc-ciclo3/` (19 prompts renderizados); `scripts/render-prompts.py` (FIELD_MAP da instância)
 
 ## Histórico de commits da sessão
 
@@ -1809,6 +1842,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `81c00e4` | 2026-10-28 | Download 30 cycle-3 PDFs via Claude in Chrome over CAPES proxy; document the flow                             |
 | `14fbbfd` | 2026-10-28 | Log Claude in Chrome downloads and flow documentation (item 125) in MEMORY.md                      |
 | `2787ef0` | 2026-10-28 | Cycle-3 stage-1 eligibility: 4 eligible, 15 with stratum caveat, 18 ineligible; ratify PDR-0006/0007 |
+| `3b41dbe` | 2026-10-28 | Log cycle-3 stage-1 eligibility and PDR-0006/0007 (item 126) in MEMORY.md |
+| `cfce70c` | 2026-10-28 | Cycle-3 stage-3 PICOC extraction: 14 of 19 candidates (5 Springer pending) |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
