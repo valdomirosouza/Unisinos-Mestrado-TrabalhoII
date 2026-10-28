@@ -113,3 +113,40 @@ _Contagens do ciclo 2: 49 identificados → 49 triados (emenda: 4 mantidos c/ re
 ---
 
 _Formato PRISMA 2020 adaptado para atualização de revisão. Contagens: ≈51 identificados → 21 candidatos → 20 triados (−1 duplicata) → 18 avaliados (−2 inelegíveis A3) → 14 incluídos (−4 excluídos) → corpus final 33 (19 + 14)._
+## Ciclo 3 (em andamento — triagem concluída em 2026-10-28)
+
+Atualização de revisão (PRISMA 2020) do ciclo 3. Elegibilidade bibliométrica
+em [`papers-ciclo3.csv`](../papers-ciclo3.csv) (PDR-0006/PDR-0007); extração
+PICOC pré-triagem em
+[`picoc-results-ciclo3.md`](../picoc/picoc-results-ciclo3.md); decisões e
+evidências em [`triagem-ciclo3.md`](triagem-ciclo3.md). A avaliação integral
+(Etapas 5–9) ainda não foi executada — o corpus consolidado permanece 53.
+
+```mermaid
+flowchart TB
+    subgraph identificacao3 ["Identificação (ciclo 3, 2026-10-27)"]
+        A1["Registros das 5 varreduras (OpenAlex + Scopus + CAPES)<br/><b>n = 684</b> → 584 únicos"]
+        A2["Candidatos novos após filtros e dedup entre ciclos<br/><b>n = 37</b> (P90–P126)"]
+        A1 --> A2
+    end
+    subgraph elegibilidade3 ["Elegibilidade bibliométrica (Etapa 1, 2026-10-28)"]
+        B1["I1–I5 + estratos (PDR-0006/PDR-0007)<br/>Inelegíveis: <b>18</b> (16 série sem CiteScore · 2 I5)"]
+        B2["Elegíveis: <b>n = 19</b> (4 plenos + 15 c/ ressalva)"]
+        B1 --> B2
+    end
+    subgraph triagem3 ["Triagem com leitura integral (Etapa 4, 2026-10-28)"]
+        C1["Texto integral não obtido (<i>reports not retrieved</i>)<br/><b>n = 5</b> (Springer: P92, P95, P109, P122, P126) — adiados"]
+        C2["Triados com extração PICOC: <b>n = 14</b><br/>Excluído E3 fora de domínio: <b>1</b> (P108)"]
+        C3["<b>Aprovados para avaliação integral: n = 13</b><br/>2 sem ressalva (P94, P97) + 11 c/ ressalva de estrato"]
+        C1 ~~~ C2
+        C2 --> C3
+    end
+    A2 --> B1
+    B2 --> C1
+    B2 --> C2
+```
+
+_Contagens do ciclo 3 até a triagem: 37 identificados → 19 elegíveis (Etapa 1)
+→ 5 adiados (sem texto integral) → 14 triados → 1 excluído (E3) → **13
+aprovados para avaliação integral**. Próxima etapa: avaliação pelos três
+avaliadores independentes (Etapas 5–6)._
