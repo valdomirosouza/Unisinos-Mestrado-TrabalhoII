@@ -1649,6 +1649,38 @@ raciocínio do fragmento).
 **Comandos:** `render-prompts.py` (19 renders), fan-out de 14 agentes,
 validador em scratchpad (14/14 OK), `check-rsl.sh` OK.
 
+### 128. Ciclo 3, Etapa 4 — triagem PRISMA com evidência PICOC
+
+**Prompt:** "Execute o /rsl-triagem para a Etapa 4 do ciclo 3".
+
+**Ações (skill `/rsl-triagem`, Etapa 4 do WORKFLOW):** triagem dos 19
+elegíveis da Etapa 1 ancorada na extração PICOC de leitura integral (item
+127): **13 aprovados para avaliação integral** (P94 e P97 plenos; P91, P93,
+P100, P101, P102, P106, P110, P119, P121, P123 com ressalva de estrato
+PDR-0006/0007; P112 pleno A1), **1 excluído** (P108, **E3** — ResilioMate
+avalia resiliência de SLMs no AgentBench, sem relação com IR/AIOps/SOC;
+precedente P38/E3 ciclo 2 — único A1 do ciclo, exclusão temática e não de
+estrato) e **5 adiados** (P92, P95, P109, P122, P126 — PRISMA "reports not
+retrieved", Springer; triagem entra como adendo quando os PDFs chegarem).
+Caso-limite P106 ("Agentic AI" nominal — ML/DRL sem LLM) **aprovado com flag**
+pelos precedentes P73 (agência limitada) e P88 (agêntico não-LLM), sem
+necessidade de PDR novo; a avaliação integral decide E2. Secundários P110,
+P112 e P121 aprovados como candidatos a fundacionais-condicionais (R1).
+Artefatos: `reviews/triagem-ciclo3.md` (resumo, mermaid, tabelas com
+critério+evidência+precedente, notas), seção nova do ciclo 3 em
+`reviews/PRISMA.md` (Art. VI — ciclos anteriores intocados), 19 statuses no
+`Papers_Index.csv` (+ MD re-derivado), READMEs de `picoc/fragments-ciclo3/` e
+`prompts/picoc-ciclo3/` (exigência C3 do check-rsl, que só aflora após o
+`git add` — C3 varre `git ls-files`).
+
+**Incidentes:** (1) primeiro update de status esqueceu P112 (18/19) — pego
+pela contagem e corrigido; (2) `derive-index.py` exige `--csv/--out`
+explícitos; (3) check-rsl C3 falhou pós-commit da Etapa 3 porque os arquivos
+novos só entram no escopo do C3 depois de rastreados — resolvido com READMEs
+por pasta no commit da Etapa 4.
+
+**Comandos:** `check-rsl.sh` OK; commit `5ca23f4` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1729,6 +1761,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `MEMORY.md` — itens 70–78; commit `bdeaeb3` acrescentado à tabela da sessão
   anterior (conforme nota daquela tabela).
 - `picoc/`: `picoc-results-ciclo3.md` · `fragments-ciclo3/` (14 fragmentos) · `prompts/picoc-ciclo3/` (19 prompts renderizados); `scripts/render-prompts.py` (FIELD_MAP da instância)
+- `reviews/`: `triagem-ciclo3.md` · seção ciclo 3 em `PRISMA.md`; READMEs de `picoc/fragments-ciclo3/` e `prompts/picoc-ciclo3/`; 19 statuses ciclo 3 em `Papers_Index.csv`/`.md`
 
 ## Histórico de commits da sessão
 
@@ -1844,6 +1877,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2787ef0` | 2026-10-28 | Cycle-3 stage-1 eligibility: 4 eligible, 15 with stratum caveat, 18 ineligible; ratify PDR-0006/0007 |
 | `3b41dbe` | 2026-10-28 | Log cycle-3 stage-1 eligibility and PDR-0006/0007 (item 126) in MEMORY.md |
 | `cfce70c` | 2026-10-28 | Cycle-3 stage-3 PICOC extraction: 14 of 19 candidates (5 Springer pending) |
+| `a15bdc8` | 2026-10-28 | Log cycle-3 PICOC extraction (item 127) in MEMORY.md |
+| `5ca23f4` | 2026-10-28 | Cycle-3 stage-4 PRISMA screening: 13 approved for full evaluation, 1 excluded (E3), 5 deferred |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
