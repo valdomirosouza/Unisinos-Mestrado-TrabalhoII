@@ -1329,6 +1329,25 @@ no próprio `comparacao-avaliadores-global.md`; scores `NA` (P39/P40 no
 Claude; P62/P69/P81/P86 no ChatGPT) exigiram médias NA-safe, como no
 documento oficial.
 
+### 115. Biografia do autor substituída por texto fornecido pelo autor
+
+**Prompt:** "Ajuste a minha Bio no artigo para VALDOMIRO DE OLIVEIRA
+SOUZA JR. received the B.S. degree…" (texto integral fornecido).
+
+**Ações:** A biografia do primeiro autor em `artigo/main.tex` foi
+substituída integralmente pelo texto fornecido pelo autor: nome por
+extenso no argumento do ambiente (`Valdomiro de Oliveira Souza Jr.`),
+B.S. em Gestão de TI (Unisinos, 2025), trajetória 1997–2012 (incluindo
+Pure Bros, adquirida pela Zenvia em 2013), Head of Information
+Technology desde 2025, SRE org de 35 engenheiros em 9 squads, ISO/IEC
+27001 em 2022, integração técnica de dez empresas adquiridas e
+interesses de pesquisa (agentic AI, AI-assisted incident response,
+MTTD/MTTR, carga cognitiva). Adaptações apenas tipográficas: acentos em
+LaTeX (`S\~ao`), `B.S.\`/`M.Sc.\` com espaço forçado, `ISO/IEC~27001`.
+Recompilado: 9 páginas, 0 erros; nome, Pure Bros, ISO/IEC 27001 (2022),
+"ten acquired companies" e "mean time to recover (MTTR)" verificados no
+PDF via pypdf. Commit `3d54c6c`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1500,5 +1519,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `4cc4c97` | 2026-10-27 | English review of the article: grammar, idiom, IEEE style, kappa band accuracy                   |
 | `0a352fc` | 2026-10-27 | Mark English review done in article README TODO                                                  |
 | `12f0758` | 2026-10-27 | Verify article counts against canonical CSVs; fix cycle-2 mean QA (2.73) with errata             |
+| `05efa56` | 2026-10-27 | Log article count verification (item 114) in MEMORY.md                                           |
+| `3d54c6c` | 2026-10-27 | Replace first author's biography with author-provided text                                        |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
