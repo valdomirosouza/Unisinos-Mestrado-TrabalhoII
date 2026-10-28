@@ -1278,6 +1278,57 @@ novas verificadas no PDF via pypdf (com desifenização) e ausência dos
 trechos antigos confirmada. Commit `4cc4c97`. TODO do artigo: resta só
 a verificação final das contagens contra os CSVs e as fotos dos autores.
 
+### 114. Conferência de contagens do artigo contra os CSVs canônicos
+
+**Prompt:** "Faça a conferência de contagens".
+
+**Ações:** Auditoria por script Python recomputando ~40 números do
+artigo a partir dos artefatos canônicos. **Conferiram (OK):** universo
+P01–P89 (88 linhas + P36 duplicata); 61 avaliações (19 F + 20 C1 + 22
+C2); 53/61 unânimes (86,9% ≈ 87%); acordos de pares 90,2/91,8/91,8% e
+κ 0,57/0,51/0,51; Fleiss κ 0,53; prevalência Incluir 164/183 = 89,6%
+(regra de colapso oficial: "Mantido (fundacional)" = Incluir,
+case-insensitive); diffs médios |RQ| 0,44/0,55/0,63 e |QA|
+0,31/0,50/0,63 (pares com NA excluídos); 8 divergências nas famílias
+A = P26, P29 (2) · B = P62, P69, P81 (3) · C = P38, P40, P85 (3);
+médias C1 RQ 3,83/QA 3,50 e F RQ 3,66/QA 2,53; cobertura de RQs da
+Fig. 3 (RQ3 fully 1/19 F, 12/18 C1, 4/22 C2; RQ4 fully 4/18 C1);
+corpus 53 = 19+14+20; 7 fundacionais-condicionais (P24, P33, P52, P54,
+P72, P77, P79); corpus primário 46; 3 incluídos com ressalva de
+estrato (P62, P69, P81); exclusões unânimes P30, P39, P86; PRISMA do
+ciclo 1 (≈51→21→20→18→14) e ciclo 2 (49→22→20; E2=19, E3=8) contra
+PRISMA.md e Papers_Index; taxonomia (36 citados, todos no corpus);
+rede de citações — 52 arestas na união do md == 52 arestas da Fig. 2
+do tex, hubs P10=7/P09=6/P14=5/P16=3/P65=3, P28 com 7 saídas (5 para o
+ciclo 2), P79→P20,P78, P76→P39,P83; string de busca (≈49.700 OpenAlex,
+12.783 Scopus, recall 13/14); números de MTTD/MTTR e carga cognitiva
+(277d = 204+73, 8h→90min, 98%/<5min, ~1–1,5min vs ~30–45s, 74–84%,
+276→107s com Wilcoxon, 2,9–11,6s + 0,3s, BERTScore 85–87%, AUC 0,998,
+NASA-TLX, BUS-15) contra a síntese consolidada; bib 62 corpus + 6
+metodológicas, zero \cite sem entrada.
+
+**3 divergências encontradas e corrigidas no artigo:** (1) média QA do
+ciclo 2 é **2,73** (60,0÷22, idêntica nos dois CSVs), não 2,75 — o
+DASHBOARD exibia a **mediana** (2,75) como média e o artigo herdou;
+corrigido no `main.tex`, no DASHBOARD (valor + nota datada) e via seção
+**Errata (2026-10-27)** na síntese consolidada (artefato histórico não
+reescrito), com PDF da síntese regenerado (errata verificada via
+pypdf); (2) "(QA 4.0/4.0)" atribuído ao núcleo empírico que inclui P28
+e P31 com QA 3,5 → "(QA 3.5–4.0 of 4.0)"; (3) a composição do n=61
+agora é explícita no método (19 F + 20 C1 triados, incluindo os 2
+inelegíveis de estrato avaliados como exclusões + 22 C2), eliminando a
+aparente tensão com os "18 assessed" do PRISMA do ciclo 1.
+Recompilado: 9 páginas, 0 erros; "mean QA 2.73" e a frase do n=61
+verificadas no PDF. TODO nº 5 do `artigo/README.md` encerrado — do
+artigo restam apenas as fotos dos autores. Commit `12f0758`.
+
+**Incidentes:** primeira rodada do script divergiu em κ/prevalência por
+regra de colapso incompleta (rótulo "Mantido (fundacional)" do Gemini
+não começa com "Incluir") — corrigida replicando o mapeamento documentado
+no próprio `comparacao-avaliadores-global.md`; scores `NA` (P39/P40 no
+Claude; P62/P69/P81/P86 no ChatGPT) exigiram médias NA-safe, como no
+documento oficial.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1447,5 +1498,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `843a041` | 2026-10-27 | Add author biographies (IEEEbiographynophoto) and bio/ source folder                             |
 | `7df3c37` | 2026-10-27 | Log author biographies (item 112) in MEMORY.md                                                   |
 | `4cc4c97` | 2026-10-27 | English review of the article: grammar, idiom, IEEE style, kappa band accuracy                   |
+| `0a352fc` | 2026-10-27 | Mark English review done in article README TODO                                                  |
+| `12f0758` | 2026-10-27 | Verify article counts against canonical CSVs; fix cycle-2 mean QA (2.73) with errata             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
