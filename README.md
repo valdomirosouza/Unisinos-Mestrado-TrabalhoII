@@ -83,6 +83,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── bio/                          ← biografias dos autores (insumo das seções biography do artigo)
 │   └── ValdomiroSouza.pdf       ← perfil profissional do autor (export LinkedIn)
 ├── papers-ciclo2.csv             ← elegibilidade Etapa 1 do ciclo 2 (P41–P89): 45 elegíveis · 4 inelegíveis
+├── papers-ciclo3.csv             ← elegibilidade Etapa 1 do ciclo 3 (P90–P126): 4 elegíveis · 15 c/ ressalva · 18 inelegíveis (PDR-0006/0007)
 ├── TrabalhoI/                    ← RSL fundacional (base do corpus e do prompt)
 │   ├── README.md                ← índice do Trabalho I
 │   ├── Artigo_Agentic_AI V3.pdf ← artigo da RSL original
