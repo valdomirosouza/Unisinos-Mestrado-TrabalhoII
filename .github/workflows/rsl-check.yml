@@ -1,0 +1,29 @@
+# Validação determinística da instância de RSL em todo push/PR.
+# Nenhum dado de pesquisa é alterado aqui — só verificação.
+name: rsl-check
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  rsl:
+    name: check-rsl.sh (links · PDRs · índices · segredos · contagens)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: check-rsl.sh
+        run: bash scripts/check-rsl.sh

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "Se você usar os artefatos desta revisão, cite-os como abaixo."
+type: dataset
+title: "Agentic AI as a Copilot to Reduce MTTD and MTTR During Incident Response — SLR artifacts"
+abstract: >-
+  Artefatos completos da Revisão Sistemática da Literatura (Kitchenham 2009 /
+  PRISMA 2020 / PICOC / DARE) sobre Agentic AI como copilot para reduzir MTTD
+  e MTTR em incident response: protocolo e PDRs, prompts, 61 avaliações por
+  três avaliadores LLM independentes, fichas de extração, bibliometria
+  triplamente verificada (OpenAlex/Crossref/Scopus), citações cruzadas do
+  corpus e o artigo IEEE Access (draft). Worked example e beta tester do
+  Template-RSL.
+authors:
+  - family-names: "Souza Jr."
+    given-names: "Valdomiro de Oliveira"
+  - family-names: "Kunst"
+    given-names: "Rafael"
+version: 2.0.0
+date-released: "2026-10-27"
+repository-code: "https://github.com/valdomirosouza/Unisinos-Mestrado-TrabalhoII"
+keywords:
+  - systematic-literature-review
+  - agentic-ai
+  - incident-response
+  - mttd
+  - mttr
+  - cognitive-load
+references:
+  - type: software
+    title: "Template-RSL"
+    authors:
+      - family-names: "Souza Jr."
+        given-names: "Valdomiro de Oliveira"
+    repository-code: "https://github.com/valdomirosouza/Template-RSL"
+    notes: "Camada de governança adotada em 2026-10-27 (este repositório é o worked example do template)."

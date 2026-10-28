@@ -60,6 +60,20 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── README.md                     ← este arquivo (índice geral)
 ├── CLAUDE.md                     ← instruções de sessão (regra de dump de memória em MEMORY.md + convenções)
 ├── MEMORY.md                     ← memória das sessões (prompts, iterações, respostas, commits)
+├── WORKFLOW.md                   ← ciclo canônico da RSL (9 etapas; camada Template-RSL)
+├── CHANGELOG.md                  ← changelog do protocolo (emendas e versões)
+├── CITATION.cff                  ← como citar os artefatos desta revisão
+├── LICENSE                       ← MIT
+├── protocolo/                    ← camada de governança (Template-RSL, adotada 2026-10-27)
+│   ├── constituicao.md          ← artigos normativos da revisão (raiz de autoridade)
+│   ├── picoc.md · criterios.md  ← PICOC ratificado e critérios I1–I6/E1–E5 com R1–R3
+│   └── pdr/                     ← PDR-0001..0005 — decisões de protocolo numeradas e imutáveis
+├── scripts/                      ← validação determinística (camada Template-RSL)
+│   ├── check-rsl.sh             ← links · PDRs · indexação · segredos · pareceres×CSV (roda no CI)
+│   ├── compute-kappa.py         ← κ Cohen/Fleiss (reproduz a comparação global)
+│   ├── render-prompts.py        ← template canônico → prompts por estudo
+│   └── derive-index.py          ← Papers_Index.csv → Papers_Index.md
+├── templates/                    ← templates canônicos do ciclo (prompts, parecer, triagem, CSVs)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
 ├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano
 ├── Papers_Index.csv              ← índice P01–P89 (metadados, bibliometria, status RSL, escores dos 3 avaliadores)
