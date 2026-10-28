@@ -72,7 +72,8 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   ├── check-rsl.sh             ← links · PDRs · indexação · segredos · pareceres×CSV (roda no CI)
 │   ├── compute-kappa.py         ← κ Cohen/Fleiss (reproduz a comparação global)
 │   ├── render-prompts.py        ← template canônico → prompts por estudo
-│   └── derive-index.py          ← Papers_Index.csv → Papers_Index.md
+│   ├── derive-index.py          ← Papers_Index.csv → Papers_Index.md
+│   └── ingest-downloads.py      ← ingere PDFs de ~/Downloads para docs/ com nome canônico
 ├── templates/                    ← templates canônicos do ciclo (prompts, parecer, triagem, CSVs)
 ├── Artigos-TrabalhoII.csv        ← insumos: ID, artigo, arquivo, Qualis, SJR
 ├── papers.csv                    ← bibliometria VERIFICADA (P01–P40): DOI, Qualis 2025-2028, Scopus %, SJR, ISSN, ano

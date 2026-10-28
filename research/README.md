@@ -83,3 +83,5 @@ As saídas históricas foram produzidas com a v1.0.0 e são preservadas como evi
 - [`ciclo3-data/`](ciclo3-data/) — dumps brutos auditáveis: `c3-openalex.json`,
   `c3-scopus.json`, `c3-scored.json` (lista pontuada pós-dedup), `c3-final.json`
   (37 candidatos enriquecidos).
+- [`downloads-ciclo3.md`](downloads-ciclo3.md) — checklist dos 32 PDFs pendentes com links
+  pelo proxy CAPES e fluxo de ingestão (`scripts/ingest-downloads.py`).
