@@ -99,7 +99,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 │   ├── prompt-P01..P19.md       ← 19 prompts preenchidos (corpus fundacional, avaliação retroativa)
 │   ├── prompt-P20..P40.md       ← 20 prompts preenchidos (ciclo 1, registro histórico)
 │   └── prompt-P43..P88.md       ← 22 prompts preenchidos (ciclo 2, aprovados na triagem)
-├── docs/                         ← PDFs: corpus P01–P40 (39) + ciclo 2 P41–P89 (49) + ciclo 3 P90–P126 (5 baixados · 32 pendentes) + Kitchenham (2009)
+├── docs/                         ← PDFs: corpus P01–P40 (39) + ciclo 2 P41–P89 (49) + ciclo 3 P90–P126 (32; 5 Springer sem acesso) + Kitchenham (2009)
 ├── report/                       ← Etapa 3: fichas de extração estruturada
 │   ├── README.md                ← índice das fichas (P01–P40)
 │   ├── paper-extraction-prompt-template.md ← template de extração (11 campos, Kitchenham)

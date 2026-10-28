@@ -42,3 +42,14 @@ Fluxo por artigo: clicar no link → baixar o PDF no publisher → rodar
 | P122 | [10.1007/978-3-032-34132-7_18](https://doi-org.ez101.periodicos.capes.gov.br/10.1007/978-3-032-34132-7_18) | Integrating Agentic AI with NIST Frameworks: KPI Driven Detection and Response I | Lecture notes in networks and syste |
 | P124 | [10.1109/ipmml71439.2026.11682590](https://doi-org.ez101.periodicos.capes.gov.br/10.1109/ipmml71439.2026.11682590) | BudgetSRE: Budget-Aware Multi-Agent Incident Response for Backend Operations | International Conference on Image P |
 | P126 | [10.1007/978-3-032-40367-4_21](https://doi-org.ez101.periodicos.capes.gov.br/10.1007/978-3-032-40367-4_21) | Multiagent Incident Response Planning with Code Models | Lecture notes in computer science |
+
+## Resultado (2026-10-28, via Claude in Chrome)
+
+**30 dos 32 pendentes baixados** na sessão autenticada do proxy CAPES usando o
+fluxo documentado em [`../docs/download-via-claude-chrome.md`](../docs/download-via-claude-chrome.md)
+(19 IEEE em lote por arnumber; MDPI, World Scientific, ACM, ScienceDirect,
+Wiley — este após o usuário resolver o desafio Cloudflare —, IJIES e IJCTT).
+**5 sem acesso**: capítulos Springer 2025–2026 não licenciados pela CAPES
+(P92, P95, P109, P122, P126 — o `content/pdf` devolve HTML de paywall);
+opções: solicitação via biblioteca/COMUT ou contato com os autores.
+Total do ciclo 3 em `docs/`: **32/37 PDFs**.

@@ -16,4 +16,9 @@ Execute a etapa 1 do `WORKFLOW.md`:
    descoberta do ciclo (`research/` ou equivalente).
 5. Rode `bash scripts/check-rsl.sh` e indexe os arquivos novos nos READMEs.
 
+Para PDFs atrás de login acadêmico (proxy CAPES), use o fluxo
+Claude in Chrome documentado em `docs/download-via-claude-chrome.md`
+(padrões de URL por publisher, regras de permissão de download e o que
+fica a cargo do usuário: login, cliques de permissão e CAPTCHAs).
+
 Nunca some citações de fontes diferentes. `NÃO INDEXADO` ≠ 0.
