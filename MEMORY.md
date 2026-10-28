@@ -1548,6 +1548,41 @@ pendentes; recusa arquivo com >10 min sem confirmação explícita).
 READMEs indexados; `check-rsl.sh` OK. Commit `127390b`. Download via
 plugin fica aguardando o usuário ativar `/chrome`.
 
+### 125. Downloads do ciclo 3 via Claude in Chrome + documentação do fluxo
+
+**Prompts:** "/chrome ativado" e, durante a execução, "Documente esta
+descoberta de uso do claude-in-chrome no template-RSL e aqui no
+repositório do artigo…".
+
+**Ações:** Com a extensão conectada, **30 dos 32 PDFs pendentes
+baixados** na sessão autenticada do proxy CAPES (`ez101`): fluxo
+navegar DOI proxied → resolver URL do PDF por publisher → `fetch` na
+própria página + `<a download>` com nome canônico `P<ID>.pdf` →
+verificação em disco → `ingest-downloads.py`. IEEE (19) em **lote por
+arnumber** (resolvidos antes via redirect público do doi.org; 3 lotes
+JS de ≤6); MDPI, World Scientific, ACM e IJCTT por padrão de URL;
+ScienceDirect via clique no "View PDF" (URL assinada) e fetch na aba do
+viewer; Wiley após o **usuário** resolver o Cloudflare; IJIES com
+correção de alvo (1º link do fascículo era outro paper — casado pelo
+sufixo do DOI). **5 sem acesso:** capítulos Springer 2025–2026 não
+licenciados pela CAPES (P92/P95/P109/P122/P126 — `content/pdf` devolve
+HTML; marcados SEM ACESSO no índice; rota: biblioteca/COMUT). docs/
+agora com 121 PDFs (32/37 do ciclo 3).
+
+**Pegadinhas documentadas:** validação pelo magic `%PDF-` (paywall
+devolve 200/HTML); 1 download automático por origem/página (aviso
+"baixar vários" no lote IEEE → Permitir; releitura da página ganha +1);
+timeout de 45 s do CDP (lotes ≤6; o lote 2 completou após o timeout);
+filtro da extensão `[BLOCKED: Cookie/query string data]` (evitar a
+string `credentials`; em mesma origem cookies vão por padrão); CAPTCHAs
+são do usuário (Prohibited p/ o agente). **Documentação criada:**
+`docs/download-via-claude-chrome.md` canônico no Template-RSL
+(+ cópia na instância), referenciado na skill `rsl-descoberta` dos dois
+repos; CHANGELOG do template 0.1.2. Downloads errados/duplicados
+removidos de ~/Downloads (P102 do paper 01; duplicata 1-s2.0 do P110).
+Commits: instância `81c00e4`; template `4b6d923`. `check-rsl.sh` OK nos
+dois.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1734,8 +1769,10 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `7f925a3` | 2026-10-27 | Adopt Template-RSL governance layer (beta test): constitution, PDRs 0001-0005, validation scripts, skills, CI |
 | `1aa400a` | 2026-10-27 | Log Template-RSL adoption and beta findings (item 122) in MEMORY.md                                           |
 | `1aa96ea` | 2026-10-27 | Cycle-3 discovery via canonical query: 37 candidates P90-P126, audit trail and raw sweep data                 |
-| `07f57a1` | 2026-10-27 | Log cycle-3 discovery (item 123) in MEMORY.md                                                      |
-| `127390b` | 2026-10-27 | Add cycle-3 download checklist (CAPES proxy links) and PDF ingest helper                           |
+| `07f57a1` | 2026-10-27 | Log cycle-3 discovery (item 123) in MEMORY.md                                                                 |
+| `127390b` | 2026-10-27 | Add cycle-3 download checklist (CAPES proxy links) and PDF ingest helper                                      |
+| `dcb28d1` | 2026-10-27 | Log Chrome plugin attempt and ingest helpers (item 124) in MEMORY.md                               |
+| `81c00e4` | 2026-10-28 | Download 30 cycle-3 PDFs via Claude in Chrome over CAPES proxy; document the flow                  |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
