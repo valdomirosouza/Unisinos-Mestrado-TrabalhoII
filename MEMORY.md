@@ -1220,6 +1220,32 @@ running head com os dois nomes confirmado na página 2. TODO nº 2 do
 `artigo/README.md` encerrado. Commit `dc84850`. Restam no TODO:
 biografia/foto dos autores e revisão de inglês.
 
+### 112. Biografias dos autores no artigo
+
+**Prompt:** "Agora adicione as biografias dos autores no artigo. A
+minha está aqui bio/ValdomiroSouza.pdf".
+
+**Ações:** Duas seções `IEEEbiographynophoto` adicionadas ao final do
+`main.tex` (antes do `\EOD`), ambiente nativo confirmado na
+`ieeeaccess.cls`. A biografia do autor foi **redigida em estilo IEEE
+(terceira pessoa, ~150 palavras)** a partir do export do LinkedIn em
+`bio/ValdomiroSouza.pdf` (lido via pypdf): formação em Gestão de TI
+(Unisinos, 2025) + mestrando do PPGCA; 30+ anos em tecnologia; Head of
+IT da BU CPaaS da Zenvia (desde 2013) com plataformas de 1M+
+transações/min; SRE org de 9 squads, postmortems, migrações
+zero-downtime, ISO 27001; interesses de pesquisa alinhados à RSL. A
+biografia do orientador (Prof. Dr. Rafael Kunst) foi redigida a partir
+do **perfil público acadêmico** (busca web — SciProfiles/Loop/Unisinos):
+M.Sc. e Ph.D. em Ciência da Computação pela UFRGS; professor e
+coordenador do PPGCA/Unisinos; SOFTWARELAB; professor visitante no IBM
+Watson IoT Center (Munique, 2020); consultor ad hoc do MEC; interesses
+em 5G/6G, Industry 4.0, smart cities, IoT e ML aplicado a telecom.
+Recompilado: **9 páginas, 0 erros**; ambas as biografias verificadas na
+última página via pypdf. Pasta `bio/` nova indexada na árvore do README
+raiz; TODO nº 1 do `artigo/README.md` atualizado (restam só as **fotos**
+— trocar para `IEEEbiography` com `\includegraphics` quando houver).
+Commit `843a041`.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1385,5 +1411,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d1dd7ea` | 2026-10-27 | Switch article to official IEEE Access class (ieeeaccess.cls) with pgf year-primitive workaround |
 | `bc07d4f` | 2026-10-27 | Log IEEE Access class swap (item 110) in MEMORY.md                                               |
 | `dc84850` | 2026-10-27 | Add advisor Rafael Kunst as co-author and corresponding-author e-mails                           |
+| `73a1cbb` | 2026-10-27 | Log advisor co-author addition (item 111) in MEMORY.md                                           |
+| `843a041` | 2026-10-27 | Add author biographies (IEEEbiographynophoto) and bio/ source folder                             |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
