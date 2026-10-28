@@ -1246,6 +1246,38 @@ raiz; TODO nº 1 do `artigo/README.md` atualizado (restam só as **fotos**
 — trocar para `IEEEbiography` com `\includegraphics` quando houver).
 Commit `843a041`.
 
+### 113. Revisão de inglês do artigo
+
+**Prompt:** "Agora faça a revisão de inglês do artigo".
+
+**Ações:** Leitura integral do `main.tex` (~1090 linhas) e aplicação de
+~20 correções, em três categorias. **(a) Gramática/idiomaticidade:**
+"The review makes three findings" → "yields three main findings";
+"organized in a taxonomy" → "organized into"; "no own baseline" → "no
+baseline of its own"; "applied already at screening" → "applied as early
+as the screening stage"; "Three corpus-visible causes:" (fragmento) →
+"Three causes are visible in the corpus:"; "The one nominal measurement
+available being unfavorable…" → "That the only available nominal
+measurement is unfavorable…"; "evidencing" → "indicating"; "material
+for" → "material to"; "not established effects" → "not as established
+effects"; "corpus'" → "corpus's"; "a bag of papers" → "a disconnected
+collection of papers"; "Master Degree Student" → "Master's Degree
+Student"; "PoC" expandido para "proof-of-concept" (2 ocorrências).
+**(b) Convenção IEEE:** "catalogue" → "catalog" (ortografia americana);
+"Acknowledgments" → "Acknowledgment" (singular, padrão IEEE).
+**(c) Correções semânticas:** rotulagem do κ corrigida — "substantial
+agreement" estava estatisticamente incorreto para κ 0.51–0.57/0.53
+(banda _moderate_ em Landis & Koch): §V-E agora diz "high percentage
+agreement (90.2–91.8% pairwise) with moderate chance-corrected κ" e a
+Conclusão "high agreement (53 of 61 decisions unanimous)"; e
+"co-primary" em §IV-D trocado por "complementary", alinhando ao abstract
+e à tabela PICOC (que tratam carga cognitiva como _complementary
+outcome_). Nenhum número ou achado técnico alterado. Recompilado:
+**9 páginas, 0 erros, 0 citações não resolvidas**; todas as frases
+novas verificadas no PDF via pypdf (com desifenização) e ausência dos
+trechos antigos confirmada. Commit `4cc4c97`. TODO do artigo: resta só
+a verificação final das contagens contra os CSVs e as fotos dos autores.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1413,5 +1445,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `dc84850` | 2026-10-27 | Add advisor Rafael Kunst as co-author and corresponding-author e-mails                           |
 | `73a1cbb` | 2026-10-27 | Log advisor co-author addition (item 111) in MEMORY.md                                           |
 | `843a041` | 2026-10-27 | Add author biographies (IEEEbiographynophoto) and bio/ source folder                             |
+| `7df3c37` | 2026-10-27 | Log author biographies (item 112) in MEMORY.md                                                   |
+| `4cc4c97` | 2026-10-27 | English review of the article: grammar, idiom, IEEE style, kappa band accuracy                   |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
