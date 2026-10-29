@@ -2167,6 +2167,21 @@ servidor http local (inspeção); `check-rsl.sh` OK. Commit `f19f788` + push.
 **Lição registrada:** o checker de build passou a olhar `^!` (erros LaTeX)
 e warnings do bibtex, não só overfull/citações.
 
+### 148. Artigo — Nomenclature enxugada para 20 entradas (pedido do autor)
+
+**Prompt:** "Remova do nomenclature os seguintes textos: AUC …; NASA-TLX …;
+BUS-15 …; DARE …; PdM …; PICOC …; PRISMA …; RQ …; SJR …; SLR …".
+
+**Ações:** removidas as 10 entradas pedidas (siglas de metodologia e
+instrumentos, todas já expandidas na primeira menção no texto); permanecem
+**20** (domínio + IA agêntica): AIOps, HITL, HOTL, IR, LLM, MAS, MCP, ML,
+MTTD, MTTR, NOC, QA, RAG, RCA, RL, SIEM, SLM, SOAR, SOC(aaS), SRE.
+Recompilado limpo (12 pp., 0 erros, sem overfull novo); nota no README do
+artigo; PDF reenviado.
+
+**Comandos:** remoção por regex em python; pdflatex; `check-rsl.sh` OK.
+Commit `f084ca1` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2427,5 +2442,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `3005e97` | 2026-10-30 | Log article study-identifier appendix (item 145) in MEMORY.md |
 | `3a81f22` | 2026-10-30 | Log session close (item 146) in MEMORY.md |
 | `f19f788` | 2026-10-30 | Article: fix Nomenclature layout (breakable list) and Cyrillic author in bib |
+| `d736a83` | 2026-10-30 | Log Nomenclature layout fix (item 147) in MEMORY.md |
+| `f084ca1` | 2026-10-30 | Article: trim Nomenclature to 20 entries (author request) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
