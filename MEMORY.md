@@ -1866,6 +1866,32 @@ registros; é preprint arXiv.
 **Pendências:** 5 Springer (biblioteca/COMUT); snowballing (rota P90);
 artigo IEEE Access (fotos de autores, revisão de bio, PDF final).
 
+### 135. Ciclo 3 — snowballing (rota de recaptura do P90): negativo
+
+**Prompt:** "Execute o snowballing do ciclo 3 (rota de recaptura do P90)".
+
+**Contexto:** nota do condutor no PDR-0006 — P90 (Tupe & Thube, IEEE SOSE
+2025; candidato mais citado da descoberta: OA 7 · CR 7 · SC 6) saiu
+INELEGÍVEL na Etapa 1 por série sem CiteScore, com o snowballing obrigatório
+(PM-3 do prompt-v3) como rota de recaptura.
+
+**Ações:** (1) Backward: `referenced_works` dos 12 incluídos na OpenAlex
+(depósitos incompletos — P102/P112/P121 com 0 refs) + fallback de varredura
+full-text dos **121 PDFs** do acervo com pypdf (padrões: Tupe/Thube, título,
+fragmento do DOI) → **nenhum estudo do acervo cita o P90**; única menção aos
+autores é o P09 citando OUTRO paper deles (arXiv 2502.17443). (2) Forward:
+7 citantes do P90 na OpenAlex (`cites:W4413680021`) → 6 fora de domínio
+(SE/6G/saúde/IoT/interop genérica), 1 já no acervo — **o P92** (capítulo
+Springer de triagem adiada) cita o P90; vínculo registrado para a triagem
+futura do P92. (3) Contagens PRISMA separadas (PM-3): 0 candidatos novos.
+(4) Artefato `research/snowballing-ciclo3.md` (+índice no README da pasta);
+status no DASHBOARD. **P90 permanece INELEGÍVEL (PDR-0006), sem PDR de
+revisitação**; o snowballing completo do conjunto incluído (65) fica como
+insumo de um eventual ciclo 4.
+
+**Comandos:** OpenAlex API (works/doi, cites:); pypdf sobre docs/;
+`check-rsl.sh` OK. Commit `fec88da` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1957,6 +1983,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Ciclo 3, Etapa 8: `reviews/comparacao-avaliadores-ciclo3.csv` + `.md` (κ = 1,00, 13/13 unânimes) · corpus 65 no DASHBOARD · adendo nº 6 na síntese (+PDF)
 
 - Ciclo 3, Etapa 9: 24 fichas `report/P91…P123-extraction[-ptBR].csv` + `consolidated-extraction-ciclo3[-ptBR].csv` · seção ciclo 3 no `report/README.md` · linha Etapa 9 no DASHBOARD
+
+- Ciclo 3, snowballing: `research/snowballing-ciclo3.md` (rota P90 — negativo; vínculo P92→P90 registrado) · status no DASHBOARD
 
 ## Histórico de commits da sessão
 
@@ -2088,5 +2116,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `76acef7` | 2026-10-29 | Cycle-3 stage-8 evaluator comparison: perfect agreement (kappa 1.00), corpus 53 -> 65 |
 | `19be8b2` | 2026-10-29 | Log cycle-3 evaluator comparison (item 133) in MEMORY.md |
 | `7f7f52a` | 2026-10-29 | Cycle-3 stage-9 extraction cards: 12 included studies (EN + pt-BR + consolidated) |
+| `cff6dd9` | 2026-10-29 | Log cycle-3 extraction cards (item 134) in MEMORY.md |
+| `fec88da` | 2026-10-29 | Cycle-3 snowballing (P90 recapture route): no recapture, no new candidates |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
