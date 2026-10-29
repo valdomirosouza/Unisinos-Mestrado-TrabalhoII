@@ -44,7 +44,7 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 
 ## 🔄 Ciclo 3 — avaliação tripla concluída (atualizado em 2026-10-29)
 
-**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação integral pelos três avaliadores concluída (Claude, ChatGPT e Gemini)** → **comparação entre avaliadores (Etapa 8) concluída em 2026-10-29: κ = 1,00 nos três pares, unanimidade 13/13**. Restam as fichas de extração (Etapa 9) e os 5 Springer adiados (adendo futuro).
+**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação integral pelos três avaliadores concluída (Claude, ChatGPT e Gemini)** → **comparação entre avaliadores (Etapa 8) concluída em 2026-10-29: κ = 1,00 nos três pares, unanimidade 13/13**. **Fichas de extração (Etapa 9) concluídas em 2026-10-29.** Restam os 5 Springer adiados (adendo futuro) e o snowballing (P90).
 
 | Estágio                                                                                                                                                                                                   | Resultado                                                                                                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -56,6 +56,7 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 | Avaliação integral — **ChatGPT** (13/13, 2026-10-29) | **12 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`ChatGPT/`](ChatGPT/README.md) |
 | Avaliação integral — **Gemini** (13/13, 2026-10-29) | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`Gemini/`](Gemini/README.md) |
 | Comparação entre avaliadores (Etapa 8, 2026-10-29) | **Acordo 100% · Cohen κ = 1,00 (3 pares) · Fleiss κ = 1,00 · 13/13 unânimes** — [`comparacao-avaliadores-ciclo3.md`](comparacao-avaliadores-ciclo3.md) |
+| Fichas de extração (Etapa 9, 2026-10-29) | **12 fichas EN + 12 pt-BR** (8 High · 4 Medium) + consolidados — [`report/`](../report/README.md) |
 
 **Escores dos três avaliadores (n = 13; média ≠ mediana, rotuladas separadamente):**
 

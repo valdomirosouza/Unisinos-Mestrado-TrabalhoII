@@ -1,4 +1,4 @@
-# Fichas de Extração — RSL Agentic AI Copilot (P01–P40 + Ciclo 2)
+# Fichas de Extração — RSL Agentic AI Copilot (P01–P40 + Ciclos 2–3)
 
 > 🧭 **Navegação:** [🏠 README raiz](../README.md) · [📚 Pareceres](../reviews/README.md) · [📊 Dashboard](../reviews/DASHBOARD.md)
 
@@ -90,10 +90,30 @@ Fichas dos **20 estudos incluídos no ciclo 2** ([triagem](../reviews/triagem-ci
 | P87 | LLM Agentic Incident-Report | [PDF](../docs/P87_An_LLM-Based_Agentic_Network_Traffic_Incident-Report_Approach_Towards_Explainable-AI_Network_Defense.pdf) | [EN](P87-extraction.csv) | [pt-BR](P87-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED (parcial) |
 | P88 | MAS Self-Healing Descentralizado | [PDF](../docs/P88_A%20decentralised_self-healing_approach_for_network_topology_maintenance.pdf) | [EN](P88-extraction.csv) | [pt-BR](P88-extraction-ptBR.csv) | 🟡 Medium | ✅ DECLARED |
 
+## Índice das fichas — Ciclo 3 (12 estudos incluídos, P91–P123)
+
+Fichas dos **12 estudos incluídos no ciclo 3** ([triagem](../reviews/triagem-ciclo3.md) → [pareceres](../reviews/README.md) → [comparação κ = 1,00](../reviews/comparacao-avaliadores-ciclo3.md)), geradas em 2026-10-29 com o mesmo template. Consolidados do ciclo 3 (uma linha por artigo): [`consolidated-extraction-ciclo3.csv`](consolidated-extraction-ciclo3.csv) (EN) · [`consolidated-extraction-ciclo3-ptBR.csv`](consolidated-extraction-ciclo3-ptBR.csv) (pt-BR). Relevância: **8 High · 4 Medium** — o ciclo traz o primeiro cluster de primários com **MTTD/MTTR/MTTC nominal vs. baseline executado** (P100, P101, P102, P123; antes só o P76 media MTTR nominalmente, vs. literatura); a coluna Comparison vem da [extração PICOC do ciclo 3](../picoc/picoc-results-ciclo3.md). Todos os incluídos carregam **ressalva de estrato obrigatória** (PDR-0006/0007), exceto P94 (Incluir pleno); P110/P112/P121 são secundários fundacionais-condicionais (R1).
+
+| ID | Estudo | PDF | Extração (EN) | Extração (pt-BR) | Relevância | Comparison (PICOC) |
+| --- | ------ | --- | ------------- | ---------------- | ---------- | ------------------ |
+| P91 | SOC KPIs via 10 Agentes (regras+ML) | [PDF](../docs/P91_Autonomous_Agentic_AI_Architectures_for_Optimizing_Security_Operations_Centers_S.pdf) | [EN](P91-extraction.csv) | [pt-BR](P91-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (sem baseline) |
+| P93 | Manual → Agentic SecOps (3E) | [PDF](../docs/P93_From_Manual_to_Agentic_Security_Operations_A_Multi_Dimensional_Evaluation_of_AI_.pdf) | [EN](P93-extraction.csv) | [pt-BR](P93-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (telemetria sintética) |
+| P94 | Security Framework p/ MAS sobre MCP | [PDF](../docs/P94_Design_of_a_Security_Framework_for_Multi_Agent_Systems_Based_on_Model_Context_Pr.pdf) | [EN](P94-extraction.csv) | [pt-BR](P94-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (harness de segurança) |
+| P97 | SOC-as-a-Service Agêntico (cloud) | [PDF](../docs/P97_Agentic_AI_Driven_SOC_as_a_Service_for_Optimizing_Incident_Response_in_Cloud_Env.pdf) | [EN](P97-extraction.csv) | [pt-BR](P97-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (simulação; baselines modelados) |
+| P100 | AIDR-Cloud (copilot SRE, produção) | [PDF](../docs/P100_AIDR_Cloud_An_Agentic_AI_Driven_Incident_Response_Framework_for_Cloud_Failures.pdf) | [EN](P100-extraction.csv) | [pt-BR](P100-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (SREs humanos) |
+| P101 | ED-ASOC (Supervisor LLM event-driven) | [PDF](../docs/P101_Event_Driven_Agentic_SOC_ED_ASOC_Supervisor_Based_LLM_Framework_for_Dynamic_Inci.pdf) | [EN](P101-extraction.csv) | [pt-BR](P101-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (polling + LLM-Assist) |
+| P102 | Intelligent SRE (Master LLM + 5 agentes) | [PDF](../docs/P102_Intelligent_Site_Reliability_Engineering_A_Multi_agent_LLM_Framework_for_Automat.pdf) | [EN](P102-extraction.csv) | [pt-BR](P102-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (3 SREs sêniores) |
+| P110 | DevAIOps (SLR, XAI agents) | [PDF](../docs/P110_DevAIOps_A_Systematic_Literature_Review_on_Integrating_Explainable_AI_Agents_int.pdf) | [EN](P110-extraction.csv) | [pt-BR](P110-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (secundário) |
+| P112 | LLMs p/ Agentic NetOps/AIOps (survey) | [PDF](../docs/P112_Large_language_models_for_agentic_NetOps_and_AIOps_Architectures_evaluation_and_.pdf) | [EN](P112-extraction.csv) | [pt-BR](P112-extraction-ptBR.csv) | 🟢 High | ⚪ N/A (secundário) |
+| P119 | IR com LLMs + CTI (RAG consultivo) | [PDF](../docs/P119_Advancing_Autonomous_Incident_Response_Leveraging_LLMs_and_Cyber_Threat_Intellig.pdf) | [EN](P119-extraction.csv) | [pt-BR](P119-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (sem baseline) |
+| P121 | LLMs p/ SOCs (survey abrangente) | [PDF](../docs/P121_Large_Language_Models_for_Security_Operations_Centers_A_Comprehensive_Survey.pdf) | [EN](P121-extraction.csv) | [pt-BR](P121-extraction-ptBR.csv) | 🟡 Medium | ⚪ N/A (secundário) |
+| P123 | CIPHER-A (validação contrafactual) | [PDF](../docs/P123_An_adaptive_agentic_AI_framework_for_counterfactual_validation_and_adversarial_l.pdf) | [EN](P123-extraction.csv) | [pt-BR](P123-extraction-ptBR.csv) | 🟢 High | ✅ DECLARED (SOAR interno; externos indicativos) |
+
 ## Arquivos desta pasta
 
 - [`paper-extraction-prompt-template.md`](paper-extraction-prompt-template.md) — template do prompt de extração (regras, schema de 11 campos, formato de saída).
-- `Pxx-extraction.csv` — 59 fichas em inglês (39 do corpus P01–P40 + 20 incluídos do ciclo 2).
-- `Pxx-extraction-ptBR.csv` — 59 fichas em português (termos técnicos/acrônimos em inglês).
+- `Pxx-extraction.csv` — 71 fichas em inglês (39 do corpus P01–P40 + 20 incluídos do ciclo 2 + 12 incluídos do ciclo 3).
+- `Pxx-extraction-ptBR.csv` — 71 fichas em português (termos técnicos/acrônimos em inglês).
 - [`consolidated-extraction.csv`](consolidated-extraction.csv) / [`consolidated-extraction-ptBR.csv`](consolidated-extraction-ptBR.csv) — consolidados do ciclo 1 (39 artigos).
 - [`consolidated-extraction-ciclo2.csv`](consolidated-extraction-ciclo2.csv) / [`consolidated-extraction-ciclo2-ptBR.csv`](consolidated-extraction-ciclo2-ptBR.csv) — consolidados do ciclo 2 (20 incluídos).
+- [`consolidated-extraction-ciclo3.csv`](consolidated-extraction-ciclo3.csv) / [`consolidated-extraction-ciclo3-ptBR.csv`](consolidated-extraction-ciclo3-ptBR.csv) — consolidados do ciclo 3 (12 incluídos).

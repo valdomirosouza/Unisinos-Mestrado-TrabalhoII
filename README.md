@@ -104,7 +104,7 @@ Repositório da **Revisão Sistemática da Literatura (RSL)** do Trabalho II (PP
 ├── report/                       ← Etapa 3: fichas de extração estruturada
 │   ├── README.md                ← índice das fichas (P01–P40)
 │   ├── paper-extraction-prompt-template.md ← template de extração (11 campos, Kitchenham)
-│   ├── Pxx-extraction.csv       ← 59 fichas em inglês (39 corpus + 20 ciclo 2)
+│   ├── Pxx-extraction.csv       ← 71 fichas em inglês (39 corpus + 20 ciclo 2 + 12 ciclo 3)
 │   ├── Pxx-extraction-ptBR.csv  ← 59 fichas em português (termos técnicos em EN)
 │   └── consolidated-extraction[-ptBR].csv ← consolidados (uma linha por artigo)
 ├── picoc/                        ← Etapa 4: extração PICOC (delimitação de escopo)
