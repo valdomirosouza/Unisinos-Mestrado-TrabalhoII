@@ -375,7 +375,7 @@ _(O commit desta atualização de MEMORY.md é acrescentado ao final do históri
 
 ---
 
-# Sessão 2026-09-07 → 2026-10-29 — Padronização de prompts, ciclo 2 completo da RSL e artigo IEEE Access (draft v1)
+# Sessão 2026-09-07 → 2026-10-30 — Padronização de prompts, ciclo 2 completo da RSL e artigo IEEE Access (draft v1)
 
 ## Linha do tempo (prompts → respostas/ações)
 
@@ -1964,6 +1964,47 @@ autores, revisão da bio pelo orientador, conferência visual do PDF final;
 eventual ciclo 4 (snowballing completo dos 65 incluídos como insumo da
 descoberta).
 
+### 139. Artigo IEEE Access — draft v2 (incorpora o ciclo 3)
+
+**Prompt:** "Agora podemos gerar uma nova versão do Draft de Artigo que será
+submetido para a IEEE".
+
+**Ações (artigo/main.tex atualizado em lugar; v1 preservado no histórico
+git):** (1) Abstract e contribuições: 2 → 3 ciclos, 89 → 126 candidatos,
+61 → 74 avaliações, 53 → **65** incluídos; achado central requalificado de
+"unverified" para **"supported by early, low-stratum evidence"**.
+(2) Método: descoberta do ciclo 3 + snowballing (negativo); regra de estrato
+de proceedings por percentil CiteScore da série (PDR-0006), renovação da
+emenda (PDR-0007) e "reports not retrieved" (PDR-0008, 5 Springer);
+parágrafo da condução prospectiva sob R1–R3. (3) Figura PRISMA ganhou a 3ª
+coluna (ciclo 3) e corpus 65; tabela de fluxo com 3 ciclos ("Reports not
+retrieved" como linha); fundacionais-condicionais 7 → 10 (corpus primário
+55). (4) Taxonomia n=65 (novos paradigmas do ciclo 3). (5) Figura de
+cobertura de RQs regenerada com 4 conjuntos (C3: RQ3 deixa de ser o ponto
+fraco — 6/13 plenos). (6) §IV-C (resultado central) reescrito em torno do
+cluster nominal (P100 produção −83%/−91% p90 vs SREs; P101 testbed −72,3%;
+P102 só MTTD −82%; P123 MTTC −37,8%) com as 3 qualificações explícitas
+(estrato, setting, independência). (7) Carga cognitiva: interseção segue
+vazia (P119 mede qualidade, não workload). (8) Citações cruzadas: nota de
+escopo (P01–P89) + 9 arestas lower-bound do ciclo 3 (P97 cita 7 do corpus).
+(9) Confiabilidade n=74 (acordo 91,9–93,2%; κ 0,58–0,62; Fleiss 0,60;
+ciclo 3 unânime 13/13 como verificação empírica de R1–R3). (10) Discussão/
+ameaças/conclusão atualizadas (nova observação: evidência de tempo surge
+primeiro em veículos early-stage; remoção dos sub-estrato remove o cluster).
+(11) +12 entradas no referencias.bib (P91–P123). (12) README do artigo → v2.
+
+**Compilação (TinyTeX):** 11 páginas (eram 9), 0 citações não resolvidas,
+0 overfull novos (os 2 de 9,27pt no \maketitle são pré-existentes —
+verificado compilando o v1 em baseline no scratchpad); abstract enxugado e
+tabela PRISMA com \footnotesize + tabcolsep para caber.
+
+**Comandos:** pdflatex/bibtex (TinyTeX); gerador python do tikz de RQ
+coverage; OpenAlex (arestas do ciclo 3); `check-rsl.sh` OK. Commit
+`6725412` + push.
+
+**Pendências do artigo:** fotos dos autores (IEEEbiography), revisão da bio
+pelo orientador, conferência visual do PDF pelo autor.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2061,6 +2102,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Ciclo 3, fecho: `protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md` · 5 statuses no `Papers_Index` · notas datadas (PRISMA, triagem, snowballing) · adendo nº 7 na síntese (+PDF) · DASHBOARD
 
 - Comparação global P01–P123: `reviews/comparacao-avaliadores-global-P01-P123.csv`/`.md` + 3 consolidados por avaliador P01–P123 (74 linhas) · bullets no DASHBOARD e `reviews/README.md`
+
+- Artigo IEEE Access draft v2: `artigo/main.tex` (ciclo 3 incorporado — PRISMA 3 colunas, cluster MTTD/MTTR nominal, n=74), `referencias.bib` (+12), `main.pdf` (11 pp.), README do artigo
 
 ## Histórico de commits da sessão
 
@@ -2201,3 +2244,4 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `809396e` | 2026-10-29 | Log global comparison update to P01-P123 (item 137) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
+| `6725412` | 2026-10-30 | Article draft v2: incorporate cycle 3 (corpus 65, nominal MTTD/MTTR cluster, n=74 reliability) |
