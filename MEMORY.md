@@ -2242,6 +2242,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `bb0474f` | 2026-10-29 | Log Springer retry failure and PDR-0008 removal (item 136) in MEMORY.md |
 | `da6c3f7` | 2026-10-29 | Global evaluator comparison updated to P01-P123 (74 evaluations per evaluator) |
 | `809396e` | 2026-10-29 | Log global comparison update to P01-P123 (item 137) in MEMORY.md |
+| `6b4ba74` | 2026-10-29 | Log session close (item 138) in MEMORY.md |
+| `6725412` | 2026-10-30 | Article draft v2: incorporate cycle 3 (corpus 65, nominal MTTD/MTTR cluster, n=74 reliability) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
-| `6725412` | 2026-10-30 | Article draft v2: incorporate cycle 3 (corpus 65, nominal MTTD/MTTR cluster, n=74 reliability) |
