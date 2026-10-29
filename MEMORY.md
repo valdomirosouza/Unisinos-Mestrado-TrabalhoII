@@ -2134,6 +2134,39 @@ bib com 82 estudos + 6 metodológicas). **Pendências de submissão:** fotos
 dos autores (`IEEEbiography`), revisão da bio pelo orientador, conferência
 visual do PDF pelo autor.
 
+### 147. Artigo — correção da formatação da Nomenclature (+ bug latente no bib)
+
+**Prompt:** "A lista de acronimos/abreviaturas na primeira página ficou mal
+formatada, corrija isso".
+
+**Diagnóstico (inspeção visual via Chrome + servidor http local, já que não
+há renderizador de PDF local):** o tabular da Nomenclature é inquebrável —
+caiu inteiro na coluna direita da p. 1 e **estourava a margem inferior**,
+vazando sobre o rodapé. Dois bugs adicionais no caminho: (1) na primeira
+reescrita, `\par` deixava o TeX em modo vertical e o `\hbox` da sigla
+virava linha própria (corrigido com `\noindent`); (2) **bug latente de
+build**: a entrada P38 do bib tinha autor em cirílico ("Иван Попчев") e só
+passou a ser citada com o apêndice do item 145 — o bibtex abreviava o nome
+para um byte UTF-8 inválido e o pdflatex passou a falhar silenciosamente
+(os builds do item 145 saíram com erros não detectados pelo meu grep, que
+só olhava overfull/undefined).
+
+**Correções:** Nomenclature reescrita como lista de parágrafos com
+indentação pendente (caixa de sigla 6.0em, hangindent 6.4em) que quebra
+naturalmente entre colunas/páginas; entrada AIOps (perdida no parsing)
+restaurada; NASA-TLX com espaçamento (caixa alargada); P38 transliterado
+("Ivan Popchev") e bib varrido por outros caracteres não latinos (zero).
+Rebuild completo verificado página a página no Chrome: 12 pp., **0 erros
+LaTeX, 0 warnings bibtex**, 0 citações não resolvidas, sem overfull novo.
+Nota: título e headings de seção não renderizam no viewer do Chrome (fonte
+Formata do template) mas estão no PDF — artefato do viewer, igual no v1.
+
+**Comandos:** python (reescrita da lista), pdflatex/bibtex, Chrome via
+servidor http local (inspeção); `check-rsl.sh` OK. Commit `f19f788` + push.
+
+**Lição registrada:** o checker de build passou a olhar `^!` (erros LaTeX)
+e warnings do bibtex, não só overfull/citações.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2239,6 +2272,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Artigo: seção Nomenclature (30 siglas) em `artigo/main.tex` (+PDF recompilado, nota no README do artigo)
 
 - Artigo: apêndice Study-Identifier Index (82 IDs → refs) + 8 entradas novas no `referencias.bib` (+PDF 12 pp., README do artigo)
+
+- Artigo: Nomenclature como lista quebrável (fix de layout da p. 1) + transliteração do autor cirílico do P38 no `referencias.bib`
 
 ## Histórico de commits da sessão
 
@@ -2390,5 +2425,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `bfbacae` | 2026-10-30 | Log session close (item 144) in MEMORY.md |
 | `b812127` | 2026-10-30 | Article: appendix mapping study identifiers (Pxx) to bibliography entries |
 | `3005e97` | 2026-10-30 | Log article study-identifier appendix (item 145) in MEMORY.md |
+| `3a81f22` | 2026-10-30 | Log session close (item 146) in MEMORY.md |
+| `f19f788` | 2026-10-30 | Article: fix Nomenclature layout (breakable list) and Cyrillic author in bib |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
