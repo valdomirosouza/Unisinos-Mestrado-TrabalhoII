@@ -375,7 +375,7 @@ _(O commit desta atualização de MEMORY.md é acrescentado ao final do históri
 
 ---
 
-# Sessão 2026-09-07 → 2026-10-27 — Padronização de prompts, ciclo 2 completo da RSL e artigo IEEE Access (draft v1)
+# Sessão 2026-09-07 → 2026-10-29 — Padronização de prompts, ciclo 2 completo da RSL e artigo IEEE Access (draft v1)
 
 ## Linha do tempo (prompts → respostas/ações)
 
@@ -1745,6 +1745,31 @@ Commit `ba2e282` + push.
 **Pendências:** reconsolidação tripla + `/rsl-comparacao` quando ChatGPT e
 Gemini entregarem; replicar fix do template v1.1.0 no Template-RSL.
 
+### 131. Replicação do fix do template v1.1.0 no Template-RSL
+
+**Prompt:** "Aplique o fix do template v1.1.0 no repo Template-RSL".
+
+**Contexto:** pendência registrada no item 130 — achado do beta test no
+ciclo 3 (item 129): os marcadores instrucionais do
+`templates/prompt-avaliacao.md` não casam com o replace nem com o regex de
+sobras (`{{[A-Z_0-9]+}}`) do `render-prompts.py`, então não eram resolvidos
+nem reportados, e vazavam para os prompts renderizados.
+
+**Ações (repo irmão `~/Projects/Template-RSL`, externo a este):**
+(1) `templates/prompt-avaliacao.md` v1.0.0 → **v1.1.0**: marcadores
+instrucionais ({{PERSONA — ex.: …}}, {{EMENDAS_NORMATIVAS — ex.: …}},
+{{RQ1..RQ5 — …}}) trocados pelos limpos `{{PERSONA}}`,
+`{{EMENDAS_NORMATIVAS}}` e `{{RQS}}`, com changelog no próprio arquivo (não
+normativo, sem PDR). (2) Entrada [0.1.3] no `CHANGELOG.md` do template.
+(3) `prompt-extracao-picoc.md` verificado: já usava `{{PERSONA}}` limpo —
+sem mudança. (4) Validação: render de teste com índice sintético de 1 linha
+no scratchpad — `PERSONA`/`RQS` reportados como "preencher na instância",
+emenda resolvida via `--emendas`, sobras `{{…}}` restantes só em comentários
+HTML (removidos pós-render na instância).
+
+**Comandos:** `render-prompts.py` (render de teste); commit `8b0ce41` + push
+no Template-RSL.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1828,6 +1853,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `reviews/`: `triagem-ciclo3.md` · seção ciclo 3 em `PRISMA.md`; READMEs de `picoc/fragments-ciclo3/` e `prompts/picoc-ciclo3/`; 19 statuses ciclo 3 em `Papers_Index.csv`/`.md`
 - Ciclo 3, Etapas 5–6: `prompts/prompt-P91…P123.md` (13), `reviews/review-P91…P123.md` (13), `templates/prompt-avaliacao.md` v1.1.0, seção ciclo 3 em `reviews/README.md`
 - Ciclo 3, Etapa 7 (parcial): `reviews/resultados-consolidados-ciclo3.csv` · `graficos-ciclo3.md` · `charts-ciclo3/` (5 SVGs + README) · seção ciclo 3 no `DASHBOARD.md` · adendo nº 4 na síntese consolidada (+PDF) · escores Claude no `Papers_Index`
+
+- (repo Template-RSL, externo) `templates/prompt-avaliacao.md` v1.1.0 (marcadores limpos) · entrada [0.1.3] no `CHANGELOG.md`
 
 ## Histórico de commits da sessão
 
@@ -1950,6 +1977,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `6c0d8fc` | 2026-10-28 | Cycle-3 stage-6 Claude evaluations: 13 reviews (1 include, 11 include-with-caveats, 1 exclude E2) |
 | `3f2caf0` | 2026-10-28 | Log cycle-3 evaluation prompts and Claude reviews (item 129) in MEMORY.md |
 | `ba2e282` | 2026-10-28 | Cycle-3 stage-7 partial consolidation (Claude evaluator) |
+| `6c579a6` | 2026-10-28 | Log cycle-3 partial consolidation (item 130) in MEMORY.md |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
+| —         | 2026-10-29 | (repo Template-RSL, commit `8b0ce41`) Template prompt-avaliacao v1.1.0: clean markers resolvable by render-prompts.py — repositório irmão, externo a este |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
