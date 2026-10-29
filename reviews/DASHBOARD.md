@@ -12,7 +12,7 @@ Painel central que reúne **todos os artefatos** da avaliação dos estudos cand
 | 📚 [Índice de pareceres](README.md)                                                          | Tabela-síntese por estudo                                                                                                                                             |
 | 📐 [Comparação entre avaliadores](comparacao-avaliadores.md)                                 | Claude × ChatGPT: concordância (decisão 90%, κ = 0,74)                                                                                                                |
 | 🛠️ [Scripts geradores](scripts/README.md) · [Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) | Regeneração de gráficos e PDF                                                                                                                                         |
-| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas-P01-P89.md)                            | Quem cita quem entre **P01–P89** (52 arestas; OpenAlex × Crossref × Scopus — tripla checagem completa) · [versão P01–P40](../citacoes-cruzadas.md)                                       |
+| 🔁 [Citações cruzadas no corpus](../citacoes-cruzadas-P01-P89.md)                            | Quem cita quem entre **P01–P89** (52 arestas; OpenAlex × Crossref × Scopus — tripla checagem completa) · [versão P01–P40](../citacoes-cruzadas.md)                    |
 | 📥 Fontes                                                                                    | [Prompts](../prompts/) · [PDFs dos artigos](../docs/) · [Template do prompt](../prompts/prompt-chatgpt-consultation.md) · [CSV de insumos](../Artigos-TrabalhoII.csv) |
 
 ## 🏛️ Corpus fundacional (P01–P19) — avaliação retroativa (2026-10-26)
@@ -42,20 +42,29 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 
 > **Correção (2026-10-27):** o SCORE_QA médio do ciclo 2 é **2,73** (soma 60,0 ÷ 22 avaliados, conferida em `resultados-consolidados-ciclo2.csv`); o valor 2,75 anteriormente exibido como média era a **mediana**.
 
-## 🔄 Ciclo 3 — em andamento (atualizado em 2026-10-28)
+## 🔄 Ciclo 3 — avaliação tripla concluída (atualizado em 2026-10-29)
 
-**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação parcial (Claude concluído; ChatGPT e Gemini pendentes)**.
+**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação integral pelos três avaliadores concluída (Claude, ChatGPT e Gemini)** → comparação entre avaliadores (Etapa 8) pendente.
 
-| Estágio | Resultado |
-| --- | --- |
-| Descoberta (5 varreduras, 2026-10-27) | 37 candidatos novos (P90–P126) — [`descoberta-ciclo3.md`](../research/descoberta-ciclo3.md) |
-| Elegibilidade Etapa 1 ([PDR-0006](../protocolo/pdr/PDR-0006-estrato-de-conference-papers-pelo-percentil-da-serie.md)/[0007](../protocolo/pdr/PDR-0007-renovacao-da-emenda-de-estratos-para-o-ciclo-3.md)) | 19 elegíveis (4 plenos + 15 c/ ressalva) — [`papers-ciclo3.csv`](../papers-ciclo3.csv) |
-| Extração PICOC (leitura integral) | 14 extraídos; 5 Springer sem acesso — [`picoc-results-ciclo3.md`](../picoc/picoc-results-ciclo3.md) |
-| Triagem PRISMA ([`triagem-ciclo3.md`](triagem-ciclo3.md)) | 13 aprovados · 1 excluído (E3: P108) · 5 adiados |
-| Avaliação integral — **Claude** (13/13) | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv) · [gráficos](graficos-ciclo3.md) |
-| Avaliação integral — ChatGPT / Gemini | ⏳ pendente (mesmos prompts de [`../prompts/`](../prompts/README.md)) |
+| Estágio                                                                                                                                                                                                   | Resultado                                                                                                                                                                                  |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Descoberta (5 varreduras, 2026-10-27)                                                                                                                                                                     | 37 candidatos novos (P90–P126) — [`descoberta-ciclo3.md`](../research/descoberta-ciclo3.md)                                                                                                |
+| Elegibilidade Etapa 1 ([PDR-0006](../protocolo/pdr/PDR-0006-estrato-de-conference-papers-pelo-percentil-da-serie.md)/[0007](../protocolo/pdr/PDR-0007-renovacao-da-emenda-de-estratos-para-o-ciclo-3.md)) | 19 elegíveis (4 plenos + 15 c/ ressalva) — [`papers-ciclo3.csv`](../papers-ciclo3.csv)                                                                                                     |
+| Extração PICOC (leitura integral)                                                                                                                                                                         | 14 extraídos; 5 Springer sem acesso — [`picoc-results-ciclo3.md`](../picoc/picoc-results-ciclo3.md)                                                                                        |
+| Triagem PRISMA ([`triagem-ciclo3.md`](triagem-ciclo3.md))                                                                                                                                                 | 13 aprovados · 1 excluído (E3: P108) · 5 adiados                                                                                                                                           |
+| Avaliação integral — **Claude** (13/13)                                                                                                                                                                   | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv) · [gráficos](graficos-ciclo3.md) |
+| Avaliação integral — **ChatGPT** (13/13, 2026-10-29) | **12 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`ChatGPT/`](ChatGPT/README.md) |
+| Avaliação integral — **Gemini** (13/13, 2026-10-29) | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`Gemini/`](Gemini/README.md) |
 
-**Escores Claude (n = 13):** SCORE_RQ média 3,85 · mediana 4,0 · faixa 2,0–5,0; SCORE_QA **média 2,77** · **mediana 3,0** · faixa 1,0–3,5; bandas **9 Alta · 3 Média · 1 Baixa**. Destaque do ciclo: primeiro cluster de primários com **MTTD/MTTR nominal vs. baseline executado** (P100, P101, P102, P123), todos sob ressalva de estrato. O corpus consolidado da RSL **permanece 53** até a consolidação dos três avaliadores (Etapas 7–8 completas).
+**Escores dos três avaliadores (n = 13; média ≠ mediana, rotuladas separadamente):**
+
+| Avaliador | SCORE_RQ média (mediana) | SCORE_QA média (mediana) | Bandas (A·M·B) | Recomendações                           |
+| --------- | ------------------------ | ------------------------ | -------------- | --------------------------------------- |
+| Claude    | 3,85 (4,0)               | 2,77 (3,0)               | 9 · 3 · 1      | 1 Incluir · 11 c/ ressalvas · 1 Excluir |
+| ChatGPT   | 4,12 (4,0)               | 2,69 (2,5)               | 5 · 8 · 0      | 12 c/ ressalvas · 1 Excluir             |
+| Gemini    | 3,77 (4,0)               | 2,92 (3,0)               | 9 · 3 · 1      | 1 Incluir · 11 c/ ressalvas · 1 Excluir |
+
+**No colapso Incluir/Excluir os três avaliadores são unânimes nos 13 estudos** (12 Incluir · 1 Excluir — P106, E2); κ formal na Etapa 8. Destaque do ciclo: primeiro cluster de primários com **MTTD/MTTR nominal vs. baseline executado** (P100, P101, P102, P123), todos sob ressalva de estrato. O corpus consolidado da RSL **permanece 53** até a comparação entre avaliadores (Etapa 8) fechar o ciclo.
 
 ## 📈 Números-chave
 

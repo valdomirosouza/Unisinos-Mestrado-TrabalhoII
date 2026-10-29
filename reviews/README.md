@@ -122,7 +122,7 @@ Os **19 estudos fundacionais** do Trabalho I (P01–P19) receberam avaliação *
 | [P87](review-P87.md) | LLM agentic incident-report (rede)   |   3.5    |   3.5    | Alta  | Incluir c/ ressalvas                                |
 | [P88](review-P88.md) | MAS self-healing descentralizado     |   3.0    |   4.0    | Alta  | Incluir c/ ressalvas (não-LLM, análogo P25)         |
 
-## Ciclo 3 — avaliação integral em andamento (2026-10-28)
+## Ciclo 3 — avaliação integral (Claude 2026-10-28; tripla concluída 2026-10-29)
 
 **Pareceres do avaliador Claude — 13 arquivos** (`review-P91.md`, `review-P93.md`,
 `review-P94.md`, `review-P97.md`, `review-P100.md`, `review-P101.md`,
@@ -143,10 +143,14 @@ QA 1.0–3.5 (9 banda Alta · 3 Média · 1 Baixa — contagem conferida no
 [síntese consolidada](relatorio-sintese-consolidado.md) (PDF regenerado).
 Estatísticas Claude: RQ média 3,85/mediana 4,0 · QA média 2,77/mediana 3,0.
 
-> ⏳ **Pendências do ciclo 3:** avaliações paralelas **ChatGPT** e **Gemini**
-> (mesmos prompts; saídas em `ChatGPT/PXX_avaliacao_RSL.md` e
-> `Gemini/PXX_avaliacao_RSL.md`), reconsolidação tripla (Etapa 7) e comparação
-> entre avaliadores (Etapa 8).
+> ✅ **Avaliação tripla concluída (2026-10-29):** pareceres **ChatGPT** e
+> **Gemini** dos 13 estudos recebidos em `ChatGPT/PXX_avaliacao_RSL.md` e
+> `Gemini/PXX_avaliacao_RSL.md` (artefatos de terceiros — imutáveis, Art. VI).
+> No colapso Incluir/Excluir os três avaliadores são **unânimes nos 13**
+> (12 Incluir · 1 Excluir — P106, E2); escores dos três no
+> [`Papers_Index`](../Papers_Index.md), resumo no [dashboard](DASHBOARD.md) e
+> adendo nº 5 na [síntese consolidada](relatorio-sintese-consolidado.md).
+> Restam a comparação entre avaliadores (Etapa 8) e as fichas (Etapa 9).
 
 ## Padrões e observações para a síntese
 

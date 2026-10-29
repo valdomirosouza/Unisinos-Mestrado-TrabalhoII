@@ -1,8 +1,8 @@
-# reviews/Gemini/ — avaliações do Gemini (P01–P88)
+# reviews/Gemini/ — avaliações do Gemini (P01–P123)
 
 > 🧭 [🏠 README raiz](../../README.md) · [📚 Pareceres](../README.md) · [⚖️ Comparação global](../comparacao-avaliadores-global.md)
 
-61 avaliações independentes executadas pelo **Gemini** com os mesmos
+74 avaliações independentes executadas pelo **Gemini** com os mesmos
 prompts (`../../prompts/prompt-PNN.md`) e PDFs dos demais avaliadores.
 **Artefatos históricos de terceiros — imutáveis** (Constituição, Art. VI).
 
@@ -69,3 +69,19 @@ prompts (`../../prompts/prompt-PNN.md`) e PDFs dos demais avaliadores.
 | `P86_avaliacao_RSL.md` |
 | `P87_avaliacao_RSL.md` |
 | `P88_avaliacao_RSL.md` |
+| `P91_avaliacao_RSL.md` |
+| `P93_avaliacao_RSL.md` |
+| `P94_avaliacao_RSL.md` |
+| `P97_avaliacao_RSL.md` |
+| `P100_avaliacao_RSL.md` |
+| `P101_avaliacao_RSL.md` |
+| `P102_avaliacao_RSL.md` |
+| `P106_avaliacao_RSL.md` |
+| `P110_avaliacao_RSL.md` |
+| `P112_avaliacao_RSL.md` |
+| `P119_avaliacao_RSL.md` |
+| `P121_avaliacao_RSL.md` |
+| `P123_avaliacao_RSL.md` |
+
+Os 13 pareceres `P91`–`P123` são do **ciclo 3** (recebidos em 2026-10-29,
+prompts do template v1.1.0); os anteriores cobrem os ciclos 0–2.

@@ -190,3 +190,39 @@ avaliação integral pelo primeiro avaliador:
    **O corpus consolidado da RSL permanece 53** até o fecho das Etapas 7–8
    com os três avaliadores.
 
+
+
+## Adendo (2026-10-29, nº 5) — ciclo 3: avaliação tripla concluída (Etapa 7)
+
+As avaliações **ChatGPT** e **Gemini** dos 13 aprovados na triagem chegaram em
+2026-10-29 (mesmos prompts imutáveis de `prompts/prompt-PXX.md`, template
+v1.1.0), fechando a consolidação da Etapa 7 com os três avaliadores
+independentes:
+
+| Avaliador | SCORE_RQ média (mediana) | SCORE_QA média (mediana) | Bandas (Alta·Média·Baixa) | Recomendações |
+| --- | --- | --- | --- | --- |
+| Claude | 3,85 (4,0) | 2,77 (3,0) | 9 · 3 · 1 | 1 Incluir · 11 c/ ressalvas · 1 Excluir |
+| ChatGPT | 4,12 (4,0) | 2,69 (2,5) | 5 · 8 · 0 | 12 Incluir c/ ressalvas · 1 Excluir |
+| Gemini | 3,77 (4,0) | 2,92 (3,0) | 9 · 3 · 1 | 1 Incluir · 11 c/ ressalvas · 1 Excluir |
+
+Leituras principais (fonte: `resultados-consolidados-ciclo3.csv` +
+`Papers_Index.csv`, escores dos três avaliadores):
+
+1. **Unanimidade no colapso Incluir/Excluir:** os três avaliadores convergem
+   nos 13 estudos — 12 Incluir (P94 pleno por Claude e Gemini; com ressalvas
+   pelo ChatGPT) e **1 Excluir (P106, E2 — agência nominal, DRL/CNN sem
+   Agentic AI)**, confirmando o flag da triagem. O κ formal por par, o Fleiss
+   e a análise de divergências de escore são da Etapa 8.
+2. **O cluster MTTD/MTTR nominal sobrevive aos três avaliadores:** P100, P101,
+   P102 e P123 mantêm recomendação de inclusão pelos três, sempre com a
+   **ressalva de estrato obrigatória** (PDR-0006/0007) — o achado do adendo
+   nº 4 permanece, agora com validação tripla.
+3. **Divergências de intensidade, não de decisão:** o ChatGPT pontua RQ mais
+   alto (média 4,12) e QA mais baixo (mediana 2,5; 5 bandas Alta contra 9 de
+   Claude/Gemini), refletindo rubrica QA "operacional provisória" declarada
+   nos próprios pareceres; Gemini e Claude praticamente coincidem nas bandas
+   (9·3·1). Nenhuma divergência atinge o colapso de decisão.
+4. **Próximos passos:** comparação entre avaliadores (Etapa 8 — κ de Cohen
+   por par, Fleiss, prevalência) e fichas de extração (Etapa 9); só então o
+   corpus consolidado (hoje **53**) incorpora o ciclo 3. Permanecem as
+   pendências dos 5 Springer (biblioteca/COMUT) e do snowballing (P90).

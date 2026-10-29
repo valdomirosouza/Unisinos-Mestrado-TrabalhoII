@@ -2,7 +2,7 @@
 
 > 🧭 [📊 Dashboard](DASHBOARD.md) · [📈 Gráficos do ciclo 2](graficos-ciclo2.md) · [🛠️ Como criar os gráficos](COMO-CRIAR-GRAFICOS.md) · [🏠 README raiz](../README.md)
 
-Visualizações geradas a partir de [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv) — os **13 estudos avaliados na íntegra no ciclo 3 pelo avaliador Claude** (consolidação **parcial**: as avaliações ChatGPT e Gemini estão pendentes; os gráficos serão complementados quando os três conjuntos existirem). Os 18 inelegíveis da Etapa 1, o excluído na triagem (P108) e os 5 adiados por falta de texto integral não entram — ver [`triagem-ciclo3.md`](triagem-ciclo3.md). Gerados com o `scripts/gen_charts.py` apontado para o CSV do ciclo 3 (saída em `charts-ciclo3/`).
+Visualizações geradas a partir de [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv) — os **13 estudos avaliados na íntegra no ciclo 3 pelo avaliador Claude** (as avaliações ChatGPT e Gemini chegaram em 2026-10-29 — resumo dos três conjuntos no [dashboard](DASHBOARD.md); os gráficos comparativos entre avaliadores são da Etapa 8). Os 18 inelegíveis da Etapa 1, o excluído na triagem (P108) e os 5 adiados por falta de texto integral não entram — ver [`triagem-ciclo3.md`](triagem-ciclo3.md). Gerados com o `scripts/gen_charts.py` apontado para o CSV do ciclo 3 (saída em `charts-ciclo3/`).
 
 > Verde = Plenamente/Sim (T/Y) · Âmbar = Parcial (P) · Vermelho = Insuficiente/Não (N/N).
 
