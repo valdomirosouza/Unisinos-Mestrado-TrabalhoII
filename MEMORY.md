@@ -2182,6 +2182,22 @@ artigo; PDF reenviado.
 **Comandos:** remoção por regex em python; pdflatex; `check-rsl.sh` OK.
 Commit `f084ca1` + push.
 
+### 149. Encerramento da sessão (2026-10-30, 5º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+itens 147–148 (layout e enxugamento da Nomenclature) registrados; linha do
+commit `75c4dac` (log do item 148) acrescentada à tabela.
+
+**Estado ao encerrar:** draft v2 do artigo em 12 páginas, build 100% limpo
+(0 erros LaTeX, 0 warnings bibtex) e layout da p. 1 verificado visualmente
+— Nomenclature com 20 siglas fluindo entre colunas, apêndice de IDs,
+Fig. 2 completa. **Pendências de submissão:** fotos dos autores
+(`IEEEbiography`), revisão da bio pelo orientador, conferência final do
+PDF pelo autor (lembrete: título/headings usam fonte Formata e não
+renderizam no viewer do Chrome — conferir no Preview/Acrobat).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2444,5 +2460,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `f19f788` | 2026-10-30 | Article: fix Nomenclature layout (breakable list) and Cyrillic author in bib |
 | `d736a83` | 2026-10-30 | Log Nomenclature layout fix (item 147) in MEMORY.md |
 | `f084ca1` | 2026-10-30 | Article: trim Nomenclature to 20 entries (author request) |
+| `75c4dac` | 2026-10-30 | Log Nomenclature trim (item 148) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
