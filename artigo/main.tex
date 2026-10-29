@@ -63,25 +63,30 @@ tool use, and human supervision, are increasingly proposed as
 literature review (SLR), conducted under the guidelines of Kitchenham et
 al.\ and the PRISMA~2020 flow, that consolidates the evidence on Agentic
 AI copilots for incident response, with cognitive-load reduction treated
-as a complementary outcome. Across two update cycles over a foundational
-corpus, 89~candidate studies (2020--2026) were identified and screened,
-61 were assessed in full text by \emph{three independent evaluators}
-(inter-rater agreement 90.2--91.8\% per pair; Fleiss' $\kappa=0.53$;
-53/61 unanimous decisions), and \textbf{53 studies} were included. The
-review yields three main findings. First, no included study measures MTTD
-\emph{and} MTTR nominally against its own baseline in production: the
-single study that reports nominal MTTR does so in a proof of concept,
-compared against the literature, with results unfavorable to the proposed
-agent. Second, the published evidence is dominated by detection proxies
-(accuracy, F1, AUC) and qualitative claims, while secondary sources
-report dramatic operational gains (e.g., MTTR reduced from 8~hours to 90
-minutes) that remain unverified by primary experiments. Third, direct
-measurement of operator cognitive load exists in adjacent domains
-(neuroergonomics, control rooms, maritime operations) but has never been
-combined with an agentic copilot in IT incident response. These gaps
-jointly define a concrete research agenda: field evaluations of agentic
-copilots instrumented for nominal MTTD/MTTR with their own baselines and
-validated cognitive-load instruments.
+as a complementary outcome. Across three update cycles over a
+foundational corpus, 126~candidate studies (2020--2026) were identified
+and screened, 74 were assessed in full text by \emph{three independent
+evaluators} (agreement 91.9--93.2\% per pair; Fleiss' $\kappa=0.60$;
+66/74 unanimous decisions, with a divergence-free third cycle), and
+\textbf{65 studies} were included. Three findings result. First, through
+two cycles no included study measured MTTD or MTTR nominally against its
+own executed baseline; the third cycle surfaces a first cluster of four
+primary studies that do --- MTTD reduced by 82--83\%, MTTR by 72--91\%,
+and time-to-containment by 38\% against executed human, polling, or SOAR
+baselines --- but all four appear in sub-threshold venues under a
+mandatory stratum caveat, with production evidence from a single vendor,
+moving the headline claim from \emph{unverified} to \emph{supported by
+early, low-stratum evidence}. Second, outside that cluster the evidence
+remains dominated by detection proxies (accuracy, F1, AUC) and
+qualitative claims, while secondary sources relay dramatic gains (e.g.,
+MTTR from 8~hours to 90~minutes) that primary experiments are only
+beginning to approach. Third, direct measurement of operator cognitive
+load exists in adjacent domains but has never been combined with an
+agentic copilot in IT incident response --- a gap all three cycles leave
+untouched. These findings define a concrete agenda: venue-quality,
+multi-site field evaluations of agentic copilots instrumented for
+nominal MTTD/MTTR with their own baselines and validated cognitive-load
+instruments.
 \end{abstract}
 
 \begin{keywords}
@@ -124,8 +129,8 @@ guidelines of Kitchenham et al.~\cite{kitchenham2009}, with study
 selection reported in the PRISMA~2020 format~\cite{page2021prisma}, scope
 delimited with the PICOC framework~\cite{petticrew2006}, and quality
 assessment mirroring the DARE criteria~\cite{dare}. The review was
-executed as an \emph{update review} in two cycles over a foundational
-corpus of 19 studies, processing 89 candidate studies in total, and ---
+executed as an \emph{update review} in three cycles over a foundational
+corpus of 19 studies, processing 126 candidate studies in total, and ---
 unusually for SLRs in this area --- every full-text assessment was
 performed independently by \emph{three evaluators}, with inter-rater
 reliability quantified by Cohen's~\cite{cohen1960} and
@@ -133,24 +138,30 @@ Fleiss'~\cite{fleiss1971} kappa.
 
 The contributions are:
 \begin{enumerate}
-  \item a consolidated corpus of 53 studies (2020--2026) on Agentic AI
+  \item a consolidated corpus of 65 studies (2020--2026) on Agentic AI
         for incident response and adjacent IT operations, organized into
         a taxonomy of agentic paradigms (Section~\ref{sec:results});
   \item triple-verified bibliometrics (OpenAlex, Crossref, Scopus) and an
-        internal cross-citation map of the corpus (52 citing edges)
-        identifying its conceptual hubs;
-  \item evidence synthesis showing that \textbf{no study measures MTTD
-        and MTTR nominally with its own baseline in production}
-        (Section~\ref{sec:mttr}), and a catalog of the proxies actually
-        used;
+        internal cross-citation map of the corpus (52 citing edges
+        through cycle~2, with cycle-3 studies already citing back into
+        it) identifying its conceptual hubs;
+  \item evidence synthesis tracking the review's central claim across
+        cycles: \textbf{no nominal MTTD/MTTR measurement with an own
+        baseline existed through cycle~2; a first four-study cluster
+        emerges in cycle~3, entirely at sub-threshold venues}
+        (Section~\ref{sec:mttr}), together with a catalog of the proxies
+        otherwise used;
   \item a bridge to the human-factors literature: a cluster of studies
         that measure operator cognitive load directly --- yet never in
         combination with an agentic copilot in IT incident response
         (Section~\ref{sec:cogload});
   \item a methodological contribution: a fully reproducible three-rater
-        protocol whose residual disagreements (8 of 61 decisions) are all
-        traceable to three explicit protocol rules rather than to content
-        interpretation (Section~\ref{sec:reliability}).
+        protocol whose residual disagreements (8 of 74 decisions, all
+        from the first two cycles) are traceable to three explicit
+        protocol rules rather than to content interpretation --- rules
+        that, once ratified and rendered into the normative prompt text,
+        produced a \emph{divergence-free} third cycle
+        (Section~\ref{sec:reliability}).
 \end{enumerate}
 
 % =====================================================================
@@ -268,10 +279,15 @@ against the known corpus and validated by real execution on OpenAlex
 records, 2020+, English), achieving 13/14 recall of the included
 calibration set in both engines with the same single miss. Candidate
 identification combined assisted search (cycle~1: three independent LLM
-assistants, $\approx$51 raw records) and author-driven discovery
-(cycle~2: 49 candidates). Backward/forward snowballing is mandatory in
-the protocol because one included study is not indexed by Scopus and one
-is not retrieved by the main query.
+assistants, $\approx$51 raw records), author-driven discovery (cycle~2:
+49 candidates), and re-execution of the validated query in five database
+sweeps (cycle~3: 37 new candidates). Backward/forward snowballing is
+mandatory in the protocol because one included study is not indexed by
+Scopus and one is not retrieved by the main query; the cycle-3
+snowballing pass (backward over OpenAlex-deposited references plus a
+full-text scan of the entire PDF archive; forward over the citers of the
+one high-citation candidate excluded by the series-stratum rule) yielded
+no additional eligible candidate.
 
 \subsection{Selection criteria}
 Inclusion required: publication year $\geq$2020 (I1); an identifiable
@@ -287,6 +303,20 @@ proceed to full-text assessment \emph{with a mandatory stratum caveat};
 the amendment is itself part of the audit trail and, notably, is the
 root cause of three of the eight residual inter-rater divergences
 (Section~\ref{sec:reliability}).
+
+Cycle~3 brought the review's first conference papers (26 of 37
+candidates), for which the journal-oriented I3/I4 strata are undefined.
+Two further dated decisions were ratified before screening: the stratum
+of a conference paper is derived from the \emph{Scopus CiteScore
+percentile of its proceedings series} mapped through the same
+percentile-to-stratum scale used for journals, with series lacking a
+CiteScore ineligible at screening; and the stratum amendment was renewed
+for the cycle, so sub-threshold candidates again proceeded with the
+mandatory caveat. Finally, five accepted candidates (Springer proceedings
+chapters) whose full texts could not be obtained through the
+institutional subscription after two documented attempts were removed
+under the PRISMA~2020 ``reports not retrieved'' category --- an exclusion
+by unavailability, not by merit.
 
 \subsection{Ratified protocol rules (R1--R3)}
 \label{sec:rules}
@@ -323,17 +353,26 @@ corpus decisions:
         at all remains excluded.
 \end{itemize}
 
+Cycle~3 was conducted \emph{prospectively} under R1--R3: the ratified
+rules (including all active amendments) were rendered into the normative
+Stage-1 text of every assessment prompt from a single canonical
+template. The outcome is reported in Section~\ref{sec:reliability}: the
+cycle produced \emph{zero} inter-rater divergences, which we read as an
+empirical verification of the rules --- in particular of R2, since the
+evaluator that had halted on sub-stratum candidates in cycle~2 assessed
+all of them in cycle~3 once the amendment was normative text.
+
 \subsection{Selection flow (PRISMA)}
 \label{sec:prisma}
 
-Fig.~\ref{fig:prisma} shows the PRISMA~2020 flow of both update cycles
-over the foundational corpus, and Table~\ref{tab:prisma} summarizes the
-stage counts side by side. In cycle~2,
-thematic exclusion (E2/E3) was applied as early as the screening stage, because a
-full-text PICOC extraction of all 49 candidates (one reading agent per
-PDF, consolidated and audited) provided per-study evidence before
-assessment --- each screening exclusion cites that evidence and a
-cycle-1 precedent.
+Fig.~\ref{fig:prisma} shows the PRISMA~2020 flow of the three update
+cycles over the foundational corpus, and Table~\ref{tab:prisma}
+summarizes the stage counts side by side. From cycle~2 onward, thematic
+exclusion (E2/E3) was applied as early as the screening stage, because a
+full-text PICOC extraction of every retrievable candidate (one reading
+agent per PDF, consolidated and audited) provided per-study evidence
+before assessment --- each screening exclusion cites that evidence and a
+precedent from an earlier cycle.
 
 \begin{figure*}[!t]
 \centering
@@ -392,50 +431,79 @@ cycle-1 precedent.
 \draw[arr] (c2c) -- (c2d);
 \draw[arr] (c2b.east) -- (c2bx.west);
 \draw[arr] (c2c.east) -- (c2cx.west);
+% ---------------- Cycle 3 column ----------------
+\node[lbl, right=108mm of c2t] (c3t) {Cycle 3 (Oct 2026)};
+\node[box, below=3.5mm of c3t] (c3a)
+  {Candidates identified by re-executing\\the validated query (5 sweeps)\\\textbf{n = 37}};
+\node[box, below=5mm of c3a] (c3b)
+  {Screened: conference strata via series\\CiteScore percentile; 15 sub-stratum kept\\
+   \emph{with caveat} (renewed amendment)\\\textbf{n = 19}};
+\node[excl, right=4mm of c3b.east, anchor=west] (c3bx)
+  {Excluded at screening: \textbf{18}\\(E1: series without\\CiteScore / stratum)};
+\node[box, below=5mm of c3b] (c3c)
+  {Assessed in full text\\(3 independent evaluators)\\\textbf{n = 13}};
+\node[excl, right=4mm of c3c.east, anchor=west] (c3cx)
+  {Reports not retrieved: \textbf{5}\\(publisher access)\\
+   Excluded at screening: \textbf{1}\\(E3; PICOC evidence)};
+\node[incl, below=5mm of c3c] (c3d)
+  {\textbf{Included: n = 12}\\(3 foundational-conditional;\\11 with stratum caveat)};
+\draw[arr] (c3a) -- (c3b);
+\draw[arr] (c3b) -- (c3c);
+\draw[arr] (c3c) -- (c3d);
+\draw[arr] (c3b.east) -- (c3bx.west);
+\draw[arr] (c3c.east) -- (c3cx.west);
 % ---------------- Foundational + final corpus ----------------
-\node[final, below=10mm of $(c1d.south)!0.5!(c2d.south)$] (corpus)
-  {\textbf{Consolidated review corpus: n = 53}\\
+\node[final, below=10mm of $(c1d.south)!0.5!(c3d.south)$] (corpus)
+  {\textbf{Consolidated review corpus: n = 65}\\
    19 foundational (prior review, re-assessed retroactively)
-   $+$ 14 (cycle 1) $+$ 20 (cycle 2)\\
-   7 foundational-conditional secondary studies};
+   $+$ 14 (cycle 1) $+$ 20 (cycle 2) $+$ 12 (cycle 3)\\
+   10 foundational-conditional secondary studies};
 \node[box, text width=66mm, left=7mm of corpus.west, anchor=east, yshift=0mm] (found)
   {Studies from the prior (foundational) review\\\textbf{n = 19} (P01--P19)};
-\draw[arr] (c1d.south) -- ++(0,-4.5mm) -| ([xshift=-12mm]corpus.north);
-\draw[arr] (c2d.south) -- ++(0,-4.5mm) -| ([xshift=12mm]corpus.north);
+\draw[arr] (c1d.south) -- ++(0,-4.5mm) -| ([xshift=-24mm]corpus.north);
+\draw[arr] (c2d.south) -- ++(0,-4.5mm) -| (corpus.north);
+\draw[arr] (c3d.south) -- ++(0,-4.5mm) -| ([xshift=24mm]corpus.north);
 \draw[arr] (found.east) -- (corpus.west);
 \end{tikzpicture}%
 }
-\caption{PRISMA~2020 flow of the two update cycles over the foundational
-corpus (adapted for a review update). Cycle-2 screening exclusions are
-anchored in a full-text PICOC extraction of all 49 candidates; the
-stratum amendment is dated and auditable in the protocol.}
+\caption{PRISMA~2020 flow of the three update cycles over the
+foundational corpus (adapted for a review update). From cycle~2 onward,
+screening exclusions are anchored in a full-text PICOC extraction of
+every retrievable candidate; the stratum amendments, the
+conference-series stratum rule, and the removal of the five unretrieved
+reports are dated decisions in the audit trail.}
 \label{fig:prisma}
 \end{figure*}
 
 \begin{table}[!t]
-\caption{Selection flow across the two update cycles.}
+\caption{Selection flow across the three update cycles.}
 \label{tab:prisma}
 \centering
-\begin{tabular}{@{}lcc@{}}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}%
+\begin{tabular}{@{}lccc@{}}
 \toprule
-\textbf{Stage} & \textbf{Cycle 1} & \textbf{Cycle 2} \\
+\textbf{Stage} & \textbf{Cycle 1} & \textbf{Cycle 2} & \textbf{Cycle 3} \\
 \midrule
-Identified                 & $\approx$51 $\rightarrow$ 21 unique & 49 \\
-Screened                   & 20 (--1 duplicate)      & 49 \\
-Excluded at screening      & 2 (E1)                  & 27 (E2=19, E3=8) \\
-Assessed in full text      & 18                      & 22 \\
-Excluded after assessment  & 4                       & 2 \\
-\textbf{Included}          & \textbf{14}             & \textbf{20} \\
-Corpus (cumulative)        & 33 (19+14)              & \textbf{53} (33+20) \\
+Identified                 & $\approx$51$\,\rightarrow\,$21 & 49 & 37 \\
+Screened (eligibility)     & 20 (--1 dup.)  & 49 & 19 \\
+Excluded at screening      & 2 (E1)         & 27 (E2/E3) & 19 (18 E1, 1 E3) \\
+Reports not retrieved      & ---            & --- & 5 \\
+Assessed in full text      & 18             & 22 & 13 \\
+Excluded after assessment  & 4              & 2  & 1 \\
+\textbf{Included}          & \textbf{14}    & \textbf{20} & \textbf{12} \\
+Corpus (cumulative)        & 33             & 53 & \textbf{65} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The 53-study corpus comprises the 19 foundational studies, 14 cycle-1
-inclusions, and 20 cycle-2 inclusions; seven of these are secondary
+The 65-study corpus comprises the 19 foundational studies, 14 cycle-1,
+20 cycle-2, and 12 cycle-3 inclusions; ten of these are secondary
 ``foundational-conditional'' studies
-\cite{P24,P33,P52,P54,P72,P77,P79} that migrate to background material
-if the protocol is restricted to primary studies (primary corpus: 46).
+\cite{P24,P33,P52,P54,P72,P77,P79,P110,P112,P121} that migrate to
+background material if the protocol is restricted to primary studies
+(primary corpus: 55). Eleven of the twelve cycle-3 inclusions carry the
+mandatory stratum caveat.
 
 \subsection{Quality assessment and extraction}
 Each assessed study received: (i)~a verified bibliometric record
@@ -449,16 +517,17 @@ methodology, QA3 solid evidence base, QA4 coherent conclusions; max
 11-field structured extraction sheet with per-claim evidence anchors
 (section/page). The 19 foundational studies were re-assessed
 retroactively under the same rubric --- without re-opening their
-inherited inclusion --- so that all 61 assessments are directly
+inherited inclusion --- so that all 74 assessments are directly
 comparable.
 
 \subsection{Three-evaluator protocol}
 Every full-text assessment was executed independently by three LLM-based
 evaluators (Claude, ChatGPT, Gemini) from the same written prompt and
-PDF. The agreement set comprises 61 decisions: the 19 foundational
+PDF. The agreement set comprises 74 decisions: the 19 foundational
 re-assessments, all 20 screened cycle-1 candidates (the two
 stratum-ineligible candidates also received full assessments, recorded
-as exclusions), and the 22 cycle-2 assessments. Agreement was computed
+as exclusions), the 22 cycle-2 assessments, and the 13 cycle-3
+assessments. Agreement was computed
 on collapsed include/exclude decisions with
 Cohen's $\kappa$ per pair~\cite{cohen1960} and Fleiss' $\kappa$ overall
 \cite{fleiss1971}. Results are reported in
@@ -471,44 +540,56 @@ Section~\ref{sec:reliability}.
 \subsection{Corpus overview and taxonomy}
 \label{sec:taxonomy}
 
-Table~\ref{tab:taxonomy} organizes the 53 included studies by agentic
-paradigm. Three observations structure the corpus. First, the
+Table~\ref{tab:taxonomy} organizes the 65 included studies by agentic
+paradigm. Four observations structure the corpus. First, the
 \emph{foundational layer} is dominated by definitional surveys
 \cite{P09,P10,P15,P54} and governance/trust reviews \cite{P01,P17};
 these answer RQ1/RQ4/RQ5 strongly but contribute no empirical benefit
-evidence. Second, the \emph{empirical core} is concentrated in cycle~1:
-multi-agent LLM systems for RCA and SOC \cite{P27,P28,P31,P35},
+evidence. Second, the \emph{first empirical core} is concentrated in
+cycle~1: multi-agent LLM systems for RCA and SOC \cite{P27,P28,P31,P35},
 closed-loop remediation \cite{P22}, and a small-language-model agent for
 ICT operations \cite{P21} --- the methodological high-water marks of the
-corpus (QA $3.5$--$4.0$ of $4.0$). Third, cycle~2 adds the copilot pattern proper
---- RAG-based security copilots \cite{P78,P83,P87} and SOC
-hyper-automation \cite{P76} --- plus a \emph{human-factors cluster}
-absent from earlier cycles \cite{P62,P63,P69,P81}.
+first two cycles (QA $3.5$--$4.0$ of $4.0$). Third, cycle~2 adds the
+copilot pattern proper --- RAG-based security copilots
+\cite{P78,P83,P87} and SOC hyper-automation \cite{P76} --- plus a
+\emph{human-factors cluster} absent from earlier cycles
+\cite{P62,P63,P69,P81}. Fourth, cycle~3 adds a \emph{time-instrumented
+cluster}: supervisor- and multi-agent LLM frameworks for cloud incident
+response and SRE that, for the first time in the corpus, measure nominal
+time metrics against executed baselines \cite{P100,P101,P102,P123},
+alongside an MCP-based security framework for agent pipelines
+\cite{P94}, agentic SOC evaluation and SOC-as-a-service frameworks
+\cite{P93,P97}, a consultative RAG responder \cite{P119}, a non-LLM
+rules-plus-ML agent architecture \cite{P91}, and three agentic-centered
+surveys \cite{P110,P112,P121} --- all but \cite{P94} under the stratum
+caveat.
 
 \begin{table}[!t]
-\caption{Taxonomy of the included corpus (n=53; representative studies).}
+\caption{Taxonomy of the included corpus (n=65; representative studies).}
 \label{tab:taxonomy}
 \centering
 \begin{tabular}{@{}p{0.44\columnwidth}p{0.44\columnwidth}@{}}
 \toprule
 \textbf{Paradigm} & \textbf{Studies} \\
 \midrule
-LLM multi-agent (RCA/SOC) & \cite{P27,P28,P31,P35,P76} \\
-Single-agent LLM copilot (+RAG) & \cite{P34,P78,P83,P87} \\
-Closed-loop remediation agents & \cite{P20,P22,P32} \\
+LLM multi-agent (RCA/SOC/SRE) & \cite{P27,P28,P31,P35,P76,P100,P102} \\
+Single-agent LLM copilot (+RAG) & \cite{P34,P78,P83,P87,P119} \\
+Supervisor/event-driven agentic SOC & \cite{P93,P101} \\
+Closed-loop remediation agents & \cite{P20,P22,P32,P123} \\
 SLM/compact-model agents & \cite{P21} \\
-MAS/RL and self-organization (non-LLM) & \cite{P25,P88} \\
-Conceptual agentic frameworks (AIOps/PdM) & \cite{P43,P82} \\
+MAS/RL, rules+ML, self-organization (non-LLM) & \cite{P25,P88,P91} \\
+Conceptual agentic frameworks (AIOps/PdM/SOCaaS) & \cite{P43,P82,P97} \\
+Agent-pipeline security (MCP) & \cite{P94} \\
 AI-assisted SIEM / alert triage & \cite{P73} \\
 Foundational surveys (agents, LLM-sec, AIOps) &
-\cite{P05,P09,P10,P14,P15,P16,P24,P33,P52,P54,P72,P77,P79} \\
+\cite{P05,P09,P10,P14,P15,P16,P24,P33,P52,P54,P72,P77,P79,P110,P112,P121} \\
 Human factors \& instruments & \cite{P37,P62,P63,P69,P81} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{RQ coverage and quality}
-Fig.~\ref{fig:rqcov} shows per-RQ coverage across the three study sets.
+Fig.~\ref{fig:rqcov} shows per-RQ coverage across the four study sets.
 RQ coverage shifted between cycles in a telling way. In cycle~1
 (18 assessed; mean RQ score 3.83, mean QA 3.50) the systematic gap was
 \textbf{RQ4} (ethics and governance: only 4/18 fully answered). In
@@ -517,9 +598,15 @@ inclusions) the gap moved to \textbf{RQ3/QA3}: abundant conceptual
 contribution with scarce empirical benefit evidence. The retroactive
 assessment of the foundational studies (mean RQ 3.66, mean QA 2.53)
 shows the same profile --- high RQ coverage by surveys, low QA for lack
-of their own validation. Across all 61 assessments the pattern is
-stable: \emph{the literature is conceptually rich and empirically thin
-precisely on the benefit claims that motivate it}.
+of their own validation. Cycle~3 (13 assessed; mean RQ 3.85, mean QA
+2.77) is the first set since the cycle-1 core in which \textbf{RQ3 is no
+longer the weak point} (6/13 fully answered), driven by the
+time-instrumented cluster of Section~\ref{sec:mttr}; its QA profile,
+however, remains middling, dominated by testbed and synthetic evidence.
+Across the first 61 assessments the pattern was stable --- \emph{the
+literature is conceptually rich and empirically thin precisely on the
+benefit claims that motivate it} --- and cycle~3 is the first measurable
+bend in that curve, at sub-threshold venues.
 
 \begin{figure}[!t]
 \centering
@@ -543,112 +630,160 @@ precisely on the benefit claims that motivate it}.
 \draw[fill=gray!25] (1.45,1.09) rectangle (1.87,3.27);
 \draw[fill=white] (1.45,3.27) rectangle (1.87,4.00);
 \node[below, yshift=-0.5mm] at (1.66,0) {C2};
-\draw[fill=gray!65] (2.50,0.00) rectangle (2.92,1.68);
-\draw[fill=gray!25] (2.50,1.68) rectangle (2.92,4.00);
-\node[below, yshift=-0.5mm] at (2.71,0) {F};
-\draw[fill=gray!65] (3.00,0.00) rectangle (3.42,2.44);
-\draw[fill=gray!25] (3.00,2.44) rectangle (3.42,3.78);
-\draw[fill=white] (3.00,3.78) rectangle (3.42,4.00);
-\node[below, yshift=-0.5mm] at (3.21,0) {C1};
-\draw[fill=gray!65] (3.50,0.00) rectangle (3.92,1.64);
-\draw[fill=gray!25] (3.50,1.64) rectangle (3.92,3.27);
-\draw[fill=white] (3.50,3.27) rectangle (3.92,4.00);
-\node[below, yshift=-0.5mm] at (3.71,0) {C2};
-\draw[fill=gray!65] (4.55,0.00) rectangle (4.97,0.21);
-\draw[fill=gray!25] (4.55,0.21) rectangle (4.97,4.00);
-\node[below, yshift=-0.5mm] at (4.76,0) {F};
-\draw[fill=gray!65] (5.05,0.00) rectangle (5.47,2.67);
-\draw[fill=gray!25] (5.05,2.67) rectangle (5.47,4.00);
-\node[below, yshift=-0.5mm] at (5.26,0) {C1};
-\draw[fill=gray!65] (5.55,0.00) rectangle (5.97,0.73);
-\draw[fill=gray!25] (5.55,0.73) rectangle (5.97,3.64);
-\draw[fill=white] (5.55,3.64) rectangle (5.97,4.00);
-\node[below, yshift=-0.5mm] at (5.76,0) {C2};
-\draw[fill=gray!65] (6.60,0.00) rectangle (7.02,2.53);
-\draw[fill=gray!25] (6.60,2.53) rectangle (7.02,3.79);
-\draw[fill=white] (6.60,3.79) rectangle (7.02,4.00);
-\node[below, yshift=-0.5mm] at (6.81,0) {F};
-\draw[fill=gray!65] (7.10,0.00) rectangle (7.52,0.89);
-\draw[fill=gray!25] (7.10,0.89) rectangle (7.52,4.00);
-\node[below, yshift=-0.5mm] at (7.31,0) {C1};
-\draw[fill=gray!65] (7.60,0.00) rectangle (8.02,1.64);
-\draw[fill=gray!25] (7.60,1.64) rectangle (8.02,3.64);
-\draw[fill=white] (7.60,3.64) rectangle (8.02,4.00);
-\node[below, yshift=-0.5mm] at (7.81,0) {C2};
-\draw[fill=gray!65] (8.65,0.00) rectangle (9.07,3.37);
-\draw[fill=gray!25] (8.65,3.37) rectangle (9.07,4.00);
-\node[below, yshift=-0.5mm] at (8.86,0) {F};
-\draw[fill=gray!65] (9.15,0.00) rectangle (9.57,3.56);
-\draw[fill=gray!25] (9.15,3.56) rectangle (9.57,4.00);
-\node[below, yshift=-0.5mm] at (9.36,0) {C1};
-\draw[fill=gray!65] (9.65,0.00) rectangle (10.07,2.55);
-\draw[fill=gray!25] (9.65,2.55) rectangle (10.07,3.82);
-\draw[fill=white] (9.65,3.82) rectangle (10.07,4.00);
-\node[below, yshift=-0.5mm] at (9.86,0) {C2};
-\draw (0,0) -- (10.30,0);
-\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (1.16,0) {RQ1};
-\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (3.21,0) {RQ2};
-\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (5.26,0) {RQ3};
-\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (7.31,0) {RQ4};
-\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (9.36,0) {RQ5};
-\draw[fill=gray!65] (10.60,3.65) rectangle (10.95,4.00);
-\node[right, xshift=0.5mm] at (10.95,3.82) {Fully answered (T)};
-\draw[fill=gray!25] (10.60,3.10) rectangle (10.95,3.45);
-\node[right, xshift=0.5mm] at (10.95,3.27) {Partially (P)};
-\draw[fill=white] (10.60,2.55) rectangle (10.95,2.90);
-\node[right, xshift=0.5mm] at (10.95,2.72) {Not answered (N)};
+\draw[fill=gray!65] (1.95,0.00) rectangle (2.37,2.15);
+\draw[fill=gray!25] (1.95,2.15) rectangle (2.37,4.00);
+\node[below, yshift=-0.5mm] at (2.16,0) {C3};
+\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (1.41,0) {RQ1};
+\draw[fill=gray!65] (3.00,0.00) rectangle (3.42,1.68);
+\draw[fill=gray!25] (3.00,1.68) rectangle (3.42,4.00);
+\node[below, yshift=-0.5mm] at (3.21,0) {F};
+\draw[fill=gray!65] (3.50,0.00) rectangle (3.92,2.44);
+\draw[fill=gray!25] (3.50,2.44) rectangle (3.92,3.78);
+\draw[fill=white] (3.50,3.78) rectangle (3.92,4.00);
+\node[below, yshift=-0.5mm] at (3.71,0) {C1};
+\draw[fill=gray!65] (4.00,0.00) rectangle (4.42,1.64);
+\draw[fill=gray!25] (4.00,1.64) rectangle (4.42,3.27);
+\draw[fill=white] (4.00,3.27) rectangle (4.42,4.00);
+\node[below, yshift=-0.5mm] at (4.21,0) {C2};
+\draw[fill=gray!65] (4.50,0.00) rectangle (4.92,2.46);
+\draw[fill=gray!25] (4.50,2.46) rectangle (4.92,3.69);
+\draw[fill=white] (4.50,3.69) rectangle (4.92,4.00);
+\node[below, yshift=-0.5mm] at (4.71,0) {C3};
+\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (3.96,0) {RQ2};
+\draw[fill=gray!65] (5.55,0.00) rectangle (5.97,0.21);
+\draw[fill=gray!25] (5.55,0.21) rectangle (5.97,4.00);
+\node[below, yshift=-0.5mm] at (5.76,0) {F};
+\draw[fill=gray!65] (6.05,0.00) rectangle (6.47,2.67);
+\draw[fill=gray!25] (6.05,2.67) rectangle (6.47,4.00);
+\node[below, yshift=-0.5mm] at (6.26,0) {C1};
+\draw[fill=gray!65] (6.55,0.00) rectangle (6.97,0.73);
+\draw[fill=gray!25] (6.55,0.73) rectangle (6.97,3.64);
+\draw[fill=white] (6.55,3.64) rectangle (6.97,4.00);
+\node[below, yshift=-0.5mm] at (6.76,0) {C2};
+\draw[fill=gray!65] (7.05,0.00) rectangle (7.47,1.85);
+\draw[fill=gray!25] (7.05,1.85) rectangle (7.47,4.00);
+\node[below, yshift=-0.5mm] at (7.26,0) {C3};
+\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (6.51,0) {RQ3};
+\draw[fill=gray!65] (8.10,0.00) rectangle (8.52,2.53);
+\draw[fill=gray!25] (8.10,2.53) rectangle (8.52,3.79);
+\draw[fill=white] (8.10,3.79) rectangle (8.52,4.00);
+\node[below, yshift=-0.5mm] at (8.31,0) {F};
+\draw[fill=gray!65] (8.60,0.00) rectangle (9.02,0.89);
+\draw[fill=gray!25] (8.60,0.89) rectangle (9.02,4.00);
+\node[below, yshift=-0.5mm] at (8.81,0) {C1};
+\draw[fill=gray!65] (9.10,0.00) rectangle (9.52,1.64);
+\draw[fill=gray!25] (9.10,1.64) rectangle (9.52,3.64);
+\draw[fill=white] (9.10,3.64) rectangle (9.52,4.00);
+\node[below, yshift=-0.5mm] at (9.31,0) {C2};
+\draw[fill=gray!65] (9.60,0.00) rectangle (10.02,2.15);
+\draw[fill=gray!25] (9.60,2.15) rectangle (10.02,4.00);
+\node[below, yshift=-0.5mm] at (9.81,0) {C3};
+\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (9.06,0) {RQ4};
+\draw[fill=gray!65] (10.65,0.00) rectangle (11.07,3.37);
+\draw[fill=gray!25] (10.65,3.37) rectangle (11.07,4.00);
+\node[below, yshift=-0.5mm] at (10.86,0) {F};
+\draw[fill=gray!65] (11.15,0.00) rectangle (11.57,3.56);
+\draw[fill=gray!25] (11.15,3.56) rectangle (11.57,4.00);
+\node[below, yshift=-0.5mm] at (11.36,0) {C1};
+\draw[fill=gray!65] (11.65,0.00) rectangle (12.07,2.55);
+\draw[fill=gray!25] (11.65,2.55) rectangle (12.07,3.82);
+\draw[fill=white] (11.65,3.82) rectangle (12.07,4.00);
+\node[below, yshift=-0.5mm] at (11.86,0) {C2};
+\draw[fill=gray!65] (12.15,0.00) rectangle (12.57,2.46);
+\draw[fill=gray!25] (12.15,2.46) rectangle (12.57,4.00);
+\node[below, yshift=-0.5mm] at (12.36,0) {C3};
+\node[below, yshift=-3.6mm, font=\scriptsize\bfseries] at (11.61,0) {RQ5};
+\draw (0,0) -- (12.82,0);
+\draw[fill=gray!65] (13.12,3.65) rectangle (13.47,4.00);
+\node[right, xshift=0.5mm] at (13.47,3.82) {Fully answered (T)};
+\draw[fill=gray!25] (13.12,3.10) rectangle (13.47,3.45);
+\node[right, xshift=0.5mm] at (13.47,3.27) {Partially (P)};
+\draw[fill=white] (13.12,2.55) rectangle (13.47,2.90);
+\node[right, xshift=0.5mm] at (13.47,2.72) {Not answered (N)};
 \end{tikzpicture}%
 }
 \caption{Coverage of the research questions by set (share of assessed
 studies rating each RQ fully/partially/not answered; F = foundational,
-n=19; C1 = cycle 1, n=18; C2 = cycle 2, n=22). The empirical core of
-cycle~1 is the only set in which RQ3 (evidence of benefits) is
-predominantly fully answered (12/18); the foundational surveys answer
-RQ3 fully in just 1/19 cases, and cycle~2 in 4/22 --- while RQ4 (ethics
-and governance) is the systematic gap of cycle~1 (4/18) and RQ5 (gaps
-and directions) is strong everywhere.}
+n=19; C1 = cycle 1, n=18; C2 = cycle 2, n=22; C3 = cycle 3, n=13). The
+empirical core of cycle~1 (12/18) and the time-instrumented cycle~3
+(6/13) are the sets in which RQ3 (evidence of benefits) is most often
+fully answered; the foundational surveys answer RQ3 fully in just 1/19
+cases, and cycle~2 in 4/22 --- while RQ4 (ethics and governance) is the
+systematic gap of cycle~1 (4/18) and RQ5 (gaps and directions) is strong
+everywhere.}
 \label{fig:rqcov}
 \end{figure}
 
 \subsection{Evidence on MTTD and MTTR}
 \label{sec:mttr}
 
-This is the review's central result. After screening 89 candidates and
-assessing 61 in full text across two cycles:
+This is the review's central result, and the one the third cycle
+materially changes. Through the first two cycles (89 candidates
+screened, 61 assessed in full text), \textbf{no study measured MTTD or
+MTTR nominally against its own executed baseline}: the single nominal
+MTTR datapoint --- the SOC hyper-automation agent of~\cite{P76},
+$\approx$1--1.5~min per phase in a proof of concept compared against
+\emph{literature values} for a commercial copilot ($\approx$30--45~s)
+--- had no baseline of its own and was unfavorable to the proposed
+agent, while secondary sources relayed dramatic but unreproduced gains
+(MTTR from 8~hours to 90~minutes; 98\% auto-triage with sub-5-minute
+containment; a 277-day industry detect-and-contain
+baseline)~\cite{P79}.
+
+Cycle~3 surfaces the corpus's \textbf{first cluster of primary studies
+with nominal time metrics against executed baselines}:
 
 \begin{itemize}
-  \item \textbf{No study measures MTTD and MTTR nominally against its
-        own baseline in production.}
-  \item \textbf{One study reports nominal MTTR.} The SOC
-        hyper-automation agent of~\cite{P76} reports per-phase
-        remediation times of $\approx$1--1.5~min in a proof of concept
-        (one use case, SSH brute force), compared against
-        \emph{literature values} for a commercial security copilot
-        ($\approx$30--45~s) --- i.e., no baseline of its own, and a result
-        \emph{unfavorable} to the proposed agent. The authors' candor is
-        valuable; the evidence remains at proof-of-concept level.
-  \item \textbf{Secondary evidence reports dramatic gains.} The SOC
-        survey~\cite{P79} relays primary reports of MTTR reduced from
-        8~hours to 90~minutes, 98\% of alerts auto-triaged with
-        containment under 5~minutes, and a 277-day industry
-        detect-and-contain baseline. None of these numbers is reproduced
-        by a primary study in the corpus.
-  \item \textbf{Proxies dominate.} The strongest quantified operational
-        outcomes are proxies: a 74--84\% global alert-volume reduction in
-        a national SOC~\cite{P73}; operator reaction time falling from
-        $\approx$276~s to $\approx$107~s with decision support in a
-        control-room experiment (Wilcoxon $p<0.01$)~\cite{P81};
-        end-to-end incident-report latency of 2.9--11.6~s with 0.3~s
-        pre-detection~\cite{P87}; and copilot answer quality
-        (BERTScore $\approx$85--87\%) without timing~\cite{P83}.
-        Detection studies report accuracy/F1/AUC only.
+  \item \textbf{Production, human baseline.} The agentic SRE copilot
+        of~\cite{P100} (five LLM agents over a knowledge graph, with a
+        guarded action layer) reports production p90 MTTD falling from
+        30 to 5~minutes ($-83\%$) and p90 MTTR from 240 to 20~minutes
+        ($-91\%$; $\approx$$-63\%$ in the paper's aggregate figure)
+        against experienced human SREs with dashboards and runbooks,
+        at a reported LLM cost of \$0.079 per incident.
+  \item \textbf{Testbed, ablated baselines.} The event-driven SOC
+        with a supervisor agent of~\cite{P101} reports MTTR of 71.7~s
+        vs.\ 258.4~s for a polling baseline ($-72.3\%$) and 190.4~s for
+        an LLM-assist (advisory-only) ablation ($-62.3\%$), over 1{,}247
+        synthetic events drawn from MITRE ATT\&CK scenarios. The multi-agent SRE framework
+        of~\cite{P102} reports MTTD of 8.5 vs.\ 47.2~minutes ($-82\%$)
+        against a consensus baseline of three senior SREs --- MTTR
+        itself is not measured.
+  \item \textbf{Public dataset, internal baseline.} The adaptive
+        counterfactual-validation framework of~\cite{P123} reports mean
+        time-to-containment of 8.9 vs.\ 14.3~minutes ($-37.8\%$,
+        Wilcoxon $p<0.001$) against a SOAR baseline executed by the
+        authors on the same 143 DARPA OpTC alerts; its external
+        baselines are literature-derived and explicitly indicative only.
 \end{itemize}
 
-The gap is therefore not merely a matter of ``few studies'': it is a
-structural mismatch between the motivating claim of the field (time-metric
-reduction) and its measurement practice (detection proxies and
-qualitative assertions). The claim that agentic copilots reduce MTTD and
-MTTR is, as of 2026, \emph{plausible but unverified by primary evidence}.
+Three qualifications bound this cluster, and they are the reason the
+review's conclusion changes in degree rather than in kind. First,
+\emph{venue stratum}: all four studies appear in sub-threshold venues
+(proceedings series at the B2/B4 percentile bands or journals below the
+A1--A2 bar) and therefore carry the mandatory stratum caveat --- at the
+venue-quality bar of criteria I3/I4, the nominal-measurement gap is
+formally intact. Second, \emph{setting}: only \cite{P100} is a
+production deployment, and it is a single, author-affiliated one;
+\cite{P101,P102} are testbeds and \cite{P93} (which reports MTTD/MTTR
+reductions of 44--80\% for an agentic SOC against a traditional-SOC arm)
+runs both arms on synthetic telemetry with internally inconsistent
+tables, recorded in its assessment. Third, \emph{independence}: the
+three evaluators unanimously included all four studies, always with the
+caveat attached. Outside this cluster, proxies still dominate: a
+74--84\% alert-volume reduction in a national SOC~\cite{P73}, operator
+reaction time falling from $\approx$276~s to $\approx$107~s with
+decision support~\cite{P81}, report latency of
+2.9--11.6~s~\cite{P87}, and answer quality without
+timing~\cite{P83,P119}; detection studies report accuracy/F1/AUC only.
+
+The structural mismatch diagnosed after cycle~2 --- a field whose
+motivating claim is time-metric reduction but whose measurement practice
+is detection proxies --- is therefore beginning to close, from the
+low-stratum end of the publication spectrum first. As of late 2026, the
+claim that agentic copilots reduce MTTD and MTTR is \emph{supported by
+early, low-stratum primary evidence and remains unverified at this
+review's venue-quality bar}.
 
 \subsection{Cognitive load: the complementary outcome}
 \label{sec:cogload}
@@ -669,7 +804,10 @@ classification AUC up to 0.998 and NASA-TLX ground truth~\cite{P69};
 and a human experiment in which an AI decision-support system improved
 control-room operator performance~\cite{P81}. The corpus also offers a
 validated usability instrument for conversational agents
-(BUS-15)~\cite{P63}.
+(BUS-15)~\cite{P63}. Cycle~3 does not change this picture: its
+time-instrumented cluster measures system latencies, not operator state,
+and its one human-facing evaluation scores answer quality with
+LLM-as-judge rubrics rather than workload~\cite{P119}.
 
 Table~\ref{tab:cogload} consolidates these assets into a
 \emph{measurement toolbox} for future copilot studies --- in our view,
@@ -722,22 +860,28 @@ interface; moderator of workload effects \\
 \subsection{Cross-citation structure of the corpus}
 \label{sec:cross}
 
-Internal citation analysis (triple-checked: OpenAlex
-\texttt{referenced\_works}, Crossref reference lists, Scopus
-\texttt{REF()} by title; union of 52 citing edges) shows a coherent
-field rather than a disconnected collection of papers. The hubs are the definitional
+Internal citation analysis over the corpus through cycle~2
+(triple-checked: OpenAlex \texttt{referenced\_works}, Crossref reference
+lists, Scopus \texttt{REF()} by title; union of 52 citing edges) shows a
+coherent field rather than a disconnected collection of papers. The hubs are the definitional
 surveys --- \cite{P10} (7 internal citations), \cite{P09} (6),
 \cite{P14} (5) --- followed by the AIOps/MLOps and log-anomaly surveys
 \cite{P16,P65} (3 each). The most connected citer is the multi-agent
 SOC system of~\cite{P28} (7 outgoing edges, five of them to cycle-2
 candidates), and cycle-2 studies cite back into the corpus
 (\cite{P79}$\rightarrow$\cite{P20,P78};
-\cite{P76}$\rightarrow$\cite{P39,P83}), indicating that the two cycles
+\cite{P76}$\rightarrow$\cite{P39,P83}), indicating that the cycles
 sample one evolving conversation. Source-specific quirks are material
 to reproducibility: Scopus resolves references by \emph{title}, not
 DOI; one open-access venue is not indexed there at all; and preprint
 DOIs can split citation identity across sources (handled here by alias
-resolution). Fig.~\ref{fig:crosscite} renders the full network.
+resolution). Fig.~\ref{fig:crosscite} renders the network through
+cycle~2. The cycle-3 inclusions continue the pattern: OpenAlex-deposited
+references alone (a lower bound, as deposits are incomplete) already add
+nine edges from cycle-3 studies into the corpus --- the SOC-as-a-service
+framework \cite{P97} cites seven corpus studies, among them
+\cite{P14,P73,P76,P79} and the intra-cycle survey \cite{P121}, and the
+agentic-SOC evaluation \cite{P93} cites \cite{P06,P76}.
 
 \begin{figure*}[!t]
 \centering
@@ -871,39 +1015,48 @@ disjoint samples.}
 \subsection{Inter-rater reliability}
 \label{sec:reliability}
 
-Table~\ref{tab:kappa} reports agreement over the 61 collapsed
-include/exclude decisions. Pairwise agreement is 90.2--91.8\%
-($\kappa$ 0.51--0.57); Fleiss' $\kappa=0.53$; \textbf{53/61 decisions
-are unanimous}, including all 19 foundational re-assessments and three
-unanimous exclusions. The $\kappa$ values are deflated by prevalence
-(89.6\% of all verdicts are ``include''), so the substantive reading is
-the nature of the eight divergences: \emph{all eight are protocol-rule
-divergences, none is a content divergence} --- in every case the three
-evaluators' scores agree and only the consequence rule differs. They
-fall into exactly three families: (A)~the treatment of non-agentic
+Table~\ref{tab:kappa} reports agreement over the 74 collapsed
+include/exclude decisions. Pairwise agreement is 91.9--93.2\%
+($\kappa$ 0.58--0.62, with the strictest pair reaching the
+\emph{substantial} band); Fleiss' $\kappa=0.60$; \textbf{66/74 decisions
+are unanimous} (62 inclusions and 4 exclusions), including all 19
+foundational re-assessments and the entire third cycle. The $\kappa$
+values are deflated by prevalence (90.1\% of all verdicts are
+``include''), so the substantive reading is the nature of the eight
+divergences: \emph{all eight are protocol-rule divergences, none is a
+content divergence, and all eight predate cycle~3} --- in every case the
+three evaluators' scores agree and only the consequence rule differs.
+They fall into exactly three families: (A)~the treatment of non-agentic
 secondary studies (2 cases); (B)~whether the cycle-2 stratum amendment
 binds, which one evaluator --- applying the strict criterion --- did
 not honor (3 cases); and (C)~domain/stratum boundary calls (3 cases).
-These three families were subsequently ratified as protocol rules
-R1--R3 (Section~\ref{sec:rules}); re-reading the 61 decisions under the
-ratified rules eliminates all residual divergence. Mean absolute score differences are small
-(RQ 0.44--0.63; QA 0.31--0.63), with systematic evaluator profiles:
-one strict on protocol and quality, one lenient, one intermediate with
-the hardest thematic cut.
+These three families were ratified as protocol rules R1--R3
+(Section~\ref{sec:rules}) and cycle~3 was run prospectively under them:
+its 13 assessments came out \textbf{unanimous 13/13} ($\kappa=1.00$ in
+every pair within the cycle), including the unanimous thematic exclusion
+of the one screening-flagged borderline study --- an empirical
+verification that the rules, once normative, eliminate the divergence
+classes they name. Mean absolute score differences remain small
+(RQ 0.43--0.61; QA 0.31--0.61), with stable evaluator profiles:
+one strict on protocol and quality, one lenient on scores (though its
+quality bands matched the intermediate evaluator's exactly in cycle~3),
+one intermediate with the hardest thematic cut.
 
 \begin{table}[!t]
-\caption{Inter-rater agreement on include/exclude decisions (n=61).}
+\caption{Inter-rater agreement on include/exclude decisions (n=74).}
 \label{tab:kappa}
 \centering
 \begin{tabular}{@{}lccc@{}}
 \toprule
  & \textbf{A$\times$B} & \textbf{A$\times$C} & \textbf{B$\times$C} \\
 \midrule
-Agreement        & 90.2\% & 91.8\% & 91.8\% \\
-Cohen's $\kappa$ & 0.57   & 0.51   & 0.51   \\
+Agreement        & 91.9\% & 93.2\% & 93.2\% \\
+Cohen's $\kappa$ & 0.62   & 0.58   & 0.58   \\
 \midrule
-\multicolumn{4}{l}{Fleiss' $\kappa$ (three raters): \textbf{0.53};
-unanimous decisions: \textbf{53/61}.} \\
+\multicolumn{4}{l}{Fleiss' $\kappa$ (three raters): \textbf{0.60};
+unanimous decisions: \textbf{66/74}} \\
+\multicolumn{4}{l}{(cycle 3 alone: 13/13 unanimous; $\kappa=1.00$ per
+pair).} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -915,39 +1068,51 @@ unanimous decisions: \textbf{53/61}.} \\
 \subsection{What the evidence supports --- and what it does not}
 The corpus firmly supports three claims: (i)~a consolidated conceptual
 model of Agentic AI for operations (autonomy levels, orchestration,
-guardrails, HITL) \cite{P09,P10,P15,P54}; (ii)~technical feasibility of
-agentic RCA, triage, and remediation at prototype level, with strong
-detection-quality results \cite{P21,P22,P27,P28,P31,P35}; and (iii)~a
-well-articulated risk and governance agenda \cite{P01,P12,P17,P14}.
-It does \emph{not} yet support the headline operational claim: the
-MTTD/MTTR reduction attributed to agentic copilots rests on secondary
-reports and qualitative assertions (Section~\ref{sec:mttr}). Reviewers
-and practitioners should treat vendor-scale numbers (e.g., 8h
-$\rightarrow$ 90min MTTR) as hypotheses to be tested, not as established
-effects.
+guardrails, HITL) \cite{P09,P10,P15,P54,P112}; (ii)~technical
+feasibility of agentic RCA, triage, and remediation at prototype level,
+with strong detection-quality results
+\cite{P21,P22,P27,P28,P31,P35,P102}; and (iii)~a well-articulated risk
+and governance agenda \cite{P01,P12,P17,P14,P94}. The headline
+operational claim now has its first primary support --- the cycle-3
+cluster of Section~\ref{sec:mttr} --- but that support is early,
+concentrated at sub-threshold venues, and production-grade in exactly
+one author-affiliated deployment. Reviewers and practitioners should
+still treat vendor-scale numbers (e.g., 8h $\rightarrow$ 90min MTTR) as
+hypotheses under test: the cycle-3 measurements are the first tests, not
+yet the established effect.
 
-\subsection{Why the measurement gap persists}
-Three causes are visible in the corpus: production access (most studies evaluate
-on public datasets or testbeds; industrial deployments are rare and
-rarely instrumented for time metrics); benchmark culture (detection
-communities optimize F1/AUC, which do not compose into end-to-end time
-outcomes); and the autonomy--accountability tension (studies that do
-deploy agents constrain them to low-risk actions, making time gains
-modest and hard to attribute). That the only available nominal
-measurement~\cite{P76} is \emph{unfavorable} to the agent is a useful
-counterweight to publication bias.
+\subsection{Why the measurement gap persisted --- and where it is closing}
+Three causes were visible through cycle~2: production access (most
+studies evaluate on public datasets or testbeds; industrial deployments
+are rare and rarely instrumented for time metrics); benchmark culture
+(detection communities optimize F1/AUC, which do not compose into
+end-to-end time outcomes); and the autonomy--accountability tension
+(studies that deploy agents constrain them to low-risk actions, making
+time gains modest and hard to attribute). That the only pre-cycle-3
+nominal measurement~\cite{P76} was \emph{unfavorable} to the agent
+remains a useful counterweight to publication bias. Cycle~3 adds a
+fourth, sociological observation: the first time-instrumented studies
+are appearing in early-stage venues --- regional conference series and
+recently launched journals --- ahead of the A-stratum literature. A
+review that enforced its venue bar without the caveat mechanism would
+have reported the measurement gap as fully intact; the dated-amendment
+design is what makes the field's actual turning point visible while
+keeping the evidence grade explicit.
 
-\subsection{Research gaps consolidated across both reviews}
+\subsection{Research gaps consolidated across the reviews}
 \label{sec:gapaxes}
 The foundational review synthesized six gap axes for agentic IR; the
-two update cycles allow each to be re-examined against newer evidence.
+three update cycles allow each to be re-examined against newer evidence.
 \textbf{(i)~From recommendation to safe autonomous execution.}
 Remediation in LLM4AIOps was found to stop at recommendation and
-triage~\cite{P05,P15}; the update cycles confirm the axis --- closed-loop
-execution exists at prototype level~\cite{P22,P32} and at
-proof-of-concept level in
-SOC hyper-automation~\cite{P76}, but verifiable, auditable, reversible
-execution in production remains unreported.
+triage~\cite{P05,P15}; cycles 1--2 confirmed the axis --- closed-loop
+execution at prototype level~\cite{P22,P32} and at proof-of-concept
+level in SOC hyper-automation~\cite{P76} --- and cycle~3 moves it
+furthest: guarded production execution with human gates~\cite{P100},
+event-driven SOAR tool-calling~\cite{P101}, and counterfactual
+pre-execution validation with adaptive re-planning~\cite{P123}.
+Verifiable, auditable execution beyond a single vendor deployment
+remains unreported.
 \textbf{(ii)~Complex telemetry (traces).} The difficulty of feeding
 distributed traces to LLMs~\cite{P05} persists: cycle-2 primary studies
 operate on logs, alerts, and flows~\cite{P53,P73,P87}; trace-native
@@ -975,48 +1140,69 @@ primary studies, to which this review adds a seventh axis:
 (Section~\ref{sec:cogload}).
 
 \subsection{Implications for research and practice}
-For researchers, the agenda is concrete: field studies that instrument
+For researchers, the agenda is concrete: replicate the cycle-3 cluster
+at this review's venue-quality bar --- field studies that instrument
 MTTD and MTTR nominally, pre/post or A/B against the team's own
-baseline, with the agentic copilot as the treatment; and that pair time
-metrics with validated human-factors instruments (NASA-TLX~\cite{P69},
-BUS-15~\cite{P63}) to test the cognitive-load ``bonus'' directly. For
+baseline, multi-site rather than single-vendor
+\cite{P100,P101,P102,P123} --- and pair time metrics with validated
+human-factors instruments (NASA-TLX~\cite{P69}, BUS-15~\cite{P63}) to
+test the cognitive-load ``bonus'' that no study has yet measured. For
 practitioners, the corpus supports piloting copilots on triage and
 report drafting (where latency and quality evidence exists
-\cite{P83,P87}) under HITL governance \cite{P08,P37}, while treating
-full-loop autonomous remediation as experimental \cite{P22,P76}.
+\cite{P83,P87,P119}) under HITL governance \cite{P08,P37}, now with
+early quantitative guidance on attainable time reductions and their
+cost~\cite{P100,P101}, while treating full-loop autonomous remediation
+as experimental \cite{P22,P76,P123} and securing the agent pipeline
+itself \cite{P94}.
 
 \subsection{Methodological lessons for LLM-assisted SLRs}
-Two findings generalize beyond this topic. First, three independent
+Three findings generalize beyond this topic. First, three independent
 LLM evaluators under one written protocol achieve high percentage
-agreement (90.2--91.8\% pairwise) with moderate chance-corrected
-$\kappa$, and their residual disagreements expose \emph{protocol
-ambiguities, not model randomness} --- a cheap and effective audit
-mechanism. Second, protocol amendments must be placed in the normative
-body of the evaluation prompt, not in its input metadata: the one
-evaluator that missed the stratum amendment read it as advisory,
-producing three of the eight divergences.
+agreement (91.9--93.2\% pairwise) with moderate-to-substantial
+chance-corrected $\kappa$, and their residual disagreements expose
+\emph{protocol ambiguities, not model randomness} --- a cheap and
+effective audit mechanism. Second, protocol amendments must be placed in
+the normative body of the evaluation prompt, not in its input metadata:
+the one evaluator that missed the cycle-2 stratum amendment read it as
+advisory, producing three of the eight divergences. Third, the fix is
+verifiable: once the ratified rules were rendered into the normative
+prompt text from a canonical template, the next full cycle (13
+assessments, including sub-stratum candidates and a flagged borderline
+exclusion) ran \emph{divergence-free} --- protocol maturation in this
+design is observable as a measured drop in disagreement, not merely
+asserted.
 
 % =====================================================================
 \section{Threats to Validity}
 \label{sec:threats}
 
 \textbf{Selection.} Assisted identification (LLM search in cycle~1,
-author-driven discovery in cycle~2) may bias candidate coverage; this is
-mitigated by dual-engine string validation (13/14 recall on OpenAlex and
-Scopus), mandatory snowballing, and full audit trails, but a
-database-exhaustive census was not the goal of the update design.
+author-driven discovery in cycle~2, query re-execution in cycle~3) may
+bias candidate coverage; this is mitigated by dual-engine string
+validation (13/14 recall on OpenAlex and Scopus), mandatory snowballing
+(executed in cycle~3 with a negative result), and full audit trails, but
+a database-exhaustive census was not the goal of the update design. Five
+cycle-3 candidates were removed as PRISMA ``reports not retrieved''
+after two documented access attempts --- an unavailability exclusion
+whose effect on the synthesis is unknowable by construction.
 \textbf{Strata criteria.} Venue-quality thresholds (I3--I4) use a
-national classification (Qualis) alongside SJR; the dated amendment that
-retained four sub-threshold studies is explicit, and all conclusions in
-Sections~\ref{sec:mttr}--\ref{sec:cogload} hold with those studies
-removed. \textbf{Evaluator validity.} All three raters are LLM systems;
+national classification (Qualis) alongside SJR, extended to proceedings
+series by Scopus CiteScore percentile in cycle~3; the dated amendments
+that retained sub-threshold studies are explicit. The pre-cycle-3
+conclusions of Sections~\ref{sec:mttr}--\ref{sec:cogload} hold with the
+caveated studies removed; the cycle-3 nominal-metric cluster, by
+contrast, exists \emph{only} under the caveat --- removing sub-threshold
+studies removes the cluster, which is precisely why its evidence grade
+is reported alongside its effect sizes, and why one of its four studies
+is additionally an author-affiliated single-vendor deployment.
+\textbf{Evaluator validity.} All three raters are LLM systems;
 they are independent of each other but share potential model-family
-biases. The unanimity of the core corpus (87\%), the protocol-only
-nature of divergences, and per-claim evidence anchors in every
-assessment mitigate --- but do not eliminate --- this threat; the three
-protocol questions exposed by the divergences were adjudicated by the
-(human) review conductor and ratified as rules R1--R3
-(Section~\ref{sec:rules}).
+biases. The unanimity of the core corpus (89\%), the protocol-only
+nature of divergences, per-claim evidence anchors in every assessment,
+and a divergence-free third cycle under the ratified rules mitigate ---
+but do not eliminate --- this threat; the three protocol questions
+exposed by the divergences were adjudicated by the (human) review
+conductor and ratified as rules R1--R3 (Section~\ref{sec:rules}).
 \textbf{Bibliometric sources.} Citation counts are kept per source and
 never summed; source quirks (title-based reference resolution, unindexed
 venues, preprint DOI splits, API service-level limits) are documented in
@@ -1026,21 +1212,26 @@ the audit trail.
 \section{Conclusion}
 \label{sec:conclusion}
 
-This SLR consolidated 53 studies (2020--2026) on Agentic AI as a copilot
-for incident response, assessed by three independent evaluators with
-high agreement (53 of 61 decisions unanimous). The field has matured
-conceptually --- shared
-definitions, reference architectures, governance agendas, and a coherent
-citation structure --- and demonstrates prototype-level feasibility of
-agentic detection, RCA, and remediation. Yet its motivating claim
-remains unmeasured: no primary study reports nominal MTTD and MTTR
-against its own production baseline, and operator cognitive load has
-never been measured in the presence of an agentic copilot in IT
-operations. The most valuable next contribution to this literature is
-therefore not another architecture, but a field evaluation: an agentic
-copilot deployed with a team, instrumented for MTTD/MTTR with its own
-baseline, and paired with validated workload instruments. That study is
-the direct continuation of this review.
+This SLR consolidated 65 studies (2020--2026) on Agentic AI as a copilot
+for incident response across three update cycles, assessed by three
+independent evaluators with high agreement (66 of 74 decisions
+unanimous; the third cycle divergence-free). The field has matured
+conceptually --- shared definitions, reference architectures, governance
+agendas, and a coherent citation structure --- and demonstrates
+prototype-level feasibility of agentic detection, RCA, and remediation.
+Its motivating claim is now beginning to be measured: a first cluster of
+four primary studies reports nominal MTTD, MTTR, and time-to-containment
+reductions of 38--91\% against executed baselines --- but entirely at
+sub-threshold venues, with production evidence from a single
+author-affiliated deployment, and still without any measurement of
+operator cognitive load in the presence of an agentic copilot. The most
+valuable next contribution to this literature is therefore a field
+evaluation that clears the bar the early evidence does not: an agentic
+copilot deployed with operations teams beyond a single vendor,
+instrumented for MTTD/MTTR with its own baseline, paired with validated
+workload instruments, and reported at a venue-quality level that lets
+systematic reviews count it without caveat. That study is the direct
+continuation of this review.
 
 % =====================================================================
 \section*{Acknowledgment}
