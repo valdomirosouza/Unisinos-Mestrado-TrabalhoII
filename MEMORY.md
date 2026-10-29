@@ -2048,6 +2048,20 @@ novo; PDF reenviado ao autor.
 **Comandos:** pypdf (varredura), OpenAlex API, gerador python do tikz,
 pdflatex/bibtex; `check-rsl.sh` OK. Commit `3b8d4c0` + push.
 
+### 142. Encerramento da sessão (2026-10-30, 2º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+item 141 (Fig. 2 estendida ao ciclo 3) já registrado; linha do commit
+`9497c91` (log do item 141) acrescentada à tabela.
+
+**Estado ao encerrar:** **draft v2 do artigo completo e consistente com o
+ciclo 3** (corpus 65; PRISMA 3 colunas; cluster MTTD/MTTR nominal; n=74;
+Fig. 2 com 65 arestas/50 nós), PDF de 11 páginas entregue ao autor.
+**Pendências para a submissão:** fotos dos autores (`IEEEbiography`),
+revisão da bio pelo orientador, leitura final do PDF pelo autor.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2293,5 +2307,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2f0da8f` | 2026-10-30 | Fix MEMORY commit-table placement: add item-138 row, move draft-v2 row before closing note |
 | `325b57a` | 2026-10-30 | Log session close (item 140) in MEMORY.md |
 | `3b8d4c0` | 2026-10-30 | Article Fig. 2 extended to cycle 3: citation network P01-P123 (65 edges, 50 nodes) |
+| `9497c91` | 2026-10-30 | Log article Fig. 2 cycle-3 extension (item 141) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
