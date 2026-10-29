@@ -24,5 +24,6 @@ Regras:
 | [PDR-0005](PDR-0005-r3-corte-de-dominio-e-cluster-humano.md)     | R3: corte de domínio estrito e cluster humano restrito a COGNITIVE_LOAD | ratificado | 2026-10-26      |
 | [PDR-0006](PDR-0006-estrato-de-conference-papers-pelo-percentil-da-serie.md) | Estrato de conference papers pelo percentil Scopus da série | ratificado | 2026-10-28 |
 | [PDR-0007](PDR-0007-renovacao-da-emenda-de-estratos-para-o-ciclo-3.md) | Renovação da emenda de estratos para o ciclo 3 | ratificado | 2026-10-28 |
+| [PDR-0008](PDR-0008-remocao-dos-springer-nao-recuperados.md) | Remoção dos capítulos Springer não recuperados (reports not retrieved) | ratificado | 2026-10-29 |
 
 Template para novos PDRs: [`PDR-TEMPLATE.md`](PDR-TEMPLATE.md).

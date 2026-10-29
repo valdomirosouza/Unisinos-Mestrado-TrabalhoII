@@ -265,3 +265,21 @@ dos ciclos 1–2 porque não há desacordo algum a penalizar. Leituras:
    adendos futuros: 5 capítulos Springer adiados (biblioteca/COMUT),
    snowballing obrigatório (rota de recaptura do P90) e fichas de extração
    (Etapa 9).
+
+
+## Adendo (2026-10-29, nº 7) — fecho do ciclo 3: Springer não recuperados removidos (PDR-0008)
+
+Segunda tentativa de obtenção dos 5 capítulos Springer adiados (P92, P95,
+P109, P122, P126 — volumes CCIS/LNCS/LNNS de 2026), executada via Claude in
+Chrome sobre a sessão autenticada do proxy CAPES, falhou nos cinco (endpoint
+de PDF em 204 vazio; páginas com "Log in via an institution" — assinatura não
+cobre os volumes). Por decisão do condutor
+([PDR-0008](../protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md)),
+os cinco saem da revisão como **"reports not retrieved" (PRISMA 2020)** —
+exclusão por indisponibilidade, não por mérito, sem adendo futuro previsto.
+
+Consequências: o funil do ciclo 3 fecha **definitivo** (37 identificados →
+19 elegíveis → 5 not retrieved → 14 triados → 13 avaliados → **12
+incluídos**); o **corpus consolidado permanece 65**; a rota de reavaliação do
+P90 pela cadeia de citação P92→P90 (adendo do snowballing) encerra-se. Com
+isso, **o ciclo 3 não tem pendências abertas**.

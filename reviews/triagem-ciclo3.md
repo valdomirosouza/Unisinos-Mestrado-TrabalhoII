@@ -114,3 +114,17 @@ _Triagem do ciclo 3 executada em 2026-10-28 sobre papers-ciclo3.csv + PICOC
 ciclo 3. Contagens: 19 elegíveis → 5 sem texto integral (adiados) → 14
 triados → 1 excluído (E3) → **13 aprovados para avaliação integral** (2
 plenos + 11 com ressalva de estrato)._
+
+
+## Adendo (2026-10-29) — destino dos 5 adiados
+
+Segunda tentativa de obtenção do texto integral dos 5 capítulos Springer
+(P92, P95, P109, P122, P126) executada via Claude in Chrome sobre o proxy
+CAPES autenticado: endpoint de PDF retornou **204 vazio** e as páginas exibem
+"Log in via an institution" nos cinco — a assinatura não cobre os volumes
+CCIS/LNCS/LNNS de 2026. Por decisão do condutor
+([PDR-0008](../protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md)),
+os cinco são **removidos da revisão como "reports not retrieved" (PRISMA
+2020)** — exclusão por indisponibilidade, não por mérito; sem adendo futuro.
+A rota de reavaliação do P90 pela cadeia P92→P90
+([snowballing](../research/snowballing-ciclo3.md)) encerra-se junto.

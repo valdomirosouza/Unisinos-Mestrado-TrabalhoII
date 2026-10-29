@@ -150,3 +150,10 @@ _Contagens do ciclo 3 até a triagem: 37 identificados → 19 elegíveis (Etapa 
 → 5 adiados (sem texto integral) → 14 triados → 1 excluído (E3) → **13
 aprovados para avaliação integral**. Próxima etapa: avaliação pelos três
 avaliadores independentes (Etapas 5–6)._
+
+> **Nota datada (2026-10-29, [PDR-0008](../protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md)):**
+> os 5 adiados (P92, P95, P109, P122, P126) tornaram-se **"reports not
+> retrieved" definitivos** — segunda tentativa via proxy CAPES falhou (PDF
+> 204/sem acesso nos volumes Springer 2026) e o condutor descartou a rota
+> biblioteca/COMUT. O funil fecha: 37 → 19 → 5 not retrieved → 14 triados →
+> 13 avaliados (κ = 1,00 entre os três avaliadores) → **12 incluídos**.

@@ -78,3 +78,8 @@ _Fontes: OpenAlex (`works/doi:…`, `cites:W4413680021`, consulta 2026-10-29) e
 varredura full-text do acervo local (`docs/`, 121 PDFs, pypdf). Dados crus da
 consulta forward no scratchpad da sessão (não versionados; tabela acima é o
 registro)._
+
+> **Nota datada (2026-10-29):** com a remoção definitiva do P92
+> ([PDR-0008](../protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md),
+> reports not retrieved), a rota de reavaliação do P90 pela cadeia P92→P90
+> do item 2 acima **encerra-se**. P90 permanece INELEGÍVEL.
