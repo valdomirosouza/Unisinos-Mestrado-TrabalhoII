@@ -1770,6 +1770,43 @@ HTML (removidos pós-render na instância).
 **Comandos:** `render-prompts.py` (render de teste); commit `8b0ce41` + push
 no Template-RSL.
 
+### 132. Ciclo 3, Etapa 7 — consolidação tripla (chegada de ChatGPT e Gemini)
+
+**Prompt:** "Avaliações do ChatGPT e Gemini já estão nas pastas" (após a
+pergunta sobre o range correto: os 13 IDs não contíguos P91–P123).
+
+**Ações:** (1) Verificados os 26 arquivos novos
+(`reviews/ChatGPT/PXX_avaliacao_RSL.md` e `reviews/Gemini/PXX_avaliacao_RSL.md`
+— artefatos de terceiros, imutáveis). (2) Parser em python (scratchpad)
+extraiu SCORE_RQ/SCORE_QA/Banda/Recomendação; o Gemini segue o template e saiu
+direto; o ChatGPT usa formato livre ("rubrica operacional provisória",
+bandas aplicadas também ao RQ) e exigiu inspeção de trechos arquivo a arquivo.
+(3) `Papers_Index.csv`: escores dos 3 avaliadores preenchidos nos 13 e status
+final "Ciclo 3: <recomendação>"; MD re-derivado. (4) `Conjunto` do
+`resultados-consolidados-ciclo3.csv` finalizado para "Ciclo 3".
+(5) READMEs de `reviews/ChatGPT/` e `reviews/Gemini/` estendidos (P01–P123,
+74 avaliações, +13 linhas cada). (6) DASHBOARD: seção do ciclo 3 atualizada
+(tabela com os 3 avaliadores). (7) **Adendo nº 5** na síntese consolidada
+(+PDF regenerado). (8) Nota de tripla concluída no `reviews/README.md` e em
+`graficos-ciclo3.md`.
+
+**Resultados-chave (n = 13):** Claude RQ 3,85/4,0 · QA 2,77/3,0 · bandas
+9·3·1; ChatGPT RQ 4,12/4,0 · QA 2,69/2,5 · bandas 5·8·0; Gemini RQ 3,77/4,0 ·
+QA 2,92/3,0 · bandas 9·3·1 (média/mediana rotuladas separadamente).
+**Unanimidade no colapso Incluir/Excluir nos 13** (12 Incluir — P94 pleno por
+Claude e Gemini — · 1 Excluir, P106 E2 pelos três, confirmando o flag da
+triagem). O cluster MTTD/MTTR nominal (P100/P101/P102/P123) sobrevive aos
+três avaliadores, sempre sob ressalva de estrato. Corpus permanece 53 até a
+Etapa 8.
+
+**Comandos:** parser de pareceres externos (scratchpad);
+`derive-index.py`; `build_pdf_cons.py`; `check-rsl.sh` OK (C1–C5).
+Commit `69322bd` + push.
+
+**Pendências:** `/rsl-comparacao` (Etapa 8 — κ por par, Fleiss, prevalência;
+CSVs por avaliador e comparação do ciclo) e fichas (Etapa 9); 5 Springer;
+snowballing (P90).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1855,6 +1892,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Ciclo 3, Etapa 7 (parcial): `reviews/resultados-consolidados-ciclo3.csv` · `graficos-ciclo3.md` · `charts-ciclo3/` (5 SVGs + README) · seção ciclo 3 no `DASHBOARD.md` · adendo nº 4 na síntese consolidada (+PDF) · escores Claude no `Papers_Index`
 
 - (repo Template-RSL, externo) `templates/prompt-avaliacao.md` v1.1.0 (marcadores limpos) · entrada [0.1.3] no `CHANGELOG.md`
+
+- Ciclo 3, Etapa 7 (tripla): 26 pareceres externos em `reviews/ChatGPT/` e `reviews/Gemini/` (+READMEs) · escores dos 3 avaliadores e statuses no `Papers_Index` · `Conjunto` final no CSV do ciclo · DASHBOARD · adendo nº 5 na síntese (+PDF)
 
 ## Histórico de commits da sessão
 
@@ -1980,5 +2019,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `6c579a6` | 2026-10-28 | Log cycle-3 partial consolidation (item 130) in MEMORY.md |
 | —         | 2026-10-27 | (repo Template-RSL, commit local `24bf3c3`) Initial skeleton — repositório irmão, externo a este              |
 | —         | 2026-10-29 | (repo Template-RSL, commit `8b0ce41`) Template prompt-avaliacao v1.1.0: clean markers resolvable by render-prompts.py — repositório irmão, externo a este |
+| `991b85c` | 2026-10-29 | Log Template-RSL v1.1.0 marker-fix replication (item 131) in MEMORY.md |
+| `69322bd` | 2026-10-29 | Cycle-3 stage-7 triple consolidation: ChatGPT and Gemini evaluations received |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
