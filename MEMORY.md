@@ -2198,6 +2198,33 @@ Fig. 2 completa. **Pendências de submissão:** fotos dos autores
 PDF pelo autor (lembrete: título/headings usam fonte Formata e não
 renderizam no viewer do Chrome — conferir no Preview/Acrobat).
 
+### 150. Papers_Index — percentil Scopus e SJR Quartile preenchidos para P90–P126
+
+**Prompt:** "atualize as colunas 'Scopus (Percentil)' e 'SJR Quartile' do
+arquivo Papers_index.csv a partir do paper P90".
+
+**Ações:** (1) **Scopus (Percentil)**: re-consulta à Scopus Serial Title
+API por ISSN (busca por título para ISDFS e GLOBECOM; chave mantida fora do
+repositório) para obter o maior percentil CiteScore 2026 com rank e
+categoria, no formato rico multilinhas dos ciclos anteriores
+("NN.0% / rank NNN / Categoria") — os 17 veículos indexados **batem 17/17**
+com os percentis da elegibilidade (papers-ciclo3.csv); demais = NÃO
+INDEXADO. (2) **SJR Quartile**: SCImago 2025 por ISSN — o Cloudflare
+bloqueia curl, então o CSV de ranking (~32k linhas) foi filtrado **em
+memória na própria página** via Claude in Chrome (fetch + filtro JS, sem
+download). Resultados: Q1 (Network, IEEE Access, CS Review, Discover AI),
+Q2 (Applied Sciences, LNCS, JECE), Q3 (JIKM), Q4 (CCIS, LNNS); proceedings
+sem quartil no SCImago (SOUTHEASTCON, EIT, Procedia CS, GLOBECOM) = N/D com
+o score SJR; ISDFS não listado; não indexados = NÃO INDEXADO. Scores SJR
+cruzam **7/7** com os da API Scopus da Etapa 1. (3) 37 linhas × 2 colunas
+preenchidas; MD re-derivado. Nota de governança no commit: os quartis são
+informativos — o estrato do ciclo 3 segue regido pelo percentil da série
+(PDR-0006/0007).
+
+**Comandos:** Scopus Serial API (python/urllib); Claude in Chrome
+(javascript fetch/filtro no scimagojr.com); `derive-index.py`;
+`check-rsl.sh` OK. Commit `52e03b8` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2305,6 +2332,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Artigo: apêndice Study-Identifier Index (82 IDs → refs) + 8 entradas novas no `referencias.bib` (+PDF 12 pp., README do artigo)
 
 - Artigo: Nomenclature como lista quebrável (fix de layout da p. 1) + transliteração do autor cirílico do P38 no `referencias.bib`
+
+- `Papers_Index.csv`/`.md`: colunas Scopus (Percentil) e SJR Quartile preenchidas para P90–P126 (37 linhas; Scopus API + SCImago via Chrome)
 
 ## Histórico de commits da sessão
 
@@ -2461,5 +2490,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d736a83` | 2026-10-30 | Log Nomenclature layout fix (item 147) in MEMORY.md |
 | `f084ca1` | 2026-10-30 | Article: trim Nomenclature to 20 entries (author request) |
 | `75c4dac` | 2026-10-30 | Log Nomenclature trim (item 148) in MEMORY.md |
+| `4063cb0` | 2026-10-30 | Log session close (item 149) in MEMORY.md |
+| `52e03b8` | 2026-10-30 | Papers_Index: fill Scopus percentile and SJR quartile for P90-P126 (37 rows) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
