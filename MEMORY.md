@@ -1943,6 +1943,27 @@ subiram vs. P01–P88 (κ 0,51–0,57 → 0,58–0,62; Fleiss 0,53 → 0,60).
 **Comandos:** `compute-kappa.py --evaluators Claude,ChatGPT,Gemini`;
 `check-rsl.sh` OK. Commit `da6c3f7` + push.
 
+### 138. Encerramento da sessão (2026-10-29)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore de trabalho limpa, `master`
+sincronizada com `origin/master`, itens 127–137 registrados incrementalmente
+ao longo da sessão (nada ficou de fora); linha do commit `809396e` (log do
+item 137) acrescentada à tabela de histórico.
+
+**Estado ao encerrar:** **ciclo 3 completo e sem pendências** (37 → 19 → 5
+not retrieved [PDR-0008] → 14 → 13 avaliados, κ = 1,00 → **12 incluídos**;
+fichas da Etapa 9 prontas; snowballing P90 negativo e encerrado); **corpus
+consolidado: 65**; comparação global P01–P123 publicada (Fleiss 0,60; 66/74
+unânimes; 8 divergências históricas fechadas por PDR). Fix do template
+v1.1.0 replicado no repo Template-RSL (`8b0ce41`).
+
+**Pendências para próximas sessões:** lado do artigo IEEE Access — fotos dos
+autores, revisão da bio pelo orientador, conferência visual do PDF final;
+eventual ciclo 4 (snowballing completo dos 65 incluídos como insumo da
+descoberta).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2177,5 +2198,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `3ec85fd` | 2026-10-29 | PDR-0008: remove the 5 unretrieved Springer chapters (reports not retrieved) |
 | `bb0474f` | 2026-10-29 | Log Springer retry failure and PDR-0008 removal (item 136) in MEMORY.md |
 | `da6c3f7` | 2026-10-29 | Global evaluator comparison updated to P01-P123 (74 evaluations per evaluator) |
+| `809396e` | 2026-10-29 | Log global comparison update to P01-P123 (item 137) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
