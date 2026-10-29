@@ -228,7 +228,10 @@ instrument these nominal metrics, reporting detection-quality proxies
 instead.
 
 \subsection{The foundational corpus and its hubs}
-The present review updates a foundational SLR (19 studies, P01--P19).
+The present review updates a foundational SLR (19 studies, P01--P19;
+the protocol identifiers Pxx used throughout, notably in
+Figs.~\ref{fig:prisma} and~\ref{fig:crosscite}, are mapped to the
+bibliography in the Appendix, Table~\ref{tab:pids}).
 Cross-citation analysis over the full corpus (Section~\ref{sec:cross})
 shows that three foundational surveys act as conceptual hubs ---
 \cite{P10} and \cite{P14} (7 internal citations each) and \cite{P09} (6)
@@ -1080,7 +1083,8 @@ hyper-automation study \cite{P76}; the multi-agent SOC system \cite{P28}
 and the cycle-3 SOC-as-a-service framework \cite{P97} are the most
 connected citers (7 outgoing edges each), and each new cycle cites back
 into the corpus --- evidence of one evolving research conversation
-rather than disjoint samples.}
+rather than disjoint samples. Node identifiers are mapped to references
+in the Appendix (Table~\ref{tab:pids}).}
 \label{fig:crosscite}
 \end{figure*}
 
@@ -1304,6 +1308,57 @@ instrumented for MTTD/MTTR with its own baseline, paired with validated
 workload instruments, and reported at a venue-quality level that lets
 systematic reviews count it without caveat. That study is the direct
 continuation of this review.
+
+
+% =====================================================================
+\section*{Appendix: Study-Identifier Index}
+\label{sec:appendix}
+
+Throughout this review --- in particular in the PRISMA flow
+(Fig.~\ref{fig:prisma}) and in the citation network
+(Fig.~\ref{fig:crosscite}) --- studies are referred to by their stable
+protocol identifiers (P01--P126), which are also the keys of all
+machine-readable artifacts in the audit trail.
+Table~\ref{tab:pids} maps every identifier that appears in this article
+to its bibliography entry. Unmarked identifiers are included corpus
+studies; $^{\dagger}$ marks studies assessed in full text and excluded;
+$^{\ddagger}$ marks screened candidates that appear only as nodes of the
+citation network.
+
+\begin{table*}[!t]
+\caption{Study identifiers (Pxx) and their references.}
+\label{tab:pids}
+\centering
+\footnotesize
+\begin{tabular}{@{}llp{6mm}llp{6mm}llp{6mm}ll@{}}
+\toprule
+\textbf{ID} & \textbf{Ref.} & & \textbf{ID} & \textbf{Ref.} & &
+\textbf{ID} & \textbf{Ref.} & & \textbf{ID} & \textbf{Ref.} \\
+\midrule
+P01 & \cite{P01} & & P22 & \cite{P22} & & P45$^{\ddagger}$ & \cite{P45} & & P82 & \cite{P82} \\
+P02 & \cite{P02} & & P23 & \cite{P23} & & P50$^{\ddagger}$ & \cite{P50} & & P83 & \cite{P83} \\
+P03 & \cite{P03} & & P24 & \cite{P24} & & P52 & \cite{P52} & & P85$^{\dagger}$ & \cite{P85} \\
+P04 & \cite{P04} & & P25 & \cite{P25} & & P53 & \cite{P53} & & P86$^{\dagger}$ & \cite{P86} \\
+P05 & \cite{P05} & & P26$^{\dagger}$ & \cite{P26} & & P54 & \cite{P54} & & P87 & \cite{P87} \\
+P06 & \cite{P06} & & P27 & \cite{P27} & & P55 & \cite{P55} & & P88 & \cite{P88} \\
+P07 & \cite{P07} & & P28 & \cite{P28} & & P62 & \cite{P62} & & P89$^{\ddagger}$ & \cite{P89} \\
+P08 & \cite{P08} & & P29$^{\dagger}$ & \cite{P29} & & P63 & \cite{P63} & & P91 & \cite{P91} \\
+P09 & \cite{P09} & & P30$^{\dagger}$ & \cite{P30} & & P65$^{\ddagger}$ & \cite{P65} & & P93 & \cite{P93} \\
+P10 & \cite{P10} & & P31 & \cite{P31} & & P68$^{\ddagger}$ & \cite{P68} & & P94 & \cite{P94} \\
+P11 & \cite{P11} & & P32 & \cite{P32} & & P69 & \cite{P69} & & P97 & \cite{P97} \\
+P12 & \cite{P12} & & P33 & \cite{P33} & & P70$^{\ddagger}$ & \cite{P70} & & P100 & \cite{P100} \\
+P13 & \cite{P13} & & P34 & \cite{P34} & & P72 & \cite{P72} & & P101 & \cite{P101} \\
+P14 & \cite{P14} & & P35 & \cite{P35} & & P73 & \cite{P73} & & P102 & \cite{P102} \\
+P15 & \cite{P15} & & P37 & \cite{P37} & & P74 & \cite{P74} & & P110 & \cite{P110} \\
+P16 & \cite{P16} & & P38$^{\dagger}$ & \cite{P38} & & P76 & \cite{P76} & & P112 & \cite{P112} \\
+P17 & \cite{P17} & & P39$^{\dagger}$ & \cite{P39} & & P77 & \cite{P77} & & P119 & \cite{P119} \\
+P18 & \cite{P18} & & P40$^{\dagger}$ & \cite{P40} & & P78 & \cite{P78} & & P121 & \cite{P121} \\
+P19 & \cite{P19} & & P41$^{\ddagger}$ & \cite{P41} & & P79 & \cite{P79} & & P123 & \cite{P123} \\
+P20 & \cite{P20} & & P43 & \cite{P43} & & P80$^{\ddagger}$ & \cite{P80} & & & \\
+P21 & \cite{P21} & & P44$^{\ddagger}$ & \cite{P44} & & P81 & \cite{P81} & & & \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 % =====================================================================
 \section*{Acknowledgment}
