@@ -2062,6 +2062,25 @@ Fig. 2 com 65 arestas/50 nós), PDF de 11 páginas entregue ao autor.
 **Pendências para a submissão:** fotos dos autores (`IEEEbiography`),
 revisão da bio pelo orientador, leitura final do PDF pelo autor.
 
+### 143. Artigo — seção Nomenclature (glossário de siglas)
+
+**Prompt:** "Faz sentido ter um glossário já que estamos falando de vários
+termos técnicos novos, tipo HITL, HOTL e outros nem tão novos mas nem sempre
+familiares para muitos tipo SRE, MTTR, MTTD, entre outros."
+
+**Ações:** sim — implementado na convenção IEEE: seção não numerada
+**Nomenclature** logo após o abstract (não um glossário ao final).
+Inventário das siglas por varredura do corpo do .tex; **30 entradas** em
+tabular de 2 colunas: termos do domínio (MTTD, MTTR, SRE, NOC, SOC(aaS),
+SIEM, SOAR, IR, AIOps, RCA, PdM), agênticos/IA (LLM, SLM, MAS, MCP, RAG,
+RL, ML, HITL, HOTL, AUC) e do método (SLR, PICOC, PRISMA, DARE, QA, RQ,
+SJR, NASA-TLX, BUS-15) — HITL/HOTL com glosa curta de distinção.
+Recompilado: 11 pp. mantidas, seção na p. 1, 0 citações não resolvidas,
+sem overfull novo. Nota no README do artigo. PDF reenviado ao autor.
+
+**Comandos:** inventário de siglas via python/regex; pdflatex (TinyTeX);
+`check-rsl.sh` OK. Commit `2b00f45` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2163,6 +2182,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Artigo IEEE Access draft v2: `artigo/main.tex` (ciclo 3 incorporado — PRISMA 3 colunas, cluster MTTD/MTTR nominal, n=74), `referencias.bib` (+12), `main.pdf` (11 pp.), README do artigo
 
 - Fig. 2 do artigo estendida ao ciclo 3 (65 arestas, 50 nós) · `citacoes-cruzadas-P01-P123.md` · READMEs raiz e do artigo
+
+- Artigo: seção Nomenclature (30 siglas) em `artigo/main.tex` (+PDF recompilado, nota no README do artigo)
 
 ## Histórico de commits da sessão
 
@@ -2308,5 +2329,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `325b57a` | 2026-10-30 | Log session close (item 140) in MEMORY.md |
 | `3b8d4c0` | 2026-10-30 | Article Fig. 2 extended to cycle 3: citation network P01-P123 (65 edges, 50 nodes) |
 | `9497c91` | 2026-10-30 | Log article Fig. 2 cycle-3 extension (item 141) in MEMORY.md |
+| `d39c68d` | 2026-10-30 | Log session close (item 142) in MEMORY.md |
+| `2b00f45` | 2026-10-30 | Article: add Nomenclature section (30 abbreviations) after the abstract |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
