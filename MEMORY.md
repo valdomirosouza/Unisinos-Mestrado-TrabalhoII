@@ -2022,6 +2022,32 @@ visual). **Pendências:** fotos dos autores (`IEEEbiography`), revisão da bio
 pelo orientador, leitura final do PDF pelo autor; eventual ciclo 4
 (snowballing completo dos 65 como insumo da descoberta).
 
+### 141. Correção do draft v2: Fig. 2 (rede de citações) estendida ao ciclo 3
+
+**Prompt:** "A imagen com as ligações entre os artigos na página 7 segue sem
+a atualizaçao com os novos artigos."
+
+**Contexto:** no item 139 a Fig. 2 ficou escopada em P01–P89 (com nota de
+escopo no texto) — o autor pediu a extensão completa para a submissão.
+
+**Ações:** (1) Arestas do ciclo 3 computadas pela união de varredura
+full-text dos 12 PDFs (match de título normalizado/DOI contra o
+`Papers_Index`) + `referenced_works` da OpenAlex: **13 arestas novas**
+(2 só na OA: P93→P76 e P97→P14). (2) Figura regenerada por script: 65
+arestas, 50 nós (entram P44, P93, P97, P101, P112, P121; estilo tracejado
+para o ciclo 3; legenda com 4 conjuntos). (3) Mudanças estruturais
+refletidas no texto (§IV-E, caption, hubs do Background, contribuição da
+introdução): **P14 sobe a 7 citações internas** (nível do P10), **P76 vira
+hub** (citado por P28, P93, P97), **P97 empata com P28 como maior citador**
+(7 saídas, incluindo o survey intra-ciclo P121). (4) Artefato canônico
+`citacoes-cruzadas-P01-P123.md` (método, tabela das 13 arestas, totais;
+base P01–P89 preservada), indexado no README raiz; nota no README do
+artigo. (5) Recompilado: 11 pp., 0 citações não resolvidas, sem overfull
+novo; PDF reenviado ao autor.
+
+**Comandos:** pypdf (varredura), OpenAlex API, gerador python do tikz,
+pdflatex/bibtex; `check-rsl.sh` OK. Commit `3b8d4c0` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2121,6 +2147,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Comparação global P01–P123: `reviews/comparacao-avaliadores-global-P01-P123.csv`/`.md` + 3 consolidados por avaliador P01–P123 (74 linhas) · bullets no DASHBOARD e `reviews/README.md`
 
 - Artigo IEEE Access draft v2: `artigo/main.tex` (ciclo 3 incorporado — PRISMA 3 colunas, cluster MTTD/MTTR nominal, n=74), `referencias.bib` (+12), `main.pdf` (11 pp.), README do artigo
+
+- Fig. 2 do artigo estendida ao ciclo 3 (65 arestas, 50 nós) · `citacoes-cruzadas-P01-P123.md` · READMEs raiz e do artigo
 
 ## Histórico de commits da sessão
 
@@ -2263,5 +2291,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `6725412` | 2026-10-30 | Article draft v2: incorporate cycle 3 (corpus 65, nominal MTTD/MTTR cluster, n=74 reliability) |
 | `780e180` | 2026-10-30 | Log article draft v2 (item 139) in MEMORY.md |
 | `2f0da8f` | 2026-10-30 | Fix MEMORY commit-table placement: add item-138 row, move draft-v2 row before closing note |
+| `325b57a` | 2026-10-30 | Log session close (item 140) in MEMORY.md |
+| `3b8d4c0` | 2026-10-30 | Article Fig. 2 extended to cycle 3: citation network P01-P123 (65 edges, 50 nodes) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
