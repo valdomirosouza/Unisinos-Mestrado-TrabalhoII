@@ -38,13 +38,13 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 | SCORE_QA médio (mediana)               |                                         **2,73** (2,75) |
 | Banda Alta / Média / Baixa             |                                         **11 / 10 / 1** |
 | Lacuna sistemática                     | **RQ3/QA3 (evidência empírica)** — nenhum Incluir pleno |
-| **Corpus consolidado (2 ciclos)**      |                                        **53** (33 + 20) |
+| **Corpus consolidado (3 ciclos)** | **65** (33 + 20 + 12) |
 
 > **Correção (2026-10-27):** o SCORE_QA médio do ciclo 2 é **2,73** (soma 60,0 ÷ 22 avaliados, conferida em `resultados-consolidados-ciclo2.csv`); o valor 2,75 anteriormente exibido como média era a **mediana**.
 
 ## 🔄 Ciclo 3 — avaliação tripla concluída (atualizado em 2026-10-29)
 
-**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação integral pelos três avaliadores concluída (Claude, ChatGPT e Gemini)** → comparação entre avaliadores (Etapa 8) pendente.
+**Status:** descoberta → elegibilidade → extração PICOC → triagem → **avaliação integral pelos três avaliadores concluída (Claude, ChatGPT e Gemini)** → **comparação entre avaliadores (Etapa 8) concluída em 2026-10-29: κ = 1,00 nos três pares, unanimidade 13/13**. Restam as fichas de extração (Etapa 9) e os 5 Springer adiados (adendo futuro).
 
 | Estágio                                                                                                                                                                                                   | Resultado                                                                                                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -55,6 +55,7 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 | Avaliação integral — **Claude** (13/13)                                                                                                                                                                   | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`resultados-consolidados-ciclo3.csv`](resultados-consolidados-ciclo3.csv) · [gráficos](graficos-ciclo3.md) |
 | Avaliação integral — **ChatGPT** (13/13, 2026-10-29) | **12 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`ChatGPT/`](ChatGPT/README.md) |
 | Avaliação integral — **Gemini** (13/13, 2026-10-29) | **1 Incluir** (P94) · **11 Incluir c/ ressalvas** · **1 Excluir** (P106, E2) — [`Gemini/`](Gemini/README.md) |
+| Comparação entre avaliadores (Etapa 8, 2026-10-29) | **Acordo 100% · Cohen κ = 1,00 (3 pares) · Fleiss κ = 1,00 · 13/13 unânimes** — [`comparacao-avaliadores-ciclo3.md`](comparacao-avaliadores-ciclo3.md) |
 
 **Escores dos três avaliadores (n = 13; média ≠ mediana, rotuladas separadamente):**
 
@@ -64,7 +65,7 @@ Segundo ciclo de atualização da RSL, com 49 candidatos identificados pelo auto
 | ChatGPT   | 4,12 (4,0)               | 2,69 (2,5)               | 5 · 8 · 0      | 12 c/ ressalvas · 1 Excluir             |
 | Gemini    | 3,77 (4,0)               | 2,92 (3,0)               | 9 · 3 · 1      | 1 Incluir · 11 c/ ressalvas · 1 Excluir |
 
-**No colapso Incluir/Excluir os três avaliadores são unânimes nos 13 estudos** (12 Incluir · 1 Excluir — P106, E2); κ formal na Etapa 8. Destaque do ciclo: primeiro cluster de primários com **MTTD/MTTR nominal vs. baseline executado** (P100, P101, P102, P123), todos sob ressalva de estrato. O corpus consolidado da RSL **permanece 53** até a comparação entre avaliadores (Etapa 8) fechar o ciclo.
+**No colapso Incluir/Excluir os três avaliadores são unânimes nos 13 estudos** (12 Incluir · 1 Excluir — P106, E2): acordo 100% e **κ = 1,00** nos três pares (Fleiss 1,00), sem nenhuma divergência protocolar ou de mérito — ver [`comparacao-avaliadores-ciclo3.md`](comparacao-avaliadores-ciclo3.md). Destaque do ciclo: primeiro cluster de primários com **MTTD/MTTR nominal vs. baseline executado** (P100, P101, P102, P123), confirmado pelos três avaliadores, todos sob ressalva de estrato. Com a Etapa 8 fechada, o **corpus consolidado passa a 65** (53 + 12 do ciclo 3); os 5 Springer adiados poderão acrescer via adendo.
 
 ## 📈 Números-chave
 

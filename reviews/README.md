@@ -56,6 +56,8 @@ _Total: 14 + 4 + 2 = 20 estudos. Se o protocolo restringir o corpus a estudos pr
 
 **Comparação do ciclo 2 (três avaliadores):** [`comparacao-avaliadores-ciclo2.md`](comparacao-avaliadores-ciclo2.md) — acordo de decisão 81,8–95,5% por par (Claude×Gemini κ = 0,65; Fleiss κ = 0,36 sob paradoxo da prevalência); **as 4 divergências são todas protocolares** (3 = aplicação da emenda de estratos pelo ChatGPT; 1 = destino do cluster de carga cognitiva em P85), nenhuma de mérito · dados em [`comparacao-avaliadores-ciclo2.csv`](comparacao-avaliadores-ciclo2.csv).
 
+**Comparação do ciclo 3 (três avaliadores, 2026-10-29):** [`comparacao-avaliadores-ciclo3.md`](comparacao-avaliadores-ciclo3.md) — **acordo 100% nos três pares (Cohen's κ = 1,00; Fleiss κ = 1,00; 13/13 unânimes)**, nenhuma divergência protocolar ou de mérito e nenhum PDR novo; a lição do ciclo 2 (emendas no texto normativo via render) está verificada — zero `NA` do ChatGPT; exclusão unânime do P106 (E2) · dados em [`comparacao-avaliadores-ciclo3.csv`](comparacao-avaliadores-ciclo3.csv).
+
 Avaliações paralelas dos mesmos 20 estudos produzidas com **ChatGPT** (conjunto separado dos pareceres oficiais), usadas na [comparação entre avaliadores](comparacao-avaliadores.md) (concordância 90%, κ = 0,74). Um arquivo por estudo em [`ChatGPT/`](ChatGPT/):
 
 [P20](ChatGPT/P20_avaliacao_RSL.md) · [P21](ChatGPT/P21_avaliacao_RSL.md) · [P22](ChatGPT/P22_avaliacao_RSL.md) · [P23](ChatGPT/P23_avaliacao_RSL.md) · [P24](ChatGPT/P24_avaliacao_RSL.md) · [P25](ChatGPT/P25_avaliacao_RSL.md) · [P26](ChatGPT/P26_avaliacao_RSL.md) · [P27](ChatGPT/P27_avaliacao_RSL.md) · [P28](ChatGPT/P28_avaliacao_RSL.md) · [P29](ChatGPT/P29_avaliacao_RSL.md) · [P30](ChatGPT/P30_avaliacao_RSL.md) · [P31](ChatGPT/P31_avaliacao_RSL.md) · [P32](ChatGPT/P32_avaliacao_RSL.md) · [P33](ChatGPT/P33_avaliacao_RSL.md) · [P34](ChatGPT/P34_avaliacao_RSL.md) · [P35](ChatGPT/P35_avaliacao_RSL.md) · [P37](ChatGPT/P37_avaliacao_RSL.md) · [P38](ChatGPT/P38_avaliacao_RSL.md) · [P39](ChatGPT/P39_avaliacao_RSL.md) · [P40](ChatGPT/P40_avaliacao_RSL.md)
@@ -150,7 +152,9 @@ Estatísticas Claude: RQ média 3,85/mediana 4,0 · QA média 2,77/mediana 3,0.
 > (12 Incluir · 1 Excluir — P106, E2); escores dos três no
 > [`Papers_Index`](../Papers_Index.md), resumo no [dashboard](DASHBOARD.md) e
 > adendo nº 5 na [síntese consolidada](relatorio-sintese-consolidado.md).
-> Restam a comparação entre avaliadores (Etapa 8) e as fichas (Etapa 9).
+> A comparação (Etapa 8) fechou em 2026-10-29 com **κ = 1,00 e unanimidade
+> 13/13** ([`comparacao-avaliadores-ciclo3.md`](comparacao-avaliadores-ciclo3.md));
+> o corpus consolidado passa a **65**. Restam as fichas (Etapa 9).
 
 ## Padrões e observações para a síntese
 

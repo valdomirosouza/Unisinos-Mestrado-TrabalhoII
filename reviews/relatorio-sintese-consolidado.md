@@ -226,3 +226,42 @@ Leituras principais (fonte: `resultados-consolidados-ciclo3.csv` +
    por par, Fleiss, prevalência) e fichas de extração (Etapa 9); só então o
    corpus consolidado (hoje **53**) incorpora o ciclo 3. Permanecem as
    pendências dos 5 Springer (biblioteca/COMUT) e do snowballing (P90).
+
+
+## Adendo (2026-10-29, nº 6) — ciclo 3: comparação entre avaliadores (Etapa 8) e fecho do ciclo
+
+A comparação formal dos três avaliadores sobre os 13 estudos do ciclo 3
+(`scripts/compute-kappa.py`, decisão colapsada Incluir/Excluir) fecha a
+Etapa 8 com resultado inédito nos três ciclos:
+
+| Métrica | Claude × ChatGPT | Claude × Gemini | ChatGPT × Gemini |
+| --- | :---: | :---: | :---: |
+| Acordo | 100% (13/13) | 100% (13/13) | 100% (13/13) |
+| Cohen's κ | 1,00 | 1,00 | 1,00 |
+| MAE SCORE_RQ / SCORE_QA | 0,42 / 0,31 | 0,38 / 0,23 | 0,50 / 0,54 |
+
+**Fleiss' κ = 1,00 · 13/13 unânimes · prevalência de Incluir 92,3%** —
+*almost perfect* (Landis & Koch), sem a deflação do paradoxo da prevalência
+dos ciclos 1–2 porque não há desacordo algum a penalizar. Leituras:
+
+1. **Nenhuma divergência protocolar ou de mérito; nenhum PDR novo.** A
+   exclusão do P106 (E2 — Agentic AI nominal) é unânime e confirma o flag da
+   triagem com evidência PICOC.
+2. **A lição protocolar do ciclo 2 está verificada:** com as emendas
+   PDR-0006/0007 injetadas no texto normativo dos prompts pelo render
+   (regra R2/PDR-0004), o ChatGPT avaliou todos os fora-de-estrato com
+   ressalva (zero `NA`), em vez de encerrá-los na triagem como fez com
+   P62/P69/P81 no ciclo 2.
+3. **Diferenças restantes são de intensidade:** rubrica QA do ChatGPT mais
+   conservadora (5 bandas Alta vs. 9; acordo de banda 62%); Claude × Gemini
+   com bandas idênticas (13/13) e menores MAEs — detalhes em
+   [`comparacao-avaliadores-ciclo3.md`](comparacao-avaliadores-ciclo3.md).
+4. **Corpus consolidado: 53 → 65.** Com a Etapa 8 fechada, o ciclo 3
+   incorpora seus 12 incluídos (P91, P93, P94, P97, P100, P101, P102, P110,
+   P112, P119, P121, P123 — todos com ressalva de estrato obrigatória,
+   PDR-0006/0007, exceto a dimensão fundacional-condicional R1 de
+   P110/P112/P121). O cluster MTTD/MTTR nominal (P100/P101/P102/P123) entra
+   no corpus com validação tripla. Pendências que podem alterar o corpus em
+   adendos futuros: 5 capítulos Springer adiados (biblioteca/COMUT),
+   snowballing obrigatório (rota de recaptura do P90) e fichas de extração
+   (Etapa 9).
