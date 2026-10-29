@@ -2081,6 +2081,20 @@ sem overfull novo. Nota no README do artigo. PDF reenviado ao autor.
 **Comandos:** inventário de siglas via python/regex; pdflatex (TinyTeX);
 `check-rsl.sh` OK. Commit `2b00f45` + push.
 
+### 144. Encerramento da sessão (2026-10-30, 3º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+item 143 (Nomenclature) já registrado; linha do commit `a4fb577` (log do
+item 143) acrescentada à tabela.
+
+**Estado ao encerrar:** draft v2 do artigo **pronto para a leitura final do
+autor** — ciclo 3 incorporado, Fig. 2 com a rede completa (65 arestas) e
+seção Nomenclature (30 siglas) após o abstract; 11 páginas, compilação
+limpa. **Pendências de submissão:** fotos dos autores (`IEEEbiography`),
+revisão da bio pelo orientador, conferência visual do PDF pelo autor.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2331,5 +2345,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `9497c91` | 2026-10-30 | Log article Fig. 2 cycle-3 extension (item 141) in MEMORY.md |
 | `d39c68d` | 2026-10-30 | Log session close (item 142) in MEMORY.md |
 | `2b00f45` | 2026-10-30 | Article: add Nomenclature section (30 abbreviations) after the abstract |
+| `a4fb577` | 2026-10-30 | Log article Nomenclature section (item 143) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
