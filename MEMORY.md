@@ -1835,6 +1835,37 @@ Commit `76acef7` + push.
 **Pendências:** fichas de extração (Etapa 9) dos 12 incluídos; 5 Springer
 (biblioteca/COMUT, adendo futuro); snowballing obrigatório (rota P90).
 
+### 134. Ciclo 3, Etapa 9 — fichas de extração dos 12 incluídos
+
+**Prompt:** "Execute o /rsl-extracao para as fichas da Etapa 9".
+
+**Ações (skill `/rsl-extracao`, fan-out — um agente de leitura por PDF, lotes
+de 7 + 5):** 24 fichas (`report/PXX-extraction.csv` EN + `-ptBR.csv`, 12
+campos no formato do ciclo 2, âncoras §/página por claim, Art. I no campo
+MTTD/MTTR) + consolidados `consolidated-extraction-ciclo3.csv` e `-ptBR.csv`
+(12 linhas, headers do ciclo 2). Validação por script no scratchpad
+(estrutura, nomes exatos de campos, Paper ID, âncoras, formato do score) —
+12/12 OK nos dois idiomas. Relevância: **8 High · 4 Medium** (Medium: P91,
+P110, P119, P121). Indexação: seção ciclo 3 no `report/README.md`
+(contagens 59 → 71), árvore do README raiz, linha da Etapa 9 no DASHBOARD.
+
+**Achados de extração relevantes (com âncora no PDF):** P100 — Tabela III
+(p. 5) dá MTTD p90 −83% e **MTTR p90 −91%** (240→20 min); o "−63% MTTR" é o
+agregado da conclusão do paper (§VIII) — ficha reporta ambos. P102 — mede
+**só MTTD** (47,2→8,5 min, −82%, baseline 3 SREs); MTTR não é medido.
+P123 — baseline SOAR interno EXECUTADO sobre os mesmos 143 alertas DARPA
+OPTC (MTTC −37,8%, Wilcoxon p<0,001); baselines externos [10][23] apenas
+indicativos (derivados da literatura). P93 — inconsistência interna
+Tabela 3 × Tabela 9 registrada na ficha. P94 — não mede MTTD/MTTR (eficácia
+de segurança 600/600 bloqueios). P112 — corpus do survey confirmado: 181
+registros; é preprint arXiv.
+
+**Comandos:** 12 agentes de leitura em background; `validate_fichas.py`
+(scratchpad); `check-rsl.sh` OK. Commit `7f7f52a` + push.
+
+**Pendências:** 5 Springer (biblioteca/COMUT); snowballing (rota P90);
+artigo IEEE Access (fotos de autores, revisão de bio, PDF final).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1924,6 +1955,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Ciclo 3, Etapa 7 (tripla): 26 pareceres externos em `reviews/ChatGPT/` e `reviews/Gemini/` (+READMEs) · escores dos 3 avaliadores e statuses no `Papers_Index` · `Conjunto` final no CSV do ciclo · DASHBOARD · adendo nº 5 na síntese (+PDF)
 
 - Ciclo 3, Etapa 8: `reviews/comparacao-avaliadores-ciclo3.csv` + `.md` (κ = 1,00, 13/13 unânimes) · corpus 65 no DASHBOARD · adendo nº 6 na síntese (+PDF)
+
+- Ciclo 3, Etapa 9: 24 fichas `report/P91…P123-extraction[-ptBR].csv` + `consolidated-extraction-ciclo3[-ptBR].csv` · seção ciclo 3 no `report/README.md` · linha Etapa 9 no DASHBOARD
 
 ## Histórico de commits da sessão
 
@@ -2053,5 +2086,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `69322bd` | 2026-10-29 | Cycle-3 stage-7 triple consolidation: ChatGPT and Gemini evaluations received |
 | `b7af4f1` | 2026-10-29 | Log cycle-3 triple consolidation (item 132) in MEMORY.md |
 | `76acef7` | 2026-10-29 | Cycle-3 stage-8 evaluator comparison: perfect agreement (kappa 1.00), corpus 53 -> 65 |
+| `19be8b2` | 2026-10-29 | Log cycle-3 evaluator comparison (item 133) in MEMORY.md |
+| `7f7f52a` | 2026-10-29 | Cycle-3 stage-9 extraction cards: 12 included studies (EN + pt-BR + consolidated) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
