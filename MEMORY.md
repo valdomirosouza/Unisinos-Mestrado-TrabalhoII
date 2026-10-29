@@ -2005,6 +2005,23 @@ coverage; OpenAlex (arestas do ciclo 3); `check-rsl.sh` OK. Commit
 **Pendências do artigo:** fotos dos autores (IEEEbiography), revisão da bio
 pelo orientador, conferência visual do PDF pelo autor.
 
+### 140. Encerramento da sessão (2026-10-30)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+itens 139 (draft v2 do artigo) e a correção de tabela já registrados;
+linhas dos commits `780e180` (log do item 139) e `2f0da8f` (correção da
+posição na tabela — a inserção automática havia caído após a nota de
+fechamento e omitido a linha do item 138) acrescentadas ao histórico.
+
+**Estado ao encerrar:** ciclo 3 completo e fechado (corpus **65**;
+comparação global P01–P123 com Fleiss 0,60); **artigo IEEE Access draft v2**
+compilado (11 pp., `artigo/main.pdf` entregue ao autor para conferência
+visual). **Pendências:** fotos dos autores (`IEEEbiography`), revisão da bio
+pelo orientador, leitura final do PDF pelo autor; eventual ciclo 4
+(snowballing completo dos 65 como insumo da descoberta).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2244,5 +2261,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `809396e` | 2026-10-29 | Log global comparison update to P01-P123 (item 137) in MEMORY.md |
 | `6b4ba74` | 2026-10-29 | Log session close (item 138) in MEMORY.md |
 | `6725412` | 2026-10-30 | Article draft v2: incorporate cycle 3 (corpus 65, nominal MTTD/MTTR cluster, n=74 reliability) |
+| `780e180` | 2026-10-30 | Log article draft v2 (item 139) in MEMORY.md |
+| `2f0da8f` | 2026-10-30 | Fix MEMORY commit-table placement: add item-138 row, move draft-v2 row before closing note |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
