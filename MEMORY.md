@@ -2095,6 +2095,30 @@ seção Nomenclature (30 siglas) após o abstract; 11 páginas, compilação
 limpa. **Pendências de submissão:** fotos dos autores (`IEEEbiography`),
 revisão da bio pelo orientador, conferência visual do PDF pelo autor.
 
+### 145. Artigo — Apêndice "Study-Identifier Index" (Pxx → referências)
+
+**Prompt:** "No artigo eu falo o tempo todo em P01 PNN, P121, mas no final
+nas referências nao existe um link entre o artigo/paper P01 e a referência.
+Faz sentido tem a lista de P01 - Título do Paper/Artigo até P121 -
+Título/Paper? Ou segue 'anônimo'".
+
+**Ações:** sim — implementado na prática padrão de SLRs: **apêndice** (não
+numerado, antes do Acknowledgment) com tabela full-width mapeando **todos os
+82 IDs Pxx visíveis no artigo** às referências numeradas (4 pares de colunas
+ID/Ref.; sem marca = incluído no corpus; † = avaliado e excluído; ‡ =
+candidato triado que aparece só na rede de citações). Ponteiros adicionados
+na §II-C (primeira menção a Pxx) e na caption da Fig. 2. Para que todos os
+nós da rede resolvessem, os **8 candidatos sem entrada no bib** (P41, P44,
+P45, P50, P68, P70, P80, P89 — excluídos na triagem do ciclo 2) ganharam
+entradas em `referencias.bib` (dados do Papers_Index; grafias corrigidas,
+ex. Maglaras/Aggarwal). Recompilado: **12 páginas** (era 11), apêndice nas
+pp. 9–10, 0 citações/refs não resolvidas, sem overfull novo. Nota no README
+do artigo; PDF reenviado ao autor. Título completo por ID segue só no
+`Papers_Index.md` (evita duplicar a bibliografia no apêndice).
+
+**Comandos:** gerador python da tabela; pdflatex/bibtex; `check-rsl.sh` OK.
+Commit `b812127` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2198,6 +2222,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Fig. 2 do artigo estendida ao ciclo 3 (65 arestas, 50 nós) · `citacoes-cruzadas-P01-P123.md` · READMEs raiz e do artigo
 
 - Artigo: seção Nomenclature (30 siglas) em `artigo/main.tex` (+PDF recompilado, nota no README do artigo)
+
+- Artigo: apêndice Study-Identifier Index (82 IDs → refs) + 8 entradas novas no `referencias.bib` (+PDF 12 pp., README do artigo)
 
 ## Histórico de commits da sessão
 
@@ -2346,5 +2372,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d39c68d` | 2026-10-30 | Log session close (item 142) in MEMORY.md |
 | `2b00f45` | 2026-10-30 | Article: add Nomenclature section (30 abbreviations) after the abstract |
 | `a4fb577` | 2026-10-30 | Log article Nomenclature section (item 143) in MEMORY.md |
+| `bfbacae` | 2026-10-30 | Log session close (item 144) in MEMORY.md |
+| `b812127` | 2026-10-30 | Article: appendix mapping study identifiers (Pxx) to bibliography entries |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
