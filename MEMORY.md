@@ -1919,6 +1919,30 @@ incluídos**; corpus permanece **65**. **Ciclo 3 sem pendências abertas.**
 `derive-index.py`; `build_pdf_cons.py`; `check-rsl.sh` OK. Commit `3ec85fd`
 + push.
 
+### 137. Comparação global dos avaliadores atualizada para P01–P123
+
+**Prompt:** "Atualize a comparação global dos avaliadores para P01–P123".
+
+**Ações (artefatos NOVOS — os P01–P88 permanecem como registros históricos,
+Art. VI):** (1) Consolidados por avaliador P01–P123 (74 linhas = 61 + 13 do
+ciclo 3): `resultados-consolidados-claude-P01-P123.csv` (header canônico de
+23 colunas + Conjunto), `-chatgpt-` e `-gemini-` (schema simples de 8
+colunas; linhas do ciclo 3 derivadas da `comparacao-avaliadores-ciclo3.csv`
++ títulos do índice). (2) `comparacao-avaliadores-global-P01-P123.csv`
+(lado a lado, 74×12) + narrativa `.md`. (3) `compute-kappa.py` sobre n=74:
+**acordo 91,9–93,2% por par · Cohen κ 0,62 (CL×GPT, agora _substancial_) /
+0,58 / 0,58 · Fleiss 0,60 · 66/74 unânimes** (62 inclusões + 4 exclusões:
+P30, P39, P86, P106) · prevalência de Incluir 90,1% · MAEs: RQ
+0,43/0,52/0,61 e QA 0,31/0,45/0,61. (4) Leitura central: **as 8 divergências
+são todas pré-ciclo 3** e mapeiam as 3 famílias protocolares fechadas pelos
+PDR-0003/0004/0005 — o ciclo 3, já sob essas regras, saiu 100% unânime
+(κ = 1,00), verificando-as empiricamente; todos os indicadores globais
+subiram vs. P01–P88 (κ 0,51–0,57 → 0,58–0,62; Fleiss 0,53 → 0,60).
+(5) Indexado em `reviews/README.md` e DASHBOARD.
+
+**Comandos:** `compute-kappa.py --evaluators Claude,ChatGPT,Gemini`;
+`check-rsl.sh` OK. Commit `da6c3f7` + push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2014,6 +2038,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Ciclo 3, snowballing: `research/snowballing-ciclo3.md` (rota P90 — negativo; vínculo P92→P90 registrado) · status no DASHBOARD
 
 - Ciclo 3, fecho: `protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md` · 5 statuses no `Papers_Index` · notas datadas (PRISMA, triagem, snowballing) · adendo nº 7 na síntese (+PDF) · DASHBOARD
+
+- Comparação global P01–P123: `reviews/comparacao-avaliadores-global-P01-P123.csv`/`.md` + 3 consolidados por avaliador P01–P123 (74 linhas) · bullets no DASHBOARD e `reviews/README.md`
 
 ## Histórico de commits da sessão
 
@@ -2149,5 +2175,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `fec88da` | 2026-10-29 | Cycle-3 snowballing (P90 recapture route): no recapture, no new candidates |
 | `73b7201` | 2026-10-29 | Log cycle-3 snowballing (item 135) in MEMORY.md |
 | `3ec85fd` | 2026-10-29 | PDR-0008: remove the 5 unretrieved Springer chapters (reports not retrieved) |
+| `bb0474f` | 2026-10-29 | Log Springer retry failure and PDR-0008 removal (item 136) in MEMORY.md |
+| `da6c3f7` | 2026-10-29 | Global evaluator comparison updated to P01-P123 (74 evaluations per evaluator) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
