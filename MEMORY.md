@@ -2119,6 +2119,21 @@ do artigo; PDF reenviado ao autor. Título completo por ID segue só no
 **Comandos:** gerador python da tabela; pdflatex/bibtex; `check-rsl.sh` OK.
 Commit `b812127` + push.
 
+### 146. Encerramento da sessão (2026-10-30, 4º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+item 145 (apêndice de IDs) já registrado; linha do commit `3005e97` (log do
+item 145) acrescentada à tabela.
+
+**Estado ao encerrar:** draft v2 do artigo em **12 páginas**, completo para
+a leitura final do autor — ciclo 3 incorporado, Fig. 2 com a rede completa,
+Nomenclature (30 siglas) e Apêndice Study-Identifier Index (82 IDs → refs;
+bib com 82 estudos + 6 metodológicas). **Pendências de submissão:** fotos
+dos autores (`IEEEbiography`), revisão da bio pelo orientador, conferência
+visual do PDF pelo autor.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2374,5 +2389,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `a4fb577` | 2026-10-30 | Log article Nomenclature section (item 143) in MEMORY.md |
 | `bfbacae` | 2026-10-30 | Log session close (item 144) in MEMORY.md |
 | `b812127` | 2026-10-30 | Article: appendix mapping study identifiers (Pxx) to bibliography entries |
+| `3005e97` | 2026-10-30 | Log article study-identifier appendix (item 145) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
