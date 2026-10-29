@@ -21,6 +21,7 @@ Os 19 fundacionais do Trabalho I agora têm pareceres padronizados (inclusão he
 
 **Consolidados por avaliador (P01–P88, 61 linhas cada):** [Claude](resultados-consolidados-claude-P01-P88.csv) · [ChatGPT](resultados-consolidados-chatgpt-P01-P88.csv) · [Gemini](resultados-consolidados-gemini-P01-P88.csv) — os três avaliadores cobrem o corpus completo (avaliações crus em [`ChatGPT/`](ChatGPT/) e [`Gemini/`](Gemini/)).
 
+📐 **[Comparação GLOBAL entre avaliadores P01–P123](comparacao-avaliadores-global-P01-P123.md)** (2026-10-29, retrato corrente): acordo 91,9–93,2% por par · κ 0,58–0,62 · Fleiss **0,60** · **66/74 decisões unânimes** (ciclo 3: 13/13, κ = 1,00) · 8 divergências, todas pré-ciclo 3 e fechadas por PDR (R1/R2/R3).
 📐 **[Comparação GLOBAL entre avaliadores P01–P88](comparacao-avaliadores-global.md)** (2026-10-26): acordo 90–92% por par · κ 0,51–0,57 · Fleiss **0,53** · **53/61 decisões unânimes** (fundacionais 19/19) · 8 divergências em 3 famílias protocolares, nenhuma de mérito — validação tripla do corpus completa ([CSV](comparacao-avaliadores-global.csv)).
 
 ## 🔄 Ciclo 2 (P41–P89) — concluído em 2026-09-10
