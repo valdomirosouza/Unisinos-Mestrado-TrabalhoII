@@ -142,9 +142,8 @@ The contributions are:
         for incident response and adjacent IT operations, organized into
         a taxonomy of agentic paradigms (Section~\ref{sec:results});
   \item triple-verified bibliometrics (OpenAlex, Crossref, Scopus) and an
-        internal cross-citation map of the corpus (52 citing edges
-        through cycle~2, with cycle-3 studies already citing back into
-        it) identifying its conceptual hubs;
+        internal cross-citation map of the corpus (65 citing edges across
+        all three cycles) identifying its conceptual hubs;
   \item evidence synthesis tracking the review's central claim across
         cycles: \textbf{no nominal MTTD/MTTR measurement with an own
         baseline existed through cycle~2; a first four-study cluster
@@ -193,8 +192,8 @@ instead.
 The present review updates a foundational SLR (19 studies, P01--P19).
 Cross-citation analysis over the full corpus (Section~\ref{sec:cross})
 shows that three foundational surveys act as conceptual hubs ---
-\cite{P10} (7 internal citations), \cite{P09} (6), and \cite{P14} (5) ---
-confirming their role as the definitional substrate on which the
+\cite{P10} and \cite{P14} (7 internal citations each) and \cite{P09} (6)
+--- confirming their role as the definitional substrate on which the
 empirical studies build.
 
 % =====================================================================
@@ -860,28 +859,37 @@ interface; moderator of workload effects \\
 \subsection{Cross-citation structure of the corpus}
 \label{sec:cross}
 
-Internal citation analysis over the corpus through cycle~2
-(triple-checked: OpenAlex \texttt{referenced\_works}, Crossref reference
-lists, Scopus \texttt{REF()} by title; union of 52 citing edges) shows a
+Internal citation analysis over the full corpus (through cycle~2:
+triple-checked across OpenAlex \texttt{referenced\_works}, Crossref
+reference lists, and Scopus \texttt{REF()} by title; cycle-3 additions:
+union of a full-text reference scan of each included PDF and
+OpenAlex-deposited references; 65 citing edges in total) shows a
 coherent field rather than a disconnected collection of papers. The hubs are the definitional
-surveys --- \cite{P10} (7 internal citations), \cite{P09} (6),
-\cite{P14} (5) --- followed by the AIOps/MLOps and log-anomaly surveys
-\cite{P16,P65} (3 each). The most connected citer is the multi-agent
-SOC system of~\cite{P28} (7 outgoing edges, five of them to cycle-2
-candidates), and cycle-2 studies cite back into the corpus
-(\cite{P79}$\rightarrow$\cite{P20,P78};
-\cite{P76}$\rightarrow$\cite{P39,P83}), indicating that the cycles
+surveys --- \cite{P10} and \cite{P14} (7 internal citations each),
+\cite{P09} (6) --- followed by the AIOps/MLOps and log-anomaly surveys
+\cite{P16,P65} and the SOC hyper-automation study \cite{P76} (3 each).
+The most connected citers are the multi-agent SOC system of~\cite{P28}
+(7 outgoing edges, five of them to cycle-2 candidates) and the cycle-3
+SOC-as-a-service framework of~\cite{P97} (7 outgoing edges, all into
+earlier cycles or intra-cycle), and each cycle's studies cite back into
+the corpus (\cite{P79}$\rightarrow$\cite{P20,P78};
+\cite{P76}$\rightarrow$\cite{P39,P83};
+\cite{P93}$\rightarrow$\cite{P06,P76}), indicating that the cycles
 sample one evolving conversation. Source-specific quirks are material
 to reproducibility: Scopus resolves references by \emph{title}, not
 DOI; one open-access venue is not indexed there at all; and preprint
 DOIs can split citation identity across sources (handled here by alias
-resolution). Fig.~\ref{fig:crosscite} renders the network through
-cycle~2. The cycle-3 inclusions continue the pattern: OpenAlex-deposited
-references alone (a lower bound, as deposits are incomplete) already add
-nine edges from cycle-3 studies into the corpus --- the SOC-as-a-service
-framework \cite{P97} cites seven corpus studies, among them
-\cite{P14,P73,P76,P79} and the intra-cycle survey \cite{P121}, and the
-agentic-SOC evaluation \cite{P93} cites \cite{P06,P76}.
+resolution). Fig.~\ref{fig:crosscite} renders the full network. The
+cycle-3 inclusions add 13 edges and deepen the pattern: the
+SOC-as-a-service framework \cite{P97} cites seven corpus studies ---
+among them \cite{P14,P73,P76,P79} and the intra-cycle survey \cite{P121}
+--- tying the multi-agent SOC system \cite{P28} as the most connected
+citer; the agentic-SOC evaluation \cite{P93} cites \cite{P06,P76}; and
+the cycle-3 surveys cite both the definitional layer and cycle-2 studies
+\cite{P101,P112,P121}. Two consequences for the hub structure: the SOC
+hyper-automation study \cite{P76}, cited by \cite{P28,P93,P97}, becomes
+a hub, and \cite{P14} rises to 7 internal citations, level with
+\cite{P10}.
 
 \begin{figure*}[!t]
 \centering
@@ -891,53 +899,60 @@ agentic-SOC evaluation \cite{P93} cites \cite{P06,P76}.
   fnode/.style={draw, circle, fill=gray!45, minimum size=7.5mm, inner sep=0pt},
   c1node/.style={draw, circle, fill=gray!15, minimum size=7.5mm, inner sep=0pt},
   c2node/.style={draw, circle, fill=white, minimum size=7.5mm, inner sep=0pt},
-  hub/.style={line width=1.1pt},
+  c3node/.style={draw, circle, fill=white, densely dashed, minimum size=7.5mm, inner sep=0pt},
+  hub/.style={line width=1.1pt, solid},
   e/.style={-{Stealth[length=1.8mm]}, gray!65, semithick}
 ]
-\node[fnode] (P01) at (0.00,6.20) {P01};
-\node[fnode] (P02) at (0.88,6.14) {P02};
-\node[fnode] (P03) at (1.75,5.95) {P03};
-\node[fnode] (P05) at (2.58,5.64) {P05};
-\node[fnode] (P06) at (3.35,5.22) {P06};
-\node[fnode,hub] (P09) at (4.06,4.69) {P09};
-\node[fnode,hub] (P10) at (4.69,4.06) {P10};
-\node[fnode] (P12) at (5.22,3.35) {P12};
-\node[fnode] (P13) at (5.64,2.58) {P13};
-\node[fnode,hub] (P14) at (5.95,1.75) {P14};
-\node[fnode] (P15) at (6.14,0.88) {P15};
-\node[fnode,hub] (P16) at (6.20,0.00) {P16};
-\node[fnode] (P18) at (6.14,-0.88) {P18};
-\node[c1node] (P20) at (5.95,-1.75) {P20};
-\node[c1node] (P24) at (5.64,-2.58) {P24};
-\node[c1node] (P26) at (5.22,-3.35) {P26};
-\node[c1node] (P28) at (4.69,-4.06) {P28};
-\node[c1node] (P29) at (4.06,-4.69) {P29};
-\node[c1node] (P31) at (3.35,-5.22) {P31};
-\node[c1node] (P33) at (2.58,-5.64) {P33};
-\node[c1node] (P37) at (1.75,-5.95) {P37};
-\node[c1node] (P38) at (0.88,-6.14) {P38};
-\node[c1node] (P39) at (0.00,-6.20) {P39};
-\node[c1node] (P40) at (-0.88,-6.14) {P40};
-\node[c2node] (P41) at (-1.75,-5.95) {P41};
-\node[c2node] (P43) at (-2.58,-5.64) {P43};
-\node[c2node] (P45) at (-3.35,-5.22) {P45};
-\node[c2node] (P50) at (-4.06,-4.69) {P50};
-\node[c2node] (P52) at (-4.69,-4.06) {P52};
-\node[c2node] (P53) at (-5.22,-3.35) {P53};
-\node[c2node] (P54) at (-5.64,-2.58) {P54};
-\node[c2node] (P55) at (-5.95,-1.75) {P55};
-\node[c2node,hub] (P65) at (-6.14,-0.88) {P65};
-\node[c2node] (P68) at (-6.20,-0.00) {P68};
-\node[c2node] (P70) at (-6.14,0.88) {P70};
-\node[c2node] (P72) at (-5.95,1.75) {P72};
-\node[c2node] (P73) at (-5.64,2.58) {P73};
-\node[c2node] (P76) at (-5.22,3.35) {P76};
-\node[c2node] (P77) at (-4.69,4.06) {P77};
-\node[c2node] (P78) at (-4.06,4.69) {P78};
-\node[c2node] (P79) at (-3.35,5.22) {P79};
-\node[c2node] (P80) at (-2.58,5.64) {P80};
-\node[c2node] (P83) at (-1.75,5.95) {P83};
-\node[c2node] (P89) at (-0.88,6.14) {P89};
+\node[fnode] (P01) at (0.00,6.80) {P01};
+\node[fnode] (P02) at (0.85,6.75) {P02};
+\node[fnode] (P03) at (1.69,6.59) {P03};
+\node[fnode] (P05) at (2.50,6.32) {P05};
+\node[fnode] (P06) at (3.28,5.96) {P06};
+\node[fnode,hub] (P09) at (4.00,5.50) {P09};
+\node[fnode,hub] (P10) at (4.65,4.96) {P10};
+\node[fnode] (P12) at (5.24,4.33) {P12};
+\node[fnode] (P13) at (5.74,3.64) {P13};
+\node[fnode,hub] (P14) at (6.15,2.90) {P14};
+\node[fnode] (P15) at (6.47,2.10) {P15};
+\node[fnode,hub] (P16) at (6.68,1.27) {P16};
+\node[fnode] (P18) at (6.79,0.43) {P18};
+\node[c1node] (P20) at (6.79,-0.43) {P20};
+\node[c1node] (P24) at (6.68,-1.27) {P24};
+\node[c1node] (P26) at (6.47,-2.10) {P26};
+\node[c1node] (P28) at (6.15,-2.90) {P28};
+\node[c1node] (P29) at (5.74,-3.64) {P29};
+\node[c1node] (P31) at (5.24,-4.33) {P31};
+\node[c1node] (P33) at (4.65,-4.96) {P33};
+\node[c1node] (P37) at (4.00,-5.50) {P37};
+\node[c1node] (P38) at (3.28,-5.96) {P38};
+\node[c1node] (P39) at (2.50,-6.32) {P39};
+\node[c1node] (P40) at (1.69,-6.59) {P40};
+\node[c2node] (P41) at (0.85,-6.75) {P41};
+\node[c2node] (P43) at (0.00,-6.80) {P43};
+\node[c2node] (P44) at (-0.85,-6.75) {P44};
+\node[c2node] (P45) at (-1.69,-6.59) {P45};
+\node[c2node] (P50) at (-2.50,-6.32) {P50};
+\node[c2node] (P52) at (-3.28,-5.96) {P52};
+\node[c2node] (P53) at (-4.00,-5.50) {P53};
+\node[c2node] (P54) at (-4.65,-4.96) {P54};
+\node[c2node] (P55) at (-5.24,-4.33) {P55};
+\node[c2node,hub] (P65) at (-5.74,-3.64) {P65};
+\node[c2node] (P68) at (-6.15,-2.90) {P68};
+\node[c2node] (P70) at (-6.47,-2.10) {P70};
+\node[c2node] (P72) at (-6.68,-1.27) {P72};
+\node[c2node] (P73) at (-6.79,-0.43) {P73};
+\node[c2node,hub] (P76) at (-6.79,0.43) {P76};
+\node[c2node] (P77) at (-6.68,1.27) {P77};
+\node[c2node] (P78) at (-6.47,2.10) {P78};
+\node[c2node] (P79) at (-6.15,2.90) {P79};
+\node[c2node] (P80) at (-5.74,3.64) {P80};
+\node[c2node] (P83) at (-5.24,4.33) {P83};
+\node[c2node] (P89) at (-4.65,4.96) {P89};
+\node[c3node] (P93) at (-4.00,5.50) {P93};
+\node[c3node] (P97) at (-3.28,5.96) {P97};
+\node[c3node] (P101) at (-2.50,6.32) {P101};
+\node[c3node] (P112) at (-1.69,6.59) {P112};
+\node[c3node] (P121) at (-0.85,6.75) {P121};
 \draw[e] (P01) to[bend right=12] (P09);
 \draw[e] (P01) to[bend right=12] (P10);
 \draw[e] (P03) to[bend right=12] (P02);
@@ -990,25 +1005,43 @@ agentic-SOC evaluation \cite{P93} cites \cite{P06,P76}.
 \draw[e] (P79) to[bend right=12] (P78);
 \draw[e] (P89) to[bend right=12] (P65);
 \draw[e] (P89) to[bend right=12] (P70);
-\begin{scope}[shift={(0,-7.6)}]
-  \node[fnode, minimum size=4.5mm] (lg1) at (-7.2,0) {};
+\draw[e] (P93) to[bend right=12] (P06);
+\draw[e] (P93) to[bend right=12] (P76);
+\draw[e] (P97) to[bend right=12] (P14);
+\draw[e] (P97) to[bend right=12] (P37);
+\draw[e] (P97) to[bend right=12] (P73);
+\draw[e] (P97) to[bend right=12] (P76);
+\draw[e] (P97) to[bend right=12] (P79);
+\draw[e] (P97) to[bend right=12] (P83);
+\draw[e] (P97) to[bend right=12] (P121);
+\draw[e] (P101) to[bend right=12] (P121);
+\draw[e] (P112) to[bend right=12] (P05);
+\draw[e] (P121) to[bend right=12] (P14);
+\draw[e] (P121) to[bend right=12] (P44);
+\begin{scope}[shift={(0,-8.4)}]
+  \node[fnode, minimum size=4.5mm] (lg1) at (-8.6,0) {};
   \node[right=1mm of lg1, anchor=west] {Foundational (P01--P19)};
-  \node[c1node, minimum size=4.5mm] (lg2) at (-2.6,0) {};
+  \node[c1node, minimum size=4.5mm] (lg2) at (-4.4,0) {};
   \node[right=1mm of lg2, anchor=west] {Cycle 1 (P20--P40)};
-  \node[c2node, minimum size=4.5mm] (lg3) at (1.4,0) {};
+  \node[c2node, minimum size=4.5mm] (lg3) at (-0.9,0) {};
   \node[right=1mm of lg3, anchor=west] {Cycle 2 (P41--P89)};
-  \node[c2node, hub, minimum size=4.5mm] (lg4) at (5.0,0) {};
-  \node[right=1mm of lg4, anchor=west] {Hub ($\geq$3 internal citations)};
+  \node[c3node, minimum size=4.5mm] (lg4) at (2.6,0) {};
+  \node[right=1mm of lg4, anchor=west] {Cycle 3 (P90--P126)};
+  \node[c2node, hub, minimum size=4.5mm] (lg5) at (6.1,0) {};
+  \node[right=1mm of lg5, anchor=west] {Hub ($\geq$3 internal citations)};
 \end{scope}
 \end{tikzpicture}%
 }
-\caption{Internal citation network of the corpus (52 edges, A$\rightarrow$B =
-``A cites B''), triple-checked across OpenAlex, Crossref, and Scopus.
-Definitional surveys \cite{P10,P09,P14} are the main hubs; the multi-agent
-SOC system \cite{P28} is the most connected citer (7 outgoing edges, five
-of them to cycle-2 studies), and cycle-2 studies cite back into the
-corpus --- evidence of one evolving research conversation rather than
-disjoint samples.}
+\caption{Internal citation network of the corpus (65 edges,
+A$\rightarrow$B = ``A cites B''; edges through cycle~2 triple-checked
+across OpenAlex, Crossref, and Scopus; cycle-3 edges from full-text
+reference scans united with OpenAlex deposits). Definitional surveys
+\cite{P10,P14,P09} are the main hubs, now joined by the SOC
+hyper-automation study \cite{P76}; the multi-agent SOC system \cite{P28}
+and the cycle-3 SOC-as-a-service framework \cite{P97} are the most
+connected citers (7 outgoing edges each), and each new cycle cites back
+into the corpus --- evidence of one evolving research conversation
+rather than disjoint samples.}
 \label{fig:crosscite}
 \end{figure*}
 
