@@ -1807,6 +1807,34 @@ Commit `69322bd` + push.
 CSVs por avaliador e comparação do ciclo) e fichas (Etapa 9); 5 Springer;
 snowballing (P90).
 
+### 133. Ciclo 3, Etapa 8 — comparação entre avaliadores (κ = 1,00; corpus 53 → 65)
+
+**Prompt:** "Execute o /rsl-comparacao para o ciclo 3".
+
+**Ações (skill `/rsl-comparacao`):** (1)
+`reviews/comparacao-avaliadores-ciclo3.csv` (13 linhas, esquema do ciclo 2:
+escores/banda/rec dos 3 avaliadores + decisões por par). (2)
+`compute-kappa.py --evaluators Claude,ChatGPT,Gemini`: **acordo 100% nos três
+pares · Cohen κ = 1,00 · Fleiss κ = 1,00 · 13/13 unânimes** (prevalência de
+Incluir 92,3%; sem deflação por paradoxo de prevalência — não há desacordo).
+MAEs: RQ 0,42/0,38/0,50 e QA 0,31/0,23/0,54 (CL×GPT / CL×GEM / GPT×GEM);
+acordo de banda 62% / **100%** / 62%. (3) Narrativa em
+`comparacao-avaliadores-ciclo3.md`: **nenhuma divergência protocolar ou de
+mérito → nenhum PDR novo**; a lição do ciclo 2 (emendas no texto normativo,
+R2/PDR-0004) está verificada empiricamente — com PDR-0006/0007 no corpo
+normativo via render, o ChatGPT avaliou todos os fora-de-estrato (zero `NA`,
+ao contrário de P62/P69/P81 no ciclo 2); exclusão unânime do P106 (E2).
+(4) Fecho do ciclo: **corpus consolidado 53 → 65** (12 incluídos do ciclo 3)
+no DASHBOARD (linha da Etapa 8 + números-chave "3 ciclos") e **adendo nº 6**
+na síntese consolidada (+PDF regenerado). (5) Indexação no
+`reviews/README.md`.
+
+**Comandos:** `compute-kappa.py`; `build_pdf_cons.py`; `check-rsl.sh` OK.
+Commit `76acef7` + push.
+
+**Pendências:** fichas de extração (Etapa 9) dos 12 incluídos; 5 Springer
+(biblioteca/COMUT, adendo futuro); snowballing obrigatório (rota P90).
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1894,6 +1922,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - (repo Template-RSL, externo) `templates/prompt-avaliacao.md` v1.1.0 (marcadores limpos) · entrada [0.1.3] no `CHANGELOG.md`
 
 - Ciclo 3, Etapa 7 (tripla): 26 pareceres externos em `reviews/ChatGPT/` e `reviews/Gemini/` (+READMEs) · escores dos 3 avaliadores e statuses no `Papers_Index` · `Conjunto` final no CSV do ciclo · DASHBOARD · adendo nº 5 na síntese (+PDF)
+
+- Ciclo 3, Etapa 8: `reviews/comparacao-avaliadores-ciclo3.csv` + `.md` (κ = 1,00, 13/13 unânimes) · corpus 65 no DASHBOARD · adendo nº 6 na síntese (+PDF)
 
 ## Histórico de commits da sessão
 
@@ -2021,5 +2051,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | —         | 2026-10-29 | (repo Template-RSL, commit `8b0ce41`) Template prompt-avaliacao v1.1.0: clean markers resolvable by render-prompts.py — repositório irmão, externo a este |
 | `991b85c` | 2026-10-29 | Log Template-RSL v1.1.0 marker-fix replication (item 131) in MEMORY.md |
 | `69322bd` | 2026-10-29 | Cycle-3 stage-7 triple consolidation: ChatGPT and Gemini evaluations received |
+| `b7af4f1` | 2026-10-29 | Log cycle-3 triple consolidation (item 132) in MEMORY.md |
+| `76acef7` | 2026-10-29 | Cycle-3 stage-8 evaluator comparison: perfect agreement (kappa 1.00), corpus 53 -> 65 |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
