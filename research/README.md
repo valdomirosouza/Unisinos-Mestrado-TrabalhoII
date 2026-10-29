@@ -78,6 +78,7 @@ As saídas históricas foram produzidas com a v1.0.0 e são preservadas como evi
 ## Ciclo 3 (2026-10-27)
 
 - [`descoberta-ciclo3.md`](descoberta-ciclo3.md) — descoberta via API com a string canônica
+- [`snowballing-ciclo3.md`](snowballing-ciclo3.md) — **snowballing do ciclo 3 (rota de recaptura do P90)**, executado em 2026-10-29: backward (OpenAlex + varredura full-text dos 121 PDFs do acervo) sem recaptura; forward (7 citantes do P90) sem candidato novo em domínio — único citante em domínio é o P92 (Springer adiado), que cita o P90. P90 permanece INELEGÍVEL (PDR-0006).
   (OpenAlex + Scopus; varreduras de outcome e recência): funil 684 → 584 → 37 candidatos
   (P90–P126), recall de calibração e achado do P21.
 - [`ciclo3-data/`](ciclo3-data/) — dumps brutos auditáveis: `c3-openalex.json`,
