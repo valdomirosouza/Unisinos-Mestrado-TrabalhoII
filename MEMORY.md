@@ -1892,6 +1892,33 @@ insumo de um eventual ciclo 4.
 **Comandos:** OpenAlex API (works/doi, cites:); pypdf sobre docs/;
 `check-rsl.sh` OK. Commit `fec88da` + push.
 
+### 136. Ciclo 3 — 2ª tentativa dos 5 Springer falhou; removidos (PDR-0008)
+
+**Prompt:** "Tente baixar os 5 capítulos Springer via Claude in Chrome. Já
+estou logado no [proxy CAPES ez101]. Tente mais uma vez e em caso de falha
+removemos os papers desta pesquisa."
+
+**Ações:** (1) Fluxo validado do ciclo 3 (doc do Template-RSL):
+`doi-org.<proxy>/<doi>` → página do capítulo autenticada em
+`link-springer-com.<proxy>` → fetch same-origin de `/content/pdf/<doi>.pdf`
+com validação do magic `%PDF-`. (2) Resultado: **os 5 falharam igualmente**
+(P92, P95, P109, P122, P126) — endpoint de PDF retorna **HTTP 204 vazio** e
+as páginas exibem "Log in via an institution"; a assinatura CAPES/Unisinos
+não cobre os volumes CCIS/LNCS/LNNS de 2026. (3) Aplicada a decisão do
+condutor: **PDR-0008** — removidos da revisão como "reports not retrieved"
+(PRISMA 2020), exclusão por indisponibilidade (não por mérito), sem adendo
+futuro; rota biblioteca/COMUT descartada; a rota de reavaliação P92→P90 do
+snowballing encerra-se junto. (4) Artefatos: PDR-0008 + índice de PDRs;
+5 statuses no `Papers_Index` (MD derivado); nota datada no PRISMA ciclo 3;
+adendo datado na `triagem-ciclo3.md`; nota no `snowballing-ciclo3.md`;
+DASHBOARD ("ciclo 3 encerrado"); **adendo nº 7** na síntese (+PDF).
+Funil final do ciclo 3: 37 → 19 → 5 not retrieved → 14 → 13 → **12
+incluídos**; corpus permanece **65**. **Ciclo 3 sem pendências abertas.**
+
+**Comandos:** Claude in Chrome (navigate + javascript fetch/magic);
+`derive-index.py`; `build_pdf_cons.py`; `check-rsl.sh` OK. Commit `3ec85fd`
++ push.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -1985,6 +2012,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Ciclo 3, Etapa 9: 24 fichas `report/P91…P123-extraction[-ptBR].csv` + `consolidated-extraction-ciclo3[-ptBR].csv` · seção ciclo 3 no `report/README.md` · linha Etapa 9 no DASHBOARD
 
 - Ciclo 3, snowballing: `research/snowballing-ciclo3.md` (rota P90 — negativo; vínculo P92→P90 registrado) · status no DASHBOARD
+
+- Ciclo 3, fecho: `protocolo/pdr/PDR-0008-remocao-dos-springer-nao-recuperados.md` · 5 statuses no `Papers_Index` · notas datadas (PRISMA, triagem, snowballing) · adendo nº 7 na síntese (+PDF) · DASHBOARD
 
 ## Histórico de commits da sessão
 
@@ -2118,5 +2147,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `7f7f52a` | 2026-10-29 | Cycle-3 stage-9 extraction cards: 12 included studies (EN + pt-BR + consolidated) |
 | `cff6dd9` | 2026-10-29 | Log cycle-3 extraction cards (item 134) in MEMORY.md |
 | `fec88da` | 2026-10-29 | Cycle-3 snowballing (P90 recapture route): no recapture, no new candidates |
+| `73b7201` | 2026-10-29 | Log cycle-3 snowballing (item 135) in MEMORY.md |
+| `3ec85fd` | 2026-10-29 | PDR-0008: remove the 5 unretrieved Springer chapters (reports not retrieved) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
