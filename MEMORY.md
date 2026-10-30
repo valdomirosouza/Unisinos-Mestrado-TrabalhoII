@@ -363,6 +363,42 @@ rastreadas.
 
 **Commit:** `7db8071`.
 
+### 159. Template-RSL 0.2.0 — réguas de estrato, prompt v1.2.0, guia didático
+
+**Prompt:** "Os ultimos ajustes que fiz no projeto aqui foram replicados no
+repositorio Template-RSL? Faz sentido replicar algo pra lá?" → avaliação
+(nada replicado desde o fix v1.1.0; propostos itens 1–3 + práticas não
+replicáveis) → "Aplique 1 + 2 + 3 como release v1.2.0" → mid-turn: "Inclua
+um glossário e um diagrama mermaid para deixar mais ludico e didatico para
+leigos como fuciona o repositório Template-RSL".
+
+**Ações (repo Template-RSL, release 0.2.0, commits `28b6880` + `be9f960`):**
+
+1. `.gitignore`: `AGENTS.md`, `.agents/`, `.serena/` (espelhos/caches que
+   já apareciam não rastreados lá, como aqui no item 158).
+2. `protocolo/criterios.md`: **duas réguas de estrato** escolhidas no adopt
+   — régua A (dupla: Qualis + SJR) e régua B (única internacional:
+   percentil CiteScore Scopus em quartis, Q1–Q3 elegíveis, proceedings pelo
+   percentil da série; Qualis/SJR informativos), com precedente explícito
+   do PDR-0009 desta instância; E1 reescrito para a régua adotada.
+3. `templates/prompt-avaliacao.md` **v1.2.0** + `FIELD_MAP` do
+   `render-prompts.py`: marcadores de estrato renomeados para casar com as
+   colunas do índice canônico (QUALIS→PERCENTIL_SCOPUS, SJR→SJR_QUARTIL —
+   QUALIS já mapeava para `scopus_percentile`, rótulo trocado); linha da
+   etapa 2 do `WORKFLOW.md` idem; `CITATION.cff` 0.2.0; CHANGELOG [0.2.0].
+4. `docs/como-funciona.md` (novo): guia para leigos — metáfora do tribunal,
+   **diagrama mermaid** do ciclo 1–9 com camada de governança
+   (constituição/PDR/check-rsl) e **glossário de 25 termos**; README ganhou
+   diagrama compacto e seção "Novo por aqui?", novo doc indexado no mapa.
+
+**Validações:** render testado com índice sintético — detectado e corrigido
+vazamento de marcadores `{{...}}` citados no changelog em comentário do
+template (mesma classe do achado v1.1.0; grafados sem chaves); após o fix,
+só PERSONA/RQS ficam como "preencher na instância". `check-rsl.sh` OK antes
+do commit. **Incidente:** `scripts/__pycache__/` (gerado pelo
+`py_compile` do teste) entrou no commit do release — removido e ignorado no
+commit seguinte (`be9f960`).
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2680,5 +2716,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `c23e48f` | 2026-10-30 | Author's manual adjustments to the article + provenance sync (edições manuais do autor) |
 | `49f0115` | 2026-10-30 | Log author's article adjustments (item 157) in MEMORY.md |
 | `7db8071` | 2026-10-30 | Ignore auto-generated AGENTS.md and .agents/ mirrors |
+| `edd8b59` | 2026-10-30 | Log AGENTS.md gitignore entry (item 158) in MEMORY.md |
+| `28b6880` | 2026-10-30 | (Template-RSL) Release 0.2.0: stratum rulers, prompt v1.2.0, didactic guide, gitignore |
+| `be9f960` | 2026-10-30 | (Template-RSL) Remove accidentally committed __pycache__ and ignore it |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
