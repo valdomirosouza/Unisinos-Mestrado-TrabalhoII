@@ -1,6 +1,6 @@
 # Agentic AI como Copilot na Resposta a Incidentes — a pesquisa, apresentada
 
-**Trabalho II · PPGCA · Unisinos** — Revisão Sistemática da Literatura (RSL) conduzida por Valdomiro de Oliveira Souza Jr., sob orientação do Prof. Dr. Rafael Kunst. Esta página apresenta o projeto de ponta a ponta: as fases, como as LLMs foram usadas como instrumento de pesquisa (com o humano no comando), os resultados e um glossário para navegar os termos técnicos.
+**Trabalho II · PPGCA · Unisinos** — Revisão Sistemática da Literatura (RSL) conduzida por Valdomiro de Oliveira Souza Jr., sob orientação do Prof. Dr. Rafael Kunst, no **PPGCA (Programa de Pós-Graduação em Computação Aplicada) da Unisinos** — programa de excelência voltado à formação de mestres e doutores na área de tecnologia e inovação. Esta página apresenta o projeto de ponta a ponta: as fases, como as LLMs foram usadas como instrumento de pesquisa (com o humano no comando), os resultados e um glossário para navegar os termos técnicos.
 
 > ⚠️ **Repositório privado.** Contém PDFs de artigos com direitos autorais (IEEE, Elsevier, Springer, MDPI, Wiley etc.) em `docs/`, mantidos apenas para a avaliação acadêmica.
 
