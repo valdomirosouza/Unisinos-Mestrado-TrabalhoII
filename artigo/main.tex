@@ -73,10 +73,10 @@ two cycles no included study measured MTTD or MTTR nominally against its
 own executed baseline; the third cycle surfaces a first cluster of four
 primary studies that do --- MTTD reduced by 82--83\%, MTTR by 72--91\%,
 and time-to-containment by 38\% against executed human, polling, or SOAR
-baselines --- but all four appear in sub-threshold venues under a
-mandatory stratum caveat, with production evidence from a single vendor,
-moving the headline claim from \emph{unverified} to \emph{supported by
-early, low-stratum evidence}. Second, outside that cluster the evidence
+baselines --- two of the four below the review's venue bar (bottom-quartile
+or unindexed venues) under a mandatory caveat, and production evidence
+from a single vendor, moving the headline claim from \emph{unverified} to
+\emph{supported by early primary evidence}. Second, outside that cluster the evidence
 remains dominated by detection proxies (accuracy, F1, AUC) and
 qualitative claims, while secondary sources relay dramatic gains (e.g.,
 MTTR from 8~hours to 90~minutes) that primary experiments are only
@@ -175,7 +175,7 @@ The contributions are:
   \item evidence synthesis tracking the review's central claim across
         cycles: \textbf{no nominal MTTD/MTTR measurement with an own
         baseline existed through cycle~2; a first four-study cluster
-        emerges in cycle~3, entirely at sub-threshold venues}
+        emerges in cycle~3, half of it below the review's venue bar}
         (Section~\ref{sec:mttr}), together with a catalog of the proxies
         otherwise used;
   \item a bridge to the human-factors literature: a cluster of studies
@@ -321,25 +321,34 @@ no additional eligible candidate.
 
 \subsection{Selection criteria}
 Inclusion required: publication year $\geq$2020 (I1); an identifiable
-peer-reviewed venue (I2); venue quality thresholds (I3--I4, national
-Qualis A1--A2 and SJR Q1--Q2); at least one citation in any of three
-indexers, with a recency exception for papers younger than 12~months
-(I5); and thematic adherence --- an \emph{agentic} approach in the
-\emph{IR/AIOps/SOC} domain (I6). Exclusion criteria: sub-threshold venue
-strata (E1), non-agentic approaches (E2), out-of-domain studies (E3),
-duplicates (E4), and non-peer-reviewed material (E5). A dated protocol
-amendment in cycle~2 allowed four candidates outside the I3/I4 strata to
-proceed to full-text assessment \emph{with a mandatory stratum caveat};
-the amendment is itself part of the audit trail and, notably, is the
-root cause of three of the eight residual inter-rater divergences
-(Section~\ref{sec:reliability}).
+peer-reviewed venue (I2); a venue-quality threshold (I3): the venue's
+\textbf{Scopus CiteScore percentile mapped to quartiles, with Q1--Q3
+($\geq$25th percentile) eligible} and bottom-quartile or unindexed venues
+ineligible; at least one citation in any of three indexers, with a
+recency exception for papers younger than 12~months (I5); and thematic
+adherence --- an \emph{agentic} approach in the \emph{IR/AIOps/SOC}
+domain (I6). Exclusion criteria: sub-threshold venues (E1), non-agentic
+approaches (E2), out-of-domain studies (E3), duplicates (E4), and
+non-peer-reviewed material (E5). Operationally, the first three cycles
+expressed the venue cut through the Brazilian Qualis classification with
+SJR quartiles as auxiliary input; for international validity the review
+conductor later ratified the criterion directly on the Scopus percentile
+scale (a dated protocol decision), under which every historical
+eligibility decision was re-read: all previously caveated inclusions at
+Q1--Q3 stand without a venue caveat, and the three inclusions below the
+bar keep a mandatory caveat (Section~\ref{sec:mttr}). A dated protocol
+amendment in cycle~2 allowed four candidates outside the then-current
+strata to proceed to full-text assessment \emph{with a mandatory
+caveat}; the amendment is itself part of the audit trail and, notably,
+is the root cause of three of the eight residual inter-rater
+divergences (Section~\ref{sec:reliability}).
 
 Cycle~3 brought the review's first conference papers (26 of 37
 candidates), for which the journal-oriented I3/I4 strata are undefined.
 Two further dated decisions were ratified before screening: the stratum
 of a conference paper is derived from the \emph{Scopus CiteScore
 percentile of its proceedings series} mapped through the same
-percentile-to-stratum scale used for journals, with series lacking a
+quartile scale used for journals, with series lacking a
 CiteScore ineligible at screening; and the stratum amendment was renewed
 for the cycle, so sub-threshold candidates again proceeded with the
 mandatory caveat. Finally, five accepted candidates (Springer proceedings
@@ -428,7 +437,7 @@ precedent from an earlier cycle.
 \node[box, below=5mm of c1a] (c1b)
   {Screened (bibliometric eligibility)\\\textbf{n = 20} ($-1$ internal duplicate)};
 \node[excl, right=4mm of c1b.east, anchor=west] (c1bx)
-  {Excluded at screening: \textbf{2}\\(E1: venue stratum)};
+  {Excluded at screening: \textbf{2}\\(E1: venue tier)};
 \node[box, below=5mm of c1b] (c1c)
   {Assessed in full text\\(RQ1--RQ5; QA1--QA4)\\\textbf{n = 18}};
 \node[excl, right=4mm of c1c.east, anchor=west] (c1cx)
@@ -446,16 +455,16 @@ precedent from an earlier cycle.
   {Candidates identified by the authors\\(targeted discovery)\\\textbf{n = 49}};
 \node[box, below=5mm of c2a] (c2b)
   {Screened: eligibility verified in 3 indexers;\\
-   4 sub-stratum kept \emph{with caveat} (amendment)\\\textbf{n = 49}};
+   4 sub-threshold kept \emph{with caveat} (amendment)\\\textbf{n = 49}};
 \node[excl, right=4mm of c2b.east, anchor=west] (c2bx)
   {Excluded at screening: \textbf{27}\\(E2 non-agentic: 19;\\E3 out of domain: 8;\\
    full-text PICOC evidence)};
 \node[box, below=5mm of c2b] (c2c)
   {Assessed in full text\\(3 independent evaluators)\\\textbf{n = 22}};
 \node[excl, right=4mm of c2c.east, anchor=west] (c2cx)
-  {Excluded after assessment: \textbf{2}\\(no RQ adherence: 1;\\non-agentic + stratum: 1)};
+  {Excluded after assessment: \textbf{2}\\(no RQ adherence: 1;\\non-agentic + venue: 1)};
 \node[incl, below=5mm of c2c] (c2d)
-  {\textbf{Included: n = 20}\\(5 foundational-conditional;\\3 with stratum caveat)};
+  {\textbf{Included: n = 20}\\(5 foundational-conditional;\\3 with venue caveat)};
 \draw[arr] (c2a) -- (c2b);
 \draw[arr] (c2b) -- (c2c);
 \draw[arr] (c2c) -- (c2d);
@@ -466,17 +475,17 @@ precedent from an earlier cycle.
 \node[box, below=3.5mm of c3t] (c3a)
   {Candidates identified by re-executing\\the validated query (5 sweeps)\\\textbf{n = 37}};
 \node[box, below=5mm of c3a] (c3b)
-  {Screened: conference strata via series\\CiteScore percentile; 15 sub-stratum kept\\
+  {Screened: conference strata via series\\CiteScore percentile; 15 sub-threshold kept\\
    \emph{with caveat} (renewed amendment)\\\textbf{n = 19}};
 \node[excl, right=4mm of c3b.east, anchor=west] (c3bx)
-  {Excluded at screening: \textbf{18}\\(E1: series without\\CiteScore / stratum)};
+  {Excluded at screening: \textbf{18}\\(E1: series without\\CiteScore / tier)};
 \node[box, below=5mm of c3b] (c3c)
   {Assessed in full text\\(3 independent evaluators)\\\textbf{n = 13}};
 \node[excl, right=4mm of c3c.east, anchor=west] (c3cx)
   {Reports not retrieved: \textbf{5}\\(publisher access)\\
    Excluded at screening: \textbf{1}\\(E3; PICOC evidence)};
 \node[incl, below=5mm of c3c] (c3d)
-  {\textbf{Included: n = 12}\\(3 foundational-conditional;\\11 with stratum caveat)};
+  {\textbf{Included: n = 12}\\(3 foundational-conditional;\\11 kept with caveat at screening)};
 \draw[arr] (c3a) -- (c3b);
 \draw[arr] (c3b) -- (c3c);
 \draw[arr] (c3c) -- (c3d);
@@ -499,8 +508,8 @@ precedent from an earlier cycle.
 \caption{PRISMA~2020 flow of the three update cycles over the
 foundational corpus (adapted for a review update). From cycle~2 onward,
 screening exclusions are anchored in a full-text PICOC extraction of
-every retrievable candidate; the stratum amendments, the
-conference-series stratum rule, and the removal of the five unretrieved
+every retrievable candidate; the venue amendments, the
+conference-series percentile rule, and the removal of the five unretrieved
 reports are dated decisions in the audit trail.}
 \label{fig:prisma}
 \end{figure*}
@@ -532,8 +541,10 @@ The 65-study corpus comprises the 19 foundational studies, 14 cycle-1,
 ``foundational-conditional'' studies
 \cite{P24,P33,P52,P54,P72,P77,P79,P110,P112,P121} that migrate to
 background material if the protocol is restricted to primary studies
-(primary corpus: 55). Eleven of the twelve cycle-3 inclusions carry the
-mandatory stratum caveat.
+(primary corpus: 55). Under the ratified percentile scale, three
+inclusions in the whole corpus (one Q4 series and two unindexed venues,
+all from cycle~3) carry the mandatory venue caveat; the other 62 sit at
+Q1--Q3 (53 Q1, 8 Q2, 1 Q3).
 
 \subsection{Quality assessment and extraction}
 Each assessed study received: (i)~a verified bibliometric record
@@ -591,8 +602,8 @@ alongside an MCP-based security framework for agent pipelines
 \cite{P94}, agentic SOC evaluation and SOC-as-a-service frameworks
 \cite{P93,P97}, a consultative RAG responder \cite{P119}, a non-LLM
 rules-plus-ML agent architecture \cite{P91}, and three agentic-centered
-surveys \cite{P110,P112,P121} --- all but \cite{P94} under the stratum
-caveat.
+surveys \cite{P110,P112,P121} --- with \cite{P91,P101,P102} under the
+venue caveat (bottom-quartile or unindexed venues).
 
 \begin{table}[!t]
 \caption{Taxonomy of the included corpus (n=65; representative studies).}
@@ -636,7 +647,7 @@ however, remains middling, dominated by testbed and synthetic evidence.
 Across the first 61 assessments the pattern was stable --- \emph{the
 literature is conceptually rich and empirically thin precisely on the
 benefit claims that motivate it} --- and cycle~3 is the first measurable
-bend in that curve, at sub-threshold venues.
+bend in that curve, led by early-stage venues.
 
 \begin{figure}[!t]
 \centering
@@ -789,18 +800,20 @@ with nominal time metrics against executed baselines}:
 
 Three qualifications bound this cluster, and they are the reason the
 review's conclusion changes in degree rather than in kind. First,
-\emph{venue stratum}: all four studies appear in sub-threshold venues
-(proceedings series at the B2/B4 percentile bands or journals below the
-A1--A2 bar) and therefore carry the mandatory stratum caveat --- at the
-venue-quality bar of criteria I3/I4, the nominal-measurement gap is
-formally intact. Second, \emph{setting}: only \cite{P100} is a
-production deployment, and it is a single, author-affiliated one;
-\cite{P101,P102} are testbeds and \cite{P93} (which reports MTTD/MTTR
-reductions of 44--80\% for an agentic SOC against a traditional-SOC arm)
-runs both arms on synthetic telemetry with internally inconsistent
-tables, recorded in its assessment. Third, \emph{independence}: the
-three evaluators unanimously included all four studies, always with the
-caveat attached. Outside this cluster, proxies still dominate: a
+\emph{venue tier}: under the review's percentile criterion,
+\cite{P123} (a Q2 journal) and \cite{P100} (a Q3 proceedings series)
+are eligible outright, while \cite{P101} (a bottom-quartile series) and
+\cite{P102} (a journal not indexed in Scopus) sit below the Q1--Q3 bar
+and carry the mandatory venue caveat --- so half of the cluster, and in
+particular all of its \emph{testbed} MTTR evidence, remains below the
+bar, and none of it yet appears in a top-quartile venue. Second,
+\emph{setting}: only \cite{P100} is a production deployment, and it is
+a single, author-affiliated one; \cite{P101,P102} are testbeds and
+\cite{P93} (which reports MTTD/MTTR reductions of 44--80\% for an
+agentic SOC against a traditional-SOC arm) runs both arms on synthetic
+telemetry with internally inconsistent tables, recorded in its
+assessment. Third, \emph{independence}: the three evaluators unanimously
+included all four studies, with the applicable caveats attached. Outside this cluster, proxies still dominate: a
 74--84\% alert-volume reduction in a national SOC~\cite{P73}, operator
 reaction time falling from $\approx$276~s to $\approx$107~s with
 decision support~\cite{P81}, report latency of
@@ -810,10 +823,10 @@ timing~\cite{P83,P119}; detection studies report accuracy/F1/AUC only.
 The structural mismatch diagnosed after cycle~2 --- a field whose
 motivating claim is time-metric reduction but whose measurement practice
 is detection proxies --- is therefore beginning to close, from the
-low-stratum end of the publication spectrum first. As of late 2026, the
+early-stage end of the publication spectrum first. As of late 2026, the
 claim that agentic copilots reduce MTTD and MTTR is \emph{supported by
-early, low-stratum primary evidence and remains unverified at this
-review's venue-quality bar}.
+early primary evidence --- half of it below this review's venue bar,
+none of it top-quartile, multi-site, or independently replicated}.
 
 \subsection{Cognitive load: the complementary outcome}
 \label{sec:cogload}
@@ -827,7 +840,7 @@ it~\cite{P05,P16} --- yet, within IT incident response, \emph{no corpus
 study measures cognitive load directly}; alert fatigue appears only as
 an alert-volume proxy~\cite{P73}. Direct measurement does exist in
 adjacent domains, and cycle~2 deliberately retained this human-factors
-cluster (with stratum caveats under the protocol amendment):
+cluster (under a dated protocol amendment):
 neuroergonomic foundations of mental workload and
 engagement~\cite{P62}; a multimodal workload database with
 classification AUC up to 0.998 and NASA-TLX ground truth~\cite{P69};
@@ -1140,8 +1153,8 @@ with strong detection-quality results
 and governance agenda \cite{P01,P12,P17,P14,P94}. The headline
 operational claim now has its first primary support --- the cycle-3
 cluster of Section~\ref{sec:mttr} --- but that support is early,
-concentrated at sub-threshold venues, and production-grade in exactly
-one author-affiliated deployment. Reviewers and practitioners should
+partly below the venue bar, and production-grade in exactly one
+author-affiliated deployment. Reviewers and practitioners should
 still treat vendor-scale numbers (e.g., 8h $\rightarrow$ 90min MTTR) as
 hypotheses under test: the cycle-3 measurements are the first tests, not
 yet the established effect.
@@ -1158,10 +1171,10 @@ nominal measurement~\cite{P76} was \emph{unfavorable} to the agent
 remains a useful counterweight to publication bias. Cycle~3 adds a
 fourth, sociological observation: the first time-instrumented studies
 are appearing in early-stage venues --- regional conference series and
-recently launched journals --- ahead of the A-stratum literature. A
-review that enforced its venue bar without the caveat mechanism would
-have reported the measurement gap as fully intact; the dated-amendment
-design is what makes the field's actual turning point visible while
+recently launched journals --- ahead of the top-quartile literature. A
+review that dropped every below-bar candidate without the caveat
+mechanism would have seen only half of the cluster; the dated-amendment
+design is what keeps the field's actual turning point visible while
 keeping the evidence grade explicit.
 
 \subsection{Research gaps consolidated across the reviews}
@@ -1250,16 +1263,18 @@ a database-exhaustive census was not the goal of the update design. Five
 cycle-3 candidates were removed as PRISMA ``reports not retrieved''
 after two documented access attempts --- an unavailability exclusion
 whose effect on the synthesis is unknowable by construction.
-\textbf{Strata criteria.} Venue-quality thresholds (I3--I4) use a
-national classification (Qualis) alongside SJR, extended to proceedings
-series by Scopus CiteScore percentile in cycle~3; the dated amendments
-that retained sub-threshold studies are explicit. The pre-cycle-3
-conclusions of Sections~\ref{sec:mttr}--\ref{sec:cogload} hold with the
-caveated studies removed; the cycle-3 nominal-metric cluster, by
-contrast, exists \emph{only} under the caveat --- removing sub-threshold
-studies removes the cluster, which is precisely why its evidence grade
-is reported alongside its effect sizes, and why one of its four studies
-is additionally an author-affiliated single-vendor deployment.
+\textbf{Venue criteria.} The venue bar is the Scopus CiteScore
+percentile in quartiles (Q1--Q3 eligible), ratified by the review
+conductor for international validity; the first three cycles
+operationalized the same cut through the Brazilian Qualis
+classification with SJR as auxiliary input, and every dated amendment
+that retained below-bar studies is explicit in the audit trail. All
+conclusions hold with the three below-bar inclusions removed, with one
+quantified consequence: the cycle-3 nominal-metric cluster narrows from
+four studies to two (\cite{P100,P123}), losing its testbed MTTR
+evidence --- which is precisely why the evidence grade is reported
+alongside the effect sizes, and why the one production deployment is
+flagged as author-affiliated and single-vendor.
 \textbf{Evaluator validity.} All three raters are LLM systems;
 they are independent of each other but share potential model-family
 biases. The unanimity of the core corpus (89\%), the protocol-only
@@ -1286,8 +1301,8 @@ agendas, and a coherent citation structure --- and demonstrates
 prototype-level feasibility of agentic detection, RCA, and remediation.
 Its motivating claim is now beginning to be measured: a first cluster of
 four primary studies reports nominal MTTD, MTTR, and time-to-containment
-reductions of 38--91\% against executed baselines --- but entirely at
-sub-threshold venues, with production evidence from a single
+reductions of 38--91\% against executed baselines --- half of it below
+the review's venue bar, with production evidence from a single
 author-affiliated deployment, and still without any measurement of
 operator cognitive load in the presence of an agentic copilot. The most
 valuable next contribution to this literature is therefore a field

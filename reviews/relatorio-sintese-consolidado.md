@@ -283,3 +283,23 @@ Consequências: o funil do ciclo 3 fecha **definitivo** (37 identificados →
 incluídos**); o **corpus consolidado permanece 65**; a rota de reavaliação do
 P90 pela cadeia de citação P92→P90 (adendo do snowballing) encerra-se. Com
 isso, **o ciclo 3 não tem pendências abertas**.
+
+
+## Adendo (2026-10-30, nº 8) — PDR-0009: régua internacional de elegibilidade (percentil Scopus Q1–Q3)
+
+Por decisão do condutor
+([PDR-0009](../protocolo/pdr/PDR-0009-elegibilidade-por-quartil-do-percentil-scopus.md)),
+a revisão passa a usar como critério de qualidade de veículo **apenas o
+percentil CiteScore (Scopus), em quartis — Q1–Q3 elegíveis** (séries de
+proceedings seguem o PDR-0006). O Qualis/CAPES, classificação nacional sem
+validade internacional, e o quartil SJR tornam-se informativos. Aplicação
+**retroativa com ressalva**: nenhum estudo sai do corpus (65 mantido;
+distribuição 53 Q1 · 8 Q2 · 1 Q3 · 1 Q4 · 2 não indexados); as ressalvas de
+estrato Qualis dissolvem-se para os estudos em Q1–Q3; **P91, P101 e P102**
+(Q4/não indexados) permanecem com **ressalva obrigatória reformulada**.
+Efeito central na síntese: no cluster MTTD/MTTR nominal, **P100 (Q3) e P123
+(Q2) ficam dentro da régua sem ressalva de veículo** — a qualificação
+"todos sob ressalva de estrato" dos adendos nº 4–6 é re-lida: ela valia na
+régua Qualis; na régua internacional, metade do cluster está dentro da
+barra, e P101/P102 seguem ressalvados. Vereditos, funis e κ dos ciclos 1–3
+não são reabertos (Art. VI).

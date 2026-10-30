@@ -25,5 +25,6 @@ Regras:
 | [PDR-0006](PDR-0006-estrato-de-conference-papers-pelo-percentil-da-serie.md) | Estrato de conference papers pelo percentil Scopus da série | ratificado | 2026-10-28 |
 | [PDR-0007](PDR-0007-renovacao-da-emenda-de-estratos-para-o-ciclo-3.md) | Renovação da emenda de estratos para o ciclo 3 | ratificado | 2026-10-28 |
 | [PDR-0008](PDR-0008-remocao-dos-springer-nao-recuperados.md) | Remoção dos capítulos Springer não recuperados (reports not retrieved) | ratificado | 2026-10-29 |
+| [PDR-0009](PDR-0009-elegibilidade-por-quartil-do-percentil-scopus.md) | Elegibilidade por quartil do percentil Scopus (Q1–Q3); Qualis/SJR informativos | ratificado | 2026-10-30 |
 
 Template para novos PDRs: [`PDR-TEMPLATE.md`](PDR-TEMPLATE.md).
