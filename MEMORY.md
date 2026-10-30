@@ -428,6 +428,20 @@ datadas = registros históricos, não alteradas); árvore atualizada
 
 **Commit:** `6d1e40c`.
 
+### 161. Correção da descrição do PPGCA no README
+
+**Prompt:** "Uma correção no PPGCA da Unisinos. O PPGCA (Programa de
+Pós-Graduação em Computação Aplicada) da Unisinos é um programa de
+excelência voltado à formação de mestres e doutores na área de tecnologia e
+inovação."
+
+**Ações:** parágrafo de abertura do README raiz atualizado com a descrição
+fornecida pelo autor — o PPGCA descrito como programa de excelência que
+forma **mestres e doutores** na área de tecnologia e inovação (a
+apresentação do item 160 não trazia a descrição do programa).
+
+**Commit:** `c315662`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2750,5 +2764,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `be9f960` | 2026-10-30 | (Template-RSL) Remove accidentally committed __pycache__ and ignore it |
 | `2c80d55` | 2026-10-30 | Log Template-RSL 0.2.0 release (item 159) in MEMORY.md |
 | `6d1e40c` | 2026-10-30 | Rewrite root README as didactic project presentation for the advisor |
+| `100df46` | 2026-10-30 | Log README presentation rewrite (item 160) in MEMORY.md |
+| `c315662` | 2026-10-30 | Correct PPGCA description in README intro (user's wording) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
