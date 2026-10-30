@@ -2,7 +2,9 @@
 
 > 🧭 [📄 Artigo](README.md) · [🗂️ Fichas de extração](../report/README.md) · [🏠 README raiz](../README.md)
 
-Rastreabilidade da escrita do artigo (`main.tex`, draft v2 pós-PDR-0009):
+Rastreabilidade da escrita do artigo (`main.tex`, draft v2 pós-PDR-0009;
+blockquotes sincronizados em 2026-10-30 com os ajustes manuais do autor no
+abstract e no fecho da conclusão):
 para **cada parágrafo que usa informação extraída dos papers**, os
 trechos-fonte — tomados das **fichas de extração** (`report/PXX-extraction.csv`),
 que registram cada claim **com a âncora de seção/página do paper original** —
@@ -63,7 +65,9 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > and screened, 74 were assessed in full text by three independent
 > evaluators (agreement 91.9–93.2% per pair; Fleiss' κ=0.60;
 > 66/74 unanimous decisions, with a divergence-free third cycle), and
-> 65 studies were included. Three findings result. First, through
+> 65 studies were included. The review points to three findings,
+> although the strength of evidence differs substantially across them.
+> First, through
 > two cycles no included study measured MTTD or MTTR nominally against its
 > own executed baseline; the third cycle surfaces a first cluster of four
 > primary studies that do — MTTD reduced by 82–83%, MTTR by 72–91%,
@@ -1106,13 +1110,10 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > reductions of 38–91% against executed baselines — half of it below
 > the review's venue bar, with production evidence from a single
 > author-affiliated deployment, and still without any measurement of
-> operator cognitive load in the presence of an agentic copilot. The most
-> valuable next contribution to this literature is therefore a field
-> evaluation that clears the bar the early evidence does not: an agentic
-> copilot deployed with operations teams beyond a single vendor,
-> instrumented for MTTD/MTTR with its own baseline, paired with validated
-> workload instruments, and reported at a venue-quality level that lets
-> systematic reviews count it without caveat. That study is the direct
-> continuation of this review.
+> operator cognitive load in the presence of an agentic copilot. A useful
+> next step is a multi-site field evaluation involving operations teams
+> beyond a single vendor. It should measure MTTD and MTTR against an
+> explicit baseline, include validated workload instruments, and report
+> methods and results in enough detail for independent appraisal.
 
 ---
