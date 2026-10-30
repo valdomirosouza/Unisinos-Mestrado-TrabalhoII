@@ -2240,8 +2240,46 @@ PDR-0006/0007). Draft v2 do artigo em 12 páginas pronto para a leitura
 final. **Pendências de submissão:** fotos dos autores (`IEEEbiography`),
 revisão da bio pelo orientador, conferência final do PDF pelo autor.
 
+### 152. PDR-0009 — elegibilidade por quartil do percentil Scopus (Q1–Q3); Qualis/SJR informativos
+
+**Prompt:** "Como é uma publicação internacional o Estrato Qualis/CAPES não
+tem validade e vamos seguir a partir de agora apenas com o critério de
+Scopus (Percentil) = Q1, Q2 ou Q3 como elegíveis."
+
+**Análise de impacto (apresentada ao condutor antes de aplicar):** corpus de
+65 incluídos na régua nova = **53 Q1 · 8 Q2 · 1 Q3 · 1 Q4 · 2 não
+indexados** — as ressalvas de estrato Qualis dissolvem-se para todos os
+estudos Q1–Q3 (P62/P69 "A3" = Q2; P100 "B2 série" = Q3; P123 "A3" = Q2
+etc.); abaixo da régua ficam só **P91 (não indexado), P101 (Q4, 11%) e P102
+(não indexado)** — dois deles do cluster MTTD/MTTR nominal. Alcance
+decidido pelo condutor via pergunta estruturada: **"Retroativo c/
+ressalva"** — régua nova vale para toda a revisão, nenhum estudo sai do
+corpus, os 3 abaixo mantêm ressalva obrigatória reformulada (precedente
+PDR-0002/0007); vereditos/funis/κ dos ciclos 1–3 não são reabertos
+(Art. VI).
+
+**Ações:** (1) **PDR-0009** ratificado + índice de PDRs. (2) Statuses de
+P91/P101/P102 anotados no `Papers_Index` (MD derivado). (3) Nota datada no
+DASHBOARD; **adendo nº 8** na síntese (+PDF). (4) **Artigo reescrito na
+régua internacional**: abstract ("two of the four below the review's venue
+bar"), contribuição 3, §III-D (critério I3 = percentil em quartis, com nota
+histórica da operacionalização Qualis/SJR), nós e caption da figura PRISMA
+("venue tier/caveat"), taxonomia, §IV-C (qualificação 1 reescrita — P123 Q2
+e P100 Q3 **dentro da régua**; P101/P102 ressalvados; conclusão do achado:
+"supported by early primary evidence — half of it below this review's
+venue bar, none of it top-quartile, multi-site, or independently
+replicated"), §V-A/V-B, ameaças ("Venue criteria": remover os 3 abaixo da
+régua estreita o cluster para 2 — P100/P123) e conclusão. (5) Recompilado:
+12 pp., 0 erros, sem overfull novo. Pendência registrada no PDR: texto
+normativo dos prompts a atualizar no próximo ciclo que renderizar.
+
+**Comandos:** análise de impacto em python sobre o índice;
+`derive-index.py`; `build_pdf_cons.py`; pdflatex; `check-rsl.sh` OK.
+Commit `ecc2b92` + push.
+
 ## Decisões e convenções da sessão
 
+- **PDR-0009 (2026-10-30):** elegibilidade de veículo passa a ser o percentil CiteScore Scopus em quartis (Q1–Q3 elegíveis; séries via PDR-0006); Qualis/CAPES e SJR Quartile são informativos. Retroativo c/ ressalva: P91/P101/P102 permanecem no corpus com ressalva reformulada; ressalvas de estrato Qualis anteriores sem efeito para estudos Q1–Q3.
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
   mudanças versionadas: incrementam a versão MINOR e ganham entrada no
   changelog do próprio arquivo (criando a seção Changelog quando ausente).
@@ -2349,6 +2387,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - Artigo: Nomenclature como lista quebrável (fix de layout da p. 1) + transliteração do autor cirílico do P38 no `referencias.bib`
 
 - `Papers_Index.csv`/`.md`: colunas Scopus (Percentil) e SJR Quartile preenchidas para P90–P126 (37 linhas; Scopus API + SCImago via Chrome)
+
+- PDR-0009 + artigo na régua internacional: `protocolo/pdr/PDR-0009-…md` · adendo nº 8 na síntese (+PDF) · DASHBOARD · 3 statuses no `Papers_Index` · artigo reescrito (abstract→conclusão)
 
 ## Histórico de commits da sessão
 
@@ -2508,5 +2548,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `4063cb0` | 2026-10-30 | Log session close (item 149) in MEMORY.md |
 | `52e03b8` | 2026-10-30 | Papers_Index: fill Scopus percentile and SJR quartile for P90-P126 (37 rows) |
 | `44f49f9` | 2026-10-30 | Log Papers_Index bibliometric fill for P90+ (item 150) in MEMORY.md |
+| `8281ebe` | 2026-10-30 | Log session close (item 151) in MEMORY.md |
+| `ecc2b92` | 2026-10-30 | PDR-0009: eligibility by Scopus percentile quartiles (Q1-Q3); article rebased on the international scale |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
