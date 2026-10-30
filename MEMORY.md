@@ -2277,6 +2277,21 @@ normativo dos prompts a atualizar no próximo ciclo que renderizar.
 `derive-index.py`; `build_pdf_cons.py`; pdflatex; `check-rsl.sh` OK.
 Commit `ecc2b92` + push.
 
+### 153. Encerramento da sessão (2026-10-30, 7º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+item 152 (PDR-0009) e a decisão de protocolo registrados; linha do commit
+`f4b61ce` (log do item 152) acrescentada à tabela.
+
+**Estado ao encerrar:** revisão na **régua internacional** (PDR-0009:
+percentil Scopus Q1–Q3; Qualis/SJR informativos; P91/P101/P102 com ressalva
+reformulada) e **draft v2 do artigo reescrito nessa régua** (12 pp., build
+limpo). **Pendências:** fotos dos autores, revisão da bio pelo orientador,
+conferência final do PDF; texto normativo dos templates de prompt a
+atualizar no próximo ciclo que renderizar (PDR-0009, item de aplicação).
+
 ## Decisões e convenções da sessão
 
 - **PDR-0009 (2026-10-30):** elegibilidade de veículo passa a ser o percentil CiteScore Scopus em quartis (Q1–Q3 elegíveis; séries via PDR-0006); Qualis/CAPES e SJR Quartile são informativos. Retroativo c/ ressalva: P91/P101/P102 permanecem no corpus com ressalva reformulada; ressalvas de estrato Qualis anteriores sem efeito para estudos Q1–Q3.
@@ -2550,5 +2565,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `44f49f9` | 2026-10-30 | Log Papers_Index bibliometric fill for P90+ (item 150) in MEMORY.md |
 | `8281ebe` | 2026-10-30 | Log session close (item 151) in MEMORY.md |
 | `ecc2b92` | 2026-10-30 | PDR-0009: eligibility by Scopus percentile quartiles (Q1-Q3); article rebased on the international scale |
+| `f4b61ce` | 2026-10-30 | Log PDR-0009 international eligibility scale (item 152) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
