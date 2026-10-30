@@ -2225,6 +2225,21 @@ informativos — o estrato do ciclo 3 segue regido pelo percentil da série
 (javascript fetch/filtro no scimagojr.com); `derive-index.py`;
 `check-rsl.sh` OK. Commit `52e03b8` + push.
 
+### 151. Encerramento da sessão (2026-10-30, 6º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+item 150 (bibliometria P90+ no índice) já registrado; linha do commit
+`44f49f9` (log do item 150) acrescentada à tabela.
+
+**Estado ao encerrar:** `Papers_Index` completo — todas as 125 linhas com
+percentil Scopus e SJR Quartile preenchidos (P90+ via Scopus API + SCImago;
+quartis informativos, estrato do ciclo 3 segue pelo percentil da série,
+PDR-0006/0007). Draft v2 do artigo em 12 páginas pronto para a leitura
+final. **Pendências de submissão:** fotos dos autores (`IEEEbiography`),
+revisão da bio pelo orientador, conferência final do PDF pelo autor.
+
 ## Decisões e convenções da sessão
 
 - Mudanças de persona/redação nos prompts (PICOC e template de extração) são
@@ -2492,5 +2507,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `75c4dac` | 2026-10-30 | Log Nomenclature trim (item 148) in MEMORY.md |
 | `4063cb0` | 2026-10-30 | Log session close (item 149) in MEMORY.md |
 | `52e03b8` | 2026-10-30 | Papers_Index: fill Scopus percentile and SJR quartile for P90-P126 (37 rows) |
+| `44f49f9` | 2026-10-30 | Log Papers_Index bibliometric fill for P90+ (item 150) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
