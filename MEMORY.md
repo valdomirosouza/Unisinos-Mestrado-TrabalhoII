@@ -305,6 +305,31 @@ Sessão dedicada à **extração estruturada** dos 39 artigos do corpus (`docs/`
 **Prompt:** "before finish this session, include a rule to dump the memory of each session, include the contexts, iterations, prompts, answers and commands executed and store all of these conversations on file MEMORY.md in the root folder of the project"
 **Ações:** Criei o **`CLAUDE.md`** na raiz do projeto — carregado automaticamente em toda sessão futura — com a **regra obrigatória de dump de memória**: cada unidade de trabalho vira item numerado (sequência contínua entre sessões) registrando prompt, contexto, ações/respostas, comandos/ferramentas executados e incidentes/recuperações; registro **incremental** e sempre antes de encerrar; formato codificado a partir do padrão já existente no MEMORY.md (bloco de sessão com Linha do tempo, Decisões, Artefatos e Histórico de commits, incluindo commits externos); regras de fidelidade (nunca reescrever itens passados; registrar falhas; nunca registrar segredos; commit + push após cada atualização). O arquivo também consolida as convenções gerais do repositório (pt-BR com termos técnicos em EN, indexação obrigatória de arquivos novos, artefatos históricos imutáveis, citações por fonte, chaves fora do repo).
 
+### 156. Título do artigo revisado (alternativa 1)
+
+**Prompt:** "O artigo deve ter um título? Qual a sugestão para este? Eu
+estava trabalhando com o meu título principal da minha pesquisa 'Agentic AI
+as a Copilot to reduce MTTD and MTTR during incident response: Systematic
+Review'" → resposta: o `main.tex` já tinha o título (invisível no viewer do
+Chrome por causa da fonte Formata); apresentadas 2 alternativas → "Vamos
+trocar para a alternativa 1".
+
+**Ações:** título do artigo alterado para **"Agentic AI Copilots for
+Incident Response: A Systematic Literature Review of the Evidence on MTTD
+and MTTR Reduction"** — desloca a redução de MTTD/MTTR de promessa para
+objeto de avaliação, alinhado ao achado do v2 ("supported by early primary
+evidence…"). Running head (`\markboth`) atualizado:
+"Souza Jr. and Kunst: Agentic AI Copilots for Incident Response: A
+Systematic Literature Review". PDF recompilado (TinyTeX,
+pdflatex+bibtex×3): 12 pp., 0 erros `^!`, 0 warnings bibtex, 0 citações não
+resolvidas; título e running head confirmados via pypdf (pp. 1–2). Nota de
+versão no `artigo/README.md` (título da pesquisa/dissertação permanece o
+original). Investigado alarme falso: 25 overfulls de 505pt "while \output
+is active" no log — já presentes no baseline v1 (scratchpad `v1test/`),
+artefato do header do `ieeeaccess.cls`, não do novo título.
+
+**Commit:** `4ae37ed`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2616,5 +2641,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `0c43475` | 2026-10-30 | Log session close (item 153) in MEMORY.md |
 | `b96b62d` | 2026-10-30 | Article provenance map: paragraph-by-paragraph source tracing (proveniencia-paragrafos.md) |
 | `d14cb42` | 2026-10-30 | Log article provenance map (item 154) in MEMORY.md |
+| `cb3731e` | 2026-10-30 | Log session close (item 155) in MEMORY.md |
+| `4ae37ed` | 2026-10-30 | Article title revised: SLR of the evidence on MTTD and MTTR reduction |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
