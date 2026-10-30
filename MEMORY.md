@@ -2321,6 +2321,22 @@ Verificação por amostragem após cada correção.
 **Comandos:** gerador python (main.tex + 71 fichas); `check-rsl.sh` OK.
 Commit `b96b62d` + push.
 
+### 155. Encerramento da sessão (2026-10-30, 8º fecho)
+
+**Prompt:** "Atualize o MEMORY.md e encerre a sessão".
+
+**Ações:** verificação de fechamento — árvore limpa, `master` sincronizada;
+item 154 (mapa de proveniência) já registrado; linha do commit `d14cb42`
+(log do item 154) acrescentada à tabela.
+
+**Estado ao encerrar:** artigo draft v2 completo (12 pp., régua
+internacional PDR-0009, Nomenclature de 20 siglas, apêndice de IDs) e agora
+acompanhado do **mapa de proveniência parágrafo a parágrafo**
+(`artigo/proveniencia-paragrafos.md`) — trilha de auditoria da escrita
+ligando cada parágrafo às fichas e às âncoras §/página dos papers.
+**Pendências:** fotos dos autores, revisão da bio pelo orientador,
+conferência final do PDF; texto normativo dos templates (PDR-0009).
+
 ## Decisões e convenções da sessão
 
 - **PDR-0009 (2026-10-30):** elegibilidade de veículo passa a ser o percentil CiteScore Scopus em quartis (Q1–Q3 elegíveis; séries via PDR-0006); Qualis/CAPES e SJR Quartile são informativos. Retroativo c/ ressalva: P91/P101/P102 permanecem no corpus com ressalva reformulada; ressalvas de estrato Qualis anteriores sem efeito para estudos Q1–Q3.
@@ -2599,5 +2615,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `f4b61ce` | 2026-10-30 | Log PDR-0009 international eligibility scale (item 152) in MEMORY.md |
 | `0c43475` | 2026-10-30 | Log session close (item 153) in MEMORY.md |
 | `b96b62d` | 2026-10-30 | Article provenance map: paragraph-by-paragraph source tracing (proveniencia-paragrafos.md) |
+| `d14cb42` | 2026-10-30 | Log article provenance map (item 154) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
