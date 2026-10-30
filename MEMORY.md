@@ -330,6 +330,27 @@ artefato do header do `ieeeaccess.cls`, não do novo título.
 
 **Commit:** `4ae37ed`.
 
+### 157. Ajustes manuais do autor no artigo + sincronização da proveniência
+
+**Prompt:** "Fiz alguns ajustes manuais no main.tex e gerei uma nova versão
+do PDF."
+
+**Ações:** revisado o diff dos ajustes do autor no `main.tex`: data do
+draft no `\history` (30 Oct 2026), DOI como placeholder genérico
+(`NN.NNNN/ACCESS.YYYY.DOI`), e-mails de contato (institucional Unisinos no
+lugar do pessoal), hedge no abstract ("The review points to three findings,
+although the strength of evidence differs substantially across them") e
+fecho da conclusão reescrito em tom mais sóbrio ("A useful next step is a
+multi-site field evaluation…"). Build do autor verificado: 12 pp., 0 erros
+`^!`, título/running head ok. Como os dois trechos alterados eram citados
+nos blockquotes do mapa de proveniência, `artigo/proveniencia-paragrafos.md`
+foi sincronizado (abstract + conclusão) com nota datada no cabeçalho; nota
+de versão no `artigo/README.md`. `.agents/` e `AGENTS.md` (espelhos
+auto-gerados do CLAUDE.md/skills no formato AGENTS.md) apareceram não
+rastreados e ficaram fora do commit, aguardando decisão do autor.
+
+**Commit:** `c23e48f` (edições do autor commitadas em seu nome + sync).
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2643,5 +2664,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d14cb42` | 2026-10-30 | Log article provenance map (item 154) in MEMORY.md |
 | `cb3731e` | 2026-10-30 | Log session close (item 155) in MEMORY.md |
 | `4ae37ed` | 2026-10-30 | Article title revised: SLR of the evidence on MTTD and MTTR reduction |
+| `7d5d075` | 2026-10-30 | Log article title revision (item 156) in MEMORY.md |
+| `c23e48f` | 2026-10-30 | Author's manual adjustments to the article + provenance sync (edições manuais do autor) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
