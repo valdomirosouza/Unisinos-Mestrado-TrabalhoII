@@ -455,6 +455,19 @@ PDF via pypdf.
 
 **Commit:** `d8c5a06`.
 
+### 163. Descrição do PPGCA também no tfootnote do artigo
+
+**Prompt:** "Ainda encontrei um lugar para ajuste no artigo 'This work was
+conducted within the Applied Computing Graduate Program (PPGCA) at
+Unisinos, Brazil.'"
+
+**Ações:** o `\tfootnote` da primeira página do `main.tex` recebeu a mesma
+descrição do item 162: "— a program of excellence dedicated to educating
+master's and doctoral researchers in technology and innovation". PDF
+recompilado (12 pp., 0 erros `^!`); texto confirmado na p. 1 via pypdf.
+
+**Commit:** `212aae4`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2781,5 +2794,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `c315662` | 2026-10-30 | Correct PPGCA description in README intro (user's wording) |
 | `797ab3c` | 2026-10-30 | Log PPGCA description correction (item 161) in MEMORY.md |
 | `d8c5a06` | 2026-10-30 | Article acknowledgment: PPGCA description (program of excellence) |
+| `87e615e` | 2026-10-30 | Log PPGCA description in article (item 162) in MEMORY.md |
+| `212aae4` | 2026-10-30 | Article title-page footnote: PPGCA description (program of excellence) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
