@@ -442,6 +442,19 @@ apresentação do item 160 não trazia a descrição do programa).
 
 **Commit:** `c315662`.
 
+### 162. Descrição do PPGCA aplicada ao artigo
+
+**Prompt:** "Foi feita a correção no main.tex e main.pdf do draft do meu
+artigo?"
+
+**Ações:** não havia sido — o item 161 corrigiu apenas o README. Aplicada
+agora no Acknowledgment do `main.tex` (em inglês): "a program of excellence
+dedicated to educating master's and doctoral researchers in technology and
+innovation". PDF recompilado (12 pp., 0 erros `^!`); texto confirmado no
+PDF via pypdf.
+
+**Commit:** `d8c5a06`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2766,5 +2779,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `6d1e40c` | 2026-10-30 | Rewrite root README as didactic project presentation for the advisor |
 | `100df46` | 2026-10-30 | Log README presentation rewrite (item 160) in MEMORY.md |
 | `c315662` | 2026-10-30 | Correct PPGCA description in README intro (user's wording) |
+| `797ab3c` | 2026-10-30 | Log PPGCA description correction (item 161) in MEMORY.md |
+| `d8c5a06` | 2026-10-30 | Article acknowledgment: PPGCA description (program of excellence) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
