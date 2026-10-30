@@ -399,6 +399,35 @@ do commit. **Incidente:** `scripts/__pycache__/` (gerado pelo
 `py_compile` do teste) entrou no commit do release — removido e ignorado no
 commit seguinte (`be9f960`).
 
+### 160. README raiz reescrito como apresentação do projeto
+
+**Prompt:** "Agora faça um Scan no Unisinos-Mestrado-TrabalhoII para
+reescrever a página inicial README em um modelo de apresentação do Projeto
+para o Professor orientador entender de forma didatica e fácil todas as
+fases do projeto, como as LLM foram usadas para ajudar na pesquisa, inclua
+também um glossário com os termos técnicos de IA, SRE, Engenharia e Agentic
+AI, e por fim diagramas mermaid para deixar mais ludico e de fácil
+compreensão."
+
+**Ações:** varredura do repo (README de 30KB defasado: "resultado em um
+relance" do ciclo 1, árvore com PDR-0001..0005, artigo "v1") e do
+`check-rsl.sh` (C3 cobre prompts/reviews/report/picoc via READMEs de pasta
+— reescrita da raiz é segura; C1 valida todos os links). Novo README
+(~38KB): pergunta de pesquisa + título novo do artigo; **4 diagramas
+mermaid** (fases Trabalho I→ciclos 1–3→governança→artigo; ciclo de 9
+etapas + governança; funil 126→74 avaliados (222 pareceres)→65 incluídos;
+banca de 3 LLMs→κ→divergência→PDR); seção "Como as LLMs foram usadas" em
+5 papéis (descoberta, extração ancorada, banca tripla, confiabilidade κ,
+copiloto de engenharia) com a fronteira do que só o humano decide;
+resultados em um relance (corpus 65, cluster MTTD/MTTR do ciclo 3, lacuna
+de carga cognitiva); "Comece por aqui" atualizado; **glossário de 41
+termos** em 4 blocos (método/RSL, IA/LLM, Agentic AI, SRE/operações).
+Índice cumulativo por categoria preservado em bloco `<details>` (notas
+datadas = registros históricos, não alteradas); árvore atualizada
+(PDR-0009, artigo v2, índice P01–P126). `check-rsl.sh` OK (C1–C5).
+
+**Commit:** `6d1e40c`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2719,5 +2748,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `edd8b59` | 2026-10-30 | Log AGENTS.md gitignore entry (item 158) in MEMORY.md |
 | `28b6880` | 2026-10-30 | (Template-RSL) Release 0.2.0: stratum rulers, prompt v1.2.0, didactic guide, gitignore |
 | `be9f960` | 2026-10-30 | (Template-RSL) Remove accidentally committed __pycache__ and ignore it |
+| `2c80d55` | 2026-10-30 | Log Template-RSL 0.2.0 release (item 159) in MEMORY.md |
+| `6d1e40c` | 2026-10-30 | Rewrite root README as didactic project presentation for the advisor |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
