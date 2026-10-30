@@ -351,6 +351,18 @@ rastreados e ficaram fora do commit, aguardando decisão do autor.
 
 **Commit:** `c23e48f` (edições do autor commitadas em seu nome + sync).
 
+### 158. AGENTS.md e .agents/ ignorados
+
+**Prompt:** "Adicione o AGENTS.md e .agents ao .gitignore".
+
+**Ações:** `AGENTS.md` e `.agents/` (espelhos auto-gerados do
+CLAUDE.md/skills no formato AGENTS.md — ver item 157) adicionados ao
+`.gitignore` com comentário explicativo; verificação com
+`git check-ignore -v` (ambos ignorados), árvore sem pendências não
+rastreadas.
+
+**Commit:** `7db8071`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2666,5 +2678,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `4ae37ed` | 2026-10-30 | Article title revised: SLR of the evidence on MTTD and MTTR reduction |
 | `7d5d075` | 2026-10-30 | Log article title revision (item 156) in MEMORY.md |
 | `c23e48f` | 2026-10-30 | Author's manual adjustments to the article + provenance sync (edições manuais do autor) |
+| `49f0115` | 2026-10-30 | Log author's article adjustments (item 157) in MEMORY.md |
+| `7db8071` | 2026-10-30 | Ignore auto-generated AGENTS.md and .agents/ mirrors |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
