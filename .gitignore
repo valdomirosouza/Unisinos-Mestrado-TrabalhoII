@@ -8,3 +8,7 @@ artigo/*.log
 artigo/*.bbl
 artigo/*.blg
 artigo/*.out
+
+# Espelhos auto-gerados do CLAUDE.md/skills no formato AGENTS.md
+AGENTS.md
+.agents/
