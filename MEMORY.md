@@ -2292,6 +2292,35 @@ limpo). **Pendências:** fotos dos autores, revisão da bio pelo orientador,
 conferência final do PDF; texto normativo dos templates de prompt a
 atualizar no próximo ciclo que renderizar (PDR-0009, item de aplicação).
 
+### 154. Artigo — mapa de proveniência parágrafo a parágrafo
+
+**Prompt:** "Gere um arquivo MD documentando de quais parágrafos de cada
+PAPER foram extraídas as informações usadas na escrita deste artigo de RSL.
+[…] Paragrafo #1: Textos que foram usado de inspiração para a escrita, e
+para cadas frase/parágrafo, o nome do artigo de onde foi extraído. e Logo
+abaixo o texto/frase/parágrafo deste artigo de RSL escrito."
+
+**Ações:** gerado `artigo/proveniencia-paragrafos.md` (~117 KB) por script:
+parser do `main.tex` isola os **20 parágrafos** de prosa que usam informação
+dos papers (18 com `\cite` + Abstract e Conclusão, mapeados manualmente ao
+cluster MTTD/MTTR e ao survey de SOC P79). Cada entrada traz: (a) por paper
+citado — ID, título completo e o **trecho-fonte tomado da ficha de extração**
+(`report/PXX-extraction.csv`), que carrega as **âncoras §/página do paper
+original** (atendendo ao "de quais parágrafos de cada paper"), com o campo
+da ficha escolhido por heurística do tema do parágrafo (MTTD/MTTR → Impact;
+lacunas → Limitations; riscos → General Impact etc.); (b) o parágrafo do
+artigo (de-LaTeX). Cabeçalho documenta o escopo: parágrafos de
+método/protocolo/κ derivam dos artefatos do repositório, não de papers;
+a menção ao hub P65 deriva do artefato de citações cruzadas.
+
+**Incidentes:** (1) regex de comentários LaTeX (`%.*`) comia o texto após
+`\%` — corrigida para `(?<!\\)%.*`; (2) o recorte manual da Conclusão
+engoliu a tabela do Apêndice — corte reancorado em `\section*{Appendix`.
+Verificação por amostragem após cada correção.
+
+**Comandos:** gerador python (main.tex + 71 fichas); `check-rsl.sh` OK.
+Commit `b96b62d` + push.
+
 ## Decisões e convenções da sessão
 
 - **PDR-0009 (2026-10-30):** elegibilidade de veículo passa a ser o percentil CiteScore Scopus em quartis (Q1–Q3 elegíveis; séries via PDR-0006); Qualis/CAPES e SJR Quartile são informativos. Retroativo c/ ressalva: P91/P101/P102 permanecem no corpus com ressalva reformulada; ressalvas de estrato Qualis anteriores sem efeito para estudos Q1–Q3.
@@ -2404,6 +2433,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 - `Papers_Index.csv`/`.md`: colunas Scopus (Percentil) e SJR Quartile preenchidas para P90–P126 (37 linhas; Scopus API + SCImago via Chrome)
 
 - PDR-0009 + artigo na régua internacional: `protocolo/pdr/PDR-0009-…md` · adendo nº 8 na síntese (+PDF) · DASHBOARD · 3 statuses no `Papers_Index` · artigo reescrito (abstract→conclusão)
+
+- Artigo: `artigo/proveniencia-paragrafos.md` (20 parágrafos × fontes das fichas com âncoras §/página) · indexado no README do artigo
 
 ## Histórico de commits da sessão
 
@@ -2566,5 +2597,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `8281ebe` | 2026-10-30 | Log session close (item 151) in MEMORY.md |
 | `ecc2b92` | 2026-10-30 | PDR-0009: eligibility by Scopus percentile quartiles (Q1-Q3); article rebased on the international scale |
 | `f4b61ce` | 2026-10-30 | Log PDR-0009 international eligibility scale (item 152) in MEMORY.md |
+| `0c43475` | 2026-10-30 | Log session close (item 153) in MEMORY.md |
+| `b96b62d` | 2026-10-30 | Article provenance map: paragraph-by-paragraph source tracing (proveniencia-paragrafos.md) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
