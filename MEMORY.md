@@ -468,6 +468,52 @@ recompilado (12 pp., 0 erros `^!`); texto confirmado na p. 1 via pypdf.
 
 **Commit:** `212aae4`.
 
+### 164. Parecer PPGCA incorporado ao artigo (SUGESTOES-mudancas-artigo.md)
+
+**Prompt:** "Leia o SUGESTOES-mudancas-artigo.md e aplique as mudanças
+sugeridas" (arquivo derivado do parecer PPGCA de 31/10/2026; Partes A/B
+aplicadas pelo autor num clone e copiadas para o working tree).
+
+**Ações:**
+
+- **Verificação A/B:** as 35 edições da Parte A (enquadramento
+  "LLM-assisted, human-decided" — LLMs como assistentes supervisionados;
+  todas as decisões do mestrando, revisadas pelo orientador) e os 5
+  blockquotes da Parte B conferidos string a string: 35/35 e 5/5
+  presentes, sem resíduos do texto antigo.
+- **Parte C aplicada (C1–C9):** C1 abstract de 246 palavras (substitui
+  A.1/B.1); C2 Kitchenham & Charters 2007 (techreport EBSE-2007-01) no
+  lugar do terciário kitchenham2009, removido do bib; C3 correções da
+  rede de citações (P65 marcado como candidato fora do corpus; arestas
+  reais dos surveys do ciclo 3: P112→P05, P121→P14, P101→P121; frase nova
+  na legenda da figura sobre nós ‡); C4 conclusão sem agregar "38–91%"
+  (métricas separadas); C5 "author-affiliated"→"vendor-affiliated" (4×);
+  C6 277 dias com fonte primária (IBM Cost of a Data Breach 2023) e
+  remoção da frase sem citação sobre falsos positivos; C7 conformidade
+  IEEE (IEEEmembership removido, tfootnote e agradecimentos neutros sem
+  o texto promocional do PPGCA, declaração de conflito de interesses
+  consistente com a bio Zenvia/CPaaS, corresp só com e-mail
+  institucional); C8 coeficientes robustos à prevalência **computados do
+  CSV global (n=74×3)**: Gwet AC1 0,91 (IC 95% 0,85–0,97, jackknife),
+  PABAK 0,86 (IC 0,76–0,95), prevalência include 90,1% — mais
+  justificativa do DARE (comparabilidade com a revisão fundacional) e
+  dyba2008 como refinamento futuro; C9 wohlin2014, mendes2020update e
+  rethlefsen2021prismas citados nos pontos indicados.
+- **Diligência:** metadados das 9 entradas BibTeX novas conferidos no
+  Crossref por DOI (volume/número/páginas corretos; DOIs adicionados às
+  entradas) — a ressalva "escritos de memória" do arquivo foi resolvida.
+- **Proveniência sincronizada:** abstract (C1), parágrafo dos 277 dias,
+  4× vendor-affiliated, conclusão (C4), dois trechos da rede (C3) e nota
+  de sincronização datada no cabeçalho.
+- Build: 13 pp., 0 erros `^!`, bibtex limpo, 0 citações não resolvidas;
+  mudanças confirmadas no PDF via pypdf. `check-rsl.sh` OK.
+- **Pendências do parecer (não aplicadas, dependem dos autores):** C7.2
+  (declaração de financiamento), C7.4 (DOI Zenodo do pacote de
+  replicação) e checklists C10–C14 — documentadas no README do artigo com
+  link para `SUGESTOES-mudancas-artigo.md` (agora versionado na raiz).
+
+**Commit:** `d0cbee3`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2796,5 +2842,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d8c5a06` | 2026-10-30 | Article acknowledgment: PPGCA description (program of excellence) |
 | `87e615e` | 2026-10-30 | Log PPGCA description in article (item 162) in MEMORY.md |
 | `212aae4` | 2026-10-30 | Article title-page footnote: PPGCA description (program of excellence) |
+| `11f962c` | 2026-10-30 | Log PPGCA description in tfootnote (item 163) in MEMORY.md |
+| `d0cbee3` | 2026-10-31 | Incorporate PPGCA review: LLM-assisted/human-decided framing + C1-C9 (Partes A/B aplicadas pelo autor) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
