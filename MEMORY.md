@@ -528,6 +528,36 @@ artigo (restam C7.4/Zenodo e C10–C14).
 
 **Commit:** `c990081`.
 
+### 166. Versões dos LLMs por ciclo (levantamento + dados OpenAI do condutor)
+
+**Prompt:** "Versões das LLMs Claude Opus 4.x e Fable 5.x, pode ser assim
+ou tem que ser específico...?" → recomendação: específico por ciclo até
+onde os registros permitem, lacunas declaradas → "busque na memória,
+configuração e logs deste repositório, quais versões dos Modelos do
+Claude/Anthropic foram usados neste projeto" → "Na OpenAI em jun-jul/2026
+usei o GPT-5.4 e em Out/2026 GPT-6.0".
+
+**Ações:** varredura em três camadas — trailers `Co-Authored-By` dos 246
+commits, transcripts de sessão do Claude Code (3 diretórios de projeto) e
+datas de criação dos pareceres (git --diff-filter=A). Achados: **ciclo 1
+(pareceres P20–P40, 2026-06-28) = Claude Opus 4.8 (1M context)**; **ciclo
+2 (P43–P88, 2026-09-10), retroativa P01–P19 (2026-10-26) e ciclo 3
+(P91–P123, 2026-10-28) = Claude Fable 5** (`claude-fable-5`, 4.531
+chamadas na sessão principal desde 2026-07-23; 8 chamadas pontuais de
+`claude-fable-5-1` ~set/2026); **parecer PPGCA de 2026-10-31 = Claude
+Opus 5.5** (`claude-opus-5-5`, sessão "Revisor" separada, 122 chamadas).
+Menções a "Claude Sonnet 3.5"/"Claude-Opus" em pareceres/fichas são
+conteúdo dos papers (P20/P100), não avaliadores. Com os dados do condutor
+(ChatGPT: GPT-5.4 jun–jul, GPT-6.0 out/2026), criado
+`reviews/versoes-avaliadores.md` — tabela avaliador × ciclo com fontes de
+evidência, condições de execução (Claude Code / apps web, PDF por
+upload, default settings) e leitura metodológica (troca de versão sem
+degradar concordância: ciclo 3 unânime). Pendências marcadas no arquivo:
+ChatGPT do ciclo 2 (set/2026) e todas as células do Gemini — verificar nos
+históricos dos apps. Indexado no `reviews/README.md` e no README raiz.
+
+**Commit:** `dd5e578`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2860,5 +2890,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d0cbee3` | 2026-10-31 | Incorporate PPGCA review: LLM-assisted/human-decided framing + C1-C9 (Partes A/B aplicadas pelo autor) |
 | `56a3011` | 2026-10-31 | Log PPGCA review incorporation (item 164) in MEMORY.md |
 | `c990081` | 2026-10-31 | Funding statement: no specific grant (resolves review item C7.2) |
+| `4c46056` | 2026-10-31 | Log funding statement (item 165) in MEMORY.md |
+| `dd5e578` | 2026-10-31 | Evaluator LLM versions per cycle (review item C10 input) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
