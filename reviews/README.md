@@ -10,6 +10,8 @@ Pareceres de revisão dos estudos candidatos da RSL **"Agentic AI Copilot para R
 
 > ✅ **Pendência transversal (RESOLVIDA):** durante a avaliação, Citações, SJR e Qualis **não eram verificáveis nos PDFs** e os valores vieram dos **insumos** do CSV (marcados `[VERIFICAR]` nos pareceres). A verificação externa foi concluída em [`../papers.csv`](../papers.csv) — DOI, Qualis 2025-2028, percentil Scopus, SJR quartile, ISSN, ano e **citações em três fontes** (OpenAlex/Crossref/Scopus, 2026-07-27) dos 39 estudos —, confirmando os estratos usados na triagem (incl. P39/P40 = A3, inelegíveis) e o critério **Citações ≥ 1** para todos os incluídos (exceção: P35 com 0 citações, coberto pela `RECENCY_EXCEPTION` de publicação < 12 meses). Fluxo de seleção completo em [`PRISMA.md`](PRISMA.md).
 
+- 🧾 [Versões dos LLMs avaliadores por ciclo](versoes-avaliadores.md) — insumo da Seção III-I do artigo (item C10 do parecer); células do Gemini pendentes de verificação pelo condutor.
+
 ## Tabela-síntese
 
 | ID                   | Estudo (resumo)                    | Veículo               | Tipo / paradigma       | Domínio                     | SCORE_RQ | SCORE_QA | Banda | Recomendação                        |

@@ -299,6 +299,7 @@ flowchart LR
 - [`reviews/relatorio-sintese.md`](reviews/relatorio-sintese.md) / [`.pdf`](reviews/relatorio-sintese.pdf) — relatório de síntese.
 - [`reviews/resultados-consolidados.csv`](reviews/resultados-consolidados.csv) — dados consolidados.
 - [`reviews/README.md`](reviews/README.md) — índice dos pareceres.
+- [`reviews/versoes-avaliadores.md`](reviews/versoes-avaliadores.md) — versões dos LLMs avaliadores por ciclo (2026-10-31; insumo da Seção III-I do artigo).
 - [`reviews/graficos.md`](reviews/graficos.md) — galeria · [`reviews/charts/`](reviews/charts/) — SVGs.
 - [`reviews/review-P20.md` … `review-P40.md`](reviews/) — 20 pareceres.
 
