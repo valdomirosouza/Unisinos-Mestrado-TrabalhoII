@@ -3,8 +3,9 @@
 > 🧭 [📄 Artigo](README.md) · [🗂️ Fichas de extração](../report/README.md) · [🏠 README raiz](../README.md)
 
 Rastreabilidade da escrita do artigo (`main.tex`, draft v2 pós-PDR-0009;
-blockquotes sincronizados em 2026-10-30 com os ajustes manuais do autor no
-abstract e no fecho da conclusão):
+blockquotes sincronizados em 2026-10-30 com os ajustes manuais do autor e
+em 2026-10-31 com as mudanças do parecer PPGCA — Partes A/B e C1–C9 de
+`SUGESTOES-mudancas-artigo.md`):
 para **cada parágrafo que usa informação extraída dos papers**, os
 trechos-fonte — tomados das **fichas de extração** (`report/PXX-extraction.csv`),
 que registram cada claim **com a âncora de seção/página do paper original** —
@@ -50,42 +51,31 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 
 **Texto do artigo:**
 
-> Incident response (IR) in modern IT operations is constrained by two
-> time-based indicators — Mean Time to Detect (MTTD) and Mean Time to
-> Recovery (MTTR) — and by the cognitive load imposed on operations teams
-> (SRE, NOC, SOC) by alert fatigue and telemetry complexity. Agentic AI
-> systems, which combine Large Language Models (LLMs) with planning, memory,
-> tool use, and human supervision, are increasingly proposed as
-> copilots for these teams. This article reports a systematic
-> literature review (SLR), conducted under the guidelines of Kitchenham et
-> al. and the PRISMA 2020 flow, that consolidates the evidence on Agentic
-> AI copilots for incident response, with cognitive-load reduction treated
-> as a complementary outcome. Across three update cycles over a
-> foundational corpus, 126 candidate studies (2020–2026) were identified
-> and screened, 74 were assessed in full text by three independent
-> evaluators (agreement 91.9–93.2% per pair; Fleiss' κ=0.60;
-> 66/74 unanimous decisions, with a divergence-free third cycle), and
-> 65 studies were included. The review points to three findings,
-> although the strength of evidence differs substantially across them.
-> First, through
-> two cycles no included study measured MTTD or MTTR nominally against its
-> own executed baseline; the third cycle surfaces a first cluster of four
-> primary studies that do — MTTD reduced by 82–83%, MTTR by 72–91%,
-> and time-to-containment by 38% against executed human, polling, or SOAR
-> baselines — two of the four below the review's venue bar (bottom-quartile
-> or unindexed venues) under a mandatory caveat, and production evidence
-> from a single vendor, moving the headline claim from unverified to
-> supported by early primary evidence. Second, outside that cluster the evidence
-> remains dominated by detection proxies (accuracy, F1, AUC) and
-> qualitative claims, while secondary sources relay dramatic gains (e.g.,
-> MTTR from 8 hours to 90 minutes) that primary experiments are only
-> beginning to approach. Third, direct measurement of operator cognitive
-> load exists in adjacent domains but has never been combined with an
-> agentic copilot in IT incident response — a gap all three cycles leave
-> untouched. These findings define a concrete agenda: venue-quality,
-> multi-site field evaluations of agentic copilots instrumented for
-> nominal MTTD/MTTR with their own baselines and validated cognitive-load
-> instruments.
+> Incident response (IR) in IT operations is measured by Mean Time to Detect
+> (MTTD) and Mean Time to Recovery (MTTR) and burdened by operator cognitive
+> load. Agentic AI systems, which combine Large Language Models (LLMs) with
+> planning, memory, tool use, and human oversight, are increasingly proposed
+> as copilots for SRE, NOC, and SOC teams. This systematic literature review
+> (SLR), following Kitchenham's guidelines and the PRISMA 2020 statement,
+> asks whether the published evidence supports that promise. Across three
+> update cycles over a foundational corpus, 126 candidate studies
+> (2020–2026) were screened, 74 were assessed in full text, and
+> 65 were included. The review is LLM-assisted but human-decided:
+> three supervised LLM assistants (Claude, ChatGPT, Gemini) drafted each
+> assessment independently (Fleiss' κ=0.60; 66/74 unanimous), and
+> every decision was made and reviewed by the authors. Four primary studies
+> measure time metrics against executed baselines, reporting reductions in
+> MTTD (82–83%), MTTR (63–72%), and time-to-containment (38%); two of
+> them appear in bottom-quartile or unindexed venues, and the only
+> production deployment is vendor-affiliated. Elsewhere, the evidence
+> consists of detection proxies (accuracy, F1, AUC) and qualitative claims.
+> Within the review's scope, no study measured operator cognitive load in
+> the presence of an agentic copilot in IT incident response, although
+> validated instruments exist in adjacent domains. The claim that agentic
+> copilots reduce MTTD and MTTR is therefore supported by early primary
+> evidence only. We outline an agenda of multi-site field evaluations that
+> report nominal MTTD and MTTR against their own baselines together with
+> validated workload measures.
 
 ---
 
@@ -106,10 +96,11 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > indicators — Mean Time to Detect (MTTD) and Mean Time to
 > Recovery (MTTR) — and by a human cost that is harder to see on
 > dashboards: alert fatigue and sustained cognitive load on SRE, NOC, and
-> SOC personnel. Industry reports cited in the corpus place average breach
-> identification and containment at 277 days (204 to detect, 73 to
-> contain) [P79], while SOC analysts discard the majority of alerts as
-> false positives.
+> SOC personnel. In security operations, industry data place the average
+> data-breach life cycle at 277 days (204 to identify, 73 to
+> contain) [ibm2023breach], as relayed in the corpus [P79]; this
+> security-breach life cycle is related to, but distinct from, the
+> availability-incident MTTR of SRE practice.
 
 ---
 
@@ -586,12 +577,13 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > particular all of its testbed MTTR evidence, remains below the
 > bar, and none of it yet appears in a top-quartile venue. Second,
 > setting: only [P100] is a production deployment, and it is
-> a single, author-affiliated one; [P101,P102] are testbeds and
+> a single, vendor-affiliated one; [P101,P102] are testbeds and
 > [P93] (which reports MTTD/MTTR reductions of 44–80% for an
 > agentic SOC against a traditional-SOC arm) runs both arms on synthetic
 > telemetry with internally inconsistent tables, recorded in its
-> assessment. Third, independence: the three evaluators unanimously
-> included all four studies, with the applicable caveats attached. Outside this cluster, proxies still dominate: a
+> assessment. Third, assessment: the three LLM assistants
+> unanimously recommended all four studies for inclusion, and the
+> authors confirmed the inclusions with the applicable caveats attached. Outside this cluster, proxies still dominate: a
 > 74–84% alert-volume reduction in a national SOC [P73], operator
 > reaction time falling from ≈276 s to ≈107 s with
 > decision support [P81], report latency of
@@ -723,8 +715,9 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > OpenAlex-deposited references; 65 citing edges in total) shows a
 > coherent field rather than a disconnected collection of papers. The hubs are the definitional
 > surveys — [P10] and [P14] (7 internal citations each),
-> [P09] (6) — followed by the AIOps/MLOps and log-anomaly surveys
-> [P16,P65] and the SOC hyper-automation study [P76] (3 each).
+> [P09] (6) — followed by the AIOps/MLOps survey [P16] and the
+> SOC hyper-automation study [P76] (3 each; the log-anomaly survey
+> [P65], a screened candidate outside the corpus, also receives 3).
 > The most connected citers are the multi-agent SOC system of [P28]
 > (7 outgoing edges, five of them to cycle-2 candidates) and the cycle-3
 > SOC-as-a-service framework of [P97] (7 outgoing edges, all into
@@ -742,8 +735,10 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > among them [P14,P73,P76,P79] and the intra-cycle survey [P121]
 > — tying the multi-agent SOC system [P28] as the most connected
 > citer; the agentic-SOC evaluation [P93] cites [P06,P76]; and
-> the cycle-3 surveys cite both the definitional layer and cycle-2 studies
-> [P101,P112,P121]. Two consequences for the hub structure: the SOC
+> the cycle-3 surveys cite back into the definitional layer
+> ([P112]→[P05]; [P121]→[P14]),
+> and the event-driven SOC [P101] cites the intra-cycle survey
+> [P121]. Two consequences for the hub structure: the SOC
 > hyper-automation study [P76], cited by [P28,P93,P97], becomes
 > a hub, and [P14] rises to 7 internal citations, level with
 > [P10].
@@ -818,7 +813,7 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > operational claim now has its first primary support — the cycle-3
 > cluster of Section (ref.) — but that support is early,
 > partly below the venue bar, and production-grade in exactly one
-> author-affiliated deployment. Reviewers and practitioners should
+> vendor-affiliated deployment. Reviewers and practitioners should
 > still treat vendor-scale numbers (e.g., 8h → 90min MTTR) as
 > hypotheses under test: the cycle-3 measurements are the first tests, not
 > yet the established effect.
@@ -1053,8 +1048,8 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > after two documented access attempts — an unavailability exclusion
 > whose effect on the synthesis is unknowable by construction.
 > Venue criteria. The venue bar is the Scopus CiteScore
-> percentile in quartiles (Q1–Q3 eligible), ratified by the review
-> conductor for international validity; the first three cycles
+> percentile in quartiles (Q1–Q3 eligible), ratified by the authors
+> for international validity; the first three cycles
 > operationalized the same cut through the Brazilian Qualis
 > classification with SJR as auxiliary input, and every dated amendment
 > that retained below-bar studies is explicit in the audit trail. All
@@ -1063,15 +1058,21 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > four studies to two ([P100,P123]), losing its testbed MTTR
 > evidence — which is precisely why the evidence grade is reported
 > alongside the effect sizes, and why the one production deployment is
-> flagged as author-affiliated and single-vendor.
-> Evaluator validity. All three raters are LLM systems;
-> they are independent of each other but share potential model-family
-> biases. The unanimity of the core corpus (89%), the protocol-only
-> nature of divergences, per-claim evidence anchors in every assessment,
-> and a divergence-free third cycle under the ratified rules mitigate —
-> but do not eliminate — this threat; the three protocol questions
-> exposed by the divergences were adjudicated by the (human) review
-> conductor and ratified as rules R1–R3 (Section (ref.)).
+> flagged as vendor-affiliated and single-site.
+> Assistant validity. The three assessment assistants are LLM
+> systems; they run independently of each other but may share
+> model-family biases (training data, sensitivity to the shared prompt)
+> and may misread or misreport content. The main mitigation is the
+> human-decision design: no screening, inclusion, exclusion, or
+> adjudication was delegated to an LLM — all were taken by the authors
+> (the master's student, reviewed by the advisor) — and per-claim
+> evidence anchors (section/page) in every assessment allow each claim
+> to be traced to its source during that review. The unanimity of the
+> core corpus (89%), the protocol-only nature of the divergences, and a
+> divergence-free third cycle under the ratified rules indicate
+> consistency among the assistants, not by themselves correctness; the
+> three protocol questions exposed by the divergences were adjudicated
+> by the authors and ratified as rules R1–R3 (Section (ref.)).
 > Bibliometric sources. Citation counts are kept per source and
 > never summed; source quirks (title-based reference resolution, unindexed
 > venues, preprint DOI splits, API service-level limits) are documented in
@@ -1099,17 +1100,21 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 **Texto do artigo:**
 
 > This SLR consolidated 65 studies (2020–2026) on Agentic AI as a copilot
-> for incident response across three update cycles, assessed by three
-> independent evaluators with high agreement (66 of 74 decisions
-> unanimous; the third cycle divergence-free). The field has matured
+> for incident response across three update cycles, through an
+> LLM-assisted, human-decided protocol: three supervised LLM assistants
+> drafted each full-text assessment with high mutual agreement (66 of 74
+> unanimous; the third cycle divergence-free), and every decision was
+> taken and reviewed by the authors. The field has matured
 > conceptually — shared definitions, reference architectures, governance
 > agendas, and a coherent citation structure — and demonstrates
 > prototype-level feasibility of agentic detection, RCA, and remediation.
 > Its motivating claim is now beginning to be measured: a first cluster of
-> four primary studies reports nominal MTTD, MTTR, and time-to-containment
-> reductions of 38–91% against executed baselines — half of it below
+> four primary studies reports nominal reductions against executed
+> baselines — MTTD by 82–83%, MTTR by 63–72%, and time-to-containment
+> by 38%, in settings ranging from one production deployment to testbeds
+> and a public dataset — half of it below
 > the review's venue bar, with production evidence from a single
-> author-affiliated deployment, and still without any measurement of
+> vendor-affiliated deployment, and still without any measurement of
 > operator cognitive load in the presence of an agentic copilot. A useful
 > next step is a multi-site field evaluation involving operations teams
 > beyond a single vendor. It should measure MTTD and MTTR against an

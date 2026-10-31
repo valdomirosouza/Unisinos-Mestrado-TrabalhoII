@@ -34,8 +34,7 @@
 \title{Agentic AI Copilots for Incident Response: A Systematic Literature
 Review of the Evidence on MTTD and MTTR Reduction}
 
-\author{\uppercase{Valdomiro de Oliveira Souza Jr.}\authorrefmark{1},
-\IEEEmembership{Master's Degree Student},
+\author{\uppercase{Valdomiro de Oliveira Souza Jr.}\authorrefmark{1}
 and \uppercase{Rafael Kunst}\authorrefmark{1}}
 
 \address[1]{Applied Computing Graduate Program (PPGCA), Universidade do
@@ -43,53 +42,41 @@ Vale do Rio dos Sinos (Unisinos), S\~ao Leopoldo 93022-750, Brazil
 (e-mail: valdomiro.souza@gmail.com, valdomiros@edu.unisinos.br;
 rafaelkunst@unisinos.br)}
 \tfootnote{This work was conducted within the Applied Computing Graduate
-Program (PPGCA) at Unisinos, Brazil --- a program of excellence dedicated
-to educating master's and doctoral researchers in technology and
-innovation.}
+Program (PPGCA) at Unisinos, Brazil.}
 
 \markboth
 {Souza Jr. and Kunst: Agentic AI Copilots for Incident Response: A Systematic Literature Review}
 {Souza Jr. and Kunst: Agentic AI Copilots for Incident Response: A Systematic Literature Review}
 
 \corresp{Corresponding author: Valdomiro de Oliveira Souza Jr. (e-mail:
-valdomirojr@gmail.com, valdomiro.souza@gmail.com).}
+valdomiros@edu.unisinos.br).}
 
 \begin{abstract}
-Incident response (IR) in modern IT operations is constrained by two
-time-based indicators --- Mean Time to Detect (MTTD) and Mean Time to
-Recovery (MTTR) --- and by the cognitive load imposed on operations teams
-(SRE, NOC, SOC) by alert fatigue and telemetry complexity. Agentic AI
-systems, which combine Large Language Models (LLMs) with planning, memory,
-tool use, and human supervision, are increasingly proposed as
-\emph{copilots} for these teams. This article reports a systematic
-literature review (SLR), conducted under the guidelines of Kitchenham et
-al.\ and the PRISMA~2020 flow, that consolidates the evidence on Agentic
-AI copilots for incident response, with cognitive-load reduction treated
-as a complementary outcome. Across three update cycles over a
-foundational corpus, 126~candidate studies (2020--2026) were identified
-and screened, 74 were assessed in full text by \emph{three independent
-evaluators} (agreement 91.9--93.2\% per pair; Fleiss' $\kappa=0.60$;
-66/74 unanimous decisions, with a divergence-free third cycle), and
-\textbf{65 studies} were included. The review points to three findings,
-although the strength of evidence differs substantially across them.
-First, through two cycles no included study measured MTTD or MTTR nominally against its
-own executed baseline; the third cycle surfaces a first cluster of four
-primary studies that do --- MTTD reduced by 82--83\%, MTTR by 72--91\%,
-and time-to-containment by 38\% against executed human, polling, or SOAR
-baselines --- two of the four below the review's venue bar (bottom-quartile
-or unindexed venues) under a mandatory caveat, and production evidence
-from a single vendor, moving the headline claim from \emph{unverified} to
-\emph{supported by early primary evidence}. Second, outside that cluster the evidence
-remains dominated by detection proxies (accuracy, F1, AUC) and
-qualitative claims, while secondary sources relay dramatic gains (e.g.,
-MTTR from 8~hours to 90~minutes) that primary experiments are only
-beginning to approach. Third, direct measurement of operator cognitive
-load exists in adjacent domains but has never been combined with an
-agentic copilot in IT incident response --- a gap all three cycles leave
-untouched. These findings define a concrete agenda: venue-quality,
-multi-site field evaluations of agentic copilots instrumented for
-nominal MTTD/MTTR with their own baselines and validated cognitive-load
-instruments.
+Incident response (IR) in IT operations is measured by Mean Time to Detect
+(MTTD) and Mean Time to Recovery (MTTR) and burdened by operator cognitive
+load. Agentic AI systems, which combine Large Language Models (LLMs) with
+planning, memory, tool use, and human oversight, are increasingly proposed
+as copilots for SRE, NOC, and SOC teams. This systematic literature review
+(SLR), following Kitchenham's guidelines and the PRISMA~2020 statement,
+asks whether the published evidence supports that promise. Across three
+update cycles over a foundational corpus, 126~candidate studies
+(2020--2026) were screened, 74 were assessed in full text, and
+\textbf{65} were included. The review is LLM-assisted but human-decided:
+three supervised LLM assistants (Claude, ChatGPT, Gemini) drafted each
+assessment independently (Fleiss' $\kappa=0.60$; 66/74 unanimous), and
+every decision was made and reviewed by the authors. Four primary studies
+measure time metrics against executed baselines, reporting reductions in
+MTTD (82--83\%), MTTR (63--72\%), and time-to-containment (38\%); two of
+them appear in bottom-quartile or unindexed venues, and the only
+production deployment is vendor-affiliated. Elsewhere, the evidence
+consists of detection proxies (accuracy, F1, AUC) and qualitative claims.
+Within the review's scope, no study measured operator cognitive load in
+the presence of an agentic copilot in IT incident response, although
+validated instruments exist in adjacent domains. The claim that agentic
+copilots reduce MTTD and MTTR is therefore supported by early primary
+evidence only. We outline an agenda of multi-site field evaluations that
+report nominal MTTD and MTTR against their own baselines together with
+validated workload measures.
 \end{abstract}
 
 \begin{keywords}
@@ -140,10 +127,11 @@ cognition. The operational cost of this asymmetry is captured by two
 indicators --- \emph{Mean Time to Detect} (MTTD) and \emph{Mean Time to
 Recovery} (MTTR) --- and by a human cost that is harder to see on
 dashboards: alert fatigue and sustained cognitive load on SRE, NOC, and
-SOC personnel. Industry reports cited in the corpus place average breach
-identification and containment at 277~days (204 to detect, 73 to
-contain)~\cite{P79}, while SOC analysts discard the majority of alerts as
-false positives.
+SOC personnel. In security operations, industry data place the average
+data-breach life cycle at 277~days (204 to identify, 73 to
+contain)~\cite{ibm2023breach}, as relayed in the corpus~\cite{P79}; this
+security-breach life cycle is related to, but distinct from, the
+availability-incident MTTR of SRE practice.
 
 \emph{Agentic AI} --- AI systems that pursue goals with some degree of
 autonomy by combining LLM-based reasoning with planning, memory, tool
@@ -156,16 +144,28 @@ operations teams.
 
 This article asks whether the published evidence supports that promise.
 It reports a systematic literature review (SLR) conducted under the
-guidelines of Kitchenham et al.~\cite{kitchenham2009}, with study
+guidelines of Kitchenham and Charters~\cite{kitchenham2007}, with study
 selection reported in the PRISMA~2020 format~\cite{page2021prisma}, scope
 delimited with the PICOC framework~\cite{petticrew2006}, and quality
-assessment mirroring the DARE criteria~\cite{dare}. The review was
-executed as an \emph{update review} in three cycles over a foundational
-corpus of 19 studies, processing 126 candidate studies in total, and ---
-unusually for SLRs in this area --- every full-text assessment was
-performed independently by \emph{three evaluators}, with inter-rater
-reliability quantified by Cohen's~\cite{cohen1960} and
-Fleiss'~\cite{fleiss1971} kappa.
+assessment mirroring the DARE criteria~\cite{dare} --- retained for
+comparability with the foundational review's assessments;
+primary-study-specific checklists such as Dyb{\aa} and
+Dings{\o}yr's~\cite{dyba2008} are a planned refinement for future
+cycles. The review was
+executed as an \emph{update review}~\cite{mendes2020update} in three
+cycles over a foundational
+corpus of 19 studies, processing 126 candidate studies in total. The
+review is \emph{LLM-assisted and human-decided}. Every full-text
+assessment was first drafted by three LLM-based research assistants
+from different model families (Claude, ChatGPT, Gemini), run
+independently under the same written protocol, and their mutual
+agreement was quantified with Cohen's~\cite{cohen1960} and
+Fleiss'~\cite{fleiss1971} kappa as a consistency check. The assistants
+recommend; they do not decide: all screening, eligibility, and
+inclusion decisions, the adjudication of every divergence, and the
+review of every assessment were performed by the authors --- the
+master's student conducting the review, under the supervision and
+review of the advisor.
 
 The contributions are:
 \begin{enumerate}
@@ -185,8 +185,10 @@ The contributions are:
         that measure operator cognitive load directly --- yet never in
         combination with an agentic copilot in IT incident response
         (Section~\ref{sec:cogload});
-  \item a methodological contribution: a fully reproducible three-rater
-        protocol whose residual disagreements (8 of 74 decisions, all
+  \item a methodological contribution: an LLM-assisted, human-decided
+        assessment protocol --- three supervised LLM assistants whose
+        recommendations are adjudicated by the authors --- in which the
+        assistants' residual disagreements (8 of 74 assessments, all
         from the first two cycles) are traceable to three explicit
         protocol rules rather than to content interpretation --- rules
         that, once ratified and rendered into the normative prompt text,
@@ -234,23 +236,34 @@ empirical studies build.
 \section{Review Method}
 \label{sec:method}
 
-The protocol follows Kitchenham et al.~\cite{kitchenham2009}: planning
+The protocol follows Kitchenham and Charters~\cite{kitchenham2007}: planning
 (PICOC, research questions, search string), conducting (search,
 screening, quality assessment, extraction), and reporting (this
 article). All protocol artifacts --- prompts, extraction sheets,
 per-study assessments, and machine-readable result tables --- are
 version-controlled in the research repository.
 
+\textbf{Division of roles.} Large language models act in this review
+only as \emph{supervised research assistants}: they assisted candidate
+identification (cycle~1), drafted the full-text PICOC extractions, and
+drafted the full-text assessments. None of them takes a decision. Every
+screening, eligibility, and inclusion decision, every protocol
+amendment and ratified rule, every adjudication of a divergence among
+the assistants, and the review of every LLM-drafted assessment and
+extraction were performed by the authors --- the master's student as
+review conductor, with each decision reviewed and approved by the
+advisor.
+
 \subsection{PICOC}
 \label{sec:picoc}
 
 Table~\ref{tab:picoc} shows the PICOC delimitation~\cite{petticrew2006}.
-A protocol rule (v1.1.0), introduced after a three-rater calibration of
-the PICOC extraction itself, requires that \emph{Comparison} be recorded
+A protocol rule (v1.1.0), introduced after a calibration of the PICOC
+extraction itself across the three LLM assistants, requires that \emph{Comparison} be recorded
 as declared \textbf{only when the study executes an empirical comparison
 against a concrete baseline}; purely conceptual contrasts (e.g.,
 ``Agentic AI vs.\ traditional AI'' in prose) are recorded as not
-applicable. This rule eliminated 100\% of the inter-rater divergences
+applicable. This rule eliminated 100\% of the inter-assistant divergences
 observed in the Comparison field.
 
 \begin{table}[!t]
@@ -301,8 +314,9 @@ cybersecurity; HITL/HOTL supervision; production vs.\ simulation. \\
 \end{itemize}
 
 \subsection{Search and identification}
-The search string was derived from the cross-study PICOC synthesis as
-two mandatory blocks --- \emph{Intervention} (agentic AI, LLM agents,
+The search string (reporting guided by
+PRISMA-S~\cite{rethlefsen2021prismas}) was derived from the cross-study
+PICOC synthesis as two mandatory blocks --- \emph{Intervention} (agentic AI, LLM agents,
 multi-agent systems, AIOps copilots) AND \emph{Context/Population}
 (incident response, IT operations, SRE/NOC/SOC, observability) ---
 with \emph{Outcomes} deliberately optional, since only 1 of 38 calibration
@@ -311,10 +325,10 @@ against the known corpus and validated by real execution on OpenAlex
 ($\approx$49{,}700 records) and on the Scopus Search API (12{,}783
 records, 2020+, English), achieving 13/14 recall of the included
 calibration set in both engines with the same single miss. Candidate
-identification combined assisted search (cycle~1: three independent LLM
-assistants, $\approx$51 raw records), author-driven discovery (cycle~2:
+identification combined assisted search (cycle~1: three LLM assistants
+supervised by the authors, $\approx$51 raw records), author-driven discovery (cycle~2:
 49 candidates), and re-execution of the validated query in five database
-sweeps (cycle~3: 37 new candidates). Backward/forward snowballing is
+sweeps (cycle~3: 37 new candidates). Backward/forward snowballing~\cite{wohlin2014} is
 mandatory in the protocol because one included study is not indexed by
 Scopus and one is not retrieved by the main query; the cycle-3
 snowballing pass (backward over OpenAlex-deposited references plus a
@@ -334,8 +348,8 @@ domain (I6). Exclusion criteria: sub-threshold venues (E1), non-agentic
 approaches (E2), out-of-domain studies (E3), duplicates (E4), and
 non-peer-reviewed material (E5). Operationally, the first three cycles
 expressed the venue cut through the Brazilian Qualis classification with
-SJR quartiles as auxiliary input; for international validity the review
-conductor later ratified the criterion directly on the Scopus percentile
+SJR quartiles as auxiliary input; for international validity the
+authors later ratified the criterion directly on the Scopus percentile
 scale (a dated protocol decision), under which every historical
 eligibility decision was re-read: all previously caveated inclusions at
 Q1--Q3 stand without a venue caveat, and the three inclusions below the
@@ -343,7 +357,7 @@ bar keep a mandatory caveat (Section~\ref{sec:mttr}). A dated protocol
 amendment in cycle~2 allowed four candidates outside the then-current
 strata to proceed to full-text assessment \emph{with a mandatory
 caveat}; the amendment is itself part of the audit trail and, notably,
-is the root cause of three of the eight residual inter-rater
+is the root cause of three of the eight residual inter-assistant
 divergences (Section~\ref{sec:reliability}).
 
 Cycle~3 brought the review's first conference papers (26 of 37
@@ -363,9 +377,10 @@ by unavailability, not by merit.
 \subsection{Ratified protocol rules (R1--R3)}
 \label{sec:rules}
 
-The inter-rater analysis (Section~\ref{sec:reliability}) traced every
-residual evaluator divergence to three recurring boundary questions.
-After that analysis, the review conductor ratified the following rules,
+The inter-assistant agreement analysis (Section~\ref{sec:reliability}) traced every
+residual divergence among the LLM assistants to three recurring
+boundary questions. After adjudicating those cases, the authors
+ratified the following rules,
 which are consistent with --- and now normatively bind --- the published
 corpus decisions:
 
@@ -399,9 +414,9 @@ Cycle~3 was conducted \emph{prospectively} under R1--R3: the ratified
 rules (including all active amendments) were rendered into the normative
 Stage-1 text of every assessment prompt from a single canonical
 template. The outcome is reported in Section~\ref{sec:reliability}: the
-cycle produced \emph{zero} inter-rater divergences, which we read as an
+cycle produced \emph{zero} inter-assistant divergences, which we read as an
 empirical verification of the rules --- in particular of R2, since the
-evaluator that had halted on sub-stratum candidates in cycle~2 assessed
+assistant that had halted on sub-stratum candidates in cycle~2 assessed
 all of them in cycle~3 once the amendment was normative text.
 
 \subsection{Selection flow (PRISMA)}
@@ -411,10 +426,11 @@ Fig.~\ref{fig:prisma} shows the PRISMA~2020 flow of the three update
 cycles over the foundational corpus, and Table~\ref{tab:prisma}
 summarizes the stage counts side by side. From cycle~2 onward, thematic
 exclusion (E2/E3) was applied as early as the screening stage, because a
-full-text PICOC extraction of every retrievable candidate (one reading
-agent per PDF, consolidated and audited) provided per-study evidence
-before assessment --- each screening exclusion cites that evidence and a
-precedent from an earlier cycle.
+full-text PICOC extraction of every retrievable candidate (one LLM
+reading agent per PDF, consolidated and audited by the authors)
+provided per-study evidence before assessment --- each screening
+exclusion, decided by the authors, cites that evidence and a precedent
+from an earlier cycle.
 
 \begin{figure*}[!t]
 \centering
@@ -435,7 +451,7 @@ precedent from an earlier cycle.
 % ---------------- Cycle 1 column ----------------
 \node[lbl] (c1t) {Cycle 1 (Jul 2026)};
 \node[box, below=3.5mm of c1t] (c1a)
-  {Records identified via assisted search\\(3 independent assistants)\\
+  {Records identified via assisted search\\(3 LLM assistants, supervised)\\
    $n\approx51$ $\rightarrow$ \textbf{21} unique candidates};
 \node[box, below=5mm of c1a] (c1b)
   {Screened (bibliometric eligibility)\\\textbf{n = 20} ($-1$ internal duplicate)};
@@ -463,7 +479,7 @@ precedent from an earlier cycle.
   {Excluded at screening: \textbf{27}\\(E2 non-agentic: 19;\\E3 out of domain: 8;\\
    full-text PICOC evidence)};
 \node[box, below=5mm of c2b] (c2c)
-  {Assessed in full text\\(3 independent evaluators)\\\textbf{n = 22}};
+  {Assessed in full text\\(3 LLM assistants; decisions by authors)\\\textbf{n = 22}};
 \node[excl, right=4mm of c2c.east, anchor=west] (c2cx)
   {Excluded after assessment: \textbf{2}\\(no RQ adherence: 1;\\non-agentic + venue: 1)};
 \node[incl, below=5mm of c2c] (c2d)
@@ -483,7 +499,7 @@ precedent from an earlier cycle.
 \node[excl, right=4mm of c3b.east, anchor=west] (c3bx)
   {Excluded at screening: \textbf{18}\\(E1: series without\\CiteScore / tier)};
 \node[box, below=5mm of c3b] (c3c)
-  {Assessed in full text\\(3 independent evaluators)\\\textbf{n = 13}};
+  {Assessed in full text\\(3 LLM assistants; decisions by authors)\\\textbf{n = 13}};
 \node[excl, right=4mm of c3c.east, anchor=west] (c3cx)
   {Reports not retrieved: \textbf{5}\\(publisher access)\\
    Excluded at screening: \textbf{1}\\(E3; PICOC evidence)};
@@ -564,17 +580,25 @@ retroactively under the same rubric --- without re-opening their
 inherited inclusion --- so that all 74 assessments are directly
 comparable.
 
-\subsection{Three-evaluator protocol}
-Every full-text assessment was executed independently by three LLM-based
-evaluators (Claude, ChatGPT, Gemini) from the same written prompt and
-PDF. The agreement set comprises 74 decisions: the 19 foundational
+\subsection{LLM-assisted assessment under human decision}
+Every full-text assessment was drafted independently by three LLM-based
+research assistants (Claude, ChatGPT, Gemini) from the same written
+prompt and PDF, each without access to the others' outputs. The
+assistants' outputs are \emph{inputs to}, not substitutes for, the
+authors' judgment: the master's student reviewed every drafted
+assessment, recorded the final include/exclude decision, and
+adjudicated every divergence, and the advisor reviewed and approved
+those decisions, the protocol amendments, and rules R1--R3. The
+agreement set comprises 74 assessments: the 19 foundational
 re-assessments, all 20 screened cycle-1 candidates (the two
 stratum-ineligible candidates also received full assessments, recorded
 as exclusions), the 22 cycle-2 assessments, and the 13 cycle-3
-assessments. Agreement was computed
-on collapsed include/exclude decisions with
-Cohen's $\kappa$ per pair~\cite{cohen1960} and Fleiss' $\kappa$ overall
-\cite{fleiss1971}. Results are reported in
+assessments. Agreement among the assistants was computed on their
+collapsed include/exclude recommendations with Cohen's $\kappa$ per
+pair~\cite{cohen1960} and Fleiss' $\kappa$ overall~\cite{fleiss1971};
+it serves as a consistency check that flags ambiguous cases for human
+adjudication, not as a measure of decision validity. Results are
+reported in
 Section~\ref{sec:reliability}.
 
 % =====================================================================
@@ -811,12 +835,13 @@ and carry the mandatory venue caveat --- so half of the cluster, and in
 particular all of its \emph{testbed} MTTR evidence, remains below the
 bar, and none of it yet appears in a top-quartile venue. Second,
 \emph{setting}: only \cite{P100} is a production deployment, and it is
-a single, author-affiliated one; \cite{P101,P102} are testbeds and
+a single, vendor-affiliated one; \cite{P101,P102} are testbeds and
 \cite{P93} (which reports MTTD/MTTR reductions of 44--80\% for an
 agentic SOC against a traditional-SOC arm) runs both arms on synthetic
 telemetry with internally inconsistent tables, recorded in its
-assessment. Third, \emph{independence}: the three evaluators unanimously
-included all four studies, with the applicable caveats attached. Outside this cluster, proxies still dominate: a
+assessment. Third, \emph{assessment}: the three LLM assistants
+unanimously recommended all four studies for inclusion, and the
+authors confirmed the inclusions with the applicable caveats attached. Outside this cluster, proxies still dominate: a
 74--84\% alert-volume reduction in a national SOC~\cite{P73}, operator
 reaction time falling from $\approx$276~s to $\approx$107~s with
 decision support~\cite{P81}, report latency of
@@ -913,8 +938,9 @@ union of a full-text reference scan of each included PDF and
 OpenAlex-deposited references; 65 citing edges in total) shows a
 coherent field rather than a disconnected collection of papers. The hubs are the definitional
 surveys --- \cite{P10} and \cite{P14} (7 internal citations each),
-\cite{P09} (6) --- followed by the AIOps/MLOps and log-anomaly surveys
-\cite{P16,P65} and the SOC hyper-automation study \cite{P76} (3 each).
+\cite{P09} (6) --- followed by the AIOps/MLOps survey \cite{P16} and the
+SOC hyper-automation study \cite{P76} (3 each; the log-anomaly survey
+\cite{P65}, a screened candidate outside the corpus, also receives 3).
 The most connected citers are the multi-agent SOC system of~\cite{P28}
 (7 outgoing edges, five of them to cycle-2 candidates) and the cycle-3
 SOC-as-a-service framework of~\cite{P97} (7 outgoing edges, all into
@@ -932,8 +958,10 @@ SOC-as-a-service framework \cite{P97} cites seven corpus studies ---
 among them \cite{P14,P73,P76,P79} and the intra-cycle survey \cite{P121}
 --- tying the multi-agent SOC system \cite{P28} as the most connected
 citer; the agentic-SOC evaluation \cite{P93} cites \cite{P06,P76}; and
-the cycle-3 surveys cite both the definitional layer and cycle-2 studies
-\cite{P101,P112,P121}. Two consequences for the hub structure: the SOC
+the cycle-3 surveys cite back into the definitional layer
+(\cite{P112}$\rightarrow$\cite{P05}; \cite{P121}$\rightarrow$\cite{P14}),
+and the event-driven SOC \cite{P101} cites the intra-cycle survey
+\cite{P121}. Two consequences for the hub structure: the SOC
 hyper-automation study \cite{P76}, cited by \cite{P28,P93,P97}, becomes
 a hub, and \cite{P14} rises to 7 internal citations, level with
 \cite{P10}.
@@ -1089,42 +1117,52 @@ and the cycle-3 SOC-as-a-service framework \cite{P97} are the most
 connected citers (7 outgoing edges each), and each new cycle cites back
 into the corpus --- evidence of one evolving research conversation
 rather than disjoint samples. Node identifiers are mapped to references
-in the Appendix (Table~\ref{tab:pids}).}
+in the Appendix (Table~\ref{tab:pids}). Nodes marked $^{\ddagger}$ in
+Table~\ref{tab:pids} are screened candidates or excluded studies that
+take part in citation edges but are not part of the included corpus;
+included studies without internal edges are omitted.}
 \label{fig:crosscite}
 \end{figure*}
 
-\subsection{Inter-rater reliability}
+\subsection{Agreement among the LLM assistants}
 \label{sec:reliability}
 
-Table~\ref{tab:kappa} reports agreement over the 74 collapsed
-include/exclude decisions. Pairwise agreement is 91.9--93.2\%
-($\kappa$ 0.58--0.62, with the strictest pair reaching the
-\emph{substantial} band); Fleiss' $\kappa=0.60$; \textbf{66/74 decisions
-are unanimous} (62 inclusions and 4 exclusions), including all 19
+Table~\ref{tab:kappa} reports agreement among the three LLM assistants
+over their 74 collapsed include/exclude recommendations; the final
+decision in every case was taken by the authors. Pairwise agreement is
+91.9--93.2\% ($\kappa$ 0.58--0.62, with one pair reaching the
+\emph{substantial} band); Fleiss' $\kappa=0.60$; \textbf{66/74
+recommendations are unanimous} (62 inclusions and 4 exclusions), including all 19
 foundational re-assessments and the entire third cycle. The $\kappa$
 values are deflated by prevalence (90.1\% of all verdicts are
 ``include''), so the substantive reading is the nature of the eight
 divergences: \emph{all eight are protocol-rule divergences, none is a
 content divergence, and all eight predate cycle~3} --- in every case the
-three evaluators' scores agree and only the consequence rule differs.
+three assistants' scores agree and only the consequence rule differs.
 They fall into exactly three families: (A)~the treatment of non-agentic
 secondary studies (2 cases); (B)~whether the cycle-2 stratum amendment
-binds, which one evaluator --- applying the strict criterion --- did
+binds, which one assistant --- applying the strict criterion --- did
 not honor (3 cases); and (C)~domain/stratum boundary calls (3 cases).
-These three families were ratified as protocol rules R1--R3
+The authors adjudicated all eight cases, and the three families were
+ratified as protocol rules R1--R3
 (Section~\ref{sec:rules}) and cycle~3 was run prospectively under them:
 its 13 assessments came out \textbf{unanimous 13/13} ($\kappa=1.00$ in
 every pair within the cycle), including the unanimous thematic exclusion
 of the one screening-flagged borderline study --- an empirical
 verification that the rules, once normative, eliminate the divergence
 classes they name. Mean absolute score differences remain small
-(RQ 0.43--0.61; QA 0.31--0.61), with stable evaluator profiles:
+(RQ 0.43--0.61; QA 0.31--0.61), with stable assistant profiles:
 one strict on protocol and quality, one lenient on scores (though its
-quality bands matched the intermediate evaluator's exactly in cycle~3),
-one intermediate with the hardest thematic cut.
+quality bands matched the intermediate assistant's exactly in cycle~3),
+one intermediate with the hardest thematic cut. Because 90.1\% of the
+recommendations are ``include'', we also report prevalence-robust
+coefficients: Gwet's AC1~\cite{gwet2008} of 0.91 (95\% CI 0.85--0.97)
+and PABAK~\cite{byrt1993} of 0.86 (95\% CI 0.76--0.95); interpretation
+bands follow Landis and Koch~\cite{landis1977}.
 
 \begin{table}[!t]
-\caption{Inter-rater agreement on include/exclude decisions (n=74).}
+\caption{Agreement among the three LLM assistants on include/exclude
+recommendations (n=74; final decisions by the authors).}
 \label{tab:kappa}
 \centering
 \begin{tabular}{@{}lccc@{}}
@@ -1134,8 +1172,8 @@ one intermediate with the hardest thematic cut.
 Agreement        & 91.9\% & 93.2\% & 93.2\% \\
 Cohen's $\kappa$ & 0.62   & 0.58   & 0.58   \\
 \midrule
-\multicolumn{4}{l}{Fleiss' $\kappa$ (three raters): \textbf{0.60};
-unanimous decisions: \textbf{66/74}} \\
+\multicolumn{4}{l}{Fleiss' $\kappa$ (three assistants): \textbf{0.60};
+unanimous recommendations: \textbf{66/74}} \\
 \multicolumn{4}{l}{(cycle 3 alone: 13/13 unanimous; $\kappa=1.00$ per
 pair).} \\
 \bottomrule
@@ -1157,7 +1195,7 @@ and governance agenda \cite{P01,P12,P17,P14,P94}. The headline
 operational claim now has its first primary support --- the cycle-3
 cluster of Section~\ref{sec:mttr} --- but that support is early,
 partly below the venue bar, and production-grade in exactly one
-author-affiliated deployment. Reviewers and practitioners should
+vendor-affiliated deployment. Reviewers and practitioners should
 still treat vendor-scale numbers (e.g., 8h $\rightarrow$ 90min MTTR) as
 hypotheses under test: the cycle-3 measurements are the first tests, not
 yet the established effect.
@@ -1237,14 +1275,16 @@ as experimental \cite{P22,P76,P123} and securing the agent pipeline
 itself \cite{P94}.
 
 \subsection{Methodological lessons for LLM-assisted SLRs}
-Three findings generalize beyond this topic. First, three independent
-LLM evaluators under one written protocol achieve high percentage
+Three findings generalize beyond this topic. First, three
+independently run LLM assistants under one written protocol, supervised
+by human reviewers who keep every decision, achieve high percentage
 agreement (91.9--93.2\% pairwise) with moderate-to-substantial
 chance-corrected $\kappa$, and their residual disagreements expose
 \emph{protocol ambiguities, not model randomness} --- a cheap and
-effective audit mechanism. Second, protocol amendments must be placed in
+effective mechanism for directing human attention to the cases that
+need adjudication. Second, protocol amendments must be placed in
 the normative body of the evaluation prompt, not in its input metadata:
-the one evaluator that missed the cycle-2 stratum amendment read it as
+the one assistant that missed the cycle-2 stratum amendment read it as
 advisory, producing three of the eight divergences. Third, the fix is
 verifiable: once the ratified rules were rendered into the normative
 prompt text from a canonical template, the next full cycle (13
@@ -1267,8 +1307,8 @@ cycle-3 candidates were removed as PRISMA ``reports not retrieved''
 after two documented access attempts --- an unavailability exclusion
 whose effect on the synthesis is unknowable by construction.
 \textbf{Venue criteria.} The venue bar is the Scopus CiteScore
-percentile in quartiles (Q1--Q3 eligible), ratified by the review
-conductor for international validity; the first three cycles
+percentile in quartiles (Q1--Q3 eligible), ratified by the authors
+for international validity; the first three cycles
 operationalized the same cut through the Brazilian Qualis
 classification with SJR as auxiliary input, and every dated amendment
 that retained below-bar studies is explicit in the audit trail. All
@@ -1277,15 +1317,21 @@ quantified consequence: the cycle-3 nominal-metric cluster narrows from
 four studies to two (\cite{P100,P123}), losing its testbed MTTR
 evidence --- which is precisely why the evidence grade is reported
 alongside the effect sizes, and why the one production deployment is
-flagged as author-affiliated and single-vendor.
-\textbf{Evaluator validity.} All three raters are LLM systems;
-they are independent of each other but share potential model-family
-biases. The unanimity of the core corpus (89\%), the protocol-only
-nature of divergences, per-claim evidence anchors in every assessment,
-and a divergence-free third cycle under the ratified rules mitigate ---
-but do not eliminate --- this threat; the three protocol questions
-exposed by the divergences were adjudicated by the (human) review
-conductor and ratified as rules R1--R3 (Section~\ref{sec:rules}).
+flagged as vendor-affiliated and single-site.
+\textbf{Assistant validity.} The three assessment assistants are LLM
+systems; they run independently of each other but may share
+model-family biases (training data, sensitivity to the shared prompt)
+and may misread or misreport content. The main mitigation is the
+human-decision design: no screening, inclusion, exclusion, or
+adjudication was delegated to an LLM --- all were taken by the authors
+(the master's student, reviewed by the advisor) --- and per-claim
+evidence anchors (section/page) in every assessment allow each claim
+to be traced to its source during that review. The unanimity of the
+core corpus (89\%), the protocol-only nature of the divergences, and a
+divergence-free third cycle under the ratified rules indicate
+consistency among the assistants, not by themselves correctness; the
+three protocol questions exposed by the divergences were adjudicated
+by the authors and ratified as rules R1--R3 (Section~\ref{sec:rules}).
 \textbf{Bibliometric sources.} Citation counts are kept per source and
 never summed; source quirks (title-based reference resolution, unindexed
 venues, preprint DOI splits, API service-level limits) are documented in
@@ -1296,17 +1342,21 @@ the audit trail.
 \label{sec:conclusion}
 
 This SLR consolidated 65 studies (2020--2026) on Agentic AI as a copilot
-for incident response across three update cycles, assessed by three
-independent evaluators with high agreement (66 of 74 decisions
-unanimous; the third cycle divergence-free). The field has matured
+for incident response across three update cycles, through an
+LLM-assisted, human-decided protocol: three supervised LLM assistants
+drafted each full-text assessment with high mutual agreement (66 of 74
+unanimous; the third cycle divergence-free), and every decision was
+taken and reviewed by the authors. The field has matured
 conceptually --- shared definitions, reference architectures, governance
 agendas, and a coherent citation structure --- and demonstrates
 prototype-level feasibility of agentic detection, RCA, and remediation.
 Its motivating claim is now beginning to be measured: a first cluster of
-four primary studies reports nominal MTTD, MTTR, and time-to-containment
-reductions of 38--91\% against executed baselines --- half of it below
+four primary studies reports nominal reductions against executed
+baselines --- MTTD by 82--83\%, MTTR by 63--72\%, and time-to-containment
+by 38\%, in settings ranging from one production deployment to testbeds
+and a public dataset --- half of it below
 the review's venue bar, with production evidence from a single
-author-affiliated deployment, and still without any measurement of
+vendor-affiliated deployment, and still without any measurement of
 operator cognitive load in the presence of an agentic copilot. A useful
 next step is a multi-site field evaluation involving operations teams
 beyond a single vendor. It should measure MTTD and MTTR against an
@@ -1367,12 +1417,20 @@ P21 & \cite{P21} & & P44$^{\ddagger}$ & \cite{P44} & & P81 & \cite{P81} & & & \\
 % =====================================================================
 \section*{Acknowledgment}
 The authors thank the Applied Computing Graduate Program (PPGCA) at
-Unisinos, a program of excellence dedicated to educating master's and
-doctoral researchers in technology and innovation. Review artifacts
+Unisinos. LLM-based assistants
+(Claude, ChatGPT, Gemini) were used as described in
+Section~\ref{sec:method}; all decisions, analyses, and conclusions were
+reviewed by the authors, who take full responsibility for the content
+of this article. Review artifacts
 (protocol, prompts, assessments, extraction
 sheets, and machine-readable tables) are maintained in a
 version-controlled repository and are available from the authors upon
 reasonable request.
+
+\textbf{Competing interests.} The first author is employed in IT
+operations leadership at a communications-platform company; the company
+had no role in the design, conduct, or reporting of this review. The
+authors declare no other competing interests.
 
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
