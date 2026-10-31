@@ -514,6 +514,20 @@ aplicadas pelo autor num clone e copiadas para o working tree).
 
 **Commit:** `d0cbee3`.
 
+### 165. Declaração de financiamento (pendência C7.2 resolvida)
+
+**Prompt:** "Não existe bolsa ou financiamento do PPGCA e/ou da empresa
+Zenvia".
+
+**Ações:** `\tfootnote` do artigo complementado com a declaração padrão:
+"This research received no specific grant from any funding agency in the
+public, commercial, or not-for-profit sectors", mantendo a menção neutra
+ao PPGCA. PDF recompilado (13 pp., 0 erros `^!`); texto confirmado na p. 1
+via pypdf. Pendência C7.2 do parecer marcada como resolvida no README do
+artigo (restam C7.4/Zenodo e C10–C14).
+
+**Commit:** `c990081`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2844,5 +2858,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `212aae4` | 2026-10-30 | Article title-page footnote: PPGCA description (program of excellence) |
 | `11f962c` | 2026-10-30 | Log PPGCA description in tfootnote (item 163) in MEMORY.md |
 | `d0cbee3` | 2026-10-31 | Incorporate PPGCA review: LLM-assisted/human-decided framing + C1-C9 (Partes A/B aplicadas pelo autor) |
+| `56a3011` | 2026-10-31 | Log PPGCA review incorporation (item 164) in MEMORY.md |
+| `c990081` | 2026-10-31 | Funding statement: no specific grant (resolves review item C7.2) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
