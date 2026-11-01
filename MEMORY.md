@@ -676,6 +676,24 @@ Build: 13 pp., 0 erros; frases confirmadas no PDF.
 
 **Commit:** `620bbdb`.
 
+### 173. Racional da banca tripla documentado no Template-RSL (0.3.1)
+
+**Prompt:** "Faça estes ajustes tambem no Template-RSL, para deixar claro
+para quem for usar o repositório sobre a importância no uso das 3 LLMs."
+
+**Ações (repo Template-RSL, release 0.3.1, commit `d04b6eb`):** racional da
+banca tripla documentado para adotantes — três LLMs de **famílias de
+modelos diferentes** como filtro de alucinação (falha idiossincrática não
+se repete entre famílias; concordância = fidelidade à fonte; divergência =
+adjudicação humana), política de versões (a mais capaz disponível no
+momento da execução, carimbada pelo rodapé v1.3.0; modelos são
+instrumento, não variável de estudo) e a regra "as LLMs recomendam, o
+condutor decide". Onde: seção nova "Por que três LLMs — e de famílias
+diferentes?" + linha "Alucinação" no glossário do `docs/como-funciona.md`;
+racional na introdução e princípio 7 no README; nota na etapa 6 do
+WORKFLOW. CHANGELOG [0.3.1] e CITATION.cff 0.3.1. `check-rsl.sh` OK;
+`git add` explícito por caminho (lição do item 170 aplicada).
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -3023,5 +3041,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `18c225c` | 2026-11-01 | Protocol-improvement note: version footer from the next cycle onward |
 | `19c86ed` | 2026-11-01 | Log protocol-improvement note in article (item 171) in MEMORY.md |
 | `620bbdb` | 2026-11-01 | Design rationale: cross-family hallucination screen + version policy |
+| `e1e36fa` | 2026-11-01 | Log hallucination-screen rationale (item 172) in MEMORY.md |
+| `d04b6eb` | 2026-11-01 | (Template-RSL) Release 0.3.1: document the three-LLM rationale for adopters |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
