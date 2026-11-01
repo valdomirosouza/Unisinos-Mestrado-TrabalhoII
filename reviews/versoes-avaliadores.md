@@ -7,7 +7,7 @@ Levantamento de **2026-10-31** para responder ao item C10 do parecer PPGCA
 PDF"). As células do avaliador Claude vêm de registros verificáveis
 (trailers `Co-Authored-By` dos commits, transcripts de sessão do Claude
 Code e datas de criação dos pareceres no git); as do ChatGPT vêm de
-informação do condutor (2026-10-31); as do Gemini estão **pendentes de
+informação do condutor (2026-10-31 e 2026-11-01); as do Gemini estão **pendentes de
 verificação no histórico do app** pelo condutor.
 
 ## Tabela por ciclo
@@ -15,7 +15,7 @@ verificação no histórico do app** pelo condutor.
 | Conjunto de pareceres                   | Datas (git) | Claude (avaliador A)                                   | ChatGPT (avaliador B)                          | Gemini (avaliador C) |
 | --------------------------------------- | ----------- | ------------------------------------------------------ | ---------------------------------------------- | -------------------- |
 | Ciclo 1 — P20–P40 (20)                  | 2026-06-28  | **Claude Opus 4.8 (1M context)**, via Claude Code      | **GPT-5.4** (app ChatGPT)                      | `[verificar no app]` |
-| Ciclo 2 — P43–P88 (22)                  | 2026-09-10  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | `[verificar: GPT-5.4 ou posterior — set/2026]` | `[verificar no app]` |
+| Ciclo 2 — P43–P88 (22)                  | 2026-09-10  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-5.6** (app ChatGPT) | `[verificar no app]` |
 | Fundacionais — P01–P19 (19, retroativa) | 2026-10-26  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-6.0** (app ChatGPT)                      | `[verificar no app]` |
 | Ciclo 3 — P91–P123 (13)                 | 2026-10-28  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-6.0** (app ChatGPT)                      | `[verificar no app]` |
 
