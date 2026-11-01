@@ -614,6 +614,26 @@ próximos ciclos. `check-rsl.sh` OK.
 
 **Commit:** `1fdf1a1`.
 
+### 170. Rodapé de comprovação replicado no Template-RSL (release 0.3.0)
+
+**Prompt (mid-turn):** "Ajuste este aprendizado no Template-RSL também,
+para que todos os fluxos executados pelos assistentes (Claude, Gemini,
+ChatGPT) tenham no rodapé das respostas em arquivos MD e/ou prompts a
+versão da LLM usada naquele momento e o timestamp."
+
+**Ações (repo Template-RSL, commits `0ed8613` + `95e66f5`):**
+`templates/prompt-avaliacao.md` **v1.3.0** (mesmo rodapé da instância, com
+a motivação no changelog: reconstruir versões retroativamente exige
+arqueologia de logs — lição do worked example/item C10 do parecer);
+`templates/prompt-extracao-picoc.md` com o mesmo rodapé;
+`templates/review.md` com o slot da linha "Executado por: … | Execução:
+…"; CHANGELOG [0.3.0] e CITATION.cff 0.3.0. `check-rsl.sh` OK.
+**Incidente (recorrente):** `git add -A` levou o artefato local
+`claude-resume-history.txt` para o commit do release — removido e
+adicionado ao `.gitignore` no commit seguinte (`95e66f5`); mesmo padrão do
+`__pycache__` no item 159 — lição: preferir `git add` explícito por
+caminho em releases do template.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2954,5 +2974,8 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `430c1cb` | 2026-11-01 | LLM assistant versions: complete table in Section III + threats note |
 | `69deaf0` | 2026-11-01 | Log Gemini versions and article table (item 168) in MEMORY.md |
 | `1fdf1a1` | 2026-11-01 | Version-proof footer in all prompts and canonical templates (v1.3.0) |
+| `10a08a7` | 2026-11-01 | Log version-proof footer rollout (item 169) in MEMORY.md |
+| `0ed8613` | 2026-11-01 | (Template-RSL) Release 0.3.0: version-proof response footer in assistant-executed flows |
+| `95e66f5` | 2026-11-01 | (Template-RSL) Remove accidentally committed claude-resume-history.txt and ignore it |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
