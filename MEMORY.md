@@ -648,6 +648,34 @@ proveniência de versão capturada na geração, não reconstruída de logs
 
 **Commit:** `18c225c`.
 
+### 172. Racional anti-alucinação e política de versões no artigo
+
+**Prompt:** "Um dos motivos de usar os três assistentes... é para garantir
+que não aconteceu nenhuma alucinação de LLM... Vale citar isso em algum
+momento no artigo?" → recomendação: sim, em formulação probabilística
+(nunca "garantir"; concordância ≠ correção) → "de acordo. Sobre a mudança
+das versões, como não estamos estudando as LLM e uma versão específica,
+estamos apenas usando o que tem de melhor delas... a versão mais recente
+daquele momento e sem julgamentos."
+
+**Ações:** três frases no `main.tex`: (1) Seção III — o desenho de três
+assistentes de **famílias diferentes** é deliberado: alucinação é falha
+idiossincrática de um modelo, improvável de ser reproduzida
+independentemente por outras duas famílias no mesmo PDF/prompt;
+concordância entre famílias atua como *hallucination screen* e divergência
+sinaliza o caso para verificação dos autores contra as âncoras de
+evidência; (2) parágrafo "Assistant versions" — a revisão não estuda os
+modelos: a política vigente foi usar a versão mais capaz de cada
+fornecedor disponível no momento da execução, sem preferência entre
+fornecedores — as versões da tabela acompanham a linha do tempo, não são
+variável experimental controlada; (3) Threats — a triangulação **reduz** o
+risco de uma alucinação sobreviver ao registro, mas a defesa se completa
+com as âncoras por claim e a revisão dos autores, nunca pela concordância
+sozinha. Blockquote da proveniência (Assistant validity) sincronizado.
+Build: 13 pp., 0 erros; frases confirmadas no PDF.
+
+**Commit:** `620bbdb`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2993,5 +3021,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `95e66f5` | 2026-11-01 | (Template-RSL) Remove accidentally committed claude-resume-history.txt and ignore it |
 | `5468924` | 2026-11-01 | Log Template-RSL 0.3.0 footer replication (item 170) in MEMORY.md |
 | `18c225c` | 2026-11-01 | Protocol-improvement note: version footer from the next cycle onward |
+| `19c86ed` | 2026-11-01 | Log protocol-improvement note in article (item 171) in MEMORY.md |
+| `620bbdb` | 2026-11-01 | Design rationale: cross-family hallucination screen + version policy |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
