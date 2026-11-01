@@ -130,3 +130,11 @@ Pontue Y=1.0 / P=0.5 / N=0.0 (máx. 4.0), conforme a rubrica da RSL:
 - Síntese (3–5 linhas) sobre aderência do estudo às RQs e ao escopo da RSL.
 - Recomendação: INCLUIR / INCLUIR COM RESSALVAS / EXCLUIR — justificada.
 - Pendências de verificação externa (se houver).
+
+---
+
+**Rodapé obrigatório da resposta (comprovação de versão):** encerre o
+arquivo MD da resposta com a linha abaixo, preenchida no momento da
+execução:
+
+`Executado por: <nome e versão exatos do modelo> | Execução: <AAAA-MM-DD HH:MM (fuso)>`

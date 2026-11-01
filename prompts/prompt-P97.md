@@ -51,3 +51,11 @@ literature review".
    recomendação: `Incluir` | `Incluir c/ ressalvas (motivo)` | `Excluir
 (critério ou PDR)`.
 
+
+---
+
+**Rodapé obrigatório da resposta (comprovação de versão):** encerre o
+arquivo MD da resposta com a linha abaixo, preenchida no momento da
+execução:
+
+`Executado por: <nome e versão exatos do modelo> | Execução: <AAAA-MM-DD HH:MM (fuso)>`

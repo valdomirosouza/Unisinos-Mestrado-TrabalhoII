@@ -42,3 +42,7 @@
 ## Recomendação
 
 `Incluir` | `Incluir c/ ressalvas ({{motivo}})` | `Excluir ({{critério E1–E5 ou PDR}})`
+
+---
+
+`Executado por: <modelo e versão> | Execução: <AAAA-MM-DD HH:MM (fuso)>`

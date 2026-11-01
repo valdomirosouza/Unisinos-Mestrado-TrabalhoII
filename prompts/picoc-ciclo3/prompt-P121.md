@@ -29,3 +29,11 @@ Formato de saída: um bloco por estudo no arquivo consolidado
 
 <!-- Changelog
 1.0.0 (2026-10-27) — template inicial. -->
+
+---
+
+**Rodapé obrigatório da resposta (comprovação de versão):** encerre o
+arquivo MD da resposta com a linha abaixo, preenchida no momento da
+execução:
+
+`Executado por: <nome e versão exatos do modelo> | Execução: <AAAA-MM-DD HH:MM (fuso)>`

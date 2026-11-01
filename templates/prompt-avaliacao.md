@@ -2,7 +2,7 @@
 
 <!-- TEMPLATE CANÔNICO. Nunca envie este arquivo a um avaliador: gere as cópias
      por estudo/avaliador com scripts/render-prompts.py. Marcadores: {{...}}.
-     Versão: 1.1.0 — mudanças de texto normativo = PDR + MINOR + changelog. -->
+     Versão: 1.3.0 — mudanças de texto normativo = PDR + MINOR + changelog. -->
 
 ## PAPEL
 
@@ -41,7 +41,22 @@ literature review".
    recomendação: `Incluir` | `Incluir c/ ressalvas (motivo)` | `Excluir
 (critério ou PDR)`.
 
+---
+
+**Rodapé obrigatório da resposta (comprovação de versão):** encerre o
+arquivo MD da resposta com a linha abaixo, preenchida no momento da
+execução:
+
+`Executado por: <nome e versão exatos do modelo> | Execução: <AAAA-MM-DD HH:MM (fuso)>`
+
 <!-- Changelog
+1.3.0 (2026-11-01) — rodapé obrigatório da resposta: a saída MD deve terminar
+com a linha "Executado por: <modelo e versão> | Execução: <data/hora>", para
+comprovação futura das versões (decisão do condutor, 2026-11-01; aplicada
+retroativamente a todos os prompts renderizados em prompts/). Não normativo.
+Nota: a 1.2.0 existe apenas no repo Template-RSL (renomeação dos marcadores de
+estrato, PERCENTIL_SCOPUS/SJR_QUARTIL) e será adotada nesta instância junto com
+o texto normativo do PDR-0009, no próximo ciclo que renderizar prompts.
 1.1.0 (2026-10-28) — marcadores instrucionais ({{PERSONA — ex.: …}},
 {{EMENDAS_NORMATIVAS — ex.: …}}, {{RQ1..RQ5 — …}}) trocados por marcadores
 limpos {{PERSONA}}, {{EMENDAS_NORMATIVAS}} e {{RQS}}, resolvíveis pelo
