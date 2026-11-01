@@ -558,6 +558,18 @@ históricos dos apps. Indexado no `reviews/README.md` e no README raiz.
 
 **Commit:** `dd5e578`.
 
+### 167. Versão do ChatGPT no ciclo 2: GPT-5.6
+
+**Prompt:** "No ciclo 2 foi o GPT-5.6".
+
+**Ações:** célula do ciclo 2 (avaliador ChatGPT) preenchida em
+`reviews/versoes-avaliadores.md` com **GPT-5.6**; nota de fonte atualizada
+(informações do condutor em 2026-10-31 e 2026-11-01). A coluna do ChatGPT
+está completa: GPT-5.4 (ciclo 1) → GPT-5.6 (ciclo 2) → GPT-6.0
+(fundacionais e ciclo 3). Pendentes apenas as 4 células do Gemini.
+
+**Commit:** `261f128`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2892,5 +2904,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `c990081` | 2026-10-31 | Funding statement: no specific grant (resolves review item C7.2) |
 | `4c46056` | 2026-10-31 | Log funding statement (item 165) in MEMORY.md |
 | `dd5e578` | 2026-10-31 | Evaluator LLM versions per cycle (review item C10 input) |
+| `dd4269c` | 2026-10-31 | Log evaluator LLM versions survey (item 166) in MEMORY.md |
+| `261f128` | 2026-11-01 | Cycle-2 ChatGPT version: GPT-5.6 (per the conductor) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
