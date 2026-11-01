@@ -609,7 +609,12 @@ is not user-configurable): Claude through the Claude Code interface with
 the PDF read as a file, ChatGPT and Gemini through their web applications
 with the PDF uploaded. The assistant versions changed across the review's
 timeline, as recorded in Table~\ref{tab:llmversions};
-Section~\ref{sec:threats} discusses the implications.
+Section~\ref{sec:threats} discusses the implications. As a protocol
+improvement ratified after the third cycle, every assistant response
+from the next cycle onward must close with a mandatory footer recording
+the exact model version and the execution timestamp, so that version
+provenance is captured at generation time rather than reconstructed from
+logs.
 
 \begin{table}[!t]
 \caption{LLM assistant versions per assessment set.}
