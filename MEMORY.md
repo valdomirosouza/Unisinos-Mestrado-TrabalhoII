@@ -634,6 +634,20 @@ adicionado ao `.gitignore` no commit seguinte (`95e66f5`); mesmo padrão do
 `__pycache__` no item 159 — lição: preferir `git add` explícito por
 caminho em releases do template.
 
+### 171. Nota da melhoria de protocolo no artigo (rodapé de versão)
+
+**Prompt:** oferta do item 170 aceita ("sim").
+
+**Ações:** frase adicionada ao fim do parágrafo "Assistant versions"
+(Seção III do artigo): como melhoria de protocolo ratificada após o ciclo
+3, toda resposta de assistente a partir do próximo ciclo encerra com
+rodapé obrigatório registrando versão exata do modelo e timestamp —
+proveniência de versão capturada na geração, não reconstruída de logs
+(fecha o ponto C10 no protocolo, não só no reporte). PDF recompilado
+(13 pp., 0 erros); frase confirmada via pypdf.
+
+**Commit:** `18c225c`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2977,5 +2991,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `10a08a7` | 2026-11-01 | Log version-proof footer rollout (item 169) in MEMORY.md |
 | `0ed8613` | 2026-11-01 | (Template-RSL) Release 0.3.0: version-proof response footer in assistant-executed flows |
 | `95e66f5` | 2026-11-01 | (Template-RSL) Remove accidentally committed claude-resume-history.txt and ignore it |
+| `5468924` | 2026-11-01 | Log Template-RSL 0.3.0 footer replication (item 170) in MEMORY.md |
+| `18c225c` | 2026-11-01 | Protocol-improvement note: version footer from the next cycle onward |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
