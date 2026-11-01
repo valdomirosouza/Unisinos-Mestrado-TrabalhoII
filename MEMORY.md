@@ -590,6 +590,30 @@ marcado como resolvido no README do artigo. Build: 13 pp., 0 erros;
 
 **Commit:** `430c1cb`.
 
+### 169. Rodapé de comprovação de versão em todos os prompts (template v1.3.0)
+
+**Prompt:** "Ajuste todos os prompts criados na pasta prompts/ para que
+eles tragam uma linha de rodapé informando na resposta do MD a versão
+usada e timestamp da execução, para futuras comprovações."
+
+**Ações:** rodapé obrigatório acrescentado a **94 prompts** (prompt-P01…
+P88, prompt-chatgpt-consultation e os 19 prompts PICOC do ciclo 3; 2
+READMEs pulados): a resposta MD deve terminar com
+"`Executado por: <modelo e versão exatos> | Execução: <AAAA-MM-DD HH:MM
+(fuso)>`". Fontes canônicas atualizadas para que futuros renders já o
+tragam: `templates/prompt-avaliacao.md` **v1.3.0** (não normativo, com
+changelog; nota de que a 1.2.0 — renomeação de marcadores — existe só no
+Template-RSL e será adotada aqui junto com o texto do PDR-0009 no próximo
+ciclo renderizado), `templates/prompt-extracao-picoc.md` e
+`templates/review.md` (slot da linha no formato do parecer). **Decisão do
+condutor com alcance retroativo** sobre prompts renderizados de ciclos
+anteriores (registro: as versões executadas permanecem no histórico git;
+os pareceres publicados não foram tocados). Elimina a lacuna de
+rastreabilidade de versões apontada no item C10 do parecer para os
+próximos ciclos. `check-rsl.sh` OK.
+
+**Commit:** `1fdf1a1`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2928,5 +2952,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `261f128` | 2026-11-01 | Cycle-2 ChatGPT version: GPT-5.6 (per the conductor) |
 | `38621b3` | 2026-11-01 | Log cycle-2 ChatGPT version (item 167) in MEMORY.md |
 | `430c1cb` | 2026-11-01 | LLM assistant versions: complete table in Section III + threats note |
+| `69deaf0` | 2026-11-01 | Log Gemini versions and article table (item 168) in MEMORY.md |
+| `1fdf1a1` | 2026-11-01 | Version-proof footer in all prompts and canonical templates (v1.3.0) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
