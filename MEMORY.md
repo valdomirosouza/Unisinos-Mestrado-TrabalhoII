@@ -570,6 +570,26 @@ está completa: GPT-5.4 (ciclo 1) → GPT-5.6 (ciclo 2) → GPT-6.0
 
 **Commit:** `261f128`.
 
+### 168. Versões do Gemini + tabela de versões no artigo (C10 parcial)
+
+**Prompt:** "Para o Gemini foram usados o 3.1 Pro no Ciclo 1 e Gemini 3.8
+Flash nos demais".
+
+**Ações:** células do Gemini preenchidas em
+`reviews/versoes-avaliadores.md` — tabela avaliador × ciclo **completa**
+(Claude: Opus 4.8 → Fable 5; ChatGPT: GPT-5.4 → GPT-5.6 → GPT-6.0;
+Gemini: 3.1 Pro → 3.8 Flash). Levada ao artigo como combinado: parágrafo
+"Assistant versions" + Tabela `tab:llmversions` na Seção III (condições de
+execução: prompt canônico, PDF integral, default settings) e frase em
+Threats to Validity — a concordância não degradou com as trocas de versão
+(ciclo 3 unânime nas versões novas), logo a consistência repousa no
+protocolo escrito, não num build específico. Blockquote da proveniência
+(Assistant validity) sincronizado; sub-item "versões dos LLMs" do C10
+marcado como resolvido no README do artigo. Build: 13 pp., 0 erros;
+`check-rsl.sh` OK.
+
+**Commit:** `430c1cb`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -2906,5 +2926,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `dd5e578` | 2026-10-31 | Evaluator LLM versions per cycle (review item C10 input) |
 | `dd4269c` | 2026-10-31 | Log evaluator LLM versions survey (item 166) in MEMORY.md |
 | `261f128` | 2026-11-01 | Cycle-2 ChatGPT version: GPT-5.6 (per the conductor) |
+| `38621b3` | 2026-11-01 | Log cycle-2 ChatGPT version (item 167) in MEMORY.md |
+| `430c1cb` | 2026-11-01 | LLM assistant versions: complete table in Section III + threats note |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
