@@ -1079,6 +1079,10 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > these updates — cycle 3, run entirely on the newer versions, was
 > divergence-free — indicating that the observed consistency rests on
 > the written protocol rather than on any specific model build.
+> Cross-family triangulation reduces the risk that a hallucination by a
+> single model survives into the record, but the defense is completed by
+> the per-claim evidence anchors and the authors' review, never by
+> agreement alone.
 > Bibliometric sources. Citation counts are kept per source and
 > never summed; source quirks (title-based reference resolution, unindexed
 > venues, preprint DOI splits, API service-level limits) are documented in

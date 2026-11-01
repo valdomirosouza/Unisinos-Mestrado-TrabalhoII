@@ -585,7 +585,14 @@ comparable.
 \subsection{LLM-assisted assessment under human decision}
 Every full-text assessment was drafted independently by three LLM-based
 research assistants (Claude, ChatGPT, Gemini) from the same written
-prompt and PDF, each without access to the others' outputs. The
+prompt and PDF, each without access to the others' outputs. The choice
+of three assistants from different model families is deliberate:
+hallucination --- a confident claim not grounded in the source --- is an
+idiosyncratic failure of a single model and is unlikely to be reproduced
+independently by two others reading the same PDF under the same prompt;
+cross-family agreement therefore acts as a hallucination screen, and any
+divergence flags the case for the authors' direct verification against
+the evidence anchors. The
 assistants' outputs are \emph{inputs to}, not substitutes for, the
 authors' judgment: the master's student reviewed every drafted
 assessment, recorded the final include/exclude decision, and
@@ -607,8 +614,12 @@ Section~\ref{sec:reliability}.
 the full-text PDF, under each interface's default settings (temperature
 is not user-configurable): Claude through the Claude Code interface with
 the PDF read as a file, ChatGPT and Gemini through their web applications
-with the PDF uploaded. The assistant versions changed across the review's
-timeline, as recorded in Table~\ref{tab:llmversions};
+with the PDF uploaded. The review does not study the models themselves: the
+standing policy was to run each assistant on the vendor's most capable
+version available at execution time, without preference among vendors,
+so the versions in Table~\ref{tab:llmversions} track the review's
+timeline rather than a controlled experimental variable.
+The assistant versions therefore changed across the review's timeline;
 Section~\ref{sec:threats} discusses the implications. As a protocol
 improvement ratified after the third cycle, every assistant response
 from the next cycle onward must close with a mandatory footer recording
@@ -1370,6 +1381,10 @@ GPT-6.0, Gemini 3.1~Pro to 3.8~Flash); agreement did not degrade across
 these updates --- cycle~3, run entirely on the newer versions, was
 divergence-free --- indicating that the observed consistency rests on
 the written protocol rather than on any specific model build.
+Cross-family triangulation reduces the risk that a hallucination by a
+single model survives into the record, but the defense is completed by
+the per-claim evidence anchors and the authors' review, never by
+agreement alone.
 \textbf{Bibliometric sources.} Citation counts are kept per source and
 never summed; source quirks (title-based reference resolution, unindexed
 venues, preprint DOI splits, API service-level limits) are documented in
