@@ -7,17 +7,16 @@ Levantamento de **2026-10-31** para responder ao item C10 do parecer PPGCA
 PDF"). As células do avaliador Claude vêm de registros verificáveis
 (trailers `Co-Authored-By` dos commits, transcripts de sessão do Claude
 Code e datas de criação dos pareceres no git); as do ChatGPT vêm de
-informação do condutor (2026-10-31 e 2026-11-01); as do Gemini estão **pendentes de
-verificação no histórico do app** pelo condutor.
+informação do condutor (2026-10-31 e 2026-11-01); as do Gemini vêm de informação do condutor (2026-11-01). **Tabela completa.**
 
 ## Tabela por ciclo
 
 | Conjunto de pareceres                   | Datas (git) | Claude (avaliador A)                                   | ChatGPT (avaliador B)                          | Gemini (avaliador C) |
 | --------------------------------------- | ----------- | ------------------------------------------------------ | ---------------------------------------------- | -------------------- |
-| Ciclo 1 — P20–P40 (20)                  | 2026-06-28  | **Claude Opus 4.8 (1M context)**, via Claude Code      | **GPT-5.4** (app ChatGPT)                      | `[verificar no app]` |
-| Ciclo 2 — P43–P88 (22)                  | 2026-09-10  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-5.6** (app ChatGPT) | `[verificar no app]` |
-| Fundacionais — P01–P19 (19, retroativa) | 2026-10-26  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-6.0** (app ChatGPT)                      | `[verificar no app]` |
-| Ciclo 3 — P91–P123 (13)                 | 2026-10-28  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-6.0** (app ChatGPT)                      | `[verificar no app]` |
+| Ciclo 1 — P20–P40 (20)                  | 2026-06-28  | **Claude Opus 4.8 (1M context)**, via Claude Code      | **GPT-5.4** (app ChatGPT)                      | **Gemini 3.1 Pro** (app Gemini) |
+| Ciclo 2 — P43–P88 (22)                  | 2026-09-10  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-5.6** (app ChatGPT) | **Gemini 3.8 Flash** (app Gemini) |
+| Fundacionais — P01–P19 (19, retroativa) | 2026-10-26  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-6.0** (app ChatGPT)                      | **Gemini 3.8 Flash** (app Gemini) |
+| Ciclo 3 — P91–P123 (13)                 | 2026-10-28  | **Claude Fable 5** (`claude-fable-5`), via Claude Code | **GPT-6.0** (app ChatGPT)                      | **Gemini 3.8 Flash** (app Gemini) |
 
 ## Condições de execução (todas as células)
 
@@ -40,7 +39,7 @@ verificação no histórico do app** pelo condutor.
 ## Leitura metodológica
 
 A troca de versão do avaliador Claude entre os ciclos (Opus 4.8 → Fable 5)
-e do ChatGPT (GPT-5.4 → GPT-6.0) **não degradou a concordância**: o ciclo 3,
+do ChatGPT (GPT-5.4 → GPT-5.6 → GPT-6.0) e do Gemini (3.1 Pro → 3.8 Flash) **não degradou a concordância**: o ciclo 3,
 já nas versões novas, saiu unânime (13/13, κ = 1,00). Isso sustenta a
 limitação a declarar no artigo — as avaliações atravessam atualizações de
 modelo — e, ao mesmo tempo, o argumento de robustez: o resultado não
@@ -54,6 +53,4 @@ avaliadores desta revisão.
 
 ---
 
-_Para o artigo: quando as células do Gemini forem confirmadas, esta tabela
-vira a tabela da Seção III-I (mapeamento A/B/C → modelos) e a limitação
-entra em Threats to Validity._
+_Levada ao artigo em 2026-11-01: tabela na Seção III (assistant versions) e limitação/robustez em Threats to Validity._

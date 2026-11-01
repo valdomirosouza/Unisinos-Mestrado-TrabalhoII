@@ -603,6 +603,31 @@ adjudication, not as a measure of decision validity. Results are
 reported in
 Section~\ref{sec:reliability}.
 
+\textbf{Assistant versions.} All runs used the same canonical prompt and
+the full-text PDF, under each interface's default settings (temperature
+is not user-configurable): Claude through the Claude Code interface with
+the PDF read as a file, ChatGPT and Gemini through their web applications
+with the PDF uploaded. The assistant versions changed across the review's
+timeline, as recorded in Table~\ref{tab:llmversions};
+Section~\ref{sec:threats} discusses the implications.
+
+\begin{table}[!t]
+\caption{LLM assistant versions per assessment set.}
+\label{tab:llmversions}
+\centering
+\footnotesize
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Assessment set} & \textbf{Claude} & \textbf{ChatGPT} & \textbf{Gemini} \\
+\midrule
+Cycle 1 (Jun.\ 2026) & Opus 4.8 & GPT-5.4 & Gemini 3.1 Pro \\
+Cycle 2 (Sep.\ 2026) & Fable 5 & GPT-5.6 & Gemini 3.8 Flash \\
+Foundational (Oct.\ 2026) & Fable 5 & GPT-6.0 & Gemini 3.8 Flash \\
+Cycle 3 (Oct.\ 2026) & Fable 5 & GPT-6.0 & Gemini 3.8 Flash \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 % =====================================================================
 \section{Results}
 \label{sec:results}
@@ -1334,6 +1359,12 @@ divergence-free third cycle under the ratified rules indicate
 consistency among the assistants, not by themselves correctness; the
 three protocol questions exposed by the divergences were adjudicated
 by the authors and ratified as rules R1--R3 (Section~\ref{sec:rules}).
+The assistant versions also changed across the review's timeline
+(Table~\ref{tab:llmversions}: Claude Opus 4.8 to Fable~5, GPT-5.4 to
+GPT-6.0, Gemini 3.1~Pro to 3.8~Flash); agreement did not degrade across
+these updates --- cycle~3, run entirely on the newer versions, was
+divergence-free --- indicating that the observed consistency rests on
+the written protocol rather than on any specific model build.
 \textbf{Bibliometric sources.} Citation counts are kept per source and
 never summed; source quirks (title-based reference resolution, unindexed
 venues, preprint DOI splits, API service-level limits) are documented in

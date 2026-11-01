@@ -1073,6 +1073,12 @@ MTTD/MTTR e do survey de SOC — mapeados manualmente.
 > consistency among the assistants, not by themselves correctness; the
 > three protocol questions exposed by the divergences were adjudicated
 > by the authors and ratified as rules R1–R3 (Section (ref.)).
+> The assistant versions also changed across the review's timeline
+> (Table (ref.): Claude Opus 4.8 to Fable 5, GPT-5.4 to
+> GPT-6.0, Gemini 3.1 Pro to 3.8 Flash); agreement did not degrade across
+> these updates — cycle 3, run entirely on the newer versions, was
+> divergence-free — indicating that the observed consistency rests on
+> the written protocol rather than on any specific model build.
 > Bibliometric sources. Citation counts are kept per source and
 > never summed; source quirks (title-based reference resolution, unindexed
 > venues, preprint DOI splits, API service-level limits) are documented in
