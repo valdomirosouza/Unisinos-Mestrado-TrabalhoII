@@ -694,6 +694,25 @@ racional na introdução e princípio 7 no README; nota na etapa 6 do
 WORKFLOW. CHANGELOG [0.3.1] e CITATION.cff 0.3.1. `check-rsl.sh` OK;
 `git add` explícito por caminho (lição do item 170 aplicada).
 
+### 174. Acknowledgment removido (aguarda revisão do orientador)
+
+**Prompt:** "Remova no draft de artigo o paragrafo que começar com 'The
+authors thank...' até '...declare no other competing interests.' Vou
+aguardar a revisão final do orientador para entender o que vamos incluir
+nesta parte final do artigo."
+
+**Ações:** seção Acknowledgment inteira removida do `main.tex` (incluía:
+agradecimento ao PPGCA, divulgação do uso de LLMs com responsabilidade dos
+autores, disponibilidade dos artefatos "upon request" e a declaração de
+conflito de interesses do C7.5). Placeholder em comentário no `main.tex`
+aponta a última versão do texto (commit `620bbdb`) para fácil restauração
+após a decisão do orientador. Nota no README do artigo. PDF recompilado
+(13 pp., 0 erros); ausência confirmada via pypdf. **Atenção para a
+submissão:** a IEEE Access exigirá de volta, em alguma forma, a divulgação
+de uso de IA, a declaração de dados e o conflito de interesses.
+
+**Commit:** `b855ae3`.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -3043,5 +3062,7 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `620bbdb` | 2026-11-01 | Design rationale: cross-family hallucination screen + version policy |
 | `e1e36fa` | 2026-11-01 | Log hallucination-screen rationale (item 172) in MEMORY.md |
 | `d04b6eb` | 2026-11-01 | (Template-RSL) Release 0.3.1: document the three-LLM rationale for adopters |
+| `409a965` | 2026-11-01 | Log Template-RSL 0.3.1 three-LLM rationale (item 173) in MEMORY.md |
+| `b855ae3` | 2026-11-01 | Remove Acknowledgment section pending the advisor's final review |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
