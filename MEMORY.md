@@ -713,6 +713,26 @@ de uso de IA, a declaração de dados e o conflito de interesses.
 
 **Commit:** `b855ae3`.
 
+### 175. Encerramento (commit, push e atualização do MEMORY.md)
+
+**Prompt:** "Faça o commit, push e por fim atualize o MEMORY.md".
+
+**Ações:** verificação de fechamento — árvores limpas e `master`
+sincronizada com `origin` nos dois repositórios (Unisinos-Mestrado-
+TrabalhoII e Template-RSL); nada pendente de commit além deste registro.
+Linha do commit `2b78be1` (log do item 174) acrescentada à tabela.
+
+**Estado ao encerrar:** artigo draft com o parecer PPGCA incorporado
+(Partes A/B/C1–C9), tabela de versões dos LLMs + racional anti-alucinação
++ política de versões nas Seções III/Threats, rodapé de comprovação de
+versão nos 94 prompts (templates v1.3.0, replicado no Template-RSL 0.3.0/
+0.3.1), funding "no specific grant", e **Acknowledgment removido
+aguardando a revisão final do orientador** (restauração: commit
+`620bbdb`). **Pendências:** fecho do artigo pós-revisão do orientador
+(agradecimentos, divulgação de LLMs, dados/DOI Zenodo — C7.4, conflito de
+interesses), checklists C10 (restante)–C14 do parecer, fotos dos autores,
+pacote de replicação público.
+
 ## Decisões e convenções da sessão
 
 - **Nomenclatura das fichas:** `Pxx-extraction.csv` (EN) / `Pxx-extraction-ptBR.csv` (pt-BR) / `consolidated-extraction[-ptBR].csv`, em `report/`.
@@ -3064,5 +3084,6 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `d04b6eb` | 2026-11-01 | (Template-RSL) Release 0.3.1: document the three-LLM rationale for adopters |
 | `409a965` | 2026-11-01 | Log Template-RSL 0.3.1 three-LLM rationale (item 173) in MEMORY.md |
 | `b855ae3` | 2026-11-01 | Remove Acknowledgment section pending the advisor's final review |
+| `2b78be1` | 2026-11-01 | Log Acknowledgment removal (item 174) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
