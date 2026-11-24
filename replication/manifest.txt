@@ -1,0 +1,43 @@
+# Manifesto do pacote de replicação — um caminho por linha, relativo à raiz do repo.
+# Diretórios são copiados recursivamente. Linhas iniciadas por "#" são ignoradas.
+# Política: NENHUM arquivo de docs/ (textos integrais com copyright) e NENHUMA
+# credencial entram no pacote; o builder (scripts/build-replication-package.py)
+# aplica e verifica essa política.
+
+# --- Protocolo e governança
+protocolo
+templates
+WORKFLOW.md
+CHANGELOG.md
+CITATION.cff
+LICENSE
+
+# --- Prompts canônicos e execuções
+prompts
+picoc
+research
+
+# --- Avaliações, triagens, PRISMA, dashboards e comparações
+reviews
+
+# --- Extração estruturada (fichas e consolidados)
+report
+
+# --- Bibliometria e rede de citações (metadados; substituem os PDFs)
+papers.csv
+papers-ciclo2.csv
+papers-ciclo3.csv
+Papers_Index.csv
+Papers_Index.md
+referencias.csv
+citacoes-cruzadas.md
+citacoes-cruzadas-P01-P89.md
+citacoes-cruzadas-P01-P123.md
+Artigos-TrabalhoII.csv
+export.ris
+export.csv
+
+# --- Ferramentas
+scripts
+DOIS.py
+DOIS.txt

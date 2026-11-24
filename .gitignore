@@ -12,3 +12,6 @@ artigo/*.out
 # Espelhos auto-gerados do CLAUDE.md/skills no formato AGENTS.md
 AGENTS.md
 .agents/
+
+# Saída do builder do pacote de replicação
+dist/
