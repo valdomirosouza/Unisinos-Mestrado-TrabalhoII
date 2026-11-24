@@ -3159,6 +3159,22 @@ do orientador (item 174).
 
 **Commit:** `9a0e13a`.
 
+### 179. Preparação do manuscrito: apenas Claude — pendência fechada
+
+**Prompt:** "apenas o Claude apoiou a preparação do manuscrito, pode
+fechar essa pendência."
+
+**Ações:** confirmação do condutor registrada: somente Claude (via
+Claude Code) apoiou a preparação do manuscrito; o parágrafo *Manuscript
+preparation* da declaração permanece como redigido. Marcador PENDENTE
+correspondente convertido em RESOLVIDO (2026-11-23) no comentário do
+rascunho em `artigo/main.tex`. A seção *Declaration of Generative AI
+Use* está agora **completa em conteúdo**; única pendência restante é a
+revisão final do orientador (condição do item 174), que também libera o
+passo 2 do plano (CRediT + conflito de interesses).
+
+**Commit:** `ae443f5`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3181,5 +3197,7 @@ do orientador (item 174).
 | `0fe7059` | 2026-11-23 | Draft Declaration of Generative AI Use (plan step 1: A1+A2+A3+A8) |
 | `5d9431a` | 2026-11-23 | Log GenAI-use declaration draft (item 177) in MEMORY.md |
 | `9a0e13a` | 2026-11-23 | GenAI declaration: paid plans with training opt-out (art. 6 §2 input confirmed) |
+| `0391e7c` | 2026-11-23 | Log access-plan confirmation (item 178) in MEMORY.md |
+| `ae443f5` | 2026-11-23 | GenAI declaration: manuscript prep assisted by Claude only (pending item closed) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
