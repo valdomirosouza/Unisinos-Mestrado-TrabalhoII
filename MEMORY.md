@@ -3087,3 +3087,42 @@ literature review.pdf` — paper metodológico de Kitchenham et al. (2009).
 | `2b78be1` | 2026-11-01 | Log Acknowledgment removal (item 174) in MEMORY.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
+
+---
+
+# Sessão 2026-11-23 — Portarias CNPq sobre IA: plano de conformidade do artigo
+
+Sessão dedicada à análise das duas portarias do CNPq publicadas no DOU sobre integridade científica e uso de IA, e à elaboração do plano de melhorias do artigo IEEE Access.
+
+## Linha do tempo (prompts → respostas/ações)
+
+### 176. Portarias CNPq 2.664/2026 e 3.004/2026 → plano de melhorias do artigo
+
+**Prompt:** "Leia os dois PDFs de portarias sobre IA do CNPq … publicadas no DOU que estão em docs/DOU/CNPq, raciocine sobre e monte um plano de melhorias para aplicar no artigo 'Agentic AI Copilots for Incident Response: A Systematic Literature Review'."
+
+**Contexto:** o condutor arquivou em `docs/DOU/CNPq/` (pasta nova, até então não versionada) a Portaria CNPq nº 2.664/2026 (Política de Integridade na Atividade Científica — DOU 11/03/2026) e a Portaria CNPq nº 3.004/2026 (diretrizes de uso de IAG/IAP na pesquisa — DOU 18/11/2026, 5 dias antes desta sessão). O fecho do artigo (Acknowledgment, divulgação de LLMs, dados/DOI, COI) estava removido desde o item 174, aguardando a revisão do orientador.
+
+**Ações:** li integralmente as duas portarias (PDFs) e as seções pertinentes do `artigo/main.tex` (metodologia LLM-assisted, Threats, fecho). Diagnóstico: o corpo metodológico do artigo **já atende** o essencial (tabela de versões por ciclo = art. 4º-I da 3.004; decisão humana não delegada = art. 6º; rodapé de proveniência; âncoras de evidência), mas falta a **seção específica de declaração de uso de IAG** exigida pelo art. 4º §1º da 3.004 (cuja omissão injustificada é apurável, §2º) — exatamente o bloco removido no item 174, agora com base normativa. Produzi `docs/DOU/plano-melhorias-artigo-portarias-CNPq.md` com 10 melhorias priorizadas: **ALTA** A1 (seção "Declaration of Generative AI Use" com ferramenta/versão/fase/finalidade, incl. uso de IAG na escrita do próprio artigo), A2 (confidencialidade/LGPD: só textos publicados processados; distinção explícita do art. 8º §1º — não é parecer de projetos de terceiros; modo de acesso/planos das ferramentas — **insumo do condutor pendente**), A3 (responsabilização integral com as palavras da norma); **MÉDIA** A4 (Data Availability + depósito Zenodo/DOI, ex-C7.4, agora com base no art. 9º-I-g da 2.664; sem PDFs com copyright), A5 (CRediT, art. 9º-II-p/r/s), A6 (COI: vínculo Zenvia), A7 (divulgação prévia na cover letter, art. 9º-II-e/u); **BAIXA** A8 (nota "sem IAP a declarar" — κ não é treinamento de modelo), A9 (citar as portarias em Methodological lessons como conformidade by-design), A10 (frase em Threats). Sequência de aplicação em 5 passos, condicionada à aprovação do orientador (pendência do item 174). Criado `docs/DOU/README.md` (índice da pasta) e indexação no README raiz; PDFs das portarias versionados.
+
+**Comandos/ferramentas:** leitura dos 2 PDFs via Read; grep/sed sobre `main.tex` e `MEMORY.md`; nenhum script executado.
+
+## Decisões e convenções da sessão
+
+- Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
+- A conformidade com as Portarias CNPq será tratada como argumento metodológico do artigo (protocolo *compliant-by-design*), não apenas como obrigação de fecho.
+- A aplicação das melhorias A1–A3 (fecho do artigo) permanece condicionada à revisão final do orientador, conforme o item 174.
+
+## Artefatos produzidos
+
+- `docs/DOU/CNPq/` — 2 PDFs das portarias (DOU, Imprensa Nacional), agora versionados.
+- `docs/DOU/plano-melhorias-artigo-portarias-CNPq.md` — plano de conformidade (diagnóstico + A1–A10 + sequência).
+- `docs/DOU/README.md` — índice da pasta.
+- `README.md` (raiz) — linha de indexação de `docs/DOU/`.
+
+## Histórico de commits da sessão
+
+| Hash | Data | Mensagem |
+| ---- | ---- | -------- |
+| `1e181d1` | 2026-11-23 | Plano de conformidade do artigo com as Portarias CNPq 2.664/2026 e 3.004/2026 |
+
+_(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
