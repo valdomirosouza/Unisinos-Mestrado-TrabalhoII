@@ -3302,6 +3302,19 @@ condutor (SendUserFile) e commitado.
 
 **Commit:** `32fb062`.
 
+### 185. Comando Docker documentado em "Como compilar" (artigo/README.md)
+
+**Prompt:** "Adicione o comando Docker na seção 'Como compilar' do
+artigo/README.md".
+
+**Ações:** seção *Como compilar* do `artigo/README.md` ganhou o bloco
+Docker validado no item 184 (`texlive/texlive:latest`, ciclo
+pdflatex→bibtex→pdflatex×2, `-u uid:gid` + `HOME=/tmp` para não deixar
+arquivos root), como alternativa quando não há TeX no PATH. A nota
+histórica do TinyTeX (build de 2026-10-27) foi preservada.
+
+**Commit:** `3f810f6`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3336,5 +3349,7 @@ condutor (SendUserFile) e commitado.
 | `09b0a96` | 2026-11-23 | Cover-letter prior-disclosure declaration (plan step 5: A7) |
 | `3a3cda6` | 2026-11-23 | Log cover-letter disclosure draft (item 183) in MEMORY.md |
 | `32fb062` | 2026-11-23 | Rebuild main.pdf with compliance back matter (14 pp., refs 71-72 resolved) |
+| `c9f1ef8` | 2026-11-23 | Log main.pdf rebuild (item 184) in MEMORY.md |
+| `3f810f6` | 2026-11-23 | Document Docker compile command in artigo/README.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
