@@ -3106,6 +3106,41 @@ Sessão dedicada à análise das duas portarias do CNPq publicadas no DOU sobre 
 
 **Comandos/ferramentas:** leitura dos 2 PDFs via Read; grep/sed sobre `main.tex` e `MEMORY.md`; nenhum script executado.
 
+### 177. Rascunho da seção *Declaration of Generative AI Use* (passo 1 do plano)
+
+**Prompt:** "Aplique o passo 1 e gere o rascunho da declaração".
+
+**Contexto:** passo 1 do plano de conformidade (item 176): redigir em
+bloco LaTeX único a seção exigida pelo art. 4º, §1º, da Portaria CNPq nº
+3.004/2026, cobrindo os itens A1 (declaração por fase/ferramenta/versão/
+finalidade), A2 (confidencialidade/LGPD), A3 (responsabilização) e A8
+(nota de não uso de IAP).
+
+**Ações:** inserida a seção `\section*{Declaration of Generative AI
+Use}` em `artigo/main.tex`, entre o comentário histórico do
+Acknowledgment removido (preservado intacto) e `\bibliographystyle`.
+Estrutura: parágrafo de abertura citando as Portarias 2.664/2026 e
+3.004/2026; **Candidate identification (cycle 1)**; **Screening support
+and full-text assessment** (remete à Table `llmversions` e a
+`sec:reliability`; nenhuma decisão delegada); **Manuscript preparation**
+(Claude/Claude Code: LaTeX, figuras/tabelas, revisão de linguagem —
+claims científicos dos autores); **Confidentiality and personal data**
+(só textos publicados e legitimamente acessados; LGPD não incidente;
+distinção explícita do art. 8º — não é parecer de projetos de terceiros;
+modos de acesso); **Responsibility** (verificação final não delegada a
+IAG, art. 6º §1º); **Predictive AI** (κ clássico ≠ treinamento de
+modelo; art. 9º não incide). Dois marcadores PENDENTE em comentário
+LaTeX: (i) confirmar planos pagos/opt-out de treinamento de
+ChatGPT/Gemini (art. 6º §2º) — frase `%% TODO` pronta para ativar; (ii)
+confirmar se ChatGPT/Gemini também apoiaram a preparação do manuscrito.
+Rascunho marcado como aguardando a revisão final do orientador (condição
+do item 174). Validação: sem TeX local (PDF compilado fora do
+repositório), verificação estática — labels referenciados existem
+(`sec:method`, `sec:reliability`, `tab:llmversions`), chaves e ambientes
+balanceados.
+
+**Commit:** `0fe7059`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3124,5 +3159,7 @@ Sessão dedicada à análise das duas portarias do CNPq publicadas no DOU sobre 
 | Hash | Data | Mensagem |
 | ---- | ---- | -------- |
 | `1e181d1` | 2026-11-23 | Plano de conformidade do artigo com as Portarias CNPq 2.664/2026 e 3.004/2026 |
+| `b218639` | 2026-11-23 | Log CNPq AI portarias compliance plan (item 176) in MEMORY.md |
+| `0fe7059` | 2026-11-23 | Draft Declaration of Generative AI Use (plan step 1: A1+A2+A3+A8) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
