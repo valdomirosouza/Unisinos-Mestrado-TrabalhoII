@@ -3141,6 +3141,24 @@ balanceados.
 
 **Commit:** `0fe7059`.
 
+### 178. Planos de acesso confirmados — frase do art. 6º, §2º, ativada
+
+**Prompt:** "correto sobre 'Planos de acesso (art. 6º §2º):' os planos
+são pagos e rodam com opt-out de treinamento."
+
+**Ações:** com a confirmação do condutor (planos pagos, opt-out de uso
+dos dados para treinamento nas três ferramentas), ativada no parágrafo
+*Confidentiality and personal data* da seção *Declaration of Generative
+AI Use* a frase: "All tools were accessed through paid plans configured
+not to use submitted content for model training." Comentário `%% TODO`
+removido e o marcador PENDENTE correspondente do cabeçalho do rascunho
+convertido em RESOLVIDO (2026-11-23). Permanece **uma** pendência no
+rascunho: confirmar se ChatGPT/Gemini também apoiaram a preparação do
+manuscrito (parágrafo *Manuscript preparation*), além da revisão final
+do orientador (item 174).
+
+**Commit:** `9a0e13a`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3161,5 +3179,7 @@ balanceados.
 | `1e181d1` | 2026-11-23 | Plano de conformidade do artigo com as Portarias CNPq 2.664/2026 e 3.004/2026 |
 | `b218639` | 2026-11-23 | Log CNPq AI portarias compliance plan (item 176) in MEMORY.md |
 | `0fe7059` | 2026-11-23 | Draft Declaration of Generative AI Use (plan step 1: A1+A2+A3+A8) |
+| `5d9431a` | 2026-11-23 | Log GenAI-use declaration draft (item 177) in MEMORY.md |
+| `9a0e13a` | 2026-11-23 | GenAI declaration: paid plans with training opt-out (art. 6 §2 input confirmed) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
