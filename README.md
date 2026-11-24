@@ -185,6 +185,7 @@ flowchart LR
 | **Carga cognitiva**                    | O esforço mental do operador durante o incidente — a lacuna de medição apontada por esta revisão.                            |
 
 ---
+
 ## 📁 Estrutura do repositório
 
 ```
@@ -291,6 +292,7 @@ flowchart LR
 - [`citacoes-cruzadas-P01-P89.md`](citacoes-cruzadas-P01-P89.md) — **versão ampliada do corpus P01–P89 com tripla checagem completa** (OpenAlex 48 × Crossref 45 × **Scopus 48**, união **52 pares**; OA/CR 2026-10-25, Scopus 2026-10-26): hubs P10 (7), P09 (6), P14 (5), P16 e P65 (3); **P28 é o maior citador interno** (7 arestas, incl. 5 candidatos do ciclo 2); 3 arestas exclusivas do Scopus (P54←P06/P15, P16←P29).
 - [`prompts/`](prompts/) — template de avaliação + 61 prompts preenchidos, um por estudo: **P01–P19** (corpus fundacional, avaliação retroativa de padronização — não rediscutem a inclusão herdada do Trabalho I; Qualis/SJR verificados de `papers.csv`), **P20–P40** (ciclo 1, registro histórico) e **P43–P88** (ciclo 2).
 - [`docs/`](docs/) — PDFs: os **39 do corpus** P01–P19 (fundacionais do Trabalho I) + P20–P40 (candidatos avaliados), com índice completo em [`report/README.md`](report/README.md); os **49 candidatos do ciclo 2** (P41–P89, aguardando triagem — extração PICOC em [`picoc/picoc-results-consolidated-P41-P89-Claude.md`](picoc/picoc-results-consolidated-P41-P89-Claude.md)); e o paper metodológico de **Kitchenham (2009)**.
+- [`docs/DOU/`](docs/DOU/) — **atos normativos do DOU** que incidem sobre a RSL: Portarias CNPq nº 2.664/2026 (Política de Integridade) e nº 3.004/2026 (diretrizes de IAG/IAP), com o [plano de conformidade do artigo](docs/DOU/plano-melhorias-artigo-portarias-CNPq.md) (índice em [`docs/DOU/README.md`](docs/DOU/README.md)).
 - [`DOIS.py`](DOIS.py) + [`DOIS.txt`](DOIS.txt) — script e lista de DOIs para extrair as referências citadas pelos artigos (Crossref, OpenAlex, Semantic Scholar, OpenCitations) → gera [`referencias.csv`](referencias.csv).
 
 ### Avaliação & síntese (saída)
