@@ -3330,6 +3330,30 @@ por ser artefato do template (não lista `artigo/` nem `replication/`).
 
 **Commit:** `8c1d32a`.
 
+### 187. Replicação das melhorias das portarias no Template-RSL (release 0.4.0)
+
+**Prompt:** "As melhorias aplicadas no artigo e documentação por conta das
+duas portarias do CNPq no DOU podem ser replicadas no repo Template-RSL".
+
+**Ações:** kit de conformidade genérico portado para
+`/Users/valdomirosouza/Projects/Template-RSL` como release **0.4.0** (MINOR +
+changelog, convenção do template): novo `docs/conformidade-cnpq-ia.md` (mapa
+dever → mecanismo do template + passos manuais de submissão, com links ao
+DOU), `templates/declaracao-uso-ia.md` (back matter EN: declaração de IAG +
+CRediT + COI + Data Availability, com marcadores `{{...}}`),
+`templates/cover-letter-disclosure.md` (divulgação prévia genérica +
+checklist), `scripts/build-replication-package.py` generalizado (`--name`,
+manifesto/README exigidos de `replication/`, varredura de conteúdo de
+`.scopus_key`/`.env` linha a linha) + `templates/replication-manifest.txt` e
+`templates/replication-package-README.md`. Normativo: **Art. X** na
+constituição (uso de IA declarado e conforme; instâncias existentes adotam
+via PDR). README (mapa + princípio 8), WORKFLOW (regra transversal de
+submissão), `docs/estrutura.md` (`replication/` e `docs/DOU/<órgão>/`),
+CITATION.cff 0.4.0. `check-rsl.sh` OK (C1–C5); conteúdo específico do artigo
+(Zenvia, κ, DOIs) não foi portado — só a forma genérica.
+
+**Commit:** `f653e12` (repo Template-RSL), push em origin/master.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3368,5 +3392,7 @@ por ser artefato do template (não lista `artigo/` nem `replication/`).
 | `3f810f6` | 2026-11-23 | Document Docker compile command in artigo/README.md |
 | `b9832bc` | 2026-11-23 | Log Docker compile docs (item 185) in MEMORY.md |
 | `8c1d32a` | 2026-11-24 | Index docs/DOU/ subfolder in docs/README.md |
+| `52d8387` | 2026-11-24 | Log docs/DOU index audit (item 186) in MEMORY.md |
+| `f653e12` | 2026-11-24 | *(repo Template-RSL)* Release 0.4.0: CNPq ordinance compliance kit |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
