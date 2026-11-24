@@ -3222,6 +3222,36 @@ ganhou `\cite{cnpq2664,cnpq3004}` por consistência. Validação estática
 
 **Commit:** `63e9247`.
 
+### 182. Estrutura do pacote de replicação + rascunho de Data Availability (passo 3)
+
+**Prompt:** "Siga para o passo 3, monte a estrutura do pacote de replicação".
+
+**Ações:** passo 3 do plano (item A4; ex-C7.4) estruturado — depósito em
+si fica com o condutor. (1) Pasta nova **`replication/`**: `manifest.txt`
+(whitelist: protocolo, templates, prompts, picoc, reviews, report,
+research, scripts + CSVs bibliométricos da raiz; política explícita de
+exclusão de `docs/` e credenciais), `package-README.md` (README EN
+injetado na raiz do pacote: estrutura, instruções de reprodução de
+κ/PRISMA/validação da string, nota de proveniência, licenças) e
+`README.md` (pt-BR: builder, política e fluxo do depósito Zenodo em 4
+passos). (2) **`scripts/build-replication-package.py`**: copia pelo
+manifesto, veta `docs/`/`.scopus_key`/`.env`/`*.key`, **varre vazamento**
+do conteúdo de `.scopus_key` em todos os bytes copiados, pula lixo de SO,
+gera `MANIFEST.csv` (caminho/bytes/sha256), zipa em `dist/` e imprime o
+SHA-256. Correção durante o teste: `.DS_Store` passou de erro fatal a
+skip silencioso. (3) **Build validado**: `v0.9.0-draft` → 625 arquivos,
+9,4 MB (zip 3,8 MB), SHA-256
+`e748c3cf9bd07cd0e4bc87e1bea7d13c2f48978541843c31ead6f80fa460d0bb`; zero
+caminhos `docs/` no MANIFEST; únicos PDFs = relatórios de síntese de
+autoria própria. (4) `dist/` adicionado ao `.gitignore`. (5) Rascunho da
+seção **Data Availability** em `artigo/main.tex` (após Conflict of
+Interest): descreve o pacote, cita o art. 9º-I-g da 2.664/2026
+(`\cite{cnpq2664}`), justifica a não redistribuição dos full texts;
+marcador `[DOI pendente]` + comentário PENDENTE (depósito Zenodo e
+revisão do orientador). (6) `replication/` indexada no README raiz.
+
+**Commit:** `c976c7d`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3250,5 +3280,7 @@ ganhou `\cite{cnpq2664,cnpq3004}` por consistência. Validação estática
 | `cd65ba5` | 2026-11-23 | Draft Author Contributions (CRediT) and Conflict of Interest (plan step 2: A5+A6) |
 | `908eddf` | 2026-11-23 | Log CRediT and COI drafts (item 180) in MEMORY.md |
 | `63e9247` | 2026-11-23 | Cite CNPq ordinances in Discussion, Threats, and GenAI declaration (plan step 4: A9+A10) |
+| `be9cc7e` | 2026-11-23 | Log CNPq ordinance citations (item 181) in MEMORY.md |
+| `c976c7d` | 2026-11-23 | Replication package structure + Data Availability draft (plan step 3: A4) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
