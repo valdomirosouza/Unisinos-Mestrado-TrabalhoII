@@ -3090,7 +3090,7 @@ _(O commit desta atualização de MEMORY.md é acrescentado ao final do históri
 
 ---
 
-# Sessão 2026-11-23 — Portarias CNPq sobre IA: plano de conformidade do artigo
+# Sessão 2026-11-23 → 2026-11-24 — Portarias CNPq sobre IA: plano de conformidade do artigo
 
 Sessão dedicada à análise das duas portarias do CNPq publicadas no DOU sobre integridade científica e uso de IA, e à elaboração do plano de melhorias do artigo IEEE Access.
 
@@ -3315,6 +3315,21 @@ histórica do TinyTeX (build de 2026-10-27) foi preservada.
 
 **Commit:** `3f810f6`.
 
+### 186. Auditoria da documentação das portarias; índice de docs/DOU/ em docs/README.md
+
+**Prompt:** "Toda a documentação está atualizada com as duas portarias do
+CNPq?"
+
+**Ações:** varredura (`grep` por 2.664/3.004/CNPq em todos os .md)
+confirmou README raiz, `artigo/README.md`, cover letter, plano em
+`docs/DOU/` e docs de `replication/` atualizados. Lacuna única: o
+`docs/README.md` (README da pasta) não indexava a subpasta `DOU/` —
+corrigido com nota de que os atos normativos não são candidatos da RSL e
+não entram no `Papers_Index.csv`. `docs/estrutura.md` não foi alterado
+por ser artefato do template (não lista `artigo/` nem `replication/`).
+
+**Commit:** `8c1d32a`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3351,5 +3366,7 @@ histórica do TinyTeX (build de 2026-10-27) foi preservada.
 | `32fb062` | 2026-11-23 | Rebuild main.pdf with compliance back matter (14 pp., refs 71-72 resolved) |
 | `c9f1ef8` | 2026-11-23 | Log main.pdf rebuild (item 184) in MEMORY.md |
 | `3f810f6` | 2026-11-23 | Document Docker compile command in artigo/README.md |
+| `b9832bc` | 2026-11-23 | Log Docker compile docs (item 185) in MEMORY.md |
+| `8c1d32a` | 2026-11-24 | Index docs/DOU/ subfolder in docs/README.md |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
