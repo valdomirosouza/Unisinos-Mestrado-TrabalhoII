@@ -3252,6 +3252,34 @@ revisão do orientador). (6) `replication/` indexada no README raiz.
 
 **Commit:** `c976c7d`.
 
+### 183. Declaração de divulgação prévia para a cover letter (passo 5)
+
+**Prompt:** "Siga para o passo 5 e gere a declaração da cover letter".
+
+**Ações:** passo 5 do plano (item A7) aplicado — criado
+`artigo/cover-letter-disclosure.md` com o texto EN pronto para a
+submissão ao IEEE Access e checklist pt-BR. Blocos: **Originality and
+exclusive submission** (sem preprint — `[CONFIRMAR]`); **Prior partial
+disclosure** (art. 9º-II-e/u da 2.664/2026): (1) o Trabalho I declarado
+como RSL fundacional de avaliação acadêmica interna no PPGCA, não
+publicada formalmente — o manuscrito é estudo substancialmente novo (3
+ciclos, 126 candidatos, 65 incluídos) com o corpus herdado explícito na
+Seção II-C e no PRISMA — `[CONFIRMAR ausência de divulgação pública]`;
+(2) audit trail em repo privado, tornado público via pacote Zenodo (DOI
+`[PREENCHER]`); (3) nenhuma outra divulgação — `[CONFIRMAR]`; **No
+duplicate or fragmented publication** (art. 9º-II-f); **Generative AI
+disclosure** (remete à seção do manuscrito, art. 4º da 3.004/2026);
+**Authorship/competing interests/funding** (CRediT + COI no manuscrito;
+no specific grant). Checklist: 3 confirmações com o orientador, DOI
+Zenodo (aqui e no `[DOI pendente]` do main.tex), verificar campos
+estruturados de IA no formulário do IEEE Access. Indexado em
+`artigo/README.md` (que também passou a registrar as 2 referências
+normativas no resumo do `referencias.bib`). Fato verificado antes de
+redigir: `TrabalhoI/README.md` descreve o artigo V3 como "texto
+submetido" à avaliação do programa, sem publicação formal.
+
+**Commit:** `09b0a96`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3282,5 +3310,7 @@ revisão do orientador). (6) `replication/` indexada no README raiz.
 | `63e9247` | 2026-11-23 | Cite CNPq ordinances in Discussion, Threats, and GenAI declaration (plan step 4: A9+A10) |
 | `be9cc7e` | 2026-11-23 | Log CNPq ordinance citations (item 181) in MEMORY.md |
 | `c976c7d` | 2026-11-23 | Replication package structure + Data Availability draft (plan step 3: A4) |
+| `f417d17` | 2026-11-23 | Log replication package structure (item 182) in MEMORY.md |
+| `09b0a96` | 2026-11-23 | Cover-letter prior-disclosure declaration (plan step 5: A7) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
