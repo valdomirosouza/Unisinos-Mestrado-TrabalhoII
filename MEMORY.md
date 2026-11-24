@@ -3175,6 +3175,30 @@ passo 2 do plano (CRediT + conflito de interesses).
 
 **Commit:** `ae443f5`.
 
+### 180. Rascunho de Author Contributions (CRediT) e Conflict of Interest (passo 2)
+
+**Prompt:** "Siga para o passo 2 (CRediT + conflito de interesses)".
+
+**Ações:** inseridos em `artigo/main.tex`, após a seção *Declaration of
+Generative AI Use* e antes da bibliografia, os dois blocos do passo 2 do
+plano (itens A5+A6; base: Portaria 2.664/2026, art. 9º-II-p/r/s e arts.
+3º-III/5º-VII). **Author Contributions** (taxonomia CRediT): condutor —
+conceptualization, methodology, investigation, data curation, formal
+analysis, writing (original draft), condução da revisão e adjudicação
+das divergências; orientador — supervision, validation, writing (review
+& editing), aprovação das decisões de triagem, emendas de protocolo e
+regras R1–R3; fecho com a capacidade de detalhar contribuições
+individuais sob solicitação (art. 9º-II-s). **Conflict of Interest**:
+vínculo do primeiro autor (Head of IT, Zenvia) declarado; Zenvia sem
+papel no desenho/execução/análise/relato; nenhum estudo do corpus
+afiliado aos autores ou à Zenvia; remissão às Seções `sec:mttr` e
+`sec:threats`, onde a evidência vendor-affiliated do corpus já é
+sinalizada; sem outros interesses concorrentes. Rascunhos marcados como
+aguardando a revisão final do orientador. Validação estática: labels
+referenciados existem; `\&` escapado; sem TeX local.
+
+**Commit:** `cd65ba5`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3199,5 +3223,7 @@ passo 2 do plano (CRediT + conflito de interesses).
 | `9a0e13a` | 2026-11-23 | GenAI declaration: paid plans with training opt-out (art. 6 §2 input confirmed) |
 | `0391e7c` | 2026-11-23 | Log access-plan confirmation (item 178) in MEMORY.md |
 | `ae443f5` | 2026-11-23 | GenAI declaration: manuscript prep assisted by Claude only (pending item closed) |
+| `06b03a8` | 2026-11-23 | Log manuscript-prep confirmation (item 179) in MEMORY.md |
+| `cd65ba5` | 2026-11-23 | Draft Author Contributions (CRediT) and Conflict of Interest (plan step 2: A5+A6) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
