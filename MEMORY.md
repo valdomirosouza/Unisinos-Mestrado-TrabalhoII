@@ -3280,6 +3280,28 @@ submetido" à avaliação do programa, sem publicação formal.
 
 **Commit:** `09b0a96`.
 
+### 184. main.pdf recompilado com o fecho de conformidade
+
+**Prompt:** "Gere o main.pdf atualizado para eu ler."
+
+**Ações:** sem TeX local, a compilação foi feita via Docker (daemon
+ativo): pull da imagem `texlive/texlive:latest` em background e ciclo
+completo no container — `pdflatex` → `bibtex` → `pdflatex` ×2, rodando
+como o usuário (`-u uid:gid`, `HOME=/tmp`) com a pasta `artigo/` montada.
+Resultado: **main.pdf com 14 páginas** (420 KB), exit 0, **zero**
+`undefined citation/reference` no log (restam só os font warnings
+cosméticos pré-existentes de `T1/times/b/sc`); as fontes proprietárias
+do template carregaram via `\pdfmapfile` da própria pasta. Verificação
+de conteúdo: `pdftotext` ausente (local e na imagem) e `brew install
+poppler` negado pelo classificador de permissões; a checagem foi feita
+com Ghostscript do container (`gs -sDEVICE=txtwrite`) — confirmados no
+PDF: citações das portarias na Discussion e em Threats (`[71], [72]`),
+frase dos planos pagos na declaração de IAG, seções *Conflict of
+Interest* e *Data Availability* com `[DOI pendente]`. PDF enviado ao
+condutor (SendUserFile) e commitado.
+
+**Commit:** `32fb062`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3312,5 +3334,7 @@ submetido" à avaliação do programa, sem publicação formal.
 | `c976c7d` | 2026-11-23 | Replication package structure + Data Availability draft (plan step 3: A4) |
 | `f417d17` | 2026-11-23 | Log replication package structure (item 182) in MEMORY.md |
 | `09b0a96` | 2026-11-23 | Cover-letter prior-disclosure declaration (plan step 5: A7) |
+| `3a3cda6` | 2026-11-23 | Log cover-letter disclosure draft (item 183) in MEMORY.md |
+| `32fb062` | 2026-11-23 | Rebuild main.pdf with compliance back matter (14 pp., refs 71-72 resolved) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
