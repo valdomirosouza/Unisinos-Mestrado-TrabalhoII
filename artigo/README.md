@@ -23,6 +23,16 @@
 pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
+Sem TeX no PATH, usar **Docker** (validado em 2026-11-23 com a imagem oficial `texlive/texlive:latest`; gera o mesmo ciclo completo rodando como o usuário, sem arquivos root na pasta):
+
+```bash
+cd artigo/
+docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD":/work -w /work \
+  texlive/texlive:latest \
+  sh -c "pdflatex -interaction=nonstopmode main && bibtex main && \
+         pdflatex -interaction=nonstopmode main && pdflatex -interaction=nonstopmode main"
+```
+
 (Compilado e validado em 2026-10-27 com **TinyTeX** — `~/Library/TinyTeX/bin/universal-darwin/` nesta máquina — + pacote `ieeetran` via tlmgr: **[`main.pdf`](main.pdf), 9 páginas (layout oficial da Access) (Fig. 1 PRISMA + Fig. 2 rede de citações + Fig. 3 cobertura de RQs, todas em TikZ; Tabela IV toolbox de carga cognitiva; §V-B eixos de lacunas)**, 0 citações não resolvidas, 0 overfull boxes, 0 avisos de BibTeX; 48 chaves de citação resolvidas.)
 
 ## Estrutura e proveniência do conteúdo
