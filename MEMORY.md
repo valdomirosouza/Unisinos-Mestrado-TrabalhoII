@@ -3199,6 +3199,29 @@ referenciados existem; `\&` escapado; sem TeX local.
 
 **Commit:** `cd65ba5`.
 
+### 181. Portarias citadas na Discussion, em Threats e na declaração (passo 4)
+
+**Prompt:** "Siga para o passo 4".
+
+**Ações:** passo 4 do plano (itens A9+A10) aplicado. (1)
+`referencias.bib`: duas entradas novas `@misc` — `cnpq2664` e `cnpq3004`
+— com títulos oficiais em pt-BR (escapes LaTeX), DOU (edição/seção/
+página/data) e URL da Imprensa Nacional (campo `url`; pacote `url` já
+carregado no preâmbulo). (2) *Methodological lessons for LLM-assisted
+SLRs* (Discussion): parágrafo novo após os três achados — o protocolo
+executado satisfaz os requisitos de divulgação e responsabilização
+codificados **depois** pelas Portarias CNPq 2.664/2026 e 3.004/2026
+(declaração por fase/ferramenta/versão/finalidade; verificação humana
+não delegada; sem exposição de material não publicado de terceiros),
+posicionando RSLs *human-decided* como alinhadas por desenho à primeira
+regulação federal de IAG em pesquisa. (3) *Threats to Validity*
+(*Assistant validity*): frase final remetendo à seção *Declaration of
+Generative AI Use* com as citações. (4) Abertura da própria declaração
+ganhou `\cite{cnpq2664,cnpq3004}` por consistência. Validação estática
+(sem TeX local): chaves BibTeX únicas, citações casam com as chaves.
+
+**Commit:** `63e9247`.
+
 ## Decisões e convenções da sessão
 
 - Atos normativos do DOU passam a ser arquivados em `docs/DOU/<órgão>/` com índice em `docs/DOU/README.md`; análises derivadas ficam na mesma pasta.
@@ -3225,5 +3248,7 @@ referenciados existem; `\&` escapado; sem TeX local.
 | `ae443f5` | 2026-11-23 | GenAI declaration: manuscript prep assisted by Claude only (pending item closed) |
 | `06b03a8` | 2026-11-23 | Log manuscript-prep confirmation (item 179) in MEMORY.md |
 | `cd65ba5` | 2026-11-23 | Draft Author Contributions (CRediT) and Conflict of Interest (plan step 2: A5+A6) |
+| `908eddf` | 2026-11-23 | Log CRediT and COI drafts (item 180) in MEMORY.md |
+| `63e9247` | 2026-11-23 | Cite CNPq ordinances in Discussion, Threats, and GenAI declaration (plan step 4: A9+A10) |
 
 _(O commit desta atualização de MEMORY.md é acrescentado ao final do histórico.)_
