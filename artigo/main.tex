@@ -1474,6 +1474,81 @@ P21 & \cite{P21} & & P44$^{\ddagger}$ & \cite{P44} & & P81 & \cite{P81} & & & \\
 % divulgação do uso de LLMs, disponibilidade de dados/DOI e conflito de
 % interesses). Última versão do texto: commit 620bbdb.
 
+% =====================================================================
+% RASCUNHO inserido em 2026-11-23 — passo 1 do plano de conformidade
+% (docs/DOU/plano-melhorias-artigo-portarias-CNPq.md, itens A1+A2+A3+A8).
+% Seção exigida pelo art. 4º, §1º, da Portaria CNPq nº 3.004/2026 na
+% ausência de campo estruturado no sistema de submissão. AGUARDA a
+% revisão final do orientador (cf. nota do Acknowledgment acima).
+% [PENDENTE — insumo do condutor (art. 6º, §2º, da 3.004): confirmar se
+%  os acessos a ChatGPT e Gemini usaram planos pagos e se havia opt-out
+%  de treinamento; ajustar a frase marcada com %% TODO abaixo.]
+% [PENDENTE — confirmar se ChatGPT/Gemini também apoiaram a preparação
+%  do manuscrito ou apenas Claude; ajustar o parágrafo "Manuscript
+%  preparation".]
+\section*{Declaration of Generative AI Use}
+
+In line with the disclosure requirements for generative artificial
+intelligence (GenAI) in research established by the Brazilian National
+Council for Scientific and Technological Development --- CNPq Ordinance
+No.~2{,}664 of March 6, 2026 (Research Integrity Policy), and Ordinance
+No.~3{,}004 of November 16, 2026 (guidelines for generative and
+predictive AI in research) --- the authors declare every use of GenAI
+tools in this review, by phase, tool and version, and specific purpose.
+
+\textbf{Candidate identification (cycle~1).} Three LLM-based research
+assistants --- Claude (Anthropic), ChatGPT (OpenAI), and Gemini
+(Google); versions in Table~\ref{tab:llmversions} --- performed the
+assisted search that produced the cycle-1 candidate set
+(Section~\ref{sec:method}). Purpose: candidate retrieval only; coverage
+was validated by direct execution of the search string on OpenAlex and
+Scopus, and cycles 2--3 used author-driven discovery and query
+re-execution.
+
+\textbf{Screening support and full-text assessment (all cycles).} The
+same three assistants drafted the PICOC extractions and the full-text
+assessments under the review's canonical prompts
+(Section~\ref{sec:method}; versions per assessment set in
+Table~\ref{tab:llmversions}). Purpose: structured extraction and
+assessment drafting with per-claim evidence anchors, serving as inputs
+to the authors' decisions. No screening, inclusion, exclusion, or
+adjudication decision was delegated to a GenAI tool; inter-assistant
+agreement (Section~\ref{sec:reliability}) was used only to flag cases
+for human verification.
+
+\textbf{Manuscript preparation.} Claude (most recently Fable~5),
+through the Claude Code interface, assisted the drafting and revision
+of this manuscript. Purpose: \LaTeX{} editing and formatting, figure
+and table preparation, language revision, and consistency checks
+against the audit-trail artifacts. All scientific claims, analyses,
+and conclusions originate from and were verified by the authors.
+
+\textbf{Confidentiality and personal data.} Only lawfully accessed,
+published full texts and the authors' own protocol materials were
+provided to the GenAI tools; no unpublished third-party manuscript,
+proposal under evaluation, confidential content, or personal data was
+processed, so the Brazilian General Data Protection Law (LGPD) is not
+engaged. This use does not constitute peer review in the sense of
+Art.~8 of Ordinance No.~3{,}004/2026: the assistants assessed published
+literature under a systematic-review protocol, with all decisions taken
+by the authors. Access modes are documented in
+Section~\ref{sec:method}: Claude through the Claude Code interface with
+each PDF read as a file; ChatGPT and Gemini through their web
+applications with each PDF uploaded.
+%% TODO (condutor): frase sobre planos de acesso, p.ex.: "All tools
+%% were accessed through paid plans configured not to use submitted
+%% content for model training." — confirmar antes de submeter.
+
+\textbf{Responsibility.} The authors take full responsibility for all
+content of this article, including factual claims, citations,
+references, and analyses. Final verification and validation were
+performed by the authors and were not delegated to any GenAI tool.
+
+\textbf{Predictive AI.} No predictive-AI (machine-learning) model was
+trained or deployed in this review; inter-rater agreement was computed
+with classical statistics (Cohen's $\kappa$, Fleiss' $\kappa$), so no
+declaration under Art.~9 of Ordinance No.~3{,}004/2026 applies.
+
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
 
